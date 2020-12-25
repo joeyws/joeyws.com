@@ -10,12 +10,12 @@
     /*@font-face{font-family:webfont;src:url("https://static.tumblr.com/a22eawo/eP8qkm2fi/webfont.otf");}
     @font-face{font-family:webfont2;src:url("https://static.tumblr.com/a22eawo/IoKqkrfg9/webfont2.otf");}*/
     body::-webkit-scrollbar{width:8px;}
-    body::-webkit-scrollbar-track{background:{BackgroundColor};}
-    body::-webkit-scrollbar-thumb{background:{TitleColor};width:8px;}
+    body::-webkit-scrollbar-track{background:#000;}
+    body::-webkit-scrollbar-thumb{background:#fff;width:8px;}
     body{overflow-y:scroll;overflow-x:hidden;}
     /* RESET */*{/*cursor:none;*/user-select:none;font-kerning:normal;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:);}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-appearance:none;-webkit-border-radius:0;box-sizing:content-box;font-smoothing:antialiased;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased;}
-	html,body{background:{BackgroundColor};min-height:100vh;}
-	body{color:{TitleColor};font:normal normal 19px/1.35em "Inter",webfont2,monospace;}
+	html,body{background:#000;min-height:100vh;}
+	body{color:#fff;font:normal normal 19px/1.35em "Inter",webfont2,monospace;}
 	h1{display:inline-block;white-space:pre;}
 	a{border-bottom:1px solid transparent;transition:border-bottom-color .3s;text-decoration:none;}
     a:hover,#header a:hover,#header a.show{border-bottom:1px solid rgba(255,255,255,.7);}
@@ -41,8 +41,8 @@
     
     .tooltip{z-index:999995;opacity:0;transition:opacity .3s;font-size:12px;display:block;line-height:1.35em;box-sizing:border-box;padding:6px;background-clip:content-box;position:absolute;pointer-events:none;}
     .tooltip.show{opacity:1;}
-    .tooltip span{color:{TitleColor};background:{BackgroundColor};padding:1px 3px;}
-    #loading{z-index:999998;mix-blend-mode:difference;background:{TitleColor};animation:.3s blink steps(1) infinite;width:32px;height:32px;border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;position:fixed;}
+    .tooltip span{color:#fff;background:#000;padding:1px 3px;}
+    #loading{z-index:999998;mix-blend-mode:difference;background:#fff;animation:.3s blink steps(1) infinite;width:32px;height:32px;border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;position:fixed;}
     @keyframes blink{50%{opacity:0;}}
 </style>
 </head>
@@ -55,11 +55,9 @@
 <div id="header"><a href="#/about"><h1>Joey Schweickhardt</h1></a><a href="#/works">Works</a><a href="#/photos">Photos</a><a href="#/contact">Contact</a></div>
 <div id="content">
     <div id="works">
-        <!-- NEUE POSTS -->{block:Posts}{block:Photo}<img alt="" src="{PhotoURL-500}" data-highres="{PhotoURL-HighRes}" />{/block:Photo}{/block:Posts}<!-- / NEUE POSTS -->
         <img alt="Wardrobe 1" src="https://64.media.tumblr.com/0d1b6ff97797d41c86ac48dad89b40b8/2a174c2d3a6e435a-f1/s500x750/2db98cb2f8ab885be77007bb6b0f042b24520b42.jpg" data-highres="https://64.media.tumblr.com/0d1b6ff97797d41c86ac48dad89b40b8/2a174c2d3a6e435a-f1/s1280x1920/3c2d53bccd81c442967c9d446c0973be8a8e41b4.jpg">
         <img alt="Tower construction" src="https://64.media.tumblr.com/a523b0af457743fee41acc23a8fb1495/4bbf9749ed0c26eb-86/s500x750/faf7cc12ce7bd251b27b520d0f3ff21bf3cfcaeb.gifv" data-highres="https://64.media.tumblr.com/a523b0af457743fee41acc23a8fb1495/4bbf9749ed0c26eb-86/s640x960/23155fe10dc97bed1fb20beb565f91dc73b4c4e2.gifv" />
         <img alt="Fa&ccedil;ade" src="https://64.media.tumblr.com/c0fb993c96ceb93cdd98764b24593c6a/db75b339cc911d1c-71/s500x750/57d097374a33de2a29dd890873e3b6687b375a3f.png" data-highres="https://64.media.tumblr.com/c0fb993c96ceb93cdd98764b24593c6a/db75b339cc911d1c-71/s1280x1920/094ffe108032c88150bd87b3bbc64e2160847c90.png" />
-        <!--<img alt="Quartier am Kraftwerk Münster" src="https://64.media.tumblr.com/504de40902d1cf0195c457fb5f951109/ef9875ee501cc020-b2/s500x750/0d68adc87642d1a8ecb38bac680fe414639a9b37.png" data-highres="https://64.media.tumblr.com/504de40902d1cf0195c457fb5f951109/ef9875ee501cc020-b2/s1280x1920/9dca1ba4d8417c587ca4e5c50798903fab2f1eae.png" />-->
         <img alt="Light studies" src="https://64.media.tumblr.com/3e5385a5082d6e3061ab687579e27a26/97854adff80eb569-02/s500x750/03961d47d996561081879fa9b89eb66649e5f676.jpg" data-highres="https://64.media.tumblr.com/3e5385a5082d6e3061ab687579e27a26/97854adff80eb569-02/s1280x1920/f5d534f1021ba7f2607744536946c81e79042d20.jpg" />
         <img alt="Wooden structure" src="https://64.media.tumblr.com/ec43cee96c28476612a868330383e6e6/b5dd872d7833e5ab-0c/s500x750/1b63021bab8355f6889eb5d19c20179d40197c7e.jpg" data-highres="https://64.media.tumblr.com/ec43cee96c28476612a868330383e6e6/b5dd872d7833e5ab-0c/s1280x1920/f3b4a94a37be7d4650e556c454318a3722965fd4.jpg" />
         <img alt="Sint Anneke Club: model" src="https://64.media.tumblr.com/8a61e39721f5f64af7b53b8cc95346b6/54b01e01a90a2cfb-6d/s500x750/2dc7c6f5896a42dc673741d796cd95740c4c4cdb.png" data-highres="https://64.media.tumblr.com/8a61e39721f5f64af7b53b8cc95346b6/54b01e01a90a2cfb-6d/s1280x1920/29c12bb4aee3676dcf4f1f2ea8a453d422098411.png" />
@@ -78,14 +76,12 @@
         <img alt="Leichtsinn" src="https://66.media.tumblr.com/5f437cd7d234ed7fe360374ad149330a/6199133f7bd2c385-9f/s500x750/5315a9f0e4ee7838a0fd37c7523ef47dcbee75ee.jpg" data-highres="https://66.media.tumblr.com/5f437cd7d234ed7fe360374ad149330a/6199133f7bd2c385-9f/s1280x1920/470cc50d1bb96afe1abc0ccb399432889bc7e64a.jpg" />
         <img alt="Bees" src="https://64.media.tumblr.com/f1e645f3a1ad85e66f030a6c23d5402a/45951c0726c625fc-fc/s500x750/99ae656ded1aae2e736c26d86f8ba24339b0714d.jpg" data-highres="https://64.media.tumblr.com/f1e645f3a1ad85e66f030a6c23d5402a/45951c0726c625fc-fc/s1280x1920/6659bd03de2f975b35e88a15ca814862e8a494c9.jpg" />
         <img alt="Phone box" src="https://64.media.tumblr.com/faba9c1d5568248ca669b1bf36719cd4/34842ee3aff5b4f6-94/s500x750/7d6c9fdb02fe6cf90c966b3e24a149458771f392.jpg" data-highres="https://64.media.tumblr.com/faba9c1d5568248ca669b1bf36719cd4/34842ee3aff5b4f6-94/s1280x1920/efc94c47fce7beb3feb6fa3797a895366295de0c.jpg" />
-        <!--<img alt="Scharoun" src="https://64.media.tumblr.com/7e7c44c6d2ac4fcfb7b0a737f9c967a9/848e47eaec75fa14-73/s500x750/ed509ac7840ad3dd7306999bdfee8d8fac31b3ba.jpg" data-highres="https://64.media.tumblr.com/7e7c44c6d2ac4fcfb7b0a737f9c967a9/848e47eaec75fa14-73/s1280x1920/ec61aaf99343ba302f3f5e3dd36db9d5f319f740.jpg" />-->
         <img alt="Cup, ink" src="https://64.media.tumblr.com/f434d6f8a0fa414e33fc25b677df1d42/9a71e0c91b98996b-a1/s500x750/85b95ea2d8b93a407f925064b9d8f4c93c267111.jpg" data-highres="https://64.media.tumblr.com/f434d6f8a0fa414e33fc25b677df1d42/9a71e0c91b98996b-a1/s1280x1920/ef24e0fa4ec18237473bec145d26ef8d02ff16f6.jpg" />
         <img alt="Pineapple" src="https://64.media.tumblr.com/4f3cec87cf6713565d2fccfeae0e3ce7/f83245ee183c1310-e6/s500x750/59ae429efd2a46bba1f4cab03cc27109791bce08.jpg" data-highres="https://64.media.tumblr.com/4f3cec87cf6713565d2fccfeae0e3ce7/f83245ee183c1310-e6/s640x960/88c7f9fd4dad809744dbe21b86728f76fc5e550b.jpg" />
         <img alt="Ginger" src="https://64.media.tumblr.com/02a77c35ed76976b4d1cb043d592e634/acecb14e6fdcd169-e7/s500x750/a38805c6e25e32712c45dbb4efec41d756e18291.png" data-highres="https://64.media.tumblr.com/02a77c35ed76976b4d1cb043d592e634/acecb14e6fdcd169-e7/s1280x1920/5ea0b7e3f2dd6025c9a938dfc7f64120bc68c1cf.png" />
         <img alt="A Day at the Wilhelma Zoo" src="https://64.media.tumblr.com/b1555717541c92c81caf9721c7180124/9972d082ba546e8d-6a/s500x750/b078ba9a0ed65f2ae18b40b6d366c633e4823fca.jpg" data-highres="https://64.media.tumblr.com/b1555717541c92c81caf9721c7180124/9972d082ba546e8d-6a/s1280x1920/216aa2735945101b0fc113ed1c7c40cecdb38684.jpg" />
         <img alt="Truck, MB Museum" src="https://64.media.tumblr.com/a36f792352831d21ef75bf690959b0d2/99af90c1d4712837-eb/s500x750/743c8ca0518378b8bf42df18a7c382dafdc16b98.jpg" data-highres="https://64.media.tumblr.com/a36f792352831d21ef75bf690959b0d2/99af90c1d4712837-eb/s1280x1920/4a4615bbeb766cb2ad66dd6f3178a3d4f855c652.jpg" />
-        <img alt="Tools" src="https://64.media.tumblr.com/dc787168a40a7419f2fd870463cda69c/46664f17574a2b80-9c/s500x750/c03e60077267fe87d2742701dd160a611caf16bf.jpg" data-highres="https://64.media.tumblr.com/dc787168a40a7419f2fd870463cda69c/46664f17574a2b80-9c/s1280x1920/e5e84a000bbe1a75d04e1312bd656c7a24c9c087.jpg" />
-        <!--<img alt="Stairs" src="https://64.media.tumblr.com/0b99f72e6010e4231c4a908a7cbcb85a/3a97fc9514b88ae9-5a/s500x750/4db8d0c307b866256c0ff20f4b8a34bfb22949a4.jpg" data-highres="https://64.media.tumblr.com/0b99f72e6010e4231c4a908a7cbcb85a/3a97fc9514b88ae9-5a/s1280x1920/2c945cde2970d57f9671e56292cfc4f96b4e3eb6.jpg" />-->
+		<img alt="Tools" src="https://64.media.tumblr.com/dc787168a40a7419f2fd870463cda69c/46664f17574a2b80-9c/s500x750/c03e60077267fe87d2742701dd160a611caf16bf.jpg" data-highres="https://64.media.tumblr.com/dc787168a40a7419f2fd870463cda69c/46664f17574a2b80-9c/s1280x1920/e5e84a000bbe1a75d04e1312bd656c7a24c9c087.jpg" />
     </div>
     <div id="photos">
         <img alt="Wilhelma" src="https://64.media.tumblr.com/1e343329a5c618bd7ed5b2c37f0dcc2d/0c4e32355df3ec44-bd/s500x750/233d8414beff399ce3bd4388b39be1f25f3d119e.jpg" data-highres="https://64.media.tumblr.com/1e343329a5c618bd7ed5b2c37f0dcc2d/0c4e32355df3ec44-bd/s1280x1920/4538fe4f73adc0011f17181f8ded79549a4f942e.jpg" />
@@ -122,10 +118,6 @@
     $(document).ready(function(){
 
 
-        // tumblr
-        $("iframe").remove();
-        
-        
         // marquee
         Marquee3k.init();
 
