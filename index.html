@@ -24,7 +24,7 @@
 	body{color:#fff;font:normal normal 24px/1.2em "Times New Roman",Times,serif,webfont,webfont2,monospace;letter-spacing:.02em;}
 	h1{display:inline-block;white-space:pre;}
 	a{border-bottom:1px solid transparent;transition:border-bottom-color .5s;text-decoration:none;}
-    a:hover,#header a:hover,#header a.show{border-bottom:1px solid rgba(255,255,255,.7);}
+    a:hover,#header a:hover,#header a.show{border-bottom:1px solid #fff;}
     a:active,a:focus{outline:0;}
 
     #header{z-index:999996;mix-blend-mode:difference;color:#fff;margin:16px;position:absolute;position:fixed;left:0;right:0;top:0;justify-content:space-between;display:flex;flex-wrap:wrap;}
@@ -102,11 +102,10 @@
         <img alt="Times Square" src="photos/1s.jpg" data-highres="photos/1.jpg" />
     </div>
     <div id="about">
+        <!--<div class="marquee3k" data-speed="1"><div class="marquee">&nbsp;&nbsp;&nbsp;ようこそ&nbsp;&nbsp;&nbsp;Bienvenue&nbsp;&nbsp;&nbsp;Welcome&nbsp;&nbsp;&nbsp;Benvenuto&nbsp;&nbsp;&nbsp;Willkommen&nbsp;&nbsp;&nbsp;Bem-vinda&nbsp;&nbsp;&nbsp;добро пожаловать&nbsp;&nbsp;&nbsp;Bienvenidos</div></div>-->
         <!-- https://de.wikipedia.org/wiki/Liste_der_meistgesprochenen_Sprachen -->
-        <div class="marquee3k" data-speed="1"><div class="marquee">&nbsp;&nbsp;&nbsp;Welcome&nbsp;&nbsp;&nbsp;歡迎&nbsp;&nbsp;&nbsp;Добро пожаловать&nbsp;&nbsp;&nbsp;Bem-vinda</div></div>
-        <div class="marquee3k" data-speed=".5"><div class="marquee">&nbsp;&nbsp;&nbsp;स्वागत हे&nbsp;&nbsp;&nbsp;Bienvenidos&nbsp;&nbsp;&nbsp;Selamat datang&nbsp;&nbsp;&nbsp;ਸਵਾਗਤ ਹੈ</div></div>
-        <div class="marquee3k" data-speed=".5" data-reverse="true"><div class="marquee">&nbsp;&nbsp;&nbsp;اهلا وسهلا&nbsp;&nbsp;&nbsp;Bienvenue&nbsp;&nbsp;&nbsp;Willkommen&nbsp;&nbsp;&nbsp;خوش آمدی</div></div>
-        <div class="marquee3k" data-speed="1" data-reverse="true"><div class="marquee">&nbsp;&nbsp;&nbsp;خوش آمدید&nbsp;&nbsp;&nbsp;স্বাগত&nbsp;&nbsp;&nbsp;ようこそ&nbsp;&nbsp;&nbsp;Karibu</div></div>
+        <div class="marquee3k" data-speed="1.25"><div class="marquee">&nbsp;&nbsp;&nbsp;Welcome&nbsp;&nbsp;&nbsp;歡迎&nbsp;&nbsp;&nbsp;स्वागत हे&nbsp;&nbsp;&nbsp;Bienvenidos&nbsp;&nbsp;&nbsp;اهلا وسهلا&nbsp;&nbsp;&nbsp;Bienvenue&nbsp;&nbsp;&nbsp;خوش آمدید&nbsp;&nbsp;&nbsp;স্বাগত</div></div>
+        <div class="marquee3k" data-speed=".5"><div class="marquee">&nbsp;&nbsp;&nbsp;Добро пожаловать&nbsp;&nbsp;&nbsp;Bem-vinda&nbsp;&nbsp;&nbsp;Selamat datang&nbsp;&nbsp;&nbsp;ਸਵਾਗਤ ਹੈ&nbsp;&nbsp;&nbsp;Willkommen&nbsp;&nbsp;&nbsp;خوش آمدی&nbsp;&nbsp;&nbsp;ようこそ&nbsp;&nbsp;&nbsp;Karibu</div></div>
     </div>
     <div id="contact">
         <p><a href="https://www.linkedin.com/in/joeyschweickhardt/">LinkedIn</a>, <a href="https://www.instagram.com/joeyws/">Instagram</a>, <a href="https://soundcloud.com/joeyws">SoundCloud</a></p>
@@ -154,12 +153,13 @@
     	function hideLoading() {$("#loading").hide(0);}
 
 
+        photosSize();
+
+
         // preloader
     	$(window).on("load",function(){
-    		$("iframe").remove();
     		hideLoading();
-    		lightboxClose();
-    		photosSize();
+    		//lightboxClose();
     	});
 
 
@@ -173,7 +173,7 @@
         	// bereich anzeigen
         	var duration = 400;
             setTimeout(function(){$("#"+hash).fadeIn(duration);$('body,html').animate({scrollTop:0},0);return false;},duration);
-            setTimeout(function(){if(hash="about"){Marquee3k.init();}},(duration+10));
+            setTimeout(function(){if(hash="about"){Marquee3k.init();}else{Marquee3k.pauseAll();}},(duration+10));
         	$("#"+hash).siblings().fadeOut(duration);
         	lightboxClose();
             // header menu
