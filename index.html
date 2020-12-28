@@ -40,8 +40,8 @@
     #lightbox{z-index:999997;cursor:zoom-out;position:fixed;top:0;right:0;bottom:0;left:0;display:none;}
 	#lightbox img{cursor:pointer;max-height:90vh;max-width:90vw;box-sizing:border-box;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);}
     
-    #welcome{position:absolute;bottom:16px;left:0;right:0;}
-	.marquee3k{overflow-x:hidden;line-height:2.2em;}
+    #welcome{z-index:999994;position:absolute;bottom:16px;left:0;right:0;}
+	.marquee3k{overflow-x:hidden;line-height:2.2em;background:var(--background);}
     
     .tooltip{z-index:999995;opacity:0;transition:opacity .4s;padding:8px;display:block;box-sizing:border-box;position:absolute;pointer-events:none;}
     .tooltip.show{opacity:1;}
@@ -103,22 +103,19 @@
         <img alt="Landmannalaugar" src="photos/2s.jpg" data-highres="photos/2.jpg" />
         <img alt="Times Square" src="photos/1s.jpg" data-highres="photos/1.jpg" />
     </div>
-    <!--<div id="music">
-        <iframe style="width:450px;max-width:100%;height:450px;max-height:80vh;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/130807438&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-    </div>-->
     <div id="about">
+        <!--<img src="https://media.giphy.com/media/2aQS3AHfvvfIkSdbFM/giphy.gif" style="opacity:1;position:absolute;top:0;bottom:0;height:100vh;z-index:4;left:0;right:0;width:100vw;" />-->
         <div id="welcome">
             <!-- https://de.statista.com/statistik/daten/studie/674488/umfrage/sprachen-weltweit-mit-den-meisten-muttersprachlern/ -->
-            <div class="marquee3k" data-speed="1"><div class="marquee">&nbsp;&nbsp;&nbsp;歡迎&nbsp;&nbsp;&nbsp;Bienvenidos&nbsp;&nbsp;&nbsp;Welcome&nbsp;&nbsp;&nbsp;स्वागत हे&nbsp;&nbsp;&nbsp;اهلا وسهلا&nbsp;&nbsp;&nbsp;Bem-vinda&nbsp;&nbsp;&nbsp;স্বাগত</div></div>
-            <div class="marquee3k" data-speed="1"><div class="marquee">&nbsp;&nbsp;&nbsp;добро пожаловать&nbsp;&nbsp;&nbsp;ようこそ&nbsp;&nbsp;&nbsp;Sugeng Rawuh&nbsp;&nbsp;&nbsp;ਸਵਾਗਤ ਹੈ&nbsp;&nbsp;&nbsp;Willkommen&nbsp;&nbsp;&nbsp;어서 오십시오&nbsp;&nbsp;&nbsp;Bienvenue</div></div>
+            <div class="marquee3k" data-speed="1"><div class="marquee"><span>&nbsp;&nbsp;&nbsp;<span>歡迎</span>&nbsp;&nbsp;&nbsp;<span>Bienvenidos</span>&nbsp;&nbsp;&nbsp;<span>Welcome</span>&nbsp;&nbsp;&nbsp;<span>स्वागत हे</span>&nbsp;&nbsp;&nbsp;<span>اهلا وسهلا</span>&nbsp;&nbsp;&nbsp;<span>Bem-vinda</span>&nbsp;&nbsp;&nbsp;<span>স্বাগত</span></span></div></div>
+            <div class="marquee3k" data-speed="1"><div class="marquee"><span>&nbsp;&nbsp;&nbsp;<span>добро пожаловать</span>&nbsp;&nbsp;&nbsp;<span>ようこそ</span>&nbsp;&nbsp;&nbsp;<span>Sugeng Rawuh</span>&nbsp;&nbsp;&nbsp;<span>ਸਵਾਗਤ ਹੈ</span>&nbsp;&nbsp;&nbsp;<span>Willkommen</span>&nbsp;&nbsp;&nbsp;<span>어서 오십시오</span>&nbsp;&nbsp;&nbsp;<span>Bienvenue</span></span></div></div>
         </div>
-        <!-- Pritzkergewinner Sprachen <div class="marquee3k" data-speed="1"><div class="marquee">&nbsp;&nbsp;&nbsp;ようこそ&nbsp;&nbsp;&nbsp;Bienvenue&nbsp;&nbsp;&nbsp;Welcome&nbsp;&nbsp;&nbsp;Benvenuto&nbsp;&nbsp;&nbsp;Willkommen&nbsp;&nbsp;&nbsp;Bem-vinda&nbsp;&nbsp;&nbsp;добро пожаловать&nbsp;&nbsp;&nbsp;Bienvenidos</div></div>-->
-        <!-- https://de.wikipedia.org/wiki/Liste_der_meistgesprochenen_Sprachen <div class="marquee3k" data-speed="1.25"><div class="marquee">&nbsp;&nbsp;&nbsp;Welcome&nbsp;&nbsp;&nbsp;歡迎&nbsp;&nbsp;&nbsp;स्वागत हे&nbsp;&nbsp;&nbsp;Bienvenidos&nbsp;&nbsp;&nbsp;اهلا وسهلا&nbsp;&nbsp;&nbsp;Bienvenue&nbsp;&nbsp;&nbsp;خوش آمدید&nbsp;&nbsp;&nbsp;স্বাগত&nbsp;&nbsp;&nbsp;Добро пожаловать&nbsp;&nbsp;&nbsp;Bem-vinda&nbsp;&nbsp;&nbsp;Selamat datang&nbsp;&nbsp;&nbsp;ਸਵਾਗਤ ਹੈ&nbsp;&nbsp;&nbsp;Willkommen&nbsp;&nbsp;&nbsp;خوش آمدی&nbsp;&nbsp;&nbsp;ようこそ&nbsp;&nbsp;&nbsp;Karibu</div></div>-->
     </div>
     <div id="contact">
-        <p><a href="https://www.linkedin.com/in/joeyschweickhardt/">LinkedIn</a>, <a href="https://www.instagram.com/joeyws/">Instagram</a>, <a href="https://soundcloud.com/joeyws">SoundCloud</a></p>
+        <p>Follow me:<br><a href="https://www.linkedin.com/in/joeyschweickhardt/">LinkedIn</a>, <a href="https://www.instagram.com/joeyws/">Instagram</a>, <a href="https://soundcloud.com/joeyws">SoundCloud</a></p>
         <p>Impressum</p>
         <p>Joey Schweickhardt<br><span id="address1"></span><br><span id="address2"></span><br><a id="phone"></a><br><a id="mail"></a></p>
+        <p>Credits: <!--animated background by Bal&aacute;zs Varga<br>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->Code handwritten with <span style="color:#f00;">&hearts;</span> by me<br>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hosted on GitHub</p>
         <p>Datenschutzerk&auml;rung</p><p>Diese Datenschutzerkl&auml;rung kl&auml;rt Sie &uuml;ber die Art, den Umfang und Zweck der Verarbeitung von personenbezogenen Daten, nachfolgend kurz &bdquo;Daten&ldquo;, innerhalb unseres Onlineangebotes und der mit ihm verbundenen Webseiten, Funktionen und Inhalte sowie externen Onlinepr&auml;senzen, wie z.B. unsere Social-Media-Profile auf, nachfolgend gemeinsam bezeichnet als &bdquo;Onlineangebot&ldquo;. Im Hinblick auf die verwendeten Begrifflichkeiten, wie z.B. &bdquo;Verarbeitung&ldquo; oder &bdquo;Verantwortlicher&ldquo; verweisen wir auf die Definitionen im Art. 4 der Datenschutzgrundverordnung (DSGVO). Arten der verarbeiteten Daten k&ouml;nnen Bestandsdaten (z.B. Namen, Adressen), Kontaktdaten (z.B. Email, Telefonnummern), Inhaltsdaten (z.B. Texteingaben, Fotografien, Videos), Nutzungsdaten (z.B. besuchte Webseiten, Interesse an Inhalten, Zugriffszeiten) und Meta-/Kommunikationsdaten (z.B. Ger&auml;te-Informationen, IP-Adressen) sein.</p>
         <p>Betroffene Personen sind Besucher und Nutzer des Onlineangebotes, nachfolgend zusammenfassend auch als &bdquo;Nutzer&ldquo; bezeichnet.</p>
         <p>Zweck der Verarbeitung sind die Zurverf&uuml;gungstellung des Onlineangebotes mit seinen Funktionen und Inhalten, die Beantwortung von Kontaktanfragen und die Kommunikation mit Nutzern, Sicherheitsma&szlig;nahmen und die Reichweitenmessung.</p>
@@ -157,12 +154,13 @@
 
 
         // #loading
-    	function showLoading() {$("#loading").show(0);}
-    	function hideLoading() {$("#loading").hide(0);}
+    	function showLoading() {$("#loading").fadeIn(100);}
+    	function hideLoading() {$("#loading").fadeOut(100);}
 
 
         // init
         photosSize();
+        var begin = 1;
         // preloader
     	$(window).on("load",function(){
     		hideLoading();
@@ -179,13 +177,17 @@
         	// bereich anzeigen
         	var duration = 400;
             setTimeout(function(){$("#"+hash).fadeIn(duration);$('body,html').animate({scrollTop:0},0);return false;},duration);
-            setTimeout(function(){if(hash="about"){Marquee3k.init();}else{Marquee3k.pauseAll();}},(duration+10));
         	$("#"+hash).siblings().fadeOut(duration);
             // header menu
             $("#header a[href='#/"+hash+"']").addClass("show").siblings("a").removeClass("show");
             // anderes
             $(".tooltip").remove();
         	lightboxClose();
+            setTimeout(function(){
+                if (begin==1 && hash=="about") {Marquee3k.init();begin++;}
+                if (begin!=1 && hash=="about") {Marquee3k.playAll();}
+                if (begin!=1 && hash!="about") {Marquee3k.pauseAll();}
+            },(duration+50));
         });
         // start
         $(window).trigger('hashchange');
@@ -253,7 +255,7 @@
             $("#lightbox").hide().children("img").attr("src","data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");
             $("img.show").removeClass("show");
         };
-        $("#content>div>img").click(function(){
+        $("#works img,#photos img").click(function(){
             lightboxClose();
             $(this).addClass("show");
             lightboxLoad();
