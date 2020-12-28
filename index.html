@@ -23,10 +23,8 @@
 	html,body{background:var(--background);min-height:100vh;}
 	body{color:var(--text);letter-spacing:.02em;font:normal normal 19px/1.2em webfont,sans-serif,"Times New Roman",Times,serif,webfont,webfont2,monospace;}
 	h1{display:inline-block;white-space:pre;}
-	/*a{border-bottom:1px solid transparent;transition:color .3s,background-color .3s;text-decoration:none;}
-    a:hover,#header a:hover,#header a.show{color:var(--background);background:var(--text);}*/
-    a{border-bottom:1px solid transparent;transition:border-bottom-color .4s;text-decoration:none;}
-    a:hover,#header a:hover,#header a.show{border-bottom-color:var(--text);}
+	a{transition:color .3s,background-color .3s;text-decoration:none;}
+    a:hover,#header a:hover,#header a.show{color:var(--background);background:var(--text);}
     a:active,a:focus{outline:0;outline-offset:inherit;}
 
     #header{z-index:999996;margin:16px;position:absolute;position:fixed;left:0;right:0;top:0;justify-content:space-between;display:flex;flex-wrap:wrap;}
