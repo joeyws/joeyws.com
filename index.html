@@ -14,38 +14,38 @@
 <meta name="description" content="Personal web page of Joey Schweickhardt, Stuttgart, Germany"><meta name="keywords" content="schweickhardt,joey,stuttgart,joeyws,william"><meta name="robots" content="index,nofollow,noimageindex,notranslate"><meta charset="utf-8"><meta name="geo.region" content="DE-BW"><meta name="geo.placename" content="Stuttgart"><meta name="geo.position" content="48.778600;9.179746"><meta name="ICBM" content="48.778600, 9.179746"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,shrink-to-fit=no"><meta name="format-detection" content="telephone=no">
 <style>
     @font-face{font-family:webfont;src:url("webfont.ttf");}
-    @font-face{font-family:webfont2;src:url("webfont.otf");}
     body::-webkit-scrollbar{width:6px;}
     body::-webkit-scrollbar-track{background:#000;}
     body::-webkit-scrollbar-thumb{background:#fff;width:6px;}
     body{overflow-y:scroll;overflow-x:hidden;}
     /* RESET */*{user-select:none;font-kerning:normal;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-appearance:none;border-radius:0;-webkit-border-radius:0;box-sizing:content-box;font-smoothing:antialiased;-moz-osx-font-smoothing: grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased;}
 	html,body{background:#000;min-height:100vh;}
-	body{color:#fff;font:normal normal 24px/1.2em "Times New Roman",Times,serif,webfont,webfont2,monospace;letter-spacing:.02em;}
+	body{color:#fff;letter-spacing:.02em;font:normal normal 19px/1.2em webfont,"Times New Roman",Times,serif,webfont,webfont2,monospace;}
 	h1{display:inline-block;white-space:pre;}
-	a{border-bottom:1px solid transparent;transition:border-bottom-color .5s;text-decoration:none;}
-    a:hover,#header a:hover,#header a.show{border-bottom:1px solid #fff;}
-    a:active,a:focus{outline:0;}
+	a{border-bottom:1px solid transparent;transition:color .3s,background-color .3s;text-decoration:none;}
+    a:hover,#header a:hover,#header a.show{color:#000;background:#fff;}
+    a:active,a:focus{outline:0;outline-offset:inherit;}
 
-    #header{z-index:999996;mix-blend-mode:difference;color:#fff;margin:16px;position:absolute;position:fixed;left:0;right:0;top:0;justify-content:space-between;display:flex;flex-wrap:wrap;}
-    #header a{display:inline-block;}
+    #header{z-index:999996;color:#fff;margin:16px;position:absolute;position:fixed;left:0;right:0;top:0;justify-content:space-between;display:flex;flex-wrap:wrap;}
+    #header a{display:inline-block;background:#000;}
     #content{padding:16px;padding-top:180px;}
     #content>div{display:none;}
     #works,#photos{margin:0 0 -16px 0;font-size:0;line-height:0;}
     #works img,#photos img{max-width:100% !important;margin:0 16px 16px 0;box-sizing:border-box;display:inline-block;vertical-align:top;cursor:zoom-in;}
     p{margin-top:16px;}
 	p:first-child{margin-top:0;}
-	
+
     #lightbox{z-index:999997;cursor:zoom-out;position:fixed;top:0;right:0;bottom:0;left:0;display:none;}
 	#lightbox img{cursor:pointer;max-height:90vh;max-width:90vw;box-sizing:border-box;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);}
     
-	.marquee3k{margin:0 -16px;overflow-x:hidden;margin-bottom:16px;}
+    #welcome{position:absolute;bottom:16px;left:0;right:0;}
+	.marquee3k{overflow-x:hidden;line-height:1.8em;}
     
-    .tooltip{z-index:999995;opacity:0;transition:opacity .2s;font:normal normal 12px/1em webfont2,monospace;display:block;padding:4px;box-sizing:border-box;background-clip:content-box;position:absolute;pointer-events:none;}
+    .tooltip{z-index:999995;opacity:0;transition:opacity .4s;padding:8px;display:block;box-sizing:border-box;position:absolute;pointer-events:none;}
     .tooltip.show{opacity:1;}
-    .tooltip span{background:#000;padding:3px;display:block;}
-    #loading{z-index:999998;mix-blend-mode:difference;background:#fff;animation:.3s blink steps(1) infinite;width:32px;height:32px;border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;position:fixed;}
-    @keyframes blink{50%{opacity:0;}}
+    .tooltip span{background:#000;}
+    #loading{z-index:999998;background:#fff;animation:.3s blink steps(1) infinite;width:32px;height:32px;border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;position:fixed;}
+    @keyframes blink{50%{background:#000;}}
 </style>
 </head>
 <body>
@@ -102,10 +102,12 @@
         <img alt="Times Square" src="photos/1s.jpg" data-highres="photos/1.jpg" />
     </div>
     <div id="about">
-        <!-- https://de.statista.com/statistik/daten/studie/674488/umfrage/sprachen-weltweit-mit-den-meisten-muttersprachlern/ -->
-        <div class="marquee3k" data-speed="1"><div class="marquee">&nbsp;&nbsp;&nbsp;歡迎&nbsp;&nbsp;&nbsp;Bienvenidos&nbsp;&nbsp;&nbsp;Welcome&nbsp;&nbsp;&nbsp;स्वागत हे&nbsp;&nbsp;&nbsp;اهلا وسهلا&nbsp;&nbsp;&nbsp;Bem-vinda&nbsp;&nbsp;&nbsp;স্বাগত</div></div>
-        <div class="marquee3k" data-speed="1"><div class="marquee">&nbsp;&nbsp;&nbsp;добро пожаловать&nbsp;&nbsp;&nbsp;ようこそ&nbsp;&nbsp;&nbsp;sugeng rawuh&nbsp;&nbsp;&nbsp;ਸਵਾਗਤ ਹੈ&nbsp;&nbsp;&nbsp;Willkommen&nbsp;&nbsp;&nbsp;어서 오십시오&nbsp;&nbsp;&nbsp;Bienvenue</div></div>
-        <!-- Pritzkergewinner Sprachen <div class="marquee3k" data-speed="1"><div class="marquee">&nbsp;&nbsp;&nbsp;ようこそ&nbsp;&nbsp;&nbsp;Bienvenue&nbsp;&nbsp;&nbsp;Welcome&nbsp;&nbsp;&nbsp;Benvenuto&nbsp;&nbsp;&nbsp;Willkommen&nbsp;&nbsp;&nbsp;Bem-vinda&nbsp;&nbsp;&nbsp;добро пожаловать&nbsp;&nbsp;&nbsp;Bienvenidos</div></div>-->
+        <div id="welcome">
+            <!-- https://de.statista.com/statistik/daten/studie/674488/umfrage/sprachen-weltweit-mit-den-meisten-muttersprachlern/ -->
+            <div class="marquee3k" data-speed="1"><div class="marquee">&nbsp;&nbsp;&nbsp;歡迎&nbsp;&nbsp;&nbsp;Bienvenidos&nbsp;&nbsp;&nbsp;Welcome&nbsp;&nbsp;&nbsp;स्वागत हे&nbsp;&nbsp;&nbsp;اهلا وسهلا&nbsp;&nbsp;&nbsp;Bem-vinda&nbsp;&nbsp;&nbsp;স্বাগত</div></div>
+            <div class="marquee3k" data-speed="1"><div class="marquee">&nbsp;&nbsp;&nbsp;добро пожаловать&nbsp;&nbsp;&nbsp;ようこそ&nbsp;&nbsp;&nbsp;Sugeng Rawuh&nbsp;&nbsp;&nbsp;ਸਵਾਗਤ ਹੈ&nbsp;&nbsp;&nbsp;Willkommen&nbsp;&nbsp;&nbsp;어서 오십시오&nbsp;&nbsp;&nbsp;Bienvenue</div></div>
+        </div>
+            <!-- Pritzkergewinner Sprachen <div class="marquee3k" data-speed="1"><div class="marquee">&nbsp;&nbsp;&nbsp;ようこそ&nbsp;&nbsp;&nbsp;Bienvenue&nbsp;&nbsp;&nbsp;Welcome&nbsp;&nbsp;&nbsp;Benvenuto&nbsp;&nbsp;&nbsp;Willkommen&nbsp;&nbsp;&nbsp;Bem-vinda&nbsp;&nbsp;&nbsp;добро пожаловать&nbsp;&nbsp;&nbsp;Bienvenidos</div></div>-->
         <!-- https://de.wikipedia.org/wiki/Liste_der_meistgesprochenen_Sprachen <div class="marquee3k" data-speed="1.25"><div class="marquee">&nbsp;&nbsp;&nbsp;Welcome&nbsp;&nbsp;&nbsp;歡迎&nbsp;&nbsp;&nbsp;स्वागत हे&nbsp;&nbsp;&nbsp;Bienvenidos&nbsp;&nbsp;&nbsp;اهلا وسهلا&nbsp;&nbsp;&nbsp;Bienvenue&nbsp;&nbsp;&nbsp;خوش آمدید&nbsp;&nbsp;&nbsp;স্বাগত&nbsp;&nbsp;&nbsp;Добро пожаловать&nbsp;&nbsp;&nbsp;Bem-vinda&nbsp;&nbsp;&nbsp;Selamat datang&nbsp;&nbsp;&nbsp;ਸਵਾਗਤ ਹੈ&nbsp;&nbsp;&nbsp;Willkommen&nbsp;&nbsp;&nbsp;خوش آمدی&nbsp;&nbsp;&nbsp;ようこそ&nbsp;&nbsp;&nbsp;Karibu</div></div>-->
     </div>
     <div id="contact">
@@ -149,18 +151,16 @@
     $(document).ready(function(){
 
 
-    	// #loading
+        // #loading
     	function showLoading() {$("#loading").show(0);}
     	function hideLoading() {$("#loading").hide(0);}
 
 
+        // init
         photosSize();
-
-
         // preloader
     	$(window).on("load",function(){
     		hideLoading();
-    		//lightboxClose();
     	});
 
 
@@ -168,7 +168,7 @@
         $("#content").children("div").hide();
         $(window).bind("hashchange",function(){
         	// hash definieren
-        	var hashWithSlashes = window.location.hash.substring(1) || "works";
+        	var hashWithSlashes = window.location.hash.substring(1) || "about";
         	// slashs entfernen
         	var hash = hashWithSlashes.replace(/\//g,'');
         	// bereich anzeigen
@@ -176,11 +176,11 @@
             setTimeout(function(){$("#"+hash).fadeIn(duration);$('body,html').animate({scrollTop:0},0);return false;},duration);
             setTimeout(function(){if(hash="about"){Marquee3k.init();}else{Marquee3k.pauseAll();}},(duration+10));
         	$("#"+hash).siblings().fadeOut(duration);
-        	lightboxClose();
             // header menu
             $("#header a[href='#/"+hash+"']").addClass("show").siblings("a").removeClass("show");
             // anderes
             $(".tooltip").remove();
+        	lightboxClose();
         });
         // start
         $(window).trigger('hashchange');
@@ -202,23 +202,14 @@
         
         
         // tooltip
-        /*$("#works img,#photos img").hover(function(){
-            var caption = $(this).attr("alt");
-            var positionDIV = $(this).parent().position();
-            var positionIMG = $(this).position();
-            var height = $(this).outerHeight();
-            var width = $(this).outerWidth();
-            $("body").prepend('<div class="tooltip" style="left:'+positionIMG.left+'px;top:'+positionIMG.top+'px;max-width:'+width+'px;"><span>'+caption+'</span></div>');
-        },function(){
-            $(".tooltip").remove();
-        });*/
         $("#works img,#photos img").hover(function(){
             var caption = $(this).attr("alt");
-            var positionDIV = $(this).parent().position();
-            var positionIMGleft = $(this).position().left.toFixed(2);
-            var positionIMGtop = $(this).position().top.toFixed(2);
             var height = $(this).outerHeight();
             var width = $(this).outerWidth();
+            var positionIMGleft = $(this).position().left;
+            var positionIMGtop = $(this).position().top;
+            /*var positionIMGright = positionIMGleft + width;
+            var positionIMGbottom = positionIMGtop + height;*/
             $("body").append('<div class="tooltip" style="left:'+positionIMGleft+'px;top:'+positionIMGtop+'px;max-width:'+width+'px;"><span>'+caption+'</span></div>');
             setTimeout(function(){$(".tooltip:last-child").addClass("show");},1);
         },function(){
