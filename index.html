@@ -14,24 +14,28 @@
 <meta name="description" content="Personal web page of Joey Schweickhardt, Stuttgart, Germany"><meta name="keywords" content="schweickhardt,joey,stuttgart,joeyws,william"><meta name="robots" content="index,nofollow,noimageindex,notranslate"><meta charset="utf-8"><meta name="geo.region" content="DE-BW"><meta name="geo.placename" content="Stuttgart"><meta name="geo.position" content="48.778600;9.179746"><meta name="ICBM" content="48.778600, 9.179746"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,shrink-to-fit=no"><meta name="format-detection" content="telephone=no">
 <style>
     @font-face{font-family:webfont;src:url("webfont.ttf");}
+    :root {--background:#000;--text:#fff;}
     body::-webkit-scrollbar{width:6px;}
-    body::-webkit-scrollbar-track{background:#000;}
-    body::-webkit-scrollbar-thumb{background:#fff;width:6px;}
+    body::-webkit-scrollbar-track{background:var(--background);}
+    body::-webkit-scrollbar-thumb{background:var(--text);width:6px;}
     body{overflow-y:scroll;overflow-x:hidden;}
     /* RESET */*{user-select:none;font-kerning:normal;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-appearance:none;border-radius:0;-webkit-border-radius:0;box-sizing:content-box;font-smoothing:antialiased;-moz-osx-font-smoothing: grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased;}
-	html,body{background:#000;min-height:100vh;}
-	body{color:#fff;letter-spacing:.02em;font:normal normal 19px/1.2em webfont,"Times New Roman",Times,serif,webfont,webfont2,monospace;}
+	html,body{background:var(--background);min-height:100vh;}
+	body{color:var(--text);letter-spacing:.02em;font:normal normal 19px/1.2em webfont,sans-serif,"Times New Roman",Times,serif,webfont,webfont2,monospace;}
 	h1{display:inline-block;white-space:pre;}
-	a{border-bottom:1px solid transparent;transition:color .3s,background-color .3s;text-decoration:none;}
-    a:hover,#header a:hover,#header a.show{color:#000;background:#fff;}
+	/*a{border-bottom:1px solid transparent;transition:color .3s,background-color .3s;text-decoration:none;}
+    a:hover,#header a:hover,#header a.show{color:var(--background);background:var(--text);}*/
+    a{border-bottom:1px solid transparent;transition:border-bottom-color .4s;text-decoration:none;}
+    a:hover,#header a:hover,#header a.show{border-bottom-color:var(--text);}
     a:active,a:focus{outline:0;outline-offset:inherit;}
 
-    #header{z-index:999996;color:#fff;margin:16px;position:absolute;position:fixed;left:0;right:0;top:0;justify-content:space-between;display:flex;flex-wrap:wrap;}
-    #header a{display:inline-block;background:#000;}
+    #header{z-index:999996;margin:16px;position:absolute;position:fixed;left:0;right:0;top:0;justify-content:space-between;display:flex;flex-wrap:wrap;}
+    #header a{display:inline-block;background:var(--background);}
     #content{padding:16px;padding-top:180px;}
     #content>div{display:none;}
     #works,#photos{margin:0 0 -16px 0;font-size:0;line-height:0;}
     #works img,#photos img{max-width:100% !important;margin:0 16px 16px 0;box-sizing:border-box;display:inline-block;vertical-align:top;cursor:zoom-in;}
+    #contact{max-width:960px;}
     p{margin-top:16px;}
 	p:first-child{margin-top:0;}
 
@@ -43,9 +47,9 @@
     
     .tooltip{z-index:999995;opacity:0;transition:opacity .4s;padding:8px;display:block;box-sizing:border-box;position:absolute;pointer-events:none;}
     .tooltip.show{opacity:1;}
-    .tooltip span{background:#000;}
-    #loading{z-index:999998;background:#fff;animation:.3s blink steps(1) infinite;width:32px;height:32px;border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;position:fixed;}
-    @keyframes blink{50%{background:#000;}}
+    .tooltip span{background:var(--background);}
+    #loading{z-index:999998;background:var(--text);animation:.3s blink steps(1) infinite;width:32px;height:32px;border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;position:fixed;}
+    @keyframes blink{50%{background:var(--background);}}
 </style>
 </head>
 <body>
@@ -190,7 +194,7 @@
         function photosSize() {
             $("#works img,#photos img").each(function(index) {
                 var minLength = 220;
-                var maxLength = 420;
+                var maxLength = 380;
                 var length = Math.random()*(maxLength-minLength)+minLength;
                 if ($(this).width() < $(this).height()) {
                     $(this).css({"width":length});
