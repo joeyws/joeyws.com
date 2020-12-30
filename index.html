@@ -45,6 +45,7 @@
     .marquee{display:block;}
     .marquee span{}
     
+    /*#cursor{z-index:999999;width:16px;height:16px;left:-50%;top:-50%;background:#f00;transform:translate(-50%,-50%);border-radius:50%;backface-visibility:hidden;pointer-events:none;position:fixed;}*/
     .tooltip{z-index:999995;opacity:0;transition:opacity .4s;padding:8px;display:block;box-sizing:border-box;position:absolute;pointer-events:none;}
     .tooltip.show{opacity:1;}
     .tooltip span{background:var(--background);}
@@ -57,7 +58,8 @@
 
 
 <div id="header">
-	<a href="#/about"><h1>Joey Schweickhardt</h1></a><a href="#/works">Works</a>
+    <a href="#/about"><h1>Joey Schweickhardt</h1></a>
+    <a href="#/works">Works</a>
 	<a href="#/photos">Photos</a>
 	<a href="#/contact">Contact</a>
 </div>
@@ -65,9 +67,9 @@
     <div id="works">
         <img alt="Wardrobe 1" src="works/27s.jpg" data-highres="works/27.jpg">
         <img alt="Tower construction" src="works/26s.gif" data-highres="works/26.gif" />
-        <img alt="Fa&ccedil;ade" src="works/25.png" data-highres="works/25.png" />
-        <img alt="Light studies" src="works/24.jpg" data-highres="works/24.jpg" />
-        <img alt="Wooden structure" src="works/23.jpg" data-highres="works/23.jpg" />
+        <img alt="Fa&ccedil;ade" src="works/25s.png" data-highres="works/25.png" />
+        <img alt="Light studies" src="works/24s.jpg" data-highres="works/24.jpg" />
+        <img alt="Wooden structure" src="works/23s.jpg" data-highres="works/23.jpg" />
         <img alt="Sint Anneke Club: model" src="works/22s.png" data-highres="works/22.png" />
         <img alt="Sint Anneke Club: elevations, sections" src="works/21s.png" data-highres="works/21.png" />
         <img alt="Sint Anneke Club: axonometry" src="works/20s.png" data-highres="works/20.png" />
@@ -106,13 +108,14 @@
         <img alt="Times Square" src="photos/1s.jpg" data-highres="photos/1.jpg" />
     </div>
     <div id="about">
-        <div style="background:transparent url(bg.gif) center center no-repeat scroll;opacity:.5;background-size:cover;position:absolute;;width:100%;height:100%;top:0;bottom:0;z-index:4;left:0;right:0;">&nbsp;</div>
+        <div style="background:transparent url(bg/9.gif) center center no-repeat scroll;opacity:.5;background-size:cover;position:absolute;;width:100%;height:100%;top:0;bottom:0;z-index:4;left:0;right:0;">&nbsp;</div>
         <!--<img src="file:///C:/Users/Joey/Desktop/tumblr_okq481n4ZD1twd8ddo1_500.gif" style="position:absolute;width:100%;height:100%;top:0;bottom:0;left:0;right:0;z-index:4;" />-->
         <div id="welcome">
             <!-- https://de.statista.com/statistik/daten/studie/674488/umfrage/sprachen-weltweit-mit-den-meisten-muttersprachlern/ -->
-            <div class="marquee3k" data-speed="1"><div class="marquee">&nbsp;&nbsp;&nbsp;<span>歡迎</span>&nbsp;&nbsp;&nbsp;<span>Bienvenidos</span>&nbsp;&nbsp;&nbsp;<span>Welcome</span>&nbsp;&nbsp;&nbsp;<span>स्वागत हे</span>&nbsp;&nbsp;&nbsp;<span>اهلا وسهلا</span>&nbsp;&nbsp;&nbsp;<span>Bem-vinda</span>&nbsp;&nbsp;&nbsp;<span>স্বাগত</span>&nbsp;&nbsp;&nbsp;<span>добро пожаловать</span></div></div>
+            <div class="marquee3k" data-speed="1"><div class="marquee">&nbsp;&nbsp;&nbsp;<span>歡迎</span>&nbsp;&nbsp;&nbsp;<span>Bienvenidos</span>&nbsp;&nbsp;&nbsp;<span>Welcome</span>&nbsp;&nbsp;&nbsp;<span>स्वागत हे</span></span></div></div>
+            <div class="marquee3k" data-speed="1"><div class="marquee">&nbsp;&nbsp;&nbsp;<span>اهلا وسهلا</span>&nbsp;&nbsp;&nbsp;<span>Bem-vinda</span>&nbsp;&nbsp;&nbsp;<span>স্বাগত</span>&nbsp;&nbsp;&nbsp;<span>добро пожаловать</span></div></div>
             <div class="marquee3k" data-speed="1"><div class="marquee">&nbsp;&nbsp;&nbsp;<span>ようこそ</span>&nbsp;&nbsp;&nbsp;<span>Sugeng Rawuh</span>&nbsp;&nbsp;&nbsp;<span>ਸਵਾਗਤ ਹੈ</span>&nbsp;&nbsp;&nbsp;<span>Willkommen</span></div></div>
-            <!--&nbsp;&nbsp;&nbsp;<span>어서 오십시오</span>&nbsp;&nbsp;&nbsp;<span>Bienvenue</span>-->
+            <!--<div class="marquee3k" data-speed="1"><div class="marquee">&nbsp;&nbsp;&nbsp;<span>어서 오십시오</span>&nbsp;&nbsp;&nbsp;<span>Bienvenue</span>&nbsp;&nbsp;&nbsp;<span>ਸਵਾਗਤ ਹੈ</span>&nbsp;&nbsp;&nbsp;<span>Willkommen</span></div></div>-->
         </div>
     </div>
     <div id="contact">
@@ -120,7 +123,7 @@
         <p>Impressum</p>
         <p>Joey Schweickhardt<br><span id="address1"></span><br><span id="address2"></span><br><a id="phone"></a><br><a id="mail"></a></p>
         <p>Handwritten code. Made with <span style="color:#f00;">&hearts;</span></p>
-        <p>Credits: Background animation by Protobacillus, Buenos Aires<br>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Privacy policy by <a href="https://www.e-recht24.de/" rel="nofollow">Thomas Schwenke</a> and Google Analytics<br>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hosted on GitHub</p>
+        <p>Credits: Background animation by <a href="https://www.protobacillus.com/" rel="nofollow">Protobacillus</a>, Buenos Aires<br>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Privacy policy by <a href="https://www.e-recht24.de/" rel="nofollow">Thomas Schwenke</a><br>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hosted on <a href="https://github.com/" rel="nofollow">GitHub</a></p>
         <p>Datenschutzerk&auml;rung</p><p>Diese Datenschutzerkl&auml;rung kl&auml;rt Sie &uuml;ber die Art, den Umfang und Zweck der Verarbeitung von personenbezogenen Daten, nachfolgend kurz &bdquo;Daten&ldquo;, innerhalb unseres Onlineangebotes und der mit ihm verbundenen Webseiten, Funktionen und Inhalte sowie externen Onlinepr&auml;senzen, wie z.B. unsere Social-Media-Profile auf, nachfolgend gemeinsam bezeichnet als &bdquo;Onlineangebot&ldquo;. Im Hinblick auf die verwendeten Begrifflichkeiten, wie z.B. &bdquo;Verarbeitung&ldquo; oder &bdquo;Verantwortlicher&ldquo; verweisen wir auf die Definitionen im Art. 4 der Datenschutzgrundverordnung (DSGVO). Arten der verarbeiteten Daten k&ouml;nnen Bestandsdaten (z.B. Namen, Adressen), Kontaktdaten (z.B. Email, Telefonnummern), Inhaltsdaten (z.B. Texteingaben, Fotografien, Videos), Nutzungsdaten (z.B. besuchte Webseiten, Interesse an Inhalten, Zugriffszeiten) und Meta-/Kommunikationsdaten (z.B. Ger&auml;te-Informationen, IP-Adressen) sein.</p>
         <p>Betroffene Personen sind Besucher und Nutzer des Onlineangebotes, nachfolgend zusammenfassend auch als &bdquo;Nutzer&ldquo; bezeichnet.</p>
         <p>Zweck der Verarbeitung sind die Zurverf&uuml;gungstellung des Onlineangebotes mit seinen Funktionen und Inhalten, die Beantwortung von Kontaktanfragen und die Kommunikation mit Nutzern, Sicherheitsma&szlig;nahmen und die Reichweitenmessung.</p>
@@ -148,6 +151,7 @@
 </div>
 
 
+<div id="cursor"></div>
 <div id="lightbox"><img src="" /></div>
 <div id="loading"></div>
 
@@ -169,6 +173,16 @@
     	$(window).on("load",function(){
     		hideLoading();
     	});
+
+
+        // cursor
+        $(window).on("mousemove",function(e){
+            $('#cursor').css({"top":(e.pageY-window.scrollY),"left":e.pageX});
+        }).hover(function(){$("#cursor").show();},function(){$("#cursor").hide();});
+        // hide cursor on touch devices
+        if (("ontouchstart" in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0)) { 
+            $("#cursor").remove();
+        }
 
 
         // navigation
