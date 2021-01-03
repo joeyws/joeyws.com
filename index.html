@@ -196,8 +196,10 @@
         	var hash = hashWithSlashes.replace(/\//g,'');
         	// bereich anzeigen
         	var duration = 400;
-            setTimeout(function(){$("#"+hash).fadeIn(duration);$('body,html').animate({scrollTop:0},0);return false;},duration);
-        	$("#"+hash).siblings().fadeOut(duration);
+        	$("#"+hash).siblings().stop().fadeOut(duration).promise().done(function(){
+                $("body,html").animate({scrollTop:0},0);//return false;
+                $("#"+hash).stop().fadeIn(duration);
+            });
             // header menu
             $("#header a[href='#/"+hash+"']").addClass("show").siblings("a").removeClass("show");
             // anderes
