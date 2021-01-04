@@ -33,9 +33,8 @@
     #content>div{display:none;}
     
     #works,#photos{margin:0 0 -16px 0;font-size:0;line-height:0;}
-    #works img,#photos img{transition:transform .1s ease-out;margin:0 16px 16px 0;max-width:100% !important;box-sizing:border-box;display:inline-block;vertical-align:top;cursor:zoom-in;}
-    #works img:hover,#photos img:hover{transform:scale(1.02) translateY(-4px);}
-    .tooltip{z-index:999995;opacity:0;transition:opacity .15s;padding:4px 8px;display:block;box-sizing:border-box;position:absolute;pointer-events:none;}
+    #works img,#photos img{margin:0 16px 16px 0;max-width:100% !important;box-sizing:border-box;display:inline-block;vertical-align:top;cursor:zoom-in;}
+    .tooltip{z-index:999995;opacity:0;transition:opacity .1s;padding:4px 8px;display:block;box-sizing:border-box;position:absolute;pointer-events:none;}
     .tooltip.show{opacity:1;}
     .tooltip span{color:var(--background);background:var(--text);}
     
@@ -168,8 +167,7 @@
     	function hideLoading() {$("#loading").hide(0);}
 
 
-        // init
-        photosSize();
+        // marquee
         var begin = 1;
         // preloader
     	$(window).on("load",function(){
@@ -199,6 +197,10 @@
         	$("#"+hash).siblings().stop().fadeOut(duration).promise().done(function(){
                 $("body,html").animate({scrollTop:0},0);//return false;
                 $("#"+hash).stop().fadeIn(duration);
+                // marquee
+                if (begin==1 && hash=="about") {Marquee3k.init();begin++;}
+                if (begin!=1 && hash=="about") {Marquee3k.playAll();}
+                if (begin!=1 && hash!="about") {Marquee3k.pauseAll();}
             });
             // header menu
             $("#header a[href='#/"+hash+"']").addClass("show").siblings("a").removeClass("show");
@@ -206,29 +208,22 @@
             $(".tooltip").remove();
             setTimeout(function(){$(".tooltip").remove();},200);
         	lightboxClose();
-            setTimeout(function(){
-                if (begin==1 && hash=="about") {Marquee3k.init();begin++;}
-                if (begin!=1 && hash=="about") {Marquee3k.playAll();}
-                if (begin!=1 && hash!="about") {Marquee3k.pauseAll();}
-            },(duration+50));
         });
         // start
         $(window).trigger('hashchange');
         
         
         // photos random size
-        function photosSize() {
-            $("#works img,#photos img").each(function(index) {
-                var minLength = 220;
-                var maxLength = 280;
-                var length = Math.random()*(maxLength-minLength)+minLength;
-                if ($(this).width() < $(this).height()) {
-                    $(this).css({"width":length});
-                } else {
-                    $(this).css({"max-height":length});
-                }
-            });
-        }
+        $("#works img,#photos img").each(function(index) {
+            var minLength = 220;
+            var maxLength = 280;
+            var length = Math.random()*(maxLength-minLength)+minLength;
+            if ($(this).width() < $(this).height()) {
+                $(this).css({"width":length});
+            } else {
+                $(this).css({"max-height":length});
+            }
+        });
         
         
         // tooltip
@@ -238,8 +233,6 @@
             var width = $(this).outerWidth();
             var positionIMGleft = $(this).position().left;
             var positionIMGtop = $(this).position().top;
-            /*var positionIMGright = positionIMGleft + width;
-            var positionIMGbottom = positionIMGtop + height;*/
             $("body").append('<div class="tooltip" style="left:'+positionIMGleft+'px;top:'+positionIMGtop+'px;max-width:'+width+'px;"><span>'+caption+'</span></div>');
             setTimeout(function(){$(".tooltip:last-child").addClass("show");},1);
         },function(){
