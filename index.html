@@ -23,42 +23,39 @@
 	html,body{background:var(--background);min-height:100vh;}
 	body{color:var(--text);font:normal normal 17px/1.3em webfont,monospace;}
 	h1{display:inline-block;white-space:pre;}
+    p{margin-top:16px;}
+	p:first-child{margin-top:0;}
 	a{transition:color .3s,background-color .3s;text-decoration:none;}
     a:hover,#header a:hover,#header a.show{color:var(--background);background:var(--text);}
     a:active,a:focus{outline:0;outline-offset:inherit;}
 
-    #header{z-index:999996;margin:16px 0 0 16px;margin-bottom:0;position:absolute;position:fixed;left:0;right:0;top:0;justify-content:space-between;display:flex;flex-wrap:wrap;}
+    #header{z-index:999996;margin:16px 0 0 16px;margin-bottom:0;position:absolute;position:fixed;right:0;left:0;top:0;justify-content:space-between;display:flex;flex-wrap:wrap;}
     #header a{display:inline-block;margin:0 16px 16px 0;background:var(--background);}
     #content{padding:16px;padding-top:180px;}
     #content>div{display:none;}
+    
+    #background{background:transparent url(bg/19.gif) center center no-repeat scroll;background-size:contain;opacity:.5;/*background-size:110vw 110vw;*/position:absolute;width:100%;height:100%;top:0;right:0;bottom:0;left:0;z-index:4;pointer-events:none;}
+    /*@media (orientation:portrait) {#background{background-size:110vh 110vh;}}*/
+    #welcome{z-index:999994;position:absolute;margin:16px 0;right:0;bottom:0;left:0;}
+	.marquee3k{overflow-x:hidden;white-space:nowrap;}
+    .marquee{display:inline-block;line-height:2.2em;background:var(--background);}
+    .marquee span{margin-right:32px;}
     
     #works,#photos{margin:0 0 -16px 0;font-size:0;line-height:0;}
     #works img,#photos img{margin:0 16px 16px 0;max-width:100% !important;box-sizing:border-box;display:inline-block;vertical-align:top;cursor:zoom-in;}
     .tooltip{z-index:999995;opacity:0;transition:opacity .2s;padding:8px;display:block;box-sizing:border-box;position:absolute;pointer-events:none;}
     .tooltip.show{opacity:1;}
     .tooltip span{color:var(--background);background:var(--text);}
-    
-    #contact{max-width:960px;}
-    p{margin-top:16px;}
-	p:first-child{margin-top:0;}
-
     #lightbox{z-index:999997;cursor:zoom-out;position:fixed;top:0;right:0;bottom:0;left:0;display:none;}
 	#lightbox img{cursor:pointer;max-height:90vh;max-width:90vw;box-sizing:border-box;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);}
     
-    #background{background:transparent url(bg/20.gif) center center no-repeat scroll;background-size:cover;opacity:.3;background-size:110vw 110vw;position:absolute;width:100%;height:100%;top:0;right:0;bottom:0;left:0;z-index:4;pointer-events:none;}
-    @media (orientation:portrait) {#background{background-size:110vh 110vh;}}
-    #welcome{z-index:999994;position:absolute;bottom:0;margin:16px;left:0;right:0;}
-	.marquee3k{overflow-x:hidden;white-space:nowrap;}
-    .marquee{display:inline-block;line-height:2.2em;background:var(--background);}
-    .marquee span{margin-right:32px;}
-    
-    /*#cursor{z-index:999999;width:16px;height:16px;left:-50%;top:-50%;background:#f00;transform:translate(-50%,-50%);border-radius:50%;backface-visibility:hidden;pointer-events:none;position:fixed;}*/
+    #contact{max-width:960px;}
+
     #loading{z-index:999998;background:var(--text);animation:.3s loading steps(1) infinite;width:32px;height:32px;border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;position:fixed;}
     @keyframes loading{50%{background:var(--background);}}
 </style>
 </head>
 <body>
-
 
 
 <div id="header">
@@ -116,8 +113,7 @@
         <div id="background">&nbsp;</div>
         <div id="welcome">
             <!-- https://de.statista.com/statistik/daten/studie/674488/umfrage/sprachen-weltweit-mit-den-meisten-muttersprachlern/ -->
-            <div class="marquee3k" data-speed="1"><div class="marquee"><span>歡迎</span><span>Bienvenidos</span><span>Welcome</span><span>स्वागत हे</span><span>اهلا وسهلا</span><span>Bem-vinda</span><span>স্বাগত</span></div></div>
-                <div class="marquee3k" data-speed="1"><div class="marquee"><span>добро пожаловать</span><span>ようこそ</span><span>Sugeng Rawuh</span><span>ਸਵਾਗਤ ਹੈ</span><span>Willkommen</span><span>어서 오십시오</span><span>Bienvenue</span></div></div>
+            <div class="marquee3k" data-speed="1"><div class="marquee"><span>歡迎</span><span>Bienvenidos</span><span>Welcome</span><span>स्वागत हे</span><span>اهلا وسهلا</span><span>Bem-vinda</span><span>স্বাগত</span><span>добро пожаловать</span><span>ようこそ</span><span>Sugeng Rawuh</span><span>ਸਵਾਗਤ ਹੈ</span><span>Willkommen</span><span>어서 오십시오</span><span>Bienvenue</span></div></div>
         </div>
     </div>
     <div id="contact">
@@ -156,16 +152,14 @@
 
 <div id="lightbox"><img src="" /></div>
 <div id="loading"></div>
-
-
 <script src="scripts.js"></script>
 <script>
     $(document).ready(function(){
 
 
         // #loading
-    	function showLoading() {$("#loading").show(0);}
-    	function hideLoading() {$("#loading").hide(0);}
+    	function showLoading() {$("#loading").fadeIn(0);}
+    	function hideLoading() {$("#loading").fadeOut(0);}
 
 
         // init
@@ -208,7 +202,6 @@
             var minLength = 180;
             var maxLength = 240;
             var length = Math.random()*(maxLength-minLength)+minLength;
-            //$(this).css({"margin":(Math.random()*200) + " " + (Math.random()*200) + " " + (Math.random()*400) + " " + (Math.random()*200)});
             if ($(this).width() < $(this).height()) {
                 $(this).css({"width":length});
             } else {
@@ -267,9 +260,9 @@
             $(this).addClass("show");
             lightboxLoad();
         });
-        $("#lightbox").on("click",function(e) {
+        $("#lightbox").on("click",function(e){
             lightboxClose();
-        }).on("click","img", function(e) {
+        }).on("click","img",function(e) {
             e.stopPropagation();
             if (event.pageX <= ($(document).width()/2)) {
                 lightboxPrev();
