@@ -167,6 +167,7 @@
     	$(window).on("load",function(){
     		hideLoading();
             Marquee3k.init();
+            begin++;
     	});
 
 
@@ -182,7 +183,7 @@
                 $("body,html").animate({scrollTop:0},0);//return false;
                 $("#"+hash).stop().fadeIn(duration);
                 // marquee
-                if (begin==1 && hash=="about") {Marquee3k.init();begin++;}
+                //if (begin==1 && hash=="about") {Marquee3k.init();begin++;}
                 if (begin!=1 && hash=="about") {Marquee3k.playAll();}
                 if (begin!=1 && hash!="about") {Marquee3k.pauseAll();}
             });
