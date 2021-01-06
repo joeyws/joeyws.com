@@ -163,10 +163,11 @@
 
 
         // init
-        marqueeBegin = 1;
+        var marqueeBegin = 1;
     	$(window).on("load",function(){
-    		hideLoading();
-    	});
+            hideLoading();
+            Marquee3k.init();marqueeBegin++;
+        });
 
 
         // navigation
@@ -180,22 +181,21 @@
         	$("#"+hash).siblings().stop().fadeOut(duration).promise().done(function(){
                 $("body,html").animate({scrollTop:0},0);//return false;
                 $("#"+hash).stop().fadeIn(duration);
-                // marquee
-                if (hash=="about") {
-                    if (marqueeBegin==1) {Marquee3k.init();marqueeBegin++;}
-                    else {Marquee3k.playAll();}
-                } else if (marqueeBegin!=1) {Marquee3k.pauseAll();}
             });
             // header menu
             $("#header a[href='#/"+hash+"']").addClass("show").siblings("a").removeClass("show");
             // anderes
             $(".tooltip").remove();
-            setTimeout(function(){$(".tooltip").remove();},duration);
+            setTimeout(function(){
+                $(".tooltip").remove();
+                // marquee
+                if (hash=="about" && marqueeBegin<=2) {Marquee3k.init();marqueeBegin++;}
+            },(duration+50));
         	lightboxClose();
         });
         // start
         $(window).trigger('hashchange');
-        
+    	        
         
         // photos random size
         $("#works img,#photos img").each(function(index) {
