@@ -189,7 +189,9 @@
             setTimeout(function(){
                 $(".tooltip").remove();
                 // marquee
+                if (hash=="about" && marqueeBegin>=3) {Marquee3k.playAll();}
                 if (hash=="about" && marqueeBegin<=2) {Marquee3k.init();marqueeBegin++;}
+                if (hash!="about" && marqueeBegin>=3) {Marquee3k.pauseAll();}
             },(duration+50));
         	lightboxClose();
         });
