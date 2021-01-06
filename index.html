@@ -163,9 +163,8 @@
 
 
         // init
-        var marqueeBegin = 1;
+        marqueeBegin = 1;
     	$(window).on("load",function(){
-            if (marqueeBegin==1) {Marquee3k.init();marqueeBegin++;}
     		hideLoading();
     	});
 
@@ -182,9 +181,10 @@
                 $("body,html").animate({scrollTop:0},0);//return false;
                 $("#"+hash).stop().fadeIn(duration);
                 // marquee
-                if (marqueeBegin==1 && hash=="about") {Marquee3k.init();marqueeBegin++;}
-                if (marqueeBegin!=1 && hash=="about") {Marquee3k.playAll();}
-                if (marqueeBegin!=1 && hash!="about") {Marquee3k.pauseAll();}
+                if (hash=="about") {
+                    if (marqueeBegin==1) {Marquee3k.init();marqueeBegin++;}
+                    else {Marquee3k.playAll();}
+                } else if (marqueeBegin!=1) {Marquee3k.pauseAll();}
             });
             // header menu
             $("#header a[href='#/"+hash+"']").addClass("show").siblings("a").removeClass("show");
