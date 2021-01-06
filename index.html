@@ -34,12 +34,12 @@
     #content{padding:16px;padding-top:180px;}
     #content>div{display:none;}
     
-    #background{background:transparent url(bg/19.gif) center center no-repeat scroll;background-size:contain;opacity:.5;position:absolute;width:100%;height:100%;top:0;right:0;bottom:0;left:0;z-index:4;pointer-events:none;}
-    /*#background{background-size:110vw 110vw;} @media (orientation:portrait) {#background{background-size:110vh 110vh;}}*/
-    #welcome{z-index:999994;position:absolute;margin:16px 0;right:0;bottom:0;left:0;}
-	.marquee3k{overflow-x:hidden;white-space:nowrap;}
+    #background{background:transparent url(bg/20.gif) center center no-repeat scroll;background-size:cover;background-size:110vw 110vw;opacity:.5;position:absolute;width:100%;height:100%;top:0;right:0;bottom:0;left:0;z-index:4;pointer-events:none;}
+    @media (orientation:portrait) {#background{background-size:110vh 110vh;}}
+    #welcome{z-index:999994;position:absolute;margin:16px;right:0;bottom:0;left:0;}
+	.marquee3k{overflow-x:hidden;white-space:nowrap;line-height:2.4em;background:var(--background);}
     .marquee{display:inline-block;}
-    .marquee span{margin-right:32px;background:var(--background);}
+    .marquee span{margin-right:32px;}
     
     #works,#photos{margin:0 0 -16px 0;font-size:0;line-height:0;}
     #works img,#photos img{margin:0 16px 16px 0;max-width:100% !important;box-sizing:border-box;display:inline-block;vertical-align:top;cursor:zoom-in;}
@@ -66,54 +66,56 @@
 </div>
 <div id="content">
     <div id="works">
-        <img alt="Wardrobe 1" src="works/27s.jpg" data-highres="works/27.jpg">
-        <img alt="Tower construction" src="works/26s.gif" data-highres="works/26.gif" />
-        <img alt="Fa&ccedil;ade" src="works/25s.png" data-highres="works/25.png" />
-        <img alt="Light studies" src="works/24s.jpg" data-highres="works/24.jpg" />
-        <img alt="Wooden structure" src="works/23s.jpg" data-highres="works/23.jpg" />
-        <img alt="Sint Anneke Club: model" src="works/22s.png" data-highres="works/22.png" />
-        <img alt="Sint Anneke Club: elevations, sections" src="works/21s.png" data-highres="works/21.png" />
-        <img alt="Sint Anneke Club: axonometry" src="works/20s.png" data-highres="works/20.png" />
-        <img alt="Ruled surfaces: model" src="works/19s.jpg" data-highres="works/19.jpg" />
-        <img alt="Ruled surfaces: documentation" src="works/18s.png" data-highres="works/18.png" />
-        <img alt="Tessellation: documentation" src="works/17s.jpg" data-highres="works/17.jpg" />
-        <img alt="Model, laser cut, glueless" src="works/16s.jpg" data-highres="works/16.jpg" />
-        <img alt="Plastic" src="works/15s.png" data-highres="works/15.png" />
-        <img alt="Wooden sculpture" src="works/14s.jpg" data-highres="works/14.jpg" />
-        <img alt="Cuboid: perspective" src="works/13s.jpg" data-highres="works/13.jpg" />
-        <img alt="Cuboid: preparation" src="works/12s.jpg" data-highres="works/12.jpg" />
-        <img alt="Cuboid: axonometry" src="works/11s.jpg" data-highres="works/11.jpg" />
-        <img alt="Cuboid: model" src="works/10s.jpg" data-highres="works/10.jpg" />
-        <img alt="Leichtsinn" src="works/9s.jpg" data-highres="works/9.jpg" />
-        <img alt="Bees" src="works/8s.jpg" data-highres="works/8.jpg" />
-        <img alt="Phone box" src="works/7s.jpg" data-highres="works/7.jpg" />
-        <img alt="Cup, ink" src="works/6s.jpg" data-highres="works/6.jpg" />
-        <img alt="Pineapple" src="works/5s.jpg" data-highres="works/5.jpg" />
-        <img alt="Ginger" src="works/4s.png" data-highres="works/4.png" />
-        <img alt="A Day at the Wilhelma Zoo" src="works/3s.jpg" data-highres="works/3.jpg" />
-        <img alt="Truck, Museum" src="works/2s.jpg" data-highres="works/2.jpg" />
-		<img alt="Tools" src="works/1s.jpg" data-highres="works/1.jpg" />
+        <img src="works/27.jpg" alt="Wardrobe 1" />
+        <img src="works/26.gif" alt="Tower construction" />
+        <img src="works/25.png" alt="Fa&ccedil;ade" />
+        <img src="works/24.jpg" alt="Light studies" />
+        <img src="works/23.jpg" alt="Wooden structure" />
+        <img src="works/22.png" alt="Sint Anneke Club: model" />
+        <img src="works/21.png" alt="Sint Anneke Club: elevations, sections" />
+        <img src="works/20.png" alt="Sint Anneke Club: axonometry" />
+        <img src="works/19.jpg" alt="Ruled surfaces: model" />
+        <img src="works/18.png" alt="Ruled surfaces: documentation" />
+        <img src="works/17.jpg" alt="Tessellation: documentation" />
+        <img src="works/16.jpg" alt="Model, laser cut, glueless" />
+        <img src="works/15.png" alt="Plastic" />
+        <img src="works/14.jpg" alt="Wooden sculpture" />
+        <img src="works/13.jpg" alt="Cuboid: perspective" />
+        <img src="works/12.jpg" alt="Cuboid: preparation" />
+        <img src="works/11.jpg" alt="Cuboid: axonometry" />
+        <img src="works/10.jpg" alt="Cuboid: model" />
+        <img src="works/9.jpg" alt="Leichtsinn" />
+        <img src="works/8.jpg" alt="Bees" />
+        <img src="works/7.jpg" alt="Phone box" />
+        <img src="works/6.jpg" alt="Cup, ink" />
+        <img src="works/5.jpg" alt="Pineapple" />
+        <img src="works/4.png" alt="Ginger" />
+        <img src="works/3.jpg" alt="A Day at the Wilhelma Zoo" />
+        <img src="works/2.jpg" alt="Truck, Museum" />
+		<img src="works/1.jpg" alt="Tools" />
     </div>
     <div id="photos">
-        <img alt="Creek" src="photos/13s.jpg" data-highres="photos/13.jpg" />
-        <img alt="Forest" src="photos/12s.jpg" data-highres="photos/12.jpg" />
-        <img alt="Next to the power plant" src="photos/11s.jpg" data-highres="photos/11.jpg" />
-        <img alt="Flora" src="photos/10s.jpg" data-highres="photos/10.jpg" />
-        <img alt="Hills" src="photos/9s.jpg" data-highres="photos/9.jpg" />
-        <img alt="Campfire" src="photos/8s.jpg" data-highres="photos/8.jpg" />
-        <img alt="Mountain range" src="photos/7s.jpg" data-highres="photos/7.jpg" />
-        <img alt="Eel soup" src="photos/6s.jpg" data-highres="photos/6.jpg" />
-        <img alt="H&#432;&#417;ng S&#417;n" src="photos/5s.jpg" data-highres="photos/5.jpg" />
-        <img alt="Skylight" src="photos/4s.jpg" data-highres="photos/4.jpg" />
-        <img alt="Glacial lake" src="photos/3s.jpg" data-highres="photos/3.jpg" />
-        <img alt="Landmannalaugar" src="photos/2s.jpg" data-highres="photos/2.jpg" />
-        <img alt="Times Square" src="photos/1s.jpg" data-highres="photos/1.jpg" />
+        <img src="photos/14.jpg" alt="Creek" />
+        <img src="photos/13.jpg" alt="Forest" />
+        <img src="photos/12.jpg" alt="Next to the power plant" />
+        <img src="photos/11.jpg" alt="Flora" />
+        <img src="photos/10.jpg" alt="Hills" />
+        <img src="photos/9.jpg" alt="Campfire" />
+        <img src="photos/8.jpg" alt="Mountain range" />
+        <img src="photos/7.jpg" alt="Eel soup" />
+        <img src="photos/6.jpg" alt="H&#432;&#417;ng S&#417;n" />
+        <img src="photos/5.jpg" alt="Skylight" />
+        <img src="photos/4.jpg" alt="Glacial lake" />
+        <img src="photos/3.jpg" alt="Hill" />
+        <img src="photos/2.jpg" alt="Landmannalaugar" />
+        <img src="photos/1.jpg" alt="Times Square" />
     </div>
     <div id="about">
         <div id="background">&nbsp;</div>
         <div id="welcome">
             <!-- https://de.statista.com/statistik/daten/studie/674488/umfrage/sprachen-weltweit-mit-den-meisten-muttersprachlern/ -->
-            <div class="marquee3k" data-speed="1"><div class="marquee"><span>歡迎</span><span>Bienvenidos</span><span>Welcome</span><span>स्वागत हे</span><span>اهلا وسهلا</span><span>Bem-vinda</span><span>স্বাগত</span><span>добро пожаловать</span><span>ようこそ</span><span>Sugeng Rawuh</span><span>ਸਵਾਗਤ ਹੈ</span><span>Willkommen</span><span>어서 오십시오</span><span>Bienvenue</span></div></div>
+            <div class="marquee3k" data-speed="1"><div class="marquee"><span>歡迎</span><span>Bienvenidos</span><span>Welcome</span><span>स्वागत हे</span><span>اهلا وسهلا</span><span>Bem-vinda</span><span>স্বাগত</span></div></div>
+            <div class="marquee3k" data-speed="1"><div class="marquee"><span>добро пожаловать</span><span>ようこそ</span><span>Sugeng Rawuh</span><span>ਸਵਾਗਤ ਹੈ</span><span>Willkommen</span><span>어서 오십시오</span><span>Bienvenue</span></div></div>
         </div>
     </div>
     <div id="contact">
@@ -229,7 +231,7 @@
         // lightbox
         function lightboxLoad() {
             showLoading();
-            var imgURLlarge = $("img.show").attr("data-highres");
+            var imgURLlarge = $("img.show").attr("src").replace(".","l.");
             $("#lightbox").show().children("img").attr("src",imgURLlarge);
             $("#lightbox img").on("load",function(){
                 hideLoading();
