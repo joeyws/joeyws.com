@@ -39,8 +39,8 @@
     
     #works,#photos{margin:0 0 -16px 0;font-size:0;line-height:0;}
     #works img,#photos img{margin:0 16px 16px 0;max-width:100% !important;box-sizing:border-box;display:inline-block;vertical-align:top;cursor:zoom-in;}
-    .tooltip{z-index:999995;opacity:0;transition:opacity .3s;display:block;box-sizing:border-box;position:absolute;pointer-events:none;}
-    .tooltip.show{opacity:1;}
+    .tooltip{z-index:999995;opacity:0;transition:opacity .2s,transform .2s;transform:translateY(-4px);display:block;box-sizing:border-box;position:absolute;pointer-events:none;}
+    .tooltip.show{opacity:1;transform:translateY(0);}
     .tooltip span{background:var(--background);}
     #lightbox{z-index:999997;cursor:zoom-out;position:fixed;top:0;right:0;bottom:0;left:0;display:none;}
 	#lightbox img{cursor:pointer;max-height:90vh;max-width:90vw;box-sizing:border-box;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);}
