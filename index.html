@@ -141,13 +141,6 @@ Hi.
     $(document).ready(function(){
 
 
-        $('.images').masonry({
-            itemSelector: 'img',
-            columnWidth: 1,
-            transitionDuration: 0
-        });
-
-
         // #loading
     	function showLoading() {$("#loading").fadeIn(0);}
     	function hideLoading() {$("#loading").fadeOut(0);}
@@ -157,6 +150,11 @@ Hi.
     	$(window).on("load",function(){
             hideLoading();
             Marquee3k.init();
+            $('.images').masonry({
+                itemSelector: 'img',
+                columnWidth: 1,
+                transitionDuration: 0
+            });
         });
 
 
