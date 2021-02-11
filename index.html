@@ -26,7 +26,8 @@
     #contact{z-index:999996;cursor:zoom-out;background:rgba(255,255,255,.85);display:none;position:absolute;position:fixed;background-origin:content-box;right:0;top:0;bottom:0;width:100%;max-width:480px;overflow-y:scroll;padding:10px;padding-left:100%;}
 
     .images{margin:0 -10px -10px 0;font-size:0;line-height:0;}
-    .images img{margin:0 10px 10px 0;max-width:100% !important;width:calc(10% - 10px);min-width:100px;box-sizing:border-box;display:inline-block;vertical-align:top;cursor:zoom-in;}
+    .images img{margin:0 10px 10px 0;width:calc(10% - 10px);box-sizing:border-box;display:inline-block;vertical-align:top;cursor:zoom-in;}
+    @media (max-width:900px) { .images img{width:calc(25% - 10px);} }
     #lightbox{z-index:999997;cursor:zoom-out;position:fixed;top:0;right:0;bottom:0;left:0;display:none;}
 	#lightbox img{cursor:pointer;max-height:90vh;max-width:90vw;box-sizing:border-box;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);}
     
