@@ -31,6 +31,7 @@
     .marquee span{margin-right:32px;}
     .cycle-slideshow{cursor:pointer;}
     .cycle-slideshow img{max-width:calc(100% - 20px);max-height:60vh;padding:0 10px;}
+    /*#cycle-caption{text-align:center;}*/
 
     #loading{z-index:999999;background:var(--text);animation:.3s loading steps(1) infinite;width:32px;height:32px;border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;position:fixed;}
     @keyframes loading{50%{background:var(--background);}}
@@ -58,7 +59,7 @@
         <img src="photos/10l.jpg" alt="Hills" />
         <img src="photos/9l.jpg" alt="Campfire" />
         <img src="works/16l.jpg" alt="Model, laser cut, glueless" />
-        <img src="works/15.png" alt="Plastic" />
+        <img src="works/15l.png" alt="Plastic" />
         <img src="works/22l.png" alt="Sint Anneke Club: model" />
         <img src="works/12l.jpg" alt="Cuboid: preparation" />
         <img src="works/13l.jpg" alt="Cuboid: perspective" />
@@ -71,7 +72,7 @@
         <img src="photos/4l.jpg" alt="Glacial lake" />
     </div>
 </p>
-<p><span id="cycle-caption"></span><br><a href="javascript:;" id="prev">Prev</a> / <a href="javascript:;" id="next">next</a></p>
+<p id="cycle-caption"></p>
 <!--<p>Works:</p>
 <div class="images">
     <img src="works/27.jpg" alt="Wardrobe 1" />
