@@ -16,27 +16,22 @@
     @font-face{font-family:webfont;src:url("webfont.ttf");}
     :root {--background:#fff;--text:#000;}
     /* RESET */*{user-select:none;font-kerning:normal;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-appearance:none;border-radius:0;-webkit-border-radius:0;box-sizing:content-box;font-smoothing:antialiased;-moz-osx-font-smoothing: grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased;}
-	html,body{background:var(--background);min-height:100%;}
+	html,body{background:var(--background);}
 	body{letter-spacing:.02em;padding:10px;color:var(--text);font:normal normal 15px/1.3em monospace,"Times New Roman",Times,serif,webfont,monospace;/*background:var(--background) url(https://media.giphy.com/media/xqklsTVVXhPa/source.gif) center center no-repeat fixed;background-size:cover;*/}
 	h1,p{margin-top:32px;}
 	p:first-child{margin-top:0;}
 	a{text-decoration:underline;color:#00f;}
     a:hover{color:#f00;}
 
-    #contact{z-index:999996;cursor:zoom-out;background:rgba(255,255,255,.85);display:none;position:absolute;position:fixed;background-origin:content-box;right:0;top:0;bottom:0;width:100%;max-width:480px;overflow-y:scroll;box-sizing:border-box;padding:10px;}
+    #contact{z-index:999996;cursor:zoom-out;background:rgba(255,255,255,.85);display:none;position:absolute;position:fixed;background-origin:content-box;right:0;top:0;bottom:0;width:100%;max-width:480px;padding:10px;padding-left:calc(100% - 480px);overflow-y:scroll;box-sizing:content-box;}
 
-    .images{margin:0 -10px -10px 0;font-size:0;line-height:0;}
-    .images img{margin:0 10px 10px 0;width:calc(10% - 10px);box-sizing:border-box;display:inline-block;vertical-align:top;cursor:zoom-in;}
-    @media (max-width:900px) { .images img{width:calc(25% - 10px);} }
-    #lightbox{z-index:999997;cursor:zoom-out;position:fixed;top:0;right:0;bottom:0;left:0;display:none;}
-	#lightbox img{cursor:pointer;max-height:90vh;max-width:90vw;box-sizing:border-box;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);}
-    
+    .marquee3k,.cycle-slideshow{margin:0 -10px;}
     .marquee3k{overflow-x:hidden;white-space:nowrap;line-height:1.3em;}
     .marquee{display:inline-block;}
     .marquee span{margin-right:32px;}
+    .cycle-slideshow{cursor:pointer;}
+    .cycle-slideshow img{max-width:calc(100% - 20px);max-height:60vh;padding:0 10px;}
 
-    #tooltip{z-index:999998;max-width:200px;margin:20px;left:-50%;top:-50%;backface-visibility:hidden;pointer-events:none;position:fixed;}
-    #tooltip span{background:var(--background);}
     #loading{z-index:999999;background:var(--text);animation:.3s loading steps(1) infinite;width:32px;height:32px;border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;position:fixed;}
     @keyframes loading{50%{background:var(--background);}}
 </style>
@@ -47,12 +42,37 @@
 <!-- https://de.statista.com/statistik/daten/studie/674488/umfrage/sprachen-weltweit-mit-den-meisten-muttersprachlern/ -->
 <div class="marquee3k" data-speed="1"><div class="marquee"><span>歡迎</span><span>Bienvenidos</span><span>Welcome</span><span>स्वागत हे</span><span>اهلا وسهلا</span><span>Bem-vinda</span><span>স্বাগত</span><span>добро пожаловать</span><span>ようこそ</span><span>Sugeng Rawuh</span><span>ਸਵਾਗਤ ਹੈ</span><span>Willkommen</span><span>어서 오십시오</span><span>Bienvenue</span></div></div>
 <h1>Joey Schweickhardt</h1>
-Hi.
 <p>
     <a href="https://www.linkedin.com/in/joeyschweickhardt/">LinkedIn</a>, <a href="https://www.instagram.com/joeyws/">Instagram</a>, <a href="https://soundcloud.com/joeyws">SoundCloud</a><br>
+</p>
+<p>
     <a href="#/contact">Contact</a>
 </p>
-<p>Works:</p>
+<p>
+    <div class="cycle-slideshow" data-cycle-fx="scrollHorz" data-cycle-swipe="true" data-cycle-caption="#cycle-caption" data-cycle-caption-template="{{slideNum}} / {{slideCount}}" data-cycle-center-horz="true" data-cycle-timeout="0" data-cycle-prev="#prev" data-cycle-next="#next">
+        <img src="works/27l.jpg" alt="Wardrobe 1" />
+        <img src="works/24l.jpg" alt="Light studies" />
+        <img src="photos/14l.jpg" alt="Creek" />
+        <img src="photos/11l.jpg" alt="Flora" />
+        <img src="photos/8l.jpg" alt="Mountain range" />
+        <img src="photos/10l.jpg" alt="Hills" />
+        <img src="photos/9l.jpg" alt="Campfire" />
+        <img src="works/16l.jpg" alt="Model, laser cut, glueless" />
+        <img src="works/15.png" alt="Plastic" />
+        <img src="works/22l.png" alt="Sint Anneke Club: model" />
+        <img src="works/12l.jpg" alt="Cuboid: preparation" />
+        <img src="works/13l.jpg" alt="Cuboid: perspective" />
+        <img src="works/11l.jpg" alt="Cuboid: axonometry" />
+        <img src="works/19l.jpg" alt="Ruled surfaces: model" />
+        <img src="works/9l.jpg" alt="Leichtsinn" />
+        <img src="photos/7l.jpg" alt="Eel soup" />
+        <img src="photos/6l.jpg" alt="H&#432;&#417;ng S&#417;n" />
+        <img src="photos/5l.jpg" alt="Skylight" />
+        <img src="photos/4l.jpg" alt="Glacial lake" />
+    </div>
+</p>
+<p><span id="cycle-caption"></span><br><a href="javascript:;" id="prev">Prev</a> / <a href="javascript:;" id="next">next</a></p>
+<!--<p>Works:</p>
 <div class="images">
     <img src="works/27.jpg" alt="Wardrobe 1" />
     <img src="works/26.gif" alt="Tower construction" />
@@ -100,7 +120,7 @@ Hi.
     <img src="photos/3.jpg" alt="Hill" />
     <img src="photos/2.jpg" alt="Landmannalaugar" />
     <img src="photos/1.jpg" alt="Times Square" />
-</div>
+</div>-->
 
 
 <div id="contact">
@@ -133,11 +153,9 @@ Hi.
 </div>
 
 
-<div id="lightbox"><img src="" /></div>
-<div id="tooltip">&nbsp;</div>
 <div id="loading"></div>
 <script src="scripts.js"></script>
-<script src="masonry.pkgd.min.js"></script>
+<script src="cycle2.js"></script>
 <script>
     $(document).ready(function(){
 
@@ -151,11 +169,6 @@ Hi.
     	$(window).on("load",function(){
             hideLoading();
             Marquee3k.init();
-            $('.images').masonry({
-                itemSelector: 'img',
-                columnWidth: 1,
-                transitionDuration: 0
-            });
         });
 
 
@@ -172,74 +185,9 @@ Hi.
             } else {
                 $("#contact").fadeOut(duration);
             }
-            lightboxClose();
         });
         // start
         $(window).trigger('hashchange');
-        
-        
-        // tooltip
-        $(window).on("mousemove",function(e){
-            $('#tooltip').css({"top":(e.pageY-window.scrollY),"left":e.pageX});
-        }).hover(function(){$("#cursor").show();},function(){$("#cursor").hide();});
-        $(".images img").hover(function(){
-            var caption = $(this).attr("alt");
-            $("#tooltip").html("<span>"+caption+"</span>").show();
-        },function(){
-            $("#tooltip").html("").hide();
-        });
-        // hide cursor on touch devices
-        if (("ontouchstart" in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0)) { 
-            $("#cursor").remove();
-        }
-       
-
-        // lightbox
-        function lightboxLoad() {
-            showLoading();
-            var imgURLlarge = $("img.show").attr("src").replace(".","l.");
-            $("#lightbox").show().children("img").attr("src",imgURLlarge);
-            $("#lightbox img").on("load",function(){
-                hideLoading();
-            });
-        };
-        function lightboxPrev() {
-            if ($("#lightbox").is(":visible")) {
-                if (!$("img:first-child").is(".show")) {
-                    $("img.show").prev("img").addClass("show").siblings().removeClass("show");
-                    lightboxLoad();
-                }
-            }
-        };
-        function lightboxNext() {
-            if ($("#lightbox").is(":visible")) {
-                if (!$("img:last-child").is(".show")) {
-                    $("img.show").next("img").addClass("show").siblings("img").removeClass("show");
-                    lightboxLoad();
-                } else {
-                    lightboxClose();
-                }
-            }
-        };
-        function lightboxClose() {
-            $("#lightbox").hide().children("img").attr("src","data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");
-            $("img.show").removeClass("show");
-        };
-        $(".images img").click(function(){
-            lightboxClose();
-            $(this).addClass("show");
-            lightboxLoad();
-        });
-        $("#lightbox").on("click",function(e){
-            lightboxClose();
-        }).on("click","img",function(e) {
-            e.stopPropagation();
-            if (event.pageX <= ($(document).width()/2)) {
-                lightboxPrev();
-            } else {
-                lightboxNext();
-            }
-        });
 
 
     	// contact
@@ -257,14 +205,24 @@ Hi.
     	$('#phone').html(phone).attr('href','t'+'e'+'l'+':'+phone);
 
 
+        // slideshow
+        $(".cycle-slideshow").click(function(){
+            if (event.pageX <= ($(document).width()/2)) {
+                $(".cycle-slideshow").cycle("prev");
+            } else {
+                $(".cycle-slideshow").cycle("next");
+            }
+        });
+
+
     	// keyboard control
     	$(document).keydown(function(e){
     		if (!($("input,textarea").is(":focus"))) {
     			switch(e.which) {
     			    case 27: lightboxClose(); window.location.href="#/"; break; // esc
     				case 32: break; // space
-    				case 37: lightboxPrev(); break; // left
-    				case 39: lightboxNext(); break; // right
+    				case 37: $(".cycle-slideshow").cycle("prev"); break; // left
+    				case 39: $(".cycle-slideshow").cycle("next"); break; // right
     				default: return;
     			}
     			e.preventDefault();
