@@ -25,13 +25,16 @@
 
     #contact{z-index:999996;cursor:zoom-out;background:rgba(255,255,255,.85);display:none;position:absolute;position:fixed;background-origin:content-box;right:0;top:0;bottom:0;width:100%;max-width:480px;padding:10px;padding-left:calc(100% - 480px);overflow-y:scroll;box-sizing:content-box;}
 
-    .marquee3k,.cycle-slideshow{margin:0 -10px;}
+    /*.marquee3k,.cycle-slideshow{margin:0 -10px;}*/
     .marquee3k{overflow-x:hidden;white-space:nowrap;line-height:1.3em;}
     .marquee{display:inline-block;}
     .marquee span{margin-right:32px;}
-    .cycle-slideshow{cursor:pointer;}
-    .cycle-slideshow img{max-width:calc(100% - 20px);max-height:60vh;padding:0 10px;}
+    .cycle-slideshow{cursor:none;}
+    .cycle-slideshow img{max-width:calc(100% - 20px);max-height:60vh;/*padding:0 10px;*/}
     /*#cycle-caption{text-align:center;}*/
+    #cursor{z-index:999999;width:32px;height:32px;transform:translate(-50%,-50%);backface-visibility:hidden;mix-blend-mode:difference;pointer-events:none;position:fixed;left:-50%;top:-50%;background:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNS4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkViZW5lXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMzJweCIgaGVpZ2h0PSIzMnB4IiB2aWV3Qm94PSIwIDAgMzIgMzIiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDMyIDMyIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxwb2x5Z29uIGZpbGw9IiNGRkZGRkYiIHBvaW50cz0iMzEuOTUsMTUuOTYgMTkuMDcsMjkuMDUgMTYuOTMsMjYuOTUgMjYuMjIsMTcuNSAwLDE3LjUgMCwxNC41IDI2LjAxLDE0LjUgMTUuOTcsNS4wOSAxOC4wMywyLjkxIAkNCgkJIi8+DQo8L2c+DQo8L3N2Zz4NCg==) center center no-repeat scroll;}
+    #cursor.prev{transform:translate(-50%,-50%) rotate(-180deg);}
+        
 
     #loading{z-index:999999;background:var(--text);animation:.3s loading steps(1) infinite;width:32px;height:32px;border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;position:fixed;}
     @keyframes loading{50%{background:var(--background);}}
@@ -73,55 +76,6 @@
     </div>
 </p>
 <p id="cycle-caption"></p>
-<!--<p>Works:</p>
-<div class="images">
-    <img src="works/27.jpg" alt="Wardrobe 1" />
-    <img src="works/26.gif" alt="Tower construction" />
-    <img src="works/25.png" alt="Fa&ccedil;ade" />
-    <img src="works/24.jpg" alt="Light studies" />
-    <img src="works/23.jpg" alt="Wooden structure" />
-    <img src="works/22.png" alt="Sint Anneke Club: model" />
-    <img src="works/21.png" alt="Sint Anneke Club: elevations, sections" />
-    <img src="works/20.png" alt="Sint Anneke Club: axonometry" />
-    <img src="works/19.jpg" alt="Ruled surfaces: model" />
-    <img src="works/18.png" alt="Ruled surfaces: documentation" />
-    <img src="works/17.jpg" alt="Tessellation: documentation" />
-    <img src="works/16.jpg" alt="Model, laser cut, glueless" />
-    <img src="works/15.png" alt="Plastic" />
-    <img src="works/14.jpg" alt="Wooden sculpture" />
-    <img src="works/13.jpg" alt="Cuboid: perspective" />
-    <img src="works/12.jpg" alt="Cuboid: preparation" />
-    <img src="works/11.jpg" alt="Cuboid: axonometry" />
-    <img src="works/10.jpg" alt="Cuboid: model" />
-    <img src="works/9.jpg" alt="Leichtsinn" />
-    <img src="works/8.jpg" alt="Bees" />
-    <img src="works/7.jpg" alt="Phone box" />
-    <img src="works/6.jpg" alt="Cup, ink" />
-    <img src="works/5.jpg" alt="Pineapple" />
-    <img src="works/4.png" alt="Ginger" />
-    <img src="works/3.jpg" alt="A Day at the Wilhelma Zoo" />
-    <img src="works/2.jpg" alt="Truck, Museum" />
-	<img src="works/1.jpg" alt="Tools" />
-</div>
-<p>Photos:</p>
-<div class="images">
-    <img src="photos/16.jpg" alt="Sky" />
-    <img src="photos/14.jpg" alt="Creek" />
-    <img src="photos/13.jpg" alt="Forest" />
-    <img src="photos/12.jpg" alt="Next to the power plant" />
-    <img src="photos/11.jpg" alt="Flora" />
-    <img src="photos/10.jpg" alt="Hills" />
-    <img src="photos/9.jpg" alt="Campfire" />
-    <img src="photos/8.jpg" alt="Mountain range" />
-    <img src="photos/15.jpg" alt="S&#244;ng Ng&#224n Ph&#7889;" />
-    <img src="photos/7.jpg" alt="Eel soup" />
-    <img src="photos/6.jpg" alt="H&#432;&#417;ng S&#417;n" />
-    <img src="photos/5.jpg" alt="Skylight" />
-    <img src="photos/4.jpg" alt="Glacial lake" />
-    <img src="photos/3.jpg" alt="Hill" />
-    <img src="photos/2.jpg" alt="Landmannalaugar" />
-    <img src="photos/1.jpg" alt="Times Square" />
-</div>-->
 
 
 <div id="contact">
@@ -155,6 +109,7 @@
 
 
 <div id="loading"></div>
+<div id="cursor"></div>
 <script src="scripts.js"></script>
 <script src="cycle2.js"></script>
 <script>
@@ -214,13 +169,29 @@
                 $(".cycle-slideshow").cycle("next");
             }
         });
+        // cursor
+        $(window).on("mousemove",function(e){
+            $('#cursor').css({"top":(e.pageY-window.scrollY),"left":e.pageX});
+            if (event.pageX <= ($(document).width()/2)) {
+                $("#cursor").addClass("prev");
+            } else {
+                $("#cursor").removeClass("prev");
+            }
+        });
+        $(".cycle-slideshow").hover(function(){
+            $("#cursor").show();
+        },function(){$("#cursor").hide();});
+        // hide cursor on touch devices
+        if (("ontouchstart" in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0)) { 
+            $("#cursor").remove();
+        }
 
 
     	// keyboard control
     	$(document).keydown(function(e){
     		if (!($("input,textarea").is(":focus"))) {
     			switch(e.which) {
-    			    case 27: lightboxClose(); window.location.href="#/"; break; // esc
+    			    case 27: window.location.href="#/"; break; // esc
     				case 32: break; // space
     				case 37: $(".cycle-slideshow").cycle("prev"); break; // left
     				case 39: $(".cycle-slideshow").cycle("next"); break; // right
