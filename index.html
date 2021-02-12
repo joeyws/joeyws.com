@@ -22,14 +22,13 @@
 	p:first-child{margin-top:0;}
 	a{text-decoration:underline;color:#00f;}
     a:hover{color:#f00;}
-    a[href^=http]{padding-right:15px;background:transparent url(external.svg) right center no-repeat scroll;}
+    /*a[href^=http]{padding-right:15px;background:transparent url(external.svg) right center no-repeat scroll;}*/
 
     .marquee3k{overflow-x:hidden;white-space:nowrap;line-height:1.3em;}
     .marquee{display:inline-block;}
     .marquee span{margin-right:32px;}
     .cycle-slideshow{cursor:none;}
     .cycle-slideshow img{max-width:calc(100% - 20px);max-height:60vh;/*padding:0 10px;*/}
-    #cycle-caption{}
     #cursor{z-index:999999;display:none;width:32px;height:32px;transform:translate(-50%,-50%) scale(.5);backface-visibility:hidden;mix-blend-mode:difference;pointer-events:none;position:fixed;left:-50%;top:-50%;background:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNS4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkViZW5lXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMzJweCIgaGVpZ2h0PSIzMnB4IiB2aWV3Qm94PSIwIDAgMzIgMzIiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDMyIDMyIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxwb2x5Z29uIGZpbGw9IiNGRkZGRkYiIHBvaW50cz0iMzEuOTUsMTUuOTYgMTkuMDcsMjkuMDUgMTYuOTMsMjYuOTUgMjYuMjIsMTcuNSAwLDE3LjUgMCwxNC41IDI2LjAxLDE0LjUgMTUuOTcsNS4wOSAxOC4wMywyLjkxIAkNCgkJIi8+DQo8L2c+DQo8L3N2Zz4NCg==) center center no-repeat scroll;}
     #cursor.prev{transform:translate(-50%,-50%) scale(.5) rotate(-180deg);}
     
@@ -51,9 +50,8 @@
 <p>
     <a href="#/contact">Contact</a>
 </p>
-<p>
-    <div class="cycle-slideshow" data-cycle-fx="scrollHorz" data-cycle-swipe="true" data-cycle-caption="#cycle-caption" data-cycle-caption-template="{{slideNum}}/{{slideCount}}: {{alt}}" data-cycle-center-horz="true" data-cycle-timeout="0" data-cycle-prev="#prev" data-cycle-next="#next">
-        <img src="img/23.png" alt="Vasikkasaari Climate Institute, Helsinki" />
+<p class="cycle-slideshow" data-cycle-fx="scrollHorz" data-cycle-swipe="true" data-cycle-caption="#cycle-caption" data-cycle-caption-template="{{slideNum}}/{{slideCount}}: {{alt}}" data-cycle-center-horz="true" data-cycle-timeout="0" data-cycle-prev="#prev" data-cycle-next="#next">
+        <img src="img/23.jpg" alt="Vasikkasaari Climate Institute, Helsinki" />
         <img src="img/22.jpg" alt="Creek, Southern Germany" />
         <img src="img/21.jpg" alt="Wardrobe 1" />
         <img src="img/20.jpg" alt="Flora" />
@@ -62,21 +60,20 @@
         <img src="img/17.jpg" alt="Mountain range, Switzerland" />
         <img src="img/16.jpg" alt="Death Valley" />
         <img src="img/15.jpg" alt="Campfire" />
-        <img src="img/14.png" alt="Sint-Aneke-Club, Antwerp" />
-        <img src="img/13.png" alt="Plastic" />
+        <img src="img/14.jpg" alt="Sint-Aneke-Club, Antwerp" />
+        <img src="img/13.jpg" alt="Plastic" />
         <img src="img/12.jpg" alt="Model, laser cut, glueless" />
-        <!--<img src="img/11.jpg" alt="Cuboid perspective preparation" />-->
+        <img src="img/11.jpg" alt="Cuboid perspective preparation" />
         <img src="img/10.jpg" alt="Cuboid perspective" />
         <img src="img/9.jpg" alt="Cuboid axonometry" />
         <img src="img/8.jpg" alt="Ruled surfaces" />
         <img src="img/7.jpg" alt="Pineapple, etching" />
-        <img src="img/6.png" alt="Ginger" />
+        <img src="img/6.jpg" alt="Ginger" />
         <img src="img/5.jpg" alt="Leichtsinn" />
         <img src="img/4.jpg" alt="Eel soup" />
         <img src="img/3.jpg" alt="H&#432;&#417;ng S&#417;n" />
         <img src="img/2.jpg" alt="Merano" />
         <img src="img/1.jpg" alt="J&ouml;kuls&aacute;rl&oacute;n glacial lake" />
-    </div>
 </p>
 <p id="cycle-caption"></p>
 
@@ -114,7 +111,6 @@
 <div id="loading"></div>
 <div id="cursor"></div>
 <script src="scripts.js"></script>
-<script src="cycle2.js"></script>
 <script>
     $(document).ready(function(){
 
