@@ -17,24 +17,29 @@
     :root {--background:#fff;--text:#000;}
     /* RESET */*{user-select:none;font-kerning:normal;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-appearance:none;border-radius:0;-webkit-border-radius:0;box-sizing:content-box;font-smoothing:antialiased;-moz-osx-font-smoothing: grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased;}
 	html,body{background:var(--background);}
-	body{letter-spacing:.0em;color:var(--text);font:normal normal 13px/1.4em webfont,sans-serif,monospace,"Times New Roman",Times,serif,webfont,monospace;/*background:var(--background) url(https://media.giphy.com/media/xqklsTVVXhPa/source.gif) center center no-repeat fixed;background-size:cover;*/}
-	h1,p{margin-top:2em;}
+	body{letter-spacing:.0em;color:var(--text);font:normal normal 3vw/1.4em webfont,sans-serif,monospace,"Times New Roman",Times,serif,webfont,monospace;/*background:var(--background) url(https://media.giphy.com/media/xqklsTVVXhPa/source.gif) center center no-repeat fixed;background-size:cover;*/}
+	h1,p{margin-top:1em;}
 	p:first-child{margin-top:0;}
-	a{text-decoration:underline;color:#00f;}
-    a:hover{text-decoration:none;background:var(--text);color:var(--background);}
+	a{text-decoration:underline;}
+    a:hover{text-decoration:none;}
 
-    #wrapper,#contact{padding:10px;}
-    .marquee3k{overflow-x:hidden;white-space:nowrap;}
-    .marquee{display:inline-block;}
-    .marquee span{margin-right:1.4em;}
-    .cycle-slideshow{cursor:none;width:100%;height:60vh;}
-    .cycle-slideshow img{max-width:100%;max-height:60vh;}
-    #cycle-caption{text-align:center;}
-    #cursor{z-index:999998;display:none;width:48px;height:48px;transform:translate(-50%,-50%) scale(.4);backface-visibility:hidden;mix-blend-mode:difference;pointer-events:none;position:fixed;left:-50%;top:-50%;background:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNS4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkViZW5lXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMzJweCIgaGVpZ2h0PSIzMnB4IiB2aWV3Qm94PSIwIDAgMzIgMzIiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDMyIDMyIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxwb2x5Z29uIGZpbGw9IiNGRkZGRkYiIHBvaW50cz0iMzEuOTUsMTUuOTYgMTkuMDcsMjkuMDUgMTYuOTMsMjYuOTUgMjYuMjIsMTcuNSAwLDE3LjUgMCwxNC41IDI2LjAxLDE0LjUgMTUuOTcsNS4wOSAxOC4wMywyLjkxIAkNCgkJIi8+DQo8L2c+DQo8L3N2Zz4NCg==) center center no-repeat scroll;}
-    #cursor.prev{transform:translate(-50%,-50%) scale(.4) scaleX(-1);}
+    #wrapper{}
+    #contact,.section{padding:10px;}
+    .marquee3k{overflow-x:hidden;white-space:nowrap;background:#f70;color:#f00;}
+        .marquee{display:inline-block;}
+            .marquee span{margin-right:1.4em;}
+    #slideshow{margin:1em 0;}
+        .cycle-slideshow{cursor:none;width:100%;height:60vh;}
+        .cycle-slideshow img{max-width:100%;max-height:60vh;}
+        #cycle-caption{}
+        #cycle-num{float:right;}
+    #footer{margin-top:1em;text-align:right;background:#04f;}
+    
+    #cursor{z-index:999998;display:none;width:48px;height:48px;transform:translate(-50%,-50%) scale(2);backface-visibility:hidden;mix-blend-mode:difference;pointer-events:none;position:fixed;left:-50%;top:-50%;background:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNS4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkViZW5lXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMzJweCIgaGVpZ2h0PSIzMnB4IiB2aWV3Qm94PSIwIDAgMzIgMzIiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDMyIDMyIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxwb2x5Z29uIGZpbGw9IiNGRkZGRkYiIHBvaW50cz0iMzEuOTUsMTUuOTYgMTkuMDcsMjkuMDUgMTYuOTMsMjYuOTUgMjYuMjIsMTcuNSAwLDE3LjUgMCwxNC41IDI2LjAxLDE0LjUgMTUuOTcsNS4wOSAxOC4wMywyLjkxIAkNCgkJIi8+DQo8L2c+DQo8L3N2Zz4NCg==) center center no-repeat scroll;}
+    #cursor.prev{transform:translate(-50%,-50%) scale(2) scaleX(-1);}
     
     #contact{z-index:999997;background:var(--background);overflow-y:auto;top:0;right:0;bottom:0;left:0;display:none;position:fixed;box-sizing:border-box;}
-    #contact *{max-width:640px;}
+    /*#contact *{max-width:640px;}*/
 
     #loading{z-index:999999;background:#fff;mix-blend-mode:difference;animation:.3s loading steps(1) infinite;width:1.4em;height:1.4em;border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;position:fixed;}
     @keyframes loading{50%{opacity:0;}}
@@ -47,8 +52,9 @@
 <!-- https://de.statista.com/statistik/daten/studie/674488/umfrage/sprachen-weltweit-mit-den-meisten-muttersprachlern/ -->
 <div class="marquee3k" data-speed="1"><div class="marquee"><span>歡迎</span><span>Bienvenidos</span><span>Welcome</span><span>स्वागत हे</span><span>اهلا وسهلا</span><span>Bem-vinda</span><span>স্বাগত</span><span>добро пожаловать</span><span>ようこそ</span><span>Sugeng Rawuh</span><span>ਸਵਾਗਤ ਹੈ</span><span>Willkommen</span><span>어서 오십시오</span><span>Bienvenue</span></div></div>
 <h1>Joey Schweickhardt</h1>
-<p><a href="https://www.instagram.com/joeyws/">Instagram</a>, <a href="https://www.linkedin.com/in/joeyschweickhardt/">LinkedIn</a>, <a href="https://soundcloud.com/joeyws">SoundCloud</a><br><a href="#/contact">Contact</a></p>
-<p class="cycle-slideshow" data-cycle-fx="scrollHorz" data-cycle-pager="#cycle-pager" data-cycle-caption="#cycle-caption" data-cycle-caption-template="{{slideNum}}/{{slideCount}} &mdash; {{alt}}" data-cycle-center-horz="true" data-cycle-timeout="0" data-cycle-prev="#prev" data-cycle-next="#next">
+<div></div>
+<div id="slideshow">
+    <div class="cycle-slideshow" data-cycle-fx="scrollHorz" data-cycle-loader="wait" data-cycle-pager="#cycle-pager" data-cycle-caption="#cycle-caption" data-cycle-caption-template="<span id='cycle-num'>{{slideNum}}/{{slideCount}}</span>{{alt}}" data-cycle-center-horz="true" data-cycle-timeout="0" data-cycle-prev="#prev" data-cycle-next="#next">
         <img src="img/23.jpg" alt="Vasikkasaari Climate Institute, Helsinki" />
         <img src="img/22.jpg" alt="Creek, Southern Germany" />
         <img src="img/21.jpg" alt="Wardrobe 1" />
@@ -72,8 +78,10 @@
         <img src="img/3.jpg" alt="H&#432;&#417;ng S&#417;n" />
         <img src="img/2.jpg" alt="Merano" />
         <img src="img/1.jpg" alt="J&ouml;kuls&aacute;rl&oacute;n glacial lake" />
-</p>
-<p id="cycle-caption"></p>
+    </div>
+</div>
+<div id="cycle-caption"></div>
+<div id="footer"><a href="https://www.instagram.com/joeyws/">Instagram</a>, <a href="https://www.linkedin.com/in/joeyschweickhardt/">LinkedIn</a>, <a href="https://soundcloud.com/joeyws">SoundCloud</a>, <a href="#/contact">Contact</a></div>
 </div>
 
 
