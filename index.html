@@ -19,22 +19,22 @@
 	html,body{background:var(--background);}
 	body{letter-spacing:.02em;color:var(--text);font:normal normal 13px/1.4em webfont,sans-serif,monospace,"Times New Roman",Times,serif,webfont,monospace;/*background:#fff url() center center no-repeat fixed;background-size:cover;*/}
 	h1{}
-    h1,p{margin-top:10px;}
+    h1,p{margin-top:20px;}
 	p:first-child{margin-top:0;}
 	a{text-decoration:underline;}
     a:hover{text-decoration:none;}
 
-    #wrapper{padding:10px 0;}
-    #contact{}
-    h1,#cycle-caption,#footer,.space{padding:0 10px;}
-    .space::after{content:"-";}
+    #wrapper,#contact{padding:10px;}
     .marquee3k{overflow-x:hidden;white-space:nowrap;/*border-bottom:1px solid var(--text);*//*background:var(--text);color:var(--background);*/}
         .marquee{display:inline-block;}
             .marquee span{margin-right:1.4em;}
     .cycle-slideshow{cursor:none;width:100%;height:70vh;}
     .cycle-slideshow img{max-width:100%;max-height:70vh;}
-    #cycle-num{}
-    #footer{/*border-top:1px solid var(--text);*/}
+    #cycle-caption{text-align:center;}
+    #cycle-pager{overflow:hidden;}
+    #cycle-pager span{margin-right:.25em;display:inline-block;opacity:.2;cursor:pointer;}
+    #cycle-pager span:hover,#cycle-pager span.cycle-pager-active{opacity:1;}
+    #footer{text-align:right;/*border-top:1px solid var(--text);*/}
     
     /*#cursor{z-index:999998;display:none;width:48px;height:48px;transform:translate(-50%,-50%) scale(.8);backface-visibility:hidden;mix-blend-mode:difference;pointer-events:none;position:fixed;left:-50%;top:-50%;background:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNS4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkViZW5lXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMzJweCIgaGVpZ2h0PSIzMnB4IiB2aWV3Qm94PSIwIDAgMzIgMzIiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDMyIDMyIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxwb2x5Z29uIGZpbGw9IiNGRkZGRkYiIHBvaW50cz0iMzEuOTUsMTUuOTYgMTkuMDcsMjkuMDUgMTYuOTMsMjYuOTUgMjYuMjIsMTcuNSAwLDE3LjUgMCwxNC41IDI2LjAxLDE0LjUgMTUuOTcsNS4wOSAxOC4wMywyLjkxIAkNCgkJIi8+DQo8L2c+DQo8L3N2Zz4NCg==) center center no-repeat scroll;}*/
     #cursor{z-index:999998;display:none;transform:translate(-50%,-50%) scale(2);backface-visibility:hidden;/*color:#fff;mix-blend-mode:difference;*/pointer-events:none;position:fixed;left:-50%;top:-50%;}
@@ -54,7 +54,7 @@
     <div class="marquee3k" data-speed="1"><div class="marquee"><span>歡迎</span><span>Bienvenidos</span><span>Welcome</span><span>स्वागत हे</span><span>اهلا وسهلا</span><span>Bem-vinda</span><span>স্বাগত</span><span>добро пожаловать</span><span>ようこそ</span><span>Sugeng Rawuh</span><span>ਸਵਾਗਤ ਹੈ</span><span>Willkommen</span><span>어서 오십시오</span><span>Bienvenue</span></div></div>
     <h1>Joey Schweickhardt</h1>
     <p id="slideshow">
-        <div class="cycle-slideshow" data-cycle-fx="scrollHorz" data-cycle-loader="wait" data-cycle-pager="#cycle-pager" data-cycle-caption="#cycle-caption" data-cycle-caption-template="<span id='cycle-num'>{{slideNum}}/{{slideCount}}</span><br><span id='cycle-alt'>{{alt}}</span>" data-cycle-center-horz="true" data-cycle-timeout="0" data-cycle-prev="#prev" data-cycle-next="#next">
+        <div class="cycle-slideshow" data-cycle-fx="scrollHorz" data-cycle-loader="wait" data-cycle-pager="#cycle-pager" data-cycle-caption="#cycle-text" data-cycle-caption-template="<!--<span id='cycle-num'>{{slideNum}}/{{slideCount}}</span><br>--><span id='cycle-alt'>{{alt}}</span>" data-cycle-center-horz="true" data-cycle-timeout="0" data-cycle-prev="#prev" data-cycle-next="#next">
             <img src="img/23.jpg" alt="Vasikkasaari Climate Institute, Helsinki" />
             <img src="img/22.jpg" alt="Creek, Southern Germany" />
             <img src="img/21.jpg" alt="Wardrobe 1" />
@@ -80,8 +80,10 @@
             <img src="img/1.jpg" alt="J&ouml;kuls&aacute;rl&oacute;n glacial lake" />
         </div>
     </p>
-    <p id="cycle-caption"></p>
-    <p class="space"></p>
+    <p id="cycle-caption">
+        <span id="cycle-text"></span><br>
+        <span id="cycle-pager"></span>
+    </p>
     <p id="footer">
         <a href="https://www.instagram.com/joeyws/">Instagram</a><br>
         <a href="https://www.linkedin.com/in/joeyschweickhardt/">LinkedIn</a><br>
