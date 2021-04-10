@@ -18,8 +18,7 @@
     /* RESET */*{user-select:none;font-kerning:normal;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-appearance:none;border-radius:0;-webkit-border-radius:0;box-sizing:content-box;font-smoothing:antialiased;-moz-osx-font-smoothing: grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased;}
 	html,body{background:var(--background);}
 	body{letter-spacing:.02em;color:var(--text);font:normal normal 13px/1.4em webfont,sans-serif,monospace,"Times New Roman",Times,serif,webfont,monospace;/*background:#fff url() center center no-repeat fixed;background-size:cover;*/}
-	h1{}
-    h1,p{margin-top:20px;}
+	h1,p{margin-top:20px;}
 	p:first-child{margin-top:0;}
 	a{text-decoration:underline;}
     a:hover{text-decoration:none;}
@@ -32,7 +31,7 @@
     .cycle-slideshow img{max-width:100%;max-height:70vh;}
     #cycle-caption{text-align:center;}
     #cycle-pager{overflow:hidden;}
-    #cycle-pager span{margin-right:.25em;display:inline-block;opacity:.2;cursor:pointer;}
+    #cycle-pager span{width:14px;text-align:center;display:inline-block;opacity:.15;cursor:pointer;}
     #cycle-pager span:hover,#cycle-pager span.cycle-pager-active{opacity:1;}
     #footer{text-align:right;/*border-top:1px solid var(--text);*/}
     
@@ -54,7 +53,7 @@
     <div class="marquee3k" data-speed="1"><div class="marquee"><span>歡迎</span><span>Bienvenidos</span><span>Welcome</span><span>स्वागत हे</span><span>اهلا وسهلا</span><span>Bem-vinda</span><span>স্বাগত</span><span>добро пожаловать</span><span>ようこそ</span><span>Sugeng Rawuh</span><span>ਸਵਾਗਤ ਹੈ</span><span>Willkommen</span><span>어서 오십시오</span><span>Bienvenue</span></div></div>
     <h1>Joey Schweickhardt</h1>
     <p id="slideshow">
-        <div class="cycle-slideshow" data-cycle-fx="scrollHorz" data-cycle-loader="wait" data-cycle-pager="#cycle-pager" data-cycle-caption="#cycle-text" data-cycle-caption-template="<!--<span id='cycle-num'>{{slideNum}}/{{slideCount}}</span><br>--><span id='cycle-alt'>{{alt}}</span>" data-cycle-center-horz="true" data-cycle-timeout="0" data-cycle-prev="#prev" data-cycle-next="#next">
+        <div class="cycle-slideshow" data-cycle-fx="scrollHorz" data-cycle-loader="wait" data-cycle-pager="#cycle-pager" data-cycle-caption="#cycle-text" data-cycle-speed="400" data-cycle-caption-template="<!--<span id='cycle-num'>{{slideNum}}/{{slideCount}}</span><br>--><span id='cycle-alt'>{{alt}}</span>" data-cycle-center-horz="true" data-cycle-timeout="0" data-cycle-prev="#prev" data-cycle-next="#next">
             <img src="img/23.jpg" alt="Vasikkasaari Climate Institute, Helsinki" />
             <img src="img/22.jpg" alt="Creek, Southern Germany" />
             <img src="img/21.jpg" alt="Wardrobe 1" />
