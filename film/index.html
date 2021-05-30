@@ -4,8 +4,11 @@
     <title>Film</title>
     <style>
         /* RESET */*{user-select:none;font-kerning:normal;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-appearance:none;border-radius:0;-webkit-border-radius:0;box-sizing:content-box;font-smoothing:antialiased;-moz-osx-font-smoothing: grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased;}
-        body{background:#181818;}
+        body{background:#181818;font:normal normal 13px/1em sans-serif;}
         video{width:66vw;height:30vw;box-shadow:0 10px 40px rgba(0,0,0,.5);position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);}
+        #info{position:absolute;position:fixed;bottom:20px;transform:translateX(-50%);left:50%;}
+        a{color:#555;text-decoration:none;transition:color .2s;}
+        a:hover{color:#bbb;}
     </style>
 </head>
 <body>
@@ -16,6 +19,9 @@
     <source src="https://www.dropbox.com/s/hfgvgwkd8mhhwdq/Brachland%20Neckarpark.mp4?raw=1" type="video/mp4" />
     Sie ben&ouml;tigen einen Browser, der HTML5 unterst&uuml;tzt.
 </video>
+<div id="info">
+    <a href="https://youtu.be/F1bbkLpMZd0">Funktioniert nicht?</a>
+</div>
 
 </body>
 </html>
