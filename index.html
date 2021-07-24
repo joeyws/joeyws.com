@@ -19,15 +19,16 @@
     /* RESET */*{user-select:none;font-kerning:normal;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-appearance:none;border-radius:0;-webkit-border-radius:0;box-sizing:content-box;font-smoothing:antialiased;-moz-osx-font-smoothing: grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased;}
 	html,body{background:var(--background);}
 	body{color:var(--text);font:normal normal 13px/1.4em webfontMono,monospace,"Times New Roman",Times,serif,webfont,monospace;/*background:#fff url() center center no-repeat fixed;background-size:cover;*/}
-	h1,p{margin-top:20px;}
-	h1{font-family:webfontSerif,serif;display:inline-block;transform:scaleX(1.5);transform-origin:top left;letter-spacing:.02em;font-size:38px;line-height:1em;}
+	h1,p,#footer{margin-top:20px;}
+	h1{font-family:webfontSerif,serif;display:inline-block;transform:scaleX(1.3);transform-origin:top left;letter-spacing:.02em;font-size:38px;line-height:1em;}
     p:first-child{margin-top:0;}
 	a{text-decoration:underline;}
     a:hover{text-decoration:none;}
     video{width:660px;max-width:100%;}
 
     #wrapper,#contact{padding:10px;}
-    .marquee3k{overflow-x:hidden;white-space:nowrap;/*border-bottom:1px solid var(--text);*//*background:var(--text);color:var(--background);*/}
+    .space{/*border-top:1px solid var(--text);*/height:0;line-height:0;margin-top:40px;}
+    .marquee3k{overflow-x:hidden;white-space:nowrap;background:var(--text);color:var(--background);}
         .marquee{display:inline-block;}
             .marquee span{margin-right:1.4em;}
     .cycle-slideshow{cursor:none;width:100%;height:400px;}
@@ -35,6 +36,8 @@
     #cycle-pager{overflow:hidden;margin-top:6px;display:inline-block;}
     #cycle-pager span{width:1em;display:inline-block;opacity:.15;cursor:pointer;}
     #cycle-pager span.cycle-pager-active{opacity:1;}
+    #footer{text-align:right;}
+    #footer a,#footer span{text-decoration:none;background:var(--text);color:var(--background);}
     
     #contact{z-index:999997;padding:10px;line-height:1.4em;cursor:zoom-out;background:var(--background);overflow-y:auto;top:0;right:0;bottom:0;left:0;display:none;position:fixed;box-sizing:border-box;}
     #cursor{z-index:999998;display:none;color:#fff;font-family:webfontMono,monospacef;mix-blend-mode:difference;transform:translate(-50%,-50%) scale(2);backface-visibility:hidden;pointer-events:none;position:fixed;left:-50%;top:-50%;}
@@ -49,7 +52,8 @@
     <!-- https://de.statista.com/statistik/daten/studie/674488/umfrage/sprachen-weltweit-mit-den-meisten-muttersprachlern/ -->
     <div class="marquee3k" data-speed="1"><div class="marquee"><span>歡迎</span><span>Bienvenidos</span><span>Welcome</span><span>स्वागत हे</span><span>اهلا وسهلا</span><span>Bem-vinda</span><span>স্বাগত</span><span>добро пожаловать</span><span>ようこそ</span><span>Sugeng Rawuh</span><span>ਸਵਾਗਤ ਹੈ</span><span>Willkommen</span><span>어서 오십시오</span><span>Bienvenue</span></div></div>
     <h1>Joey Schweickhardt</h1>
-    <p>&nbsp;</p>
+    <p class="space">&nbsp;</p>
+    <p>Einige Arbeiten:</p>
     <p id="slideshow">
         <div class="cycle-slideshow" data-cycle-fx="fade" data-cycle-loader="wait" data-cycle-caption="#cycle-text" data-cycle-speed="2" data-cycle-caption-template="<span id='cycle-num'>{{slideNum}}/{{slideCount}}</span> <span id='cycle-alt'>{{alt}}</span>" data-cycle-center-horz="false" data-cycle-timeout="0" data-cycle-prev="#prev" data-cycle-next="#next">
             <!-- data-cycle-pager="#cycle-pager"-->
@@ -78,7 +82,7 @@
         </div>
     </p>
     <p id="cycle-text"></span><br><span id="cycle-pager"></p>
-    <p>&nbsp;</p>
+    <p class="space">&nbsp;</p>
     <p>
         <!--<iframe width="660" height="300" src="https://www.youtube-nocookie.com/embed/2g82gnCe-qI?controls=2&amp;modestbranding=0&amp;rel=0&amp;showinfo=0&amp;iv_load_policy=3" allowfullscreen></iframe>-->
         <video oncontextmenu="return false;" controls disablePictureInPicture controlsList="nodownload">
@@ -86,16 +90,18 @@
         </video>
     </p>
     <p>
-        &bdquo;Land der Echsen&ldquo; (2021)<br>
-        Kurzfilm zu den seltsamen Begebenheiten im Stuttgarter Neckarpark
+        &ldquo;Land der Echsen&rdquo; (2021, german)<br>
+        Short film about some strange incidents in Stuttgart&rsquo;s Neckarpark
     </p>
-    <p>&nbsp;</p>
-    <p>
-        <a href="https://www.instagram.com/joeyws/">Instagram</a><br>
-        <a href="https://www.linkedin.com/in/joeyschweickhardt/">LinkedIn</a><br>
-        <a href="https://soundcloud.com/joeyws">SoundCloud</a>
-    </p>
-    <p>&copy; 2021, <a href="#/contact">Contact</a></p>
+    <p class="space">&nbsp;</p>
+    <div id="footer">
+        <p>
+            <a href="https://www.instagram.com/joeyws/">Instagram</a><br>
+            <a href="https://www.linkedin.com/in/joeyschweickhardt/">LinkedIn</a><br>
+            <a href="https://soundcloud.com/joeyws">SoundCloud</a>
+        </p>
+        <p><span>&copy; 2021, <a href="#/contact">Contact</a></span></p>
+    </div>
 </div>
 
 
