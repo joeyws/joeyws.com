@@ -20,14 +20,14 @@
 	html,body{background:var(--background);}
 	body{color:var(--text);font:normal normal 13px/1.4em webfontMono,monospace,"Times New Roman",Times,serif,webfont,monospace;/*background:#fff url() center center no-repeat fixed;background-size:cover;*/}
 	h1,p,#footer{margin-top:20px;}
-	h1{font-family:webfontSerif,serif;display:inline-block;transform:scaleX(1.3);transform-origin:top left;letter-spacing:.02em;font-size:38px;line-height:1em;}
+	h1{font-size:38px;font-family:webfontSerif,serif;transform:scaleX(1.3);transform-origin:top left;letter-spacing:.0em;line-height:1em;display:inline-block;}
     p:first-child{margin-top:0;}
 	a{text-decoration:underline;}
     a:hover{text-decoration:none;}
     video{width:660px;max-width:100%;}
 
     #wrapper,#contact{padding:10px;}
-    .space{/*border-top:1px solid var(--text);*/height:0;line-height:0;margin-top:40px;}
+    .space{/*border-top:1px solid var(--text);*/height:0;line-height:0;margin-top:60px;}
     .marquee3k{overflow-x:hidden;white-space:nowrap;background:var(--text);color:var(--background);}
         .marquee{display:inline-block;}
             .marquee span{margin-right:1.4em;}
@@ -38,6 +38,7 @@
     #cycle-pager span.cycle-pager-active{opacity:1;}
     #footer{text-align:right;}
     #footer a,#footer span{text-decoration:none;background:var(--text);color:var(--background);}
+    #footer a:hover{background:var(--background);color:var(--text);}
     
     #contact{z-index:999997;padding:10px;line-height:1.4em;cursor:zoom-out;background:var(--background);overflow-y:auto;top:0;right:0;bottom:0;left:0;display:none;position:fixed;box-sizing:border-box;}
     #cursor{z-index:999998;display:none;color:#fff;font-family:webfontMono,monospacef;mix-blend-mode:difference;transform:translate(-50%,-50%) scale(2);backface-visibility:hidden;pointer-events:none;position:fixed;left:-50%;top:-50%;}
@@ -53,9 +54,20 @@
     <div class="marquee3k" data-speed="1"><div class="marquee"><span>歡迎</span><span>Bienvenidos</span><span>Welcome</span><span>स्वागत हे</span><span>اهلا وسهلا</span><span>Bem-vinda</span><span>স্বাগত</span><span>добро пожаловать</span><span>ようこそ</span><span>Sugeng Rawuh</span><span>ਸਵਾਗਤ ਹੈ</span><span>Willkommen</span><span>어서 오십시오</span><span>Bienvenue</span></div></div>
     <h1>Joey Schweickhardt</h1>
     <p class="space">&nbsp;</p>
-    <p>Einige Arbeiten:</p>
+    <p>
+        <!--<iframe width="660" height="300" src="https://www.youtube-nocookie.com/embed/2g82gnCe-qI?controls=2&amp;modestbranding=0&amp;rel=0&amp;showinfo=0&amp;iv_load_policy=3" allowfullscreen></iframe>-->
+        <video oncontextmenu="return false;" controls disablePictureInPicture controlsList="nodownload">
+            <source src="https://www.dropbox.com/s/5v9fxljorgyy7td/Land%20der%20Echsen.mp4?raw=1" type="video/mp4" />
+        </video>
+    </p>
+    <p>
+        &ldquo;Land der Echsen&rdquo; (Land of Lizards, 2021, Germany)<br>
+        Short film about some strange incidents in Stuttgart&rsquo;s Neckarpark
+    </p>
+    <p class="space">&nbsp;</p>
+    <p>More projects and photos:</p>
     <p id="slideshow">
-        <div class="cycle-slideshow" data-cycle-fx="fade" data-cycle-loader="wait" data-cycle-caption="#cycle-text" data-cycle-speed="2" data-cycle-caption-template="<span id='cycle-num'>{{slideNum}}/{{slideCount}}</span> <span id='cycle-alt'>{{alt}}</span>" data-cycle-center-horz="false" data-cycle-timeout="0" data-cycle-prev="#prev" data-cycle-next="#next">
+        <div class="cycle-slideshow" data-cycle-fx="fade" data-cycle-loader="wait" data-cycle-caption="#cycle-text" data-cycle-speed="2" data-cycle-caption-template="<span id='cycle-num'>{{slideNum}}/{{slideCount}}</span><br><span id='cycle-alt'>{{alt}}</span>" data-cycle-center-horz="false" data-cycle-timeout="0" data-cycle-prev="#prev" data-cycle-next="#next">
             <!-- data-cycle-pager="#cycle-pager"-->
             <img src="img/22.jpg" alt="Vasikkasaari Climate Institute, Helsinki" />
             <img src="img/21.jpg" alt="Creek, Southern Germany" />
@@ -82,17 +94,6 @@
         </div>
     </p>
     <p id="cycle-text"></span><br><span id="cycle-pager"></p>
-    <p class="space">&nbsp;</p>
-    <p>
-        <!--<iframe width="660" height="300" src="https://www.youtube-nocookie.com/embed/2g82gnCe-qI?controls=2&amp;modestbranding=0&amp;rel=0&amp;showinfo=0&amp;iv_load_policy=3" allowfullscreen></iframe>-->
-        <video oncontextmenu="return false;" controls disablePictureInPicture controlsList="nodownload">
-            <source src="https://www.dropbox.com/s/5v9fxljorgyy7td/Land%20der%20Echsen.mp4?raw=1" type="video/mp4" />
-        </video>
-    </p>
-    <p>
-        &ldquo;Land der Echsen&rdquo; (2021, german)<br>
-        Short film about some strange incidents in Stuttgart&rsquo;s Neckarpark
-    </p>
     <p class="space">&nbsp;</p>
     <div id="footer">
         <p>
