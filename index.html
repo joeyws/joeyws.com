@@ -15,18 +15,18 @@
 <style>
     @font-face{font-family:webfontSerif;src:url("font/gnu-free-font/FreeSans.ttf");} /*font/officecodepro-regular.otf fonts/gnu-free-font/FreeSans.ttf*/
     @font-face{font-family:webfontMono;src:url("font/officecodepro-regular.otf");} /*font/officecodepro-regular.otf fonts/gnu-free-font/FreeSans.ttf*/
-    :root {--background:#fff;--text:#000;}
+    :root {--background:#000;--text:#0f0;}
     /* RESET */*{user-select:none;font-kerning:normal;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-appearance:none;border-radius:0;-webkit-border-radius:0;box-sizing:content-box;font-smoothing:antialiased;-moz-osx-font-smoothing: grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased;}
 	html,body{background:var(--background);}
 	body{color:var(--text);font:normal normal 13px/1.4em webfontMono,monospace,"Times New Roman",Times,serif,webfont,monospace;/*background:#fff url() center center no-repeat fixed;background-size:cover;*/}
-	h1,p,#footer{margin-top:20px;}
-	h1{font-size:32px;font-family:webfontSerif,sans-serif;transform:scaleX(1.4);transform-origin:top left;letter-spacing:.0em;line-height:1em;display:inline-block;}
+	p,#footer{margin-top:20px;}
+	h1{margin-top:10px;font-size:24px;font-family:webfontSerif,sans-serif;transform:scaleX(1.3);transform-origin:top left;letter-spacing:.02em;line-height:1em;display:inline-block;}
     p:first-child{margin-top:0;}
 	a{text-decoration:underline;}
     a:hover{text-decoration:none;background:var(--text);color:var(--background);}
 
     #wrapper,#contact{padding:10px;}
-    .space{/*border-top:1px solid var(--text);*/height:0;line-height:0;margin-top:60px;}
+    .space{border-top:0px solid var(--text);height:0;line-height:0;margin-top:80px;}
     video{width:880px;max-width:100%;}
     .marquee3k{overflow-x:hidden;white-space:nowrap;background:var(--text);color:var(--background);}
         .marquee{display:inline-block;}
@@ -39,8 +39,8 @@
     #footer{text-align:right;}
     
     #contact{z-index:999997;padding:10px;line-height:1.4em;cursor:zoom-out;background:var(--background);overflow-y:auto;top:0;right:0;bottom:0;left:0;display:none;position:fixed;box-sizing:border-box;}
-    #cursor{z-index:999998;display:none;color:#fff;font-family:webfontMono,monospacef;mix-blend-mode:difference;transform:translate(-50%,-50%) scale(2);backface-visibility:hidden;pointer-events:none;position:fixed;left:-50%;top:-50%;}
-    #loading{z-index:999999;background:#fff;mix-blend-mode:difference;animation:.3s loading steps(1) infinite;width:2em;height:2em;border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;position:fixed;}
+    #cursor{z-index:999998;display:none;color:var(--text);font-family:webfontMono,monospace;/*mix-blend-mode:difference;*/transform:translate(-50%,-50%) scale(2);backface-visibility:hidden;pointer-events:none;position:fixed;left:-50%;top:-50%;}
+    #loading{z-index:999999;background:var(--text);/*mix-blend-mode:difference;*/animation:.3s loading steps(1) infinite;width:2em;height:2em;border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;position:fixed;}
     @keyframes loading{50%{opacity:0;}}
 </style>
 </head>
@@ -54,18 +54,18 @@
     <p class="space">&nbsp;</p>
     <p>
         <!--<iframe width="660" height="300" src="https://www.youtube-nocookie.com/embed/2g82gnCe-qI?controls=2&amp;modestbranding=0&amp;rel=0&amp;showinfo=0&amp;iv_load_policy=3" allowfullscreen></iframe>-->
-        <video oncontextmenu="return false;" controls disablePictureInPicture controlsList="nodownload">
+        <video oncontextmenu="return false;" poster="img/landderechsen.png" controls disablePictureInPicture controlsList="nodownload">
             <source src="https://www.dropbox.com/s/5v9fxljorgyy7td/Land%20der%20Echsen.mp4?raw=1" type="video/mp4" />
         </video>
     </p>
     <p>
-        &ldquo;Land der Echsen&rdquo; (Land of Lizards, 2021, Germany)<br>
+        &ldquo;Land der Echsen&rdquo; (2021, Germany)<br>
         Short film about some strange incidents in Stuttgart&rsquo;s Neckarpark
     </p>
     <p class="space">&nbsp;</p>
-    <p>More projects and photos:</p>
+    <p>More works:</p>
     <p id="slideshow">
-        <div class="cycle-slideshow" data-cycle-fx="fade" data-cycle-loader="wait" data-cycle-caption="#cycle-text" data-cycle-speed="2" data-cycle-caption-template="<span id='cycle-num'>{{slideNum}}/{{slideCount}}</span> &bull; <span id='cycle-alt'>{{alt}}</span>" data-cycle-center-horz="false" data-cycle-timeout="0" data-cycle-prev="#prev" data-cycle-next="#next">
+        <div class="cycle-slideshow" data-cycle-fx="fade" data-cycle-loader="wait" data-cycle-caption="#cycle-text" data-cycle-speed="300" data-cycle-caption-template="<span id='cycle-alt'>{{alt}}</span> (<span id='cycle-num'>{{slideNum}}/{{slideCount}})</span>" data-cycle-center-horz="false" data-cycle-center-vert="false" data-cycle-timeout="0" data-cycle-prev="#prev" data-cycle-next="#next">
             <!-- data-cycle-pager="#cycle-pager"-->
             <img src="img/22.jpg" alt="Vasikkasaari Climate Institute, Helsinki" />
             <img src="img/21.jpg" alt="Creek, Southern Germany" />
@@ -91,7 +91,7 @@
             <img src="img/1.jpg" alt="J&ouml;kuls&aacute;rl&oacute;n glacial lake" />
         </div>
     </p>
-    <p id="cycle-text"></span><br><span id="cycle-pager"></p>
+    <p id="cycle-text"><span id="cycle-pager"></span></p>
     <p class="space">&nbsp;</p>
     <div id="footer">
         <p>
