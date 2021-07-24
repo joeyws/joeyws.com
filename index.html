@@ -20,14 +20,15 @@
 	html,body{background:var(--background);}
 	body{color:var(--text);font:normal normal 13px/1.4em webfontMono,monospace,"Times New Roman",Times,serif,webfont,monospace;/*background:#fff url() center center no-repeat fixed;background-size:cover;*/}
 	h1,p,#footer{margin-top:20px;}
-	h1{font-size:38px;font-family:webfontSerif,serif;transform:scaleX(1.6);transform-origin:top left;letter-spacing:.0em;line-height:1em;display:inline-block;}
+	h1{font-size:32px;font-family:webfontSerif,sans-serif;transform:scaleX(1.4);transform-origin:top left;letter-spacing:.0em;line-height:1em;display:inline-block;}
     p:first-child{margin-top:0;}
 	a{text-decoration:underline;}
-    a:hover{text-decoration:none;}
-    video{width:880px;max-width:100%;}
+    a:hover,#footer a,#footer span{text-decoration:none;background:var(--text);color:var(--background);}
+    #footer a:hover{background:var(--background);color:var(--text);}
 
     #wrapper,#contact{padding:10px;}
     .space{/*border-top:1px solid var(--text);*/height:0;line-height:0;margin-top:60px;}
+    video{width:880px;max-width:100%;}
     .marquee3k{overflow-x:hidden;white-space:nowrap;background:var(--text);color:var(--background);}
         .marquee{display:inline-block;}
             .marquee span{margin-right:1.4em;}
@@ -38,11 +39,10 @@
     #cycle-pager span.cycle-pager-active{opacity:1;}
     #footer{text-align:right;}
     #footer a,#footer span{text-decoration:none;background:var(--text);color:var(--background);}
-    #footer a:hover{background:var(--background);color:var(--text);}
     
     #contact{z-index:999997;padding:10px;line-height:1.4em;cursor:zoom-out;background:var(--background);overflow-y:auto;top:0;right:0;bottom:0;left:0;display:none;position:fixed;box-sizing:border-box;}
     #cursor{z-index:999998;display:none;color:#fff;font-family:webfontMono,monospacef;mix-blend-mode:difference;transform:translate(-50%,-50%) scale(2);backface-visibility:hidden;pointer-events:none;position:fixed;left:-50%;top:-50%;}
-    #loading{z-index:999999;background:#fff;mix-blend-mode:difference;animation:.3s loading steps(1) infinite;width:1.4em;height:1.4em;border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;position:fixed;}
+    #loading{z-index:999999;background:#fff;mix-blend-mode:difference;animation:.3s loading steps(1) infinite;width:2em;height:2em;border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;position:fixed;}
     @keyframes loading{50%{opacity:0;}}
 </style>
 </head>
@@ -67,7 +67,7 @@
     <p class="space">&nbsp;</p>
     <p>More projects and photos:</p>
     <p id="slideshow">
-        <div class="cycle-slideshow" data-cycle-fx="fade" data-cycle-loader="wait" data-cycle-caption="#cycle-text" data-cycle-speed="2" data-cycle-caption-template="<span id='cycle-num'>{{slideNum}}/{{slideCount}}</span><br><span id='cycle-alt'>{{alt}}</span>" data-cycle-center-horz="false" data-cycle-timeout="0" data-cycle-prev="#prev" data-cycle-next="#next">
+        <div class="cycle-slideshow" data-cycle-fx="fade" data-cycle-loader="wait" data-cycle-caption="#cycle-text" data-cycle-speed="2" data-cycle-caption-template="<span id='cycle-num'>{{slideNum}}/{{slideCount}}</span>: <span id='cycle-alt'>{{alt}}</span>" data-cycle-center-horz="false" data-cycle-timeout="0" data-cycle-prev="#prev" data-cycle-next="#next">
             <!-- data-cycle-pager="#cycle-pager"-->
             <img src="img/22.jpg" alt="Vasikkasaari Climate Institute, Helsinki" />
             <img src="img/21.jpg" alt="Creek, Southern Germany" />
