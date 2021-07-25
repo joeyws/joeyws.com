@@ -27,7 +27,6 @@
 
     #wrapper,#contact{padding:10px;}
     .space{border-top:0px solid var(--text);height:0;line-height:0;margin-top:80px;}
-    video{width:880px;max-width:100%;}
     .marquee3k{overflow-x:hidden;white-space:nowrap;background:var(--text);color:var(--background);}
         .marquee{display:inline-block;}
             .marquee span{margin-right:1.4em;}
@@ -39,10 +38,11 @@
     #footer{text-align:right;}
     
     #contact{z-index:999997;padding:10px;line-height:1.4em;cursor:zoom-out;background:var(--background);overflow-y:auto;top:0;right:0;bottom:0;left:0;display:none;position:fixed;box-sizing:border-box;}
-    #cursor{z-index:999998;display:none;color:var(--text);font-family:webfontMono,monospace;/*mix-blend-mode:difference;*/transform:translate(-50%,-50%) scale(2);backface-visibility:hidden;pointer-events:none;position:fixed;left:-50%;top:-50%;}
-    #loading{z-index:999999;background:var(--text);/*mix-blend-mode:difference;*/animation:.3s loading steps(1) infinite;width:2em;height:2em;border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;position:fixed;}
+    #cursor{z-index:999998;display:none;color:var(--text);font-family:webfontMono,monospace;/*mix-blend-mode:difference;*/transform:translate(-50%,-50%) scale(2.6);backface-visibility:hidden;pointer-events:none;position:fixed;left:-50%;top:-50%;}
+    #loading{z-index:999999;background:var(--text);/*mix-blend-mode:difference;*/animation:.3s loading steps(1) infinite;width:24px;height:24px;border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;position:fixed;}
     @keyframes loading{50%{opacity:0;}}
 </style>
+<link href="video-js-7.14.2/video-js.css" rel="stylesheet" />
 </head>
 <body>
 
@@ -53,14 +53,19 @@
     <h1>Joey Schweickhardt</h1>
     <p class="space">&nbsp;</p>
     <p>
+        <!--<iframe src="https://player.vimeo.com/video/576722761?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" style="width:880px;max-width:100%;height:calc(100vw - 20px);max-height:400px;" frameborder="0" allow="autoplay; fullscreen;" allowfullscreen></iframe>-->
         <!--<iframe width="660" height="300" src="https://www.youtube-nocookie.com/embed/2g82gnCe-qI?controls=2&amp;modestbranding=0&amp;rel=0&amp;showinfo=0&amp;iv_load_policy=3" allowfullscreen></iframe>-->
-        <video oncontextmenu="return false;" poster="img/landderechsen.png" controls disablePictureInPicture controlsList="nodownload">
+        <!--<video oncontextmenu="return false;" poster="img/landderechsen.png" controls disablePictureInPicture controlsList="nodownload">
             <source src="https://www.dropbox.com/s/5v9fxljorgyy7td/Land%20der%20Echsen.mp4?raw=1" type="video/mp4" />
+        </video>-->
+        <video id="my-video" class="video-js vjs-big-play-centered not-hover" width="880" height="400" style="max-width:100%;" controls preload="none" poster="img/landderechsen.png" data-setup="{'aspectRatio':'220:100'}">
+            <source src="https://www.dropbox.com/s/5v9fxljorgyy7td/Land%20der%20Echsen.mp4?raw=1" type="video/mp4" />
+            <!--<source src="MY_VIDEO.webm" type="video/webm" />-->
         </video>
     </p>
     <p>
         &ldquo;Land der Echsen&rdquo; (2021, Germany)<br>
-        Short film about some strange incidents in Stuttgart&rsquo;s Neckarpark
+        Short film depicting some strange incidents in Stuttgart&rsquo;s Neckarpark
     </p>
     <p class="space">&nbsp;</p>
     <p>More works:</p>
@@ -136,6 +141,7 @@
 <div id="loading"></div>
 <div id="cursor">&rarr;</div>
 <script src="scripts.js"></script>
+<script src="video-js-7.14.2/video.min.js"></script>
 <script>
     $(document).ready(function(){
 
