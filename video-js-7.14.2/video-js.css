@@ -972,7 +972,7 @@ body.vjs-full-window {
   -ms-user-select: none;
   /* Non-prefixed version, currently supported by Chrome and Opera */
   user-select: none;
-  background-color: #222222; /*angepasst*/
+  background-color: #181818; /*angepasst*/
 }
 
 .video-js .vjs-slider.disabled {
@@ -1204,7 +1204,7 @@ body.vjs-full-window {
   vertical-align: middle;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  background-size: cover;
+  background-size: contain;
   background-color: #000000;
   cursor: pointer;
   margin: 0;

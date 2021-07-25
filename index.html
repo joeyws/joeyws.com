@@ -24,6 +24,7 @@
     p:first-child{margin-top:0;}
 	a{text-decoration:underline;}
     a:hover{text-decoration:none;background:var(--text);color:var(--background);}
+    video{outline:0;}
 
     #wrapper,#contact{padding:10px;}
     .space{border-top:0px solid var(--text);height:0;line-height:0;margin-top:80px;}
@@ -213,16 +214,16 @@
     	// keyboard control
     	$(document).keydown(function(e){
     		if (!($("input,textarea").is(":focus"))) {
+                //e.preventDefault();
     			switch(e.which) {
     			    case 27: window.location.href="#/"; break; // esc
-    				case 32: alert("space"); break; // space
+    				case 32: break; // space
     				case 37: $(".cycle-slideshow").cycle("prev"); break; // left
     				case 39: $(".cycle-slideshow").cycle("next"); break; // right
                     case 70: break; // f
                     case 77: break; // m
     				default: return;
     			}
-    			e.preventDefault();
     		}
     	});
 
