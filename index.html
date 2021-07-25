@@ -31,7 +31,7 @@
         .marquee{display:inline-block;}
             .marquee span{margin-right:1.4em;}
     .cycle-slideshow{cursor:none;width:100%;height:500px;}
-    .cycle-slideshow img{max-width:100%;max-height:500px;}
+    .cycle-slideshow img{max-width:100%;max-height:500px;/*border:1px solid var(--text);*/}
     #cycle-pager{overflow:hidden;margin-top:6px;display:inline-block;}
     #cycle-pager span{width:1em;display:inline-block;opacity:.15;cursor:pointer;}
     #cycle-pager span.cycle-pager-active{opacity:1;}
@@ -58,9 +58,9 @@
         <!--<video oncontextmenu="return false;" poster="img/landderechsen.png" controls disablePictureInPicture controlsList="nodownload">
             <source src="https://www.dropbox.com/s/5v9fxljorgyy7td/Land%20der%20Echsen.mp4?raw=1" type="video/mp4" />
         </video>-->
+        <!--<div style="display:inline-block;border:1px solid var(--text);"></div>-->
         <video id="my-video" class="video-js vjs-big-play-centered not-hover" width="880" height="400" style="max-width:100%;" controls preload="none" poster="img/landderechsen-alt.png" data-setup="{'aspectRatio':'220:100'}">
-            <source src="https://www.dropbox.com/s/5v9fxljorgyy7td/Land%20der%20Echsen.mp4?raw=1" type="video/mp4" />
-            <!--<source src="MY_VIDEO.webm" type="video/webm" />-->
+            <source src="https://www.dropbox.com/s/5v9fxljorgyy7td/Land%20der%20Echsen.mp4?raw=1&amp;1080" type="video/mp4" label='1080p' />
         </video>
     </p>
     <p>
@@ -215,9 +215,11 @@
     		if (!($("input,textarea").is(":focus"))) {
     			switch(e.which) {
     			    case 27: window.location.href="#/"; break; // esc
-    				case 32: break; // space
+    				case 32: alert("space"); break; // space
     				case 37: $(".cycle-slideshow").cycle("prev"); break; // left
     				case 39: $(".cycle-slideshow").cycle("next"); break; // right
+                    case 70: break; // f
+                    case 77: break; // m
     				default: return;
     			}
     			e.preventDefault();

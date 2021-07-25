@@ -483,7 +483,7 @@ body.vjs-full-window {
 }
 
 .video-js .vjs-big-play-button { /* PLAY BUTTON */
-  font-size: 4em;
+  font-size: 3em;
   line-height:1.5em;
   height:1.5em;
   width:1.5em;
@@ -887,11 +887,11 @@ body.vjs-full-window {
 }
 
 .video-js .vjs-load-progress { /* LADE FORTSCHRITT BALKEN */
-  background: rgba(0,255,0,.5); /* angepasst */
+  background: var(--text); /* angepasst */
 }
 
 .video-js .vjs-load-progress div {
-  background: rgba(0,255,0,.5); /* angepasst */
+  background: var(--text); /* angepasst */
 }
 
 .video-js .vjs-time-tooltip {
@@ -972,7 +972,7 @@ body.vjs-full-window {
   -ms-user-select: none;
   /* Non-prefixed version, currently supported by Chrome and Opera */
   user-select: none;
-  background-color: rgba(0,255,0,.15); /*angepasst*/
+  background-color: #222222; /*angepasst*/
 }
 
 .video-js .vjs-slider.disabled {
@@ -1539,8 +1539,7 @@ video::-webkit-media-text-track-display {
 }
 
 .vjs-modal-dialog.vjs-text-track-settings {
-  background-color: #2B333F;
-  background-color: rgba(43, 51, 63, 0.75);
+  background-color: #ff00ff;
   color: #fff;
   height: 70%;
 }
