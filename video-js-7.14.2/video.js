@@ -29263,7 +29263,7 @@
     techOrder: Tech.defaultTechOrder_,
     html5: {},
     // default inactivity timeout
-    inactivityTimeout: 2000,
+    inactivityTimeout: 2000, /* geaendert, urspruenglich: 2000 */
     // default playback rates
     playbackRates: [],
     // Add playback rate selection by adding rates
