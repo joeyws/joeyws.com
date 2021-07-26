@@ -495,7 +495,7 @@ body.vjs-full-window {
   opacity: 1;
   color:000;
   background-color: var(--text); /* angepasst */
-  /*transition: all 0.2s;*/
+  transition: all 0.1s;
 }
 .vjs-big-play-centered .vjs-big-play-button {
   top: 50%;
@@ -507,6 +507,7 @@ body.vjs-full-window {
 .video-js .vjs-big-play-button:focus { /* PLAY BUTTON HOVER */
   background: var(--background);
   color: var(--text);
+  font-size:4em;
 }
 
 .vjs-controls-disabled .vjs-big-play-button,
