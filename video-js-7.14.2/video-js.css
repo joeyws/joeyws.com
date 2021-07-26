@@ -493,8 +493,9 @@ body.vjs-full-window {
   padding: 0;
   cursor: pointer;
   opacity: 1;
-  color:000;
-  background-color: var(--text); /* angepasst */
+  color:var(--text);
+  background-color: transparent; /* angepasst */
+  border:1px solid var(--text);
   transition: all 0.1s;
 }
 .vjs-big-play-centered .vjs-big-play-button {
@@ -506,7 +507,7 @@ body.vjs-full-window {
 .video-js:hover .vjs-big-play-button,
 .video-js .vjs-big-play-button:focus { /* PLAY BUTTON HOVER */
   background: var(--background);
-  color: var(--text);
+  border-color:var(--background);
   font-size:4em;
 }
 
