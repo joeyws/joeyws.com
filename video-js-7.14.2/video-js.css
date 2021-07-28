@@ -479,7 +479,7 @@ body.vjs-full-window {
 }
 
 .video-js .vjs-big-play-button { /* PLAY BUTTON */
-  font-size: 5em;
+  font-size: 2.8em;
   line-height:1.5em;
   height:1.5em;
   width:1.5em;
@@ -495,7 +495,7 @@ body.vjs-full-window {
   opacity: 1;
   color:var(--text);
   background-color: transparent; /* angepasst */
-  border:1px solid transparent;
+  border:1px solid var(--text);
   transition: all 0.1s;
 }
 .vjs-big-play-centered .vjs-big-play-button {
@@ -506,9 +506,9 @@ body.vjs-full-window {
 
 .video-js:hover .vjs-big-play-button,
 .video-js .vjs-big-play-button:focus { /* PLAY BUTTON HOVER */
-  /*background: var(--background);*/
-  border-color: var(--text);
-  font-size:3em;
+  background: var(--background);
+  border-color:var(--background);
+  font-size:3.4em;
 }
 
 .vjs-controls-disabled .vjs-big-play-button,
