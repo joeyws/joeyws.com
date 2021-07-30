@@ -13,12 +13,14 @@
 <meta name="robots" content="index,nofollow,notranslate,noimageindex" />
 <meta name="description" content="Personal web page of Joey Schweickhardt, Stuttgart, Germany"><meta name="keywords" content="schweickhardt,joey,stuttgart,joeyws,william"><meta name="robots" content="index,nofollow,noimageindex,notranslate"><meta charset="utf-8"><meta name="geo.region" content="DE-BW"><meta name="geo.placename" content="Stuttgart"><meta name="geo.position" content="48.778600;9.179746"><meta name="ICBM" content="48.778600, 9.179746"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,shrink-to-fit=no"><meta name="format-detection" content="telephone=no">
 <style>
-    @font-face{font-family:webfont;src:url("font/gnu-free-font/FreeSans.ttf");} /*font/gnu-free-font/FreeSans.ttf*/
-    @font-face{font-family:webfontMono;src:url("font/officecodepro-regular.otf");} /*font/officecodepro-regular.otf*/
+    @font-face{font-family:webfont;src:url("font/gnu-free-font/FreeSans.ttf");}
+    @font-face{font-family:webfontMono;src:url("font/officecodepro-regular.otf");}
     :root{--background:#000;--text:#0f0;}
+    ::-moz-selection {background:var(--text);color:var(--background);}
+    ::selection{background:var(--text);color:var(--background);}
     /* RESET */*{user-select:none;font-kerning:normal;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-appearance:none;border-radius:0;-webkit-border-radius:0;box-sizing:content-box;font-smoothing:antialiased;-moz-osx-font-smoothing: grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased;}
 	html,body{background:var(--background);}
-	body{color:var(--text);letter-spacing:.03em;font:normal normal 11px/1.4em webfontMono,monospace,"Times New Roman",Times,serif,webfont,monospace;/*background:#fff url() center center no-repeat fixed;background-size:cover;*/}
+	body{color:var(--text);letter-spacing:.03em;font:normal normal 11px/1.4em webfontMono,monospace,"Times New Roman",Times,serif;}
 	p,#footer{margin-top:10px;}
 	h1{margin-top:10px;font-size:19px;font-family:webfont,sans-serif;transform:scaleX(1.3);transform-origin:top left;letter-spacing:.02em;line-height:1em;display:inline-block;}
     h1.loading{animation:.3s loading steps(1) infinite;}
@@ -28,20 +30,25 @@
     video{outline:0;}
 
     #wrapper,#contact{padding:10px;}
-    .space{border-top:0px solid var(--text);height:0;line-height:0;margin-top:80px;}
+    .space{height:0;line-height:0;margin-top:80px;}
     .marquee3k{overflow-x:hidden;white-space:nowrap;background:#0f0;color:var(--background);}
         .marquee{display:inline-block;}
             .marquee span{margin-right:1.4em;}
+    
     .cycle-slideshow{cursor:none;width:100%;height:500px;}
     .cycle-slideshow img{max-width:100%;max-height:500px;}
+    .cycle-nav{font-size:4em;line-height:1em;margin-top:0;}
+    .cycle-nav a{box-shadow:none !important;}
+    .cycle-nav a:hover{color:inherit;opacity:.3;}
     #cycle-pager{overflow:hidden;margin-top:6px;display:inline-block;}
     #cycle-pager span{width:1em;display:inline-block;opacity:.15;cursor:pointer;}
     #cycle-pager span.cycle-pager-active{opacity:1;}
+
     #footer{text-align:right;}
     
-    #contact{z-index:999997;/*text-align:justify;text-justify:inter-word;*/padding:10px;line-height:1.4em;cursor:zoom-out;background:var(--background);overflow-y:auto;top:0;right:0;bottom:0;left:0;display:none;position:fixed;box-sizing:border-box;}
+    #contact{z-index:999997;padding:10px;line-height:1.4em;cursor:zoom-out;background:var(--background);overflow-y:auto;top:0;right:0;bottom:0;left:0;display:none;position:fixed;box-sizing:border-box;}
     #cursor{z-index:999998;display:none;font-family:webfontMono,monospace;transform:translate(-50%,-50%) scale(2);backface-visibility:hidden;pointer-events:none;position:fixed;left:-50%;top:-50%;}
-    #loading{z-index:999999;background:var(--text);/*mix-blend-mode:difference;*/animation:.3s loading steps(1) infinite;width:24px;height:24px;border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;position:fixed;}
+    #loading{z-index:999999;background:var(--text);animation:.3s loading steps(1) infinite;width:24px;height:24px;border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;position:fixed;}
     @keyframes loading{50%{opacity:0;}}
 </style>
 <link href="video-js-7.14.2/video-js.css" rel="stylesheet" />
@@ -55,24 +62,16 @@
     <h1 class="loading">Joey Schweickhardt</h1>
     <p class="space">&nbsp;</p>
     <p>
-        <!--<iframe src="https://player.vimeo.com/video/576722761?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" style="width:880px;max-width:100%;height:calc(100vw - 20px);max-height:400px;" frameborder="0" allow="autoplay; fullscreen;" allowfullscreen></iframe>-->
-        <!--<iframe width="660" height="300" src="https://www.youtube-nocookie.com/embed/2g82gnCe-qI?controls=2&amp;modestbranding=0&amp;rel=0&amp;showinfo=0&amp;iv_load_policy=3" allowfullscreen></iframe>-->
-        <!--<video oncontextmenu="return false;" poster="img/landderechsen.png" controls disablePictureInPicture controlsList="nodownload">
-            <source src="https://www.dropbox.com/s/5v9fxljorgyy7td/Land%20der%20Echsen.mp4?raw=1" type="video/mp4" />
-        </video>-->
-        <!--<div style="display:inline-block;border:1px solid var(--text);"></div>-->
         <video id="my-video" class="video-js vjs-big-play-centered not-hover" width="880" height="400" style="max-width:100%;" controls preload="none" poster="img/landderechsen.png" data-setup="{'aspectRatio':'220:100'}">
             <source src="https://www.dropbox.com/s/5v9fxljorgyy7td/Land%20der%20Echsen.mp4?raw=1&amp;1080" type="video/mp4" label='1080p' />
         </video>
     </p>
-    <p>
-        &ldquo;Land der Echsen&rdquo; (Germany, 2021)<br>
-        Short film depicting some strange incidents in Stuttgart&rsquo;s Neckarpark
-    </p>
+    <p style="max-width:880px;">&ldquo;Land der Echsen&rdquo; (Germany, 2021)<!--Short film depicting some strange incidents in Stuttgart&rsquo;s Neckarpark.--></p>
+    <p style="max-width:880px;">The city council is planning a new quarter on a run-down railroad station site. There are various non-profit institutions housing in old halls, which are now forced to move out in order to make room for several new buildings. Suddenly lizards enter the game and endanger the entire undertaking.</p>
+    <p style="max-width:880px;">Created as part of the &ldquo;Anti-Stuttgart &mdash; A Determinate Negation&rdquo; design studio at the <a href="https://www.igma.uni-stuttgart.de/en/">IGmA</a>, in which certain urban developments and procedures were first examined critically and subsequently transfered into projects.</p>
     <p class="space">&nbsp;</p>
-    <p>More works:<br>Please click the image or use your arrow keys.</p>
-    <p id="slideshow">
-        <div class="cycle-slideshow" data-cycle-fx="fade" data-cycle-loader="wait" data-cycle-caption="#cycle-text" data-cycle-speed="300" data-cycle-caption-template="<span id='cycle-alt'>{{alt}}</span> (<span id='cycle-num'>{{slideNum}}/{{slideCount}})</span>" data-cycle-center-horz="false" data-cycle-center-vert="false" data-cycle-timeout="0" data-cycle-prev="#prev" data-cycle-next="#next">
+    <p>More works:</p>
+    <p id="slideshow" class="cycle-slideshow" data-cycle-fx="fade" data-cycle-loader="wait" data-cycle-caption="#cycle-text" data-cycle-speed="300" data-cycle-caption-template="<span id='cycle-alt'>{{alt}}</span><br><span id='cycle-num'>{{slideNum}}/{{slideCount}}</span>" data-cycle-center-horz="false" data-cycle-center-vert="false" data-cycle-timeout="0" data-cycle-prev="#prev" data-cycle-next="#next">
             <!-- data-cycle-pager="#cycle-pager"-->
             <img src="img/22.jpg" alt="Vasikkasaari Climate Institute, Helsinki" />
             <img src="img/21.jpg" alt="Creek, Southern Germany" />
@@ -85,8 +84,8 @@
             <img src="img/14.jpg" alt="Campfire in a sandy forest" />
             <img src="img/13.jpg" alt="Sint-Aneke-Club, Antwerp" />
             <img src="img/12.jpg" alt="Model, laser cut, glueless" />
-            <img src="img/11.jpg" alt="Cuboid perspective preparation" />
-            <img src="img/10.jpg" alt="Cuboid perspective" />
+            <img src="img/11.jpg" alt="Cuboid perspective" />
+            <img src="img/10.jpg" alt="Cuboid perspective preparation" />
             <img src="img/9.jpg" alt="Cuboid axonometry" />
             <img src="img/8.jpg" alt="Ruled surfaces" />
             <img src="img/7.jpg" alt="Pineapple, etching" />
@@ -96,8 +95,8 @@
             <img src="img/3.jpg" alt="H&#432;&#417;ng S&#417;n" />
             <img src="img/2.jpg" alt="Merano" />
             <img src="img/1.jpg" alt="J&ouml;kuls&aacute;rl&oacute;n glacial lake" />
-        </div>
     </p>
+    <p class="cycle-nav"><a href="javascript:;" class="cycle-prev" style="margin-right:20px;">&larr;</a><a href="javascript:;" class="cycle-next">&rarr;</a></p>
     <p id="cycle-text"><span id="cycle-pager"></span></p>
     <p class="space">&nbsp;</p>
     <div id="footer">
@@ -169,12 +168,12 @@
             // slashs entfernen
             var hash = hashWithSlashes.replace(/\//g,'');
             // bereich anzeigen
-            var duration = 333;
+            var duration = 0;
             if (hash == "contact") {
-                $("#contact").show();
+                $("#contact").fadeIn(duration);
                 $("body").css("overflow","hidden");
             } else {
-                $("#contact").hide();
+                $("#contact").fadeOut(duration);
                 $("body").css("overflow","auto");
             }
         });
@@ -198,8 +197,11 @@
 
 
         // slideshow
-        $(".cycle-slideshow").click(function(){
+        $(".cycle-next,.cycle-slideshow").click(function(){
             $(".cycle-slideshow").cycle("next");
+        });
+        $(".cycle-prev").click(function(){
+            $(".cycle-slideshow").cycle("prev");
         });
         // cursor
         $(window).on("mousemove",function(e){
