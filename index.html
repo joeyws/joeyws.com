@@ -21,9 +21,9 @@
     ::selection{background:var(--text);color:var(--background);}
     /* RESET */*{user-select:none;font-kerning:normal;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-appearance:none;border-radius:0;-webkit-border-radius:0;box-sizing:content-box;font-smoothing:antialiased;-moz-osx-font-smoothing: grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased;}
 	html,body{background:var(--background);}
-	body{color:var(--text);letter-spacing:.03em;font:normal normal 11px/1.4em webfontMono,monospace,"Times New Roman",Times,serif;}
+	body{color:var(--text);letter-spacing:.03em;font:normal normal 20px/1.4em webfontMono,monospace,"Times New Roman",Times,serif;}
 	p,#footer{margin-top:10px;}
-	h1{margin-top:10px;font-size:19px;font-family:webfont,sans-serif;transform:scaleX(1.3);transform-origin:top left;letter-spacing:.02em;line-height:1em;display:inline-block;}
+	h1{margin-top:10px;font-size:32px;font-family:webfont,sans-serif;transform:scaleX(1.3);transform-origin:top left;letter-spacing:.02em;line-height:1em;display:inline-block;}
     h1.loading{animation:.3s loading steps(1) infinite;}
     p:first-child{margin-top:0;}
 	a{text-decoration:none;transition:all .2s;box-shadow:inset 0 -1px 0 var(--text);}
@@ -32,7 +32,7 @@
 
     #wrapper,#contact{padding:10px;}
     .space{height:0;line-height:0;margin-top:80px;}
-    .marquee3k{overflow-x:hidden;white-space:nowrap;background:#0f0;color:var(--background);}
+    .marquee3k{overflow-x:hidden;white-space:nowrap;/*background:#0f0;color:var(--background);/*/border:2px solid var(--text);border-radius:2em;}
         .marquee{display:inline-block;}
             .marquee span{margin-right:1.4em;}
     
@@ -48,7 +48,7 @@
     #footer{text-align:right;}
     
     #contact{z-index:999997;padding:10px;line-height:1.4em;cursor:zoom-out;background:var(--background);overflow-y:auto;top:0;right:0;bottom:0;left:0;display:none;position:fixed;box-sizing:border-box;}
-    #cursor{z-index:999998;display:none;font-family:webfontMono,monospace;transform:translate(-50%,-50%) scale(3.2);backface-visibility:hidden;pointer-events:none;position:fixed;left:-50%;top:-50%;}
+    #cursor{z-index:999998;display:none;font-family:webfontMono,monospace;transform:translate(-50%,-50%) scale(2);backface-visibility:hidden;pointer-events:none;position:fixed;left:-50%;top:-50%;}
     #loading{z-index:999999;background:var(--text);animation:.3s loading steps(1) infinite;width:24px;height:24px;border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;position:fixed;}
     @keyframes loading{50%{opacity:0;}}
 </style>
@@ -67,12 +67,12 @@
             <source src="https://www.dropbox.com/s/5v9fxljorgyy7td/Land%20der%20Echsen.mp4?raw=1&amp;1080" type="video/mp4" label='1080p' />
         </video>
     </p>
-    <p>&ldquo;Land der Echsen&rdquo; (2021)<!--Short film depicting some strange incidents in Stuttgart&rsquo;s Neckarpark.--></p>
+    <p>&ldquo;Land der Echsen&rdquo; (2021, Germany)<!--Short film depicting some strange incidents in Stuttgart&rsquo;s Neckarpark.--></p>
     <p>The city council is planning a new quarter on a run-down railroad station site. There are various non-profit institutions housing in old halls, which are now forced to move out in order to make room for several new buildings. Suddenly lizards enter the game and endanger the entire undertaking.</p>
     <p>Created as part of the &ldquo;Anti-Stuttgart &mdash; A Determinate Negation&rdquo; <a href="https://www.igma.uni-stuttgart.de/en/">IGmA</a> design studio, in which certain urban developments and procedures were first examined critically and subsequently transfered into projects.</p>
     <p class="space">&nbsp;</p>
     <p>More works:</p>
-    <p id="slideshow" class="cycle-slideshow" data-cycle-fx="fade" data-cycle-loader="wait" data-cycle-caption="#cycle-text" data-cycle-speed="300" data-cycle-caption-template="<span id='cycle-alt'>{{alt}}</span><br><span id='cycle-num'>{{slideNum}}/{{slideCount}}</span>" data-cycle-center-horz="false" data-cycle-center-vert="false" data-cycle-timeout="0" data-cycle-prev="#prev" data-cycle-next="#next">
+    <p id="slideshow" class="cycle-slideshow" data-cycle-fx="fade" data-cycle-loader="wait" data-cycle-caption="#cycle-text" data-cycle-speed="300" data-cycle-caption-template="<span id='cycle-alt'>{{alt}}</span><br><!--<a href='javascript:;' class='cycle-prev'>prev</a> --><span id='cycle-num'>{{slideNum}}/{{slideCount}}</span><!-- <a href='javascript:;' class='cycle-next'>next</a>-->" data-cycle-center-horz="false" data-cycle-center-vert="false" data-cycle-timeout="0" data-cycle-prev="#prev" data-cycle-next="#next">
             <!-- data-cycle-pager="#cycle-pager"-->
             <img src="img/22.jpg" alt="Vasikkasaari Climate Institute, Helsinki" />
             <img src="img/21.jpg" alt="Creek, Southern Germany" />
@@ -97,7 +97,6 @@
             <img src="img/2.jpg" alt="Merano" />
             <img src="img/1.jpg" alt="J&ouml;kuls&aacute;rl&oacute;n glacial lake" />
     </p>
-    <!--<p class="cycle-nav"><a href="javascript:;" class="cycle-prev" style="margin-right:20px;">&larr;</a><a href="javascript:;" class="cycle-next">&rarr;</a></p>-->
     <p id="cycle-text"><span id="cycle-pager"></span></p>
     <p class="space">&nbsp;</p>
     <div id="footer">
@@ -198,10 +197,10 @@
 
 
         // slideshow
-        $(".cycle-next,.cycle-slideshow").click(function(){
+        $(".cycle-next,.cycle-slideshow").on("click",function(){
             $(".cycle-slideshow").cycle("next");
         });
-        $(".cycle-prev").click(function(){
+        $(".cycle-prev").on("click",function(){
             $(".cycle-slideshow").cycle("prev");
         });
         // cursor
