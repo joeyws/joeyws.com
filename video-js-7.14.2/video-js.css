@@ -478,7 +478,7 @@ body.vjs-full-window {
 }
 
 .video-js .vjs-big-play-button { /* PLAY BUTTON */
-  font-size:120px;
+  font-size:140px;
   line-height:1.5em;
   height:1.5em;
   width:1.5em;
@@ -503,8 +503,9 @@ body.vjs-full-window {
 
 .video-js:hover .vjs-big-play-button,
 .video-js .vjs-big-play-button:focus { /* PLAY BUTTON HOVER */
-  font-size:160px;
+  /*font-size:160px;*/
   opacity:1;
+  transform:translate(-50%,-50%) scale(1.2);
   /*color:#000;
   background-color:#40f;*/
 }
