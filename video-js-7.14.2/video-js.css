@@ -488,12 +488,12 @@ body.vjs-full-window {
   left: 10px;
   padding: 0;
   cursor: pointer;
-  opacity: 1;
+  opacity: .8;
   color:#40f;
   /*background-color:#000;
-  border-radius:.75em;
-  transition: all 0.1s;*/
-  pointer-events: none;
+  border-radius:.75em;*/
+  transition:.1s all;
+  pointer-events:none;
 }
 .vjs-big-play-centered .vjs-big-play-button {
   top: 50%;
@@ -503,7 +503,8 @@ body.vjs-full-window {
 
 .video-js:hover .vjs-big-play-button,
 .video-js .vjs-big-play-button:focus { /* PLAY BUTTON HOVER */
-  font-size:140px;
+  font-size:160px;
+  opacity:1;
   /*color:#000;
   background-color:#40f;*/
 }
