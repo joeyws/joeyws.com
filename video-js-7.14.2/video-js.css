@@ -482,11 +482,11 @@ body.vjs-full-window {
   line-height:0;
   height:0;
   width:0;
-  border:60px solid #40f;
+  border:40px solid #40f;
   border-right-color:transparent;
   border-top-color:transparent;
   border-bottom-color:transparent;
-  border-left-width:120px;
+  border-left-width:80px;
   display: block;
   position: absolute;
   bottom: 10px;
@@ -502,7 +502,7 @@ body.vjs-full-window {
 }
 .vjs-big-play-centered .vjs-big-play-button {
   top: 50%;
-  left: calc(50% + 30px);
+  left: calc(50% + 20px);
   transform:translate(-50%,-50%);
 }
 
@@ -510,9 +510,9 @@ body.vjs-full-window {
 .video-js .vjs-big-play-button:focus { /* PLAY BUTTON HOVER */
   /*font-size:160px;*/
   opacity:1;
-  border-width:70px;
-  border-left-width:140px;
-  left: calc(50% + 35px);
+  border-width:50px;
+  border-left-width:100px;
+  left: calc(50% + 25px);
   transform:translate(-50%,-50%);
   /*color:#000;
   background-color:#40f;*/
