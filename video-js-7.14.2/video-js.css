@@ -486,7 +486,7 @@ body.vjs-full-window {
   border-right-color:transparent;
   border-top-color:transparent;
   border-bottom-color:transparent;
-  border-left-width:66px;
+  border-left-width:80px;
   border-right-width:0;
   display: block;
   position: absolute;
@@ -512,7 +512,7 @@ body.vjs-full-window {
   /*font-size:160px;*/
   opacity:1;
   border-width:50px;
-  border-left-width:86px;
+  border-left-width:100px;
   border-right-width:0;
   left: 50%;
   transform:translate(-50%,-50%);
