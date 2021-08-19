@@ -513,8 +513,8 @@ body.vjs-full-window {
 .video-js .vjs-big-play-button:focus { /* PLAY BUTTON HOVER */
   /*font-size:160px;*/
   opacity:1;
-  border-width:55px;
-  border-left-width:110px;
+  border-width:60px;
+  border-left-width:120px;
   border-right-width:0;
   left: 50%;
   transform:translate(-50%,-50%);
@@ -1416,8 +1416,8 @@ video::-webkit-media-text-track-display {
   left: 50%;
   transform:translate(-50%,-50%);
   background:#fff;
-  width:48px;
-  height:48px;
+  width:32px;
+  height:32px;
   border-radius: 50%;
   visibility: hidden;
 }
