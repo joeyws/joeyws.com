@@ -1416,8 +1416,9 @@ video::-webkit-media-text-track-display {
   left: 50%;
   transform:translate(-50%,-50%);
   background:#fff;
-  width:32px;
-  height:32px;
+  mix-blend-mode:difference;
+  width:48px;
+  height:48px;
   border-radius: 50%;
   visibility: hidden;
 }
