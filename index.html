@@ -20,13 +20,13 @@
     ::selection{background:var(--text);color:var(--background);}
     /* RESET */*{user-select:none;font-kerning:normal;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-appearance:none;border-radius:0;-webkit-border-radius:0;box-sizing:content-box;font-smoothing:antialiased;-moz-osx-font-smoothing: grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased;}
 	html,body{cursor:none !important;letter-spacing:.0em;background:var(--background);}
-	body{color:var(--text);font:normal normal 42px/1.42em webfont,serif,monospace,"Times New Roman",Times,serif;}
+	body{color:var(--text);font:normal normal 42px/1.28em webfont,serif,monospace,"Times New Roman",Times,serif;}
 	h1,p,#footer{margin-top:30px;}
 	h1{text-align:center;margin-bottom:30px;line-height:1em;display:inline-block;}
     h1.loading{animation:.3s loading steps(1) infinite;}
     p:first-child{margin-top:0;}
-	a{text-decoration:underline;cursor:none;/*box-shadow:inset 0 -1px 0 var(--text);transition:.18s all;*/color:#40f;}
-    a:hover{/*box-shadow:inset 0 -1.2em 0 #ff0;color:var(--background);*/}
+	a{text-decoration:none;cursor:none;color:#40f;/*box-shadow:inset 0 -2px 0 var(--text);transition:all .2s;*/}
+    a:hover{/*box-shadow:inset 0 -1.2em 0 #000;/*color:var(--background);*/}
     video{outline:0;}
 
     #wrapper,#contact{padding:10px;}
@@ -40,10 +40,11 @@
     #footer{text-align:right;}
     
     #contact{z-index:999997;line-height:1.4em;/*cursor:zoom-out;*/background:var(--background);overflow-y:auto;top:0;right:0;bottom:0;left:0;display:none;position:fixed;box-sizing:border-box;}
-    #cursor{z-index:999998;transform:translate(-50%,-50%);font-size:1.2em;line-height:1em;mix-blend-mode:difference;color:#fff;backface-visibility:hidden;pointer-events:none;display:inline-block;position:fixed;left:-50%;top:-50%;}
+    #cursor{z-index:999998;transition:font-size .15s ease;transform:translate(-50%,-50%);font-size:1.2em;line-height:1em;mix-blend-mode:difference;color:#fff;backface-visibility:hidden;pointer-events:none;display:inline-block;position:fixed;left:-50%;top:-50%;}
     #cursor:after{content:"\25CF";} /* 25CF bullet2022 */
     #cursor.rarr:after{content:"\279D";} /* pfeil\27B5 pfeilleer\27B3 dickerpfeilrund\279C dickerpfeileckig\2794 handHohl\261E handVoll\261B play\25B6 normalerPfeil\279D normalerpfeilhohl21fe gt\003e peace\2794 yingyang\262F */
-    #cursor.close{content:"\00D7";}
+    /*#cursor.close{content:"\00D7";}*/
+    #cursor.a{font-size:3em;}
     /*#loading{z-index:999999;background:var(--text);animation:.3s loading steps(1) infinite;width:24px;height:24px;border-radius:50%;transform:translate(-50%,-50%);pointer-events:none;position:fixed;top:50%;left:50%;}*/
     @keyframes loading{50%{opacity:0;}}
 </style>
@@ -64,8 +65,8 @@
         <!--<iframe width="880" height="400" src="https://www.youtube-nocookie.com/embed/2g82gnCe-qI" frameborder="0" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>-->
     </p>
     <p style="text-align:center;">&ldquo;Land der Echsen&rdquo; (2021, Germany)<!--Short film depicting some strange incidents in Stuttgart&rsquo;s Neckarpark.--></p>
-    <p style="text-indent:2.8em">Plot: The city council is planning a new quarter on a run-down railroad station site. There are various non-profit institutions housing in old halls, which are now forced to move out in order to make room for several new buildings. Suddenly lizards enter the game and endanger the entire undertaking.</p>
-    <p style="text-indent:2.8em">Created as part of the &ldquo;Anti-Stuttgart &mdash; A Determinate Negation&rdquo; <a href="https://www.igma.uni-stuttgart.de/en/">IGmA</a> design studio, in which certain urban developments and procedures were examined critically. Subsequently, these comments were transfered into own projects.</p>
+    <p>Plot: The city council is planning a new quarter on a run-down railroad station site. There are various non-profit institutions housing in old halls, which are now forced to move out in order to make room for several new buildings. Suddenly lizards enter the game and endanger the entire undertaking.</p>
+    <p>Created as part of the &ldquo;Anti-Stuttgart &mdash; A Determinate Negation&rdquo; <a href="https://www.igma.uni-stuttgart.de/en/">IGmA</a> design studio, in which certain urban developments and procedures were examined critically. Subsequently, these comments were transfered into own projects.</p>
     <p>More works:</p>
     <p class="cycle-slideshow" data-cycle-easing="easeOutExpo" data-cycle-ease-out="easeOutExpo" data-cycle-speed="350" data-cycle-caption-template="<div style='text-align:center;'>{{alt}}</div><span style='float:right;'>{{slideNum}}/{{slideCount}}</span>" data-cycle-center-horz="true" data-cycle-center-vert="false" data-cycle-fx="scrollHorz" data-cycle-loader="wait" data-cycle-caption="#cycle-text" data-cycle-timeout="0" data-cycle-prev="#cycle-prev" data-cycle-next="#cycle-next">
             <img src="img/23.jpg" alt="Vasikkasaari Climate Institute, Helsinki" />
@@ -207,6 +208,9 @@
         $(".cycle-slideshow").hover(function(){
             $("#cursor").addClass("rarr"); //.html("<!--&#10163;&#10165;&gt;-->&#10170;");
         },function(){$("#cursor").removeClass("rarr");});
+        $("a").hover(function(){
+            $("#cursor").addClass("a");
+        },function(){$("#cursor").removeClass("a");});
         // hide cursor on touch devices
         if (("ontouchstart" in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0)) { 
             $("#cursor").remove();
