@@ -482,11 +482,11 @@ body.vjs-full-window {
   line-height:0;
   height:0;
   width:0;
-  border:48px solid #fff;
+  border:30px solid #fff;
   border-right-color:transparent;
   border-top-color:transparent;
   border-bottom-color:transparent;
-  border-left-width:96px;
+  border-left-width:60px;
   border-right-width:0;
   display: block;
   position: absolute;
@@ -513,8 +513,8 @@ body.vjs-full-window {
 .video-js .vjs-big-play-button:focus { /* PLAY BUTTON HOVER */
   /*font-size:160px;*/
   opacity:1;
-  border-width:60px;
-  border-left-width:120px;
+  border-width:40px;
+  border-left-width:80px;
   border-right-width:0;
   left: 50%;
   transform:translate(-50%,-50%);
