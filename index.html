@@ -52,7 +52,7 @@
     <h1 class="loading">Joey Schweickhardt</h1>
     <video id="video" poster="img/landderechsen.png" tabindex="0" width="792" height="360" style="max-width:100%;max-height:calc((100vw - 20px) / 2.2);" controls preload controlsList="nodownload" disablePictureInPicture>
         <source src="video/LandDerEchsen1080.mp4" type="video/mp4" />
-        <source src="/video/LandDerEchsen720.webm" type="video/webm" />
+        <source src="video/LandDerEchsen720.webm" type="video/webm" />
     </video>
     <p>&ldquo;Land der Echsen&rdquo; (2021, Germany)</p>
     <p style="max-width:792px;">The city council is planning a new quarter on a run-down railroad station site. There are various non-profit institutions housing in old halls, which are now forced to move out in order to make room for several new buildings. Suddenly lizards enter the game and endanger the entire undertaking.</p>
@@ -60,7 +60,7 @@
     <p>The film was being shown at <a href="http://www.current-stuttgart.de/en">CURRENT</a> festival for art and urban space.</p>
     <hr>
     <p>More works and photos:</p>
-    <p class="cycle-slideshow" data-cycle-speed="2" data-cycle-caption-template="{{alt}}<br><a href='javascript:;' class='cycle-prev'>Prev</a> {{slideNum}}/{{slideCount}} <a href='javascript:;' class='cycle-next'>next</a>" data-cycle-center-horz="false" data-cycle-center-vert="false" data-cycle-fx="fade" data-cycle-loader="wait" data-cycle-caption="#cycle-text" data-cycle-timeout="0" data-cycle-prev="#cycle-prev" data-cycle-next="#cycle-next">
+    <p class="cycle-slideshow" data-cycle-speed="400" data-cycle-caption-template="{{alt}}<br>{{slideNum}}/{{slideCount}}" data-cycle-center-horz="false" data-cycle-center-vert="false" data-cycle-fx="fade" data-cycle-loader="wait" data-cycle-caption="#cycle-text" data-cycle-timeout="0" data-cycle-prev="#cycle-prev" data-cycle-next="#cycle-next">
             <img src="img/24.jpg" alt="Hogs" />
             <img src="img/23.jpg" alt="Vasikkasaari Climate Institute, Helsinki" />
             <img src="img/22.jpg" alt="Creek, Southern Germany" />
@@ -86,7 +86,7 @@
             <img src="img/2.jpg" alt="Merano" />
             <img src="img/1.jpg" alt="J&ouml;kuls&aacute;rl&oacute;n glacial lake" />
     </p>
-    <p id="cycle-text"></p>
+    <p><span id="cycle-text"></span><br><a href='javascript:;' class='cycle-prev'>Prev</a> <a href='javascript:;' class='cycle-next'>next</a></p>
     <hr>
     <p>
         &copy; 2021,
@@ -198,10 +198,10 @@
 
 
         // slideshow
-        $(document).on("click",".cycle-next,.cycle-slideshow",function(){
+        $(".cycle-next,.cycle-slideshow").click(function(){
             $(".cycle-slideshow").cycle("next");
         });
-        $(document).on("click",".cycle-prev",function(){
+        $(".cycle-prev").click(function(){
             $(".cycle-slideshow").cycle("prev");
         });
 
