@@ -1,0 +1,106 @@
+<!DOCTYPE>
+<html>
+<head>
+	<title>Workout</title>
+	<meta name=viewport content="width=width=device-width,initial-scale=1.0,user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link rel="apple-touch-icon" href=""/>
+    <meta name="theme-color" content="#000000">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://richtr.github.io/NoSleep.js/dist/NoSleep.min.js"></script>
+	<script>
+		$(document).ready(function(){
+    	    var noSleep = new NoSleep();
+            document.addEventListener('click', function enableNoSleep() {
+                document.removeEventListener('click', enableNoSleep, false);
+                noSleep.enable();
+            }, false);
+			// timer
+			function setTimer() {
+				$('#timer').html('60').fadeTo(100,0).fadeTo(100,1).fadeTo(100,0).fadeTo(100,1).fadeTo(100,0).fadeTo(100,1).fadeTo(100,0).fadeTo(100,1);
+			}
+			setTimer();
+			var myCounter = new Countdown({  
+				seconds:60,
+				onUpdateStatus: function(sec){$('#timer').html(sec);},
+				onCounterEnd: function(){$('.highlight').next('li').queue(function(){setTimer();myCounter.start();}).addClass('highlight').prev('li').removeClass('highlight');}
+			});
+			myCounter.start();
+			function Countdown(options) {
+				var timer,
+				instance = this,
+				seconds = options.seconds || 10,
+				updateStatus = options.onUpdateStatus || function () {},
+				counterEnd = options.onCounterEnd || function () {};
+			
+				function decrementCounter() {
+					updateStatus(seconds);
+					if (seconds === 0) {
+						counterEnd();
+						instance.stop();
+					}
+					seconds--;
+				}
+				this.start = function () {
+					clearInterval(timer);
+					timer = 0;
+					seconds = options.seconds;
+					timer = setInterval(decrementCounter, 1000);
+				};
+				this.stop = function () {
+					//clearInterval(timer);
+				};
+			}
+			// fade
+			$('li').on('click',function(){
+				$(this).addClass('highlight').siblings().removeClass('highlight');
+				setTimer();
+				myCounter.start();
+			}).first().addClass('highlight');
+		});
+	</script>
+	<style>
+		/* RESET */ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;vertical-align:baseline;background:transparent;} body{line-height:1;} table{border-collapse:collapse;border-spacing:0;} caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;} q,blockquote{quotes:none;} q:before,q:after,blockquote:before,blockquote:after{content:"";content:none;} article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;} *{-webkit-text-size-adjust:none;-webkit-appearance:none;-webkit-border-radius:0;box-sizing:content-box;} *{font-smoothing:antialiased;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased;} *:active{outline:none;} ::selection{background:#2990f9;color:#fff;} ::-moz-selection{background:#2990f9;color:#fff;}
+		body {background:#000;color:#333;font:normal 300 15px/1.3em "Helvetica Neue",Helvetica,sans-serif;}
+		#header {padding:10px;box-shadow:0 0 40px #000;position:absolute;position:fixed;background:rgba(0,0,0,0.8);top:0;left:0;right:0;pointer-events:none;}
+		#wrapper {padding:140px 0 8px 0;}
+		h1,#timer,li.highlight {color:#b3b3b3;}
+		h1 {float:left;font-size:26px;line-height:32px;font-weight:bold;}
+		ul {list-style:none;margin-bottom:8px;}
+		li {cursor:pointer;padding:8px;border-bottom:1px solid #111;}
+		li:first-line {font-weight:bold;}
+		li.highlight {border-radius:8px;background:#030;border-bottom-color:#030;}
+		li.highlight > li{border:0;}
+		#timer {font-size:64px;line-height:1em;float:right;}
+		a {text-decoration:none;}
+		.clear {clear:both;font-size:0;line-height:0;}
+	</style>
+</head>
+<body>
+
+<div id="header">
+	<h1>10-Minuten-<br />Workout</h1>
+	<span id="timer">60</span>
+	<div class="clear"></div>
+</div>
+<div id="wrapper">
+	<ul>
+		<li>1. Seitliches Springen<br />Arme nach oben angewinkelt, hin- und herspringen.</li>
+		<li>2. Bauchmuskeln<br />Sitzend, leicht zurückgelehnt, Beine in der Luft abwechselnd strecken und anwinkeln.</li>
+		<li>3. Trizeps<br />Sitzend, zurückgelehnt, mit Beinen und H&auml;nden, nach vorne zeigend, abgest&uuml;tzt. K&ouml;rper mit Armen nach oben dr&uuml;cken und wieder herunterlassen.</li>
+		<li>4./5. Seitstütz<br />Seitlich liegend auf dem Unterarm abgest&uuml;tzt, oberes Bein leicht angehoben, anderen Arm abwechselnd unter den K&ouml;rper und nach oben ausrollen, Oberk&ouml;rper und Kopf mitbewegen. Auf beiden Seiten jeweils.</li>
+		<li>6. Auf der Stelle joggen<br />Beine besonders hoch nehmen.</li>
+		<li>7. Bergsteiger<br />Auf allen Vieren, Beine abwechselnd in der Luft weit Richtung Arme anwinkeln.</li>
+		<li>8. Ausfallschritte<br />Stehend, Arme nach oben angewinkelt. Ein Bein nach vorne, nun fast knien, aber nicht ganz hinunter. F&uuml;&szlig;e abwechseln.</li>
+		<li>9. Kraulen<br />Auf dem Bauch liegend, Arme und Beine in der Luft ausgestreckt auf und ab bewegen.</li>
+		<li>10. Burpees<br />Gestreckter Sprung, Liegestütze.</li>
+	</ul>
+	<!--<div style="text-align:center;font-size:13px;">
+		<a href="https://www.youtube.com/watch?v=25IRdBxGg1g">Ausf&uuml;hrliche Videoanleitung</a>
+	</div>-->
+</div>
+
+</body>
+</html>
