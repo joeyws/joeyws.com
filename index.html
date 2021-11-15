@@ -31,7 +31,7 @@
 	html,body{letter-spacing:.0em;background:var(--background);}
 	body{color:var(--text);font:normal normal 13px/1.45em webfontMono,monospace;}
 	video,p{margin-top:12px;}
-	h1{line-height:1em;display:inline-block;/*letter-spacing:.02em;transform:scaleX(1.15);transform-origin:top left;font:normal normal 20px/1em webfont,sans-serif;*/}
+	h1{display:inline-block;letter-spacing:.02em;transform:scaleX(1.15);transform-origin:top left;font:normal normal 20px/1em webfont,sans-serif;}
     h1.loading{animation:.3s loading steps(1) infinite;}
     p:first-child{margin-top:0;}
     hr{margin-bottom:50px;}
@@ -43,8 +43,8 @@
         .marquee{display:inline-block;}
             .marquee span{margin-right:1.4em;}
     video{display:block;outline:none;}
-    .cycle-slideshow{cursor:none;height:500px;margin-left:-10px;margin-right:-10px;}
-    .cycle-slideshow img{max-width:100%;max-height:500px;padding:0 10px;}
+    .cycle-slideshow{cursor:none;height:500px;}
+    .cycle-slideshow img{max-width:100%;max-height:500px;}
     #socialnetworks a{box-shadow:none;vertical-align:-15%;margin-left:8px;background:transparent;}
     
     #contact{z-index:999997;line-height:1.4em;background:var(--background);overflow-y:auto;top:0;right:0;bottom:0;left:0;display:none;position:fixed;box-sizing:border-box;word-break:break-spaces;}
@@ -70,7 +70,7 @@
     <p style="max-width:792px;">Created as part of the &ldquo;Anti-Stuttgart &mdash; A Determinate Negation&rdquo; <a href="https://www.igma.uni-stuttgart.de/en/">IGmA</a> design studio, in which certain urban developments and procedures were examined critically. These comments were subsequently transfered into own projects. The film was being shown at <a href="http://www.current-stuttgart.de/en">CURRENT</a> festival for art and urban space.</p>
     <hr>
     <p>More works and photos:</p>
-    <p class="cycle-slideshow" data-cycle-speed="400" data-cycle-caption-template="{{alt}}<br>{{slideNum}}/{{slideCount}}" data-cycle-center-horz="false" data-cycle-center-vert="false" data-cycle-fx="scrollHorz" data-cycle-loader="wait" data-cycle-caption="#cycle-text" data-cycle-timeout="0" data-cycle-prev="#cycle-prev" data-cycle-next="#cycle-next">
+    <p class="cycle-slideshow" data-cycle-speed="400" data-cycle-caption-template="{{alt}}<br>{{slideNum}}/{{slideCount}}" data-cycle-center-horz="false" data-cycle-center-vert="false" data-cycle-fx="fade" data-cycle-loader="wait" data-cycle-caption="#cycle-text" data-cycle-timeout="0" data-cycle-prev="#cycle-prev" data-cycle-next="#cycle-next">
             <img src="img/23.jpg" alt="Vasikkasaari Climate Institute, Helsinki" />
             <img src="img/24.jpg" alt="Pigs" />
             <img src="img/22.jpg" alt="Creek, Southern Germany" />
