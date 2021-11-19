@@ -23,7 +23,7 @@
 <meta name="format-detection" content="telephone=no">
 <style>
     @font-face{font-family:webfont;src:url("font/texgyreheros-regular.otf");} /*font/texgyreheros-regular.otf font/NimbusRomNo9L-Reg.otf*/
-    @font-face{font-family:webfontMono;src:url("font/SourceCodePro-Regular.ttf");}
+    @font-face{font-family:webfontMono;src:url("font/SourceCodePro-Regular.ttf");} /* font/SourceCodePro-Regular.ttf */
     :root{--background:#ddd;--text:#000;--link:#000;}
     ::-moz-selection {background:var(--text);color:var(--background);}
     ::selection{background:var(--text);color:var(--background);}
@@ -155,8 +155,8 @@
 
 
         // video
-        video = document.getElementById("video");
-        /*function videoMute() {
+        /*video = document.getElementById("video");
+        function videoMute() {
             if (video.prop("muted")) {alert("unmuten");$("video").prop("muted", false);}
             else {alert("muten");video.prop("muted", true);}
         }*/
@@ -184,8 +184,9 @@
                 $("#contact").fadeIn(duration);
                 $("body").css("overflow","hidden");
             } else {
-                $("#contact").fadeOut(duration);
-                $("body").css("overflow","auto");
+                $("#contact").fadeOut(duration,function(){
+                    $("body").css("overflow","auto");
+                });
             }
         });
         // start
