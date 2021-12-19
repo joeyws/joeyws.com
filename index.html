@@ -23,7 +23,7 @@
 <style>
     @font-face{font-family:webfont;src:url("font/texgyreheros-regular.otf");} /*font/texgyreheros-regular.otf font/NimbusRomNo9L-Reg.otf*/
     @font-face{font-family:webfontMono;src:url("font/SourceCodePro-Regular.ttf");} /* font/SourceCodePro-Regular.ttf */
-    :root{--background:#ddd;--text:#000;--link:#000;}
+    :root{--background:#000;--text:#ddd;}
     ::-moz-selection {background:var(--text);color:var(--background);}
     ::selection{background:var(--text);color:var(--background);}
     /* RESET */*{user-select:none;font-kerning:normal;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-appearance:none;border-radius:0;-webkit-border-radius:0;box-sizing:content-box;font-smoothing:antialiased;-moz-osx-font-smoothing: grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased;}
@@ -34,10 +34,12 @@
     h1.loading{animation:.3s loading steps(1) infinite;}
     p:first-child{margin-top:0;}
     hr{margin-bottom:50px;}
-	a{text-decoration:none;cursor:pointer;text-decoration-thickness:1px;color:var(--link);background:#eee;box-shadow:inset 0 0 0 var(--text);transition:all .15s;}
-    a:hover{/*color:var(--background);*/box-shadow:inset 0 -1.4em 0 var(--link);color:var(--background);}
-
+	a{text-decoration:none;cursor:pointer;text-decoration-thickness:1px;color:var(--text);box-shadow:inset 0 -1px 0 var(--text);transition:all .15s;}
+    a:hover{/*color:var(--background);*/box-shadow:inset 0 -1.4em 0 var(--text);color:var(--background);}
+    
+    #background{position:absolute;position:fixed;top:0;left:0;bottom:0;right:0;z-index:1;}
     #wrapper,#contact{padding:10px;}
+    #wrapper{position:absolute;z-index:2;}
     .marquee3k{overflow-x:hidden;white-space:nowrap;/*background:var(--text);color:var(--background);*/}
         .marquee{display:inline-block;}
             .marquee span{margin-right:1.4em;}
@@ -53,6 +55,7 @@
 </style>
 </head>
 <body>
+<div id="background"></div>
 
 
 <div id="wrapper">
@@ -137,6 +140,7 @@
 
 <div id="cursor"></div>
 <script src="scripts.js"></script>
+<script src="warpdrive.js"></script>
 <script>
     $(document).ready(function(){
 
@@ -243,6 +247,49 @@
     			}
     		}
     	});
+
+
+        // warp drive
+        var settings = {
+            width: 100,
+            height: 100,
+            autoResize: true,
+            autoResizeMinWidth: null,
+            autoResizeMaxWidth: null,
+            autoResizeMinHeight: null,
+            autoResizeMaxHeight: null,
+            addMouseControls: false,
+            addTouchControls: false,
+            hideContextMenu: false,
+            starCount: 500,
+            starBgCount: 500,
+            starBgColor: { r:255, g:255, b:255 },
+            starBgColorRangeMin: 10,
+            starBgColorRangeMax: 40,
+            starColor: { r:255, g:255, b:255 },
+            starColorRangeMin: 10,
+            starColorRangeMax: 100,
+            starfieldBackgroundColor: { r:0, g:0, b:0 },
+            starDirection: 1,
+            starSpeed: 10,
+            starSpeedMax: 200,
+            starSpeedAnimationDuration: 2,
+            starFov: 300,
+            starFovMin: 200,
+            starFovAnimationDuration: 2,
+            starRotationPermission: true,
+            starRotationDirection: 1,
+            starRotationSpeed: 0.0,
+            starRotationSpeedMax: 1.0,
+            starRotationAnimationDuration: 2,
+            starWarpLineLength: 2.0,
+            starWarpTunnelDiameter: 100,
+            starFollowMouseSensitivity: 0.025,
+            starFollowMouseXAxis: false,
+            starFollowMouseYAxis: false
+        };
+        //init
+        $("#background").warpDrive(settings);
 
 
     });
