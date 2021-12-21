@@ -22,8 +22,8 @@
 <meta name="format-detection" content="telephone=no">
 <style>
     /*@font-face{font-family:webfont;src:url("font/texgyreheros-regular.otf");} /*font/texgyreheros-regular.otf font/NimbusRomNo9L-Reg.otf*/
-    @font-face{letter-spacing:.02em;font-family:webfontMono;src:url("font/Libre_Franklin/LibreFranklin-Black.ttf");} /*font/SourceCodePro-Regular.ttf*/
-    :root{--background:#000;--text:#ddd;}
+    @font-face{font-family:webfontMono;src:url("font/Inter-Medium.ttf");} /*font/SourceCodePro-Regular.ttf*/
+    :root{--background:#fff;--text:#000;--linkhover:#40f;}
     ::-moz-selection {background:var(--text);color:var(--background);}
     ::selection{background:var(--text);color:var(--background);}
     /*::-webkit-scrollbar{width:5px;background:transparent;}
@@ -38,21 +38,20 @@
     h1.loading{animation:.3s loading steps(1) infinite;}
     p:first-child{margin-top:0;}
     hr{margin-bottom:50px;}
-	a{text-decoration:none;cursor:pointer;text-decoration-thickness:1px;color:var(--text);box-shadow:inset 0 -.1em var(--text);transition:all .15s;}
-    a:hover{box-shadow:inset 0 -1.4em 0 var(--text);color:var(--background);}
+	a{text-decoration:underline;cursor:pointer;/*text-decoration-thickness:1px;color:var(--text);box-shadow:inset 0 -.04em var(--text);transition:all .15s;*/}
+    a:hover{color:var(--linkhover);/*box-shadow:inset 0 -1.4em 0 var(--text);color:var(--background);*/}
     
-    #background{position:absolute;position:fixed;top:0;left:0;bottom:0;right:0;z-index:1;}
     #wrapper,#contact{padding:10px;}
-    #wrapper{position:absolute;z-index:2;}
     .marquee3k{overflow-x:hidden;white-space:nowrap;/*background:var(--text);color:var(--background);*/}
         .marquee{display:inline-block;}
             .marquee span{margin-right:1.4em;}
     video{display:block;outline:none;}
     .cycle-slideshow{cursor:none;height:500px;}
     .cycle-slideshow img{max-width:100%;max-height:500px;}
-    #footer a{margin-left:.2em;}
+    #footer a{}
     #socialnetworks a{box-shadow:none;vertical-align:-15%;background:transparent;}
-    #socialnetworks a img{width:1em;height:1em;}
+    #socialnetworks a svg{width:1em;height:1em;fill:var(--text);}
+    #socialnetworks a:hover svg{fill:var(--linkhover);}
     
     #contact{z-index:999997;line-height:1.4em;background:var(--background);overflow-y:auto;top:0;right:0;bottom:0;left:0;display:none;position:fixed;box-sizing:border-box;word-break:break-spaces;}
     #cursor{z-index:999998;color:#fff;mix-blend-mode:difference;backface-visibility:hidden;pointer-events:none;display:inline-block;position:fixed;left:-50%;top:-50%;transform:translate(-50%,-50%);}
@@ -65,7 +64,7 @@
 
 <div id="wrapper">
     <!-- https://de.statista.com/statistik/daten/studie/674488/umfrage/sprachen-weltweit-mit-den-meisten-muttersprachlern/ -->
-    <!--<div class="marquee3k" data-speed="1"><div class="marquee"><span>歡迎</span><span>Bienvenidos</span><span>Welcome</span><span>स्वागत हे</span><span>اهلا وسهلا</span><span>Bem-vinda</span><span>স্বাগত</span><span>добро пожаловать</span><span>ようこそ</span><span>Sugeng Rawuh</span><span>ਸਵਾਗਤ ਹੈ</span><span>Willkommen</span><span>어서 오십시오</span><span>Bienvenue</span></div></div>-->
+    <div class="marquee3k" data-speed="1"><div class="marquee"><span>歡迎</span><span>Bienvenidos</span><span>Welcome</span><span>स्वागत हे</span><span>اهلا وسهلا</span><span>Bem-vinda</span><span>স্বাগত</span><span>добро пожаловать</span><span>ようこそ</span><span>Sugeng Rawuh</span><span>ਸਵਾਗਤ ਹੈ</span><span>Willkommen</span><span>어서 오십시오</span><span>Bienvenue</span></div></div>
     <h1 class="loading">Joey Schweickhardt</h1>
     <hr>
     <video oncontextmenu="return false;" id="video" poster="img/landderechsen-pfuetze.png" tabindex="0" width="792" height="360" style="max-width:100%;max-height:calc((100vw - 20px) / 2.2);" controls preload controlsList="nodownload" disablePictureInPicture>
@@ -109,8 +108,8 @@
     <p id="footer">
         &copy; 2021 <a href="#/contact">Contact</a>
         <span id="socialnetworks">
-            <a href="https://www.instagram.com/joeyws/"><img src="icon-instagram.svg" alt="Instagram" /></a>
-            <a href="https://www.linkedin.com/in/joeyschweickhardt/"><img src="icon-linkedin.svg" alt="LinkedIn" /></a>
+            <a href="https://www.instagram.com/joeyws/"><svg version="1.1" id="instagram" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve"><g><path d="M2.761,0.421C2.234,0.626,1.789,0.899,1.343,1.345C0.897,1.787,0.625,2.236,0.419,2.759c-0.198,0.508-0.331,1.09-0.37,1.942C0.01,5.553,0,5.826,0,7.999c0,2.172,0.01,2.445,0.049,3.297c0.039,0.853,0.175,1.434,0.37,1.942c0.206,0.526,0.479,0.972,0.924,1.417c0.446,0.445,0.892,0.719,1.418,0.924c0.508,0.198,1.09,0.332,1.941,0.37c0.853,0.04,1.126,0.049,3.298,0.049c2.173,0,2.446-0.009,3.298-0.049c0.853-0.038,1.434-0.175,1.942-0.37c0.526-0.205,0.972-0.479,1.418-0.924c0.444-0.445,0.718-0.891,0.923-1.417c0.198-0.509,0.332-1.09,0.37-1.942C15.991,10.444,16,10.171,16,7.999c0-2.173-0.009-2.446-0.049-3.298c-0.038-0.853-0.175-1.435-0.37-1.942c-0.205-0.522-0.479-0.972-0.92-1.414c-0.445-0.445-0.892-0.719-1.418-0.924c-0.507-0.198-1.09-0.331-1.942-0.37c-0.852-0.04-1.125-0.049-3.298-0.049c-2.172,0-2.445,0.009-3.297,0.049C3.851,0.086,3.269,0.223,2.761,0.421z M11.232,1.488c0.781,0.035,1.204,0.165,1.487,0.276c0.374,0.146,0.641,0.318,0.92,0.599c0.279,0.279,0.452,0.546,0.599,0.92c0.11,0.283,0.24,0.706,0.276,1.486c0.038,0.842,0.046,1.096,0.046,3.232s-0.011,2.391-0.046,3.231c-0.036,0.781-0.166,1.204-0.276,1.487c-0.146,0.374-0.319,0.641-0.599,0.92c-0.279,0.28-0.546,0.452-0.92,0.599c-0.283,0.11-0.706,0.24-1.487,0.276c-0.842,0.039-1.095,0.046-3.232,0.046c-2.137,0-2.39-0.011-3.232-0.046c-0.78-0.036-1.203-0.166-1.486-0.276c-0.374-0.146-0.641-0.318-0.92-0.599c-0.28-0.279-0.452-0.546-0.599-0.92c-0.11-0.283-0.241-0.706-0.276-1.487C1.447,10.393,1.44,10.139,1.44,8.002S1.45,5.611,1.486,4.77c0.035-0.78,0.166-1.203,0.276-1.486c0.146-0.374,0.318-0.641,0.599-0.92c0.279-0.28,0.546-0.453,0.92-0.599c0.283-0.111,0.706-0.241,1.486-0.276C5.61,1.448,5.863,1.442,8,1.442C10.138,1.442,10.391,1.448,11.232,1.488z"/><path d="M3.893,8.002c0,2.27,1.841,4.106,4.107,4.106c2.268,0,4.107-1.84,4.107-4.106S10.271,3.895,8,3.895C5.73,3.895,3.893,5.731,3.893,8.002z M10.667,8.002c0,1.473-1.193,2.667-2.667,2.667c-1.473,0-2.666-1.194-2.666-2.667c0-1.474,1.193-2.667,2.666-2.667C9.474,5.335,10.667,6.528,10.667,8.002z"/><circle cx="12.273" cy="3.732" r="0.959"/></g></svg></a>
+            <a href="https://www.linkedin.com/in/joeyschweickhardt/"><svg version="1.1" id="linkedin" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve"><g transform="matrix(1,0,0,1,-138.462,-287.425)"><path d="M152.093,301.062h-2.369v-3.715c0-0.885-0.016-2.025-1.234-2.025c-1.235,0-1.421,0.964-1.421,1.963v3.777h-2.372v-7.638h2.275v1.044h0.032c0.46-0.793,1.328-1.268,2.244-1.233c2.405,0,2.849,1.581,2.849,3.638L152.093,301.062zM142.021,292.38L142.021,292.38c-0.754,0-1.376-0.622-1.376-1.376s0.622-1.376,1.376-1.376c0.755,0,1.376,0.622,1.376,1.376l0,0C143.397,291.758,142.775,292.38,142.021,292.38 M143.207,301.062h-2.373v-7.638h2.373V301.062z M153.275,287.425h-13.632c-0.642-0.006-1.174,0.514-1.182,1.154v13.691c0.008,0.643,0.541,1.163,1.182,1.154h13.632c0.642,0.009,1.178-0.508,1.187-1.154v-13.693C154.453,287.935,153.913,287.417,153.275,287.425"/></g></svg></a>
             <!--<a href="https://soundcloud.com/joeyws"><img src="icon-soundcloud.svg" alt="SoundCloud" /></a>-->
         </span>
     </p>
