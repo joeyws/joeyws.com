@@ -22,7 +22,7 @@
 <meta name="format-detection" content="telephone=no">
 <style>
     @font-face{font-family:webfont;src:url("font/NimbusSanL-Reg.otf");} /*font/SourceCodePro-Regular.ttf  font/gnu-free-font/FreeSans.ttf font/texgyreheros-regular.otf font/NimbusRomNo9L-Reg.otf font/Libre_Franklin/LibreFranklin-Bold.ttf*/
-    @font-face{font-family:webfont2;src:url("font/NimbusSanL-Bol.otf");} /*font/SourceCodePro-Regular.ttf  font/gnu-free-font/FreeSans.ttf font/texgyreheros-regular.otf font/NimbusRomNo9L-Reg.otf font/Libre_Franklin/LibreFranklin-Bold.ttf*/
+    @font-face{font-family:webfont2;src:url("font/NimbusSanL-Bol.otf");}
     :root{--background:#fff;--text:#000;--linkhover:#000;}
     ::-moz-selection {background:var(--text);color:var(--background);}
     ::selection{background:var(--text);color:var(--background);}
@@ -141,7 +141,6 @@
 
 <div id="cursor" class="dot"></div>
 <script src="scripts.js"></script>
-<!--<script src="warpdrive.js"></script>-->
 <script>
     $(document).ready(function(){
 
@@ -229,7 +228,6 @@
 
 
         // cursor
-        //$("#cursor").hide();
         $(window).on("mousemove",function(e){
             $("#cursor").css({"top":(e.pageY-window.scrollY),"left":e.pageX});
             if(e.pageX > ($(document).width()/2)){
@@ -268,49 +266,6 @@
     			}
     		}
     	});
-
-
-        // warp drive
-        /*var settings = {
-            width: 100,
-            height: 100,
-            autoResize: true,
-            autoResizeMinWidth: null,
-            autoResizeMaxWidth: null,
-            autoResizeMinHeight: null,
-            autoResizeMaxHeight: null,
-            addMouseControls: false,
-            addTouchControls: false,
-            hideContextMenu: false,
-            starCount: 500,
-            starBgCount: 500,
-            starBgColor: { r:255, g:255, b:255 },
-            starBgColorRangeMin: 10,
-            starBgColorRangeMax: 40,
-            starColor: { r:255, g:255, b:255 },
-            starColorRangeMin: 10,
-            starColorRangeMax: 100,
-            starfieldBackgroundColor: { r:0, g:0, b:0 },
-            starDirection: 1,
-            starSpeed: 10,
-            starSpeedMax: 200,
-            starSpeedAnimationDuration: 2,
-            starFov: 300,
-            starFovMin: 200,
-            starFovAnimationDuration: 2,
-            starRotationPermission: true,
-            starRotationDirection: 1,
-            starRotationSpeed: 0.0,
-            starRotationSpeedMax: 1.0,
-            starRotationAnimationDuration: 2,
-            starWarpLineLength: 2.0,
-            starWarpTunnelDiameter: 100,
-            starFollowMouseSensitivity: 0.025,
-            starFollowMouseXAxis: false,
-            starFollowMouseYAxis: false
-        };
-        //init
-        $("#background").warpDrive(settings);*/
 
 
     });
