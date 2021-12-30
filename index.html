@@ -21,7 +21,8 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,shrink-to-fit=no">
 <meta name="format-detection" content="telephone=no">
 <style>
-    @font-face{font-family:webfont;src:url("font/NimbusSanL-Bol.otf");} /*font/SourceCodePro-Regular.ttf  font/gnu-free-font/FreeSans.ttf font/texgyreheros-regular.otf font/NimbusRomNo9L-Reg.otf font/Libre_Franklin/LibreFranklin-Bold.ttf*/
+    @font-face{font-family:webfont;src:url("font/NimbusSanL-Reg.otf");} /*font/SourceCodePro-Regular.ttf  font/gnu-free-font/FreeSans.ttf font/texgyreheros-regular.otf font/NimbusRomNo9L-Reg.otf font/Libre_Franklin/LibreFranklin-Bold.ttf*/
+    @font-face{font-family:webfont2;src:url("font/NimbusSanL-Bol.otf");} /*font/SourceCodePro-Regular.ttf  font/gnu-free-font/FreeSans.ttf font/texgyreheros-regular.otf font/NimbusRomNo9L-Reg.otf font/Libre_Franklin/LibreFranklin-Bold.ttf*/
     :root{--background:#fff;--text:#000;--linkhover:#000;}
     ::-moz-selection {background:var(--text);color:var(--background);}
     ::selection{background:var(--text);color:var(--background);}
@@ -33,11 +34,12 @@
 	body{color:var(--text);font:normal normal 2vw/1.4em webfont,sans-serif,monospace;}
 	@media (max-width:960px) {body{font-size:5vw;}}
     h1,video,p{margin-top:.5em;}
+    h1{font-family:webfont2,sans-serif;}
     h1.loading{animation:.3s loading steps(1) infinite;}
     p:first-child{margin-top:0;}
     hr{margin-bottom:50px;}
-	a{text-decoration:underline;/*cursor:pointer;/*transition:filter .1s;text-decoration-thickness:1px;color:var(--text);box-shadow:inset 0 -.04em var(--text);transition:all .15s;*/}
-    a:hover{filter:blur(.25em);color:var(--linkhover);/*box-shadow:inset 0 -1.4em 0 var(--text);color:var(--background);*/}
+	a{text-decoration:none;opacity:.3;transition:all .2s;/*cursor:pointer;/*transition:filter .1s;text-decoration-thickness:1px;color:var(--text);box-shadow:inset 0 -.04em var(--text);transition:all .15s;*/}
+    a:hover{filter:blur(.2em);opacity:1;color:var(--linkhover);/*box-shadow:inset 0 -1.4em 0 var(--text);color:var(--background);*/}
     #footer a:hover svg{fill:var(--linkhover);}
 
     #wrapper,#contact{padding:10px;}
