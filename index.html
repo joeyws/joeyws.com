@@ -33,6 +33,7 @@
 	body{color:var(--text);font:normal normal 22px/1.4em webfont,sans-serif,monospace;}
 	@media (max-width:960px) {body{font-size:5vw;}}
     h1,video,p{margin-top:.5em;}
+    h1{display:inline-block;font-size:1.4em;text-transform:uppercase;transform:scaleX(2);transform-origin:top left;}
     h1.loading{animation:.3s loading steps(1) infinite;}
     p:first-child{margin-top:0;}
     hr{margin-bottom:50px;}
@@ -47,12 +48,12 @@
     video{display:block;cursor:default;outline:none;}
     .cycle-slideshow{cursor:none;height:500px;}
     .cycle-slideshow img{max-width:100%;max-height:500px;}
+    #footer{line-height:1em;text-align:right;}
     #footer svg{width:.8em;height:.8em;fill:var(--text);vertical-align:-5%;}
-    #footer{text-align:right;}
 
     #contact{z-index:999997;line-height:1.4em;background:var(--background);overflow-y:auto;top:0;right:0;bottom:0;left:0;display:none;position:fixed;box-sizing:border-box;word-break:break-spaces;}
     #cursor{z-index:999998;color:#fff;mix-blend-mode:difference;backface-visibility:hidden;pointer-events:none;display:inline-block;position:fixed;left:-50%;top:-50%;transform:translate(-50%,-50%);}
-    #cursor.dot{width:20px;height:20px;border-radius:50%;background:#fff;font-size:0;}
+    #cursor.dot{width:16px;height:16px;border-radius:50%;background:#fff;font-size:0;}
     #cursor.none{width:0;height:0;font-size:0;line-height:0;}
     @keyframes loading{50%{opacity:0;}}
 </style>
@@ -66,7 +67,7 @@
     <div class="marquee3k" data-speed="1"><div class="marquee"><span>歡迎</span><span>Bienvenidos</span><span>Welcome</span><span>स्वागत हे</span><span>اهلا وسهلا</span><span>Bem-vinda</span><span>স্বাগত</span><span>добро пожаловать</span><span>ようこそ</span><span>Sugeng Rawuh</span><span>ਸਵਾਗਤ ਹੈ</span><span>Willkommen</span><span>어서 오십시오</span><span>Bienvenue</span></div></div>
     <h1 class="loading">Joey Schweickhardt</h1>
     <hr>
-    <video oncontextmenu="return false;" id="video" poster="img/landderechsen-pfuetze.png" tabindex="0" width="1056" height="480" style="max-width:100%;max-height:calc((100vw - 20px) / 2.2);" controls preload controlsList="nodownload" disablePictureInPicture>
+    <video oncontextmenu="return false;" id="video" poster="img/landderechsen-pfuetze.png" tabindex="0" width="792" height="360" style="max-width:100%;max-height:calc((100vw - 20px) / 2.2);" controls preload controlsList="nodownload" disablePictureInPicture>
         <source src="https://www.dropbox.com/s/79kesak8jo87u4b/LandDerEchsen1080.mp4?raw=1" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
         <source src="video/LandDerEchsen720.webm" type='video/webm; codecs="vp8, vorbis"' />
         <source src="https://www.dropbox.com/s/mmcykw5nus3m39u/LandDerEchsen1080.ogv?raw=1" type='video/ogg; codecs="theora, vorbis"' />
