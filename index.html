@@ -62,7 +62,6 @@
 </style>
 </head>
 <body>
-<!--<div id="background"></div>-->
 
 
 <div id="wrapper">
@@ -157,24 +156,6 @@
         });
 
 
-        // video
-        /*video = document.getElementById("video");
-        function videoMute() {
-            if (video.prop("muted")) {alert("unmuten");$("video").prop("muted", false);}
-            else {alert("muten");video.prop("muted", true);}
-        }*/
-        /*var ppbutton = document.getElementById("video-playpause");
-        ppbutton.addEventListener("click", videoPlayPause);
-        video = document.getElementById("video");
-        function videoPlayPause() { 
-            if (video.paused) {video.play(); ppbutton.innerHTML = "Pause";}
-            else  {video.pause(); ppbutton.innerHTML = "Play";}
-        }
-        $("#video-fullscreen").click(function(){
-            if (video.requestFullscreen) {video.requestFullscreen();} else if (video.mozRequestFullScreen) {video.mozRequestFullScreen();} else if (video.webkitRequestFullscreen) {video.webkitRequestFullscreen();} else if (video.msRequestFullscreen) {video.msRequestFullscreen();}
-        });*/
-
-
         // navigation
         $(window).bind("hashchange",function(){
             // hash definieren
@@ -218,6 +199,7 @@
         $(".cycle-prev").click(function(){
             $(".cycle-slideshow").cycle("prev");
         });*/
+        
         $(".cycle-slideshow").click(function(e){
             if (e.pageX > ($(document).width()/2)) {
                 $(".cycle-slideshow").cycle("next");
