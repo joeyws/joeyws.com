@@ -55,6 +55,7 @@
     #footer svg{width:1em;height:1em;fill:var(--text);vertical-align:-.65em;padding:8px 0;}
 
     #contact{z-index:999997;line-height:1.4em;background:var(--background);overflow-y:auto;top:0;right:0;bottom:0;left:0;display:none;position:fixed;box-sizing:border-box;word-break:break-spaces;}
+    #tooltip{z-index:999998;color:#fff;font-size:2em;margin:40px 0 0 40px;mix-blend-mode:difference;backface-visibility:hidden;pointer-events:none;display:none;position:fixed;left:-50%;top:-50%;transform:translate(-50%,-50%);}
     @keyframes loading{50%{opacity:0;}}
 </style>
 </head>
@@ -137,6 +138,7 @@
 </div>
 
 
+<div id="tooltip"></div>
 <script src="scripts.js"></script>
 <script>
     $(document).ready(function(){
@@ -207,7 +209,7 @@
 
 
         // cursor
-        /*$(window).on("mousemove",function(e){
+        $(window).on("mousemove",function(e){
             $("#cursor").css({"top":(e.pageY-window.scrollY),"left":e.pageX});
             if(e.pageX > ($(document).width()/2)){
                 $("#cursor").html("Next");
@@ -215,9 +217,14 @@
                 $("#cursor").html("Prev");
             }
         });
+        $(".cycle-slideshow").hover(function(e){
+            $("#cursor").show();
+        },function(){
+            $("#cursor").hide();
+        });
         if (("ontouchstart" in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0)) { 
             $("#cursor").remove();
-        }*/
+        }
 
 
         // weather
