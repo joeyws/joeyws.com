@@ -55,8 +55,8 @@
     #footer svg{width:1em;height:1em;fill:var(--text);vertical-align:-.65em;padding:8px 0;}
 
     #contact{z-index:999997;line-height:1.4em;background:var(--background);overflow-y:auto;top:0;right:0;bottom:0;left:0;display:none;position:fixed;box-sizing:border-box;word-break:break-spaces;}
-    /*#cursor{z-index:999998;color:#fff;mix-blend-mode:difference;backface-visibility:hidden;pointer-events:none;display:inline-block;position:fixed;left:-50%;top:-50%;transform:translate(-50%,-50%);}
-    #cursor.dot{width:14px;height:14px;border-radius:50%;background:#fff;font-size:0;}
+    #cursor{z-index:999998;color:#fff;display:none;margin:40px 0 0 40px;mix-blend-mode:difference;backface-visibility:hidden;pointer-events:none;display:inline-block;position:fixed;left:-50%;top:-50%;transform:translate(-50%,-50%);}
+    /*#cursor.dot{width:14px;height:14px;border-radius:50%;background:#fff;font-size:0;}
     #cursor.none{width:0;height:0;font-size:0;line-height:0;}*/
     @keyframes loading{50%{opacity:0;}}
 </style>
@@ -138,7 +138,7 @@
 </div>
 
 
-<!--<div id="cursor" class="dot"></div>-->
+<div id="cursor"></div>
 <script src="scripts.js"></script>
 <script>
     $(document).ready(function(){
@@ -160,7 +160,7 @@
         $(window).bind("hashchange",function(){
             // hash definieren
             var hashWithSlashes = window.location.hash.substring(1);
-            // slashs entfernen
+            // slashes entfernen
             var hash = hashWithSlashes.replace(/\//g,'');
             // bereich anzeigen
             var duration = 0;
@@ -199,7 +199,6 @@
         $(".cycle-prev").click(function(){
             $(".cycle-slideshow").cycle("prev");
         });*/
-        
         $(".cycle-slideshow").click(function(e){
             if (e.pageX > ($(document).width()/2)) {
                 $(".cycle-slideshow").cycle("next");
@@ -210,7 +209,7 @@
 
 
         // cursor
-        /*$(window).on("mousemove",function(e){
+        $(window).on("mousemove",function(e){
             $("#cursor").css({"top":(e.pageY-window.scrollY),"left":e.pageX});
             if(e.pageX > ($(document).width()/2)){
                 $("#cursor").html("Next");
@@ -219,18 +218,13 @@
             }
         });
         $(".cycle-slideshow").hover(function(e){
-            $("#cursor").removeClass("dot");
+            $("#cursor").show();
         },function(){
-            $("#cursor").addClass("dot");
-        });
-        $("video").hover(function(e){
-            $("#cursor").removeClass("dot").addClass("none");
-        },function(){
-            $("#cursor").removeClass("none").addClass("dot");
+            $("#cursor").hide();
         });
         if (("ontouchstart" in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0)) { 
             $("#cursor").remove();
-        }*/
+        }
 
 
         // weather
