@@ -55,7 +55,8 @@
 
     #contact{z-index:999997;font-size:13px;line-height:1.4em;background:#ccc;width:400px;height:500px;max-width:calc(100vw - 32px);max-height:calc(100vh - 32px);overflow-y:auto;right:0;bottom:0;margin:16px;display:none;position:absolute;position:fixed;box-sizing:border-box;word-break:break-spaces;}
     #contact:before{content:"\00d7";position:absolute;position:fixed;background:var(--text);color:var(--background);cursor:pointer;text-align:center;width:1.4em;display:inline-block;}
-    #tooltip{z-index:999998;color:#fff;font-size:2em;margin-top:-30px;mix-blend-mode:difference;backface-visibility:hidden;pointer-events:none;display:none;position:fixed;left:-50%;top:-50%;transform:translate(-50%,-50%);}
+    #tooltip{z-index:999998;color:#fff;transition:opacity .2s;font-size:2em;margin-top:-20px;mix-blend-mode:difference;backface-visibility:hidden;pointer-events:none;position:fixed;left:-50%;top:-50%;transform:translate(-50%,-50%);}
+    #tooltip.hidden{opacity:0;}
     @keyframes loading{50%{opacity:0;}}
 </style>
 </head>
@@ -208,7 +209,7 @@
 
 
         // tooltip
-        $("body").append("<div id='tooltip'></div>");
+        $("body").append("<div id='tooltip' class='hidden'></div>");
         $(window).on("mousemove",function(e){
             $("#tooltip").css({"top":(e.pageY-window.scrollY),"left":e.pageX});
             if(e.pageX > ($(document).width()/2)){
@@ -218,9 +219,9 @@
             }
         });
         $(".cycle-slideshow").hover(function(e){
-            $("#tooltip").show();
+            $("#tooltip").removeClass("hidden");
         },function(){
-            $("#tooltip").hide();
+            $("#tooltip").addClass("hidden");
         });
         if (("ontouchstart" in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0)) { 
             $("#tooltip").remove();
