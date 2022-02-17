@@ -23,7 +23,7 @@
 <style>
     @font-face{font-family:webfont2;src:url("font/NimbusSanL-Bol.otf");} /*font/NimbusSanL-Bol.otf font/SourceCodePro-Regular.ttf  font/gnu-free-font/FreeSans.ttf font/texgyreheros-regular.otf font/NimbusRomNo9L-Reg.otf font/Libre_Franklin/LibreFranklin-Bold.ttf*/
     @font-face{font-family:webfont;src:url("font/officecodepro-regular.otf");}
-    :root{--background:#fff;--text:#000;}
+    :root{--background:#fff;--text:#000;--link:#f00;}
     ::-moz-selection {background:var(--text);color:var(--background);}
     ::selection{background:var(--text);color:var(--background);}
     ::-webkit-scrollbar{width:8px;background:transparent;}
@@ -38,10 +38,10 @@
     h1.loading{animation:.3s loading steps(1) infinite;}
     p:first-child{margin-top:0;}
     hr{margin-bottom:50px;}
-	a{text-decoration:none;cursor:pointer;box-shadow:inset 0 -.04em var(--text);transition:all .1s;/*text-decoration-thickness:1px;*/}
-    a:hover{box-shadow:inset 0 -1.4em 0 var(--text);/*color:var(--background);*/}
+	a{text-decoration:underline;text-decoration-thickness:1px;cursor:pointer;transition:all .1s;/*box-shadow:inset 0 -.04em var(--background);*/}
+    a:hover{color:var(--link);/*box-shadow:inset 0 -1.4em 0 var(--background);*/}
     a.social{box-shadow:none;}
-    /*#footer a svg{fill:var(--link);}*/
+    #footer a:hover svg{fill:var(--link);}
 
     #wrapper,#contact{padding:10px;}
     .marquee3k{white-space:nowrap;overflow-x:hidden;}
@@ -51,7 +51,7 @@
     .cycle-slideshow{cursor:none;height:500px;}
     .cycle-slideshow img{max-width:100%;max-height:500px;}
     #footer{line-height:1em;text-align:right;}
-    #footer a{margin:0 8px;}
+    #footer a{padding:0 8px;}
     #footer svg{width:1em;height:1em;fill:var(--text);padding:8px 0;vertical-align:-.65em;}
 
     #contact{z-index:999997;/*font-size:13px;line-height:1.4em;*/background:#dededd;width:440px;height:500px;max-width:calc(100vw - 32px);max-height:calc(100vh - 32px);overflow-y:auto;right:0;bottom:0;margin:16px;display:none;position:absolute;position:fixed;box-sizing:border-box;word-break:break-spaces;}
