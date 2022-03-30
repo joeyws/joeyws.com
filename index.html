@@ -39,10 +39,11 @@
     p:first-child{margin-top:0;}
     hr{margin-bottom:50px;}
 	a{text-decoration:underline;text-decoration-thickness:1px;cursor:pointer;/*transition:all .2s;box-shadow:inset 0 -.04em var(--background);*/}
-    a:hover{animation:.3s links steps(1) infinite;color:var(--link);/*filter:blur(.25em);box-shadow:inset 0 -1.4em 0 var(--background);*/}
+    a:hover{animation:.25s links steps(1) infinite;color:var(--link);/*filter:blur(.25em);box-shadow:inset 0 -1.4em 0 var(--background);*/}
+    a:hover svg{animation:.25s links-svg steps(1) infinite;}
     a.social{box-shadow:none;}
     #footer a svg{transition:all .2s;}
-    #footer a:hover svg{fill:var(--link);}
+    
 
     #wrapper,#contact{padding:10px;}
     .marquee3k{white-space:nowrap;overflow-x:hidden;}
@@ -60,7 +61,8 @@
     #tooltip{z-index:999998;color:#fff;font-size:3em;/*transition:opacity .2s;margin-top:-30px;*/mix-blend-mode:difference;backface-visibility:hidden;pointer-events:none;position:fixed;left:-50%;top:-50%;transform:translate(-50%,-50%);}
     #tooltip.hidden{opacity:0;}
     @keyframes loading{50%{opacity:0;}}
-    @keyframes links{0%{opacity:0;}50%{opacity:1;}}
+    @keyframes links{0%{color:#f00;}25%{color:#0f0;}50%{color:#ff0;}75%{color:#00f;}}
+    @keyframes links-svg{0%{fill:#f00;}25%{fill:#0f0;}50%{fill:#ff0;}75%{fill:#00f;}}
 </style>
 </head>
 <body>
