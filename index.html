@@ -33,7 +33,7 @@
 	html,body{letter-spacing:.0em;background:var(--background);}
 	body{color:var(--text);font:normal normal 15px/1.4em webfont,monospace;}
 	h1,video,p{margin-top:.8em;}
-    h1{display:inline-block;text-align:center;font-family:webfont2,sans-serif;font-size:1.2em;text-transform:uppercase;transform:scaleX(1.4);transform-origin:top left;}
+    h1{display:inline-block;text-align:center;font-family:webfont2,sans-serif;font-size:1.2em;text-transform:uppercase;transform:scaleX(1.3);transform-origin:top left;}
     h1.loading{animation:.3s loading steps(1) infinite;}
     p:first-child{margin-top:0;}
     hr{margin-bottom:3em;}
@@ -70,12 +70,13 @@
     <h1 class="loading">Joey W. Schweickhardt</h1>
     <hr>
     <video oncontextmenu="return false;" id="video" poster="img/pfuetze.png" tabindex="0" width="792" height="360" style="max-width:100%;max-height:calc((100vw - 20px) / 2.2);" controls preload controlsList="nodownload" disablePictureInPicture>
+        <!--<track src="subtitles.vtt" kind="subtitles" label="Subtitles" default>-->
         <source src="https://www.dropbox.com/s/79kesak8jo87u4b/LandDerEchsen1080.mp4?raw=1" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
         <source src="video/LandDerEchsen720.webm" type='video/webm; codecs="vp8, vorbis"' />
         <source src="https://www.dropbox.com/s/mmcykw5nus3m39u/LandDerEchsen1080.ogv?raw=1" type='video/ogg; codecs="theora, vorbis"' />
     </video>
-    <p style="max-width:792px;">&ldquo;Land der Echsen&rdquo; (2021, Germany): The city council is planning a new quarter on a run-down railroad station site. There are various non-profit institutions housing in old halls, which are now forced to move out in order to make room for several new buildings. Suddenly lizards enter the game and endanger the entire undertaking.</p>
-    <p style="max-width:792px;">Created as part of the &ldquo;Anti-Stuttgart &mdash; A Determinate Negation&rdquo; <a href="https://www.igma.uni-stuttgart.de/en/">IGmA</a> design studio, in which certain urban developments and procedures were examined critically. <!--These comments were subsequently transfered into own projects.--> The film was being shown at <a href="http://www.current-stuttgart.de/en">CURRENT festival</a> for art and urban space.</p>
+    <p style="max-width:960px;">&ldquo;Land der Echsen&rdquo; (2021, Germany): The city council is planning a new quarter on a run-down railroad station site. There are various non-profit institutions housing in old halls, which are now forced to move out in order to make room for several new buildings. Suddenly lizards enter the game and endanger the entire undertaking.</p>
+    <p style="max-width:960px;">Created as part of the &ldquo;Anti-Stuttgart &mdash; A Determinate Negation&rdquo; <a href="https://www.igma.uni-stuttgart.de/en/">IGmA</a> design studio, in which certain urban developments and procedures were examined critically. <!--These comments were subsequently transfered into own projects.--> The film was being shown at <a href="http://www.current-stuttgart.de/en">CURRENT festival</a> for art and urban space.</p>
     <hr>
     <p class="cycle-slideshow" data-cycle-speed="400" data-cycle-caption-template="{{alt}}<br>{{slideNum}}/{{slideCount}}" data-cycle-center-horz="false" data-cycle-center-vert="false" data-cycle-fx="fade" data-cycle-loader="wait" data-cycle-caption="#cycle-text" data-cycle-timeout="0">
             <img src="img/26.jpg" alt="Pneu structures" />
