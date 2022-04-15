@@ -55,7 +55,7 @@
     #tooltip{z-index:999998;color:#fff;font-family:webfont,monospace;font-size:3em;/*transition:opacity .2s;margin-top:-30px;*/mix-blend-mode:difference;backface-visibility:hidden;pointer-events:none;position:fixed;left:-50%;top:-50%;transform:translate(-50%,-50%);}
     #tooltip.hidden{opacity:0;}
     @keyframes loading{50%{opacity:0;}}
-    @keyframes links{0%{opacity:0;}50%{opacity:1;}}
+    @keyframes links{0%{opacity:.1;}50%{opacity:1;}}
 </style>
 </head>
 <body>
@@ -168,13 +168,14 @@
         });
         $("#contact a").on("click",function(e){e.stopPropagation();});
         $(".contact").click(function(){  
-            var duration = 300;   
+            var duration = 500; 
+            var easing = "easeOutExpo";  
             if ($("#contact").is(":hidden")) {   
-                $('#contact').slideDown(duration);
-                $('html, body').animate({scrollTop: $('#privacy').offset().top - document.documentElement.clientHeight + 10}, duration); // $('#contact').offset().top+2
+                $('#contact').slideDown(duration, easing);
+                $('html, body').animate({scrollTop: $('#privacy').offset().top - document.documentElement.clientHeight + 10}, duration, easing); // $('#contact').offset().top+2
             } else {
-                $("html, body").animate({scrollTop: 0}, duration);
-                $("#contact").slideUp(duration);
+                $("html, body").animate({scrollTop: 0}, duration, easing);
+                $("#contact").slideUp(duration, easing);
             }
         });
     	var address1 = 'K'+'o'+'l'+'p'+'i'+'n'+'g'+'s'+'t'+'r'+'.'+' '+'5'+'6';
