@@ -47,7 +47,7 @@
     video{display:block;outline:none;}
     .cycle-slideshow{cursor:none;height:500px;user-select:none;}
     .cycle-slideshow img{max-width:100%;max-height:500px;}
-    #tooltip{z-index:999998;color:#fff;font-size:3em;mix-blend-mode:difference;backface-visibility:hidden;pointer-events:none;position:fixed;left:-50%;top:-50%;transform:translate(-50%,-50%);}
+    #tooltip{z-index:999998;color:#fff;font-size:2em;mix-blend-mode:difference;backface-visibility:hidden;pointer-events:none;position:fixed;left:-50%;top:-50%;transform:translate(-50%,-50%);}
     #tooltip.hidden{opacity:0;}
     #footer{text-align:right;}
     #timeblink{animation:1s loading steps(1) infinite;}
@@ -162,33 +162,6 @@
             Marquee3k.init();
         });
 
-        // contact
-        /*$("#contact").click(function(){
-            $(".contact").click();
-        });
-        $("#contact a").on("click",function(e){e.stopPropagation();});*/
-        $("#contact").prepend("<span class='contact' style='font-size:2em;float:right;cursor:pointer;'>x</span>");
-        $("#contact").children("p").first().css("margin-top","0");
-        $(".contact").click(function(){  
-            var duration = 500; 
-            var easing = "easeOutExpo";  
-            if ($("#contact").is(":hidden")) {   
-                $('#contact').slideDown(duration, easing);
-                $('html, body').animate({scrollTop: $('#privacy').offset().top - document.documentElement.clientHeight + 8}, duration, easing); // $('#contact').offset().top+2
-            } else {
-                $("html, body").animate({scrollTop: 0}, duration, easing);
-                $("#contact").slideUp(duration, easing);
-            }
-        });
-    	var address1 = 'K'+'o'+'l'+'p'+'i'+'n'+'g'+'s'+'t'+'r'+'.'+' '+'5'+'6';
-    	var address2 = 'D'+'-'+'7'+'0'+'3'+'7'+'8'+' '+'S'+'t'+'u'+'t'+'t'+'g'+'a'+'r'+'t';
-    	var mail = 'm'+'a'+'i'+'l'+'@'+'j'+'o'+'e'+'y'+'w'+'s'+'.'+'c'+'o'+'m';
-    	var phone = '+'+'4'+'9'+'1'+'5'+'7'+'7'+'8'+'8'+'5'+'0'+'5'+'0'+'2';
-    	$('.address1').html(address1);
-    	$('.address2').html(address2);
-    	$('.email').html(mail).attr('href','m'+'a'+'i'+'l'+'t'+'o'+':'+'Joey'+'%20'+'Schweickhardt'+'%20'+'%3C'+mail+'%3E');
-    	$('.phone').html(phone).attr('href','t'+'e'+'l'+':'+phone);
-
         // slideshow
         $(".cycle-next").click(function(){
             $(".cycle-slideshow").cycle("next");
@@ -209,9 +182,9 @@
         $(window).on("mousemove",function(e){
             $("#tooltip").css({"top":(e.pageY-window.scrollY),"left":e.pageX});
             if(e.pageX > ($(document).width()/2)){
-                $("#tooltip").html("&rarr;");
+                $("#tooltip").html("Next");
             } else {
-                $("#tooltip").html("&larr;");
+                $("#tooltip").html("Prev");
             }
         });
         $(".cycle-slideshow").hover(function(e){
@@ -268,6 +241,31 @@
             }
         }
         getXMLFeed("https://weather-broker-cdn.api.bbci.co.uk/en/observation/rss/2825297", getRssWeather);
+
+        // contact
+        /*$("#contact").click(function(){$(".contact").click();});
+        $("#contact a").on("click",function(e){e.stopPropagation();});*/
+        $("#contact p").first().prepend("<a href='javascript:;' class='contact' style='float:right;cursor:pointer;'>Close</a>");
+        //$("#contact p").first().prepend("<span href='javascript:;' class='contact' style='font-size:2em;float:right;cursor:pointer;'>x</span>");
+        $(".contact").click(function(){  
+            var duration = 500; 
+            var easing = "easeOutExpo";  
+            if ($("#contact").is(":hidden")) {   
+                $('#contact').slideDown(duration, easing);
+                $('html, body').animate({scrollTop: $('#privacy').offset().top - document.documentElement.clientHeight + 8}, duration, easing); // $('#contact').offset().top+2
+            } else {
+                $("html, body").animate({scrollTop: 0}, duration, easing);
+                $("#contact").slideUp(duration, easing);
+            }
+        });
+        var address1 = 'K'+'o'+'l'+'p'+'i'+'n'+'g'+'s'+'t'+'r'+'.'+' '+'5'+'6';
+        var address2 = 'D'+'-'+'7'+'0'+'3'+'7'+'8'+' '+'S'+'t'+'u'+'t'+'t'+'g'+'a'+'r'+'t';
+        var mail = 'm'+'a'+'i'+'l'+'@'+'j'+'o'+'e'+'y'+'w'+'s'+'.'+'c'+'o'+'m';
+        var phone = '+'+'4'+'9'+'1'+'5'+'7'+'7'+'8'+'8'+'5'+'0'+'5'+'0'+'2';
+        $('.address1').html(address1);
+        $('.address2').html(address2);
+        $('.email').html(mail).attr('href','m'+'a'+'i'+'l'+'t'+'o'+':'+'Joey'+'%20'+'Schweickhardt'+'%20'+'%3C'+mail+'%3E');
+        $('.phone').html(phone).attr('href','t'+'e'+'l'+':'+phone);
 
     	// keyboard control
     	$(document).keydown(function(e){
