@@ -30,7 +30,7 @@
     ::-webkit-scrollbar-track{/*margin:10px 0;*/}
     ::-webkit-scrollbar-thumb{outline-offset:-5px;outline:1px solid var(--text);border-radius:8px;}
     /* RESET */*{font-kerning:normal;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-appearance:none;border-radius:0;-webkit-border-radius:0;box-sizing:content-box;font-smoothing:antialiased;-moz-osx-font-smoothing: grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased;}
-	html,body{letter-spacing:.0em;background:var(--background);}
+	html,body{background:var(--background);}
 	body{color:var(--text);font:normal normal 15px/1.4em webfont,monospace;}
 	h1,video,p{margin-top:.8em;}
     h1{display:inline-block;text-align:center;font-family:webfont2,sans-serif;font-size:1.2em;text-transform:uppercase;transform:scaleX(1.4);transform-origin:top left;}
@@ -41,18 +41,18 @@
     a:hover{filter:blur(.25em);/*animation:.3s links steps(1) infinite;box-shadow:inset 0 -1.4em 0 var(--text);*/}
     
     #wrapper,#contact{padding:10px;}
-    #contact{border-top:1px solid var(--text);display:none;}
-    
     .marquee3k{white-space:nowrap;overflow-x:hidden;}
         .marquee{display:inline-block;}
             .marquee span{margin-right:1.5em;}
     video{display:block;outline:none;}
     .cycle-slideshow{cursor:none;height:500px;user-select:none;}
     .cycle-slideshow img{max-width:100%;max-height:500px;}
-    #footer{text-align:right;}
-
     #tooltip{z-index:999998;color:#fff;font-size:3em;mix-blend-mode:difference;backface-visibility:hidden;pointer-events:none;position:fixed;left:-50%;top:-50%;transform:translate(-50%,-50%);}
     #tooltip.hidden{opacity:0;}
+    #footer{text-align:right;}
+    #timeblink{animation:1s loading steps(1) infinite;}
+    #contact{border-top:1px solid var(--text);display:none;}
+
     @keyframes loading{50%{opacity:0;}}
 </style>
 </head>
@@ -74,7 +74,7 @@
     <p style="max-width:960px;">Created as part of the &ldquo;Anti-Stuttgart &mdash; A Determinate Negation&rdquo; <a href="https://www.igma.uni-stuttgart.de/en/">IGmA</a> design studio, in which certain urban developments and procedures were examined critically. <!--These comments were subsequently transfered into own projects.--> The film was being shown at <a href="http://www.current-stuttgart.de/en">CURRENT festival</a> for art and urban space.</p>
     <hr>
     <div class="cycle-slideshow"
-        data-cycle-fx="fade" data-cycle-speed="500" data-cycle-timeout="0"
+        data-cycle-fx="fade" data-cycle-speed="300" data-cycle-timeout="0"
         data-cycle-caption="#cycle-text" data-cycle-caption-template="{{alt}}<br>{{slideNum}}/{{slideCount}}"
         data-cycle-swipe="true">
         <!-- data-cycle-center-horz="false" data-cycle-center-vert="false" data-cycle-loader="wait" -->
@@ -113,9 +113,8 @@
     <hr>
     <p id="footer">
         Stuttgart<span id="time"></span><span id="weather"></span><br>
-        <!--<a class="social" href="https://www.instagram.com/joeyws/">Instagram<svg version="1.1" id="instagram" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve"><g><path d="M2.761,0.421C2.234,0.626,1.789,0.899,1.343,1.345C0.897,1.787,0.625,2.236,0.419,2.759c-0.198,0.508-0.331,1.09-0.37,1.942C0.01,5.553,0,5.826,0,7.999c0,2.172,0.01,2.445,0.049,3.297c0.039,0.853,0.175,1.434,0.37,1.942c0.206,0.526,0.479,0.972,0.924,1.417c0.446,0.445,0.892,0.719,1.418,0.924c0.508,0.198,1.09,0.332,1.941,0.37c0.853,0.04,1.126,0.049,3.298,0.049c2.173,0,2.446-0.009,3.298-0.049c0.853-0.038,1.434-0.175,1.942-0.37c0.526-0.205,0.972-0.479,1.418-0.924c0.444-0.445,0.718-0.891,0.923-1.417c0.198-0.509,0.332-1.09,0.37-1.942C15.991,10.444,16,10.171,16,7.999c0-2.173-0.009-2.446-0.049-3.298c-0.038-0.853-0.175-1.435-0.37-1.942c-0.205-0.522-0.479-0.972-0.92-1.414c-0.445-0.445-0.892-0.719-1.418-0.924c-0.507-0.198-1.09-0.331-1.942-0.37c-0.852-0.04-1.125-0.049-3.298-0.049c-2.172,0-2.445,0.009-3.297,0.049C3.851,0.086,3.269,0.223,2.761,0.421z M11.232,1.488c0.781,0.035,1.204,0.165,1.487,0.276c0.374,0.146,0.641,0.318,0.92,0.599c0.279,0.279,0.452,0.546,0.599,0.92c0.11,0.283,0.24,0.706,0.276,1.486c0.038,0.842,0.046,1.096,0.046,3.232s-0.011,2.391-0.046,3.231c-0.036,0.781-0.166,1.204-0.276,1.487c-0.146,0.374-0.319,0.641-0.599,0.92c-0.279,0.28-0.546,0.452-0.92,0.599c-0.283,0.11-0.706,0.24-1.487,0.276c-0.842,0.039-1.095,0.046-3.232,0.046c-2.137,0-2.39-0.011-3.232-0.046c-0.78-0.036-1.203-0.166-1.486-0.276c-0.374-0.146-0.641-0.318-0.92-0.599c-0.28-0.279-0.452-0.546-0.599-0.92c-0.11-0.283-0.241-0.706-0.276-1.487C1.447,10.393,1.44,10.139,1.44,8.002S1.45,5.611,1.486,4.77c0.035-0.78,0.166-1.203,0.276-1.486c0.146-0.374,0.318-0.641,0.599-0.92c0.279-0.28,0.546-0.453,0.92-0.599c0.283-0.111,0.706-0.241,1.486-0.276C5.61,1.448,5.863,1.442,8,1.442C10.138,1.442,10.391,1.448,11.232,1.488z"/><path d="M3.893,8.002c0,2.27,1.841,4.106,4.107,4.106c2.268,0,4.107-1.84,4.107-4.106S10.271,3.895,8,3.895C5.73,3.895,3.893,5.731,3.893,8.002z M10.667,8.002c0,1.473-1.193,2.667-2.667,2.667c-1.473,0-2.666-1.194-2.666-2.667c0-1.474,1.193-2.667,2.666-2.667C9.474,5.335,10.667,6.528,10.667,8.002z"/><circle cx="12.273" cy="3.732" r="0.959"/></g></svg></a>
-        <a class="social" href="https://www.linkedin.com/in/joeyschweickhardt/">LinkedIn<svg version="1.1" id="linkedin" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve"><g transform="matrix(1,0,0,1,-138.462,-287.425)"><path d="M152.093,301.062h-2.369v-3.715c0-0.885-0.016-2.025-1.234-2.025c-1.235,0-1.421,0.964-1.421,1.963v3.777h-2.372v-7.638h2.275v1.044h0.032c0.46-0.793,1.328-1.268,2.244-1.233c2.405,0,2.849,1.581,2.849,3.638L152.093,301.062zM142.021,292.38L142.021,292.38c-0.754,0-1.376-0.622-1.376-1.376s0.622-1.376,1.376-1.376c0.755,0,1.376,0.622,1.376,1.376l0,0C143.397,291.758,142.775,292.38,142.021,292.38 M143.207,301.062h-2.373v-7.638h2.373V301.062z M153.275,287.425h-13.632c-0.642-0.006-1.174,0.514-1.182,1.154v13.691c0.008,0.643,0.541,1.163,1.182,1.154h13.632c0.642,0.009,1.178-0.508,1.187-1.154v-13.693C154.453,287.935,153.913,287.417,153.275,287.425"/></g></svg></a>
-        <a class="social" href="https://soundcloud.com/joeyws"><svg version="1.1" id="soundcloud" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-5.817 0 27.633 16" enable-background="new -5.817 0 27.633 16" xml:space="preserve"><path d="M-4.482,13.357c0.058,0,0.105-0.045,0.115-0.111l0.309-2.427l-0.309-2.483c-0.009-0.065-0.058-0.109-0.116-0.109s-0.106,0.047-0.115,0.109c0,0.002-0.271,2.483-0.271,2.483l0.271,2.427C-4.589,13.31-4.54,13.357-4.482,13.357z M-5.393,12.327c0,0,0,0,0,0.001l0,0V12.327z M-5.504,12.435c0.056,0,0.101-0.044,0.11-0.107l0.239-1.509l-0.239-1.535c-0.008-0.063-0.054-0.108-0.11-0.108c-0.059,0-0.103,0.046-0.111,0.109l-0.202,1.534l0.202,1.508C-5.607,12.391-5.561,12.435-5.504,12.435z M-3.257,7.875c-0.009-0.079-0.068-0.136-0.139-0.136c-0.074,0-0.132,0.058-0.139,0.136c0,0.001-0.258,2.945-0.258,2.945l0.258,2.837c0.007,0.079,0.065,0.136,0.139,0.136c0.071,0,0.13-0.057,0.138-0.135l0.292-2.837L-3.257,7.875z M-2.301,13.905c0.083,0,0.153-0.067,0.161-0.159l0,0l0.276-2.926L-2.14,7.795c-0.008-0.092-0.078-0.16-0.161-0.16c-0.086,0-0.156,0.068-0.163,0.16l-0.245,3.025l0.245,2.926C-2.457,13.837-2.388,13.905-2.301,13.905z M-1.198,13.952c0.099,0,0.178-0.078,0.186-0.182v0.001l0.261-2.952l-0.261-2.807C-1.02,7.908-1.099,7.829-1.198,7.829c-0.101,0-0.181,0.08-0.187,0.184l-0.23,2.806l0.23,2.951C-1.379,13.876-1.299,13.952-1.198,13.952z M0.367,10.821L0.122,6.255C0.116,6.138,0.024,6.048-0.087,6.048c-0.111,0-0.203,0.091-0.209,0.208l-0.215,4.565l0.215,2.952c0.007,0.115,0.099,0.206,0.209,0.206c0.111,0,0.203-0.091,0.209-0.207v0.001L0.367,10.821z M1.034,13.984c0.125,0,0.227-0.102,0.232-0.231v0.001l0.229-2.932L1.267,5.213C1.261,5.082,1.159,4.982,1.034,4.982c-0.125,0-0.227,0.1-0.233,0.231L0.6,10.822l0.202,2.932C0.807,13.882,0.909,13.984,1.034,13.984z M2.165,4.49c-0.14,0-0.252,0.111-0.257,0.255L1.72,10.822l0.188,2.903c0.005,0.141,0.117,0.253,0.257,0.253c0.138,0,0.25-0.112,0.256-0.254v0.002l0.212-2.904L2.422,4.745C2.415,4.601,2.303,4.49,2.165,4.49z M3.302,13.984c0.154,0,0.276-0.123,0.281-0.278v0.001l0.197-2.883L3.583,4.54C3.578,4.383,3.456,4.261,3.302,4.261c-0.151,0-0.274,0.122-0.28,0.278l-0.174,6.282l0.174,2.885C3.029,13.861,3.152,13.984,3.302,13.984z M4.452,13.98c0.166,0,0.299-0.134,0.304-0.302v0.001l0.179-2.857L4.756,4.7C4.751,4.531,4.617,4.398,4.452,4.398c-0.166,0-0.3,0.132-0.303,0.302l-0.161,6.123l0.161,2.856C4.152,13.846,4.286,13.98,4.452,13.98z M6.099,10.823l-0.164-5.9C5.931,4.741,5.787,4.598,5.608,4.598c-0.181,0-0.324,0.144-0.327,0.326l-0.147,5.899l0.147,2.839c0.003,0.18,0.146,0.323,0.327,0.323c0.179,0,0.323-0.144,0.327-0.327v0.003L6.099,10.823z M6.774,13.991c0.189,0,0.347-0.156,0.351-0.349v0.002l0.148-2.82L7.124,3.804C7.121,3.612,6.963,3.455,6.774,3.455c-0.19,0-0.348,0.157-0.35,0.349L6.29,10.823c0,0.005,0.133,2.821,0.133,2.821C6.426,13.834,6.583,13.991,6.774,13.991z M7.934,2.795c-0.203,0-0.371,0.167-0.375,0.374l-0.153,7.656l0.153,2.779c0.003,0.203,0.171,0.37,0.375,0.37c0.204,0,0.371-0.167,0.375-0.373v0.002l0.166-2.779L8.308,3.169C8.306,2.963,8.138,2.795,7.934,2.795z M8.996,13.994C9.005,13.995,18.357,14,18.418,14c1.877,0,3.398-1.522,3.398-3.4c0-1.876-1.522-3.398-3.398-3.398c-0.465,0-0.91,0.095-1.314,0.263C16.832,4.402,14.264,2,11.132,2c-0.767,0-1.515,0.152-2.175,0.407c-0.257,0.099-0.325,0.201-0.327,0.4v10.787C8.632,13.8,8.793,13.973,8.996,13.994z"/></svg></a>-->
+        <!--<a href="https://www.instagram.com/joeyws/"><svg version="1.1" id="instagram" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve"><g><path d="M2.761,0.421C2.234,0.626,1.789,0.899,1.343,1.345C0.897,1.787,0.625,2.236,0.419,2.759c-0.198,0.508-0.331,1.09-0.37,1.942C0.01,5.553,0,5.826,0,7.999c0,2.172,0.01,2.445,0.049,3.297c0.039,0.853,0.175,1.434,0.37,1.942c0.206,0.526,0.479,0.972,0.924,1.417c0.446,0.445,0.892,0.719,1.418,0.924c0.508,0.198,1.09,0.332,1.941,0.37c0.853,0.04,1.126,0.049,3.298,0.049c2.173,0,2.446-0.009,3.298-0.049c0.853-0.038,1.434-0.175,1.942-0.37c0.526-0.205,0.972-0.479,1.418-0.924c0.444-0.445,0.718-0.891,0.923-1.417c0.198-0.509,0.332-1.09,0.37-1.942C15.991,10.444,16,10.171,16,7.999c0-2.173-0.009-2.446-0.049-3.298c-0.038-0.853-0.175-1.435-0.37-1.942c-0.205-0.522-0.479-0.972-0.92-1.414c-0.445-0.445-0.892-0.719-1.418-0.924c-0.507-0.198-1.09-0.331-1.942-0.37c-0.852-0.04-1.125-0.049-3.298-0.049c-2.172,0-2.445,0.009-3.297,0.049C3.851,0.086,3.269,0.223,2.761,0.421z M11.232,1.488c0.781,0.035,1.204,0.165,1.487,0.276c0.374,0.146,0.641,0.318,0.92,0.599c0.279,0.279,0.452,0.546,0.599,0.92c0.11,0.283,0.24,0.706,0.276,1.486c0.038,0.842,0.046,1.096,0.046,3.232s-0.011,2.391-0.046,3.231c-0.036,0.781-0.166,1.204-0.276,1.487c-0.146,0.374-0.319,0.641-0.599,0.92c-0.279,0.28-0.546,0.452-0.92,0.599c-0.283,0.11-0.706,0.24-1.487,0.276c-0.842,0.039-1.095,0.046-3.232,0.046c-2.137,0-2.39-0.011-3.232-0.046c-0.78-0.036-1.203-0.166-1.486-0.276c-0.374-0.146-0.641-0.318-0.92-0.599c-0.28-0.279-0.452-0.546-0.599-0.92c-0.11-0.283-0.241-0.706-0.276-1.487C1.447,10.393,1.44,10.139,1.44,8.002S1.45,5.611,1.486,4.77c0.035-0.78,0.166-1.203,0.276-1.486c0.146-0.374,0.318-0.641,0.599-0.92c0.279-0.28,0.546-0.453,0.92-0.599c0.283-0.111,0.706-0.241,1.486-0.276C5.61,1.448,5.863,1.442,8,1.442C10.138,1.442,10.391,1.448,11.232,1.488z"/><path d="M3.893,8.002c0,2.27,1.841,4.106,4.107,4.106c2.268,0,4.107-1.84,4.107-4.106S10.271,3.895,8,3.895C5.73,3.895,3.893,5.731,3.893,8.002z M10.667,8.002c0,1.473-1.193,2.667-2.667,2.667c-1.473,0-2.666-1.194-2.666-2.667c0-1.474,1.193-2.667,2.666-2.667C9.474,5.335,10.667,6.528,10.667,8.002z"/><circle cx="12.273" cy="3.732" r="0.959"/></g></svg></a>
+        <a href="https://www.linkedin.com/in/joeyschweickhardt/"><svg version="1.1" id="linkedin" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve"><g transform="matrix(1,0,0,1,-138.462,-287.425)"><path d="M152.093,301.062h-2.369v-3.715c0-0.885-0.016-2.025-1.234-2.025c-1.235,0-1.421,0.964-1.421,1.963v3.777h-2.372v-7.638h2.275v1.044h0.032c0.46-0.793,1.328-1.268,2.244-1.233c2.405,0,2.849,1.581,2.849,3.638L152.093,301.062zM142.021,292.38L142.021,292.38c-0.754,0-1.376-0.622-1.376-1.376s0.622-1.376,1.376-1.376c0.755,0,1.376,0.622,1.376,1.376l0,0C143.397,291.758,142.775,292.38,142.021,292.38 M143.207,301.062h-2.373v-7.638h2.373V301.062z M153.275,287.425h-13.632c-0.642-0.006-1.174,0.514-1.182,1.154v13.691c0.008,0.643,0.541,1.163,1.182,1.154h13.632c0.642,0.009,1.178-0.508,1.187-1.154v-13.693C154.453,287.935,153.913,287.417,153.275,287.425"/></g></svg></a>-->
         <a href="https://www.instagram.com/joeyws/">Instagram</a>
         <a href="https://www.linkedin.com/in/joeyschweickhardt/">LinkedIn</a>
         <a href="javascript:;" class="contact">Contact</a>
@@ -164,10 +163,12 @@
         });
 
         // contact
-        $("#contact").click(function(){
+        /*$("#contact").click(function(){
             $(".contact").click();
         });
-        $("#contact a").on("click",function(e){e.stopPropagation();});
+        $("#contact a").on("click",function(e){e.stopPropagation();});*/
+        $("#contact").prepend("<span class='contact' style='font-size:2em;float:right;cursor:pointer;'>x</span>");
+        $("#contact").children("p").first().css("margin-top","0");
         $(".contact").click(function(){  
             var duration = 500; 
             var easing = "easeOutExpo";  
@@ -238,7 +239,7 @@
             var s = today.getSeconds();
             m = addZero(m);
             s = addZero(s);
-            $("#time").html(" " + h + ":" + m + " " + ampm);
+            $("#time").html(" " + h + "<span id='timeblink'>:</span>" + m + " " + ampm);
             t = setTimeout(function() {
                 startTime()
             }, 3000);
