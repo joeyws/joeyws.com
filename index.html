@@ -47,7 +47,7 @@
     video{display:block;outline:none;}
     .cycle-slideshow{cursor:none;height:500px;user-select:none;}
     .cycle-slideshow img{max-width:100%;max-height:500px;}
-    #tooltip{z-index:999998;color:#fff;font-size:2em;mix-blend-mode:difference;backface-visibility:hidden;pointer-events:none;position:fixed;left:-50%;top:-50%;transform:translate(-50%,-50%);}
+    #tooltip{z-index:999998;color:#fff;font-size:3em;mix-blend-mode:difference;backface-visibility:hidden;pointer-events:none;position:fixed;left:-50%;top:-50%;transform:translate(-50%,-50%);}
     #tooltip.hidden{opacity:0;}
     #footer{text-align:right;}
     #timeblink{animation:1s loading steps(1) infinite;}
@@ -182,9 +182,9 @@
         $(window).on("mousemove",function(e){
             $("#tooltip").css({"top":(e.pageY-window.scrollY),"left":e.pageX});
             if(e.pageX > ($(document).width()/2)){
-                $("#tooltip").html("Next");
+                $("#tooltip").html("&rarr;");
             } else {
-                $("#tooltip").html("Prev");
+                $("#tooltip").html("&larr;");
             }
         });
         $(".cycle-slideshow").hover(function(e){
