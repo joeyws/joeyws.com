@@ -41,6 +41,7 @@
     a:hover{filter:blur(.25em);/*box-shadow:inset 0 -1.4em 0 var(--text);*/}
     
     #wrapper,#contact{padding:10px;}
+    #wrapper{padding-bottom:12em;}
     .marquee3k{white-space:nowrap;overflow-x:hidden;}
         .marquee{display:inline-block;}
             .marquee span{margin-right:1.5em;}
@@ -117,7 +118,6 @@
         <span id="cycle-text"></span>
         <span style="float:left;"><a href='javascript:;' class='cycle-prev'>Prev</a>&nbsp;</span><a href='javascript:;' class='cycle-next'>next</a>
     </p>
-    <hr><hr><hr><hr>
 </div>
 
 
@@ -181,9 +181,9 @@
         $(window).on("mousemove",function(e){
             $("#tooltip").css({"top":(e.pageY-window.scrollY),"left":e.pageX});
             if(e.pageX > ($(document).width()/2)){
-                $("#tooltip").html("&gt;");
+                $("#tooltip").html("&rarr;");
             } else {
-                $("#tooltip").html("&lt;");
+                $("#tooltip").html("&larr;");
             }
         });
         $(".cycle-slideshow").hover(function(e){
