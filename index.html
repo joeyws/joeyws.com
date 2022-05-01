@@ -249,7 +249,7 @@
             var easing = "easeOutExpo";  
             if ($("#contact").is(":hidden")) {   
                 $('#contact').slideDown(duration, easing);
-                $('html, body').animate({scrollTop: $('#privacy').offset().top - document.documentElement.clientHeight + 8}, duration, easing); // $('#contact').offset().top+2
+                $('html, body').animate({scrollTop: $('#privacy').offset().top - document.documentElement.clientHeight + 4}, duration, easing); // $('#contact').offset().top+2
             } else {
                 $("html, body").animate({scrollTop: 0}, duration, easing);
                 $("#contact").slideUp(duration, easing);
