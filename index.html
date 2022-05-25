@@ -27,7 +27,6 @@
     ::-moz-selection {background:var(--text);color:var(--background);}
     ::selection{background:var(--text);color:var(--background);}
     ::-webkit-scrollbar{width:20px;background:transparent;}
-    ::-webkit-scrollbar-track{/*margin:10px 0;*/}
     ::-webkit-scrollbar-thumb{outline-offset:-5px;outline:1px solid var(--text);border-radius:10px;}
     /* RESET */*{user-select:none;font-kerning:normal;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-appearance:none;border-radius:0;-webkit-border-radius:0;box-sizing:content-box;font-smoothing:antialiased;-moz-osx-font-smoothing: grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased;}
 	html,body{background:var(--background);}
@@ -35,11 +34,11 @@
 	h1,video,p{margin-top:.8em;}
     h1{display:inline-block;text-align:center;font-family:webfont2,sans-serif;font-size:1.2em;text-transform:uppercase;transform:scaleX(1.4);transform-origin:top left;}
     h1.loading{animation:.3s blink steps(1) infinite;}
+    h1:hover{animation:effect .2s linear infinite;}
     p:first-child{margin-top:0;}
     hr{padding-bottom:3em;}
 	a{text-decoration:underline;text-decoration-thickness:.08em;cursor:pointer;/*transition:all .15s;box-shadow:inset 0 -.04em var(--text);*/}
     a:hover{filter:blur(.25em);/*box-shadow:inset 0 -1.4em 0 var(--text);*/}
-    /*a[href^=http]::after{content:" ";}*/
 
     #wrapper,#contact{padding:10px;}
     #wrapper{padding-bottom:12em;}
@@ -56,6 +55,7 @@
     #contact{border-top:1px solid var(--text);display:none;}
 
     @keyframes blink{0%{opacity:0;}50%{opacity:1;}}
+    @keyframes effect{0%{color:#f00;}25%{color:#ff0;}50%{color:#00f;}75%{color:#0f0;}}
 </style>
 </head>
 <body>
@@ -80,8 +80,7 @@
     <p style="max-width:960px;">&ldquo;Land der Echsen&rdquo; (2021, Germany): The city council is planning a new quarter on a run-down railroad station site. There are various non-profit institutions housing in old halls, which are now forced to move out in order to make room for several new buildings. Suddenly lizards enter the game and endanger the entire undertaking.</p>
     <p style="max-width:960px;">Created as part of the &ldquo;Anti-Stuttgart &mdash; A Determinate Negation&rdquo; <a href="https://www.igma.uni-stuttgart.de/en/">IGmA</a> design studio, in which certain urban developments and procedures were examined critically. The film was being shown at <a href="http://www.current-stuttgart.de/en">CURRENT festival</a> for art and urban space.</p>
     <hr>
-    <div class="cycle-slideshow"
-        data-cycle-fx="fade" data-cycle-speed="300" data-cycle-timeout="0"
+    <div class="cycle-slideshow" data-cycle-fx="fade" data-cycle-speed="300" data-cycle-timeout="0"
         data-cycle-caption="#cycle-text" data-cycle-caption-template="{{alt}}<br>{{slideNum}}/{{slideCount}}"
         data-cycle-swipe="true">
         <!-- data-cycle-center-horz="false" data-cycle-center-vert="false" data-cycle-loader="wait" -->
@@ -240,10 +239,7 @@
         getXMLFeed("https://weather-broker-cdn.api.bbci.co.uk/en/observation/rss/2825297", getRssWeather);
 
         // contact
-        /*$("#contact").click(function(){$(".contact").click();});
-        $("#contact a").on("click",function(e){e.stopPropagation();});*/
         $("#contact p").first().prepend("<a href='javascript:;' class='contact' style='float:right;cursor:pointer;'>Close</a>");
-        //$("#contact p").first().prepend("<span href='javascript:;' class='contact' style='font-size:2em;float:right;cursor:pointer;'>x</span>");
         $(".contact").click(function(){  
             var duration = 500; 
             var easing = "easeOutExpo";  
