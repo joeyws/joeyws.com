@@ -48,6 +48,8 @@
     video{display:block;outline:none;}
     .cycle-slideshow{cursor:none;height:500px;}
     .cycle-slideshow img{max-width:100%;max-height:500px;}
+    #cycle-pager a{margin-right:8px;}
+    .cycle-pager-active{color:red;}
     #tooltip{z-index:999998;mix-blend-mode:difference;transform:translate(-50%,-50%);position:fixed;left:-50%;top:-50%;width:16px;height:16px;background:transparent url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><polygon fill="white" points="0,8 8,0 10,0 2.707,7.293 16,7.293 16,8.707 2.707,8.707 10,16 8,16"/></svg>') center center no-repeat scroll;backface-visibility:hidden;pointer-events:none;} /*0,8 8,0 9.414,0 1.914,7.5 16,7.5 16,8 16,8.5 1.914,8.5 9.414,16 8,16*/
     #tooltip.next{transform:scaleX(-1) translate(-50%,-50%);transform-origin:left top;}
     #tooltip.hidden{opacity:0;}
@@ -82,9 +84,9 @@
     <p style="max-width:540px;">The film was being shown at the University of Stuttgart&#8217;s architecture faculty&#8217;s graduate exhibition and at the <a href="http://www.current-stuttgart.de/en">CURRENT festival</a> for art and urban space.</p>
     <hr>
     <div class="cycle-slideshow" data-cycle-fx="fade" data-cycle-speed="300" data-cycle-timeout="0"
-        data-cycle-caption="#cycle-text" data-cycle-caption-template="{{alt}}<br>{{slideNum}}/{{slideCount}}"
-        data-cycle-swipe="true">
-        <!-- data-cycle-center-horz="false" data-cycle-center-vert="false" data-cycle-loader="wait" -->
+        data-cycle-caption="#cycle-text" data-cycle-caption-template="{{slideNum}}/{{slideCount}} {{alt}}"
+        data-cycle-swipe="true" data-cycle-pager="#cycle-pager" data-cycle-pager-template="<a href=javascript:;>{{slideNum}}</a>">
+        <!-- data-cycle-center-horz="false" data-cycle-center-vert="false" data-cycle-loader="wait" <br>{{slideNum}}/{{slideCount}} -->
         <img src="img/26.jpg" alt="Pneu structures" />
         <img src="img/25.jpg" alt="Climate Institute, Helsinki" />
         <img src="img/24.jpg" alt="Creek" />
@@ -114,8 +116,9 @@
         <img src="img/1.jpg" alt="Fog" />
     </div>
     <p>
-        [&uarr;] <span id="cycle-text"></span>
-        <span style="float:left;"><a href='javascript:;' class='cycle-prev'>Prev</a>&nbsp;</span><a href='javascript:;' class='cycle-next'>next</a>
+        <!--<span id="cycle-pager"></span><a href='javascript:;' class='cycle-prev'>prev</a><a href='javascript:;' class='cycle-next'>next</a>-->
+        <a href="javascript:;" class="cycle-prev">Prev</a> <a href="javascript:;" class="cycle-next">next</a>
+        <span id="cycle-text"></span>
     </p>
 </div>
 
