@@ -30,9 +30,9 @@
     ::-webkit-scrollbar-thumb{outline-offset:-5px;outline:1px solid var(--text);border-radius:8px;}
     /* RESET */*{user-select:none;font-kerning:normal;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-appearance:none;border-radius:0;-webkit-border-radius:0;box-sizing:content-box;font-smoothing:antialiased;-moz-osx-font-smoothing: grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased;}
 	html,body{background:var(--background);}
-	body{color:var(--text);font:normal normal 12px/1.4em webfont,"Courier New",Courier,monospace;}
+	body{color:var(--text);font:normal normal 13px/1.4em webfont,"Courier New",Courier,monospace;}
 	h1,video,p,.cycle-slideshow{margin-top:.8em;}
-    h1{display:inline-block;text-align:center;font-family:webfont2,sans-serif;font-size:1.2em;text-transform:uppercase;transform:scaleX(1.4);transform-origin:top left;}
+    h1{display:inline-block;font-family:webfont2,sans-serif;font-size:1.2em;line-height:1em;text-transform:uppercase;transform:scaleX(1.4);transform-origin:top left;}
     h1.loading{animation:.3s blink steps(1) infinite;}
     h1:hover{animation:effect .2s linear infinite;}
     p:first-child{margin-top:0;}
@@ -48,9 +48,9 @@
     video{display:block;outline:none;}
     .cycle-slideshow{cursor:none;height:500px;}
     .cycle-slideshow img{max-width:100%;max-height:500px;}
-    #cycle-pager a{margin-right:8px;}
-    .cycle-pager-active{color:red;}
-    #tooltip{z-index:999998;mix-blend-mode:difference;transform:translate(-50%,-50%);position:fixed;left:-50%;top:-50%;width:16px;height:16px;background:transparent url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><polygon fill="white" points="0,8 8,0 10,0 2.707,7.293 16,7.293 16,8.707 2.707,8.707 10,16 8,16"/></svg>') center center no-repeat scroll;backface-visibility:hidden;pointer-events:none;} /*0,8 8,0 9.414,0 1.914,7.5 16,7.5 16,8 16,8.5 1.914,8.5 9.414,16 8,16*/
+    /*#cycle-pager a{margin:0;color:transparent;display:inline-block;line-height:.4em;background:var(--text);opacity:.1;width:.4em;height:.4em;}
+    #cycle-pager a.cycle-pager-active{opacity:1;}*/
+    #tooltip{z-index:999998;mix-blend-mode:difference;transform:translate(-50%,-50%);position:fixed;left:-50%;top:-50%;width:32px;height:32px;background:transparent url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><polygon fill="white" points="0,8 8,0 10,0 2.707,7.293 16,7.293 16,8.707 2.707,8.707 10,16 8,16"/></svg>') center center no-repeat scroll;backface-visibility:hidden;pointer-events:none;} /*0,8 8,0 9.414,0 1.914,7.5 16,7.5 16,8 16,8.5 1.914,8.5 9.414,16 8,16*/
     #tooltip.next{transform:scaleX(-1) translate(-50%,-50%);transform-origin:left top;}
     #tooltip.hidden{opacity:0;}
     #timeblink{animation:2s blink steps(1) infinite;}
@@ -65,7 +65,7 @@
 
 <div id="wrapper">
     <!-- https://de.statista.com/statistik/daten/studie/674488/umfrage/sprachen-weltweit-mit-den-meisten-muttersprachlern/ -->
-    <div class="marquee3k" data-speed="1"><div class="marquee"><span>歡迎</span><span>Bienvenidos</span><span>Welcome</span><span>स्वागत हे</span><span>اهلا وسهلا</span><span>Bem-vinda</span><span>স্বাগত</span><span>добро пожаловать</span><span>ようこそ</span><span>Sugeng Rawuh</span><span>ਸਵਾਗਤ ਹੈ</span><span>Willkommen</span><span>어서 오십시오</span><span>Bienvenue</span></div></div>
+    <div class="marquee3k" data-speed=".8"><div class="marquee"><span>歡迎</span><span>Bienvenidos</span><span>Welcome</span><span>स्वागत हे</span><span>اهلا وسهلا</span><span>Bem-vinda</span><span>স্বাগত</span><span>добро пожаловать</span><span>ようこそ</span><span>Sugeng Rawuh</span><span>ਸਵਾਗਤ ਹੈ</span><span>Willkommen</span><span>어서 오십시오</span><span>Bienvenue</span></div></div>
     <h1 class="loading">Joey W. Schweickhardt</h1>
     <p>
         Stuttgart<span id="time"></span><span id="weather"></span><br>
@@ -86,7 +86,7 @@
     <div class="cycle-slideshow" data-cycle-fx="fade" data-cycle-speed="250" data-cycle-timeout="0"
         data-cycle-caption="#cycle-text" data-cycle-caption-template="{{slideNum}}/{{slideCount}}</p><p>{{alt}}"
         data-cycle-swipe="true" data-cycle-pager="#cycle-pager" data-cycle-pager-template="<a href=javascript:;>{{slideNum}}</a>">
-        <!-- data-cycle-center-horz="false" data-cycle-center-vert="false" data-cycle-loader="wait" <br>{{slideNum}}/{{slideCount}} {{alt}} -->
+        <!-- data-cycle-center-horz="false" data-cycle-center-vert="false" data-cycle-loader="wait" -->
         <img src="img/26.jpg" alt="Pneu structures" />
         <img src="img/25.jpg" alt="Vasikkasaari Climate Institute, Helsinki" />
         <img src="img/24.jpg" alt="Creek" />
@@ -97,7 +97,7 @@
         <img src="img/20.jpg" alt="Wooden structure" />
         <img src="img/19.jpg" alt="Mountain range, Switzerland" />
         <img src="img/18.jpg" alt="Death Valley" />
-        <img src="img/17.jpg" alt="Sandy forest campfire" />
+        <img src="img/17.jpg" alt="Campfire in a sandy forest" />
         <img src="img/16.jpg" alt="Sint-Aneke-Club, Antwerp" />
         <img src="img/15.jpg" alt="Model, laser cut, glueless" />
         <img src="img/14.jpg" alt="Cuboid perspective" />
@@ -116,8 +116,7 @@
         <img src="img/1.jpg" alt="Fog" />
     </div>
     <p>
-        <!--<span id="cycle-pager"></span><a href='javascript:;' class='cycle-prev'>prev</a><a href='javascript:;' class='cycle-next'>next</a>-->
-        <a href="javascript:;" class="cycle-prev">Prev</a> <a href="javascript:;" class="cycle-next">next</a>
+        <a href='javascript:;' class='cycle-prev'>Prev</a> <a href='javascript:;' class='cycle-next'>next</a> <!--<span id="cycle-pager"></span>-->
         <span id="cycle-text"></span>
     </p>
 </div>
