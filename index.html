@@ -13,7 +13,7 @@
 <meta charset="utf-8"><meta name="robots" content="index,nofollow,notranslate,noimageindex"><meta name="description" content="Personal web page of Joey Schweickhardt, Stuttgart, Germany"><meta name="keywords" content="schweickhardt,joey,stuttgart,joeyws,william"><meta name="geo.region" content="DE-BW"><meta name="geo.placename" content="Stuttgart"><meta name="geo.position" content="48.778600;9.179746"><meta name="ICBM" content="48.778600, 9.179746"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,shrink-to-fit=no"><meta name="format-detection" content="telephone=no">
 <style>
     @font-face{font-family:webfont2;src:url("font/NimbusSanL-Bol.otf");} /*font/NimbusSanL-Bol.otf font/SourceCodePro-Regular.ttf  font/gnu-free-font/FreeSans.ttf font/texgyreheros-regular.otf font/NimbusRomNo9L-Reg.otf font/Libre_Franklin/LibreFranklin-Bold.ttf*/
-    @font-face{font-family:webfont;src:url("font/Inter-Medium.ttf");} /*font/IBM-Plex-Mono/IBMPlexMono-Text.otf font/CourierPrime-Regular.ttf font/officecodepro-regular.otf font/SourceCodePro-Medium.ttf*/
+    @font-face{font-family:webfont;src:url("font/Inter-Medium.ttf");} /*/Inter-Medium.ttf font/IBM-Plex-Mono/IBMPlexMono-Text.otf font/CourierPrime-Regular.ttf font/officecodepro-regular.otf font/SourceCodePro-Medium.ttf*/
     :root{--background:#fff;--text:#000;}
     ::-moz-selection {background:var(--text);color:var(--background);}
     ::selection{background:var(--text);color:var(--background);}
@@ -23,9 +23,9 @@
 	html,body{background:var(--background);}
 	body{color:var(--text);font:normal normal 15px/1.4em webfont,"Courier New",Courier,monospace;}
 	h1,video,p,.cycle-slideshow{margin-top:.8em;}
-    h1{display:inline-block;font-family:webfont2,sans-serif;font-size:1.1em;line-height:1em;text-transform:uppercase;transform:scaleX(1.4);transform-origin:top left;}
+    h1{display:inline-block;font-family:webfont2,sans-serif;transform:scaleX(1.4);transform-origin:top left;text-transform:uppercase;font-size:1.1em;line-height:1em;}
     h1.loading{animation:.3s blink steps(1) infinite;}
-    h1:hover{animation:effect .2s linear infinite;}
+    /*h1:hover{animation:effect .2s linear infinite;}*/
     p:first-child{margin-top:0;}
     hr{padding-bottom:3em;}
 	a{text-decoration:none;transition:all .15s;border:1px solid var(--text);border-radius:.75em;padding:0 6px;text-decoration-thickness:.08em;cursor:pointer;/*transition:all .15s;box-shadow:inset 0 -.04em var(--text);*/}
@@ -72,9 +72,10 @@
     <p style="max-width:620px;">Created as part of the &ldquo;Anti-Stuttgart &mdash; A Determinate Negation&rdquo; <a href="https://de.wikipedia.org/wiki/Institut_f%C3%BCr_Grundlagen_moderner_Architektur_und_Entwerfen">IGmA</a> design studio, in which certain urban developments and procedures were examined critically. The film was being shown at the University of Stuttgart&#8217;s architecture faculty&#8217;s graduate exhibition and at the <a href="http://www.current-stuttgart.de/en">CURRENT festival</a> for art and urban space.</p>
     <hr>
     <p>More selected works:</p>
-    <div class="cycle-slideshow" data-cycle-fx="fade" data-cycle-speed="400" data-cycle-timeout="0"
+    <div class="cycle-slideshow" data-cycle-fx="fade" data-cycle-speed="600" data-cycle-timeout="0"
         data-cycle-caption="#cycle-text" data-cycle-caption-template="{{slideNum}}/{{slideCount}}</p><p>{{alt}}"
-        data-cycle-swipe="true" data-cycle-pager="#cycle-pager" data-cycle-pager-template="<a href=javascript:;>{{slideNum}}</a>">
+        data-cycle-swipe="true" data-cycle-pager="#cycle-pager" data-cycle-pager-template="<a href=javascript:;>{{slideNum}}</a>"
+        data-cycle-easing="easeOutCirc" data-cycle-ease-out="easeOutCirc">
         <!-- data-cycle-center-horz="false" data-cycle-center-vert="false" data-cycle-loader="wait" -->
         <img src="img/26.jpg" alt="Pneu structures" />
         <img src="img/25.jpg" alt="Vasikkasaari Climate Institute, Helsinki" />
