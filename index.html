@@ -12,9 +12,9 @@
 <link rel="shortcut icon" type="image/x-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='32' width='32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%23000000' /%3E%3C/svg%3E">
 <meta charset="utf-8"><meta name="robots" content="index,nofollow,notranslate,noimageindex"><meta name="description" content="Personal web page of Joey Schweickhardt, Stuttgart, Germany"><meta name="keywords" content="schweickhardt,joey,stuttgart,joeyws,william"><meta name="geo.region" content="DE-BW"><meta name="geo.placename" content="Stuttgart"><meta name="geo.position" content="48.778600;9.179746"><meta name="ICBM" content="48.778600, 9.179746"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,shrink-to-fit=no"><meta name="format-detection" content="telephone=no">
 <style>
-    @font-face{font-family:webfont2;src:url("font/NimbusSanL-Bol.otf");} /*font/NimbusSanL-Bol.otf font/SourceCodePro-Regular.ttf  font/gnu-free-font/FreeSans.ttf font/texgyreheros-regular.otf font/NimbusRomNo9L-Reg.otf font/Libre_Franklin/LibreFranklin-Bold.ttf*/
-    @font-face{font-family:webfont;src:url("font/SourceCodePro-Medium.ttf");} /*/Inter-Medium.ttf font/IBM-Plex-Mono/IBMPlexMono-Text.otf font/CourierPrime-Regular.ttf font/officecodepro-regular.otf font/SourceCodePro-Medium.ttf*/
-    :root{--background:#ccc;--text:#000;}
+    @font-face{font-family:webfont2;src:url("font/NimbusSanL-Bol.otf");} /*NimbusSanL-Bol.otf font/SourceCodePro-Regular.ttf  gnu-free-font/FreeSans.ttf texgyreheros-regular.otf NimbusRomNo9L-Reg.otf Libre_Franklin/LibreFranklin-Bold.ttf*/
+    @font-face{font-family:webfont;src:url("font/officecodepro-regular.otf");} /*Inter-Medium.ttf   IBM-Plex-Mono/IBMPlexMono-Text.otf   CourierPrime-Regular.ttf   officecodepro-regular.otf   SourceCodePro-Medium.ttf*/
+    :root{--background:#fff;--text:#000;}
     ::-moz-selection {background:var(--text);color:var(--background);}
     ::selection{background:var(--text);color:var(--background);}
     ::-webkit-scrollbar{width:16px;background:transparent;}
@@ -23,16 +23,17 @@
 	html,body{background:var(--background);}
 	body{color:var(--text);font:normal normal 13px/1.4em webfont,"Courier New",Courier,monospace;}
 	video,p,.cycle-slideshow{margin-top:10px;}
-    h1{display:inline-block;font-family:webfont2,sans-serif;transform:scaleX(1.4);transform-origin:top left;text-transform:uppercase;font-size:1.1em;}
+    h1{display:inline-block;/*font-family:webfont2,sans-serif;transform:scaleX(1.4);transform-origin:top center;text-transform:uppercase;font-size:1.1em;*/}
     .loading{animation:.3s blink steps(1) infinite;}
     p:first-child{margin-top:0;}
-    hr{border-top:1px solid var(--text);margin:20px -20px;}
-	a{text-decoration:none;transition:all .1s;box-shadow:inset 0 -.04em var(--text);cursor:pointer;/*text-decoration-thickness:.08em;padding:0 .4em;border-radius:.4em;outline-offset:-1px;*/}
+    hr{margin:20px -20px;border-top:1px solid var(--text);}
+	a{text-decoration:none;cursor:pointer;transition:all .2s;background:#ccc;border-radius:.7em;padding:0 .35em;/*text-decoration-thickness:.08em;box-shadow:inset 0 -.04em var(--text);outline:1px solid var(--text);border-radius:.7em;padding:0 .35em;outline-offset:-1px;*/}
     a:hover{color:var(--background);box-shadow:inset 0 -1.4em 0 var(--text);/*filter:blur(.22em);*/}
 
     #wrapper,#contact{padding:20px;}
     #wrapper{padding-bottom:12em;}
-    .marquee3k{white-space:nowrap;overflow-x:hidden;margin:-20px -20px 20px -20px;}
+    #header{display:flex;justify-content:space-between;border-bottom:1px solid var(--text);padding:10px 20px;}
+    .marquee3k{white-space:nowrap;overflow-x:hidden;}
         .marquee{display:inline-block;background:var(--text);color:var(--background);}
             .marquee span{margin-right:1.8em;}
     video{display:block;outline:none;}
@@ -51,22 +52,21 @@
 <body>
 
 
+<!-- https://de.statista.com/statistik/daten/studie/674488/umfrage/sprachen-weltweit-mit-den-meisten-muttersprachlern/ -->
+<div class="marquee3k" data-speed=".8"><div class="marquee"><span>歡迎</span><span>Bienvenidos</span><span>Welcome</span><span>स्वागत हे</span><span>اهلا وسهلا</span><span>Bem-vinda</span><span>স্বাগত</span><span>добро пожаловать</span><span>ようこそ</span><span>Sugeng Rawuh</span><span>ਸਵਾਗਤ ਹੈ</span><span>Willkommen</span><span>어서 오십시오</span><span>Bienvenue</span></div></div>
+<div id="header">
+    <div>Stuttgart<span id="time"></span><span id="weather"></div>
+    <h1 class="loading">Joey W. Schweickhardt</h1>
+    <div><a href="https://www.instagram.com/joeyws/">Instagram</a> <a href="https://www.linkedin.com/in/joeyschweickhardt/">LinkedIn</a> <a href="javascript:;" class="contact">Contact</a></div>
+</div>
 <div id="wrapper">
-    <!-- https://de.statista.com/statistik/daten/studie/674488/umfrage/sprachen-weltweit-mit-den-meisten-muttersprachlern/ -->
-    <div class="marquee3k" data-speed=".8"><div class="marquee"><span>歡迎</span><span>Bienvenidos</span><span>Welcome</span><span>स्वागत हे</span><span>اهلا وسهلا</span><span>Bem-vinda</span><span>স্বাগত</span><span>добро пожаловать</span><span>ようこそ</span><span>Sugeng Rawuh</span><span>ਸਵਾਗਤ ਹੈ</span><span>Willkommen</span><span>어서 오십시오</span><span>Bienvenue</span></div></div>
-    <h1 class="loading">Joey W. Schweickhardt</h1><br>
-    <p>
-        Stuttgart<span id="time"></span><span id="weather"></span><br>
-        <a href="https://www.instagram.com/joeyws/">Instagram</a>, <a href="https://www.linkedin.com/in/joeyschweickhardt/">LinkedIn</a>, <a href="javascript:;" class="contact">Contact</a>
-    </p>
-    <hr>
     <video oncontextmenu="return false;" id="video" poster="img/landderechsen.jpg" tabindex="0" width="792" height="360" style="max-width:100%;max-height:calc((100vw - 20px) / 2.2);" controls preload controlsList="nodownload noplaybackrate" disablePictureInPicture>
         <source src="https://www.dropbox.com/s/79kesak8jo87u4b/LandDerEchsen1080.mp4?raw=1" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
         <source src="video/LandDerEchsen720.webm" type='video/webm; codecs="vp8, vorbis"' />
         <source src="https://www.dropbox.com/s/mmcykw5nus3m39u/LandDerEchsen1080.ogv?raw=1" type='video/ogg; codecs="theora, vorbis"' />
     </video>
-    <p style="max-width:640px;">&ldquo;Land der Echsen&rdquo; (2021, Germany): The city council is planning a new quarter on a run-down railroad station site. There are various non-profit institutions housing in old halls, which are now forced to move out in order to make room for several new buildings. Suddenly lizards enter the game and endanger the entire undertaking.</p>
-    <p style="max-width:640px;">Created as part of the &ldquo;Anti-Stuttgart &mdash; A Determinate Negation&rdquo; <a href="https://de.wikipedia.org/wiki/Institut_f%C3%BCr_Grundlagen_moderner_Architektur_und_Entwerfen">IGmA</a> design studio, in which certain urban developments and procedures were examined critically. The film was being shown at the University of Stuttgart&#8217;s architecture faculty&#8217;s graduate exhibition and at the <a href="http://www.current-stuttgart.de/en">CURRENT festival</a> for art and urban space.</p>
+    <p style="max-width:660px;">&ldquo;Land der Echsen&rdquo; (2021, Germany): The city council is planning a new quarter on a run-down railroad station site. There are various non-profit institutions housing in old halls, which are now forced to move out in order to make room for several new buildings. Suddenly lizards enter the game and endanger the entire undertaking.</p>
+    <p style="max-width:660px;">Created as part of the &ldquo;Anti-Stuttgart &mdash; A Determinate Negation&rdquo; <a href="https://de.wikipedia.org/wiki/Institut_f%C3%BCr_Grundlagen_moderner_Architektur_und_Entwerfen">IGmA</a> design studio, in which certain urban developments and procedures were examined critically. The film was being shown at the University of Stuttgart&#8217;s architecture faculty&#8217;s graduate exhibition and at the <a href="http://www.current-stuttgart.de/en">CURRENT festival</a> for art and urban space.</p>
     <hr>
     <p>More selected works:</p>
     <div class="cycle-slideshow" data-cycle-fx="fade" data-cycle-speed="400" data-cycle-timeout="0"
