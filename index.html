@@ -32,7 +32,7 @@
 
     #wrapper,#contact{padding:20px;}
     #wrapper{padding-bottom:12em;}
-    .marquee3k{white-space:nowrap;overflow-x:hidden;margin:20px -20px;}
+    .marquee3k{white-space:nowrap;overflow-x:hidden;margin:-20px -20px 20px -20px;}
         .marquee{display:inline-block;background:var(--text);color:var(--background);}
             .marquee span{margin-right:1.8em;}
     video{display:block;outline:none;}
@@ -52,15 +52,14 @@
 
 
 <div id="wrapper">
-    <div>
-        <h1 class="loading">Joey W. Schweickhardt</h1><br>
-        <p>
-            Stuttgart<span id="time"></span><span id="weather"></span><br>
-            <a href="https://www.instagram.com/joeyws/">Instagram</a>, <a href="https://www.linkedin.com/in/joeyschweickhardt/">LinkedIn</a>, <a href="javascript:;" class="contact">Contact</a>
-        </p>
-    </div>
     <!-- https://de.statista.com/statistik/daten/studie/674488/umfrage/sprachen-weltweit-mit-den-meisten-muttersprachlern/ -->
     <div class="marquee3k" data-speed=".8"><div class="marquee"><span>歡迎</span><span>Bienvenidos</span><span>Welcome</span><span>स्वागत हे</span><span>اهلا وسهلا</span><span>Bem-vinda</span><span>স্বাগত</span><span>добро пожаловать</span><span>ようこそ</span><span>Sugeng Rawuh</span><span>ਸਵਾਗਤ ਹੈ</span><span>Willkommen</span><span>어서 오십시오</span><span>Bienvenue</span></div></div>
+    <h1 class="loading">Joey W. Schweickhardt</h1><br>
+    <p>
+        Stuttgart<span id="time"></span><span id="weather"></span><br>
+        <a href="https://www.instagram.com/joeyws/">Instagram</a>, <a href="https://www.linkedin.com/in/joeyschweickhardt/">LinkedIn</a>, <a href="javascript:;" class="contact">Contact</a>
+    </p>
+    <hr>
     <video oncontextmenu="return false;" id="video" poster="img/landderechsen.jpg" tabindex="0" width="792" height="360" style="max-width:100%;max-height:calc((100vw - 20px) / 2.2);" controls preload controlsList="nodownload noplaybackrate" disablePictureInPicture>
         <source src="https://www.dropbox.com/s/79kesak8jo87u4b/LandDerEchsen1080.mp4?raw=1" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
         <source src="video/LandDerEchsen720.webm" type='video/webm; codecs="vp8, vorbis"' />
