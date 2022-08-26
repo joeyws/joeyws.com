@@ -14,20 +14,21 @@
 <style>
     @font-face{font-family:webfont2;src:url("font/NimbusSanL-Bol.otf");} /*NimbusSanL-Bol.otf font/SourceCodePro-Regular.ttf  gnu-free-font/FreeSans.ttf texgyreheros-regular.otf NimbusRomNo9L-Reg.otf Libre_Franklin/LibreFranklin-Bold.ttf*/
     @font-face{font-family:webfont;src:url("font/SourceCodePro-Medium.ttf");} /*Inter-Medium.ttf   IBM-Plex-Mono/IBMPlexMono-Text.otf   CourierPrime-Regular.ttf   officecodepro-regular.otf   SourceCodePro-Medium.ttf*/
-    :root{--background:#fff;--text:#000;}
+    :root{--background:#fff;--text:#000;--transparent:rgba(0,0,0,.15);}
     ::-moz-selection {background:var(--text);color:var(--background);}
     ::selection{background:var(--text);color:var(--background);}
     ::-webkit-scrollbar{width:8px;background:rgba(0,0,0,.15);}
     ::-webkit-scrollbar-thumb{background:var(--text);/*outline-offset:-5px;outline:1px solid var(--text);border-radius:8px;*/}
     /* RESET */*{user-select:none;font-kerning:normal;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-appearance:none;border-radius:0;-webkit-border-radius:0;box-sizing:content-box;font-smoothing:antialiased;-moz-osx-font-smoothing: grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased;}
 	html,body{background:var(--background);}
-	body{color:var(--text);font:normal normal 13px/1.4em webfont,"Courier New",Courier,monospace;}
+	html, html *,body, body *{cursor:none;}
+    body{color:var(--text);font:normal normal 13px/1.4em webfont,"Courier New",Courier,monospace;}
 	p,.cycle-slideshow{margin-top:10px;}
     h1{display:inline-block;font-family:webfont2,sans-serif;transform:scaleY(.7);transform-origin:center center;text-transform:uppercase;font-size:1.5em;}
     .loading{animation:.3s blink steps(1) infinite;}
     p:first-child{margin-top:0;}
     hr{margin:20px -20px;border-bottom:1px solid var(--text);}
-	a{text-decoration:none;cursor:pointer;transition:all .2s;background:rgba(0,0,0,.12);border-radius:.7em;padding:0 .4em;/*outline:1px solid var(--text);outline-offset:-1px;text-decoration-thickness:.08em;box-shadow:inset 0 -.04em var(--text);outline:1px solid var(--text);border-radius:.7em;padding:0 .35em;outline-offset:-1px;*/}
+	a{text-decoration:none;transition:all .2s;background:var(--transparent);border-radius:.7em;padding:0 .4em;/*outline:1px solid var(--text);outline-offset:-1px;text-decoration-thickness:.08em;box-shadow:inset 0 -.04em var(--text);outline:1px solid var(--text);border-radius:.7em;padding:0 .35em;outline-offset:-1px;*/}
     a:hover{color:var(--background);box-shadow:inset 0 -1.4em 0 var(--text);/*filter:blur(.22em);*/}
 
     #wrapper,#contact{padding:20px;}
@@ -37,12 +38,12 @@
     .marquee3k{white-space:nowrap;overflow-x:hidden;}
         .marquee{display:inline-block;background:var(--text);color:var(--background);}
             .marquee span{margin-right:1.8em;}
-    video{display:block;outline:none;}
-    .cycle-slideshow{cursor:none;height:500px;}
+    video{display:block;outline:none;cursor:default;}
+    .cycle-slideshow{height:500px;}
     .cycle-slideshow img{max-width:100%;max-height:500px;}
-    #tooltip{z-index:999998;mix-blend-mode:difference;transform:translate(-50%,-50%);position:fixed;left:-50%;top:-50%;width:16px;height:16px;background:transparent url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><polygon fill="white" points="0,8 8,0 10,0 2.707,7.293 16,7.293 16,8.707 2.707,8.707 10,16 8,16"/></svg>') center center no-repeat scroll;backface-visibility:hidden;pointer-events:none;} /*0,8 8,0 9.414,0 1.914,7.5 16,7.5 16,8 16,8.5 1.914,8.5 9.414,16 8,16*/
-    #tooltip.next{transform:scaleX(-1) translate(-50%,-50%);transform-origin:left top;}
-    #tooltip.hidden{opacity:0;}
+    #cursor{z-index:999998;mix-blend-mode:difference;transform:translate(-50%,-50%);background:#fff;border-radius:100%;position:fixed;left:-50%;top:-50%;width:12px;height:12px;backface-visibility:hidden;pointer-events:none;transform-origin:left top;} /*0,8 8,0 9.414,0 1.914,7.5 16,7.5 16,8 16,8.5 1.914,8.5 9.414,16 8,16*/
+    #cursor.arrow.next,#cursor.arrow.prev{width:16px;height:16px;background:transparent url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><polygon fill="white" points="0,8 8,0 10,0 2.707,7.293 16,7.293 16,8.707 2.707,8.707 10,16 8,16"/></svg>') center center no-repeat scroll;}
+    #cursor.arrow.next{transform:scaleX(-1) translate(-50%,-50%);}
     #timeblink{animation:2s blink steps(1) infinite;}
     #contact{border-top:1px solid var(--text);display:none;}
 
@@ -70,7 +71,7 @@
     <p style="max-width:660px;">Created as part of the &ldquo;Anti-Stuttgart &mdash; A Determinate Negation&rdquo; <a href="https://de.wikipedia.org/wiki/Institut_f%C3%BCr_Grundlagen_moderner_Architektur_und_Entwerfen">IGmA</a> design studio, in which certain urban developments and procedures were examined critically. The film was being shown at the University of Stuttgart&#8217;s architecture faculty&#8217;s graduate exhibition and at the <a href="http://www.current-stuttgart.de/en">CURRENT festival</a> for art and urban space.</p>
     <hr>
     <p>More selected works:</p>
-    <div class="cycle-slideshow" data-cycle-fx="fade" data-cycle-speed="300" data-cycle-timeout="0"
+    <div class="cycle-slideshow" data-cycle-fx="fade" data-cycle-speed="250" data-cycle-timeout="0"
         data-cycle-caption="#cycle-text" data-cycle-caption-template="{{slideNum}}/{{slideCount}}</p><p>{{alt}}"
         data-cycle-swipe="true" data-cycle-pager="#cycle-pager" data-cycle-pager-template="<a href=javascript:;>{{slideNum}}</a>"
         data-cycle-easing="linear" data-cycle-ease-out="linear"
@@ -163,22 +164,27 @@
             }
         });
         // tooltip/cursor
-        $("body").append("<div id='tooltip' class='hidden'></div>");
+        $("body").append("<div id='cursor'></div>");
         $(window).on("mousemove",function(e){
-            $("#tooltip").css({"top":(e.pageY-window.scrollY),"left":e.pageX}).html(" "); // https://unicode-table.com/de/sets/arrow-symbols/
+            $("#cursor").css({"top":(e.pageY-window.scrollY),"left":e.pageX}).html(" ");
             if(e.pageX > ($(document).width()/2)){
-                $("#tooltip").addClass("next");
+                $("#cursor").removeClass("prev").addClass("next");
             } else {
-                $("#tooltip").removeClass("next");
+                $("#cursor").removeClass("next").addClass("prev");
             }
         });
         $(".cycle-slideshow").hover(function(e){
-            $("#tooltip").removeClass("hidden");
+            $("#cursor").addClass("arrow");
         },function(){
-            $("#tooltip").addClass("hidden");
+            $("#cursor").removeClass("arrow");
+        });
+        $("video").hover(function(e){
+            $("#cursor").hide();
+        },function(){
+            $("#cursor").show();
         });
         if (("ontouchstart" in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0)) { 
-            $("#tooltip").remove();
+            $("#cursor").remove();
         }
 
         // time
@@ -228,7 +234,7 @@
         getXMLFeed("https://weather-broker-cdn.api.bbci.co.uk/en/observation/rss/2825297", getRssWeather);
 
         // contact
-        $("#contact p").first().prepend("<a href='javascript:;' class='contact' style='float:right;cursor:pointer;'>Close</a>");
+        $("#contact p").first().prepend("<a href='javascript:;' class='contact' style='float:right;'>Close</a>");
         $(".contact").click(function(){  
             var duration = 500; 
             var easing = "easeOutExpo";  
