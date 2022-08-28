@@ -14,21 +14,21 @@
 <style>
     @font-face{font-family:webfont2;src:url("font/NimbusSanL-Bol.otf");} /*NimbusSanL-Bol.otf font/SourceCodePro-Regular.ttf  gnu-free-font/FreeSans.ttf texgyreheros-regular.otf NimbusRomNo9L-Reg.otf Libre_Franklin/LibreFranklin-Bold.ttf*/
     @font-face{font-family:webfont;src:url("font/SourceCodePro-Medium.ttf");} /*Inter-Medium.ttf   IBM-Plex-Mono/IBMPlexMono-Text.otf   CourierPrime-Regular.ttf   officecodepro-regular.otf   SourceCodePro-Medium.ttf*/
-    :root{--background:#fff;--text:#000;--transparent:rgba(0,0,0,.15);}
+    :root{--background:#fff;--text:#000;}
     ::-moz-selection {background:var(--text);color:var(--background);}
     ::selection{background:var(--text);color:var(--background);}
     ::-webkit-scrollbar{width:8px;background:rgba(0,0,0,.15);}
     ::-webkit-scrollbar-thumb{background:var(--text);/*outline-offset:-5px;outline:1px solid var(--text);border-radius:8px;*/}
     /* RESET */*{user-select:none;font-kerning:normal;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-appearance:none;border-radius:0;-webkit-border-radius:0;box-sizing:content-box;font-smoothing:antialiased;-moz-osx-font-smoothing: grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased;}
 	html,body{background:var(--background);}
-	html, html *,body, body *{cursor:none;}
+    html,body,a{cursor:url("data:image/svg+xml,%3Csvg version='1.1' width='12' height='12' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 12 12' xml:space='preserve'%3E%3Ccircle cx='6' cy='6' r='6'/%3E%3C/svg%3E") 6 6, auto;}
     body{color:var(--text);font:normal normal 13px/1.4em webfont,"Courier New",Courier,monospace;}
 	p,.cycle-slideshow{margin-top:10px;}
     h1{display:inline-block;font-family:webfont2,sans-serif;transform:scaleY(.7);transform-origin:center center;text-transform:uppercase;font-size:1.5em;}
     .loading{animation:.3s blink steps(1) infinite;}
     p:first-child{margin-top:0;}
     hr{margin:20px -20px;border-bottom:1px solid var(--text);}
-	a{text-decoration:none;transition:all .2s;background:var(--transparent);border-radius:.7em;padding:0 .4em;/*outline:1px solid var(--text);outline-offset:-1px;text-decoration-thickness:.08em;box-shadow:inset 0 -.04em var(--text);outline:1px solid var(--text);border-radius:.7em;padding:0 .35em;outline-offset:-1px;*/}
+	a{text-decoration:none;transition:all .2s;background:rgba(0,0,0,.15);border-radius:.7em;padding:0 .4em;/*outline:1px solid var(--text);outline-offset:-1px;text-decoration-thickness:.08em;box-shadow:inset 0 -.04em var(--text);outline:1px solid var(--text);border-radius:.7em;padding:0 .35em;outline-offset:-1px;*/}
     a:hover{color:var(--background);box-shadow:inset 0 -1.4em 0 var(--text);/*filter:blur(.22em);*/}
 
     #wrapper,#contact{padding:20px;}
@@ -38,12 +38,14 @@
     .marquee3k{white-space:nowrap;overflow-x:hidden;}
         .marquee{display:inline-block;background:var(--text);color:var(--background);}
             .marquee span{margin-right:1.8em;}
-    video{display:block;outline:none;cursor:default;}
+    video{display:block;outline:none;}
     .cycle-slideshow{height:500px;}
+    .cycle-slideshow.prev{cursor:url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><polygon points="0,8 8,0 10,0 2.707,7.293 16,7.293 16,8.707 2.707,8.707 10,16 8,16"/></svg>') 8 8,auto;}
+    .cycle-slideshow.next{cursor:url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" style="transform:scaleX(-1);"><polygon points="0,8 8,0 10,0 2.707,7.293 16,7.293 16,8.707 2.707,8.707 10,16 8,16"/></svg>') 8 8,auto;}
     .cycle-slideshow img{max-width:100%;max-height:500px;}
-    #cursor{z-index:999998;mix-blend-mode:difference;transform:translate(-50%,-50%);background:#fff;border-radius:100%;position:fixed;left:-50%;top:-50%;width:12px;height:12px;backface-visibility:hidden;pointer-events:none;transform-origin:left top;} /*0,8 8,0 9.414,0 1.914,7.5 16,7.5 16,8 16,8.5 1.914,8.5 9.414,16 8,16*/
-    #cursor.arrow.next,#cursor.arrow.prev{width:16px;height:16px;background:transparent url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><polygon fill="white" points="0,8 8,0 10,0 2.707,7.293 16,7.293 16,8.707 2.707,8.707 10,16 8,16"/></svg>') center center no-repeat scroll;}
-    #cursor.arrow.next{transform:scaleX(-1) translate(-50%,-50%);}
+    /*#cursor{z-index:999998;mix-blend-mode:difference;transform:translate(-50%,-50%);background:#fff;border-radius:100%;position:fixed;left:-50%;top:-50%;width:12px;height:12px;backface-visibility:hidden;pointer-events:none;transform-origin:left top;} /*0,8 8,0 9.414,0 1.914,7.5 16,7.5 16,8 16,8.5 1.914,8.5 9.414,16 8,16*/
+    /*#cursor.arrow.next,#cursor.arrow.prev{width:16px;height:16px;background:transparent url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><polygon fill="white" points="0,8 8,0 10,0 2.707,7.293 16,7.293 16,8.707 2.707,8.707 10,16 8,16"/></svg>') center center no-repeat scroll;}
+    #cursor.arrow.next{transform:scaleX(-1) translate(-50%,-50%);}*/
     #timeblink{animation:2s blink steps(1) infinite;}
     #contact{border-top:1px solid var(--text);display:none;}
 
@@ -62,14 +64,15 @@
     <div><a href="https://www.instagram.com/joeyws/">Instagram</a> <a href="https://www.linkedin.com/in/joeyschweickhardt/">LinkedIn</a> <a href="javascript:;" class="contact">Contact</a></div>
 </div>
 <div id="wrapper">
-    <!--<p style="font-size:36px;line-height:1.1em;font-family:serif;">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.</p>
+    <!--<p style="font-size:36px;line-height:1.1em;font-family:serif;">>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.</p>
     <hr>-->
     <video oncontextmenu="return false;" id="video" poster="img/landderechsen.jpg" tabindex="0" width="792" height="360" style="max-width:100%;max-height:calc((100vw - 20px) / 2.2);" controls preload controlsList="nodownload noplaybackrate" disablePictureInPicture>
         <source src="https://www.dropbox.com/s/79kesak8jo87u4b/LandDerEchsen1080.mp4?raw=1" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
         <source src="video/LandDerEchsen720.webm" type='video/webm; codecs="vp8, vorbis"' />
         <source src="https://www.dropbox.com/s/mmcykw5nus3m39u/LandDerEchsen1080.ogv?raw=1" type='video/ogg; codecs="theora, vorbis"' />
     </video>
-    <p style="max-width:660px;">&ldquo;Land der Echsen&rdquo; (2021, Germany): The city council is planning a new quarter on a run-down railroad station site. There are various non-profit institutions housing in old halls, which are now forced to move out in order to make room for several new buildings. Suddenly lizards enter the game and endanger the entire undertaking.</p>
+    <p>&ldquo;Land der Echsen&rdquo; (2021, Germany)</p>
+    <p style="max-width:660px;">The city council is planning a new quarter on a run-down railroad station site. There are various non-profit institutions housing in old loading halls, which are now forced to move out in order to make room for several new buildings. Suddenly lizards enter the game and endanger the entire undertaking.</p>
     <p style="max-width:660px;">Created as part of the &ldquo;Anti-Stuttgart &mdash; A Determinate Negation&rdquo; <a href="https://de.wikipedia.org/wiki/Institut_f%C3%BCr_Grundlagen_moderner_Architektur_und_Entwerfen">IGmA</a> design studio, in which certain urban developments and procedures were examined critically. The film was being shown at the University of Stuttgart&#8217;s architecture faculty&#8217;s graduate exhibition and at the <a href="http://www.current-stuttgart.de/en">CURRENT festival</a> for art and urban space.</p>
     <hr>
     <p>More selected works:</p>
@@ -165,29 +168,19 @@
                 $(".cycle-slideshow").cycle("prev");
             }
         });
-        // tooltip/cursor
-        $("body").append("<div id='cursor'></div>");
-        $(window).on("mousemove",function(e){
-            $("#cursor").css({"top":(e.pageY-window.scrollY),"left":e.pageX}).html(" ");
-            if(e.pageX > ($(document).width()/2)){
-                $("#cursor").removeClass("prev").addClass("next");
-            } else {
-                $("#cursor").removeClass("next").addClass("prev");
-            }
-        });
-        $(".cycle-slideshow").hover(function(e){
-            $("#cursor").addClass("arrow");
-        },function(){
-            $("#cursor").removeClass("arrow");
-        });
-        $("video").hover(function(e){
-            $("#cursor").hide();
-        },function(){
-            $("#cursor").show();
-        });
+        // cursor
+        /*$("body").append("<div id='cursor'></div>");
         if (("ontouchstart" in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0)) { 
             $("#cursor").remove();
-        }
+        }*/
+        $(window).on("mousemove",function(e){
+            //$("#cursor").css({"top":(e.pageY-window.scrollY),"left":e.pageX}).html(" ");
+            if(e.pageX > ($(document).width()/2)){
+                $(".cycle-slideshow").removeClass("prev").addClass("next");
+            } else {
+                $(".cycle-slideshow").removeClass("next").addClass("prev");
+            }
+        });
 
         // time
         function addZero(i) {if (i < 10) {i = "0" + i;} return i;}
