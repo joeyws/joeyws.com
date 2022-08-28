@@ -21,14 +21,14 @@
     ::-webkit-scrollbar-thumb{background:var(--text);/*outline-offset:-5px;outline:1px solid var(--text);border-radius:8px;*/}
     /* RESET */*{user-select:none;font-kerning:normal;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-appearance:none;border-radius:0;-webkit-border-radius:0;box-sizing:content-box;font-smoothing:antialiased;-moz-osx-font-smoothing: grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased;}
 	html,body{background:var(--background);}
-    html,body,a{cursor:url("data:image/svg+xml,%3Csvg version='1.1' width='12' height='12' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 12 12' xml:space='preserve'%3E%3Ccircle cx='6' cy='6' r='6'/%3E%3C/svg%3E") 6 6, auto;}
+    html,body,a{cursor:url("data:image/svg+xml,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='12' height='12' x='0px' y='0px' viewBox='0 0 12 12' xml:space='preserve'%3E%3Ccircle cx='6' cy='6' r='6'/%3E%3C/svg%3E") 6 6, auto;}
     body{color:var(--text);font:normal normal 13px/1.4em webfont,"Courier New",Courier,monospace;}
 	p,.cycle-slideshow{margin-top:10px;}
     h1{display:inline-block;font-family:webfont2,sans-serif;transform:scaleY(.7);transform-origin:center center;text-transform:uppercase;font-size:1.5em;}
     .loading{animation:.3s blink steps(1) infinite;}
     p:first-child{margin-top:0;}
     hr{margin:20px -20px;border-bottom:1px solid var(--text);}
-	a{text-decoration:none;transition:all .2s;background:rgba(0,0,0,.15);border-radius:.7em;padding:0 .4em;/*outline:1px solid var(--text);outline-offset:-1px;text-decoration-thickness:.08em;box-shadow:inset 0 -.04em var(--text);outline:1px solid var(--text);border-radius:.7em;padding:0 .35em;outline-offset:-1px;*/}
+	a{text-decoration:none;transition:all .2s;background:rgba(0,0,0,.12);border-radius:.7em;padding:0 .4em;/*outline:1px solid var(--text);outline-offset:-1px;text-decoration-thickness:.08em;box-shadow:inset 0 -.04em var(--text);outline:1px solid var(--text);border-radius:.7em;padding:0 .35em;outline-offset:-1px;*/}
     a:hover{color:var(--background);box-shadow:inset 0 -1.4em 0 var(--text);/*filter:blur(.22em);*/}
 
     #wrapper,#contact{padding:20px;}
@@ -64,7 +64,7 @@
     <div><a href="https://www.instagram.com/joeyws/">Instagram</a> <a href="https://www.linkedin.com/in/joeyschweickhardt/">LinkedIn</a> <a href="javascript:;" class="contact">Contact</a></div>
 </div>
 <div id="wrapper">
-    <!--<p style="font-size:36px;line-height:1.1em;font-family:serif;">>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.</p>
+    <!--<p style="font-size:36px;line-height:1.1em;font-family:serif;">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.</p>
     <hr>-->
     <video oncontextmenu="return false;" id="video" poster="img/landderechsen.jpg" tabindex="0" width="792" height="360" style="max-width:100%;max-height:calc((100vw - 20px) / 2.2);" controls preload controlsList="nodownload noplaybackrate" disablePictureInPicture>
         <source src="https://www.dropbox.com/s/79kesak8jo87u4b/LandDerEchsen1080.mp4?raw=1" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
@@ -81,33 +81,33 @@
         data-cycle-swipe="true" data-cycle-pager="#cycle-pager" data-cycle-pager-template="<a href=javascript:;>{{slideNum}}</a>"
         data-cycle-easing="linear" data-cycle-ease-out="linear"
         data-cycle-center-horz="false" data-cycle-center-vert="false" data-cycle-loader="wait">
-        <img src="img/26.jpg" alt="Pneu structures" />
-        <img src="img/25.jpg" alt="Vasikkasaari Climate Institute, Helsinki" />
-        <img src="img/24.jpg" alt="Photo &ldquo;Creek&rdquo;" />
-        <img src="img/23.jpg" alt="Wardrobe, birch, hand-sewn curtain" />
-        <img src="img/droneport.gif" alt="Droneport" />
-        <img src="img/22.jpg" alt="Photo &ldquo;Flora&rdquo;" />
-        <img src="img/21.jpg" alt="Light studies models" />
-        <img src="img/20.jpg" alt="Wooden structure" />
-        <img src="img/19.jpg" alt="Photo &ldquo;Switzerland&rdquo;" />
-        <img src="img/18.jpg" alt="Photo &ldquo;Death Valley&rdquo;" />
-        <img src="img/17.jpg" alt="Photo &ldquo;Campfire in a sandy forest&rdquo;" />
-        <img src="img/16.jpg" alt="Sint-Aneke-Club, Antwerp" />
-        <img src="img/15.jpg" alt="Model, laser cut, glueless" />
-        <img src="img/14.jpg" alt="Cuboid perspective" />
-        <img src="img/13.jpg" alt="Cuboid perspective preparation" />
-        <img src="img/12.jpg" alt="Cuboid axonometry" />
-        <img src="img/11.jpg" alt="Ruled surfaces" />
-        <img src="img/10.jpg" alt="Pineapple, etching" />
-        <img src="img/9.jpg" alt="Tools" />
-        <img src="img/8.jpg" alt="Leichtsinn" />
-        <img src="img/7.jpg" alt="Photo &ldquo;S&ocirc;ng Ng&agrave;n Ph&#7889;&rdquo;" />
-        <img src="img/6.jpg" alt="Photo &ldquo;Eel soup&rdquo;" />
-        <img src="img/5.jpg" alt="Photo &ldquo;H&#432;&#x01A1;ng S&#x01A1;n&rdquo;" />
-        <img src="img/4.jpg" alt="Photo &ldquo;Merano&rdquo;" />
-        <img src="img/3.jpg" alt="Photo &ldquo;J&ouml;kuls&aacute;rl&oacute;n&rdquo;" />
-        <img src="img/2.jpg" alt="Photo &ldquo;N&yacute;idalur&rdquo;" />
-        <img src="img/1.jpg" alt="Photo &ldquo;Fog&rdquo;" />
+        <img loading="lazy" src="img/26.jpg" alt="Pneu structures" />
+        <img loading="lazy" src="img/25.jpg" alt="Vasikkasaari Climate Institute, Helsinki" />
+        <img loading="lazy" src="img/24.jpg" alt="Photo &ldquo;Creek&rdquo;" />
+        <img loading="lazy" src="img/23.jpg" alt="Wardrobe, birch, hand-sewn curtain" />
+        <img loading="lazy" src="img/droneport.gif" alt="Droneport" />
+        <img loading="lazy" src="img/22.jpg" alt="Photo &ldquo;Flora&rdquo;" />
+        <img loading="lazy" src="img/21.jpg" alt="Light studies models" />
+        <img loading="lazy" src="img/20.jpg" alt="Wooden structure" />
+        <img loading="lazy" src="img/19.jpg" alt="Photo &ldquo;Switzerland&rdquo;" />
+        <img loading="lazy" src="img/18.jpg" alt="Photo &ldquo;Death Valley&rdquo;" />
+        <img loading="lazy" src="img/17.jpg" alt="Photo &ldquo;Campfire in a sandy forest&rdquo;" />
+        <img loading="lazy" src="img/16.jpg" alt="Sint-Aneke-Club, Antwerp" />
+        <img loading="lazy" src="img/15.jpg" alt="Model, laser cut, glueless" />
+        <img loading="lazy" src="img/14.jpg" alt="Cuboid perspective" />
+        <img loading="lazy" src="img/13.jpg" alt="Cuboid perspective preparation" />
+        <img loading="lazy" src="img/12.jpg" alt="Cuboid axonometry" />
+        <img loading="lazy" src="img/11.jpg" alt="Ruled surfaces" />
+        <img loading="lazy" src="img/10.jpg" alt="Pineapple, etching" />
+        <img loading="lazy" src="img/9.jpg" alt="Tools" />
+        <img loading="lazy" src="img/8.jpg" alt="Leichtsinn" />
+        <img loading="lazy" src="img/7.jpg" alt="Photo &ldquo;S&ocirc;ng Ng&agrave;n Ph&#7889;&rdquo;" />
+        <img loading="lazy" src="img/6.jpg" alt="Photo &ldquo;Eel soup&rdquo;" />
+        <img loading="lazy" src="img/5.jpg" alt="Photo &ldquo;H&#432;&#x01A1;ng S&#x01A1;n&rdquo;" />
+        <img loading="lazy" src="img/4.jpg" alt="Photo &ldquo;Merano&rdquo;" />
+        <img loading="lazy" src="img/3.jpg" alt="Photo &ldquo;J&ouml;kuls&aacute;rl&oacute;n&rdquo;" />
+        <img loading="lazy" src="img/2.jpg" alt="Photo &ldquo;N&yacute;idalur&rdquo;" />
+        <img loading="lazy" src="img/1.jpg" alt="Photo &ldquo;Fog&rdquo;" />
     </div>
     <p><a href='javascript:;' class='cycle-prev'>Prev</a> <a href='javascript:;' class='cycle-next'>next</a> <span id="cycle-text"></span></p>
 </div>
