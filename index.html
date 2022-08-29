@@ -14,15 +14,15 @@
 <style>
     @font-face{font-family:webfont2;src:url("font/NimbusSanL-Bol.otf");} /*NimbusSanL-Bol.otf font/SourceCodePro-Regular.ttf  gnu-free-font/FreeSans.ttf texgyreheros-regular.otf NimbusRomNo9L-Reg.otf Libre_Franklin/LibreFranklin-Bold.ttf*/
     @font-face{font-family:webfont;src:url("font/SourceCodePro-Medium.ttf");} /*Inter-Medium.ttf   IBM-Plex-Mono/IBMPlexMono-Text.otf   CourierPrime-Regular.ttf   officecodepro-regular.otf   SourceCodePro-Medium.ttf*/
-    :root{--background:#eee;--text:#000;--transparent:rgba(0,0,0,.1);}
+    :root{--background:#eee;--text:#000;}
     ::-moz-selection {background:var(--text);color:var(--background);}
     ::selection{background:var(--text);color:var(--background);}
-    ::-webkit-scrollbar{width:8px;background:var(--transparent);}
+    ::-webkit-scrollbar{width:8px;background:rgba(0,0,0,.1);}
     ::-webkit-scrollbar-thumb{background:var(--text);/*outline-offset:-5px;outline:1px solid var(--text);border-radius:8px;*/}
     /* RESET */*{user-select:none;font-kerning:normal;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-appearance:none;border-radius:0;-webkit-border-radius:0;box-sizing:content-box;font-smoothing:antialiased;-moz-osx-font-smoothing: grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased;}
 	html,body{background:var(--background);}
     html,body,a{cursor:url("data:image/svg+xml,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='12' height='12' x='0px' y='0px' viewBox='0 0 12 12' xml:space='preserve'%3E%3Ccircle cx='6' cy='6' r='6'/%3E%3C/svg%3E") 6 6, auto;}
-    body{color:var(--text);font:normal normal 13px/1.4em webfont,"Courier New",Courier,monospace;min-height:calc(120vh);}
+    body{color:var(--text);font:normal normal 13px/1.3em webfont,"Courier New",Courier,monospace;min-height:calc(120vh);}
 	h1{display:inline-block;font-family:webfont2,sans-serif;transform:scaleY(.7);transform-origin:center center;text-transform:uppercase;font-size:1.5em;}
     .loading{animation:.3s blink steps(1) infinite;}
     p{margin-top:10px;}
@@ -31,7 +31,7 @@
 
 	#header{display:flex;justify-content:space-between;flex-wrap:wrap;padding:10px 20px;}
     #header *{width:auto;white-space:nowrap;}
-    .marquee3k{white-space:nowrap;overflow-x:hidden;}
+    .marquee3k{white-space:nowrap;overflow-x:hidden;line-height:1.5em;}
         .marquee{display:inline-block;background:var(--text);color:var(--background);}
             .marquee span{margin-right:1.8em;}
     #timeblink{animation:2s blink steps(1) infinite;}
@@ -42,8 +42,8 @@
     a.menu:hover span{text-decoration:underline;}
     a.menu.open{}
     .content{display:none;padding:0 20px 100px 20px;}
-    .content a,#header a{transition:all .2s;background:var(--transparent);border-radius:.7em;padding:0 .4em;}
-    .content a:hover,#header a:hover{color:var(--background);box-shadow:inset 0 -1.4em 0 var(--text);/*filter:blur(.22em);*/}
+    .content a,#header a{text-decoration:underline;/*transition:all .2s;background:rgba(0,0,0,.1);border-radius:.7em;padding:0 .4em;*/}
+    .content a:hover,#header a:hover{filter:blur(.22em);/*color:var(--background);box-shadow:inset 0 -1.4em 0 var(--text);/*filter:blur(.22em);*/}
 
     video{display:block;outline:none;}
 
@@ -51,6 +51,8 @@
     .cycle-slideshow.prev{cursor:url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><polygon points="0,8 8,0 10,0 2.707,7.293 16,7.293 16,8.707 2.707,8.707 10,16 8,16"/></svg>') 8 8,auto;}
     .cycle-slideshow.next{cursor:url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" style="transform:scaleX(-1);"><polygon points="0,8 8,0 10,0 2.707,7.293 16,7.293 16,8.707 2.707,8.707 10,16 8,16"/></svg>') 8 8,auto;}
     .cycle-slideshow img{max-width:100%;max-height:500px;}
+
+    #contact *{max-width:800px;}
 </style>
 </head>
 <body>
@@ -61,7 +63,7 @@
 <div id="header">
     <div>Stuttgart<span id="time"></span><span id="weather"></span></div>
     <h1 class="loading">Joey W. Schweickhardt</h1>
-    <div><a href="https://www.instagram.com/joeyws/">Instagram</a> <a href="https://www.linkedin.com/in/joeyschweickhardt/">LinkedIn</a></div>
+    <div><a href="https://www.instagram.com/joeyws/">Instagram</a>, <a href="https://www.linkedin.com/in/joeyschweickhardt/">LinkedIn</a></div>
 </div>
 <a class="menu" href="javascript:;"><span>Land der Echsen</span></a>
 <div class="content">
@@ -118,7 +120,7 @@
     <p><!--<a href="javascript:;" class="cycle-prev">Prev</a> <a href="javascript:;" class="cycle-next">next</a> --><span id="cycle-caption-photos"></span></p>
 </div>
 <a class="menu" href="javascript:;"><span>Contact</span></a>
-<div class="content">
+<div class="content" id="contact">
     <p>Impressum:<br>Joey W. Schweickhardt<br><span class="address1"></span><br><span class="address2"></span><br><a class="phone"></a><br><a class="email"></a></p>
     <p>Credits:<br>Hosted on <a href="https://github.com/" rel="nofollow">GitHub</a><br>Weather by <a href="https://www.bbc.com/weather" rel="nofollow">BBC Weather</a><br>Privacy policy by <a href="https://www.e-recht24.de/" rel="nofollow">eRecht24</a></p>
     <p>Hand-coded with <span style="color:#f00;">&#10084;</span><br>&copy; 2011-2022</p>
