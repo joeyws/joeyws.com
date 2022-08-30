@@ -14,15 +14,15 @@
 <style>
     @font-face{font-family:webfont2;src:url("font/NimbusSanL-Bol.otf");} /*NimbusSanL-Bol.otf font/SourceCodePro-Regular.ttf  gnu-free-font/FreeSans.ttf texgyreheros-regular.otf NimbusRomNo9L-Reg.otf Libre_Franklin/LibreFranklin-Bold.ttf*/
     @font-face{font-family:webfont;src:url("font/SourceCodePro-Medium.ttf");} /*Inter-Medium.ttf   IBM-Plex-Mono/IBMPlexMono-Text.otf   CourierPrime-Regular.ttf   officecodepro-regular.otf   SourceCodePro-Medium.ttf*/
-    :root{--background:#eee;--text:#000;}
-    ::-moz-selection {background:var(--text);color:var(--background);}
-    ::selection{background:var(--text);color:var(--background);}
+    :root{--background:#fff;--text:#000;}
+    ::-moz-selection{background:var(--background);color:var(--text);}
+    ::selection{background:var(--background);color:var(--text);}
     ::-webkit-scrollbar{width:8px;background:rgba(0,0,0,.1);}
     ::-webkit-scrollbar-thumb{background:var(--text);/*outline-offset:-5px;outline:1px solid var(--text);border-radius:8px;*/}
     /* RESET */*{user-select:none;font-kerning:normal;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-appearance:none;border-radius:0;-webkit-border-radius:0;box-sizing:content-box;font-smoothing:antialiased;-moz-osx-font-smoothing: grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased;}
 	html,body{background:var(--background);}
     html,body,a{cursor:url("data:image/svg+xml,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='12' height='12' x='0px' y='0px' viewBox='0 0 12 12' xml:space='preserve'%3E%3Ccircle cx='6' cy='6' r='6'/%3E%3C/svg%3E") 6 6, auto;}
-    body{color:var(--text);font:normal normal 13px/1.3em webfont,"Courier New",Courier,monospace;min-height:calc(120vh);}
+    body{color:var(--text);font:normal normal 13px/1.3em webfont,"Courier New",Courier,monospace;min-height:120vh;}
 	h1{display:inline-block;font-family:webfont2,sans-serif;transform:scaleY(.7);transform-origin:center center;text-transform:uppercase;font-size:1.5em;}
     .loading{animation:.3s blink steps(1) infinite;}
     p{margin-top:10px;}
@@ -38,7 +38,7 @@
     @keyframes blink{0%{opacity:0;}50%{opacity:1;}}
     
     a.menu{font-family:webfont2,sans-serif;text-transform:uppercase;font-size:3em;border-top:1px solid var(--text);padding:20px;display:block;line-height:1em;}
-    a.menu span{transform:scaleX(1.42);display:inline-block;transform-origin:left center;}
+    a.menu span{transform:scaleX(1.43);display:inline-block;transform-origin:left center;}
     a.menu:hover span{text-decoration:underline;}
     a.menu.open{}
     .content{display:none;padding:0 20px 100px 20px;}
@@ -51,8 +51,6 @@
     .cycle-slideshow.prev{cursor:url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><polygon points="0,8 8,0 10,0 2.707,7.293 16,7.293 16,8.707 2.707,8.707 10,16 8,16"/></svg>') 8 8,auto;}
     .cycle-slideshow.next{cursor:url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" style="transform:scaleX(-1);"><polygon points="0,8 8,0 10,0 2.707,7.293 16,7.293 16,8.707 2.707,8.707 10,16 8,16"/></svg>') 8 8,auto;}
     .cycle-slideshow img{max-width:100%;max-height:500px;}
-
-    #contact *{max-width:800px;}
 </style>
 </head>
 <body>
@@ -65,7 +63,7 @@
     <h1 class="loading">Joey W. Schweickhardt</h1>
     <div><a href="https://www.instagram.com/joeyws/">Instagram</a>, <a href="https://www.linkedin.com/in/joeyschweickhardt/">LinkedIn</a></div>
 </div>
-<a class="menu" href="javascript:;"><span>Land der Echsen</span></a>
+<a class="menu" href="javascript:;" data-href="#/land-der-echsen"><span>Land der Echsen</span></a>
 <div class="content">
     <video oncontextmenu="return false;" id="video" poster="img/landderechsen.jpg" tabindex="0" width="792" height="360" style="max-width:100%;max-height:calc((100vw - 20px) / 2.2);" controls preload controlsList="nodownload noplaybackrate" disablePictureInPicture>
         <source src="https://www.dropbox.com/s/79kesak8jo87u4b/LandDerEchsen1080.mp4?raw=1" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
@@ -76,7 +74,7 @@
     <p style="max-width:660px;">The city council is planning a new quarter on a run-down railroad station site. There are various non-profit institutions housing in old loading halls, which are now forced to move out in order to make room for several new buildings. Suddenly lizards enter the game and endanger the entire undertaking.</p>
     <p style="max-width:660px;">Created as part of the &ldquo;Anti-Stuttgart &mdash; A Determinate Negation&rdquo; <a href="https://de.wikipedia.org/wiki/Institut_f%C3%BCr_Grundlagen_moderner_Architektur_und_Entwerfen">IGmA</a> design studio, in which certain urban developments and procedures were examined critically. The film was being shown at the University of Stuttgart&#8217;s architecture faculty&#8217;s graduate exhibition and at the <a href="http://www.current-stuttgart.de/en">CURRENT festival</a> for art and urban space.</p>
 </div>
-<a class="menu" href="javascript:;"><span>Works</span></a>
+<a class="menu" href="javascript:;" data-href="#/works"><span>Works</span></a>
 <div class="content">
     <div id="cycle-works" class="cycle-slideshow" data-cycle-center-horz="false" data-cycle-center-vert="false"
         data-cycle-swipe="true" data-cycle-easing="easeOutExpo" data-cycle-caption="#cycle-caption-works"
@@ -99,7 +97,7 @@
     </div>
     <p><!--<a href="javascript:;" class="cycle-prev">Prev</a> <a href="javascript:;" class="cycle-next">next</a> --><span id="cycle-caption-works"></span></p>
 </div>
-<a class="menu" href="javascript:;"><span>Photos</span></a>
+<a class="menu" href="javascript:;" data-href="#/photos"><span>Photos</span></a>
 <div class="content">
     <div id="cycle-photos" class="cycle-slideshow" data-cycle-center-horz="false" data-cycle-center-vert="false"
         data-cycle-swipe="true" data-cycle-easing="easeOutExpo" data-cycle-caption="#cycle-caption-photos"
@@ -119,12 +117,12 @@
     </div>
     <p><!--<a href="javascript:;" class="cycle-prev">Prev</a> <a href="javascript:;" class="cycle-next">next</a> --><span id="cycle-caption-photos"></span></p>
 </div>
-<a class="menu" href="javascript:;"><span>Contact</span></a>
+<a class="menu" href="javascript:;" data-href="#/contact"><span>Contact</span></a>
 <div class="content" id="contact">
-    <p>Impressum:<br>Joey W. Schweickhardt<br><span class="address1"></span><br><span class="address2"></span><br><a class="phone"></a><br><a class="email"></a></p>
-    <p>Credits:<br>Hosted on <a href="https://github.com/" rel="nofollow">GitHub</a><br>Weather by <a href="https://www.bbc.com/weather" rel="nofollow">BBC Weather</a><br>Privacy policy by <a href="https://www.e-recht24.de/" rel="nofollow">eRecht24</a></p>
+    <p>Joey W. Schweickhardt<br><span class="address1"></span><br><span class="address2"></span><br><a class="phone"></a><br><a class="email"></a></p>
+    <p>Hosted on <a href="https://github.com/" rel="nofollow">GitHub</a><br>Weather by <a href="https://www.bbc.com/weather" rel="nofollow">BBC Weather</a><br>Privacy policy by <a href="https://www.e-recht24.de/" rel="nofollow">eRecht24</a></p>
     <p>Hand-coded with <span style="color:#f00;">&#10084;</span><br>&copy; 2011-2022</p>
-    <p id="privacy">Datenschutzerk&auml;rung:<br>Diese Datenschutzerkl&auml;rung kl&auml;rt Sie &uuml;ber die Art, den Umfang und Zweck der Verarbeitung von personenbezogenen Daten, nachfolgend kurz &bdquo;Daten&ldquo;, innerhalb unseres Onlineangebotes und der mit ihm verbundenen Webseiten, Funktionen und Inhalte sowie externen Onlinepr&auml;senzen, wie z.B. unsere Social-Media-Profile auf, nachfolgend gemeinsam bezeichnet als &bdquo;Onlineangebot&ldquo;. Im Hinblick auf die verwendeten Begrifflichkeiten, wie z.B. &bdquo;Verarbeitung&ldquo; oder &bdquo;Verantwortlicher&ldquo; verweisen wir auf die Definitionen im Art. 4 der Datenschutzgrundverordnung (DSGVO). Arten der verarbeiteten Daten k&ouml;nnen Bestandsdaten (z.B. Namen, Adressen), Kontaktdaten (z.B. Email, Telefonnummern), Inhaltsdaten (z.B. Texteingaben, Fotografien, Videos), Nutzungsdaten (z.B. besuchte Webseiten, Interesse an Inhalten, Zugriffszeiten) und Meta-/Kommunikationsdaten (z.B. Ger&auml;te-Informationen, IP-Adressen) sein.</p>
+    <!--<p id="privacy">Datenschutzerk&auml;rung:<br>Diese Datenschutzerkl&auml;rung kl&auml;rt Sie &uuml;ber die Art, den Umfang und Zweck der Verarbeitung von personenbezogenen Daten, nachfolgend kurz &bdquo;Daten&ldquo;, innerhalb unseres Onlineangebotes und der mit ihm verbundenen Webseiten, Funktionen und Inhalte sowie externen Onlinepr&auml;senzen, wie z.B. unsere Social-Media-Profile auf, nachfolgend gemeinsam bezeichnet als &bdquo;Onlineangebot&ldquo;. Im Hinblick auf die verwendeten Begrifflichkeiten, wie z.B. &bdquo;Verarbeitung&ldquo; oder &bdquo;Verantwortlicher&ldquo; verweisen wir auf die Definitionen im Art. 4 der Datenschutzgrundverordnung (DSGVO). Arten der verarbeiteten Daten k&ouml;nnen Bestandsdaten (z.B. Namen, Adressen), Kontaktdaten (z.B. Email, Telefonnummern), Inhaltsdaten (z.B. Texteingaben, Fotografien, Videos), Nutzungsdaten (z.B. besuchte Webseiten, Interesse an Inhalten, Zugriffszeiten) und Meta-/Kommunikationsdaten (z.B. Ger&auml;te-Informationen, IP-Adressen) sein.</p>
     <p>Betroffene Personen sind Besucher und Nutzer des Onlineangebotes, nachfolgend zusammenfassend auch als &bdquo;Nutzer&ldquo; bezeichnet. Zweck der Verarbeitung sind die Zurverf&uuml;gungstellung des Onlineangebotes mit seinen Funktionen und Inhalten, die Beantwortung von Kontaktanfragen und die Kommunikation mit Nutzern, Sicherheitsma&szlig;nahmen und die Reichweitenmessung. &bdquo;Personenbezogene Daten&ldquo; sind alle Informationen, die sich auf eine identifizierte oder identifizierbare nat&uuml;rliche Person, im Folgenden &bdquo;betroffene Person&ldquo;, beziehen; als identifizierbar wird eine nat&uuml;rliche Person angesehen, die direkt oder indirekt, insbesondere mittels Zuordnung zu einer Kennung wie einem Namen, zu einer Kennnummer, zu Standortdaten, zu einer Online-Kennung (z.B. Cookie) oder zu einem oder mehreren besonderen Merkmalen identifiziert werden kann, die Ausdruck der physischen, physiologischen, genetischen, psychischen, wirtschaftlichen, kulturellen oder sozialen Identit&auml;t dieser nat&uuml;rlichen Person sind. &bdquo;Verarbeitung&ldquo; ist jeder mit oder ohne Hilfe automatisierter Verfahren ausgef&uuml;hrte Vorgang oder jede solche Vorgangsreihe im Zusammenhang mit personenbezogenen Daten. Der Begriff reicht weit und umfasst praktisch jeden Umgang mit Daten. &bdquo;Pseudonymisierung&ldquo; die Verarbeitung personenbezogener Daten in einer Weise, dass die personenbezogenen Daten ohne Hinzuziehung zus&auml;tzlicher Informationen nicht mehr einer spezifischen betroffenen Person zugeordnet werden k&ouml;nnen, sofern diese zus&auml;tzlichen Informationen gesondert aufbewahrt werden und technischen und organisatorischen Ma&szlig;nahmen unterliegen, die gew&auml;hrleisten, dass die personenbezogenen Daten nicht einer identifizierten oder identifizierbaren nat&uuml;rlichen Person zugewiesen werden. &bdquo;Profiling&ldquo; jede Art der automatisierten Verarbeitung personenbezogener Daten, die darin besteht, dass diese personenbezogenen Daten verwendet werden, um bestimmte pers&ouml;nliche Aspekte, die sich auf eine nat&uuml;rliche Person beziehen, zu bewerten, insbesondere um Aspekte bez&uuml;glich Arbeitsleistung, wirtschaftliche Lage, Gesundheit, pers&ouml;nliche Vorlieben, Interessen, Zuverl&auml;ssigkeit, Verhalten, Aufenthaltsort oder Ortswechsel dieser nat&uuml;rlichen Person zu analysieren oder vorherzusagen. Als &bdquo;Verantwortlicher&ldquo; wird die nat&uuml;rliche oder juristische Person, Beh&ouml;rde, Einrichtung oder andere Stelle, die allein oder gemeinsam mit anderen &uuml;ber die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten entscheidet, bezeichnet. &bdquo;Auftragsverarbeiter&ldquo; eine nat&uuml;rliche oder juristische Person, Beh&ouml;rde, Einrichtung oder andere Stelle, die personenbezogene Daten im Auftrag des Verantwortlichen verarbeitet.</p>
     <p>Nach Ma&szlig;gabe des Art. 13 DSGVO teilen wir Ihnen die Rechtsgrundlagen unserer Datenverarbeitungen mit. Sofern die Rechtsgrundlage in der Datenschutzerkl&auml;rung nicht genannt wird, gilt Folgendes: Die Rechtsgrundlage f&uuml;r die Einholung von Einwilligungen ist Art. 6 Abs. 1 lit. a und Art. 7 DSGVO, die Rechtsgrundlage f&uuml;r die Verarbeitung zur Erf&uuml;llung unserer Leistungen und Durchf&uuml;hrung vertraglicher Ma&szlig;nahmen sowie Beantwortung von Anfragen ist Art. 6 Abs. 1 lit. b DSGVO, die Rechtsgrundlage f&uuml;r die Verarbeitung zur Erf&uuml;llung unserer rechtlichen Verpflichtungen ist Art. 6 Abs. 1 lit. c DSGVO, und die Rechtsgrundlage f&uuml;r die Verarbeitung zur Wahrung unserer berechtigten Interessen ist Art. 6 Abs. 1 lit. f DSGVO. F&uuml;r den Fall, dass lebenswichtige Interessen der betroffenen Person oder einer anderen nat&uuml;rlichen Person eine Verarbeitung personenbezogener Daten erforderlich machen, dient Art. 6 Abs. 1 lit. d DSGVO als Rechtsgrundlage.</p>
     <p>Wir treffen nach Ma&szlig;gabe des Art. 32 DSGVO unter Ber&uuml;cksichtigung des Stands der Technik, der Implementierungskosten und der Art, des Umfangs, der Umst&auml;nde und der Zwecke der Verarbeitung sowie der unterschiedlichen Eintrittswahrscheinlichkeit und Schwere des Risikos f&uuml;r die Rechte und Freiheiten nat&uuml;rlicher Personen, geeignete technische und organisatorische Ma&szlig;nahmen, um ein dem Risiko angemessenes Schutzniveau zu gew&auml;hrleisten. Zu den Ma&szlig;nahmen geh&ouml;ren insbesondere die Sicherung der Vertraulichkeit, Integrit&auml;t und Verf&uuml;gbarkeit von Daten durch Kontrolle des physischen Zugangs zu den Daten, als auch des sie betreffenden Zugriffs, der Eingabe, Weitergabe, der Sicherung der Verf&uuml;gbarkeit und ihrer Trennung. Des Weiteren haben wir Verfahren eingerichtet, die eine Wahrnehmung von Betroffenenrechten, L&ouml;schung von Daten und Reaktion auf Gef&auml;hrdung der Daten gew&auml;hrleisten. Ferner ber&uuml;cksichtigen wir den Schutz personenbezogener Daten bereits bei der Entwicklung, bzw. Auswahl von Hardware, Software sowie Verfahren, entsprechend dem Prinzip des Datenschutzes durch Technikgestaltung und durch datenschutzfreundliche Voreinstellungen (Art. 25 DSGVO).</p>
@@ -143,9 +141,8 @@
     <p>Diese Website benutzt Google Analytics, einen Webanalysedienst der Google Inc. (&bdquo;Google&ldquo;). Google Analytics verwendet sog. &bdquo;Cookies&ldquo;, Textdateien, die auf Ihrem Computer gespeichert werden und die eine Analyse der Benutzung der Website durch Sie erm&ouml;glichen. Die durch den Cookie erzeugten Informationen &uuml;ber Ihre Benutzung dieser Website werden in der Regel an einen Server von Google in den USA &uuml;bertragen und dort gespeichert. Im Falle der Aktivierung der IP-Anonymisierung auf dieser Webseite wird Ihre IP-Adresse von Google jedoch innerhalb von Mitgliedstaaten der Europ&auml;ischen Union oder in anderen Vertragsstaaten des Abkommens &uuml;ber den Europ&auml;ischen Wirtschaftsraum zuvor gek&uuml;rzt. Nur in Ausnahmef&auml;llen wird die volle IP-Adresse an einen Server von Google in den USA &uuml;bertragen und dort gek&uuml;rzt. Im Auftrag des Betreibers dieser Website wird Google diese Informationen benutzen, um Ihre Nutzung der Website auszuwerten, um Reports &uuml;ber die Websiteaktivit&auml;ten zusammenzustellen und um weitere mit der Websitenutzung und der Internetnutzung verbundene Dienstleistungen gegen&uuml;ber dem Websitebetreiber zu erbringen. Die im Rahmen von Google Analytics von Ihrem Browser &uuml;bermittelte IP-Adresse wird nicht mit anderen Daten von Google zusammengef&uuml;hrt. Sie k&ouml;nnen die Speicherung der Cookies durch eine entsprechende Einstellung Ihrer Browser-Software verhindern; wir weisen Sie jedoch darauf hin, dass Sie in diesem Fall gegebenenfalls nicht s&auml;mtliche Funktionen dieser Website vollumf&auml;nglich werden nutzen k&ouml;nnen. Sie k&ouml;nnen dar&uuml;ber hinaus die Erfassung der durch das Cookie erzeugten und auf Ihre Nutzung der Website bezogenen Daten (inkl. Ihrer IP-Adresse) an Google sowie die Verarbeitung dieser Daten durch Google verhindern, indem Sie das <a href="https://tools.google.com/dlpage/gaoptout?hl=de" rel="nofollow">Browser-Plugin herunterladen und installieren</a>.</p>
     <p>Disclaimer:<br>Die Inhalte unserer Seiten wurden mit gr&ouml;&szlig;ter Sorgfalt erstellt. F&uuml;r die Richtigkeit, Vollst&auml;ndigkeit und Aktualit&auml;t der Inhalte k&ouml;nnen wir jedoch keine Gew&auml;hr &uuml;bernehmen. Als Diensteanbieter sind wir gem&auml;&szlig; &sect; 7 Abs. 1 TMG f&uuml;r eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach &sect;&sect; 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, &uuml;bermittelte oder gespeicherte fremde Informationen zu &uuml;berwachen oder nach Umst&auml;nden zu forschen, die auf eine rechtswidrige T&auml;tigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unber&uuml;hrt. Eine diesbez&uuml;gliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung m&ouml;glich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.</p>
     <p>Unser Angebot enth&auml;lt Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb k&ouml;nnen wir f&uuml;r diese fremden Inhalte auch keine Gew&auml;hr &uuml;bernehmen. F&uuml;r die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf m&ouml;gliche Rechtsverst&ouml;&szlig;e &uuml;berpr&uuml;ft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.</p>
-    <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielf&auml;ltigung, Bearbeitung, Verbreitung und jede Art der Verwertung au&szlig;erhalb der Grenzen des Urheberrechtes bed&uuml;rfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur f&uuml;r den privaten, nicht kommerziellen Gebrauch gestattet. Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.</p>
+    <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielf&auml;ltigung, Bearbeitung, Verbreitung und jede Art der Verwertung au&szlig;erhalb der Grenzen des Urheberrechtes bed&uuml;rfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur f&uuml;r den privaten, nicht kommerziellen Gebrauch gestattet. Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.</p>-->
 </div>
-<hr>
 
 
 <script src="scripts.js"></script>
@@ -160,10 +157,11 @@
     	$(window).on("load",function(){
             hideLoading();
             Marquee3k.init();
+            refreshHash();
         });
 
         // menu
-        $("a.menu").on("click",function(){
+        /*$("a.menu").on("click",function(){
             $(this).toggleClass("open").siblings(".menu").removeClass("open");
             //if(!$(".menu.open").hasClass("open")){$("html, body").animate({scrollTop: 0},500,"easeOutExpo");}
             $(this).next(".content").slideToggle(500,function(){
@@ -174,6 +172,35 @@
                     $("html, body").animate({scrollTop: 0},500,"easeOutExpo");
                 }
             }).siblings(".content").slideUp(500);
+        });*/
+        function refreshHash() {
+            var duration = 200;
+            var easing = "linear";
+            var hash = window.location.hash; // .slice(2);
+            if(hash=="" || hash=="#/"){
+                $("html,body").animate({scrollTop:0},200,"linear",function(){
+                    $(".menu.open").removeClass("open");
+                    $(".content").slideUp(duration);
+                });
+                return false;
+            }else{
+                $("a[data-href='"+hash+"']").addClass("open").siblings().removeClass("open");
+                $("a.menu.open").next(".content").slideDown(duration,easing).siblings(".content").slideUp(duration,easing,function(){
+                    $("html,body").animate({scrollTop:$("a[data-href='"+hash+"']").offset().top+2},duration,easing);
+                });
+                return false;
+            }
+        }
+        $(window).bind("hashchange",function(e){
+            refreshHash();
+        });
+        $("a.menu").on("click",function(){
+            if($(this).hasClass("open")){
+                window.location.hash="/";
+                return false;
+            }else{
+                window.location.hash=$(this).attr("data-href");
+            }
         });
 
         // slideshow
