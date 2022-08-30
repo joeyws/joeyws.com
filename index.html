@@ -77,7 +77,7 @@
 <a class="menu" href="javascript:;" data-href="#/works"><span>Works</span></a>
 <div class="content">
     <div id="cycle-works" class="cycle-slideshow" data-cycle-center-horz="false" data-cycle-center-vert="false"
-        data-cycle-swipe="true" data-cycle-easing="easeOutExpo" data-cycle-caption="#cycle-caption-works"
+        data-cycle-swipe="true" data-cycle-easing="easeOutCubic" data-cycle-caption="#cycle-caption-works"
         data-cycle-caption-template="{{slideNum}}/{{slideCount}}</p><p>{{alt}}">
         <img src="img/26.jpg" alt="Pneu structures" />
         <img loading="lazy" src="img/25.jpg" alt="Vasikkasaari Climate Institute, Helsinki" />
@@ -100,7 +100,7 @@
 <a class="menu" href="javascript:;" data-href="#/photos"><span>Photos</span></a>
 <div class="content">
     <div id="cycle-photos" class="cycle-slideshow" data-cycle-center-horz="false" data-cycle-center-vert="false"
-        data-cycle-swipe="true" data-cycle-easing="easeOutExpo" data-cycle-caption="#cycle-caption-photos"
+        data-cycle-swipe="true" data-cycle-easing="easeOutCubic" data-cycle-caption="#cycle-caption-photos"
         data-cycle-caption-template="{{slideNum}}/{{slideCount}}</p><p>{{alt}}">
         <img src="img/24.jpg" alt="Photo &ldquo;Creek&rdquo;" />
         <img loading="lazy" src="img/22.jpg" alt="Photo &ldquo;Flora&rdquo;" />
@@ -174,8 +174,8 @@
             }).siblings(".content").slideUp(500);
         });*/
         function refreshHash() {
-            var duration = 400;
-            var easing = "easeOutExpo";
+            var duration = 300;
+            var easing = "easeOutCubic";
             var hash = window.location.hash; // .slice(2);
             if(hash=="" || hash=="#/"){
                 $("html,body").animate({scrollTop:0},duration,easing,function(){
