@@ -37,8 +37,8 @@
     #timeblink{animation:2s blink steps(1) infinite;}
     @keyframes blink{0%{opacity:0;}50%{opacity:1;}}
     
-    a.menu{display:table-cell;vertical-align:middle;/*box-shadow:inset 0 0 0 var(--background);transition:all .6s cubic-bezier(0.16, 1, 0.3, 1);*/font-family:webfont2,sans-serif;text-transform:uppercase;font-size:3em;border-top:1px solid var(--text);padding:0 20px;display:block;line-height:80px;}
-    a.menu span{transition:all .4s cubic-bezier(0.16, 1, 0.3, 1);transform:scaleX(1.43);display:inline-block;transform-origin:left center;}
+    a.menu{/*box-shadow:inset 0 0 0 var(--background);transition:all .6s cubic-bezier(0.16, 1, 0.3, 1);*/font-family:webfont2,sans-serif;text-transform:uppercase;font-size:3em;border-top:1px solid var(--text);padding:0 20px;display:block;line-height:80px;}
+    a.menu span{display:table-cell;vertical-align:middle;transition:all .4s cubic-bezier(0.16, 1, 0.3, 1);transform:scaleX(1.43);display:inline-block;transform-origin:left center;}
     a.menu span:before{content:"";width:16px;height:16px;margin:32px 0 0 -26px;opacity:0;transform:rotate(90deg) scaleY(.7);position:absolute;transition:all .4s cubic-bezier(0.16, 1, 0.3, 1);display:inline-block;background:transparent url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" style="transform:scaleX(-1);"><polygon points="0,8 8,0 10,0 2.707,7.293 16,7.293 16,8.707 2.707,8.707 10,16 8,16"/></svg>') center center no-repeat scroll;}
     a.menu:hover{/*box-shadow:inset 0 2.2em 0 rgba(0,0,0,.1);*/}
     a.menu:hover span{padding-left:25px;}
