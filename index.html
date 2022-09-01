@@ -37,11 +37,14 @@
     #timeblink{animation:2s blink steps(1) infinite;}
     @keyframes blink{0%{opacity:0;}50%{opacity:1;}}
     
-    a.menu{letter-spacing:-.02em;box-shadow:inset 0 0 0 var(--text);transition:all .6s cubic-bezier(0.16, 1, 0.3, 1);font-family:webfont2,sans-serif;text-transform:uppercase;font-size:3em;border-top:1px solid var(--text);padding:20px;display:block;line-height:1em;}
-    a.menu span{mix-blend-mode:difference;color:#fff;transform:scaleX(1.43);display:inline-block;transform-origin:left center;}
-    a.menu:hover{box-shadow:inset 0 2.2em 0 var(--text);}
-    /*a.menu:hover span{text-decoration:underline;}*/
-    a.menu.open{box-shadow:inset 0 0 0 var(--text);color:inherit;}
+    a.menu{letter-spacing:-.02em;box-shadow:inset 0 0 0 var(--text);transition:all .6s cubic-bezier(0.16, 1, 0.3, 1);font-family:webfont2,sans-serif;text-transform:uppercase;font-size:2.4em;border-top:1px solid var(--text);padding:20px;display:block;line-height:1em;}
+    a.menu span{/*mix-blend-mode:difference;color:#fff;*/transition:all .4s cubic-bezier(0.16, 1, 0.3, 1);transform:scaleX(1.43);display:inline-block;transform-origin:left center;}
+    a.menu:hover{/*box-shadow:inset 0 2.2em 0 var(--text);*/}
+    a.menu:hover span{padding-left:20px;}
+    a.menu span:before{content:"";width:16px;height:16px;margin:7px 0 0 -20px;opacity:0;transform:scaleX(.7);position:absolute;transition:all .4s cubic-bezier(0.16, 1, 0.3, 1);display:inline-block;background:transparent url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" style="transform:scaleX(-1);"><polygon points="0,8 8,0 10,0 2.707,7.293 16,7.293 16,8.707 2.707,8.707 10,16 8,16"/></svg>') center center no-repeat scroll;}
+    a.menu:hover span:before{transform:rotate(90deg) scaleY(.7);opacity:1;}
+    a.menu.open span:before{opacity:0;}
+    a.menu.open span{padding-left:0;}
     .content{display:none;padding:0 20px 100px 20px;}
     .content a,#header a{text-decoration:underline;/*background:rgba(0,0,0,.1);border-radius:.7em;padding:0 .4em;*/}
     .content a:hover,#header a:hover{filter:blur(.22em);/*color:var(--background);box-shadow:inset 0 -1.4em 0 var(--text);/*filter:blur(.22em);*/}
@@ -176,7 +179,7 @@
         });*/
         function refreshHash() {
             var duration = 300;
-            var easing = "linear";
+            var easing = "easeOutCubic";
             var hash = window.location.hash; // .slice(2);
             if(hash=="" || hash=="#/"){
                 $("html,body").animate({scrollTop:0},duration,easing,function(){
@@ -279,18 +282,6 @@
         }
         getXMLFeed("https://weather-broker-cdn.api.bbci.co.uk/en/observation/rss/2825297", getRssWeather);
 
-        // contact
-        /*$("#contact p").first().prepend("<a href='javascript:;' class='contact' style='float:right;'>Close</a>");
-        $(".contact").click(function(){  
-            var duration = 500;
-            if ($("#contact").is(":hidden")) {   
-                $('#contact').slideDown(duration, easing);
-                $('html, body').animate({scrollTop: $('#privacy').offset().top - document.documentElement.clientHeight + 24}, duration, "easeOutExpo"); // $('#contact').offset().top+2
-            } else {
-                $("html, body").animate({scrollTop: 0}, duration, "easeOutExpo");
-                $("#contact").slideUp(duration, "easeOutExpo");
-            }
-        });*/
         var address1 = 'K'+'o'+'l'+'p'+'i'+'n'+'g'+'s'+'t'+'r'+'.'+' '+'5'+'6';
         var address2 = 'D'+'-'+'7'+'0'+'3'+'7'+'8'+' '+'S'+'t'+'u'+'t'+'t'+'g'+'a'+'r'+'t';
         var mail = 'm'+'a'+'i'+'l'+'@'+'j'+'o'+'e'+'y'+'w'+'s'+'.'+'c'+'o'+'m';
