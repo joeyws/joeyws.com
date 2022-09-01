@@ -13,7 +13,7 @@
 <meta charset="utf-8"><meta name="robots" content="index,nofollow,notranslate,noimageindex"><meta name="description" content="Personal web page of Joey Schweickhardt, Stuttgart, Germany"><meta name="keywords" content="schweickhardt,joey,stuttgart,joeyws,william"><meta name="geo.region" content="DE-BW"><meta name="geo.placename" content="Stuttgart"><meta name="geo.position" content="48.778600;9.179746"><meta name="ICBM" content="48.778600, 9.179746"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,shrink-to-fit=no"><meta name="format-detection" content="telephone=no">
 <style>
     @font-face{font-family:webfont2;src:url("font/texgyreheros-bold.otf");} /*NimbusSanL-Bol.otf font/SourceCodePro-Regular.ttf  gnu-free-font/FreeSans.ttf texgyreheros-regular.otf NimbusRomNo9L-Reg.otf Libre_Franklin/LibreFranklin-Bold.ttf*/
-    @font-face{font-family:webfont;src:url("font/CourierPrime-Regular.ttf");} /*Inter-Medium.ttf   IBM-Plex-Mono/IBMPlexMono-Text.otf   CourierPrime-Regular.ttf   SourceCodePro-Medium.ttf*/
+    @font-face{font-family:webfont;src:url("font/SourceCodePro-Medium.ttf");} /*Inter-Medium.ttf   IBM-Plex-Mono/IBMPlexMono-Text.otf   CourierPrime-Regular.ttf   SourceCodePro-Medium.ttf*/
     :root{--background:#fff;--text:#000;}
     ::-moz-selection{background:var(--background);color:var(--text);}
     ::selection{background:var(--background);color:var(--text);}
@@ -25,7 +25,7 @@
     body{color:var(--text);font:normal normal 13px/1.4em webfont,"Courier New",Courier,monospace;min-height:120vh;}
 	h1{display:inline-block;font-weight:bold;font-family:webfont2,sans-serif;transform:scaleY(.7);transform-origin:center center;text-transform:uppercase;font-size:1.5em;}
     .loading{animation:.3s blink steps(1) infinite;}
-    p{margin-top:10px;}
+    p{margin-top:12px;}
     p:first-child{margin-top:0;}
     a{text-decoration:none;}
 
@@ -37,19 +37,19 @@
     #timeblink{animation:2s blink steps(1) infinite;}
     @keyframes blink{0%{opacity:0;}50%{opacity:1;}}
     
-    a.menu{box-shadow:inset 0 0 0 #0f0;transition:all .6s cubic-bezier(0.16, 1, 0.3, 1);font-family:webfont2,sans-serif;text-transform:uppercase;font-size:3em;border-top:1px solid var(--text);padding:20px;display:block;line-height:1em;}
+    a.menu{box-shadow:inset 0 0 0 rgba(0,0,0,.1);transition:all .6s cubic-bezier(0.16, 1, 0.3, 1);font-family:webfont2,sans-serif;text-transform:uppercase;font-size:3em;border-top:1px solid var(--text);padding:20px;display:block;line-height:1em;}
     a.menu span{transition:all .4s cubic-bezier(0.16, 1, 0.3, 1);transform:scaleX(1.43);display:inline-block;transform-origin:left center;}
-    a.menu span:before{content:"";width:16px;height:16px;margin:14px 0 0 -26px;opacity:0;transform:rotate(90deg) scaleY(.7);position:absolute;transition:all .4s cubic-bezier(0.16, 1, 0.3, 1);display:inline-block;background:transparent url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" style="transform:scaleX(-1);"><polygon points="0,8 8,0 10,0 2.707,7.293 16,7.293 16,8.707 2.707,8.707 10,16 8,16"/></svg>') center center no-repeat scroll;}
-    a.menu:hover{box-shadow:inset 0 2.4em 0 #0f0;}
+    a.menu span:before{content:"";width:16px;height:16px;margin:13px 0 0 -26px;opacity:0;transform:rotate(90deg) scaleY(.7);position:absolute;transition:all .4s cubic-bezier(0.16, 1, 0.3, 1);display:inline-block;background:transparent url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" style="transform:scaleX(-1);"><polygon points="0,8 8,0 10,0 2.707,7.293 16,7.293 16,8.707 2.707,8.707 10,16 8,16"/></svg>') center center no-repeat scroll;}
+    a.menu:hover{/*box-shadow:inset 0 2.4em 0 #000;*/}
     a.menu:hover span{padding-left:25px;}
     a.menu:hover span:before{opacity:1;}
-    a.menu.open{box-shadow:inset 0 0 0 #0f0;color:var(--text);}
+    a.menu.open{box-shadow:inset 0 0 0 rgba(0,0,0,.1);color:var(--text);}
     a.menu.open span{padding-left:0;}
     a.menu.open span:before{opacity:0;}
     
     .content{display:none;padding:0 20px 100px 20px;}
-    .content a,#header a{text-decoration:underline;/*background:rgba(0,0,0,.1);border-radius:.7em;padding:0 .4em;*/}
-    .content a:hover,#header a:hover{filter:blur(.3em);/*color:var(--background);box-shadow:inset 0 -1.4em 0 var(--text);/*filter:blur(.22em);*/}
+    .content a,#header a{text-decoration:underline;/*outline:1px solid var(--text);outline-offset:-1px;border-radius:.7em;padding:0 .4em;box-shadow:inset 0 0 0 var(--text);transition:all .12s;*/}
+    .content a:hover,#header a:hover{filter:blur(.22em);/*color:var(--background);box-shadow:inset 0 -1.4em 0 var(--text);*/}
 
     video{display:block;outline:none;}
 
@@ -67,7 +67,7 @@
 <div id="header">
     <div>Stuttgart<span id="time"></span><span id="weather"></span></div>
     <h1 class="loading">Joey W. Schweickhardt</h1>
-    <div><a href="https://www.instagram.com/joeyws/">Instagram</a>, <a href="https://www.linkedin.com/in/joeyschweickhardt/">LinkedIn</a></div>
+    <div><a href="https://www.instagram.com/joeyws/">Instagram</a> <a href="https://www.linkedin.com/in/joeyschweickhardt/">LinkedIn</a></div>
 </div>
 <a class="menu" href="javascript:;" data-href="#/land-der-echsen"><span>Land der Echsen</span></a>
 <div class="content">
@@ -101,12 +101,12 @@
         <img loading="lazy" src="img/9.jpg" alt="Tools" />
         <img loading="lazy" src="img/8.jpg" alt="Leichtsinn" />
     </div>
-    <p><span id="cycle-caption-works"></span></p>
+    <p><a href="javascript:;" class="cycle-prev">Prev</a> <a href="javascript:;" class="cycle-next">next</a> <span id="cycle-caption-works"></span></p>
 </div>
-<a class="menu" href="javascript:;" data-href="#/photos"><span>Photos</span></a>
+<a class="menu" href="javascript:;" data-href="#/places"><span>Places</span></a>
 <div class="content">
-    <div id="cycle-photos" class="cycle-slideshow" data-cycle-center-horz="false" data-cycle-center-vert="false"
-        data-cycle-swipe="true" data-cycle-easing="easeOutCubic" data-cycle-caption="#cycle-caption-photos"
+    <div id="cycle-places" class="cycle-slideshow" data-cycle-center-horz="false" data-cycle-center-vert="false"
+        data-cycle-swipe="true" data-cycle-easing="easeOutCubic" data-cycle-caption="#cycle-caption-places"
         data-cycle-caption-template="{{slideNum}}/{{slideCount}}</p><p>{{alt}}">
         <img src="img/24.jpg" alt="Photo &ldquo;Creek&rdquo;" />
         <img loading="lazy" src="img/22.jpg" alt="Photo &ldquo;Flora&rdquo;" />
@@ -121,13 +121,13 @@
         <img loading="lazy" src="img/2.jpg" alt="Photo &ldquo;N&yacute;idalur&rdquo;" />
         <img loading="lazy" src="img/1.jpg" alt="Photo &ldquo;Fog&rdquo;" />
     </div>
-    <p><span id="cycle-caption-photos"></span></p>
+    <p><a href="javascript:;" class="cycle-prev">Prev</a> <a href="javascript:;" class="cycle-next">next</a> <span id="cycle-caption-places"></span></p>
 </div>
-<a class="menu" href="javascript:;" data-href="#/contact"><span>Contact</span></a>
-<div class="content" id="contact">
+<a class="menu" href="javascript:;" data-href="#/about"><span>About</span></a>
+<div class="content" style="max-width:660px;">
+    <p>Joey studies architecture and urban planning at the University of Stuttgart and the Politecnico di Milano. He worked at Werner Sobek and Behnisch Architekten.
     <p>Joey W. Schweickhardt<br><span class="address1"></span><br><span class="address2"></span><br><a class="phone"></a><br><a class="email"></a></p>
-    <p>Hosted on <a href="https://github.com/" rel="nofollow">GitHub</a><br>Weather by <a href="https://www.bbc.com/weather" rel="nofollow">BBC Weather</a><!--<br>Privacy policy by <a href="https://www.e-recht24.de/" rel="nofollow">eRecht24</a>--></p>
-    <p>Hand-coded with <span style="color:#f00;">&#10084;</span><!--<br>&copy; 2011-2022--></p>
+    <p>Hosted on <a href="https://github.com/" rel="nofollow">GitHub</a><br>Weather by <a href="https://www.bbc.com/weather" rel="nofollow">BBC Weather</a><!--<br>Privacy policy by <a href="https://www.e-recht24.de/" rel="nofollow">eRecht24</a>--><br>Hand-coded with <span style="color:#f00;">&#10084;</span><!--<br>&copy; 2011-2022--></p>
     <!--<p id="privacy">Datenschutzerk&auml;rung:<br>Diese Datenschutzerkl&auml;rung kl&auml;rt Sie &uuml;ber die Art, den Umfang und Zweck der Verarbeitung von personenbezogenen Daten, nachfolgend kurz &bdquo;Daten&ldquo;, innerhalb unseres Onlineangebotes und der mit ihm verbundenen Webseiten, Funktionen und Inhalte sowie externen Onlinepr&auml;senzen, wie z.B. unsere Social-Media-Profile auf, nachfolgend gemeinsam bezeichnet als &bdquo;Onlineangebot&ldquo;. Im Hinblick auf die verwendeten Begrifflichkeiten, wie z.B. &bdquo;Verarbeitung&ldquo; oder &bdquo;Verantwortlicher&ldquo; verweisen wir auf die Definitionen im Art. 4 der Datenschutzgrundverordnung (DSGVO). Arten der verarbeiteten Daten k&ouml;nnen Bestandsdaten (z.B. Namen, Adressen), Kontaktdaten (z.B. Email, Telefonnummern), Inhaltsdaten (z.B. Texteingaben, Fotografien, Videos), Nutzungsdaten (z.B. besuchte Webseiten, Interesse an Inhalten, Zugriffszeiten) und Meta-/Kommunikationsdaten (z.B. Ger&auml;te-Informationen, IP-Adressen) sein.</p>
     <p>Betroffene Personen sind Besucher und Nutzer des Onlineangebotes, nachfolgend zusammenfassend auch als &bdquo;Nutzer&ldquo; bezeichnet. Zweck der Verarbeitung sind die Zurverf&uuml;gungstellung des Onlineangebotes mit seinen Funktionen und Inhalten, die Beantwortung von Kontaktanfragen und die Kommunikation mit Nutzern, Sicherheitsma&szlig;nahmen und die Reichweitenmessung. &bdquo;Personenbezogene Daten&ldquo; sind alle Informationen, die sich auf eine identifizierte oder identifizierbare nat&uuml;rliche Person, im Folgenden &bdquo;betroffene Person&ldquo;, beziehen; als identifizierbar wird eine nat&uuml;rliche Person angesehen, die direkt oder indirekt, insbesondere mittels Zuordnung zu einer Kennung wie einem Namen, zu einer Kennnummer, zu Standortdaten, zu einer Online-Kennung (z.B. Cookie) oder zu einem oder mehreren besonderen Merkmalen identifiziert werden kann, die Ausdruck der physischen, physiologischen, genetischen, psychischen, wirtschaftlichen, kulturellen oder sozialen Identit&auml;t dieser nat&uuml;rlichen Person sind. &bdquo;Verarbeitung&ldquo; ist jeder mit oder ohne Hilfe automatisierter Verfahren ausgef&uuml;hrte Vorgang oder jede solche Vorgangsreihe im Zusammenhang mit personenbezogenen Daten. Der Begriff reicht weit und umfasst praktisch jeden Umgang mit Daten. &bdquo;Pseudonymisierung&ldquo; die Verarbeitung personenbezogener Daten in einer Weise, dass die personenbezogenen Daten ohne Hinzuziehung zus&auml;tzlicher Informationen nicht mehr einer spezifischen betroffenen Person zugeordnet werden k&ouml;nnen, sofern diese zus&auml;tzlichen Informationen gesondert aufbewahrt werden und technischen und organisatorischen Ma&szlig;nahmen unterliegen, die gew&auml;hrleisten, dass die personenbezogenen Daten nicht einer identifizierten oder identifizierbaren nat&uuml;rlichen Person zugewiesen werden. &bdquo;Profiling&ldquo; jede Art der automatisierten Verarbeitung personenbezogener Daten, die darin besteht, dass diese personenbezogenen Daten verwendet werden, um bestimmte pers&ouml;nliche Aspekte, die sich auf eine nat&uuml;rliche Person beziehen, zu bewerten, insbesondere um Aspekte bez&uuml;glich Arbeitsleistung, wirtschaftliche Lage, Gesundheit, pers&ouml;nliche Vorlieben, Interessen, Zuverl&auml;ssigkeit, Verhalten, Aufenthaltsort oder Ortswechsel dieser nat&uuml;rlichen Person zu analysieren oder vorherzusagen. Als &bdquo;Verantwortlicher&ldquo; wird die nat&uuml;rliche oder juristische Person, Beh&ouml;rde, Einrichtung oder andere Stelle, die allein oder gemeinsam mit anderen &uuml;ber die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten entscheidet, bezeichnet. &bdquo;Auftragsverarbeiter&ldquo; eine nat&uuml;rliche oder juristische Person, Beh&ouml;rde, Einrichtung oder andere Stelle, die personenbezogene Daten im Auftrag des Verantwortlichen verarbeitet.</p>
     <p>Nach Ma&szlig;gabe des Art. 13 DSGVO teilen wir Ihnen die Rechtsgrundlagen unserer Datenverarbeitungen mit. Sofern die Rechtsgrundlage in der Datenschutzerkl&auml;rung nicht genannt wird, gilt Folgendes: Die Rechtsgrundlage f&uuml;r die Einholung von Einwilligungen ist Art. 6 Abs. 1 lit. a und Art. 7 DSGVO, die Rechtsgrundlage f&uuml;r die Verarbeitung zur Erf&uuml;llung unserer Leistungen und Durchf&uuml;hrung vertraglicher Ma&szlig;nahmen sowie Beantwortung von Anfragen ist Art. 6 Abs. 1 lit. b DSGVO, die Rechtsgrundlage f&uuml;r die Verarbeitung zur Erf&uuml;llung unserer rechtlichen Verpflichtungen ist Art. 6 Abs. 1 lit. c DSGVO, und die Rechtsgrundlage f&uuml;r die Verarbeitung zur Wahrung unserer berechtigten Interessen ist Art. 6 Abs. 1 lit. f DSGVO. F&uuml;r den Fall, dass lebenswichtige Interessen der betroffenen Person oder einer anderen nat&uuml;rlichen Person eine Verarbeitung personenbezogener Daten erforderlich machen, dient Art. 6 Abs. 1 lit. d DSGVO als Rechtsgrundlage.</p>
@@ -192,7 +192,7 @@
             }else{
                 $("a[data-href='"+hash+"']").addClass("open").siblings().removeClass("open");
                 $("a.menu.open").next(".content").slideDown(duration,easing).siblings(".content").slideUp(duration,easing,function(){
-                    $("html,body").animate({scrollTop:$("a[data-href='"+hash+"']").offset().top+2},duration,easing);
+                    //$("html,body").animate({scrollTop:$("a[data-href='"+hash+"']").offset().top+2},duration,easing);
                 });
                 return false;
             }
@@ -211,10 +211,10 @@
 
         // slideshow
         $(".cycle-next").click(function(){
-            $(this).prev(".cycle-slideshow").cycle("next");
+            $(".cycle-slideshow:visible").cycle("next");
         });
         $(".cycle-prev").click(function(){
-            $(this).prev(".cycle-slideshow").cycle("prev");
+            $(".cycle-slideshow:visible").cycle("prev");
         });
         $(".cycle-slideshow").click(function(e){
             if (e.pageX > ($(document).width()/2)) {
