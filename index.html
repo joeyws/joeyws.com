@@ -32,18 +32,18 @@
 	#header{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;padding:10px 20px;}
     #header *{width:auto;white-space:nowrap;}
     .marquee3k{white-space:nowrap;overflow-x:hidden;line-height:1.5em;}
-        .marquee{display:inline-block;background:var(--text);color:var(--background);}
+        .marquee{display:inline-block;background:#0f0;color:;}
             .marquee span{margin-right:1.8em;}
     #timeblink{animation:2s blink steps(1) infinite;}
     @keyframes blink{0%{opacity:0;}50%{opacity:1;}}
     
-    a.menu{box-shadow:inset 0 0 0 rgba(0,0,0,.1);transition:all .6s cubic-bezier(0.16, 1, 0.3, 1);font-family:webfont2,sans-serif;text-transform:uppercase;font-size:3em;border-top:1px solid var(--text);padding:20px;display:block;line-height:1em;}
+    a.menu{box-shadow:inset 0 0 0 #0f0;transition:all .6s cubic-bezier(0.16, 1, 0.3, 1);font-family:webfont2,sans-serif;text-transform:uppercase;font-size:3em;border-top:1px solid var(--text);padding:20px;display:block;line-height:1em;}
     a.menu span{transition:all .4s cubic-bezier(0.16, 1, 0.3, 1);transform:scaleX(1.43);display:inline-block;transform-origin:left center;}
     a.menu span:before{content:"";width:16px;height:16px;margin:13px 0 0 -50px;opacity:0;transform:scaleX(.7);position:absolute;transition:all .4s cubic-bezier(0.16, 1, 0.3, 1);display:inline-block;background:transparent url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" style="transform:scaleX(-1);"><polygon points="0,8 8,0 10,0 2.707,7.293 16,7.293 16,8.707 2.707,8.707 10,16 8,16"/></svg>') center center no-repeat scroll;}
-    a.menu:hover{/*box-shadow:inset 0 2.4em 0 #000;*/}
+    a.menu:hover{/*box-shadow:inset 0 2.4em 0 #0f0;*/}
     a.menu:hover span,a.menu.open span{padding-left:25px;}
     a.menu:hover span:before,a.menu.open span:before{opacity:1;margin-left:-26px;}
-    a.menu.open{box-shadow:inset 0 0 0 rgba(0,0,0,.1);color:var(--text);}
+    a.menu.open{box-shadow:inset 0 0 0 #0f0;color:var(--text);}
     a.menu.open span{}
     a.menu.open span:before{transform:rotate(90deg) scaleY(.7);}
     
@@ -108,18 +108,18 @@
     <div id="cycle-places" class="cycle-slideshow" data-cycle-center-horz="false" data-cycle-center-vert="false"
         data-cycle-swipe="true" data-cycle-easing="easeOutCubic" data-cycle-caption="#cycle-caption-places"
         data-cycle-caption-template="{{slideNum}}/{{slideCount}}</p><p>{{alt}}">
-        <img src="img/24.jpg" alt="Photo &ldquo;Creek&rdquo;" />
-        <img loading="lazy" src="img/22.jpg" alt="Photo &ldquo;Flora&rdquo;" />
-        <img loading="lazy" src="img/19.jpg" alt="Photo &ldquo;Switzerland&rdquo;" />
-        <img loading="lazy" src="img/18.jpg" alt="Photo &ldquo;Death Valley&rdquo;" />
-        <img loading="lazy" src="img/17.jpg" alt="Photo &ldquo;Campfire in a sandy forest&rdquo;" />
-        <img loading="lazy" src="img/7.jpg" alt="Photo &ldquo;S&ocirc;ng Ng&agrave;n Ph&#7889;&rdquo;" />
-        <img loading="lazy" src="img/6.jpg" alt="Photo &ldquo;Eel soup&rdquo;" />
-        <img loading="lazy" src="img/5.jpg" alt="Photo &ldquo;H&#432;&#x01A1;ng S&#x01A1;n&rdquo;" />
-        <img loading="lazy" src="img/4.jpg" alt="Photo &ldquo;Merano&rdquo;" />
-        <img loading="lazy" src="img/3.jpg" alt="Photo &ldquo;J&ouml;kuls&aacute;rl&oacute;n&rdquo;" />
-        <img loading="lazy" src="img/2.jpg" alt="Photo &ldquo;N&yacute;idalur&rdquo;" />
-        <img loading="lazy" src="img/1.jpg" alt="Photo &ldquo;Fog&rdquo;" />
+        <img src="img/24.jpg" alt="Creek" />
+        <img loading="lazy" src="img/22.jpg" alt="Flora" />
+        <img loading="lazy" src="img/19.jpg" alt="Switzerland" />
+        <img loading="lazy" src="img/18.jpg" alt="Death Valley" />
+        <img loading="lazy" src="img/17.jpg" alt="Campfire in a sandy forest" />
+        <img loading="lazy" src="img/7.jpg" alt="S&ocirc;ng Ng&agrave;n Ph&#7889;" />
+        <img loading="lazy" src="img/6.jpg" alt="Eel soup" />
+        <img loading="lazy" src="img/5.jpg" alt="H&#432;&#x01A1;ng S&#x01A1;n" />
+        <img loading="lazy" src="img/4.jpg" alt="Merano" />
+        <img loading="lazy" src="img/3.jpg" alt="J&ouml;kuls&aacute;rl&oacute;n" />
+        <img loading="lazy" src="img/2.jpg" alt="N&yacute;idalur" />
+        <img loading="lazy" src="img/1.jpg" alt="Fog" />
     </div>
     <p><a href="javascript:;" class="cycle-prev">Prev</a> <a href="javascript:;" class="cycle-next">next</a> <span id="cycle-caption-places"></span></p>
 </div>
