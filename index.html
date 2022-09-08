@@ -10,6 +10,7 @@
 --><head>
 <title>Joey W. Schweickhardt</title>
 <link rel="shortcut icon" type="image/x-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='32' width='32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%23000000' /%3E%3C/svg%3E">
+<link rel="stylesheet" href="keen-slider.min.css">
 <meta charset="utf-8"><meta name="robots" content="index,nofollow,notranslate,noimageindex"><meta name="description" content="Personal web page of Joey Schweickhardt, Stuttgart, Germany"><meta name="keywords" content="schweickhardt,joey,stuttgart,joeyws,william"><meta name="geo.region" content="DE-BW"><meta name="geo.placename" content="Stuttgart"><meta name="geo.position" content="48.778600;9.179746"><meta name="ICBM" content="48.778600, 9.179746"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,shrink-to-fit=no"><meta name="format-detection" content="telephone=no">
 <style>
     @font-face{font-family:webfont2;src:url("font/texgyreheros-bold.otf");} /*NimbusSanL-Bol.otf font/SourceCodePro-Regular.ttf  gnu-free-font/FreeSans.ttf texgyreheros-regular.otf NimbusRomNo9L-Reg.otf Libre_Franklin/LibreFranklin-Bold.ttf*/
@@ -17,11 +18,11 @@
     :root{--background:#eee;--text:#000;}
     ::-moz-selection{background:var(--background);color:var(--text);}
     ::selection{background:var(--background);color:var(--text);}
-    ::-webkit-scrollbar{width:8px;background:rgba(0,0,0,.1);}
+    ::-webkit-scrollbar{width:8px;height:0;background:rgba(0,0,0,.1);}
     ::-webkit-scrollbar-thumb{background:var(--text);/*outline-offset:-5px;outline:1px solid var(--text);border-radius:8px;*/}
     /* RESET */*{user-select:none;font-kerning:normal;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-appearance:none;border-radius:0;-webkit-border-radius:0;box-sizing:content-box;font-smoothing:antialiased;-moz-osx-font-smoothing: grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased;}
 	html,body{background:var(--background);}
-    html,body,a{cursor:url("data:image/svg+xml,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='12' height='12' x='0px' y='0px' viewBox='0 0 12 12' xml:space='preserve'%3E%3Ccircle cx='6' cy='6' r='6'/%3E%3C/svg%3E") 6 6, auto;}
+    html,body,a,*:active,*:focus{cursor:url('data:image/svg+xml,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="12" x="0px" y="0px" viewBox="0 0 12 12" xml:space="preserve"><circle cx="6" cy="6" r="6"/></svg>') 6 6, auto;}
     body{color:var(--text);font:normal normal 13px/1.4em webfont,"Courier New",Courier,monospace;min-height:120vh;}
 	h1{display:inline-block;font-family:webfont2,sans-serif;transform:scaleY(.7);transform-origin:center center;text-transform:uppercase;font-size:1.5em;}
     .loading{animation:.3s blink steps(1) infinite;}
@@ -37,7 +38,7 @@
     #timeblink{animation:2s blink steps(1) infinite;}
     @keyframes blink{0%{opacity:0;}50%{opacity:1;}}
     
-    a.menu{/*box-shadow:inset 0 0 0 var(--text);*/transition:all .6s cubic-bezier(0.16, 1, 0.3, 1);font-family:webfont2,sans-serif;text-transform:uppercase;font-size:3em;border-top:1px solid var(--text);padding:20px;display:block;line-height:1em;}
+    a.menu{/*box-shadow:inset 0 0 0 var(--text);*/transition:all .6s cubic-bezier(0.16, 1, 0.3, 1);font-family:webfont2,sans-serif;text-transform:uppercase;font-size:2.4em;border-top:1px solid var(--text);padding:20px;display:block;line-height:1em;}
         a.menu span{/*mix-blend-mode:difference;color:white;*/transition:all .4s cubic-bezier(0.16, 1, 0.3, 1);transform:scaleX(1.43);display:inline-block;transform-origin:left center;}
         /*a.menu span:before{content:"";width:16px;height:16px;margin:.32em 0 0 -50px;opacity:0;transform:scaleX(.7);position:absolute;transition:all .4s cubic-bezier(0.16, 1, 0.3, 1);display:inline-block;background:transparent url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" style="transform:scaleX(-1);"><polygon points="0,8 8,0 10,0 2.707,7.293 16,7.293 16,8.707 2.707,8.707 10,16 8,16"/></svg>') center center no-repeat scroll;}*/
     a.menu:hover{/*background:var(--text);*//*box-shadow:inset 0 2.4em 0 var(--text);*/}
@@ -57,6 +58,11 @@
         .cycle-slideshow.prev{cursor:url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><polygon points="0,8 8,0 10,0 2.707,7.293 16,7.293 16,8.707 2.707,8.707 10,16 8,16"/></svg>') 8 8,auto;}
         .cycle-slideshow.next{cursor:url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" style="transform:scaleX(-1);"><polygon points="0,8 8,0 10,0 2.707,7.293 16,7.293 16,8.707 2.707,8.707 10,16 8,16"/></svg>') 8 8,auto;}
         .cycle-slideshow img{max-width:100%;max-height:500px;}
+    
+    .slider{font-size:0;line-height:0;overflow:auto;display:flex;margin:0 -20px;gap:20px;}
+    .slider img{height:500px;}
+    .slider img:first-child{padding-left:20px;}
+    .slider img:last-child{padding-right:20px;}
 </style>
 </head>
 <body>
@@ -105,9 +111,7 @@
 </div>
 <a class="menu" href="javascript:;" data-href="#/places"><span>Places</span></a>
 <div class="content">
-    <div id="cycle-places" class="cycle-slideshow" data-cycle-center-horz="false" data-cycle-center-vert="false"
-        data-cycle-swipe="true" data-cycle-easing="easeOutCubic" data-cycle-caption="#cycle-caption-places"
-        data-cycle-caption-template="{{slideNum}}/{{slideCount}}</p><p>{{alt}}">
+    <div class="slider">
         <img src="img/27.jpg" alt="Clouds" />
         <img loading="lazy" src="img/24.jpg" alt="Creek" />
         <img loading="lazy" src="img/22.jpg" alt="Flora" />
@@ -122,11 +126,11 @@
         <img loading="lazy" src="img/2.jpg" alt="N&yacute;idalur" />
         <img loading="lazy" src="img/1.jpg" alt="Fog" />
     </div>
-    <p><a href="javascript:;" class="cycle-prev">Prev</a> <a href="javascript:;" class="cycle-next">next</a> <span id="cycle-caption-places"></span></p>
+    <!--<p><a href="javascript:;" class="cycle-prev">Prev</a> <a href="javascript:;" class="cycle-next">next</a> <span id="cycle-caption-places"></span></p>-->
 </div>
 <a class="menu" href="javascript:;" data-href="#/about"><span>About</span></a>
-<div class="content" style="max-width:660px;">
-    <!--<p>Joey studies architecture and urban planning at the University of Stuttgart and the Politecnico di Milano. He worked at Werner Sobek and Behnisch Architekten.</p>-->
+<div class="content" style="max-width:500px;">
+    <!--<p>Joey studies architecture and urban planning at the University of Stuttgart and the Politecnico di Milano. He gained experience at Werner Sobek and Behnisch Architekten.</p>-->
     <p>Joey W. Schweickhardt<br><span class="address1"></span><br><span class="address2"></span><br><a class="phone"></a><br><a class="email"></a></p>
     <p>Hosted on <a href="https://github.com/" rel="nofollow">GitHub</a><br>Weather by <a href="https://www.bbc.com/weather" rel="nofollow">BBC Weather</a><!--<br>Privacy policy by <a href="https://www.e-recht24.de/" rel="nofollow">eRecht24</a>--><br>Hand-coded with <?xml version="1.0" ?><svg style="vertical-align:-15%;height:1em;width:1em;fill:red;" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" fill-rule="evenodd"/></svg></p>
     <!--<p id="privacy">Datenschutzerk&auml;rung:<br>Diese Datenschutzerkl&auml;rung kl&auml;rt Sie &uuml;ber die Art, den Umfang und Zweck der Verarbeitung von personenbezogenen Daten, nachfolgend kurz &bdquo;Daten&ldquo;, innerhalb unseres Onlineangebotes und der mit ihm verbundenen Webseiten, Funktionen und Inhalte sowie externen Onlinepr&auml;senzen, wie z.B. unsere Social-Media-Profile auf, nachfolgend gemeinsam bezeichnet als &bdquo;Onlineangebot&ldquo;. Im Hinblick auf die verwendeten Begrifflichkeiten, wie z.B. &bdquo;Verarbeitung&ldquo; oder &bdquo;Verantwortlicher&ldquo; verweisen wir auf die Definitionen im Art. 4 der Datenschutzgrundverordnung (DSGVO). Arten der verarbeiteten Daten k&ouml;nnen Bestandsdaten (z.B. Namen, Adressen), Kontaktdaten (z.B. Email, Telefonnummern), Inhaltsdaten (z.B. Texteingaben, Fotografien, Videos), Nutzungsdaten (z.B. besuchte Webseiten, Interesse an Inhalten, Zugriffszeiten) und Meta-/Kommunikationsdaten (z.B. Ger&auml;te-Informationen, IP-Adressen) sein.</p>
@@ -166,7 +170,7 @@
             Marquee3k.init();
             refreshHash();
         });
-
+        
         // menu
         /*$("a.menu").on("click",function(){
             $(this).toggleClass("open").siblings(".menu").removeClass("open");
