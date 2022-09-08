@@ -59,10 +59,10 @@
         .cycle-slideshow.next{cursor:url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" style="transform:scaleX(-1);"><polygon points="0,8 8,0 10,0 2.707,7.293 16,7.293 16,8.707 2.707,8.707 10,16 8,16"/></svg>') 8 8,auto;}
         .cycle-slideshow img{max-width:100%;max-height:500px;}
     
-    .slider{font-size:0;line-height:0;overflow:auto;display:flex;margin:0 -20px;gap:20px;}
+    /*.slider{font-size:0;line-height:0;overflow:auto;display:flex;margin:0 -20px;gap:20px;}
     .slider img{max-height:min(500px,50vh);}
     .slider img:first-child{padding-left:20px;}
-    .slider img:last-child{padding-right:20px;}
+    .slider img:last-child{padding-right:20px;}*/
 </style>
 </head>
 <body>
@@ -88,7 +88,7 @@
 </div>
 <a class="menu" href="javascript:;" data-href="#/works"><span>Works</span></a>
 <div class="content">
-    <div id="cycle-works" class="cycle-slideshow" data-cycle-center-horz="false" data-cycle-center-vert="false"
+    <div id="cycle-works" class="cycle-slideshow"
         data-cycle-swipe="true" data-cycle-easing="easeOutCubic" data-cycle-caption="#cycle-caption-works"
         data-cycle-caption-template="{{slideNum}}/{{slideCount}}</p><p>{{alt}}">
         <img src="img/26.jpg" alt="Pneu structures" />
@@ -111,7 +111,9 @@
 </div>
 <a class="menu" href="javascript:;" data-href="#/places"><span>Places</span></a>
 <div class="content">
-    <div class="slider">
+    <div id="cycle-places" class="cycle-slideshow"
+    data-cycle-swipe="true" data-cycle-easing="easeOutCubic" data-cycle-caption="#cycle-caption-places"
+    data-cycle-caption-template="{{slideNum}}/{{slideCount}}</p><p>{{alt}}">
         <img src="img/27.jpg" alt="Clouds" />
         <img loading="lazy" src="img/24.jpg" alt="Creek" />
         <img loading="lazy" src="img/22.jpg" alt="Flora" />
@@ -126,7 +128,7 @@
         <img loading="lazy" src="img/2.jpg" alt="N&yacute;idalur" />
         <img loading="lazy" src="img/1.jpg" alt="Fog" />
     </div>
-    <!--<p><a href="javascript:;" class="cycle-prev">Prev</a> <a href="javascript:;" class="cycle-next">next</a> <span id="cycle-caption-places"></span></p>-->
+    <p><a href="javascript:;" class="cycle-prev">Prev</a> <a href="javascript:;" class="cycle-next">next</a> <span id="cycle-caption-places"></span></p>
 </div>
 <a class="menu" href="javascript:;" data-href="#/about"><span>About</span></a>
 <div class="content" style="max-width:500px;">
