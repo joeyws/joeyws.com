@@ -13,9 +13,10 @@
 <link rel="stylesheet" href="keen-slider.min.css">
 <meta charset="utf-8"><meta name="robots" content="index,nofollow,notranslate,noimageindex"><meta name="description" content="Welcome to the personal web page of Joey W. Schweickhardt."><meta name="keywords" content="schweickhardt,joey,stuttgart,joeyws,william"><meta name="geo.region" content="DE-BW"><meta name="geo.placename" content="Stuttgart"><meta name="geo.position" content="48.778600;9.179746"><meta name="ICBM" content="48.778600, 9.179746"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,shrink-to-fit=no"><meta name="format-detection" content="telephone=no">
 <style>
+    @font-face{font-family:webfont3;src:url("font/EB_Garamond/EBGaramond-Regular.ttf");} /*Inter-Medium.ttf   font/RobotoMono/RobotoMono-Regular.ttf   IBM-Plex-Mono/IBMPlexMono-Text.otf   CourierPrime-Regular.ttf   SourceCodePro-Medium.ttf*/
     @font-face{font-family:webfont2;src:url("font/TeX-Gyre-Heros/texgyreheros-bold.otf");} /*NimbusSanL-Bol.otf   SourceCodePro-Regular.ttf  gnu-free-font/FreeSans.ttf   texgyreheros-regular.otf   NimbusRomNo9L-Reg.otf   Libre_Franklin/LibreFranklin-Bold.ttf*/
     @font-face{font-family:webfont;src:url("font/Source_Code_Pro/SourceCodePro-Medium.ttf");} /*Inter-Medium.ttf   font/RobotoMono/RobotoMono-Regular.ttf   IBM-Plex-Mono/IBMPlexMono-Text.otf   CourierPrime-Regular.ttf   SourceCodePro-Medium.ttf*/
-    :root{--background:#eee;--text:#000;}
+    :root{--background:#fff;--text:#000;}
     ::-moz-selection{background:var(--background);color:var(--text);}
     ::selection{background:var(--background);color:var(--text);}
     ::-webkit-scrollbar{width:8px;height:0;background:rgba(0,0,0,.1);}
@@ -38,11 +39,12 @@
     #timeblink{animation:2s blink steps(1) infinite;}
     @keyframes blink{0%{opacity:0;}50%{opacity:1;}}
     
-    a.menu{/*box-shadow:inset 0 0 0 var(--text);*//*transition:all .6s cubic-bezier(0.16, 1, 0.3, 1);*/font-family:webfont2,sans-serif;text-transform:uppercase;font-size:1.8em;border-top:1px solid var(--text);padding:20px 15px;display:block;line-height:1em;}
-        a.menu span{/*mix-blend-mode:difference;color:white;*/transform:scaleX(1.4);display:inline-block;transform-origin:left center;}
+    a.menu{/*box-shadow:inset 0 0 0 var(--text);*//*transition:all .6s cubic-bezier(0.16, 1, 0.3, 1);*/font-family:webfont2,sans-serif;text-transform:uppercase;font-size:2em;border-top:1px solid var(--text);padding:20px 15px;display:block;line-height:1em;}
+        a.menu span{transition:all .6s cubic-bezier(0.16, 1, 0.3, 1);transform:scaleX(1.4);display:inline-block;transform-origin:left center;}
     a.menu:hover{/*background:var(--text);*//*box-shadow:inset 0 2.4em 0 var(--text);*/}
-        a.menu:hover span{text-decoration:underline;}
+        a.menu:hover span{padding-left:10px;}
     a.menu.open{background:inherit;animation:none;/*box-shadow:inset 0 0 0 var(--text);*/}
+        a.menu.open span{padding:0;}
     
     .content{display:none;padding:0 15px 100px 15px;}
         .content a,#header a{text-decoration:underline;}
