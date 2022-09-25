@@ -10,16 +10,15 @@
 --><head>
 <title>Joey W. Schweickhardt</title>
 <link rel="shortcut icon" type="image/x-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='32' width='32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%23000000' /%3E%3C/svg%3E">
-<link rel="stylesheet" href="keen-slider.min.css">
 <meta charset="utf-8"><meta name="robots" content="index,nofollow,notranslate,noimageindex"><meta name="description" content="Welcome to the personal web page of Joey W. Schweickhardt."><meta name="keywords" content="schweickhardt,joey,stuttgart,joeyws,william"><meta name="geo.region" content="DE-BW"><meta name="geo.placename" content="Stuttgart"><meta name="geo.position" content="48.778600;9.179746"><meta name="ICBM" content="48.778600, 9.179746"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,shrink-to-fit=no"><meta name="format-detection" content="telephone=no">
 <style>
     @font-face{font-family:webfont;src:url("font/Source_Code_Pro/SourceCodePro-Medium.ttf");} /*Inter-Medium   font/RobotoMono/RobotoMono-Regular   IBM-Plex-Mono/IBMPlexMono-Text   CourierPrime-Regular   SourceCodePro-Medium*/
     @font-face{font-family:webfont2;src:url("font/TeX-Gyre-Heros/texgyreheros-bold.otf");} /*Coconat-BoldExt   texgyreheros-bold   NimbusSanL-Bol   SourceCodePro-Regular  gnu-free-font/FreeSans   texgyreheros-regular   NimbusRomNo9L-Reg   Libre_Franklin/LibreFranklin-Bold*/
     @font-face{font-family:webfont3;src:url("font/Archivo-Bold.ttf");}
-    :root{--background:#fff;--text:#000;--highlight:rgba(0,0,0,.1);}
+    :root{--background:#fff;--text:#000;--highlight:#0f0;}
     ::-moz-selection{background:var(--background);color:var(--text);}
     ::selection{background:var(--background);color:var(--text);}
-    ::-webkit-scrollbar{width:8px;height:0;background:var(--highlight);}
+    ::-webkit-scrollbar{width:8px;height:0;background:rgba(0,0,0,.1);}
     ::-webkit-scrollbar-thumb{background:var(--text);}
     /* RESET */*{user-select:none;font-kerning:normal;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-appearance:none;border-radius:0;-webkit-border-radius:0;box-sizing:content-box;font-smoothing:antialiased;-moz-osx-font-smoothing: grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased;}
 	html,body{background:var(--background);}
@@ -41,15 +40,15 @@
     @keyframes color{0%{color:#f00;text-shadow:inset 0 0 .1em #f00;}33%{color:#0ff;text-shadow:inset 0 0 .1em #0ff;}67%{color:#ff0;text-shadow:inset 0 0 .1em #ff0;}}
     
     a.menu{font-family:webfont2,sans-serif;font-size:2.8em !important;text-transform:uppercase;border-top:1px solid var(--text);padding:15px;display:block;line-height:1em;}
-        a.menu span{border-radius:80vmax;transition:all .6s cubic-bezier(0.16, 1, 0.3, 1);transform:scaleY(.71);transform-origin:left center;display:inline-block;}
+        a.menu span{/*transition:all .6s cubic-bezier(0.16, 1, 0.3, 1);*/transform:scaleY(.71);transform-origin:left center;display:inline-block;}
     a.menu:hover{}
-        a.menu:hover span{padding-left:10px;}
+        a.menu:hover span{text-decoration:underline;}
     a.menu.open{}
-        a.menu.open span{padding-left:0;}
+        a.menu.open span{}
     
     .content{display:none;padding:0 15px 100px 15px;}
-        .content a,#header a{background:var(--highlight);border-radius:100vmax;padding:0 4px;box-shadow:inset 0 0 var(--text);transition:all .25s cubic-bezier(0.16, 1, 0.3, 1);}
-        .content a:hover,#header a:hover{box-shadow:inset 0 -1.5em var(--text);color:var(--background);/* filter:blur(.22em); */}
+        .content a,#header a{background:var(--text);color:var(--background);border-radius:100vmax;padding:0 4px;transition:all .3s cubic-bezier(0.16, 1, 0.3, 1);}
+        .content a:hover,#header a:hover{background:var(--highlight);color:var(--text);/* filter:blur(.22em); */}
 
     video{display:block;outline:none;}
     
@@ -58,7 +57,7 @@
         .cycle-slideshow.next{cursor:url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" style="transform:scaleX(-1);"><polygon points="0,8 8,0 10,0 2.707,7.293 16,7.293 16,8.707 2.707,8.707 10,16 8,16"/></svg>') 8 8,auto;}
         .cycle-slideshow img{max-width:100%;max-height:500px;}
         .cycle-prev,.cycle-next{background:var(--text);background-clip:padding-box;}
-        .cycle-prev{border-radius:100vmax 0 0 100vmax !important;margin-right:1px;}
+        .cycle-prev{border-radius:100vmax 0 0 100vmax !important;border-right:1px solid #fff4;}
         .cycle-next{border-radius:0 100vmax 100vmax 0 !important;}
 </style>
 </head>
