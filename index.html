@@ -15,7 +15,7 @@
     @font-face{font-family:webfont;src:url("font/Source_Code_Pro/SourceCodePro-Medium.ttf");} /*Inter-Medium   font/RobotoMono/RobotoMono-Regular   IBM-Plex-Mono/IBMPlexMono-Text   CourierPrime-Regular   SourceCodePro-Medium*/
     @font-face{font-family:webfont2;src:url("font/TeX-Gyre-Heros/texgyreheros-bold.otf");} /*Coconat-BoldExt   texgyreheros-bold   NimbusSanL-Bol   SourceCodePro-Regular  gnu-free-font/FreeSans   texgyreheros-regular   NimbusRomNo9L-Reg   Libre_Franklin/LibreFranklin-Bold*/
     @font-face{font-family:webfont3;src:url("font/Archivo-Bold.ttf");}
-    :root{--background:#fff;--text:#000;}
+    :root{--background:#ccc;--text:#000;}
     ::-moz-selection{background:var(--background);color:var(--text);}
     ::selection{background:var(--background);color:var(--text);}
     ::-webkit-scrollbar{width:8px;height:0;background:rgba(0,0,0,.08);}
@@ -47,8 +47,8 @@
         a.menu.open span{}
     
     .content{display:none;padding:0 15px 100px 15px;}
-        .content a,#header a{background:rgba(0,0,0,.08);border-radius:100vmax;padding:0 4px;transition:all .4s cubic-bezier(0.16, 1, 0.3, 1);}
-        .content a:hover,#header a:hover{background:#0f0;color:var(--text);/* filter:blur(.22em); */}
+        .content a,#header a{background:#0002;border-radius:4px;padding:0 4px;transition:all .4s cubic-bezier(0.16, 1, 0.3, 1);}
+        .content a:hover,#header a:hover{background:#0f0;/* filter:blur(.22em); */}
 
     video{display:block;outline:none;}
     
@@ -56,9 +56,9 @@
         .cycle-slideshow.prev{cursor:url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><polygon points="0,8 8,0 10,0 2.707,7.293 16,7.293 16,8.707 2.707,8.707 10,16 8,16"/></svg>') 8 8,auto;}
         .cycle-slideshow.next{cursor:url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" style="transform:scaleX(-1);"><polygon points="0,8 8,0 10,0 2.707,7.293 16,7.293 16,8.707 2.707,8.707 10,16 8,16"/></svg>') 8 8,auto;}
         .cycle-slideshow img{max-width:100%;max-height:500px;}
-        .cycle-prev,.cycle-next{background:var(--text);background-clip:padding-box;}
-        .cycle-prev{border-radius:100vmax 0 0 100vmax !important;margin-right:1px;}
-        .cycle-next{border-radius:0 100vmax 100vmax 0 !important;}
+        .cycle-prev,.cycle-next{background-clip:padding-box;}
+        .cycle-prev{border-radius:4px 0 0 4px !important;margin-right:1px;}
+        .cycle-next{border-radius:0 4px 4px 0 !important;}
 </style>
 </head>
 <body>
