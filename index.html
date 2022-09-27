@@ -35,16 +35,17 @@
     body .marquee3k{white-space:nowrap;overflow-x:hidden;line-height:1.5em;}
     body > .marquee3k .marquee{background:var(--text);color:var(--background);}
     body > .marquee3k .marquee span{margin-right:2em;}
-    #timeblink{animation:2s blink steps(1) infinite;}
+    #time-blink{animation:2s blink steps(1) infinite;}
     @keyframes blink{0%{opacity:0;}50%{opacity:1;}}
     @keyframes color{0%{color:#f00;text-shadow:inset 0 0 .1em #f00;}33%{color:#0ff;text-shadow:inset 0 0 .1em #0ff;}67%{color:#ff0;text-shadow:inset 0 0 .1em #ff0;}}
     
-    a.menu{font-family:webfont2,sans-serif;font-size:2.6em !important;text-transform:uppercase;border-top:1px solid var(--text);padding:15px;display:block;line-height:1em;}
-    a.menu span{/*transition:all .6s cubic-bezier(0.16, 1, 0.3, 1);*/transform:scaleY(.72);transform-origin:left center;display:inline-block;}
+    a.menu{font-family:webfont2,sans-serif;font-size:2em !important;text-transform:uppercase;border-top:1px solid var(--text);padding:15px;display:block;line-height:1em;}
+    a.menu span{transform:scaleY(.72);transform-origin:left center;display:inline-block;}
     a.menu:hover{}
-    a.menu:hover span{text-decoration:underline;/*text-decoration-thickness:2px;*/text-underline-offset:4px;}
+    a.menu:hover span{text-decoration:underline;text-underline-offset:4px;text-decoration-color:#f009;text-decoration-thickness:3px;}
     a.menu.open{padding-bottom:15px;}
     a.menu.open span{}
+    a.menu.open:hover span{text-decoration:line-through;text-decoration-color:#f009;text-decoration-thickness:3px;}
     
     .content{display:none;padding:0 15px 100px 15px;}
     .content a,#header a{background:#0002;border-radius:5px;padding:0 4px;transition:all .15s;}
@@ -71,7 +72,7 @@
     <h1 class="loading">Joey W. Schweickhardt</h1>
     <div><a href="https://www.instagram.com/joeyws/">Instagram</a> <a href="https://www.linkedin.com/in/joeyschweickhardt/">LinkedIn</a></div>
 </div>
-<a class="menu" style="font-size:6.15vw;" href="javascript:;" data-href="#/land-der-echsen"><span>Land der Echsen</span></a>
+<a class="menu" href="javascript:;" data-href="#/land-der-echsen"><span class="test">Land der Echsen</span></a>
 <div class="content">
     <video oncontextmenu="return false;" id="video" poster="img/landderechsen.jpg" tabindex="0" width="792" height="360" style="max-width:100%;max-height:calc((100vw - 20px) / 2.2);" controls preload controlsList="nodownload noplaybackrate" disablePictureInPicture>
         <source src="video/LandDerEchsen1080.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
@@ -82,7 +83,7 @@
     <p style="max-width:660px;">The city council is planning a new quarter on a run-down railroad station site. There are various non-profit institutions housing in old loading halls, which are now forced to move out in order to make room for several new buildings. Suddenly lizards enter the game and endanger the entire undertaking.</p>
     <p style="max-width:660px;">Created as part of the &ldquo;Anti-Stuttgart &mdash; A Determinate Negation&rdquo; <a href="https://www.igma.uni-stuttgart.de/en/institute/">IGmA</a> design studio, in which certain urban developments and procedures were examined critically. The film was being shown at the University of Stuttgart&#8217;s architecture faculty&#8217;s graduate exhibition and at the <a href="http://www.current-stuttgart.de/en">CURRENT festival</a> for art and urban space.</p>
 </div>
-<a class="menu" style="font-size:15vw;" href="javascript:;" data-href="#/works"><span>Works</span></a>
+<a class="menu" href="javascript:;" data-href="#/works"><span>Works</span></a>
 <div class="content">
     <div id="cycle-works" class="cycle-slideshow"
         data-cycle-swipe="true" data-cycle-easing="easeOutCubic" data-cycle-caption="#cycle-caption-works"
@@ -105,7 +106,7 @@
     </div>
     <p><a href="javascript:;" class="cycle-prev">Prev</a><a href="javascript:;" class="cycle-next">next</a> <span id="cycle-caption-works"></span></p>
 </div>
-<a class="menu" style="font-size:15.2vw;" href="javascript:;" data-href="#/places"><span>Places</span></a>
+<a class="menu" href="javascript:;" data-href="#/places"><span>Places</span></a>
 <div class="content">
     <div id="cycle-places" class="cycle-slideshow"
     data-cycle-swipe="true" data-cycle-easing="easeOutCubic" data-cycle-caption="#cycle-caption-places"
@@ -127,7 +128,7 @@
     </div>
     <p><a href="javascript:;" class="cycle-prev">Prev</a><a href="javascript:;" class="cycle-next">next</a> <span id="cycle-caption-places"></span></p>
 </div>
-<a class="menu" style="font-size:16.9vw;" href="javascript:;" data-href="#/about"><span>About</span></a>
+<a class="menu" href="javascript:;" data-href="#/about"><span>About</span></a>
 <div class="content" style="max-width:500px;">
     <p>Joey W. Schweickhardt<br><span class="address1"></span><br><span class="address2"></span><br><a class="phone"></a><br><a class="email"></a></p>
     <p>Hosted on <a href="https://github.com/" rel="nofollow">GitHub</a><br>Weather by <a href="https://www.bbc.com/weather" rel="nofollow">BBC Weather</a><!--<br>Privacy policy by <a href="https://www.e-recht24.de/" rel="nofollow">eRecht24</a>--><br>Hand-coded with <?xml version="1.0" ?><svg style="vertical-align:-10%;height:.8em;width:.8em;fill:red;" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" fill-rule="evenodd"/></svg></p>
@@ -228,7 +229,7 @@
             var s = today.getSeconds();
             m = addZero(m);
             s = addZero(s);
-            $("#time").html(" " + h + "<span id='timeblink'>:</span>" + m + " " + ampm);
+            $("#time").html(" " + h + "<span id='time-blink'>:</span>" + m + " " + ampm);
             t = setTimeout(function() {
                 startTime()
             }, 2000);
