@@ -13,10 +13,10 @@
 <meta charset="utf-8"><meta name="robots" content="index,nofollow,notranslate,noimageindex"><meta name="description" content="Welcome to the personal web page of Joey W. Schweickhardt."><meta name="keywords" content="schweickhardt,joey,stuttgart,joeyws,william"><meta name="geo.region" content="DE-BW"><meta name="geo.placename" content="Stuttgart"><meta name="geo.position" content="48.778600;9.179746"><meta name="ICBM" content="48.778600, 9.179746"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,shrink-to-fit=no"><meta name="format-detection" content="telephone=no">
 <link rel="stylesheet" href="https://use.typekit.net/iup3rhb.css">
 <style>
-    /*@font-face{font-family:webfont;src:url("font/Source_Code_Pro/SourceCodePro-Medium.ttf");} /*Inter-Medium   font/RobotoMono/RobotoMono-Regular   IBM-Plex-Mono/IBMPlexMono-Text   CourierPrime-Regular   SourceCodePro-Medium*/
-    /*@font-face{font-family:webfont2;src:url("font/TeX-Gyre-Heros/texgyreheros-bold.otf");} /*Coconat-BoldExt   texgyreheros-bold   NimbusSanL-Bol   SourceCodePro-Regular  gnu-free-font/FreeSans   texgyreheros-regular   NimbusRomNo9L-Reg   Libre_Franklin/LibreFranklin-Bold*/
+    @font-face{font-family:webfont;src:url("font/Source_Code_Pro/SourceCodePro-Medium.ttf");} /*Inter-Medium   font/RobotoMono/RobotoMono-Regular   IBM-Plex-Mono/IBMPlexMono-Text   CourierPrime-Regular   SourceCodePro-Medium*/
+    @font-face{font-family:webfont2;src:url("font/TeX-Gyre-Heros/texgyreheros-bold.otf");} /*Coconat-BoldExt   texgyreheros-bold   NimbusSanL-Bol   SourceCodePro-Regular  gnu-free-font/FreeSans   texgyreheros-regular   NimbusRomNo9L-Reg   Libre_Franklin/LibreFranklin-Bold*/
     /*@font-face{font-family:webfont3;src:url("font/EB_Garamond/EBGaramond-Italic.ttf");}*/
-    :root{--background:#fff;--text:#000;--spacer:15px;}
+    :root{--background:#ccc;--text:#000;--spacer:15px;}
     ::-moz-selection{background:var(--background);color:var(--text);}
     ::selection{background:var(--background);color:var(--text);}
     ::-webkit-scrollbar{width:8px;height:8px;background:#0001;}
@@ -24,8 +24,9 @@
     /* RESET */*{user-select:none;font-kerning:normal;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-appearance:none;border-radius:0;-webkit-border-radius:0;box-sizing:content-box;font-smoothing:antialiased;-moz-osx-font-smoothing: grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased;}
 	html,body{background:var(--background);}
     html,body,a{cursor:url('data:image/svg+xml,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="12" x="0px" y="0px" viewBox="0 0 12 12" xml:space="preserve"><circle cx="6" cy="6" r="6"/></svg>') 6 6, auto;}
-    body{color:var(--text);letter-spacing:.02em;font:normal 400 13px/1.4em neue-haas-grotesk-text,serif;/*font:normal normal 12px/1.4em aktiv-grotesk,webfont,"Courier New",Courier,monospace;*/min-height:110vh;}
-	h1{display:inline-block;/*font-family:webfont2,sans-serif;font-size:18px;transform:scaleY(.72);transform-origin:center center;text-transform:uppercase;*/}
+    body{color:var(--text);font:normal normal 12px/1.4em webfont,monospace;/*font:normal normal 12px/1.4em aktiv-grotesk,webfont,"Courier New",Courier,monospace;*/min-height:110vh;}
+	h1,a.menu span{font:normal normal 18px/1em webfont2,sans-serif;transform:scaleY(.72);transform-origin:center center;text-transform:uppercase;}
+    h1{display:inline-block;}
     .loading{animation:.3s blink steps(1) infinite;}
     p{margin-top:.6em;}
     p:first-child{margin-top:0;}
@@ -40,27 +41,27 @@
     @keyframes blink{0%{opacity:0;}50%{opacity:1;}}
     @keyframes color{0%{color:#f00;text-shadow:inset 0 0 .1em #f00;}33%{color:#0ff;text-shadow:inset 0 0 .1em #0ff;}67%{color:#ff0;text-shadow:inset 0 0 .1em #ff0;}}
     
-    a.menu{font-size:21px;line-height:1.3em;/*font-family:webfont2,sans-serif;font-size:2em !important;text-transform:uppercase;*/border-top:1px solid var(--text);padding:15px;display:block;line-height:1em;}
-    a.menu span{/*transform:scaleY(.72);*/transform-origin:left center;display:inline-block;}
+    a.menu{border-top:1px solid var(--text);padding:15px;display:block;line-height:1em;}
+    a.menu span{font-size:24px !important;line-height:;display:inline-block;}
     a.menu:hover{}
-    a.menu:hover span{text-decoration:underline;/*text-decoration:underline;text-underline-offset:3px;text-decoration-color:#f00;text-decoration-thickness:3px;*/}
+    a.menu:hover span{text-decoration:underline;text-underline-offset:3px;text-decoration-color:#f009;text-decoration-thickness:3px;}
     a.menu.open{}
     a.menu.open span{}
-    a.menu.open:hover span{/*text-decoration:line-through;text-decoration-color:#f00;text-decoration-thickness:3px;*/}
+    a.menu.open:hover span{text-decoration:line-through;text-decoration-color:#f009;text-decoration-thickness:3px;}
     
     .content{display:none;padding:0 var(--spacer) 100px var(--spacer);}
-    .content a,#header a{text-decoration:underline;/*text-underline-offset:.12em;text-decoration-thickness:1px;background:#0002;border-radius:5px;padding:0 .3em;transition:all .15s;*/}
-    .content a:hover,#header a:hover{filter:blur(.15em);/*background:#0f0;filter:blur(.22em);*/}
+    .content a,#header a{text-underline-offset:.12em;text-decoration-thickness:1px;background:#0002;border-radius:5px;padding:0 .3em;transition:all .15s;}
+    .content a:hover,#header a:hover{background:#0f0;/*filter:blur(.22em);*/}
 
-    video{display:block;outline:none;margin-bottom:var(--spacer);}
-    
+    video,.cycle-slideshow{margin-bottom:var(--spacer);}
+    video{display:block;outline:none;}
     .cycle-slideshow{height:500px;}
     .cycle-slideshow.prev{cursor:url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><polygon points="0,8 8,0 10,0 2.707,7.293 16,7.293 16,8.707 2.707,8.707 10,16 8,16"/></svg>') 8 8,auto;}
     .cycle-slideshow.next{cursor:url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" style="transform:scaleX(-1);"><polygon points="0,8 8,0 10,0 2.707,7.293 16,7.293 16,8.707 2.707,8.707 10,16 8,16"/></svg>') 8 8,auto;}
     .cycle-slideshow img{max-width:100%;max-height:500px;}
-    .cycle-next{margin:0 .2em;}
-    /*.cycle-prev{border-radius:5px 0 0 5px !important;background-clip:padding-box !important;border-right:1px solid #0003;}
-    .cycle-next{border-radius:0 5px 5px 0 !important;}*/
+    /*.cycle-next{margin:0 .2em;}*/
+    .cycle-prev{border-radius:5px 0 0 5px !important;background-clip:padding-box !important;border-right:1px solid #0003;}
+    .cycle-next{border-radius:0 5px 5px 0 !important;}
 </style>
 </head>
 <body>
@@ -71,7 +72,7 @@
 <div id="header">
     <div>Milan<span id="time"></span><span id="weather"></span></div>
     <h1 class="loading">Joey W. Schweickhardt</h1>
-    <div><a href="https://www.instagram.com/joeyws/">Instagram</a>, <a href="https://www.linkedin.com/in/joeyschweickhardt/">LinkedIn</a></div>
+    <div><a href="https://www.instagram.com/joeyws/">Instagram</a> <a href="https://www.linkedin.com/in/joeyschweickhardt/">LinkedIn</a></div>
 </div>
 <a class="menu" href="javascript:;" data-href="#/land-der-echsen"><span class="test">Land der Echsen</span></a>
 <div class="content">
@@ -80,14 +81,14 @@
         <source src="video/LandDerEchsen720.webm" type='video/webm; codecs="vp8, vorbis"' />
         <source src="https://www.dropbox.com/s/mmcykw5nus3m39u/LandDerEchsen1080.ogv?raw=1" type='video/ogg; codecs="theora, vorbis"' />
     </video>
-    <p style="max-width:52em;">The city council is planning a new quarter on a run-down railroad station site. There are various non-profit institutions housing in old loading halls, which are now forced to move out in order to make room for several new buildings. Suddenly lizards enter the game and endanger the entire undertaking.</p>
-    <p style="max-width:52em;">Created as part of the &ldquo;Anti-Stuttgart &mdash; A Determinate Negation&rdquo; <a href="https://www.igma.uni-stuttgart.de/en/institute/">IGmA</a> design studio, in which certain urban developments and procedures were examined critically. The film was being shown at the University of Stuttgart&#8217;s architecture faculty&#8217;s graduate exhibition and at the <a href="http://www.current-stuttgart.de/en">CURRENT festival</a> for art and urban space.</p>
+    <p style="max-width:54em;">The city council is planning a new quarter on a run-down railroad station site. There are various non-profit institutions housing in old loading halls, which are now forced to move out in order to make room for several new buildings. Suddenly lizards enter the game and endanger the entire undertaking.</p>
+    <p style="max-width:54em;">Created as part of the &ldquo;Anti-Stuttgart &mdash; A Determinate Negation&rdquo; <a href="https://www.igma.uni-stuttgart.de/en/institute/">IGmA</a> design studio, in which certain urban developments and procedures were examined critically. The film was being shown at the University of Stuttgart&#8217;s architecture faculty&#8217;s graduate exhibition and at the <a href="http://www.current-stuttgart.de/en">CURRENT festival</a> for art and urban space.</p>
 </div>
 <a class="menu" href="javascript:;" data-href="#/works"><span>Works</span></a>
 <div class="content">
     <div id="cycle-works" class="cycle-slideshow"
         data-cycle-swipe="true" data-cycle-easing="easeOutCubic" data-cycle-caption="#cycle-caption-works"
-        data-cycle-caption-template="{{slideNum}}/{{slideCount}}<br>{{alt}}">
+        data-cycle-caption-template="{{slideNum}}/{{slideCount}}</p><p>{{alt}}">
         <img                src="img/26.jpg" alt="Pneu structures" />
         <img loading="lazy" src="img/25.jpg" alt="Vasikkasaari Climate Institute, Helsinki" />
         <img loading="lazy" src="img/23.jpg" alt="Wardrobe, birch, hand-sewn curtain" />
@@ -104,13 +105,13 @@
         <img loading="lazy" src="img/9.jpg" alt="Tools" />
         <img loading="lazy" src="img/8.jpg" alt="Leichtsinn" />
     </div>
-    <p><a href="javascript:;" class="cycle-prev">Prev</a> <a href="javascript:;" class="cycle-next">next</a> <span id="cycle-caption-works"></span></p>
+    <p><a href="javascript:;" class="cycle-prev">Prev</a><a href="javascript:;" class="cycle-next">next</a> <span id="cycle-caption-works"></span></p>
 </div>
 <a class="menu" href="javascript:;" data-href="#/places"><span>Places</span></a>
 <div class="content">
     <div id="cycle-places" class="cycle-slideshow"
     data-cycle-swipe="true" data-cycle-easing="easeOutCubic" data-cycle-caption="#cycle-caption-places"
-    data-cycle-caption-template="{{slideNum}}/{{slideCount}}<br>{{alt}}">
+    data-cycle-caption-template="{{slideNum}}/{{slideCount}}</p><p>{{alt}}">
         <img                src="img/28.jpg" alt="On golden pond" />
         <img loading="lazy" src="img/27.jpg" alt="Clouds" />
         <img loading="lazy" src="img/24.jpg" alt="Creek" />
@@ -126,7 +127,7 @@
         <img loading="lazy" src="img/2.jpg" alt="N&yacute;idalur" />
         <img loading="lazy" src="img/1.jpg" alt="Fog" />
     </div>
-    <p><a href="javascript:;" class="cycle-prev">Prev</a> <a href="javascript:;" class="cycle-next">next</a> <span id="cycle-caption-places"></span></p>
+    <p><a href="javascript:;" class="cycle-prev">Prev</a><a href="javascript:;" class="cycle-next">next</a> <span id="cycle-caption-places"></span></p>
 </div>
 <a class="menu" href="javascript:;" data-href="#/about"><span>About</span></a>
 <div class="content" style="max-width:500px;">
