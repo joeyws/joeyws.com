@@ -20,14 +20,14 @@
     :root{--background:#fff;--text:#000;--spacer:15px;}
     ::-moz-selection{background:var(--background);color:var(--text);}
     ::selection{background:var(--background);color:var(--text);}
-    ::-webkit-scrollbar{width:8px;height:8px;background:#0002;}
+    ::-webkit-scrollbar{width:8px;height:8px;background:#0001;}
     ::-webkit-scrollbar-thumb{background:var(--text);}
     /* RESET */*{user-select:none;font-kerning:normal;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-appearance:none;border-radius:0;-webkit-border-radius:0;box-sizing:content-box;font-smoothing:antialiased;-moz-osx-font-smoothing: grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased;}
 	html,body{background:var(--background);}
     html,body,a{cursor:url('data:image/svg+xml,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="12" x="0px" y="0px" viewBox="0 0 12 12" xml:space="preserve"><circle cx="6" cy="6" r="6"/></svg>') 6 6, auto;}
     body{color:var(--text);font:normal normal 12px/1.4em webfont,monospace;/*font:normal normal 12px/1.4em webfont,monospace;*/min-height:110vh;}
-	a.menu span{font:normal normal 16px/1em webfont2,sans-serif;letter-spacing:-.01em;transform:scaleY(.72);transform-origin:center center;text-transform:uppercase;}
-    h1{display:inline-block;}
+	h1{}
+    a.menu h2{font:normal normal 18px/1em webfont2,sans-serif;letter-spacing:-.01em;text-transform:uppercase;transform:scaleY(.72);transform-origin:center center;display:inline-block;}
     .loading{animation:.3s blink steps(1) infinite;}
     p{margin-top:.6em;}
     p:first-child{margin-top:0;}
@@ -42,17 +42,16 @@
     @keyframes blink{0%{opacity:0;}50%{opacity:1;}}
     @keyframes color{0%{color:#f00;text-shadow:inset 0 0 .1em #f00;}33%{color:#0ff;text-shadow:inset 0 0 .1em #0ff;}67%{color:#ff0;text-shadow:inset 0 0 .1em #ff0;}}
     
-    a.menu{border-top:1px solid var(--text);padding:15px;display:block;}
-    a.menu span{font-size:18px !important;/*line-height:1em;*/display:inline-block;}
-    a.menu:hover{}
-    a.menu:hover span{color:var(--background);background:var(--text);/*text-decoration:underline;text-underline-offset:.13em;/*text-decoration-color:#f009;*/text-decoration-thickness:2px;}
-    a.menu.open{}
-    a.menu.open span{}
-    a.menu.open:hover span{/*text-decoration:line-through;text-decoration-color:#f009;text-decoration-thickness:3px;*/}
+    a.menu{border-top:1px solid var(--text);padding:15px;display:flex;align-items:center;}
+    a.menu h2{}
+    a.menu span{opacity:.3;margin-left:5px;display:inline-block;}
+    a.menu:hover h2{color:var(--background);background:var(--text);}
+    a.menu.open h2{}
+    a.menu.open:hover h2{}
     
     .content{display:none;padding:0 var(--spacer) 100px var(--spacer);}
     #header a,.content a{text-decoration:underline;/*text-underline-offset:.12em;text-decoration-thickness:1px;background:#0002;border-radius:5px;padding:0 .3em;transition:all .15s;*/}
-    #header a:hover,.content a:hover{/*background:var(--text);color:var(--background);*/filter:blur(.2em);}
+    #header a:hover,.content a:hover{filter:blur(.2em);}
 
     video,.cycle-slideshow{margin-bottom:var(--spacer);}
     video{display:block;outline:none;}
@@ -60,8 +59,7 @@
     .cycle-slideshow.prev{cursor:url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><polygon points="0,8 8,0 10,0 2.707,7.293 16,7.293 16,8.707 2.707,8.707 10,16 8,16"/></svg>') 8 8,auto;}
     .cycle-slideshow.next{cursor:url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" style="transform:scaleX(-1);"><polygon points="0,8 8,0 10,0 2.707,7.293 16,7.293 16,8.707 2.707,8.707 10,16 8,16"/></svg>') 8 8,auto;}
     .cycle-slideshow img{max-width:100%;max-height:500px;}
-    /*.cycle-prev,.cycle-next{}
-    .cycle-prev{border-top-right-radius:0 !important;border-bottom-right-radius:0 !important;background-clip:padding-box !important;border-right:1px solid #0003;}
+    /*.cycle-prev{border-top-right-radius:0 !important;border-bottom-right-radius:0 !important;background-clip:padding-box !important;border-right:1px solid #0003;}
     .cycle-next{border-top-left-radius:0 !important;border-bottom-left-radius:0 !important;}*/
 </style>
 </head>
@@ -75,7 +73,7 @@
     <h1 class="loading">Joey W. Schweickhardt</h1>
     <div><a href="https://www.instagram.com/joeyws/">Instagram</a>, <a href="https://www.linkedin.com/in/joeyschweickhardt/">LinkedIn</a></div>
 </div>
-<a class="menu" href="javascript:;" data-href="#/land-der-echsen"><span class="test">Land der Echsen</span></a>
+<a class="menu" href="javascript:;" data-href="#/land-der-echsen"><h2>Land der Echsen</h2></a>
 <div class="content">
     <video oncontextmenu="return false;" id="video" poster="img/landderechsen.jpg" tabindex="0" width="792" height="360" style="max-width:100%;max-height:calc((100vw - 20px) / 2.2);" controls preload controlsList="nodownload noplaybackrate" disablePictureInPicture>
         <source src="video/LandDerEchsen1080.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
@@ -86,7 +84,7 @@
     <p style="max-width:54em;">Created as part of the &ldquo;Anti-Stuttgart &mdash; A Determinate Negation&rdquo; <a href="https://www.igma.uni-stuttgart.de/en/institute/">IGmA</a> design studio, in which certain urban developments and procedures were examined critically.</p>
     <p style="max-width:54em;">The film was being shown at the University of Stuttgart&#8217;s architecture faculty&#8217;s graduate exhibition and at the <a href="http://www.current-stuttgart.de/en">CURRENT festival</a> for art and urban space.</p>
 </div>
-<a class="menu" href="javascript:;" data-href="#/works"><span>Works</span></a>
+<a class="menu" href="javascript:;" data-href="#/works"><h2>Works</h2><span>(15)</span></a>
 <div class="content">
     <div id="cycle-works" class="cycle-slideshow"
         data-cycle-swipe="true" data-cycle-easing="easeOutCubic" data-cycle-caption="#cycle-caption-works"
@@ -109,7 +107,7 @@
     </div>
     <p><a href="javascript:;" class="cycle-prev">Prev</a> <a href="javascript:;" class="cycle-next">next</a> <span id="cycle-caption-works"></span></p>
 </div>
-<a class="menu" href="javascript:;" data-href="#/places"><span>Places</span></a>
+<a class="menu" href="javascript:;" data-href="#/places"><h2>Places</h2><span>(14)</span></a>
 <div class="content">
     <div id="cycle-places" class="cycle-slideshow"
     data-cycle-swipe="true" data-cycle-easing="easeOutCubic" data-cycle-caption="#cycle-caption-places"
@@ -131,7 +129,7 @@
     </div>
     <p><a href="javascript:;" class="cycle-prev">Prev</a> <a href="javascript:;" class="cycle-next">next</a> <span id="cycle-caption-places"></span></p>
 </div>
-<a class="menu" href="javascript:;" data-href="#/about"><span>About</span></a>
+<a class="menu" href="javascript:;" data-href="#/about"><h2>About</h2></a>
 <div class="content" style="max-width:500px;">
     <p>Joey W. Schweickhardt<br><span class="address1"></span><br><span class="address2"></span><br><a class="phone"></a><br><a class="email"></a></p>
     <p>Hosted on <a href="https://github.com/" rel="nofollow">GitHub</a><br>Weather by <a href="https://www.bbc.com/weather" rel="nofollow">BBC Weather</a><!--<br>Privacy policy by <a href="https://www.e-recht24.de/" rel="nofollow">eRecht24</a>--><br>Hand-coded with <?xml version="1.0" ?><svg style="vertical-align:-5%;height:.7em;width:.7em;fill:red;" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" fill-rule="evenodd"/></svg></p>
@@ -160,7 +158,7 @@
         function refreshHash() {
             var duration = 300;
             var easing = "easeOutCubic";
-            var hash = window.location.hash; // .slice(2);
+            var hash = window.location.hash; //.slice(2);
             if(hash=="" || hash=="#/"){
                 $("html,body").animate({scrollTop:0},duration,easing,function(){
                     $(".menu.open").removeClass("open");
