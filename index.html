@@ -44,7 +44,7 @@
     
     a.menu{border-top:1px solid var(--text);padding:15px;display:flex;align-items:center;}
     a.menu h2{}
-    a.menu span{opacity:.3;margin-left:5px;display:inline-block;}
+    a.menu span{margin-left:8px;display:inline-block;}
     a.menu:hover h2{color:var(--background);background:var(--text);}
     a.menu.open h2{}
     a.menu.open:hover h2{}
@@ -173,14 +173,12 @@
                 return false;
             }
         }
-        $(window).bind("hashchange",function(e){
-            refreshHash();
-        });
+        $(window).bind("hashchange",function(e){refreshHash();});
         $("a.menu").on("click",function(){
-            if($(this).hasClass("open")){
+            if($(this).hasClass("open")) {
                 window.location.hash="/";
                 return false;
-            }else{
+            } else {
                 window.location.hash=$(this).attr("data-href");
             }
         });
@@ -217,7 +215,7 @@
         // time
         function addZero(i) {if (i < 10) {i = "0" + i;} return i;}
         function startTime() {
-            var ampm="";
+            //var ampm = "";
             var today = new Date();
             var n = today.getTimezoneOffset();
             var temp = (0*60)/60;
@@ -231,9 +229,7 @@
             m = addZero(m);
             s = addZero(s);
             $("#time").html(" " + h + "<span id='time-blink'>:</span>" + m + " " + ampm);
-            t = setTimeout(function() {
-                startTime()
-            }, 2000);
+            t = setTimeout(function(){startTime()},2000);
         }
         startTime();
 
@@ -252,7 +248,7 @@
         }
         getRssWeather = (data) => {
             var item = $(data).find("item");
-            if (item.length > 0) {
+            if(item.length > 0) {
                 var weather = $(item).find("description").html();
                 var temperature = weather.split(' ')[1];
                 $("#weather").html(", " + temperature);
@@ -271,7 +267,7 @@
 
     	// keyboard control
     	$(document).keydown(function(e){
-    		if (!($("input,textarea").is(":focus"))) {
+    		if(!($("input,textarea").is(":focus"))) {
                 //e.preventDefault();
     			switch(e.which) {
     			    case 27: break; // esc
