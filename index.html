@@ -34,22 +34,21 @@
     a{text-decoration:none;}
 
 	#header{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;padding:10px 15px;}
-    #header *{width:auto;white-space:nowrap;}
+    #header *{width:auto;white-space:nowrap;margin-right:var(--spacer);}
+    #header *:last-child{margin-right:0;}
     body .marquee3k{white-space:nowrap;overflow-x:hidden;line-height:1.5em;}
     body > .marquee3k .marquee{background:var(--text);color:var(--background);}
     body > .marquee3k .marquee span{margin-right:1.8em;}
     #time-blink{animation:2s blink steps(1) infinite;}
     @keyframes blink{0%{opacity:0;}50%{opacity:1;}}
     @keyframes color{0%{color:#f00;text-shadow:inset 0 0 .1em #f00;}33%{color:#0ff;text-shadow:inset 0 0 .1em #0ff;}67%{color:#ff0;text-shadow:inset 0 0 .1em #ff0;}}
-    
+
     a.menu{border-top:1px solid var(--text);padding:15px;display:flex;align-items:center;}
     a.menu span{margin-left:8px;display:inline-block;}
-    a.menu:hover h2{color:var(--background);background:var(--text);}
-    a.menu.open:hover h2{}
+    a.menu.open h2{}
     
     .content{display:none;padding:0 var(--spacer) 100px var(--spacer);}
     #header a,.content a{text-decoration:underline;/*text-underline-offset:.12em;text-decoration-thickness:1px;background:#0002;border-radius:5px;padding:0 .3em;transition:all .15s;*/}
-    #header a:hover,.content a:hover{filter:blur(.2em);}
 
     video,.cycle-slideshow{margin-bottom:var(--spacer);}
     video{display:block;outline:none;}
@@ -59,6 +58,11 @@
     .cycle-slideshow img{max-width:100%;max-height:500px;}
     /*.cycle-prev{border-top-right-radius:0 !important;border-bottom-right-radius:0 !important;background-clip:padding-box !important;border-right:1px solid #0003;}
     .cycle-next{border-top-left-radius:0 !important;border-bottom-left-radius:0 !important;}*/
+
+    /* nur für devices mit hover */ @media(hover: hover) and (pointer: fine) {
+        a.menu:hover h2{color:var(--background);background:var(--text);}
+        #header a:hover,.content a:hover{filter:blur(.2em);}
+    }
 </style>
 </head>
 <body>
@@ -127,6 +131,10 @@
     </div>
     <p><a href="javascript:;" class="cycle-prev">Prev</a> <a href="javascript:;" class="cycle-next">next</a> <span id="cycle-caption-places"></span></p>
 </div>
+<!--<a class="menu" href="javascript:;" data-href="#/music"><h2>Music</h2></a>
+<div class="content">
+    <iframe style="width:100%;max-width:500px;height:300px;" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/130807438&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+</div>-->
 <a class="menu" href="javascript:;" data-href="#/about"><h2>About</h2></a>
 <div class="content" style="max-width:500px;">
     <p>Joey W. Schweickhardt<br><span class="address1"></span><br><span class="address2"></span><br><a class="phone"></a><br><a class="email"></a></p>
