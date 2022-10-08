@@ -17,7 +17,7 @@
     @font-face{font-family:webfont;src:url("font/Source_Code_Pro/SourceCodePro-Medium.ttf");} /*Inter-Medium   font/RobotoMono/RobotoMono-Regular   IBM-Plex-Mono/IBMPlexMono-Text   CourierPrime-Regular   SourceCodePro-Medium*/
     @font-face{font-family:webfont2;src:url("font/TeX-Gyre-Heros/texgyreheros-bold.otf");} /*Coconat-BoldExt   texgyreheros-bold   NimbusSanL-Bol   SourceCodePro-Regular  gnu-free-font/FreeSans   texgyreheros-regular   NimbusRomNo9L-Reg   Libre_Franklin/LibreFranklin-Bold*/
     /*@font-face{font-family:webfont3;src:url("font/EB_Garamond/EBGaramond-Italic.ttf");}*/
-    :root{--background:#0f0;--text:#000;--spacer:15px;}
+    :root{--background:#ccccc8;--text:#000;--spacer:15px;}
     ::-moz-selection{background:var(--background);color:var(--text);}
     ::selection{background:var(--background);color:var(--text);}
     ::-webkit-scrollbar{width:8px;height:8px;background:#0001;}
@@ -26,14 +26,13 @@
 	html,body{background:var(--background);}
     html,body,a{cursor:url('data:image/svg+xml,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="12" x="0px" y="0px" viewBox="0 0 12 12" xml:space="preserve"><circle cx="6" cy="6" r="6"/></svg>') 6 6, auto;}
     body{color:var(--text);font:normal normal 12px/1.4em webfont,monospace;/*font:normal normal 12px/1.4em webfont,monospace;*/min-height:110vh;}
-	h1{}
-    .loading{animation:.3s blink steps(1) infinite;}
+	.loading{animation:.3s blink steps(1) infinite;}
     p{margin-top:.7em;}
     p:first-child{margin-top:0;}
     a{text-decoration:none;}
 
 	#header{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;padding:10px 15px;}
-    #header > *{width:auto;white-space:nowrap;margin-right:var(--spacer);}
+    #header > *{display:inline-block;width:auto;white-space:nowrap;margin-right:var(--spacer);}
     #header > *:last-child{margin-right:0;}
     body .marquee3k{white-space:nowrap;overflow-x:hidden;line-height:1.5em;}
     body > .marquee3k .marquee{background:var(--text);color:var(--background);}
@@ -44,7 +43,6 @@
 
     a.menu{border-top:1px solid var(--text);padding:15px;display:flex;align-items:center;}
     a.menu h2{transition:.2s;box-shadow:inset 0 0 #000;font:normal normal 18px/1em webfont2,sans-serif;letter-spacing:-.01em;text-transform:uppercase;transform:scaleY(.72);transform-origin:center center;display:inline-block;}
-    /*a.menu span{margin-left:8px;display:inline-block;}*/
     a.menu h2:after{content:"";margin-left:3px;transform:scale(.7);vertical-align:0%;display:inline-block;}
     a.menu:hover h2:after{content:"\25bc";}
     a.menu.open h2:after{content:"\25b2";}
@@ -62,7 +60,6 @@
     .cycle-next{border-top-left-radius:0 !important;border-bottom-left-radius:0 !important;}*/
 
     /* nur für devices mit hover */ @media(hover: hover) {
-        a.menu:hover h2{/*box-shadow:inset 0 -2px #000;/*box-shadow:inset 0 -1.4em #0f0;*/}
         #header a:hover,.content a:hover{box-shadow:inset 0 -1.4em var(--text);color:var(--background);/*filter:blur(.2em);*/}
         /*a.menu h2::after{content:"";display:block;width:0;height:2px;background:var(--text);transition:width .3s;}
         a.menu:hover h2::after,a.menu.open h2::after{width:100%;transition:width .2s;}*/
