@@ -12,11 +12,10 @@
 <title>Joey W. Schweickhardt</title>
 <link rel="shortcut icon" type="image/x-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='32' width='32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%23000000' /%3E%3C/svg%3E">
 <meta charset="utf-8"><meta name="robots" content="index,nofollow,notranslate,noimageindex"><meta name="description" content="Welcome to the personal web page of Joey W. Schweickhardt."><meta name="keywords" content="schweickhardt,joey,stuttgart,joeyws,william"><meta name="geo.region" content="DE-BW"><meta name="geo.placename" content="Stuttgart"><meta name="geo.position" content="48.778600;9.179746"><meta name="ICBM" content="48.778600, 9.179746"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,shrink-to-fit=no"><meta name="format-detection" content="telephone=no">
-<link rel="stylesheet" href="https://use.typekit.net/iup3rhb.css">
+<!-- <link rel="stylesheet" href="https://use.typekit.net/iup3rhb.css"> -->
 <style>
     @font-face{font-family:webfont;src:url("font/Source_Code_Pro/SourceCodePro-Medium.ttf");} /*Inter-Medium   font/RobotoMono/RobotoMono-Regular   IBM-Plex-Mono/IBMPlexMono-Text   CourierPrime-Regular   SourceCodePro-Medium*/
     @font-face{font-family:webfont2;src:url("font/TeX-Gyre-Heros/texgyreheros-bold.otf");} /*Coconat-BoldExt   texgyreheros-bold   NimbusSanL-Bol   SourceCodePro-Regular  gnu-free-font/FreeSans   texgyreheros-regular   NimbusRomNo9L-Reg   Libre_Franklin/LibreFranklin-Bold*/
-    /*@font-face{font-family:webfont3;src:url("font/EB_Garamond/EBGaramond-Italic.ttf");}*/
     :root{--background:#ccccc8;--text:#000;--spacer:15px;}
     ::-moz-selection{background:var(--background);color:var(--text);}
     ::selection{background:var(--background);color:var(--text);}
@@ -25,15 +24,14 @@
     /* RESET */*{user-select:none;font-kerning:normal;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-appearance:none;border-radius:0;-webkit-border-radius:0;box-sizing:content-box;font-smoothing:antialiased;-moz-osx-font-smoothing: grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased;}
 	html,body{background:var(--background);}
     html,body,a{cursor:url('data:image/svg+xml,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="12" x="0px" y="0px" viewBox="0 0 12 12" xml:space="preserve"><circle cx="6" cy="6" r="6"/></svg>') 6 6, auto;}
-    body{color:var(--text);font:normal normal 12px/1.4em webfont,monospace;/*font:normal normal 12px/1.4em webfont,monospace;*/min-height:110vh;}
+    body{color:var(--text);font:normal normal 12px/1.4em webfont,monospace;min-height:110vh;}
 	.loading{animation:.3s blink steps(1) infinite;}
     p{margin-top:.7em;}
     p:first-child{margin-top:0;}
     a{text-decoration:none;}
 
-	#header{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;padding:10px 15px;}
-    #header > *{display:inline-block;width:auto;white-space:nowrap;margin-right:var(--spacer);}
-    #header > *:last-child{margin-right:0;}
+	#header{column-gap:var(--spacer);padding:10px var(--spacer);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;}
+    #header > *{display:inline-block;width:auto;white-space:nowrap;}
     body .marquee3k{white-space:nowrap;overflow-x:hidden;line-height:1.5em;}
     body > .marquee3k .marquee{background:var(--text);color:var(--background);}
     body > .marquee3k .marquee span{margin-right:1.8em;}
@@ -270,7 +268,8 @@
             if(item.length > 0) {
                 var weather = $(item).find("description").html();
                 var temperature = weather.split(' ')[1];
-                $("#weather").html(", " + temperature);
+                var word = $(item).find("title").html().split(" ").slice(4).join(' ').split(" ").slice(0, -2).join(" ").slice(0, -1).toLowerCase();
+                $("#weather").html(", " + temperature + " " + word);
             }
         }
         getXMLFeed("https://weather-broker-cdn.api.bbci.co.uk/en/observation/rss/3173435", getRssWeather); // Stuttgart:2825297 Milan:3173435
