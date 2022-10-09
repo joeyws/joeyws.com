@@ -46,7 +46,7 @@
     a.menu.open h2:after{content:"\25b2";}
     
     .content{display:none;padding:0 var(--spacer) 100px var(--spacer);}
-    #header a,.content a{text-decoration:underline;/*border-radius:100vmax;background:#0002;padding:0 .35em;transition:all .15s;*/}
+    #header a,.content a{/*text-decoration:underline;*/border-radius:100vmax;background:#0002;padding:0 .35em;transition:all .15s;}
 
     video,.cycle-slideshow{margin-bottom:var(--spacer);}
     video{display:block;outline:none;}
@@ -58,7 +58,7 @@
     .cycle-next{border-top-left-radius:0 !important;border-bottom-left-radius:0 !important;}*/
 
     /* nur für devices mit hover */ @media(hover: hover) {
-        #header a:hover,.content a:hover{/*box-shadow:inset 0 -1.4em var(--text);color:var(--background);*/filter:blur(.2em);}
+        #header a:hover,.content a:hover{box-shadow:inset 0 -1.4em var(--text);color:var(--background);/*filter:blur(.2em);*/}
         /*a.menu h2::after{content:"";display:block;width:0;height:2px;background:var(--text);transition:width .3s;}
         a.menu:hover h2::after,a.menu.open h2::after{width:100%;transition:width .2s;}*/
     }
@@ -72,7 +72,7 @@
 <div id="header">
     <div>Milan<span id="time"></span><span id="weather"></span></div>
     <h1 class="loading">Joey W. Schweickhardt</h1>
-    <div><a href="https://www.instagram.com/joeyws/">Instagram</a>, <a href="https://www.linkedin.com/in/joeyschweickhardt/">LinkedIn</a></div>
+    <div><a href="https://www.instagram.com/joeyws/">Instagram</a> <a href="https://www.linkedin.com/in/joeyschweickhardt/">LinkedIn</a></div>
 </div>
 <a class="menu" href="javascript:;" data-href="#/land-der-echsen"><h2>Land der Echsen</h2></a>
 <div class="content">
