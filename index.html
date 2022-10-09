@@ -16,10 +16,10 @@
 <style>
     @font-face{font-family:webfont;src:url("font/Source_Code_Pro/SourceCodePro-Medium.ttf");} /*Inter-Medium   font/RobotoMono/RobotoMono-Regular   IBM-Plex-Mono/IBMPlexMono-Text   CourierPrime-Regular   SourceCodePro-Medium*/
     @font-face{font-family:webfont2;src:url("font/TeX-Gyre-Heros/texgyreheros-bold.otf");} /*Coconat-BoldExt   texgyreheros-bold   NimbusSanL-Bol   SourceCodePro-Regular  gnu-free-font/FreeSans   texgyreheros-regular   NimbusRomNo9L-Reg   Libre_Franklin/LibreFranklin-Bold*/
-    :root{--background:#fff;--text:#000;--spacer:15px;}
+    :root{--background:#fff;--text:#000;--light:#0002;--spacer:15px;}
     ::-moz-selection{background:var(--background);color:var(--text);}
     ::selection{background:var(--background);color:var(--text);}
-    ::-webkit-scrollbar{width:8px;height:8px;background:#0001;}
+    ::-webkit-scrollbar{width:7px;height:7px;background:var(--light);}
     ::-webkit-scrollbar-thumb{background:var(--text);}
     /* RESET */*{user-select:none;font-kerning:normal;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-appearance:none;border-radius:0;-webkit-border-radius:0;box-sizing:content-box;font-smoothing:antialiased;-moz-osx-font-smoothing: grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased;}
 	html,body{background:var(--background);}
@@ -40,13 +40,13 @@
     @keyframes color{0%{color:#f00;text-shadow:inset 0 0 .1em #f00;}33%{color:#0ff;text-shadow:inset 0 0 .1em #0ff;}67%{color:#ff0;text-shadow:inset 0 0 .1em #ff0;}}
 
     a.menu{border-top:1px solid var(--text);padding:15px;display:flex;align-items:center;}
-    a.menu h2{box-shadow:inset 0 0 #000;font:normal normal 18px/1em webfont2,sans-serif;letter-spacing:-.01em;text-transform:uppercase;transform:scaleY(.72);transform-origin:center center;display:inline-block;}
+    a.menu h2{font:normal normal 18px/1em webfont2,sans-serif;letter-spacing:-.01em;transform:scaleY(.72);transform-origin:center center;text-transform:uppercase;display:inline-block;}
     a.menu h2:after{content:"";margin-left:3px;transform:scale(.7);vertical-align:0%;display:inline-block;}
     a.menu:hover h2:after{content:"\25bc";}
     a.menu.open h2:after{content:"\25b2";}
     
     .content{display:none;padding:0 var(--spacer) 100px var(--spacer);}
-    #header a,.content a{/*text-decoration:underline;*/border-radius:100vmax;background:#0002;padding:0 .35em;transition:all .15s;}
+    #header a,.content a{/*text-decoration:underline;*/border-radius:100vmax;background:var(--light);padding:0 .35em;transition:all .15s;}
 
     video,.cycle-slideshow{margin-bottom:var(--spacer);}
     video{display:block;outline:none;}
@@ -57,7 +57,7 @@
     /*.cycle-prev{border-top-right-radius:0 !important;border-bottom-right-radius:0 !important;background-clip:padding-box !important;border-right:1px solid #0003;}
     .cycle-next{border-top-left-radius:0 !important;border-bottom-left-radius:0 !important;}*/
 
-    /* nur für devices mit hover */ @media(hover: hover) {
+    @media(hover: hover) {
         #header a:hover,.content a:hover{box-shadow:inset 0 -1.4em var(--text);color:var(--background);/*filter:blur(.2em);*/}
         /*a.menu h2::after{content:"";display:block;width:0;height:2px;background:var(--text);transition:width .3s;}
         a.menu:hover h2::after,a.menu.open h2::after{width:100%;transition:width .2s;}*/
@@ -268,7 +268,7 @@
             if(item.length > 0) {
                 var temperature = $(item).find("description").html().split(' ')[1];
                 var word = $(item).find("title").html().split(" ").slice(4).join(' ').split(" ").slice(0, -2).join(" ").slice(0, -1).toLowerCase(); // heavy rain, light rain, mist
-                $("#weather").html(", " + temperature + " " + word);
+                $("#weather").html(", " + temperature);
             }
         }
         getXMLFeed("https://weather-broker-cdn.api.bbci.co.uk/en/observation/rss/3173435", getRssWeather); // Stuttgart:2825297 Milan:3173435
