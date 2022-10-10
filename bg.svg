@@ -8,8 +8,8 @@
 	.st2{fill:#5500FF;}
 </style>
 <rect x="0" y="0" class="st0" width="128" height="128"/>
-<rect x="86" y="48" class="st1" width="4" height="80"/>
 <rect x="102" y="0" class="st1" width="4" height="128"/>
 <circle class="st2" cx="106" cy="64" r="16"/>
 <rect x="118" class="st1" width="4" height="128"/>
+<rect x="90" y="48" class="st1" width="4" height="80"/>
 </svg>
