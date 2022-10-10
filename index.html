@@ -41,7 +41,7 @@
 
     a.nav{border-top:1px solid var(--text);padding:15px;display:flex;align-items:center;}
     a.nav h2{font:normal normal 18px/1em webfont2,sans-serif;letter-spacing:-.01em;transform:scaleY(.72);transform-origin:center center;text-transform:uppercase;display:inline-block;}
-    a.nav h2:after{content:"";margin-left:4px;transform:scale(.7);vertical-align:0%;display:inline-block;}
+    a.nav h2:after{content:"";margin-left:4px;transform:scale(.7,.6);vertical-align:0%;display:inline-block;}
     a.nav:hover h2:after{content:"\25bc";}
     a.nav.open h2:after{content:"\25b2";}
     
@@ -267,8 +267,9 @@
             var item = $(data).find("item");
             if(item.length > 0) {
                 var temperature = $(item).find("description").html().split(' ')[1];
-                var word = $(item).find("title").html().split(" ").slice(4).join(' ').split(" ").slice(0, -2).join(" ").slice(0, -1).toLowerCase(); // heavy rain, light rain, mist
-                $("#weather").html(", " + temperature);
+                var word = $(item).find("title").html().split(" ").slice(4).join(' ').split(" ").slice(0, -2).join(" ").slice(0, -1).toLowerCase(); // not available, heavy rain, light rain, light cloud, mist
+                if (word=="not available") {word = "";} else {word = " " + word;}
+                $("#weather").html(", " + temperature + word);
             }
         }
         getXMLFeed("https://weather-broker-cdn.api.bbci.co.uk/en/observation/rss/3173435", getRssWeather); // Stuttgart:2825297 Milan:3173435
