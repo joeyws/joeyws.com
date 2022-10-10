@@ -282,7 +282,7 @@
             success:function(data){
                 var date = data.commit.commit.author.date;
                 var date = date.slice(0, 10).split("-").reverse().join("/");
-                $("#website").append("<br>Last modified: " + date + "");
+                $("#website").append("<br>Last modified: " + date);
             }
         });
         
