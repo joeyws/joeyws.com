@@ -40,7 +40,7 @@
     @keyframes color{0%{color:#f00;text-shadow:inset 0 0 .1em #f00;}33%{color:#0ff;text-shadow:inset 0 0 .1em #0ff;}67%{color:#ff0;text-shadow:inset 0 0 .1em #ff0;}}
 
     .nav{border-top:1px solid #f40;padding:15px var(--spacer);display:flex;align-items:center;}
-    .nav h2{font:normal normal 17px/1em webfont2,sans-serif;transform:scaleY(.75);transform-origin:center center;text-transform:uppercase;display:inline-block;}
+    .nav h2{font-size:1.4em;/*letter-spacing:.01em;text-transform:uppercase;font:normal normal 18px/1em webfont2,sans-serif;transform:scaleY(.72);transform-origin:center center;*/display:inline-block;}
     
     .content{display:none;padding:0 var(--spacer) var(--spacer) var(--spacer);}
     #header a,.content a{border-radius:100vmax;background:var(--light);mix-blend-mode:multiply;padding:0 .35em;transition:all .15s;}
@@ -56,7 +56,7 @@
 
     @media(hover: hover) {
         #header a:hover,.content a:hover{/*filter:blur(.2em);*/color:var(--background);box-shadow:inset 0 -1.4em var(--text);}
-        .nav h2:after{content:"";margin-left:4px;transform:scale(.7,.6);vertical-align:0%;display:inline-block;}
+        .nav h2:after{content:"";margin-left:8px;transform:scaleY(.6) scale(.9);vertical-align:0%;display:inline-block;}
         .nav:hover h2:after{content:"\25bc";}
         .nav.open h2:after{content:"\25b2";}
         /*a.nav h2::after{content:"";display:block;width:0;height:2px;background:var(--text);transition:width .3s;}
