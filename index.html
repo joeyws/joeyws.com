@@ -14,14 +14,14 @@
 <meta charset="utf-8"><meta name="robots" content="index,nofollow,notranslate,noimageindex"><meta name="description" content="Welcome to the personal web page of Joey W. Schweickhardt."><meta name="keywords" content="schweickhardt,joey,stuttgart,joeyws,william"><meta name="geo.region" content="DE-BW"><meta name="geo.placename" content="Stuttgart"><meta name="geo.position" content="48.778600;9.179746"><meta name="ICBM" content="48.778600, 9.179746"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,shrink-to-fit=no"><meta name="format-detection" content="telephone=no">
 <style>
     @font-face{font-family:webfont;src:url("font/Source_Code_Pro/SourceCodePro-Medium.ttf");} /*Inter-Medium   font/RobotoMono/RobotoMono-Regular   IBM-Plex-Mono/IBMPlexMono-Text   CourierPrime-Regular   SourceCodePro-Medium*/
-    @font-face{font-family:webfont2;src:url("font/TeX-Gyre-Heros/texgyreheros-bold.otf");} /*Jost   Coconat-BoldExt   texgyreheros-bold   NimbusSanL-Bol   SourceCodePro-Regular  gnu-free-font/FreeSans   texgyreheros-regular   NimbusRomNo9L-Reg   Libre_Franklin/LibreFranklin-Bold*/
+    @font-face{font-family:webfont2;src:url("font/jost/Jost-MediumItalic.ttf");} /*Jost   Coconat-BoldExt   texgyreheros-bold   NimbusSanL-Bol   SourceCodePro-Regular  gnu-free-font/FreeSans   texgyreheros-regular   NimbusRomNo9L-Reg   Libre_Franklin/LibreFranklin-Bold*/
     :root{--background:#fff;--text:#000;--light:#0002;--spacer:15px;}
     ::-moz-selection{background:var(--background);color:var(--text);}
     ::selection{background:var(--background);color:var(--text);}
-    ::-webkit-scrollbar{width:8px;height:8px;background:var(--light);}
+    ::-webkit-scrollbar{width:8px;height:8px;background:#0f0;}
     ::-webkit-scrollbar-thumb{background:var(--text);}
     /* RESET */*{user-select:none;font-kerning:normal;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-appearance:none;border-radius:0;-webkit-border-radius:0;box-sizing:content-box;font-smoothing:antialiased;-moz-osx-font-smoothing: grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased;}
-	html,body{background:#fff /*linear-gradient(90deg, #ff0 0%, #f00 50%, #40f 100%) center center no-repeat fixed*/;}
+	html,body{background:linear-gradient(90deg, #0f0 0%, #f00 50%, #0f0 100%) center center no-repeat fixed;}
     html,body,a{cursor:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" x="0px" y="0px" viewBox="0 0 12 12" style="fill:%23000;"><circle cx="6" cy="6" r="6"/></svg>') 6 6, auto;}
     body{color:var(--text);font:normal normal 12px/1.4em webfont,monospace;min-height:108vh;}
 	.loading{animation:.3s blink steps(1) infinite;}
@@ -37,8 +37,8 @@
     @keyframes blink{0%{opacity:0;}50%{opacity:1;}}
     @keyframes color{0%{color:#f00;text-shadow:inset 0 0 .1em #f00;}33%{color:#0ff;text-shadow:inset 0 0 .1em #0ff;}67%{color:#ff0;text-shadow:inset 0 0 .1em #ff0;}}
 
-    .nav{border-top:1px solid var(--text);padding:var(--spacer);display:flex;align-items:center;}
-    .nav h2{/*font:normal normal 18px/1em webfont2,sans-serif;transform:scaleY(.7);text-transform:uppercase;/*letter-spacing:.04em;word-spacing:.1em;*/display:inline-block;}
+    .nav{background:linear-gradient(0deg, #40f0 0%,  #0f0 100%) center center no-repeat scroll;/*background:var(--light);padding:var(--spacer);mix-blend-mode:multiply;margin:0 var(--spacer) var(--spacer) var(--spacer);border-top:1px solid var(--text);*/padding:var(--spacer);display:flex;align-items:center;}
+    .nav h2{font:normal normal 6vw/.9em webfont2,monospace;text-transform:uppercase;/*font:normal normal 18px/1em webfont2,sans-serif;transform:scaleY(.7);/*letter-spacing:.04em;word-spacing:.1em;*/display:inline-block;}
     
     .content{display:none;padding:0 var(--spacer) var(--spacer) var(--spacer);}
     #header a,.content a{border-radius:100vmax;background:var(--light);mix-blend-mode:multiply;padding:0 .35em;transition:all .15s;}
@@ -52,9 +52,11 @@
     
     @media(hover:hover) {
         #header a:hover,.content a:hover{/*filter:blur(.2em);*/color:var(--background);box-shadow:inset 0 -1.4em var(--text);}
-        .nav h2:after{position:absolute;text-shadow:none;content:"";margin-left:8px;transform:scaleY(.6) scale(1.2);vertical-align:0%;display:inline-block;}
+        /*.nav{cursor:url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" style="fill:%23000;transform:rotate(-90deg);"><polygon points="0,8 8,0 10,0 2.707,7.293 16,7.293 16,8.707 2.707,8.707 10,16 8,16"/></svg>') 8 8,auto;}
+        .nav.open{cursor:url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" style="fill:%23000;transform:rotate(90deg);"><polygon points="0,8 8,0 10,0 2.707,7.293 16,7.293 16,8.707 2.707,8.707 10,16 8,16"/></svg>') 8 8,auto;}*/
+        /*.nav h2:after{position:absolute;text-shadow:none;content:"";margin-left:8px;transform:scaleY(.6) scale(.6);vertical-align:0%;display:inline-block;}
         .nav:hover h2:after{content:"\25bc";}
-        .nav.open h2:after{content:"\25b2";}
+        .nav.open h2:after{content:"\25b2";}*/
         /*a.nav h2::after{content:"";display:block;width:0;height:2px;background:var(--text);transition:width .3s;}
         a.nav:hover h2::after,a.nav.open h2::after{width:100%;transition:width .2s;}*/
     }
