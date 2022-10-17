@@ -37,7 +37,7 @@
     @keyframes blink{0%{opacity:0;}50%{opacity:1;}}
     @keyframes color{0%{color:#f00;text-shadow:inset 0 0 .1em #f00;}33%{color:#0ff;text-shadow:inset 0 0 .1em #0ff;}67%{color:#ff0;text-shadow:inset 0 0 .1em #ff0;}}
 
-    .nav{border-top:1px solid #f40;border-top:1px solid var(--light);padding:15px var(--spacer);display:flex;align-items:center;}
+    .nav{border-top:1px solid var(--text);padding:15px var(--spacer);display:flex;align-items:center;}
     .nav h2{font:normal normal 16px/1em webfont2,sans-serif;text-transform:uppercase;letter-spacing:.04em;word-spacing:.1em;transform:scaleY(.);transform-origin:center center;display:inline-block;}
     
     .content{display:none;padding:0 var(--spacer) var(--spacer) var(--spacer);}
@@ -45,10 +45,10 @@
 
     video,.cycle-slideshow{margin-bottom:var(--spacer);}
     video{display:block;outline:none;}
+    .content img{max-height:500px;max-width:100%;}
     .cycle-slideshow{height:500px;}
     .cycle-slideshow.prev{cursor:url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" style="fill:%23000;"><polygon points="0,8 8,0 10,0 2.707,7.293 16,7.293 16,8.707 2.707,8.707 10,16 8,16"/></svg>') 8 8,auto;}
     .cycle-slideshow.next{cursor:url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" style="fill:%23000;transform:scaleX(-1);"><polygon points="0,8 8,0 10,0 2.707,7.293 16,7.293 16,8.707 2.707,8.707 10,16 8,16"/></svg>') 8 8,auto;}
-    .cycle-slideshow img{max-width:100%;max-height:500px;}
     /*.cycle-prev{border-top-right-radius:0 !important;border-bottom-right-radius:0 !important;background-clip:padding-box !important;border-right:1px solid #0003;}
     .cycle-next{border-top-left-radius:0 !important;border-bottom-left-radius:0 !important;}*/
 
@@ -129,18 +129,21 @@
     <p><a href="javascript:;" class="cycle-prev">Prev</a> <a href="javascript:;" class="cycle-next">next</a> <span id="cycle-caption-places"></span></p>
 </div>
 <!--<a class="nav" href="#/about"><h2>About</h2></a>
-<div class="content">
-    <p>Coming soon</p>
+<div class="content" style="max-height:300px;">
+    <img src="joey.png" />
+    <p style="max-width:600px;">Hey there, I am Joey.</p>
+    <p style="max-width:600px;">I study architecture and urban planning at the <a href="https://www.f01.uni-stuttgart.de/en/">Universität Stuttgart</a>, right now I am at the <a href="https://www.adu.polimi.it/?lang=en">Politecnico di Milano</a> for a semester abroad. Before that I worked in different architectural offices like <a href="https://www.wernersobek.com/">Werner Sobek</a> and <a href="https://behnisch.com">Behnisch Architekten</a>.</p>
+    <p style="max-width:600px;">I am very interesetd in music and films.</p>
 </div>-->
 <a class="nav" href="#/contact"><h2>Contact</h2></a>
-<div class="content">
+<div class="content" style="max-width:700px;">
     <p>Joey W. Schweickhardt<br><span class="address1"></span><br><span class="address2"></span><br><a class="phone"></a><br><a class="email"></a></p>
     <p id="about-website">Hosted on GitHub<br>Weather data by BBC Weather<br>Hand-coded with <?xml version="1.0" ?><svg style="vertical-align:-5%;height:.7em;width:.7em;fill:red;" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" fill-rule="evenodd"/></svg></p>
     <p><a id="show-privacypolicy" href="javascript:;">Privacy Policy</a></p>
-    <p class="privacypolicy" style="max-width:700px;">Personal data (usually referred to just as „data“ below) will only be processed by us to the extent necessary and for the purpose of providing a functional and user-friendly website, including its contents, and the services offered there. Per Art. 4 No. 1 of Regulation (EU) 2016/679, i.e. the General Data Protection Regulation (hereinafter referred to as the „GDPR“), „processing“ refers to any operation or set of operations such as collection, recording, organization, structuring, storage, adaptation, alteration, retrieval, consultation, use, disclosure by transmission, dissemination, or otherwise making available, alignment, or combination, restriction, erasure, or destruction performed on personal data, whether by automated means or not.</p>
-    <p class="privacypolicy" style="max-width:700px;">With regard to the data processing to be described in more detail below, users and data subjects have the right to confirmation of whether data concerning them is being processed, information about the data being processed, further information about the nature of the data processing, and copies of the data (cf. also Art. 15 GDPR); to correct or complete incorrect or incomplete data (cf. also Art. 16 GDPR); to the immediate deletion of data concerning them (cf. also Art. 17 DSGVO), or, alternatively, if further processing is necessary as stipulated in Art. 17 Para. 3 GDPR, to restrict said processing per Art. 18 GDPR; to receive copies of the data concerning them and/or provided by them and to have the same transmitted to other providers/controllers (cf. also Art. 20 GDPR); to file complaints with the supervisory authority if they believe that data concerning them is being processed by the controller in breach of data protection provisions (see also Art. 77 GDPR). In addition, the controller is obliged to inform all recipients to whom it discloses data of any such corrections, deletions, or restrictions placed on processing the same per Art. 16, 17 Para. 1, 18 GDPR. However, this obligation does not apply if such notification is impossible or involves a disproportionate effort. Nevertheless, users have a right to information about these recipients.</p>
-    <p class="privacypolicy" style="max-width:700px;">Likewise, under Art. 21 GDPR, users and data subjects have the right to object to the controller&rsquo;s future processing of their data pursuant to Art. 6 Para. 1 lit. f) GDPR. In particular, an objection to data processing for the purpose of direct advertising is permissible. Your data processed when using our website will be deleted or blocked as soon as the purpose for its storage ceases to apply, provided the deletion of the same is not in breach of any statutory storage obligations or unless otherwise stipulated below.</p>
-    <p class="privacypolicy" style="max-width:700px;">Source: Anwaltskanzlei Weiß & Partner</p>
+    <p class="privacypolicy">Personal data (usually referred to just as „data“ below) will only be processed by us to the extent necessary and for the purpose of providing a functional and user-friendly website, including its contents, and the services offered there. Per Art. 4 No. 1 of Regulation (EU) 2016/679, i.e. the General Data Protection Regulation (hereinafter referred to as the „GDPR“), „processing“ refers to any operation or set of operations such as collection, recording, organization, structuring, storage, adaptation, alteration, retrieval, consultation, use, disclosure by transmission, dissemination, or otherwise making available, alignment, or combination, restriction, erasure, or destruction performed on personal data, whether by automated means or not.</p>
+    <p class="privacypolicy">With regard to the data processing to be described in more detail below, users and data subjects have the right to confirmation of whether data concerning them is being processed, information about the data being processed, further information about the nature of the data processing, and copies of the data (cf. also Art. 15 GDPR); to correct or complete incorrect or incomplete data (cf. also Art. 16 GDPR); to the immediate deletion of data concerning them (cf. also Art. 17 DSGVO), or, alternatively, if further processing is necessary as stipulated in Art. 17 Para. 3 GDPR, to restrict said processing per Art. 18 GDPR; to receive copies of the data concerning them and/or provided by them and to have the same transmitted to other providers/controllers (cf. also Art. 20 GDPR); to file complaints with the supervisory authority if they believe that data concerning them is being processed by the controller in breach of data protection provisions (see also Art. 77 GDPR). In addition, the controller is obliged to inform all recipients to whom it discloses data of any such corrections, deletions, or restrictions placed on processing the same per Art. 16, 17 Para. 1, 18 GDPR. However, this obligation does not apply if such notification is impossible or involves a disproportionate effort. Nevertheless, users have a right to information about these recipients.</p>
+    <p class="privacypolicy">Likewise, under Art. 21 GDPR, users and data subjects have the right to object to the controller&rsquo;s future processing of their data pursuant to Art. 6 Para. 1 lit. f) GDPR. In particular, an objection to data processing for the purpose of direct advertising is permissible. Your data processed when using our website will be deleted or blocked as soon as the purpose for its storage ceases to apply, provided the deletion of the same is not in breach of any statutory storage obligations or unless otherwise stipulated below.</p>
+    <p class="privacypolicy">Source: Anwaltskanzlei Weiß & Partner</p>
 </div>
 
 
@@ -246,7 +249,9 @@ $(document).ready(function(){
             $("#weather").html(", " + temperature + word);
         }
     }
-    getXMLFeed("https://weather-broker-cdn.api.bbci.co.uk/en/observation/rss/3173435", getWeather); // Stuttgart:2825297 Milan:3173435
+    function loadWeather() {getXMLFeed("https://weather-broker-cdn.api.bbci.co.uk/en/observation/rss/3173435", getWeather);} // Stuttgart:2825297 Milan:3173435
+    loadWeather();
+    setTimeout(function(){loadWeather();},60000);
     
     // github last modified
     $.ajax({
