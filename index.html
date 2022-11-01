@@ -1,3 +1,4 @@
+
 <!doctype>
 <html lang="de"><!--
 
@@ -13,32 +14,31 @@
 <meta charset="utf-8"><meta name="robots" content="index,nofollow,notranslate,noimageindex"><meta name="description" content="Welcome to the personal web page of Joey W. Schweickhardt."><meta name="keywords" content="schweickhardt,joey,stuttgart,joeyws,william"><meta name="geo.region" content="DE-BW"><meta name="geo.placename" content="Stuttgart"><meta name="geo.position" content="48.778600;9.179746"><meta name="ICBM" content="48.778600, 9.179746"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,shrink-to-fit=no"><meta name="format-detection" content="telephone=no">
 <style>
     @font-face{font-family:webfont;src:url("font/Source_Code_Pro/SourceCodePro-Medium.ttf");} /*SourceCodePro-Medium   Inter-Medium   RobotoMono-Regular   IBMPlexMono-Text*/
-    @font-face{font-family:webfont2;src:url("font/Libre_Franklin/LibreFranklin-Black.ttf");} /*Jost Syne-Bold   Coconat-BoldExt   texgyreheros-bold   NimbusSanL-Bol   SourceCodePro-Regular  gnu-free-font/FreeSans   texgyreheros-regular   NimbusRomNo9L-Reg   LibreFranklin-Bold*/
-    :root{--background:#fff;--text:#000;--light:#0002;--spacer:15px;}
+    @font-face{font-family:webfont2;src:url("font/TeX-Gyre-Heros/texgyreheros-bold.otf");} /*Jost Syne-Bold   Coconat-BoldExt   texgyreheros-bold   NimbusSanL-Bol   SourceCodePro-Regular  gnu-free-font/FreeSans   texgyreheros-regular   NimbusRomNo9L-Reg   LibreFranklin-Bold*/
+    :root{--background:#ddd;--text:#000;--light:#0002;--spacer:15px;}
     ::-moz-selection{background:var(--background);color:var(--text);}
     ::selection{background:var(--background);color:var(--text);}
     ::-webkit-scrollbar{width:8px;height:8px;background:var(--light);}
     ::-webkit-scrollbar-thumb{background:var(--text);}
     /* RESET */*{user-select:none;font-kerning:normal;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-appearance:none;border-radius:0;-webkit-border-radius:0;box-sizing:content-box;font-smoothing:antialiased;-moz-osx-font-smoothing: grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased;}
-	html,body{background:#b0b0b0 /*linear-gradient(90deg, #0f0 0%, #f00 50%, #0f0 100%) center center no-repeat fixed*/;}
+	html,body{background:var(--background) /*linear-gradient(90deg, #0f0 0%, #f00 50%, #0f0 100%) center center no-repeat fixed*/;}
     html,body,a{cursor:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" x="0px" y="0px" viewBox="0 0 12 12" style="fill:%23000;"><circle cx="6" cy="6" r="6"/></svg>') 6 6, auto;}
     body{letter-spacing:.0em;color:var(--text);font:normal normal 12px/1.4em webfont,sans-serif;/*font:normal normal 12px/1.4em webfont,monospace;*/min-height:108vh;}
 	.loading{animation:.3s blink steps(1) infinite;}
-    h1{text-align:center;width:90vw;display:block;}
+    h1{display:inline-block;text-transform:uppercase;transform:scaleY(.7);transform-origin:center center;vertical-align:-15%;font-size:17px;font-family:webfont2,webfont,monospace;}
     p{margin-top:.8em;max-width:54em;} p:first-child{margin-top:0;} img+p,video+p,.cycle-slideshow+p{margin-top:var(--spacer);}
-    a{text-decoration:none;}
-    .header a,.content a{border-radius:100vmax;background:var(--light);mix-blend-mode:multiply;padding:0 .35em;transition:all .15s;}
+    a{text-decoration:none;white-space:nowrap;}
+    a[href^=http]::after{content:"\2197";text-decoration:none;display:inline-block;transform:scale(1);margin-left:3px;font-size:1.3em;}
+    .header a,.content a{border-radius:100vmax;background:var(--light);padding:0 .35em;transition:all .15s;}
 
-    .header{column-gap:var(--spacer);padding:10px var(--spacer);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;}
+    .header{column-gap:var(--spacer);padding:10px var(--spacer);column-gap:var(--spacer);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;}
     .header > *{display:inline-block;width:auto;white-space:nowrap;}
-    body .marquee3k{white-space:nowrap;overflow-x:hidden;line-height:1.5em;mix-blend-mode:multiply;}
-    body > .marquee3k .marquee{background:var(--text);color:var(--background);}
-    body > .marquee3k .marquee span{margin-right:1.8em;}
+    .marquee3k{white-space:nowrap;overflow-x:hidden;line-height:1.5em;background:var(--text);color:var(--background);}
+    .marquee3k .marquee span{margin-right:1.8em;}
     #time-blink{animation:2s blink steps(1) infinite;}
     @keyframes blink{0%{opacity:0;}50%{opacity:1;}}
-    @keyframes color{0%{color:#f00;text-shadow:inset 0 0 .1em #f00;}33%{color:#0ff;text-shadow:inset 0 0 .1em #0ff;}67%{color:#ff0;text-shadow:inset 0 0 .1em #ff0;}}
 
-    .nav{border-top:1px solid var(--text);/*background:linear-gradient(0deg, transparent 33%, #0f0 100%) center center no-repeat scroll;*/padding:var(--spacer);display:flex;align-items:center;/*background:var(--light);padding:var(--spacer);mix-blend-mode:multiply;margin:0 var(--spacer) var(--spacer) var(--spacer);border-top:1px solid var(--text);*/}
+    .nav{border-top:1px solid var(--light);/*background:linear-gradient(0deg, transparent 33%, #0f0 100%) center center no-repeat scroll;*/padding:var(--spacer);display:flex;align-items:center;/*background:var(--light);padding:var(--spacer);mix-blend-mode:multiply;margin:0 var(--spacer) var(--spacer) var(--spacer);border-top:1px solid var(--text);*/}
     .nav h2{/*text-transform:uppercase;font:normal normal 18px/1em webfont2,sans-serif;transform:scaleY(.7);/*letter-spacing:.04em;word-spacing:.1em;*/display:inline-block;}
     .content{display:none;padding:0 var(--spacer) var(--spacer) var(--spacer);}
 
@@ -48,7 +48,7 @@
     .cycle-slideshow.prev{cursor:url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" style="fill:%23000;"><polygon points="0,8 8,0 10,0 2.707,7.293 16,7.293 16,8.707 2.707,8.707 10,16 8,16"/></svg>') 8 8,auto;}
     .cycle-slideshow.next{cursor:url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" style="fill:%23000;transform:scaleX(-1);"><polygon points="0,8 8,0 10,0 2.707,7.293 16,7.293 16,8.707 2.707,8.707 10,16 8,16"/></svg>') 8 8,auto;}
     
-    .nav h2:after{content:"";margin-left:.8em;transform:scaleY(.5) scale(1.5);display:inline-block;}
+    .nav h2:after{content:"";margin-left:.8em;transform:scaleY(.5) scale(1.4);display:inline-block;}
     .nav.open h2:after{content:"\25b2";}
 
     @media(hover:hover) {
@@ -91,13 +91,13 @@
     <div id="cycle-works" class="cycle-slideshow"
         data-cycle-swipe="true" data-cycle-speed="1" data-cycle-caption="#cycle-caption-works"
         data-cycle-caption-template="{{slideNum}}/{{slideCount}}</p><p>{{alt}}">
-        <img                src="img/26.jpg" alt="Pneu structures" />
-        <img loading="lazy" src="img/25.jpg" alt="Vasikkasaari Climate Institute, Helsinki" />
+        <img                src="img/26.jpg" alt="Pneu pavillons: lightweight structures of welded PLA foil" />
+        <img loading="lazy" src="img/25.jpg" alt="Climate Research Institute in Helsinki: working and living self-sufficiently on Vasikkasaari Island" />
         <img loading="lazy" src="img/23.jpg" alt="Wardrobe, birch, hand-sewn curtain" />
-        <img loading="lazy" src="img/droneport.gif" alt="Droneport" />
+        <img loading="lazy" src="img/droneport.gif" alt="A Droneport for Stuttgart: maintenance building and tower with landing platforms" />
         <img loading="lazy" src="img/21.jpg" alt="Light studies models" />
-        <img loading="lazy" src="img/20.jpg" alt="Wooden structure" />
-        <img loading="lazy" src="img/16.jpg" alt="Sint-Aneke-Club, Antwerp" />
+        <img loading="lazy" src="img/20.jpg" alt="Wooden structure with traction cables" />
+        <img loading="lazy" src="img/16.jpg" alt="Sint-Aneke-Club in Antwerp" />
         <img loading="lazy" src="img/15.jpg" alt="Model, laser cut, glueless" />
         <img loading="lazy" src="img/14.jpg" alt="Cuboid perspective" />
         <img loading="lazy" src="img/13.jpg" alt="Cuboid perspective preparation" />
@@ -131,19 +131,12 @@
     </div>
     <p><a href="javascript:;" class="cycle-prev">Prev</a> <a href="javascript:;" class="cycle-next">next</a> <span id="cycle-caption-places"></span></p>
 </div>
-<!-- <a class="nav" href="#/about"><h2>About</h2></a>
-<div class="content">
-    <img src="joey.png" />
-    <p>Hey there, I am Joey.</p>
-    <p>I study architecture and urban planning at the <a href="https://www.f01.uni-stuttgart.de/en/">Universität Stuttgart</a>, right now I am at the <a href="https://www.adu.polimi.it/?lang=en">Politecnico di Milano</a> for a semester abroad. Before that I worked in different offices like <a href="https://www.wernersobek.com/">Werner Sobek</a> and <a href="https://behnisch.com">Behnisch Architekten</a>.</p>
-    <p>I like music and films.</p>
-</div> -->
 <a class="nav" href="#/contact"><h2>Contact</h2></a>
 <div class="content" style="max-width:700px;">
     <p>Joey W. Schweickhardt<br><span class="address1"></span><br><span class="address2"></span><br><a class="phone"></a><br><a class="email"></a></p>
     <p>
-        Hosted on GitHub<br><!-- <a rel="nofollow" href="https://github.com/">GitHub</a> -->
-        Weather data by BBC Weather<br><!-- <a rel="nofollow" href="https://www.bbc.com/weather">BBC Weather</a> -->
+        Hosted on GitHub<br>
+        Weather data by BBC Weather<br>
         Hand-coded with <?xml version="1.0" ?><svg style="vertical-align:-5%;height:.7em;width:.7em;fill:red;" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" fill-rule="evenodd"/></svg>
         <span class="last-updated"></span>
     </p>
@@ -266,9 +259,9 @@ $(document).ready(function(){
     setTimeout(function(){loadWeather();},60000);
     
     // github last modified
-    $.ajax({
+    /* $.ajax({
         cache: false,
-        url: "https://api.github.com/repos/joeyws/joeyws.com/branches/main",
+        url: "https://api.github.com/repos/joeyws/joeyws.co/branches/main",
         dataType: "json",
         type: "get",
         beforeSend: function(xhr){xhr.setRequestHeader("Authorization","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");},
@@ -277,7 +270,7 @@ $(document).ready(function(){
             var date = date.slice(0, 10).split("-").reverse().join("/");
             $(".last-updated").append("<br>Last updated: " + date + "");
         }
-    });
+    }); */
 
     // privacy policy
     $(".privacypolicy").hide();
