@@ -228,11 +228,12 @@ $(document).ready(function(){
         lightboxClose();
     }).on("click","img",function(e) {
         e.stopPropagation();
-        if (event.pageX <= ($(document).width()/2)) {
+        /*if (event.pageX <= ($(document).width()/2)) {
             lightboxPrev();
         } else {
             lightboxNext();
-        }
+        }*/
+        lightboxNext();
     });
 
     // cursor
