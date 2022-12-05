@@ -15,7 +15,7 @@
 <style>
     @font-face{font-family:webfont;src:url("font/Source_Code_Pro/SourceCodePro-Regular.ttf");} /*Inter-Medium   font/RobotoMono/RobotoMono-Regular   IBM-Plex-Mono/IBMPlexMono-Text   texgyrecursor-regular   SourceCodePro-Medium*/
     @font-face{font-family:webfont2;src:url("font/Archivo-Bold.ttf");} /*Jost   Coconat-BoldExt   texgyreheros-bold   NimbusSanL-Bol   SourceCodePro-Regular  gnu-free-font/FreeSans   texgyreheros-regular   NimbusRomNo9L-Reg   Libre_Franklin/LibreFranklin-Bold*/
-    :root{--background:#ddd;--text:#000;--spacer:10px;}
+    :root{--background:#ddd;--text:#f00;--spacer:10px;}
     ::-moz-selection{background:var(--text);color:var(--background);}
     ::selection{background:var(--text);color:var(--background);}
     /* ::-webkit-scrollbar{width:8px;height:8px;background:var(--background);}
@@ -34,7 +34,7 @@
     #content{padding:var(--spacer);padding-top:7vw;}
     hr{margin:calc(2*var(--spacer)) calc(-1*var(--spacer));}
 
-    .marquee3k{background:var(--text);color:var(--background);line-height:1.6em;margin:calc(-1*var(--spacer));margin-bottom:var(--spacer);white-space:nowrap;overflow-x:hidden;}
+    .marquee3k{/* background:var(--text);color:var(--background); */line-height:1.6em;/* margin:calc(-1*var(--spacer)); */margin-bottom:var(--spacer);white-space:nowrap;overflow-x:hidden;}
     .marquee3k .marquee span{margin-right:1.4em;}
     #time-blink{animation:2s blink steps(1) infinite;}
     @keyframes blink{0%{opacity:0;}50%{opacity:1;}}
