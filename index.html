@@ -30,12 +30,12 @@
     a:hover{text-decoration:none;}
     /*a[href^=http]::after{content:"\2197";font-size:1.3em;margin-left:2px;text-decoration:none;display:inline-block;}*/
     
-    #header{display:flex;column-gap:calc(2.4*var(--spacer));line-height:1.6em;}
+    #header{display:flex;align-items:space-between;flex-wrap:wrap;column-gap:calc(2.4*var(--spacer));line-height:1.6em;}
     #header>*{white-space:nowrap;}
     #content{padding:var(--spacer);padding-top:7vw;}
     hr{margin:calc(2*var(--spacer)) calc(-1*var(--spacer));}
 
-    .marquee3k{line-height:1.6em;/* background:var(--text);color:var(--background); *//* margin-top:calc(-1*var(--spacer)); *//* margin:calc(-1*var(--spacer)); */margin-bottom:var(--spacer);white-space:nowrap;overflow-x:hidden;}
+    .marquee3k{width:200px;flex-grow:1;line-height:1.6em;/* background:var(--text);color:var(--background); *//* margin-top:calc(-1*var(--spacer)); *//* margin:calc(-1*var(--spacer)); */white-space:nowrap;overflow:hidden;}
     .marquee3k .marquee span{margin-right:1.4em;}
     #time-blink{animation:2s blink steps(1) infinite;}
     @keyframes blink{0%{opacity:0;}50%{opacity:1;}}
