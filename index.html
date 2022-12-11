@@ -15,7 +15,7 @@
 <style>
     @font-face{font-family:webfont;src:url("font/Source_Code_Pro/SourceCodePro-Regular.ttf");} /*Inter-Medium   font/RobotoMono/RobotoMono-Regular   IBM-Plex-Mono/IBMPlexMono-Text   texgyrecursor-regular   SourceCodePro-Medium*/
     @font-face{font-family:webfont2;src:url("font/Archivo-Bold.ttf");} /*Jost   Coconat-BoldExt   texgyreheros-bold   NimbusSanL-Bol   SourceCodePro-Regular  gnu-free-font/FreeSans   texgyreheros-regular   NimbusRomNo9L-Reg   Libre_Franklin/LibreFranklin-Bold*/
-    :root{--background:#fff;--text:#888;--spacer:10px;}
+    :root{--background:#eee;--text:#222;--spacer:10px;}
     ::-moz-selection{background:var(--text);color:var(--background);}
     ::selection{background:var(--text);color:var(--background);}
     /* ::-webkit-scrollbar{width:8px;height:8px;background:var(--background);}
@@ -35,7 +35,7 @@
     #content{padding:var(--spacer);padding-top:7vw;}
     hr{margin:calc(2*var(--spacer)) calc(-1*var(--spacer));}
 
-    .marquee3k{width:200px;flex-grow:1;line-height:1.6em;/* background:var(--text);color:var(--background); *//* margin-top:calc(-1*var(--spacer)); *//* margin:calc(-1*var(--spacer)); */white-space:nowrap;overflow:hidden;}
+    .marquee3k{/* width:200px;flex-grow:1; */line-height:1.6em;background:var(--text);color:var(--background);margin:calc(-1*var(--spacer));margin-bottom:var(--spacer);white-space:nowrap;overflow:hidden;}
     .marquee3k .marquee span{margin-right:1.4em;}
     #time-blink{animation:2s blink steps(1) infinite;}
     @keyframes blink{0%{opacity:0;}50%{opacity:1;}}
@@ -68,10 +68,10 @@
 <body>
 
 
+<div class="marquee3k" data-speed=".8"><!-- https://de.wikipedia.org/wiki/Liste_der_meistgesprochenen_Sprachen --><div class="marquee"><!-- mandarin/kantonesisch --><span>歡迎</span><!-- spanisch --><span>Bienvenidos</span><!-- englisch --><span>Welcome</span><!-- marathi --><span>स्वागत हे</span><!-- hocharabisch --><span>اهلا وسهلا</span><!-- portugiesisch --><span>Bem-vinda</span><!-- bengalisch --><span>স্বাগত</span><!-- russisch --><span>добро пожаловать</span><!-- japanisch --><span>ようこそ</span><!-- javanisch --><span>Sugeng Rawuh</span><!-- punjabi --><span>ਸਵਾਗਤ ਹੈ</span><!-- deutsch --><span>Willkommen</span><!-- koreanisch --><span>어서 오십시오</span><!-- französisch --><span>Bienvenue</span><!-- suaheli --><span>Karibu</span><!-- telugu --><span>Svāgatam</span><!-- türkisch --><span>Hoşgeldiniz</span><!-- urdu --><span>خوش آمدید</span><!-- tamil --><span>வரவேற்பு</span><!-- vietnamesisch --><span>Hoan nghênh</span><!-- ägyptisch-arabisch --><span>اهلا وسهلا</span><!-- italienisch --><span>Benvenuto</span></div></div>
 <div id="header">
     <h1>Joey W. Schweickhardt</h1>
     <div><!-- <span style="color:#0f0;">&#9679;</span> -->Milan<span id="time"></span><span id="weather"></span></div>
-    <div class="marquee3k" data-speed=".8"><!-- https://de.wikipedia.org/wiki/Liste_der_meistgesprochenen_Sprachen --><div class="marquee"><!-- mandarin/kantonesisch --><span>歡迎</span><!-- spanisch --><span>Bienvenidos</span><!-- englisch --><span>Welcome</span><!-- marathi --><span>स्वागत हे</span><!-- hocharabisch --><span>اهلا وسهلا</span><!-- portugiesisch --><span>Bem-vinda</span><!-- bengalisch --><span>স্বাগত</span><!-- russisch --><span>добро пожаловать</span><!-- japanisch --><span>ようこそ</span><!-- javanisch --><span>Sugeng Rawuh</span><!-- punjabi --><span>ਸਵਾਗਤ ਹੈ</span><!-- deutsch --><span>Willkommen</span><!-- koreanisch --><span>어서 오십시오</span><!-- französisch --><span>Bienvenue</span><!-- suaheli --><span>Karibu</span><!-- telugu --><span>Svāgatam</span><!-- türkisch --><span>Hoşgeldiniz</span><!-- urdu --><span>خوش آمدید</span><!-- tamil --><span>வரவேற்பு</span><!-- vietnamesisch --><span>Hoan nghênh</span><!-- ägyptisch-arabisch --><span>اهلا وسهلا</span><!-- italienisch --><span>Benvenuto</span></div></div>
 </div>
 <hr>
 <video oncontextmenu="return false;" id="video" poster="img/landderechsen.jpg" tabindex="0" style="width:750px;height:calc(750px/2.2);max-width:100%;max-height:calc((100vw - 2*var(--spacer)) / 2.2);" controls preload controlsList="nodownload noplaybackrate" disablePictureInPicture>
