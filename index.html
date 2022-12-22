@@ -29,18 +29,18 @@
     a:hover{text-decoration:none;}
     /* a[href^=http]::after{content:"\2197";font-size:1.3em;margin-left:2px;display:inline-block;} */
 
-    #header{display:flex;align-items:space-between;flex-wrap:wrap;column-gap:calc(2.4*var(--spacer));line-height:1.6em;}
+    #header{/* background:var(--text);color:var(--background);margin:calc(-1*var(--spacer));margin-bottom:var(--spacer);padding:var(--spacer); */display:flex;align-items:space-between;flex-wrap:wrap;column-gap:calc(2.4*var(--spacer));line-height:1.6em;}
     #header>*{white-space:nowrap;}
     #content{padding:var(--spacer);padding-top:7vw;}
     hr{margin:calc(2*var(--spacer)) calc(-1*var(--spacer));/* border-top:1px solid var(--text); */}
-    hr.border{margin:calc(1*var(--spacer)) calc(-1*var(--spacer));border-top:1px solid var(--text);}
+    /* hr.border{margin:calc(1*var(--spacer)) calc(-1*var(--spacer));border-top:1px solid var(--text);} */
 
     .marquee3k{/* background:var(--text);color:var(--background); */width:200px;flex-grow:1;line-height:1.6em;/* margin:calc(-1*var(--spacer));margin-bottom:var(--spacer); */white-space:nowrap;overflow:hidden;}
     .marquee3k .marquee span{margin-right:1.4em;}
     #time-blink{animation:2s blink steps(1) infinite;}
     @keyframes blink{0%{opacity:0;}50%{opacity:1;}}
 
-    label{cursor:pointer;}
+    label{cursor:pointer;/*background:var(--text);color:var(--background);padding:3px 8px;*/}
     .switch{width:2em;height:.8em;vertical-align:-20%;position:relative;display:inline-block;}
     /*.switch:before{position:absolute;top:50%;content:"";height:0;width:100%;display:block;border-bottom:1px solid var(--text);}*/
     .switch input{opacity:0;width:0;height:0;}
