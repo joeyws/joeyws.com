@@ -326,7 +326,7 @@ $(document).ready(function(){
     $('.phone').html(phone).attr('href','t'+'e'+'l'+':'+phone);
     // email
     $('.email').after(" <span></span>").hover(function(){
-        $(this).next("span").html("click to copy");
+        $(this).next("span").html("copy email");
     },function(){
         $(this).next("span").html("");
     }).click(function(){
@@ -334,7 +334,7 @@ $(document).ready(function(){
         navigator.clipboard.writeText(mail).then(() => {
             $(this).next("span").html("copied");
         },() => {
-            $(this).next("span").html("could not copy");
+            $(this).next("span").html("copy failed");
         });
     });
 
