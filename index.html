@@ -141,14 +141,14 @@
 </p>
 <p>
     <a class="phone"></a><br>
-    <a class="email" href="javascript:;"></a>
+    <a class="email" href="javascript:"></a>
 </p>
 <p>
     <a href="https://www.instagram.com/joeyws/">Instagram</a>, <a href="https://www.linkedin.com/in/joeyschweickhardt/">LinkedIn</a>
 </p>
 <hr>
 <p>
-    <a id="show-privacypolicy" href="javascript:;">Privacy Policy</a><!-- writing-mode:vertical-lr;transform:rotate(-180deg); -->
+    <a id="show-privacypolicy" href="javascript:">Privacy Policy</a><!-- writing-mode:vertical-lr;transform:rotate(-180deg); -->
 </p>
 <!-- <p class="privacypolicy">
     Hosted on GitHub<br>
@@ -322,7 +322,7 @@ $(document).ready(function(){
     var phone = '+'+'4'+'9'+'1'+'5'+'7'+'7'+'8'+'8'+'5'+'0'+'5'+'0'+'2';
     $('.address1').html(address1);
     $('.address2').html(address2);
-    $('.email').html(mail); //.attr('href',String.fromCharCode(109)+'a'+'i'+'l'+'t'+'o'+':'+'Joey'+'%20'+'Schweickhardt'+'%20'+'%3C'+mail+'%3E');
+    $('.email').html(mail).attr('href',String.fromCharCode(109)+'a'+'i'+'l'+'t'+'o'+':'+'Joey'+'%20'+'Schweickhardt'+'%20'+'%3C'+mail+'%3E');
     $('.phone').html(phone).attr('href','t'+'e'+'l'+':'+phone);
     // email
     $('.email').after(" <span></span>").hover(function(){
