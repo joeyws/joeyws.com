@@ -58,7 +58,7 @@
     
     #lightbox{z-index:999997;cursor:zoom-out;position:fixed;inset:0;display:none;}
 	#lightbox img{cursor:pointer;max-height:90vh;max-width:90vw;box-sizing:border-box;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);}
-    </style>
+</style>
 </head>
 <body>
 
@@ -68,7 +68,7 @@
     <div><!-- <span style="color:#0f0;">&#9679; </span> -->Milan<span id="time"></span><span id="weather"></span></div>
     <div class="marquee3k" data-speed=".8"><!-- https://de.wikipedia.org/wiki/Liste_der_meistgesprochenen_Sprachen --><div class="marquee"><!-- mandarin/kantonesisch --><span>歡迎</span><!-- spanisch --><span>Bienvenidos</span><!-- englisch --><span>Welcome</span><!-- marathi --><span>स्वागत हे</span><!-- hocharabisch --><span>اهلا وسهلا</span><!-- portugiesisch --><span>Bem-vinda</span><!-- bengalisch --><span>স্বাগত</span><!-- russisch --><span>добро пожаловать</span><!-- japanisch --><span>ようこそ</span><!-- javanisch --><span>Sugeng Rawuh</span><!-- punjabi --><span>ਸਵਾਗਤ ਹੈ</span><!-- deutsch --><span>Willkommen</span><!-- koreanisch --><span>어서 오십시오</span><!-- französisch --><span>Bienvenue</span><!-- suaheli --><span>Karibu</span><!-- telugu --><span>Svāgatam</span><!-- türkisch --><span>Hoşgeldiniz</span><!-- urdu --><span>خوش آمدید</span><!-- tamil --><span>வரவேற்பு</span><!-- vietnamesisch --><span>Hoan nghênh</span><!-- ägyptisch-arabisch --><span>اهلا وسهلا</span><!-- italienisch --><span>Benvenuto</span></div></div>
 </div>
-<hr class="border">
+<hr>
 <video oncontextmenu="return false;" id="video" poster="img/landderechsen.jpg" tabindex="0" style="width:750px;height:calc(750px/2.2);max-width:100%;max-height:calc((100vw - 2*var(--spacer)) / 2.2);" controls preload controlsList="nodownload noplaybackrate" disablePictureInPicture>
     <source src="video/LandDerEchsen1080.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
     <source src="video/LandDerEchsen720.webm" type='video/webm; codecs="vp8, vorbis"' />
@@ -141,21 +141,21 @@
 </p>
 <p>
     <a class="phone"></a><br>
-    <a class="email"></a>
+    <a class="email" href="javascript:;"></a>
 </p>
 <p>
     <a href="https://www.instagram.com/joeyws/">Instagram</a>, <a href="https://www.linkedin.com/in/joeyschweickhardt/">LinkedIn</a>
 </p>
-<hr class="border">
+<hr>
 <p>
     <a id="show-privacypolicy" href="javascript:;">Privacy Policy</a><!-- writing-mode:vertical-lr;transform:rotate(-180deg); -->
 </p>
-<!--<p class="privacypolicy">
+<!-- <p class="privacypolicy">
     Hosted on GitHub<br>
     Weather data by BBC Weather<br>
     Hand-coded with <?xml version="1.0" ?><svg style="vertical-align:-5%;height:.7em;width:.7em;fill:red;" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" fill-rule="evenodd"/></svg>
     <span class="last-updated"></span>
-</p>-->
+</p> -->
 <p class="privacypolicy">Personal data (usually referred to just as „data“ below) will only be processed by us to the extent necessary and for the purpose of providing a functional and user-friendly website, including its contents, and the services offered there. Per Art. 4 No. 1 of Regulation (EU) 2016/679, i.e. the General Data Protection Regulation (hereinafter referred to as the „GDPR“), „processing“ refers to any operation or set of operations such as collection, recording, organization, structuring, storage, adaptation, alteration, retrieval, consultation, use, disclosure by transmission, dissemination, or otherwise making available, alignment, or combination, restriction, erasure, or destruction performed on personal data, whether by automated means or not.</p>
 <p class="privacypolicy">With regard to the data processing to be described in more detail below, users and data subjects have the right to confirmation of whether data concerning them is being processed, information about the data being processed, further information about the nature of the data processing, and copies of the data (cf. also Art. 15 GDPR); to correct or complete incorrect or incomplete data (cf. also Art. 16 GDPR); to the immediate deletion of data concerning them (cf. also Art. 17 DSGVO), or, alternatively, if further processing is necessary as stipulated in Art. 17 Para. 3 GDPR, to restrict said processing per Art. 18 GDPR; to receive copies of the data concerning them and/or provided by them and to have the same transmitted to other providers/controllers (cf. also Art. 20 GDPR); to file complaints with the supervisory authority if they believe that data concerning them is being processed by the controller in breach of data protection provisions (see also Art. 77 GDPR). In addition, the controller is obliged to inform all recipients to whom it discloses data of any such corrections, deletions, or restrictions placed on processing the same per Art. 16, 17 Para. 1, 18 GDPR. However, this obligation does not apply if such notification is impossible or involves a disproportionate effort. Nevertheless, users have a right to information about these recipients.</p>
 <p class="privacypolicy">Likewise, under Art. 21 GDPR, users and data subjects have the right to object to the controller&rsquo;s future processing of their data pursuant to Art. 6 Para. 1 lit. f) GDPR. In particular, an objection to data processing for the purpose of direct advertising is permissible. Your data processed when using our website will be deleted or blocked as soon as the purpose for its storage ceases to apply, provided the deletion of the same is not in breach of any statutory storage obligations or unless otherwise stipulated below.</p>
@@ -322,7 +322,7 @@ $(document).ready(function(){
     var phone = '+'+'4'+'9'+'1'+'5'+'7'+'7'+'8'+'8'+'5'+'0'+'5'+'0'+'2';
     $('.address1').html(address1);
     $('.address2').html(address2);
-    $('.email').html(mail).attr('href','m'+'a'+'i'+'l'+'t'+'o'+':'+'Joey'+'%20'+'Schweickhardt'+'%20'+'%3C'+mail+'%3E');
+    $('.email').html(mail); //.attr('href','m'+'a'+'i'+'l'+'t'+'o'+':'+'Joey'+'%20'+'Schweickhardt'+'%20'+'%3C'+mail+'%3E');
     $('.phone').html(phone).attr('href','t'+'e'+'l'+':'+phone);
     // email
     $('.email').after(" <span></span>").hover(function(){
