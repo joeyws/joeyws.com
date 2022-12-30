@@ -318,11 +318,11 @@ $(document).ready(function(){
     // impressum
     var address1 = 'K'+'o'+'l'+'p'+'i'+'n'+'g'+'s'+'t'+'r'+'.'+' '+'5'+'6';
     var address2 = 'D'+'-'+'7'+'0'+'3'+'7'+'8'+' '+'S'+'t'+'u'+'t'+'t'+'g'+'a'+'r'+'t';
-    var mail = 'm'+'a'+'i'+'l'+'@'+'j'+'o'+'e'+'y'+'w'+'s'+'.'+'c'+'o'+'m';
+    var mail = 'm'+'a'+'i'+'l'+ String.fromCharCode(64) +'j'+'o'+'e'+'y'+'w'+'s'+'.'+'c'+'o'+'m';
     var phone = '+'+'4'+'9'+'1'+'5'+'7'+'7'+'8'+'8'+'5'+'0'+'5'+'0'+'2';
     $('.address1').html(address1);
     $('.address2').html(address2);
-    $('.email').html(mail); //.attr('href','m'+'a'+'i'+'l'+'t'+'o'+':'+'Joey'+'%20'+'Schweickhardt'+'%20'+'%3C'+mail+'%3E');
+    $('.email').html(mail); //.attr('href',String.fromCharCode(109)+'a'+'i'+'l'+'t'+'o'+':'+'Joey'+'%20'+'Schweickhardt'+'%20'+'%3C'+mail+'%3E');
     $('.phone').html(phone).attr('href','t'+'e'+'l'+':'+phone);
     // email
     $('.email').after(" <span></span>").hover(function(){
