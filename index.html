@@ -26,7 +26,7 @@
     h1{font-size:16px;text-transform:uppercase;transform:scaleY(.8);font-family:webfont2,webfont,monospace;transform-origin:center center;white-space:nowrap;}
     p{margin-top:.7em;max-width:55em;} p:first-child{margin-top:0;} p+img,p+video,p+.cycle-slideshow,img+p,video+p,.cycle-slideshow+p{margin-top:var(--spacer);}
     a{/* color:#00f; */text-decoration:underline;cursor:pointer;white-space:nowrap;text-decoration-skip:edges;text-decoration-thickness:1px;}
-    a:hover{text-decoration:none;font-style:italic;}
+    a:hover{text-decoration:none;background:var(--text);color:var(--background);/* font-style:italic; */}
     /* a[href^=http]::after{content:"\2197";font-size:1.3em;margin-left:2px;display:inline-block;} */
 
     #header{/* mix-blend-mode:difference;position:sticky;top:var(--spacer);z-index:9999; *//* background:var(--text);color:var(--background);margin:calc(-1*var(--spacer));margin-bottom:var(--spacer);padding:var(--spacer); */display:flex;align-items:space-between;flex-wrap:wrap;column-gap:calc(2.4*var(--spacer));line-height:1.6em;}
@@ -231,7 +231,7 @@ $(document).ready(function(){
     });
     $("#lightbox").on("click",function(e){
         lightboxClose();
-    }).on("click","img",function(e) {
+    }).on("click","img",function(e){
         e.stopPropagation();
         /*if (event.pageX <= ($(document).width()/2)) {
             lightboxPrev();
@@ -324,11 +324,24 @@ $(document).ready(function(){
     $('.address2').html(address2);
     $('.email').html(mail).attr('href','m'+'a'+'i'+'l'+'t'+'o'+':'+'Joey'+'%20'+'Schweickhardt'+'%20'+'%3C'+mail+'%3E');
     $('.phone').html(phone).attr('href','t'+'e'+'l'+':'+phone);
+    // email
+    $('.email').after(" <span></span>").hover(function(){
+        $(this).next("span").html("click to copy");
+    },function(){
+        $(this).next("span").html("");
+    }).click(function(){
+        event.preventDefault();
+        navigator.clipboard.writeText(mail).then(() => {
+            $(this).next("span").html("copied");
+        },() => {
+            $(this).next("span").html("could not copy");
+        });
+    });
 
     // keyboard control
 	$(document).keydown(function(e){
 		if(!($("input,textarea").is(":focus"))) {
-            //e.preventDefault();
+            event.preventDefault();
 			switch(e.which) {
 			    case 27: lightboxClose(); break; // esc
 				case 32: break; // space
