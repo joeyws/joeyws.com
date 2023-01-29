@@ -6,20 +6,20 @@
 <style>
     @font-face{font-family:webfont;src:url("font/Source_Code_Pro/SourceCodePro-Regular.ttf");} /*Inter-Medium   font/RobotoMono/RobotoMono-Regular   IBM-Plex-Mono/IBMPlexMono-Text   texgyrecursor-regular   SourceCodePro-Medium*/
     @font-face{font-family:webfont2;src:url("font/Archivo-Bold.ttf");} /*Jost   Coconat-BoldExt   texgyreheros-bold   NimbusSanL-Bol   SourceCodePro-Regular  gnu-free-font/FreeSans   NimbusRomNo9L-Reg   Libre_Franklin/LibreFranklin-Bold*/
-    :root{--background:#eee;--text:#000;--spacer:10px;--light:#0002;}
+    :root{--background:#ddd;--text:#000;--spacer:10px;--light:#0002;}
     ::-moz-selection{background:var(--text);color:var(--background);}
     ::selection{background:var(--text);color:var(--background);}
     /* ::-webkit-scrollbar{width:8px;height:8px;background:var(--background);}
     ::-webkit-scrollbar-thumb{background:var(--text);} */
     /* RESET */*{user-select:none;font-kerning:normal;-webkit-tap-highlight-color:rgba(0,0,0,0)!important;}*:focus{outline:0 !important;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-appearance:none;border-radius:0;-webkit-border-radius:0;box-sizing:content-box;font-smoothing:antialiased;-moz-osx-font-smoothing: grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased;}
-	*{cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12px' height='12px' viewBox='0 0 12 12' fill='%23fff' stroke='%23000' stroke-width='1px' %3E%3Ccircle cx='6' cy='6' r='4'/%3E%3C/svg%3E") 6 6, auto !important;}
+	/**{cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12px' height='12px' viewBox='0 0 12 12' fill='%23fff' stroke='%23000' stroke-width='1px' %3E%3Ccircle cx='6' cy='6' r='4'/%3E%3C/svg%3E") 6 6, auto !important;}*/
     html,body{background:var(--background);}
     body{padding:var(--spacer);color:var(--text);font:normal normal 12px/1.3em webfont,monospace;min-height:108vh;}
 	.loading{animation:.3s blink steps(1) infinite;}
     h1{font-size:16px;text-transform:uppercase;transform:scaleY(.8);font-family:webfont2,webfont,monospace;transform-origin:center center;white-space:nowrap;}
     p{margin-top:.7em;max-width:55em;} p:first-child{margin-top:0;} p+img,p+video,p+.cycle-slideshow,img+p,video+p,.cycle-slideshow+p{margin-top:var(--spacer);}
-    a{text-decoration:none;box-shadow:inset 0 -1px var(--text);transition:all .15s;cursor:pointer;white-space:nowrap;/* text-decoration-skip:edges;text-decoration-thickness:1px;text-underline-offset:2px; */}
-    @media(hover:hover){a:hover{text-decoration:none;box-shadow:inset 0 -1.4em var(--text);color:var(--background);/* color:var(--background);background:var(--text); *//* color:var(--background);box-shadow:inset 0 -1.4em var(--text); */}}
+    a{text-decoration:underline;/*box-shadow:inset 0 -1px var(--text);transition:all .15s;cursor:pointer;*/white-space:nowrap;text-decoration-skip:edges;text-decoration-thickness:1px;}
+    @media(hover:hover){a:hover{text-decoration:none;color:var(--background);background:var(--text);}}
     /* a[href^=http]::after{content:"\2197";color:var(--light);font-size:1.3em;margin-left:2px;display:inline-block;} */
     
     #header{display:flex;align-items:space-between;flex-wrap:wrap;column-gap:calc(2.4*var(--spacer));line-height:1.6em;}
@@ -32,8 +32,8 @@
     #time-blink{animation:2s blink steps(1) infinite;}
     @keyframes blink{0%{opacity:0;}50%{opacity:1;}}
 
-    label{cursor:pointer;}
-    .switch{width:24px;height:8px;vertical-align:-25%;outline-offset:-1px;background:var(--light);border-radius:100vmax;position:relative;display:inline-block;}
+    label{cursor:pointer;padding:8px 0;}
+    .switch{width:24px;height:8px;vertical-align:-25%;background:var(--light);border-radius:100vmax;position:relative;display:inline-block;}
     .switch input{opacity:0;width:0;height:0;}
     .slider{position:absolute;top:0;left:0;right:0;bottom:0;}
     .slider:before{background:var(--text);height:8px;width:8px;left:0;top:0;border-radius:100vmax;transition:.2s;position:absolute;content:"";}
@@ -53,8 +53,8 @@
     .video:hover:after{border-left-color:#0f0;}
     .video.playing:after{display:none;}
     
-    #lightbox{z-index:999997;cursor:zoom-out;position:fixed;inset:0;display:none;}
-	#lightbox img{cursor:pointer;max-height:90vh;max-width:90vw;box-sizing:border-box;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);}
+    #lightbox{z-index:999997;cursor:zoom-out;position:fixed;inset:0;display:none;background:var(--background);}
+    #lightbox img{cursor:pointer;max-height:90vh;max-width:90vw;box-sizing:border-box;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);}
 </style>
 </head>
 <body>
@@ -67,7 +67,7 @@
 </div>
 <hr>
 <div class="video">
-    <video onclick="this.parentElement.classList.add('playing');this.setAttribute('controls','');" oncontextmenu="return false;" poster="img/landderechsen.jpg" tabindex="0" preload controlsList="nodownload noplaybackrate" disablePictureInPicture>
+    <video onclick="this.parentElement.classList.add('playing');this.setAttribute('controls','');this.setAttribute('autoplay','');" oncontextmenu="return false;" poster="img/landderechsen.jpg" tabindex="0" preload controlsList="nodownload noplaybackrate" disablePictureInPicture>
         <source src="video/LandDerEchsen1080.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
         <source src="video/LandDerEchsen720.webm" type='video/webm; codecs="vp8, vorbis"' />
         <source src="https://www.dropbox.com/s/mmcykw5nus3m39u/LandDerEchsen1080.ogv?raw=1" type='video/ogg; codecs="theora, vorbis"' />
@@ -97,7 +97,8 @@
     <img src="img/8.jpg" alt="Leichtsinn" />
 </div>
 <div class="gallery" id="places">
-    <!-- <img src="img/36.jpg" alt="Sant&rsquo; Ireneo" /> -->
+    <img src="img/37.jpg" alt="Mirror" />
+    <img src="img/36.jpg" alt="Sant&rsquo; Ireneo" />
     <img src="img/35.jpg" alt="Via Albricci" />
     <img src="img/34.jpg" alt="Garden" />
     <img src="img/33.jpg" alt="Nilufar Gallery" />
@@ -120,23 +121,15 @@
     <img src="img/2.jpg" alt="N&yacute;idalur" />
     <img src="img/1.jpg" alt="Fog" />
 </div>
-<hr>
-<!-- <img src="joey.jpg" style="width:300px;max-width:100%;" /> -->
-<!--<p>Hello, I am Joey.</p>
-<p>
-    After completing an education in music and sound design, I started to study architecture and urban planning at the <a href="https://www.f01.uni-stuttgart.de/en/">Universität Stuttgart</a>.
-    Last summer I attended <a href="https://www.aaschool.ac.uk/academicprogrammes/visitingschool">AA Visiting School</a> at the <a href="https://www.abk-stuttgart.de/en/">State Academy of Fine Arts Stuttgart</a> and right now I am at the <a href="https://www.adu.polimi.it/?lang=en">Politecnico di Milano</a> for a semester abroad.
-    In the last years I worked in different offices like <a href="https://www.wernersobek.com/">Werner Sobek</a> and <a href="https://behnisch.com">Behnisch Architekten</a>.
-</p>-->
-<!--<p>CV</p>
+<!-- <hr>
+<p>CV</p>
 <p>2022-2023<br>Study abroad with Erasmus+ schoolarship<br><a href="https://www.auic.polimi.it/en/">Politecnico di Milano</a></p>
 <p>2022<br><a href="https://www.aaschool.ac.uk/academicprogrammes/visitingschool">AA Visiting School</a><br><a href="https://www.abk-stuttgart.de/en/">State Academy of Fine Arts Stuttgart</a></p>
 <p>2022<br>Internship<br><a href="https://behnisch.com">Behnisch Architekten</a></p>
 <p>2021-2022<br>Working student<br>REM ASSETS</p>
 <p>2021-Present<br>Master studies Architecture and Urban Planning<br><a href="https://www.f01.uni-stuttgart.de/en/">Universität Stuttgart</a></p>
 <p>2020-2021<br>Working student<br><a href="https://www.wernersobek.com/">Werner Sobek</a></p>
-<p>2018-2021<br>BSc Architecture and Urban Planning<br><a href="https://www.f01.uni-stuttgart.de/en/">Universität Stuttgart</a></p>
-<hr>-->
+<p>2018-2021<br>BSc Architecture and Urban Planning<br><a href="https://www.f01.uni-stuttgart.de/en/">Universität Stuttgart</a></p> -->
 <hr>
 <p>Joey W. Schweickhardt<br><span class="address1"></span><br><span class="address2"></span></p>
 <p><a class="phone" href="javascript:"></a><br><a class="email" href="javascript:"></a></p>
