@@ -29,8 +29,8 @@
     #time-blink{animation:2s blink steps(1) infinite;}
     @keyframes blink{0%{opacity:0;}50%{opacity:1;}}
     /* SWITCH */
-    label{cursor:pointer;display:inline-flex;align-items:center;gap:var(--spacer);}
-    .switch{width:32px;height:11px;line-height:11px;font-size:11px;position:relative;display:inline-block;}
+    label{cursor:pointer;line-height:11px;display:inline-flex;align-items:center;gap:var(--spacer);}
+    .switch{width:32px;height:11px;position:relative;display:inline-block;}
     .switch input{opacity:0;width:0;height:0;line-height:0;font-size:0;}
     .slider{position:absolute;top:0;left:0;right:0;bottom:0;}
     .slider:before{height:11px;width:11px;background:var(--text);left:0;top:0;transition:.2s;border-radius:100vmax;position:absolute;content:"";}
