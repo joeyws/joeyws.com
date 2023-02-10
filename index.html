@@ -20,7 +20,7 @@
     a{/* text-decoration:underline; *//* background:var(--light);box-shadow:inset 0 0 var(--text); */transition:all .1s;text-decoration:underline;white-space:nowrap;/* text-decoration-skip:edges;text-decoration-thickness:1px; */}
     /* a[href^=http]::after{content:"\2197";font-size:1.4em;margin-left:.1em;display:inline-block;} */
     /* LAYOUT */
-    #header{display:flex;align-items:space-between;flex-wrap:wrap;column-gap:calc(2.4*var(--spacer));line-height:1.6em;}
+    #header{display:flex;align-items:space-between;flex-wrap:wrap;column-gap:calc(2.4*var(--spacer));/* line-height:1.6em; */}
     #header>*{white-space:nowrap;}
     hr{margin-top:calc(6*var(--spacer));}
     /* MARQUEE */
@@ -75,6 +75,7 @@
     <div class="marquee3k" data-speed=".8"><!-- https://de.wikipedia.org/wiki/Liste_der_meistgesprochenen_Sprachen --><div class="marquee"><!-- mandarin/kantonesisch --><span>歡迎</span><!-- spanisch --><span>Bienvenidos</span><!-- englisch --><span>Welcome</span><!-- marathi --><span>स्वागत हे</span><!-- hocharabisch --><span>اهلا وسهلا</span><!-- portugiesisch --><span>Bem-vinda</span><!-- bengalisch --><span>স্বাগত</span><!-- russisch --><span>добро пожаловать</span><!-- japanisch --><span>ようこそ</span><!-- javanisch --><span>Sugeng Rawuh</span><!-- punjabi --><span>ਸਵਾਗਤ ਹੈ</span><!-- deutsch --><span>Willkommen</span><!-- koreanisch --><span>어서 오십시오</span><!-- französisch --><span>Bienvenue</span><!-- suaheli --><span>Karibu</span><!-- telugu --><span>Svāgatam</span><!-- türkisch --><span>Hoşgeldiniz</span><!-- urdu --><span>خوش آمدید</span><!-- tamil --><span>வரவேற்பு</span><!-- vietnamesisch --><span>Hoan nghênh</span><!-- ägyptisch-arabisch --><span>اهلا وسهلا</span><!-- italienisch --><span>Benvenuto</span></div></div>
     <h1>Joey W. Schweickhardt</h1>
     <div>Milan<span id="time"></span><span id="weather"></span></div>
+    <a href="https://www.instagram.com/joeyws/">Instagram</a><a href="https://www.linkedin.com/in/joeyschweickhardt/">LinkedIn</a>
 </div>
 <hr>
 <div class="video">
@@ -132,15 +133,13 @@
     <img src="img/1.jpg" alt="Fog" />
 </div>
 <hr>
-<p>Joey W. Schweickhardt<br><span class="address1"></span><br><span class="address2"></span></p>
-<p><a class="phone" href="javascript:"></a><br><a class="email" href="javascript:"></a></p>
-<p><a href="https://www.instagram.com/joeyws/">Instagram</a> <a href="https://www.linkedin.com/in/joeyschweickhardt/">LinkedIn</a></p>
-<hr>
-<p><a id="show-privacy" href="javascript:">Privacy</a><!-- writing-mode:vertical-lr;transform:rotate(-180deg); --></p>
-<p class="privacy">Personal data (usually referred to just as „data“ below) will only be processed by us to the extent necessary and for the purpose of providing a functional and user-friendly website, including its contents, and the services offered there. Per Art. 4 No. 1 of Regulation (EU) 2016/679, i.e. the General Data Protection Regulation (hereinafter referred to as the „GDPR“), „processing“ refers to any operation or set of operations such as collection, recording, organization, structuring, storage, adaptation, alteration, retrieval, consultation, use, disclosure by transmission, dissemination, or otherwise making available, alignment, or combination, restriction, erasure, or destruction performed on personal data, whether by automated means or not.</p>
-<p class="privacy">With regard to the data processing to be described in more detail below, users and data subjects have the right to confirmation of whether data concerning them is being processed, information about the data being processed, further information about the nature of the data processing, and copies of the data (cf. also Art. 15 GDPR); to correct or complete incorrect or incomplete data (cf. also Art. 16 GDPR); to the immediate deletion of data concerning them (cf. also Art. 17 DSGVO), or, alternatively, if further processing is necessary as stipulated in Art. 17 Para. 3 GDPR, to restrict said processing per Art. 18 GDPR; to receive copies of the data concerning them and/or provided by them and to have the same transmitted to other providers/controllers (cf. also Art. 20 GDPR); to file complaints with the supervisory authority if they believe that data concerning them is being processed by the controller in breach of data protection provisions (see also Art. 77 GDPR). In addition, the controller is obliged to inform all recipients to whom it discloses data of any such corrections, deletions, or restrictions placed on processing the same per Art. 16, 17 Para. 1, 18 GDPR. However, this obligation does not apply if such notification is impossible or involves a disproportionate effort. Nevertheless, users have a right to information about these recipients.</p>
-<p class="privacy">Likewise, under Art. 21 GDPR, users and data subjects have the right to object to the controller&rsquo;s future processing of their data pursuant to Art. 6 Para. 1 lit. f) GDPR. In particular, an objection to data processing for the purpose of direct advertising is permissible. Your data processed when using our website will be deleted or blocked as soon as the purpose for its storage ceases to apply, provided the deletion of the same is not in breach of any statutory storage obligations or unless otherwise stipulated below.</p>
-<p class="privacy">Source: Anwaltskanzlei Weiß & Partner</p>
+<p><a id="show-imprint" href="javascript:">Contact</a><!-- writing-mode:vertical-lr;transform:rotate(-180deg); --></p>
+<p class="imprint">Joey W. Schweickhardt<br><span class="address1"></span><br><span class="address2"></span></p>
+<p class="imprint"><a class="phone" href="javascript:"></a><br><a class="email" href="javascript:"></a></p>
+<p class="imprint">Personal data (usually referred to just as „data“ below) will only be processed by us to the extent necessary and for the purpose of providing a functional and user-friendly website, including its contents, and the services offered there. Per Art. 4 No. 1 of Regulation (EU) 2016/679, i.e. the General Data Protection Regulation (hereinafter referred to as the „GDPR“), „processing“ refers to any operation or set of operations such as collection, recording, organization, structuring, storage, adaptation, alteration, retrieval, consultation, use, disclosure by transmission, dissemination, or otherwise making available, alignment, or combination, restriction, erasure, or destruction performed on personal data, whether by automated means or not.</p>
+<p class="imprint">With regard to the data processing to be described in more detail below, users and data subjects have the right to confirmation of whether data concerning them is being processed, information about the data being processed, further information about the nature of the data processing, and copies of the data (cf. also Art. 15 GDPR); to correct or complete incorrect or incomplete data (cf. also Art. 16 GDPR); to the immediate deletion of data concerning them (cf. also Art. 17 DSGVO), or, alternatively, if further processing is necessary as stipulated in Art. 17 Para. 3 GDPR, to restrict said processing per Art. 18 GDPR; to receive copies of the data concerning them and/or provided by them and to have the same transmitted to other providers/controllers (cf. also Art. 20 GDPR); to file complaints with the supervisory authority if they believe that data concerning them is being processed by the controller in breach of data protection provisions (see also Art. 77 GDPR). In addition, the controller is obliged to inform all recipients to whom it discloses data of any such corrections, deletions, or restrictions placed on processing the same per Art. 16, 17 Para. 1, 18 GDPR. However, this obligation does not apply if such notification is impossible or involves a disproportionate effort. Nevertheless, users have a right to information about these recipients.</p>
+<p class="imprint">Likewise, under Art. 21 GDPR, users and data subjects have the right to object to the controller&rsquo;s future processing of their data pursuant to Art. 6 Para. 1 lit. f) GDPR. In particular, an objection to data processing for the purpose of direct advertising is permissible. Your data processed when using our website will be deleted or blocked as soon as the purpose for its storage ceases to apply, provided the deletion of the same is not in breach of any statutory storage obligations or unless otherwise stipulated below.</p>
+<p class="imprint">Source: Anwaltskanzlei Weiß & Partner</p>
 
 
 <script src="scripts.js"></script>
@@ -288,13 +287,6 @@ $(document).ready(function(){
     function loadWeather() {getXMLFeed("https://weather-broker-cdn.api.bbci.co.uk/en/observation/rss/3173435", getWeather);} // Stuttgart:2825297 Milan:3173435 Basel:2661604
     loadWeather();
     setTimeout(function(){loadWeather();},60000);
-
-    // imprint
-    $(".privacy").hide();
-    $("#show-privacy").on("click",function(){
-        $(this).remove();
-        $(".privacy").show();
-    });
     
     // impressum
     var address1 = 'K'+'o'+'l'+'p'+'i'+'n'+'g'+'s'+'t'+'r'+'.'+' '+'5'+'6';
@@ -317,6 +309,13 @@ $(document).ready(function(){
         },() => {
             $(this).next("span").html("copying failed");
         });
+    });
+
+    // imprint
+    $(".imprint").hide();
+    $("#show-imprint").on("click",function(){
+        $(this).remove();
+        $(".imprint").show();
     });
 
     // keyboard control
