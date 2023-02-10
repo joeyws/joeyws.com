@@ -17,24 +17,30 @@
 	.loading{animation:.3s blink steps(1) infinite;}
     h1{font-size:16px;text-transform:uppercase;transform:scaleY(.8);font-family:webfont2,webfont,monospace;transform-origin:center center;white-space:nowrap;}
     p{margin-top:.7em;max-width:900px;}p:first-child{margin-top:0;}p+img,p+video,p+.cycle-slideshow,img+p,video+p,.cycle-slideshow+p{margin-top:var(--spacer);}
-    a{text-decoration:underline;/* box-shadow:inset 0 -1px var(--text);transition:all .1s;text-decoration:none; */white-space:nowrap;/* text-decoration-skip:edges;text-decoration-thickness:1px; */}
+    a{/* text-decoration:underline; *//* background:var(--light);box-shadow:inset 0 0 var(--text); */transition:all .1s;text-decoration:underline;white-space:nowrap;/* text-decoration-skip:edges;text-decoration-thickness:1px; */}
     /* a[href^=http]::after{content:"\2197";font-size:1.4em;margin-left:.1em;display:inline-block;} */
     /* LAYOUT */
     #header{display:flex;align-items:space-between;flex-wrap:wrap;column-gap:calc(2.4*var(--spacer));line-height:1.6em;}
     #header>*{white-space:nowrap;}
     hr{margin-top:calc(6*var(--spacer));}
     /* MARQUEE */
-    .marquee3k{background:var(--text);color:var(--background);margin:calc(-1*var(--spacer));margin-bottom:var(--spacer);/* width:200px;flex-grow:1; */line-height:1.6em;white-space:nowrap;overflow:hidden;}
+    .marquee3k{background:var(--text);color:var(--background);margin:calc(-1*var(--spacer));/* border-bottom:1px solid var(--text);padding-bottom:var(--spacer); *//* width:200px;flex-grow:1; */margin-bottom:var(--spacer);line-height:1.6em;white-space:nowrap;overflow:hidden;}
     .marquee3k .marquee span{margin-right:1.4em;}
     #time-blink{animation:2s blink steps(1) infinite;}
     @keyframes loading{0%{opacity:0;}50%{opacity:1;}}
+    /* VIDEO */
+    .video{cursor:pointer;overflow:hidden;position:relative;max-width:900px;font-size:0;line-height:0;}
+    .video:after{font-size:40px;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);content:"\25BA";pointer-events:none;}
+    .video:hover:after{color:#0f0;}
+    .video.playing:after{display:none;}
+    video{max-width:100%;cursor:pointer;}
     /* SWITCH */
     label{cursor:pointer;display:inline-flex;align-items:center;gap:var(--spacer);}
-    .switch{width:38px;height:11px;position:relative;display:inline-block;background:transparent url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1px" height="1px" viewBox="0 0 1 1"><rect width="1" height="1"/></svg>') center center scroll repeat-x;}
+    .switch{width:27px;height:9px;position:relative;display:inline-block;border-radius:100vmax;background:var(--light) /* url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1px" height="1px" viewBox="0 0 1 1"><rect fill="%23000" width="1" height="1"/></svg>') center center scroll repeat-x */;}
     .switch input{opacity:0;width:0;height:0;line-height:0;font-size:0;}
     .slider{position:absolute;top:0;left:0;right:0;bottom:0;}
-    .slider:before{height:11px;width:11px;background:var(--text);left:0;top:0;transition:.2s;border-radius:100vmax;position:absolute;content:"";}
-    input:checked+.slider:before{transform:translateX(27px);}
+    .slider:before{height:9px;width:9px;background:var(--text);left:0;top:0;transition:.2s;border-radius:100vmax;position:absolute;content:"";}
+    input:checked+.slider:before{transform:translateX(18px);}
     @keyframes outline{0%{outline:1px solid var(--text);}100%{outline:1px solid transparent;outline-offset:5px;}}
     /* GALLERY */
     /*.gallery{display:grid;gap:var(--spacer);grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin-top:calc(2*var(--spacer));}
@@ -49,21 +55,14 @@
     .gallery>div>div{overflow:hidden;position:relative;line-height:0;font-size:0;}
     .gallery>div>div:after{opacity:0;background:#f0f/*linear-gradient(to right, #f00,#ff0,#0f0,#0ff,#00f,#f0f,#f00) center center scroll no-repeat*/;inset:0;position:absolute;pointer-events:none;mix-blend-mode:difference;content:"";}
     .gallery img{max-width:100%;}
-    .gallery>div>span{display:block;margin-top:var(--spacer);pointer-events:none;}
-    .gallery>div>span>span{line-height:1em;transition:all .1s;}
-    /* VIDEO */
-    .video{cursor:pointer;overflow:hidden;position:relative;max-width:900px;font-size:0;line-height:0;}
-    .video:after{font-size:40px;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);content:"\25BA";pointer-events:none;}
-    .video:hover:after{color:#0f0;}
-    .video.playing:after{display:none;}
-    video{max-width:100%;cursor:pointer;}
+    .gallery>div>span{display:block;/* margin-top:var(--spacer); */pointer-events:none;}
+    .gallery>div>span>span{transition:all .1s;}
     /* LIGHTBOX */
     #lightbox{z-index:999997;cursor:zoom-out;position:fixed;inset:0;display:none;background:var(--background);}
     #lightbox img{cursor:pointer;max-height:90vh;max-width:90vw;box-sizing:border-box;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);}
     /* :HOVER */
     @media(hover:hover){
-        a:hover{text-decoration:none;/* box-shadow:inset 0 -1.4em var(--text);color:var(--background); */}
-        .gallery>div:hover>span>span{text-decoration:underline;}
+        a:hover,.gallery>div:hover>span>span{text-decoration:none;box-shadow:inset 0 -1.4em var(--text);color:var(--background);}
         .gallery>div:hover>div:after{opacity:1;/* animation:.15s blink steps(1) 2; */}
         /* @keyframes blink{0%{opacity:1;}50%{opacity:0;}} */
     }
@@ -135,7 +134,7 @@
 <hr>
 <p>Joey W. Schweickhardt<br><span class="address1"></span><br><span class="address2"></span></p>
 <p><a class="phone" href="javascript:"></a><br><a class="email" href="javascript:"></a></p>
-<p><a href="https://www.instagram.com/joeyws/">Instagram</a>, <a href="https://www.linkedin.com/in/joeyschweickhardt/">LinkedIn</a></p>
+<p><a href="https://www.instagram.com/joeyws/">Instagram</a> <a href="https://www.linkedin.com/in/joeyschweickhardt/">LinkedIn</a></p>
 <hr>
 <p><a id="show-privacy" href="javascript:">Privacy</a><!-- writing-mode:vertical-lr;transform:rotate(-180deg); --></p>
 <p class="privacy">Personal data (usually referred to just as „data“ below) will only be processed by us to the extent necessary and for the purpose of providing a functional and user-friendly website, including its contents, and the services offered there. Per Art. 4 No. 1 of Regulation (EU) 2016/679, i.e. the General Data Protection Regulation (hereinafter referred to as the „GDPR“), „processing“ refers to any operation or set of operations such as collection, recording, organization, structuring, storage, adaptation, alteration, retrieval, consultation, use, disclosure by transmission, dissemination, or otherwise making available, alignment, or combination, restriction, erasure, or destruction performed on personal data, whether by automated means or not.</p>
