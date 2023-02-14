@@ -13,12 +13,12 @@
     ::-webkit-scrollbar-thumb{background:var(--text);}*/
     /* RESET */*{user-select:none;font-kerning:normal;-webkit-tap-highlight-color:rgba(0,0,0,0)!important;}*:focus{outline:0 !important;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-appearance:none;border-radius:0;-webkit-border-radius:0;box-sizing:content-box;font-smoothing:antialiased;-moz-osx-font-smoothing: grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased;}
 	html,body{background:var(--background);}
-    body{padding:var(--spacer);color:var(--text);font:normal normal 12px/1.35em webfont,monospace;min-height:108vh;}
-	hr{margin-top:calc(6*var(--spacer));}
-    h1{font-size:16px;text-transform:uppercase;transform:scaleY(.8);font-family:webfont2,webfont,monospace;transform-origin:center center;white-space:nowrap;}
+    body{padding:var(--spacer);color:var(--text);font:normal normal 12px/1.3em webfont,monospace;min-height:108vh;}
+	h1{font-size:16px;text-transform:uppercase;transform:scaleY(.8);font-family:webfont2,webfont,monospace;transform-origin:center center;white-space:nowrap;}
     p{margin-top:.7em;max-width:900px;}p:first-child{margin-top:0;}p+img,p+video,p+.cycle-slideshow,img+p,video+p,.cycle-slideshow+p{margin-top:var(--spacer);}
-    a{text-decoration:none;padding:0 .35em;border-radius:100vmax;box-shadow:inset 0 0 var(--text);transition:all .1s;white-space:nowrap;background:var(--light);/* text-decoration-skip:edges;text-decoration-thickness:1px; */}
-    /* a[href^=http]::after{content:"\2197";font-size:1.4em;margin-left:.1em;display:inline-block;} */
+    a{text-decoration:none;padding:0 .35em;border-radius:100vmax;background:var(--light);transition:all .1s;white-space:nowrap;/* text-decoration-skip:edges;text-decoration-thickness:1px; */}
+    /* a[href^=http]::after{content:"\2197";vertical-align:20%;margin-left:.1em;display:inline-block;} */
+    hr{margin-top:calc(6*var(--spacer));/* border-top:1px solid var(--text); */}
     /* HEADER */
     #header{display:flex;align-items:space-between;flex-wrap:wrap;column-gap:calc(2.4*var(--spacer));/* line-height:1.6em; */}
     #header>*{white-space:nowrap;}
@@ -42,27 +42,22 @@
     input:checked+.slider:before{transform:translateX(18px);}
     @keyframes outline{0%{outline:1px solid var(--text);}100%{outline:1px solid transparent;outline-offset:5px;}}
     /* GALLERY */
-    .gallery{padding-top:calc(2*var(--spacer));column-gap:var(--spacer);columns:10 260px;max-width:calc(10*260px + 9*var(--spacer));}
-    .gallery>div{cursor:zoom-in;margin-bottom:var(--spacer);break-inside:avoid;}
-    .gallery>div>div{overflow:hidden;position:relative;line-height:0;font-size:0;}
+    .gallery{padding-top:calc(2*var(--spacer));column-gap:var(--spacer);columns:10 280px;max-width:calc(10*280px + 9*var(--spacer));}
+    .gallery>div{position:relative;cursor:zoom-in;margin-bottom:var(--spacer);break-inside:avoid;}
+    .gallery>div>div{/* overflow:hidden; */line-height:0;font-size:0;}
     .gallery>div>div:after{opacity:0;background:#f0f/*linear-gradient(to right, #f00,#ff0,#0f0,#0ff,#00f,#f0f,#f00) center center scroll no-repeat*/;inset:0;position:absolute;pointer-events:none;mix-blend-mode:difference;content:"";}
     .gallery img{max-width:100%;}
-    .gallery>div>span{display:block;/* margin-top:var(--spacer); */pointer-events:none;}
-    /*.gallery{display:grid;gap:var(--spacer);grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin-top:calc(2*var(--spacer));}
-    .gallery>div{max-width:100%;position:relative;cursor:zoom-in;}
-    .gallery>div>div:after{opacity:0;background:#f0f;inset:0;position:absolute;pointer-events:none;mix-blend-mode:difference;content:"";}
-    .gallery>div>div{overflow:hidden;position:relative;font-size:0;line-height:0;margin-bottom:var(--spacer);}
-    .gallery>div>div>img{max-width:100%;}
-    .gallery>div>span{display:block;}
-    .gallery>div>span>span{transition:all .15s;}*/
+    .gallery>div>span{position:absolute;inset:var(--spacer);transition:all .2s;}
+    .gallery>div>span>span{background:var(--text);color:var(--background);}
+    .gallery>div:not(:hover)>span{opacity:0;transform:translateY(-5px);}
     /* LIGHTBOX */
-    #lightbox{z-index:999997;cursor:zoom-out;position:fixed;inset:0;display:none;background:var(--background);}
+    #lightbox{z-index:999997;cursor:zoom-out;position:fixed;inset:0;display:none;/* background:var(--background); */}
     #lightbox img{cursor:pointer;max-height:90vh;max-width:90vw;box-sizing:border-box;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);}
     /* :HOVER */
     @media(hover:hover){
-        a:hover{text-decoration:none;/* background:var(--text); */box-shadow:inset 0 -1.4em var(--text);color:var(--background);}
-        .gallery>div:hover>div:after{opacity:1;/* animation:.15s blink steps(1) 2; */}
-        /* @keyframes blink{0%{opacity:1;}50%{opacity:0;}} */
+        a:hover{text-decoration:none;background:var(--text);color:var(--background);}
+        .gallery>div:hover>div:after{/* opacity:1; *//* animation:.2s blink steps(1) 1; */}
+        @keyframes blink{0%{opacity:1;}50%{opacity:0;}}
     }
 </style>
 </head>
@@ -73,7 +68,7 @@
     <div class="marquee3k" data-speed=".8"><!-- https://de.wikipedia.org/wiki/Liste_der_meistgesprochenen_Sprachen --><div class="marquee"><!-- mandarin/kantonesisch --><span>歡迎</span><!-- spanisch --><span>Bienvenidos</span><!-- englisch --><span>Welcome</span><!-- marathi --><span>स्वागत हे</span><!-- hocharabisch --><span>اهلا وسهلا</span><!-- portugiesisch --><span>Bem-vinda</span><!-- bengalisch --><span>স্বাগত</span><!-- russisch --><span>добро пожаловать</span><!-- japanisch --><span>ようこそ</span><!-- javanisch --><span>Sugeng Rawuh</span><!-- punjabi --><span>ਸਵਾਗਤ ਹੈ</span><!-- deutsch --><span>Willkommen</span><!-- koreanisch --><span>어서 오십시오</span><!-- französisch --><span>Bienvenue</span><!-- suaheli --><span>Karibu</span><!-- telugu --><span>Svāgatam</span><!-- türkisch --><span>Hoşgeldiniz</span><!-- urdu --><span>خوش آمدید</span><!-- tamil --><span>வரவேற்பு</span><!-- vietnamesisch --><span>Hoan nghênh</span><!-- ägyptisch-arabisch --><span>اهلا وسهلا</span><!-- italienisch --><span>Benvenuto</span></div></div>
     <h1 class="loading">Joey W. Schweickhardt</h1>
     <div>Milan<span id="time"></span><span id="weather"></span></div>
-    <div><a href="https://www.instagram.com/joeyws/">Instagram</a> <a href="https://www.linkedin.com/in/joeyschweickhardt/">LinkedIn</a></div>
+    <div><a href="https://www.instagram.com/joeyws/">Instagram</a> <a href="https://www.linkedin.com/in/joeyschweickhardt/">LinkedIn</a> <a id="show-imprint" href="javascript:">Contact</a></div>
 </div>
 <hr>
 <div class="video">
@@ -89,49 +84,48 @@
 <hr>
 <p><label>Works<span class="switch"><input id="check" type="checkbox"><span class="slider"></span></span>Places</label></p>
 <div class="gallery" id="works">
-    <img src="img/26.jpg" alt="Lightweight pneu pavillons" />
-    <img src="img/25.jpg" alt="Vasikkasaari Climate Research Institute Helsinki" />
-    <img src="img/23.jpg" alt="Wardrobe, birch, hand-sewn curtain" />
-    <img src="img/droneport.gif" alt="Droneport maintenance building and tower with landing platforms" />
-    <img src="img/21.jpg" alt="Light studies models" />
-    <img src="img/20.jpg" alt="Wooden structure with traction cables" />
-    <img src="img/16.jpg" alt="Sint-Aneke-Club Antwerp" />
-    <img src="img/15.jpg" alt="Model, laser cut, glueless" />
-    <img src="img/14.jpg" alt="Cuboid perspective" />
-    <img src="img/13.jpg" alt="Cuboid perspective preparation" />
-    <img src="img/12.jpg" alt="Cuboid axonometry" />
-    <img src="img/11.jpg" alt="Ruled surfaces" />
-    <img src="img/10.jpg" alt="Pineapple, etching" />
-    <img src="img/9.2.jpg" alt="Cup, ink" />
-    <img src="img/9.jpg" alt="Tools" />
-    <img src="img/8.jpg" alt="Leichtsinn" />
+    <img src="img/26.jpg" data-date="2022" alt="Lightweight pneu pavillons" />
+    <img src="img/25.jpg" data-date="2021" alt="Vasikkasaari Climate Research Institute Helsinki" />
+    <img src="img/23.jpg" data-date="2021" alt="Wardrobe, birch, hand-sewn curtain" />
+    <img src="img/droneport.gif" data-date="2020" alt="Droneport maintenance building and tower with landing platforms" />
+    <img src="img/21.jpg" data-date="2020" alt="Light studies models" />
+    <img src="img/20.jpg" data-date="2020" alt="Wooden structure with traction cables" />
+    <img src="img/16.jpg" data-date="2019" alt="Sint-Aneke-Club Antwerp" />
+    <img src="img/15.jpg" data-date="2019" alt="Model, laser cut, glueless" />
+    <img src="img/14.jpg" data-date="2019" alt="Cuboid perspective" />
+    <img src="img/13.jpg" data-date="2019" alt="Cuboid perspective preparation" />
+    <img src="img/12.jpg" data-date="2019" alt="Cuboid axonometry" />
+    <img src="img/11.jpg" data-date="2019" alt="Ruled surfaces" />
+    <img src="img/10.jpg" data-date="2019" alt="Pineapple, etching" />
+    <img src="img/9.2.jpg" data-date="2019" alt="Cup, ink" />
+    <img src="img/9.jpg" data-date="2019" alt="Tools" />
+    <img src="img/8.jpg" data-date="2018" alt="Leichtsinn" />
 </div>
 <div class="gallery" id="places">
-    <img src="img/37.jpg" alt="Reflection" />
-    <img src="img/36.jpg" alt="Sant&rsquo; Ireneo" />
-    <img src="img/35.jpg" alt="Via Albricci" />
-    <img src="img/34.jpg" alt="Garden" />
-    <img src="img/33.jpg" alt="Nilufar Gallery" />
-    <img src="img/32.jpg" alt="Monte Amiata" />
-    <img src="img/30.jpg" alt="Amendola" />
-    <img src="img/29.jpg" alt="ADI" />
-    <img src="img/28.jpg" alt="Emergence Pool, by courtesy of Nari Ward" />
-    <img src="img/27.jpg" alt="Clouds" />
-    <img src="img/24.jpg" alt="Creek" />
-    <img src="img/22.jpg" alt="Flora" />
-    <img src="img/19.jpg" alt="Switzerland" />
-    <img src="img/18.jpg" alt="Death Valley" />
-    <img src="img/17.jpg" alt="Campfire in a sandy forest" />
-    <img src="img/7.jpg" alt="S&ocirc;ng Ng&agrave;n Ph&#7889;" />
-    <img src="img/6.jpg" alt="Eel soup" />
-    <img src="img/5.jpg" alt="H&#432;&#x01A1;ng S&#x01A1;n" />
-    <img src="img/4.jpg" alt="Merano" />
-    <img src="img/3.jpg" alt="J&ouml;kuls&aacute;rl&oacute;n glacial lake" />
-    <img src="img/2.jpg" alt="N&yacute;idalur" />
-    <img src="img/1.jpg" alt="Fog" />
+    <img src="img/37.jpg" data-date="2023" alt="Reflection" />
+    <img src="img/36.jpg" data-date="2023" alt="Sant&rsquo; Ireneo" />
+    <img src="img/35.jpg" data-date="2023" alt="Via Albricci" />
+    <img src="img/34.jpg" data-date="2023" alt="Garden" />
+    <img src="img/33.jpg" data-date="2023" alt="Nilufar Gallery" />
+    <img src="img/32.jpg" data-date="2022" alt="Monte Amiata" />
+    <img src="img/30.jpg" data-date="2022" alt="Amendola" />
+    <img src="img/29.jpg" data-date="2022" alt="ADI" />
+    <img src="img/28.jpg" data-date="2022" alt="Emergence Pool, by courtesy of Nari Ward" />
+    <img src="img/27.jpg" data-date="2022" alt="Clouds" />
+    <img src="img/24.jpg" data-date="20" alt="Creek" />
+    <img src="img/22.jpg" data-date="2019" alt="Flora" />
+    <img src="img/19.jpg" data-date="2019" alt="Switzerland" />
+    <img src="img/18.jpg" data-date="2019" alt="Death Valley" />
+    <img src="img/17.jpg" data-date="2019" alt="Campfire in a sandy forest" />
+    <img src="img/7.jpg" data-date="2018" alt="S&ocirc;ng Ng&agrave;n Ph&#7889;" />
+    <img src="img/6.jpg" data-date="2018" alt="Eel soup" />
+    <img src="img/5.jpg" data-date="2018" alt="H&#432;&#x01A1;ng S&#x01A1;n" />
+    <img src="img/4.jpg" data-date="2017" alt="Merano" />
+    <img src="img/3.jpg" data-date="2016" alt="J&ouml;kuls&aacute;rl&oacute;n glacial lake" />
+    <img src="img/2.jpg" data-date="2016" alt="N&yacute;idalur" />
+    <img src="img/1.jpg" data-date="20??" alt="Fog" />
 </div>
 <hr>
-<p><a id="show-imprint" href="javascript:">Contact</a><!-- writing-mode:vertical-lr;transform:rotate(-180deg); --></p>
 <p class="imprint">Joey W. Schweickhardt<br><span class="address1"></span><br><span class="address2"></span></p>
 <p class="imprint"><a class="phone" href="javascript:"></a><br><a class="email" href="javascript:"></a></p>
 <p class="imprint">Personal data (usually referred to just as „data“ below) will only be processed by us to the extent necessary and for the purpose of providing a functional and user-friendly website, including its contents, and the services offered there. Per Art. 4 No. 1 of Regulation (EU) 2016/679, i.e. the General Data Protection Regulation (hereinafter referred to as the „GDPR“), „processing“ refers to any operation or set of operations such as collection, recording, organization, structuring, storage, adaptation, alteration, retrieval, consultation, use, disclosure by transmission, dissemination, or otherwise making available, alignment, or combination, restriction, erasure, or destruction performed on personal data, whether by automated means or not.</p>
@@ -312,8 +306,9 @@ $(document).ready(function(){
     // imprint
     $(".imprint").hide();
     $("#show-imprint").on("click",function(){
-        $(this).remove();
-        $(".imprint").show();
+        $(".imprint").show(0);
+        $("html,body").animate({scrollTop:$("html,body").get(0).scrollHeight},500);
+        return false;
     });
 
     // keyboard control
