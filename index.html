@@ -16,7 +16,7 @@
     body{padding:var(--spacer);color:var(--text);font:normal normal 12px/1.3em webfont,monospace;min-height:108vh;}
 	h1{font-size:16px;text-transform:uppercase;transform:scaleY(.8);font-family:webfont2,webfont,monospace;transform-origin:center center;white-space:nowrap;}
     p{margin-top:.7em;max-width:900px;}p:first-child{margin-top:0;}p+img,p+video,p+.cycle-slideshow,img+p,video+p,.cycle-slideshow+p{margin-top:var(--spacer);}
-    a{text-decoration:underline;/* padding:0 .35em;border-radius:100vmax;background:var(--light);transition:all .1s; */white-space:nowrap;}
+    a{text-decoration:underline;transition:all .15s;text-decoration-color:var(--text);/* padding:0 .35em;border-radius:100vmax;background:var(--light);transition:all .1s; */white-space:nowrap;}
     /* a[href^=http]::after{content:"\2197";vertical-align:20%;margin-left:.1em;display:inline-block;} */
     hr{margin-top:calc(6*var(--spacer));/* border-top:1px solid var(--text); */}
     /* HEADER */
@@ -42,7 +42,7 @@
     input:checked+.slider:before{transform:translateX(18px);}
     @keyframes outline{0%{outline:1px solid var(--text);}100%{outline:1px solid transparent;outline-offset:5px;}}
     /* GALLERY */
-    .gallery{padding-top:calc(2*var(--spacer));column-gap:var(--spacer);columns:10 280px;max-width:calc(10*280px + 9*var(--spacer));}
+    .gallery{padding-top:calc(2*var(--spacer));column-gap:var(--spacer);columns:8 280px;max-width:calc(8*280px + 9*var(--spacer));}
     .gallery>div{position:relative;transition:all .2s;cursor:zoom-in;margin-bottom:var(--spacer);break-inside:avoid;}
     .gallery>div:hover{transform:translateY(-5px);}
     .gallery>div>div{/* overflow:hidden; */line-height:0;font-size:0;}
@@ -56,7 +56,7 @@
     #lightbox img{cursor:pointer;max-height:90vh;max-width:90vw;box-sizing:border-box;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);}
     /* :HOVER */
     @media(hover:hover){
-        a:hover{text-decoration:none;box-shadow:inset 0 -1.4em var(--text);color:var(--background);/* background:var(--text); */}
+        a:hover{background:var(--text);/* text-decoration:none;box-shadow:inset 0 -1.4em var(--text); */color:var(--background);}
         .gallery>div:hover>div:after{opacity:0;/* animation:.2s blink steps(1) 1; */}
         @keyframes blink{0%{opacity:1;}50%{opacity:0;}}
     }
