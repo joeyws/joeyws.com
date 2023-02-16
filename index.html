@@ -187,16 +187,6 @@ $(document).ready(function(){
     $(window).bind("hashchange",function(e){refreshHash();});
     
     // gallery
-    $("#places").hide();
-    $("#check").on("change",function(){ 
-        if($(this).is(":checked")){
-            $("#works").hide();
-            $("#places").show();
-        }else{
-            $("#places").hide();
-            $("#works").show();
-        }
-    });
     $(".gallery img").each(function(){
         var ratio = $(this).prop("naturalWidth") / $(this).prop("naturalWidth");
         $(this).wrap("<div><div></div></div>").parent().after("<span><span>" + $(this).attr("alt") + "</span></span>"); // style='width:" + (160/$(this).prop("naturalHeight")*$(this).prop("naturalWidth")) + "px;'
@@ -242,34 +232,8 @@ $(document).ready(function(){
         lightboxClose();
     }).on("click","img",function(e){
         e.stopPropagation();
-        /*if (event.pageX <= ($(document).width()/2)) {
-            lightboxPrev();
-        } else {
-            lightboxNext();
-        }*/
         lightboxNext();
     });
-
-    // cursor
-    /* $("body").append("<div id='cursor'>&nbsp;</div>");
-    if (("ontouchstart" in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0)) { 
-        $("#cursor").remove();
-    }
-    $(window).on("mousemove",function(e){
-        $("#cursor").css({"top":(e.pageY-window.scrollY),"left":e.pageX});
-        if(e.pageX > ($(document).width()/2)){
-            $("#cursor").removeClass("prev").addClass("next");
-        } else {
-            $("#cursor").removeClass("next").addClass("prev");
-        }
-    });
-    $("video").hover(function(){$("#cursor").hide();},function(){$("#cursor").show();});
-    $(document).hover(function(){$("#cursor").show();},function(){$("#cursor").hide();});
-    $("#lightbox img").on({mouseenter:function(){
-        $("#cursor").addClass("arrow");
-    },mouseleave:function(){
-        $("#cursor").removeClass("arrow");
-    }}); */
 
     // time
     function addZero(i) {if (i < 10) {i = "0" + i;} return i;}
