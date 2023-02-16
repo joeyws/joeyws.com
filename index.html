@@ -15,16 +15,17 @@
 	html,body{background:var(--background);}
     body{padding:var(--spacer);color:var(--text);font:normal normal 12px/1.3em webfont,monospace;min-height:108vh;}
 	h1{font-size:16px;text-transform:uppercase;transform:scaleY(.8);font-family:webfont2,webfont,monospace;transform-origin:center center;white-space:nowrap;}
-    p{margin-top:.7em;max-width:900px;}p:first-child{margin-top:0;}p+img,p+video,p+.cycle-slideshow,img+p,video+p,.cycle-slideshow+p{margin-top:var(--spacer);}
-    a{text-decoration:underline;transition:all .15s;text-decoration-color:var(--text);/* padding:0 .35em;border-radius:100vmax;background:var(--light);transition:all .1s; */white-space:nowrap;}
-    /* a[href^=http]::after{content:"\2197";vertical-align:20%;margin-left:.1em;display:inline-block;} */
-    hr{margin-top:calc(6*var(--spacer));/* border-top:1px solid var(--text); */}
-    /* HEADER */
-    #header{display:flex;align-items:space-between;flex-wrap:wrap;column-gap:calc(2.4*var(--spacer));/* line-height:1.6em; */}
+    p{margin-top:.8em;max-width:640px;}p:first-child{margin-top:0;}p+img,p+video,p+.cycle-slideshow,img+p,video+p,.cycle-slideshow+p{margin-top:var(--spacer);}
+    a{text-decoration:underline;white-space:nowrap;}
+    #header a.open{background:var(--text);color:var(--background);text-decoration:none;font-style:normal;}
+    /* a[href^=http]::after{content:"\2197";font-size:1.3em;margin-left:.1em;display:inline-block;} */
+    hr{margin-top:calc(6*var(--spacer));}
+    /* LAYOUT */
+    #header{display:flex;justify-content:space-between;align-content:flex-start;flex-wrap:wrap;column-gap:calc(3*var(--spacer));line-height:1.6em;}
     #header>*{white-space:nowrap;}
     .loading{animation:.3s blink steps(1) infinite;}
     @keyframes blink{0%{opacity:0;}50%{opacity:1;}}
-    .marquee3k{background:var(--text);color:var(--background);margin:calc(-1*var(--spacer));/* border-bottom:1px solid var(--text);padding-bottom:var(--spacer); *//* width:200px;flex-grow:1; */margin-bottom:var(--spacer);line-height:1.6em;white-space:nowrap;overflow:hidden;}
+    .marquee3k{/* background:var(--text);color:var(--background);margin:calc(-1*var(--spacer));margin-bottom:var(--spacer); */width:200px;flex-grow:1;line-height:1.6em;white-space:nowrap;overflow:hidden;}
     .marquee3k .marquee span{margin-right:1.4em;}
     #time-blink{animation:2s blink steps(1) infinite;}
     /* VIDEO */
@@ -33,31 +34,26 @@
     .video:hover:after{color:#0f0;}
     .video.playing:after{display:none;}
     video{max-width:100%;cursor:pointer;}
-    /* SWITCH */
-    label{cursor:pointer;display:inline-flex;align-items:center;gap:var(--spacer);}
-    .switch{width:27px;height:9px;position:relative;display:inline-block;border-radius:100vmax;background:var(--light) /* url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1px" height="1px" viewBox="0 0 1 1"><rect fill="%23000" width="1" height="1"/></svg>') center center scroll repeat-x */;}
-    .switch input{opacity:0;width:0;height:0;line-height:0;font-size:0;}
-    .slider{position:absolute;top:0;left:0;right:0;bottom:0;}
-    .slider:before{height:9px;width:9px;background:var(--text);left:0;top:0;transition:.2s;border-radius:100vmax;position:absolute;content:"";}
-    input:checked+.slider:before{transform:translateX(18px);}
-    @keyframes outline{0%{outline:1px solid var(--text);}100%{outline:1px solid transparent;outline-offset:5px;}}
     /* GALLERY */
-    .gallery{padding-top:calc(2*var(--spacer));column-gap:var(--spacer);columns:8 280px;max-width:calc(8*280px + 9*var(--spacer));}
+    .gallery{column-gap:var(--spacer);columns:8 280px;max-width:calc(8*280px + 9*var(--spacer));}
     .gallery>div{position:relative;transition:all .2s;cursor:zoom-in;margin-bottom:var(--spacer);break-inside:avoid;}
-    .gallery>div:hover{transform:translateY(-5px);}
-    .gallery>div>div{/* overflow:hidden; */line-height:0;font-size:0;}
-    .gallery>div>div:after{opacity:0;background:#f0f/*linear-gradient(to right, #f00,#ff0,#0f0,#0ff,#00f,#f0f,#f00) center center scroll no-repeat*/;inset:0;position:absolute;pointer-events:none;mix-blend-mode:difference;content:"";}
+    /* .gallery>div:hover{transform:translateY(-5px);} */
+    .gallery>div>div{overflow:hidden;line-height:0;font-size:0;}
+    .gallery>div>div:after{opacity:0;background:#f0f;inset:0;position:absolute;pointer-events:none;mix-blend-mode:difference;content:"";}
     .gallery img{max-width:100%;}
     .gallery>div>span{position:absolute;inset:var(--spacer);transition:all .2s;}
     .gallery>div>span>span{background:var(--text);color:var(--background);}
     .gallery>div:not(:hover)>span{opacity:0;transform:translateY(5px);}
     /* LIGHTBOX */
-    #lightbox{z-index:999997;cursor:zoom-out;position:fixed;inset:0;display:none;/* background:var(--background); */}
+    #lightbox{z-index:999997;cursor:zoom-out;position:fixed;inset:0;display:none;background:rgba(221,221,221,.9);}
     #lightbox img{cursor:pointer;max-height:90vh;max-width:90vw;box-sizing:border-box;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);}
+    /**/
+    #contact svg{vertical-align:-10%;height:1em;width:1em;}
     /* :HOVER */
+    @keyframes outline{0%{outline:2px solid #000;}100%{outline:1px solid #000;outline-offset:5px;}}
     @media(hover:hover){
-        a:hover{background:var(--text);/* text-decoration:none;box-shadow:inset 0 -1.4em var(--text); */color:var(--background);}
-        .gallery>div:hover>div:after{opacity:0;/* animation:.2s blink steps(1) 1; */}
+        /* #content  */a:hover{font-style:italic;text-decoration:none;}
+        .gallery>div:hover>div:after{/* opacity:1; */}
         @keyframes blink{0%{opacity:1;}50%{opacity:0;}}
     }
 </style>
@@ -65,82 +61,99 @@
 <body>
 
 
+
+
 <div id="header">
-    <div class="marquee3k" data-speed=".8"><!-- https://de.wikipedia.org/wiki/Liste_der_meistgesprochenen_Sprachen --><div class="marquee"><!-- mandarin/kantonesisch --><span>歡迎</span><!-- spanisch --><span>Bienvenidos</span><!-- englisch --><span>Welcome</span><!-- marathi --><span>स्वागत हे</span><!-- hocharabisch --><span>اهلا وسهلا</span><!-- portugiesisch --><span>Bem-vinda</span><!-- bengalisch --><span>স্বাগত</span><!-- russisch --><span>добро пожаловать</span><!-- japanisch --><span>ようこそ</span><!-- javanisch --><span>Sugeng Rawuh</span><!-- punjabi --><span>ਸਵਾਗਤ ਹੈ</span><!-- deutsch --><span>Willkommen</span><!-- koreanisch --><span>어서 오십시오</span><!-- französisch --><span>Bienvenue</span><!-- suaheli --><span>Karibu</span><!-- telugu --><span>Svāgatam</span><!-- türkisch --><span>Hoşgeldiniz</span><!-- urdu --><span>خوش آمدید</span><!-- tamil --><span>வரவேற்பு</span><!-- vietnamesisch --><span>Hoan nghênh</span><!-- ägyptisch-arabisch --><span>اهلا وسهلا</span><!-- italienisch --><span>Benvenuto</span></div></div>
     <h1 class="loading">Joey W. Schweickhardt</h1>
-    <div>Milan<span id="time"></span><span id="weather"></span></div>
     <div>
-        <a href="https://www.instagram.com/joeyws/">Instagram</a>,
-        <a href="https://www.linkedin.com/in/joeyschweickhardt/">LinkedIn</a>,
-        <a id="show-imprint" href="javascript:">Contact</a>
+        <a href="#/featured">Featured</a>,
+        <a href="#/works">Works</a>,
+        <a href="#/places">Places</a>,
+        <a href="#/contact">Contact</a>
     </div>
+    <div>Milan<span id="time"></span><span id="weather"></span></div>
+    <div class="marquee3k" data-speed=".8"><!-- https://de.wikipedia.org/wiki/Liste_der_meistgesprochenen_Sprachen --><div class="marquee"><!-- mandarin/kantonesisch --><span>歡迎</span><!-- spanisch --><span>Bienvenidos</span><!-- englisch --><span>Welcome</span><!-- marathi --><span>स्वागत हे</span><!-- hocharabisch --><span>اهلا وسهلا</span><!-- portugiesisch --><span>Bem-vinda</span><!-- bengalisch --><span>স্বাগত</span><!-- russisch --><span>добро пожаловать</span><!-- japanisch --><span>ようこそ</span><!-- javanisch --><span>Sugeng Rawuh</span><!-- punjabi --><span>ਸਵਾਗਤ ਹੈ</span><!-- deutsch --><span>Willkommen</span><!-- koreanisch --><span>어서 오십시오</span><!-- französisch --><span>Bienvenue</span><!-- suaheli --><span>Karibu</span><!-- telugu --><span>Svāgatam</span><!-- türkisch --><span>Hoşgeldiniz</span><!-- urdu --><span>خوش آمدید</span><!-- tamil --><span>வரவேற்பு</span><!-- vietnamesisch --><span>Hoan nghênh</span><!-- ägyptisch-arabisch --><span>اهلا وسهلا</span><!-- italienisch --><span>Benvenuto</span></div></div>
 </div>
 <hr>
-<div style="display:flex;flex-wrap:wrap;gap:var(--spacer);">
-    <div class="video">
-        <video onclick="this.parentElement.classList.add('playing');this.setAttribute('controls','');this.setAttribute('autoplay','');this.setAttribute('preload','');" oncontextmenu="return false;" poster="img/landderechsen.jpg" tabindex="0" preload="none" controlsList="nodownload noplaybackrate" disablePictureInPicture>
-            <source src="video/LandDerEchsen1080.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
-            <source src="video/LandDerEchsen720.webm" type='video/webm; codecs="vp8, vorbis"' />
-            <source src="https://www.dropbox.com/s/mmcykw5nus3m39u/LandDerEchsen1080.ogv?raw=1" type='video/ogg; codecs="theora, vorbis"' />
-        </video>
-    </div>
-    <div style="max-width:440px;">
+<div id="content">
+    <div id="featured">
+        <div class="video">
+            <video onclick="this.parentElement.classList.add('playing');this.setAttribute('controls','');this.setAttribute('autoplay','');this.setAttribute('preload','');" oncontextmenu="return false;" poster="img/landderechsen.jpg" tabindex="0" preload="none" controlsList="nodownload noplaybackrate" disablePictureInPicture>
+                <source src="video/LandDerEchsen1080.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+                <source src="video/LandDerEchsen720.webm" type='video/webm; codecs="vp8, vorbis"' />
+                <source src="https://www.dropbox.com/s/mmcykw5nus3m39u/LandDerEchsen1080.ogv?raw=1" type='video/ogg; codecs="theora, vorbis"' />
+            </video>
+        </div>
         <p>&ldquo;Land der Echsen&rdquo; (Germany, 2021). The city council is planning a new quarter on a run-down railroad station site. There are various non-profit institutions housing in old loading halls, which are now forced to move out in order to make room for several new buildings. Suddenly lizards enter the game and endanger the entire undertaking.</p>
         <p>Created as part of the &ldquo;Anti-Stuttgart &mdash; A Determinate Negation&rdquo; <a href="https://www.igma.uni-stuttgart.de/en/institute/">IGmA</a> design studio, in which certain urban developments and procedures were examined critically.</p>
         <p>The film was being shown at the University of Stuttgart department of architecture&#8217;s <a href="https://www.k1tv.watch/">graduate exhibition</a> and at the <a href="https://www.current-stuttgart.de/">CURRENT festival</a> for art and urban space.</p>
     </div>
+    <div class="gallery" id="works">
+        <img loading="lazy" src="img/26.jpg" data-date="2022" alt="Lightweight pneu pavillons" />
+        <img loading="lazy" src="img/25.jpg" data-date="2021" alt="Vasikkasaari Climate Research Institute Helsinki" />
+        <img loading="lazy" src="img/23.jpg" data-date="2021" alt="Wardrobe, birch, hand-sewn curtain" />
+        <img loading="lazy" src="img/droneport.gif" data-date="2020" alt="Droneport maintenance building and tower with landing platforms" />
+        <img loading="lazy" src="img/21.jpg" data-date="2020" alt="Light studies models" />
+        <img loading="lazy" src="img/20.jpg" data-date="2020" alt="Wooden structure with traction cables" />
+        <img loading="lazy" src="img/16.jpg" data-date="2019" alt="Sint-Aneke-Club Antwerp" />
+        <img loading="lazy" src="img/15.jpg" data-date="2019" alt="Model, laser cut, glueless" />
+        <img loading="lazy" src="img/14.jpg" data-date="2019" alt="Cuboid perspective" />
+        <img loading="lazy" src="img/13.jpg" data-date="2019" alt="Cuboid perspective preparation" />
+        <img loading="lazy" src="img/12.jpg" data-date="2019" alt="Cuboid axonometry" />
+        <img loading="lazy" src="img/11.jpg" data-date="2019" alt="Ruled surfaces" />
+        <img loading="lazy" src="img/10.jpg" data-date="2019" alt="Pineapple, etching" />
+        <img loading="lazy" src="img/9.2.jpg" data-date="2019" alt="Cup, ink" />
+        <img loading="lazy" src="img/9.jpg" data-date="2019" alt="Tools" />
+        <img loading="lazy" src="img/8.jpg" data-date="2018" alt="Leichtsinn" />
+    </div>
+    <div class="gallery" id="places">
+        <img loading="lazy" src="img/37.jpg" data-date="2023" alt="Reflection" />
+        <img loading="lazy" src="img/36.jpg" data-date="2023" alt="Sant&rsquo; Ireneo" />
+        <img loading="lazy" src="img/35.jpg" data-date="2023" alt="Via Albricci" />
+        <img loading="lazy" src="img/34.jpg" data-date="2023" alt="Garden" />
+        <img loading="lazy" src="img/33.jpg" data-date="2023" alt="Nilufar Gallery" />
+        <img loading="lazy" src="img/32.jpg" data-date="2022" alt="Monte Amiata" />
+        <img loading="lazy" src="img/30.jpg" data-date="2022" alt="Amendola" />
+        <img loading="lazy" src="img/29.jpg" data-date="2022" alt="ADI" />
+        <img loading="lazy" src="img/28.jpg" data-date="2022" alt="Emergence Pool, by courtesy of Nari Ward" />
+        <img loading="lazy" src="img/27.jpg" data-date="2022" alt="Clouds" />
+        <img loading="lazy" src="img/24.jpg" data-date="" alt="Creek" />
+        <img loading="lazy" src="img/22.jpg" data-date="2019" alt="Flora" />
+        <img loading="lazy" src="img/19.jpg" data-date="2019" alt="Death Valley" />
+        <img loading="lazy" src="img/18.jpg" data-date="2019" alt="Campfire in a sandy forest" />
+        <img loading="lazy" src="img/17.jpg" data-date="2018" alt="Switzerland" />
+        <img loading="lazy" src="img/7.jpg" data-date="2018" alt="S&ocirc;ng Ng&agrave;n Ph&#7889;" />
+        <img loading="lazy" src="img/6.jpg" data-date="2018" alt="Eel soup" />
+        <img loading="lazy" src="img/5.jpg" data-date="2018" alt="H&#432;&#x01A1;ng S&#x01A1;n" />
+        <img loading="lazy" src="img/4.jpg" data-date="2017" alt="Merano" />
+        <img loading="lazy" src="img/3.jpg" data-date="2016" alt="J&ouml;kuls&aacute;rl&oacute;n glacial lake" />
+        <img loading="lazy" src="img/2.jpg" data-date="2016" alt="N&yacute;idalur" />
+        <img loading="lazy" src="img/1.jpg" data-date="" alt="Fog" />
+    </div>
+    <div id="contact">
+        <p>
+            Joey W. Schweickhardt<br>
+            <span class="address1"></span><br>
+            <span class="address2"></span>
+        </p>
+        <p>
+            <a class="phone" href="javascript:"></a><br>
+            <a class="email" href="javascript:"></a>
+        </p>
+        <p>
+            <a href="https://www.instagram.com/joeyws/"><?xml version="1.0" ?><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/></svg></a>
+            <a href="https://www.linkedin.com/in/joeyschweickhardt/"><?xml version="1.0" ?><svg style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:serif="http://www.serif.com/" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z"/></svg></a>
+        </p>
+        <p>Hand-coded with <?xml version="1.0" ?><svg style="fill:red;" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" fill-rule="evenodd"/></svg></p>
+        <p><a id="show-privacy" href="javascript:;">Privacy</a></p>
+        <p class="privacy">Personal data (usually referred to just as „data“ below) will only be processed by us to the extent necessary and for the purpose of providing a functional and user-friendly website, including its contents, and the services offered there. Per Art. 4 No. 1 of Regulation (EU) 2016/679, i.e. the General Data Protection Regulation (hereinafter referred to as the „GDPR“), „processing“ refers to any operation or set of operations such as collection, recording, organization, structuring, storage, adaptation, alteration, retrieval, consultation, use, disclosure by transmission, dissemination, or otherwise making available, alignment, or combination, restriction, erasure, or destruction performed on personal data, whether by automated means or not.</p>
+        <p class="privacy">With regard to the data processing to be described in more detail below, users and data subjects have the right to confirmation of whether data concerning them is being processed, information about the data being processed, further information about the nature of the data processing, and copies of the data (cf. also Art. 15 GDPR); to correct or complete incorrect or incomplete data (cf. also Art. 16 GDPR); to the immediate deletion of data concerning them (cf. also Art. 17 DSGVO), or, alternatively, if further processing is necessary as stipulated in Art. 17 Para. 3 GDPR, to restrict said processing per Art. 18 GDPR; to receive copies of the data concerning them and/or provided by them and to have the same transmitted to other providers/controllers (cf. also Art. 20 GDPR); to file complaints with the supervisory authority if they believe that data concerning them is being processed by the controller in breach of data protection provisions (see also Art. 77 GDPR). In addition, the controller is obliged to inform all recipients to whom it discloses data of any such corrections, deletions, or restrictions placed on processing the same per Art. 16, 17 Para. 1, 18 GDPR. However, this obligation does not apply if such notification is impossible or involves a disproportionate effort. Nevertheless, users have a right to information about these recipients.</p>
+        <p class="privacy">Likewise, under Art. 21 GDPR, users and data subjects have the right to object to the controller&rsquo;s future processing of their data pursuant to Art. 6 Para. 1 lit. f) GDPR. In particular, an objection to data processing for the purpose of direct advertising is permissible. Your data processed when using our website will be deleted or blocked as soon as the purpose for its storage ceases to apply, provided the deletion of the same is not in breach of any statutory storage obligations or unless otherwise stipulated below.</p>
+        <p class="privacy">Source: Anwaltskanzlei Weiß & Partner</p>
+    </div>
 </div>
-<hr>
-<p><label>Works<span class="switch"><input id="check" type="checkbox"><span class="slider"></span></span>Places</label></p>
-<div class="gallery" id="works">
-    <img src="img/26.jpg" data-date="2022" alt="Lightweight pneu pavillons" />
-    <img src="img/25.jpg" data-date="2021" alt="Vasikkasaari Climate Research Institute Helsinki" />
-    <img src="img/23.jpg" data-date="2021" alt="Wardrobe, birch, hand-sewn curtain" />
-    <img src="img/droneport.gif" data-date="2020" alt="Droneport maintenance building and tower with landing platforms" />
-    <img src="img/21.jpg" data-date="2020" alt="Light studies models" />
-    <img src="img/20.jpg" data-date="2020" alt="Wooden structure with traction cables" />
-    <img src="img/16.jpg" data-date="2019" alt="Sint-Aneke-Club Antwerp" />
-    <img src="img/15.jpg" data-date="2019" alt="Model, laser cut, glueless" />
-    <img src="img/14.jpg" data-date="2019" alt="Cuboid perspective" />
-    <img src="img/13.jpg" data-date="2019" alt="Cuboid perspective preparation" />
-    <img src="img/12.jpg" data-date="2019" alt="Cuboid axonometry" />
-    <img src="img/11.jpg" data-date="2019" alt="Ruled surfaces" />
-    <img src="img/10.jpg" data-date="2019" alt="Pineapple, etching" />
-    <img src="img/9.2.jpg" data-date="2019" alt="Cup, ink" />
-    <img src="img/9.jpg" data-date="2019" alt="Tools" />
-    <img src="img/8.jpg" data-date="2018" alt="Leichtsinn" />
-</div>
-<div class="gallery" id="places">
-    <img src="img/37.jpg" data-date="2023" alt="Reflection" />
-    <img src="img/36.jpg" data-date="2023" alt="Sant&rsquo; Ireneo" />
-    <img src="img/35.jpg" data-date="2023" alt="Via Albricci" />
-    <img src="img/34.jpg" data-date="2023" alt="Garden" />
-    <img src="img/33.jpg" data-date="2023" alt="Nilufar Gallery" />
-    <img src="img/32.jpg" data-date="2022" alt="Monte Amiata" />
-    <img src="img/30.jpg" data-date="2022" alt="Amendola" />
-    <img src="img/29.jpg" data-date="2022" alt="ADI" />
-    <img src="img/28.jpg" data-date="2022" alt="Emergence Pool, by courtesy of Nari Ward" />
-    <img src="img/27.jpg" data-date="2022" alt="Clouds" />
-    <img src="img/24.jpg" data-date="" alt="Creek" />
-    <img src="img/22.jpg" data-date="2019" alt="Flora" />
-    <img src="img/19.jpg" data-date="2019" alt="Switzerland" />
-    <img src="img/18.jpg" data-date="2019" alt="Death Valley" />
-    <img src="img/17.jpg" data-date="2019" alt="Campfire in a sandy forest" />
-    <img src="img/7.jpg" data-date="2018" alt="S&ocirc;ng Ng&agrave;n Ph&#7889;" />
-    <img src="img/6.jpg" data-date="2018" alt="Eel soup" />
-    <img src="img/5.jpg" data-date="2018" alt="H&#432;&#x01A1;ng S&#x01A1;n" />
-    <img src="img/4.jpg" data-date="2017" alt="Merano" />
-    <img src="img/3.jpg" data-date="2016" alt="J&ouml;kuls&aacute;rl&oacute;n glacial lake" />
-    <img src="img/2.jpg" data-date="2016" alt="N&yacute;idalur" />
-    <img src="img/1.jpg" data-date="" alt="Fog" />
-</div>
-<hr>
-<p class="imprint">Joey W. Schweickhardt<br><span class="address1"></span><br><span class="address2"></span></p>
-<p class="imprint"><a class="phone" href="javascript:"></a><br><a class="email" href="javascript:"></a></p>
-<p class="imprint">Personal data (usually referred to just as „data“ below) will only be processed by us to the extent necessary and for the purpose of providing a functional and user-friendly website, including its contents, and the services offered there. Per Art. 4 No. 1 of Regulation (EU) 2016/679, i.e. the General Data Protection Regulation (hereinafter referred to as the „GDPR“), „processing“ refers to any operation or set of operations such as collection, recording, organization, structuring, storage, adaptation, alteration, retrieval, consultation, use, disclosure by transmission, dissemination, or otherwise making available, alignment, or combination, restriction, erasure, or destruction performed on personal data, whether by automated means or not.</p>
-<p class="imprint">With regard to the data processing to be described in more detail below, users and data subjects have the right to confirmation of whether data concerning them is being processed, information about the data being processed, further information about the nature of the data processing, and copies of the data (cf. also Art. 15 GDPR); to correct or complete incorrect or incomplete data (cf. also Art. 16 GDPR); to the immediate deletion of data concerning them (cf. also Art. 17 DSGVO), or, alternatively, if further processing is necessary as stipulated in Art. 17 Para. 3 GDPR, to restrict said processing per Art. 18 GDPR; to receive copies of the data concerning them and/or provided by them and to have the same transmitted to other providers/controllers (cf. also Art. 20 GDPR); to file complaints with the supervisory authority if they believe that data concerning them is being processed by the controller in breach of data protection provisions (see also Art. 77 GDPR). In addition, the controller is obliged to inform all recipients to whom it discloses data of any such corrections, deletions, or restrictions placed on processing the same per Art. 16, 17 Para. 1, 18 GDPR. However, this obligation does not apply if such notification is impossible or involves a disproportionate effort. Nevertheless, users have a right to information about these recipients.</p>
-<p class="imprint">Likewise, under Art. 21 GDPR, users and data subjects have the right to object to the controller&rsquo;s future processing of their data pursuant to Art. 6 Para. 1 lit. f) GDPR. In particular, an objection to data processing for the purpose of direct advertising is permissible. Your data processed when using our website will be deleted or blocked as soon as the purpose for its storage ceases to apply, provided the deletion of the same is not in breach of any statutory storage obligations or unless otherwise stipulated below.</p>
-<p class="imprint">Source: Anwaltskanzlei Weiß & Partner</p>
+
+
 
 
 <script src="scripts.js"></script>
@@ -157,6 +170,21 @@ $(document).ready(function(){
         Marquee3k.init();
         refreshHash();
     });
+
+    // nav
+    function refreshHash() {
+        var duration = 0;
+        var easing = "linear"; // easeOutCubic
+        var hash = window.location.hash;
+        if ($("a[href='"+hash+"']").length == 0) {hash = $("#header a:first").attr("href");}
+        $("a").removeClass("open");
+        $("a[href='"+hash+"']").addClass("open");
+        //$("#" + hash.slice(2)).show(duration,easing).siblings().hide(duration,easing);
+        $("#" + hash.slice(2)).siblings().fadeOut(duration,easing);
+        setTimeout(function(){$("#" + hash.slice(2)).fadeIn(duration,easing);},duration);
+        return false;
+    }
+    $(window).bind("hashchange",function(e){refreshHash();});
     
     // gallery
     $("#places").hide();
@@ -313,10 +341,11 @@ $(document).ready(function(){
     });
 
     // imprint
-    $(".imprint").hide();
-    $("#show-imprint").on("click",function(){
-        $(".imprint").show(0);
-        $("html,body").animate({scrollTop:$("html,body").get(0).scrollHeight},800);
+    $(".privacy").hide();
+    $("#show-privacy").on("click",function(){
+        $(".privacy").toggle(0);
+        //$(this).remove();
+        //$("html,body").animate({scrollTop:$("html,body").get(0).scrollHeight},800);
         return false;
     });
 
