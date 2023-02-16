@@ -21,11 +21,11 @@
     /* a[href^=http]::after{content:"\2197";font-size:1.3em;margin-left:.1em;display:inline-block;} */
     hr{margin-top:calc(6*var(--spacer));}
     /* LAYOUT */
-    #header{display:flex;justify-content:space-between;align-content:flex-start;flex-wrap:wrap;column-gap:calc(3*var(--spacer));line-height:1.6em;}
+    #header{display:flex;justify-content:space-between;align-content:center;flex-wrap:wrap;column-gap:calc(3*var(--spacer));}
     #header>*{white-space:nowrap;}
     .loading{animation:.3s blink steps(1) infinite;}
     @keyframes blink{0%{opacity:0;}50%{opacity:1;}}
-    .marquee3k{/* background:var(--text);color:var(--background);margin:calc(-1*var(--spacer));margin-bottom:var(--spacer); */width:200px;flex-grow:1;line-height:1.6em;white-space:nowrap;overflow:hidden;}
+    .marquee3k{background:var(--text);color:var(--background);margin:calc(-1*var(--spacer));margin-bottom:var(--spacer);/* width:200px;flex-grow:1; */line-height:1.6em;white-space:nowrap;overflow:hidden;}
     .marquee3k .marquee span{margin-right:1.4em;}
     #time-blink{animation:2s blink steps(1) infinite;}
     /* VIDEO */
@@ -47,8 +47,9 @@
     /* LIGHTBOX */
     #lightbox{z-index:999997;cursor:zoom-out;position:fixed;inset:0;display:none;background:rgba(221,221,221,.9);}
     #lightbox img{cursor:pointer;max-height:90vh;max-width:90vw;box-sizing:border-box;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);}
-    /**/
+    /* SVG */
     #contact svg{vertical-align:-10%;height:1em;width:1em;}
+    #contact a svg{vertical-align:-10%;height:1.2em;width:1.2em;}
     /* :HOVER */
     @keyframes outline{0%{outline:2px solid #000;}100%{outline:1px solid #000;outline-offset:5px;}}
     @media(hover:hover){
@@ -64,6 +65,7 @@
 
 
 <div id="header">
+    <div class="marquee3k" data-speed=".8"><!-- https://de.wikipedia.org/wiki/Liste_der_meistgesprochenen_Sprachen --><div class="marquee"><!-- mandarin/kantonesisch --><span>歡迎</span><!-- spanisch --><span>Bienvenidos</span><!-- englisch --><span>Welcome</span><!-- marathi --><span>स्वागत हे</span><!-- hocharabisch --><span>اهلا وسهلا</span><!-- portugiesisch --><span>Bem-vinda</span><!-- bengalisch --><span>স্বাগত</span><!-- russisch --><span>добро пожаловать</span><!-- japanisch --><span>ようこそ</span><!-- javanisch --><span>Sugeng Rawuh</span><!-- punjabi --><span>ਸਵਾਗਤ ਹੈ</span><!-- deutsch --><span>Willkommen</span><!-- koreanisch --><span>어서 오십시오</span><!-- französisch --><span>Bienvenue</span><!-- suaheli --><span>Karibu</span><!-- telugu --><span>Svāgatam</span><!-- türkisch --><span>Hoşgeldiniz</span><!-- urdu --><span>خوش آمدید</span><!-- tamil --><span>வரவேற்பு</span><!-- vietnamesisch --><span>Hoan nghênh</span><!-- ägyptisch-arabisch --><span>اهلا وسهلا</span><!-- italienisch --><span>Benvenuto</span></div></div>
     <h1 class="loading">Joey W. Schweickhardt</h1>
     <div>
         <a href="#/featured">Featured</a>,
@@ -72,7 +74,6 @@
         <a href="#/contact">Contact</a>
     </div>
     <div>Milan<span id="time"></span><span id="weather"></span></div>
-    <div class="marquee3k" data-speed=".8"><!-- https://de.wikipedia.org/wiki/Liste_der_meistgesprochenen_Sprachen --><div class="marquee"><!-- mandarin/kantonesisch --><span>歡迎</span><!-- spanisch --><span>Bienvenidos</span><!-- englisch --><span>Welcome</span><!-- marathi --><span>स्वागत हे</span><!-- hocharabisch --><span>اهلا وسهلا</span><!-- portugiesisch --><span>Bem-vinda</span><!-- bengalisch --><span>স্বাগত</span><!-- russisch --><span>добро пожаловать</span><!-- japanisch --><span>ようこそ</span><!-- javanisch --><span>Sugeng Rawuh</span><!-- punjabi --><span>ਸਵਾਗਤ ਹੈ</span><!-- deutsch --><span>Willkommen</span><!-- koreanisch --><span>어서 오십시오</span><!-- französisch --><span>Bienvenue</span><!-- suaheli --><span>Karibu</span><!-- telugu --><span>Svāgatam</span><!-- türkisch --><span>Hoşgeldiniz</span><!-- urdu --><span>خوش آمدید</span><!-- tamil --><span>வரவேற்பு</span><!-- vietnamesisch --><span>Hoan nghênh</span><!-- ägyptisch-arabisch --><span>اهلا وسهلا</span><!-- italienisch --><span>Benvenuto</span></div></div>
 </div>
 <hr>
 <div id="content">
