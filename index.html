@@ -22,6 +22,7 @@
     /* LAYOUT */
     #header{display:flex;justify-content:space-between;align-content:center;flex-wrap:wrap;column-gap:calc(4*var(--spacer));}
     #header>*{white-space:nowrap;}
+    h1{font:normal normal 30px/1em webfont2,sans-serif;letter-spacing:.01em;transform:scaleY(.8);transform-origin:center center;}
     #header a{text-decoration:none;}
     #header a.open{text-decoration:underline;opacity:1;color:inherit;}
     .loading{animation:.3s blink steps(1) infinite;}
@@ -43,8 +44,9 @@
     .gallery>div:hover{transform:translateY(-5px);}
     .gallery>div>div{overflow:hidden;line-height:0;font-size:0;}
     .gallery>div>div:after{opacity:0;/* background:#f0f;mix-blend-mode:difference; */inset:0;position:absolute;pointer-events:none;content:"";}
+    .gallery>div:hover>div{opacity:.4;}
     .gallery img{max-width:100%;}
-    .gallery>div:hover img{opacity:.3;}
+    .gallery>div:hover img{/* opacity:.3; */}
     .gallery>div>span{position:absolute;inset:var(--spacer);transition:all .2s;}
     .gallery>div:not(:hover)>span{opacity:0;transform:translateY(5px);}
     /* LIGHTBOX */
@@ -88,7 +90,7 @@
                 <source src="https://www.dropbox.com/s/mmcykw5nus3m39u/LandDerEchsen1080.ogv?raw=1" type='video/ogg; codecs="theora, vorbis"' />
             </video>
         </div>
-        <p><!-- &ldquo; --><i>Land der Echsen</i><!-- &rdquo; --> (Germany, 2021). The city council is planning a new quarter on a run-down railroad station site. There are various non-profit institutions housing in old loading halls, which are now forced to move out in order to make room for several new buildings. Suddenly lizards enter the game and endanger the entire undertaking.</p>
+        <p><!-- &ldquo; -->Land der Echsen<!-- &rdquo; --> (Germany, 2021). The city council is planning a new quarter on a run-down railroad station site. There are various non-profit institutions housing in old loading halls, which are now forced to move out for demolishment and making room for several new buildings. Suddenly lizards enter the game and endanger the entire undertaking.</p>
         <p>Created as part of the <!-- &ldquo; --><i>Anti-Stuttgart &mdash; A Determinate Negation</i><!-- &rdquo; --> <a href="https://www.igma.uni-stuttgart.de/en/institute/">IGmA</a> design studio, in which certain urban developments and procedures were examined critically. The film was being shown at the University of Stuttgart department of architecture&#8217;s <a href="https://www.k1tv.watch/">graduate exhibition</a> and at the <a href="https://www.current-stuttgart.de/">CURRENT festival</a> for art and urban space.</p>
     </div>
     <div class="gallery" id="works">
@@ -147,9 +149,9 @@
         <p><small>2018&mdash;2021</small><br>Bachelor of Science, University of Stuttgart</p>
         <hr>
         <p>Exhibitions</p>
-        <p><small>2022</small><br>Graduate Selection, Department of Architecture, University of Stuttgart</p><!-- 24.06.2022-04.07.2022
-        <p><small>2021</small><br>CURRENT Festival for art and urban space, Kunstverein Wagenhalle e.V.</p><!-- 16.09.2021-17.09.2021
-        <p><small>2020</small><br>Annual Design Projects Selection, Institut für Raumkonzeptionen und Grundlagen des Entwerfens, University of Stuttgart</p><!-- 13.01.2020-25.01.2020
+        <p><small data-title="24.06.2022-04.07.2022">2022</small><br>Graduate Selection, Department of Architecture, University of Stuttgart</p>
+        <p><small data-title="16.09.2021-17.09.2021">2021</small><br>CURRENT Festival for art and urban space, Kunstverein Wagenhalle e.V.</p>
+        <p><small data-title="13.01.2020-25.01.2020">2020</small><br>Annual Design Projects Selection, Institut für Raumkonzeptionen und Grundlagen des Entwerfens, University of Stuttgart</p>
         <hr> -->
         <p>
             Joey W. Schweickhardt<br>
