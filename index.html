@@ -6,7 +6,7 @@
 <style>
     @font-face{font-family:webfont;src:url("font/Source_Code_Pro/SourceCodePro-Regular.ttf");} /*Inter-Medium   font/RobotoMono/RobotoMono-Regular   IBM-Plex-Mono/IBMPlexMono-Text   texgyrecursor-regular   SourceCodePro-Medium*/
     @font-face{font-family:webfont2;src:url("font/nimbus-sans-l/NimbusSanL-Bol.otf");} /*Jost   Coconat-BoldExt   texgyreheros-bold   NimbusSanL-Bol   SourceCodePro-Regular  gnu-free-font/FreeSans   NimbusRomNo9L-Reg   Libre_Franklin/LibreFranklin-Bold*/
-    :root{--background:#fff;--text:#111;--spacer:10px;}
+    :root{--background:#fff;--text:#000;--spacer:10px;}
     ::-moz-selection{background:var(--text);color:var(--background);}
     ::selection{background:var(--text);color:var(--background);}
     /* ::-webkit-scrollbar{width:8px;height:8px;background:var(--background);}
@@ -14,9 +14,10 @@
     /* RESET */*{user-select:none;font-kerning:normal;-webkit-tap-highlight-color:rgba(0,0,0,0)!important;}*:focus{outline:0 !important;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-appearance:none;border-radius:0;-webkit-border-radius:0;box-sizing:content-box;font-smoothing:antialiased;-moz-osx-font-smoothing: grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased;}
 	html,body{background:var(--background);}
     body{padding:var(--spacer);color:var(--text);font:normal normal 24px/1.3em webfont,monospace;}
-	h1{white-space:nowrap;}
-    p{margin-top:.8em;max-width:44em;/* max-width:640px; */}p:first-child{margin-top:0;}p+img,p+video,p+.cycle-slideshow,img+p,video+p,.cycle-slideshow+p{margin-top:var(--spacer);}
-    a{text-decoration:underline;white-space:nowrap;}
+	p{margin-top:.8em;max-width:55em;/* max-width:640px; */}hr+p,p:first-child{margin-top:0;}p+img,p+video,p+.cycle-slideshow,img+p,video+p,.cycle-slideshow+p{margin-top:var(--spacer);}
+    small{opacity:.4;}
+    i{font-style:italic;}
+    a{text-decoration:underline;text-decoration-skip:none;white-space:nowrap;}
     /* a[href^=http]::after{content:"\2197";font-size:1.3em;margin-left:.1em;font-style:normal;display:inline-block;} */
     /* LAYOUT */
     #header{display:flex;justify-content:space-between;align-content:center;flex-wrap:wrap;column-gap:calc(4*var(--spacer));}
@@ -43,6 +44,7 @@
     .gallery>div>div{overflow:hidden;line-height:0;font-size:0;}
     .gallery>div>div:after{opacity:0;/* background:#f0f;mix-blend-mode:difference; */inset:0;position:absolute;pointer-events:none;content:"";}
     .gallery img{max-width:100%;}
+    .gallery>div:hover img{opacity:.3;}
     .gallery>div>span{position:absolute;inset:var(--spacer);transition:all .2s;}
     .gallery>div:not(:hover)>span{opacity:0;transform:translateY(5px);}
     /* LIGHTBOX */
@@ -54,7 +56,7 @@
     /* :HOVER */
     @keyframes outline{0%{outline:2px solid #000;}100%{outline:1px solid #000;outline-offset:5px;}}
     @media(hover:hover){
-        a:hover,.video:hover:after,.gallery>div:hover img{opacity:.4;}
+        a:hover,.video:hover:after{opacity:.4;}
         .gallery>div:hover>div:after{opacity:1;}
         @keyframes blink{0%{opacity:1;}50%{opacity:0;}}
     }
@@ -86,9 +88,8 @@
                 <source src="https://www.dropbox.com/s/mmcykw5nus3m39u/LandDerEchsen1080.ogv?raw=1" type='video/ogg; codecs="theora, vorbis"' />
             </video>
         </div>
-        <p>&ldquo;Land der Echsen&rdquo; (Germany, 2021). The city council is planning a new quarter on a run-down railroad station site. There are various non-profit institutions housing in old loading halls, which are now forced to move out in order to make room for several new buildings. Suddenly lizards enter the game and endanger the entire undertaking.</p>
-        <p>Created as part of the &ldquo;Anti-Stuttgart &mdash; A Determinate Negation&rdquo; <a href="https://www.igma.uni-stuttgart.de/en/institute/">IGmA</a> design studio, in which certain urban developments and procedures were examined critically.</p>
-        <p>The film was being shown at the University of Stuttgart department of architecture&#8217;s <a href="https://www.k1tv.watch/">graduate exhibition</a> and at the <a href="https://www.current-stuttgart.de/">CURRENT festival</a> for art and urban space.</p>
+        <p><!-- &ldquo; --><i>Land der Echsen</i><!-- &rdquo; --> (Germany, 2021). The city council is planning a new quarter on a run-down railroad station site. There are various non-profit institutions housing in old loading halls, which are now forced to move out in order to make room for several new buildings. Suddenly lizards enter the game and endanger the entire undertaking.</p>
+        <p>Created as part of the <!-- &ldquo; --><i>Anti-Stuttgart &mdash; A Determinate Negation</i><!-- &rdquo; --> <a href="https://www.igma.uni-stuttgart.de/en/institute/">IGmA</a> design studio, in which certain urban developments and procedures were examined critically. The film was being shown at the University of Stuttgart department of architecture&#8217;s <a href="https://www.k1tv.watch/">graduate exhibition</a> and at the <a href="https://www.current-stuttgart.de/">CURRENT festival</a> for art and urban space.</p>
     </div>
     <div class="gallery" id="works">
         <img loading="lazy" src="img/26.jpg" data-date="2022" alt="Lightweight pneu pavillons" />
@@ -124,15 +125,32 @@
         <img loading="lazy" src="img/19.jpg" data-date="2019" alt="Death Valley" />
         <img loading="lazy" src="img/18.jpg" data-date="2019" alt="Campfire in a sandy forest" />
         <img loading="lazy" src="img/17.jpg" data-date="2018" alt="Switzerland" />
-        <img loading="lazy" src="img/7.jpg" data-date="2018" alt="S&ocirc;ng Ng&agrave;n Ph&#7889;" /><!-- S&ocirc;ng Ng&agrave;n Pho -->
+        <img loading="lazy" src="img/7.jpg" data-date="2018" alt="S&ocirc;ng Ng&agrave;n Ph&#7889;" />
         <img loading="lazy" src="img/6.jpg" data-date="2018" alt="Eel soup" />
-        <img loading="lazy" src="img/5.jpg" data-date="2018" alt="H&#432;&#x01A1;ng S&#x01A1;n" /><!-- Huong Son -->
+        <img loading="lazy" src="img/5.jpg" data-date="2018" alt="H&#432;&#x01A1;ng S&#x01A1;n" />
         <img loading="lazy" src="img/4.jpg" data-date="2017" alt="Merano" />
         <img loading="lazy" src="img/3.jpg" data-date="2016" alt="J&ouml;kuls&aacute;rl&oacute;n glacial lake" />
         <img loading="lazy" src="img/2.jpg" data-date="2016" alt="N&yacute;idalur" />
         <img loading="lazy" src="img/1.jpg" data-date="" alt="Fog" />
     </div>
     <div id="about">
+        <!-- <p>Experience</p>
+        <p><small>2023&mdash;Present</small><br>Herzog & de Meuron Basel Ltd.</p>
+        <p><small>2022</small><br>Behnisch Architekten Partnerschaft mbB</p>
+        <p><small>2021&mdash;2022</small><br>REM ASSETS Unternehmensimmobilien AG</p>
+        <p><small>2020&mdash;2021</small><br>Werner Sobek AG</p>
+        <hr>
+        <p>Education</p>
+        <p><small>2022&mdash;2023</small><br>Study abroad, Erasmus+ schoolarship, Politecnico di Milano</p>
+        <p><small>2022</small><br>Summer School, Architectural Association/State Academy of Fine Arts Stuttgart</p>
+        <p><small>2021&mdash;Present</small><br>Master studies, University of Stuttgart</p>
+        <p><small>2018&mdash;2021</small><br>Bachelor of Science, University of Stuttgart</p>
+        <hr>
+        <p>Exhibitions</p>
+        <p><small>2022</small><br>Graduate Selection, Department of Architecture, University of Stuttgart</p><!-- 24.06.2022-04.07.2022
+        <p><small>2021</small><br>CURRENT Festival for art and urban space, Kunstverein Wagenhalle e.V.</p><!-- 16.09.2021-17.09.2021
+        <p><small>2020</small><br>Annual Design Projects Selection, Institut für Raumkonzeptionen und Grundlagen des Entwerfens, University of Stuttgart</p><!-- 13.01.2020-25.01.2020
+        <hr> -->
         <p>
             Joey W. Schweickhardt<br>
             <span class="address1"></span><br>
@@ -150,6 +168,7 @@
             <a href="https://www.instagram.com/joeyws/">Instagram</a>,
             <a href="https://www.linkedin.com/in/joeyschweickhardt/">LinkedIn</a>
         </p>
+        <hr>
         <!-- <p>Hand-coded with <?xml version="1.0" ?><svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" fill-rule="evenodd"/></svg></p> -->
         <p><a id="show-privacy" href="javascript:;">Privacy</a></p>
         <p class="privacy">Personal data (usually referred to just as „data“ below) will only be processed by us to the extent necessary and for the purpose of providing a functional and user-friendly website, including its contents, and the services offered there. Per Art. 4 No. 1 of Regulation (EU) 2016/679, i.e. the General Data Protection Regulation (hereinafter referred to as the „GDPR“), „processing“ refers to any operation or set of operations such as collection, recording, organization, structuring, storage, adaptation, alteration, retrieval, consultation, use, disclosure by transmission, dissemination, or otherwise making available, alignment, or combination, restriction, erasure, or destruction performed on personal data, whether by automated means or not.</p>
@@ -159,7 +178,7 @@
     </div>
 </div>
 <hr>
-<div class="marquee3k" data-speed=".8"><div class="marquee"><span>歡迎</span><span>Bienvenidos</span><span>Welcome</span><span>स्वागत हे</span><span>اهلا وسهلا</span><span>Bem-vinda</span><span>স্বাগত</span><span>добро пожаловать</span><span>ようこそ</span><span>Sugeng Rawuh</span><span>ਸਵਾਗਤ ਹੈ</span><span>Willkommen</span><span>어서 오십시오</span><span>Bienvenue</span><span>Karibu</span><span>Svāgatam</span><span>Hoşgeldiniz</span><span>خوش آمدید</span><span>வரவேற்பு</span><span>Hoan nghênh</span><span>اهلا وسهلا</span><span>Benvenuto</span></div></div>
+<div class="marquee3k" data-speed="1.2"><div class="marquee"><span>歡迎</span><span>Bienvenidos</span><span>Welcome</span><span>स्वागत हे</span><span>اهلا وسهلا</span><span>Bem-vinda</span><span>স্বাগত</span><span>добро пожаловать</span><span>ようこそ</span><span>Sugeng Rawuh</span><span>ਸਵਾਗਤ ਹੈ</span><span>Willkommen</span><span>어서 오십시오</span><span>Bienvenue</span><span>Karibu</span><span>Svāgatam</span><span>Hoşgeldiniz</span><span>خوش آمدید</span><span>வரவேற்பு</span><span>Hoan nghênh</span><span>اهلا وسهلا</span><span>Benvenuto</span></div></div>
 
 
 
