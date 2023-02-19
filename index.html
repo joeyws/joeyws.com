@@ -6,7 +6,7 @@
 <style>
     @font-face{font-family:webfont;src:url("font/Source_Code_Pro/SourceCodePro-Regular.ttf");} /*Inter-Medium   font/RobotoMono/RobotoMono-Regular   IBM-Plex-Mono/IBMPlexMono-Text   texgyrecursor-regular   SourceCodePro-Medium*/
     @font-face{font-family:webfont2;src:url("font/nimbus-sans-l/NimbusSanL-Bol.otf");} /*Jost   Coconat-BoldExt   texgyreheros-bold   NimbusSanL-Bol   SourceCodePro-Regular  gnu-free-font/FreeSans   NimbusRomNo9L-Reg   Libre_Franklin/LibreFranklin-Bold*/
-    :root{--background:#fff;--text:#000;--spacer:10px;}
+    :root{--background:#fff;--text:#333;--spacer:10px;}
     ::-moz-selection{background:var(--text);color:var(--background);}
     ::selection{background:var(--text);color:var(--background);}
     /* ::-webkit-scrollbar{width:8px;height:8px;background:var(--background);}
@@ -29,7 +29,7 @@
     #time-blink{animation:2s blink steps(1) infinite;}
     @keyframes blink{0%{opacity:0;}50%{opacity:1;}}
     hr{margin-top:calc(6*var(--spacer));}
-    #content>*{min-height:100vh;display:none;}
+    #content>*{min-height:100vh;display:none;transition:all .5s;}
     /* MARQUEE */
     .marquee3k{/* width:200px;flex-grow:1; */line-height:1.6em;white-space:nowrap;overflow:hidden;}
     .marquee3k .marquee span{margin-right:1.4em;}
