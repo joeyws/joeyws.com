@@ -30,7 +30,8 @@
     #time-blink{animation:2s blink steps(1) infinite;}
     @keyframes blink{0%{opacity:0;}50%{opacity:1;}}
     hr{margin-top:calc(6*var(--spacer));}
-    #content>*{min-height:100vh;display:none;}
+    #content>*{min-height:100vh;}
+    #content>*:not(.show){display:none;}
     /* MARQUEE */
     .marquee3k{/* width:200px;flex-grow:1; */line-height:1.6em;white-space:nowrap;overflow:hidden;}
     .marquee3k .marquee span{margin-right:1.4em;}
@@ -79,7 +80,7 @@
         <a href="#/places">Places</a>,
         <a href="#/about">About</a>
     </div>
-    <div>Milan<span id="time"></span><span id="weather"></span></div>
+    <div>Basel<span id="time"></span><span id="weather"></span></div>
 </div>
 <hr>
 <div id="content">
@@ -210,7 +211,7 @@ $(document).ready(function(){
         $("a").removeClass("open");
         $("a[href='"+hash+"']").addClass("open");
         //$("#" + hash.slice(2)).show(duration,easing).siblings().hide(duration,easing);
-        $("#" + hash.slice(2)).fadeIn(duration,easing).siblings().fadeOut(duration,easing);
+        $("#" + hash.slice(2)).addClass("show").siblings().removeClass("show");
         //setTimeout(function(){$("#" + hash.slice(2)).fadeIn(duration,easing);},duration);
         return false;
     }
@@ -306,7 +307,7 @@ $(document).ready(function(){
             $("#weather").html(", " + temperature + " " + word);
         }
     }
-    function loadWeather() {getXMLFeed("https://weather-broker-cdn.api.bbci.co.uk/en/observation/rss/3173435", getWeather);} // Stuttgart:2825297 Milan:3173435 Basel:2661604
+    function loadWeather() {getXMLFeed("https://weather-broker-cdn.api.bbci.co.uk/en/observation/rss/2661604", getWeather);} // Stuttgart:2825297 Milan:3173435 Basel:2661604
     loadWeather();
     setTimeout(function(){loadWeather();},60000);
     
