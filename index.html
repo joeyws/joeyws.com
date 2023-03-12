@@ -6,7 +6,7 @@
 <style>
     @font-face{font-family:webfont;src:url("font/Source_Code_Pro/SourceCodePro-Regular.ttf");} /*Inter-Medium   font/RobotoMono/RobotoMono-Regular   IBM-Plex-Mono/IBMPlexMono-Text   texgyrecursor-regular   SourceCodePro-Medium*/
     @font-face{font-family:webfont2;src:url("font/TeX-Gyre-Cursor/texgyrecursor-regular.otf");} /*Jost   Coconat-BoldExt   texgyreheros-bold   NimbusSanL-Bol   SourceCodePro-Regular  gnu-free-font/FreeSans   NimbusRomNo9L-Reg   Libre_Franklin/LibreFranklin-Bold*/
-    :root{--background:#ddd;--text:#000;--spacer:5px;}
+    :root{--background:#eee;--text:#000;--spacer:8px;}
     ::-moz-selection{background:var(--text);color:var(--background);}
     ::selection{background:var(--text);color:var(--background);}
     /* ::-webkit-scrollbar{width:8px;height:8px;background:var(--background);}
@@ -18,14 +18,14 @@
 	p{margin-top:.8em;max-width:55em;/* max-width:640px; */}hr+p,p:first-child{margin-top:0;}p+img,p+video,p+.cycle-slideshow,img+p,video+p,.cycle-slideshow+p{margin-top:var(--spacer);}
     small{opacity:.4;}
     i{font-style:italic;}
-    a{text-decoration:underline;text-decoration-skip:none;text-decoration-thickness:1px;white-space:nowrap;}
+    a{transition:all .15s;border-radius:100vmax;padding:0 .35em;background:rgba(0,0,0,.1);text-decoration:none;text-decoration-skip:none;text-decoration-thickness:1px;white-space:nowrap;}
     /* a[href^=http]::after{content:"\2197";font-size:1.3rem;margin-left:.1em;font-style:normal;display:inline-block;} */
     /* LAYOUT */
-    #header{display:flex;/* justify-content:space-between; */justify-content:flex-start;align-content:baseline;flex-wrap:wrap;column-gap:3em;}
+    #header{display:flex;/* justify-content:space-between; */justify-content:flex-start;align-content:baseline;flex-wrap:wrap;column-gap:3.2em;}
     #header>*{white-space:nowrap;}
     /* h1{font:normal normal 30px/1.3em webfont2,sans-serif;letter-spacing:.01rem;transform:scaleY(.8);transform-origin:center center;} */
     #header a{text-decoration:none;}
-    #header a.open{text-decoration:underline;text-decoration-thickness:1px;opacity:1;color:inherit;}
+    #header a.open{background:var(--text);color:var(--background);/* text-decoration:underline;text-decoration-thickness:1px;opacity:1;color:inherit; */}
     .loading{animation:.3s blink steps(1) infinite;}
     #time-blink{animation:2s blink steps(1) infinite;}
     @keyframes blink{0%{opacity:0;}50%{opacity:1;}}
@@ -45,16 +45,15 @@
     .gallery{column-gap:var(--spacer);columns:8 280px;max-width:calc(8*280px + 9*var(--spacer));}
     .gallery>div{position:relative;/* transition:all .2s; */cursor:zoom-in;margin-bottom:var(--spacer);break-inside:avoid;}
     /* .gallery>div:hover{transform:translateY(-5px);} */
-    .gallery>div>div{overflow:hidden;line-height:0;font-size:0;}
-    .gallery>div>div:after{opacity:0;transition:all .1s;/* background:#f0f;mix-blend-mode:difference; */inset:0;position:absolute;pointer-events:none;content:"";}
-    /* .gallery>div:hover>div{opacity:.4;} */
+    .gallery>div>div{transition:all .1s;overflow:hidden;line-height:0;font-size:0;}
+    .gallery>div>div:after{opacity:0;transition:all .1s;/* background:var(--text); *//* background:linear-gradient(transparent,var(--background)); */background:#f0f;mix-blend-mode:difference;inset:0;position:absolute;pointer-events:none;content:"";}
+    .gallery>div:hover>div{opacity:.2;filter:saturate(0);}
     .gallery img{max-width:100%;}
-    /* .gallery>div:hover img{opacity:.3;} */
     .gallery>div>span{position:absolute;inset:var(--spacer);transition:all .2s;}
-    .gallery>div>span>span{background:var(--text);color:var(--background);}
+    /* .gallery>div>span>span{background:var(--text);color:var(--background);border-radius:100vmax;box-decoration-break:clone;-webkit-box-decoration-break:clone;padding:0 .35em;} */
     .gallery>div:not(:hover)>span{opacity:0;transform:translateY(5px);}
     /* LIGHTBOX */
-    #lightbox{z-index:999997;cursor:zoom-out;position:fixed;inset:0;display:none;background:rgba(221,221,221,.9);}
+    #lightbox{z-index:999997;cursor:zoom-out;position:fixed;inset:0;display:none;background:rgba(238,238,238,.9);}
     #lightbox img{cursor:pointer;max-height:90vh;max-width:90vw;box-sizing:border-box;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);}
     /* SVG */
     /* #contact svg{fill:var(--text);vertical-align:-10%;height:.9rem;width:.9rem;}
@@ -62,12 +61,13 @@
     /* :HOVER */
     @keyframes outline{0%{outline:2px solid var(--text);}100%{outline:1px solid var(--text);outline-offset:5px;}}
     @media(hover:hover){
-        a:hover,.video:hover:after{opacity:.4;}
-        .gallery>div:hover>div:after{opacity:1;}
+        a:hover{box-shadow:inset 0 -1.4em var(--text);color:var(--background);}
+        .video:hover:after{/* border-left-color:#0f0; */opacity:.3;}
+        /* .gallery>div:hover>div:after{opacity:1;} */
         @keyframes blink{0%{opacity:1;}50%{opacity:0;}}
     }
     /* .video,video,img{border-radius:5px;} */
-    *{cursor:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" x="0px" y="0px" viewBox="0 0 12 12" style="fill:%23000;"><circle cx="6" cy="6" r="6"/></svg>') 6 6, auto !important;}
+    /* *{cursor:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" x="0px" y="0px" viewBox="0 0 12 12" style="fill:%23000;"><circle cx="6" cy="6" r="6"/></svg>') 6 6, auto !important;} */
 </style>
 </head>
 <body>
@@ -78,9 +78,9 @@
 <div id="header">
     <h1 class="loading">Joey W. Schweickhardt</h1>
     <div>
-        <a href="#/featured">Featured</a>,
-        <a href="#/works">Works</a>,
-        <a href="#/places">Places</a>,
+        <a href="#/featured">Featured</a>
+        <a href="#/works">Works</a>
+        <a href="#/places">Places</a>
         <a href="#/about">About</a>
     </div>
     <div>Basel<span id="time"></span><span id="weather"></span></div>
@@ -172,7 +172,7 @@
             <a href="https://www.linkedin.com/in/joeyschweickhardt/"><?xml version="1.0" ?><svg style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:serif="http://www.serif.com/" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z"/></svg></a>
         </p> -->
         <p>
-            <a href="https://www.instagram.com/joeyws/">Instagram</a>,
+            <a href="https://www.instagram.com/joeyws/">Instagram</a>
             <a href="https://www.linkedin.com/in/joeyschweickhardt/">LinkedIn</a>
         </p>
         <hr>
