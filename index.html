@@ -7,7 +7,7 @@
 <style>
     @font-face{font-family:webfont;src:url("font/Source_Code_Pro/SourceCodePro-Regular.ttf");} /*Inter-Medium   font/RobotoMono/RobotoMono-Regular   IBM-Plex-Mono/IBMPlexMono-Text   texgyrecursor-regular   SourceCodePro-Medium*/
     @font-face{font-family:webfont2;src:url("font/nimbus-sans-l/NimbusSanL-Bol.otf");} /*Jost   Coconat-BoldExt   texgyreheros-bold   NimbusSanL-Bol   SourceCodePro-Regular  gnu-free-font/FreeSans   NimbusRomNo9L-Reg   Libre_Franklin/LibreFranklin-Bold*/
-    :root{--background:#ddd;--text:#000;--highlight:#f0f;--spacer:8px;}
+    :root{--background:#ddd;--text:#000;--highlight:#0f0;--spacer:8px;}
     ::-moz-selection{background:var(--text);color:var(--background);}
     ::selection{background:var(--text);color:var(--background);}
     /* ::-webkit-scrollbar{width:8px;height:8px;background:var(--background);}
@@ -47,7 +47,7 @@
     .gallery>div{position:relative;/* transition:all .2s; */cursor:zoom-in;margin-bottom:var(--spacer);break-inside:avoid;}
     /* .gallery>div:hover{transform:translateY(-5px);} */
     .gallery>div>div{transition:all .1s;overflow:hidden;line-height:0;font-size:0;}
-    .gallery>div>div:after{opacity:0;transition:all .1s;/* background:#f0f;mix-blend-mode:difference; */inset:0;position:absolute;pointer-events:none;content:"";}
+    .gallery>div>div:after{opacity:0;transition:all .1s;/* background:var(--highlight);mix-blend-mode:difference; */inset:0;position:absolute;pointer-events:none;content:"";}
     .gallery img{max-width:100%;}
     .gallery>div>span{position:absolute;inset:var(--spacer);/* mix-blend-mode:difference; *//* transition:all .2s; */}
     .gallery>div>span>span{background:var(--text);color:var(--background);/* box-decoration-break:clone;-webkit-box-decoration-break:clone; */}
