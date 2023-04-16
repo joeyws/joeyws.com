@@ -6,8 +6,8 @@
 <meta charset="utf-8"><meta name="robots" content="index,nofollow,notranslate,noimageindex"><meta name="description" content="Welcome to the personal web page of Joey W. Schweickhardt."><meta name="keywords" content="schweickhardt,joey,stuttgart,joeyws,william"><meta name="geo.region" content="DE-BW"><meta name="geo.placename" content="Stuttgart"><meta name="geo.position" content="48.778600;9.179746"><meta name="ICBM" content="48.778600, 9.179746"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes,shrink-to-fit=no"><meta name="format-detection" content="telephone=no">
 <style>
     @font-face{font-family:webfont;src:url("font/Source_Code_Pro/SourceCodePro-Regular.ttf");} /*Inter-Medium   font/RobotoMono/RobotoMono-Regular   IBM-Plex-Mono/IBMPlexMono-Text   texgyrecursor-regular   SourceCodePro-Medium*/
-    @font-face{font-family:webfont2;src:url("font/nimbus-sans-l/NimbusSanL-Bol.otf");} /*Jost   Coconat-BoldExt   texgyreheros-bold   NimbusSanL-Bol   SourceCodePro-Regular  gnu-free-font/FreeSans   NimbusRomNo9L-Reg   Libre_Franklin/LibreFranklin-Bold*/
-    :root{--background:#ddd;--text:#000;--highlight:#0f0;--spacer:8px;}
+    @font-face{font-family:webfont2;src:url("font/Source_Code_Pro/SourceCodePro-Regular.ttf");} /*Jost   Coconat-BoldExt   texgyreheros-bold   NimbusSanL-Bol   SourceCodePro-Regular  gnu-free-font/FreeSans   NimbusRomNo9L-Reg   Libre_Franklin/LibreFranklin-Bold*/
+    :root{--background:#fff;--text:#000;--spacer:8px;}
     ::-moz-selection{background:var(--text);color:var(--background);}
     ::selection{background:var(--text);color:var(--background);}
     /* ::-webkit-scrollbar{width:8px;height:8px;background:var(--background);}
@@ -15,7 +15,7 @@
     /* RESET */*{user-select:none;font-kerning:normal;-webkit-tap-highlight-color:rgba(0,0,0,0)!important;}*:focus{outline:0 !important;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-appearance:none;border-radius:0;-webkit-border-radius:0;box-sizing:content-box;font-smoothing:antialiased;-moz-osx-font-smoothing: grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased;}
 	html{font-size:13px;}
     html,body{background:var(--background);}
-    body{padding:var(--spacer);color:var(--text);font:normal normal 1rem/1.28em webfont,monospace;}
+    body{padding:var(--spacer);color:var(--text);font:normal normal 1rem/1.28em webfont2,monospace;}
 	p{margin-top:.8em;max-width:55em;/* max-width:640px; */}hr+p,p:first-child{margin-top:0;}p+img,p+video,p+.cycle-slideshow,img+p,video+p,.cycle-slideshow+p{margin-top:var(--spacer);}
     small{opacity:.4;}
     i{font-style:italic;}
@@ -26,7 +26,7 @@
     #header>*{white-space:nowrap;}
     /* h1{font:normal normal 16px/1.3rem webfont2,sans-serif;text-transform:uppercase;letter-spacing:.01rem;transform:scaleY(.8);transform-origin:center center;} */
     /* #header a{text-decoration:none;} */
-    #header a.open{text-decoration:none;background:var(--highlight);color:inherit;}
+    #header a.open{text-decoration:none;}
     .loading{animation:.3s blink steps(1) infinite;}
     #time-blink{animation:2s blink steps(1) infinite;}
     @keyframes blink{0%{opacity:0;}50%{opacity:1;}}
@@ -34,26 +34,24 @@
     #content>*{min-height:100vh;}
     #content>*:not(.show){display:none;}
     /* MARQUEE */
-    .marquee3k{margin:calc(var(--spacer)*-1);margin-bottom:var(--spacer);background:var(--text);color:var(--background);/* width:200px;flex-grow:1; */line-height:1.6rem;white-space:nowrap;overflow:hidden;}
+    .marquee3k{background:#ff0;color:#f00;margin:calc(var(--spacer)*-1);margin-bottom:var(--spacer);/* width:200px;flex-grow:1; */line-height:1.6rem;white-space:nowrap;overflow:hidden;}
     .marquee3k .marquee span{margin-right:1.4rem;}
     /* VIDEO */
     .video{cursor:pointer;overflow:hidden;position:relative;max-width:900px;font-size:0;line-height:0;}
-    .video:after{border:10px solid transparent;border-left:26px solid var(--text);border-right-width:0;width:0;height:0;display:inline-block;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);content:"";pointer-events:none;}
-    /* .video:after{display:inline-block;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:1rem;content:"Play";pointer-events:none;} */
+    .video:after{border:.8rem solid transparent;border-left:2rem solid var(--text);border-right-width:0;width:0;height:0;display:inline-block;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);content:"";pointer-events:none;}
     .video.playing:after{display:none;}
     video{max-width:100%;cursor:pointer;}
     /* GALLERY */
     .gallery{column-gap:var(--spacer);columns:8 280px;max-width:calc(8*280px + 9*var(--spacer));}
-    .gallery>div{position:relative;/* transition:all .2s; */cursor:zoom-in;margin-bottom:var(--spacer);break-inside:avoid;}
-    /* .gallery>div:hover{transform:translateY(-5px);} */
-    .gallery>div>div{transition:all .1s;overflow:hidden;line-height:0;font-size:0;}
-    .gallery>div>div:after{opacity:0;transition:all .1s;/* background:var(--highlight);mix-blend-mode:difference; */inset:0;position:absolute;pointer-events:none;content:"";}
+    .gallery>div{position:relative;cursor:zoom-in;margin-bottom:var(--spacer);break-inside:avoid;}
+    .gallery>div>div{overflow:hidden;line-height:0;font-size:0;}
+    .gallery>div>div:after{inset:0;position:absolute;pointer-events:none;content:"";}
     .gallery img{max-width:100%;}
-    .gallery>div>span{position:absolute;inset:var(--spacer);/* mix-blend-mode:difference; *//* transition:all .2s; */}
-    .gallery>div>span>span{background:var(--text);color:var(--background);/* box-decoration-break:clone;-webkit-box-decoration-break:clone; */}
-    .gallery>div:not(:hover)>span{opacity:0;transform:translateY(5px);}
+    /* .gallery>div>span{position:absolute;inset:var(--spacer);} */
+    .gallery>div>span>span{}
+    /* .gallery>div:not(:hover)>span{opacity:0;transform:translateY(5px);} */
     /* LIGHTBOX */
-    #lightbox{z-index:999997;cursor:zoom-out;position:fixed;inset:0;display:none;background:rgba(221,221,221,.9);}
+    #lightbox{z-index:999997;cursor:zoom-out;position:fixed;inset:0;display:none;background:rgba(255,255,255,.9);}
     #lightbox img{cursor:pointer;max-height:90vh;max-width:90vw;box-sizing:border-box;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);}
     /* SVG */
     #about svg{fill:var(--text);vertical-align:-10%;height:.9rem;width:.9rem;}
@@ -61,9 +59,9 @@
     /* :HOVER */
     @keyframes outline{0%{outline:2px solid var(--text);}100%{outline:1px solid var(--text);outline-offset:5px;}}
     @media(hover:hover){
-        a:hover{background:var(--text);color:var(--background);text-decoration:none;/* box-shadow:inset 0 -1.4em var(--text); */}
-        .video:hover:after{/* border-left-color:#0f0; */opacity:.3;}
-        .gallery>div:hover>div:after{opacity:1;}
+        a:hover{text-decoration:none;}
+        .video:hover:after{opacity:.3;}
+        /* .gallery>div:hover>div:after{opacity:1;} */
         @keyframes blink{0%{opacity:1;}50%{opacity:0;}}
     }
     /* *{cursor:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" x="0px" y="0px" viewBox="0 0 12 12" style="fill:%23000;"><circle cx="6" cy="6" r="6"/></svg>') 6 6, auto !important;} */
@@ -77,10 +75,10 @@
 <div id="header">
     <h1 class="loading">Joey W. Schweickhardt</h1>
     <div>
-        <a href="#/featured">Featured</a>,
-        <a href="#/works">Works</a>,
-        <a href="#/places">Places</a>,
-        <a href="#/about">About</a>
+        <a href="/featured">Featured</a>,
+        <a href="/works">Works</a>,
+        <a href="/places">Places</a>,
+        <a href="/about">About</a>
     </div>
     <div>Basel<span id="time"></span><span id="weather"></span></div>
 </div>
@@ -175,7 +173,7 @@
             <a href="https://www.linkedin.com/in/joeyschweickhardt/">LinkedIn</a>
         </p>
         <hr>
-        <!-- <p>Hand-coded with <?xml version="1.0" ?><svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" fill-rule="evenodd"/></svg></p> -->
+        <p>Hand-coded with <?xml version="1.0" ?><?xml version="1.0" ?><svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path fill="red" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" fill-rule="evenodd"/></svg></p>
         <p><a id="show-privacy" href="javascript:;">Privacy</a></p>
         <p class="privacy">Personal data (usually referred to just as „data“ below) will only be processed by us to the extent necessary and for the purpose of providing a functional and user-friendly website, including its contents, and the services offered there. Per Art. 4 No. 1 of Regulation (EU) 2016/679, i.e. the General Data Protection Regulation (hereinafter referred to as the „GDPR“), „processing“ refers to any operation or set of operations such as collection, recording, organization, structuring, storage, adaptation, alteration, retrieval, consultation, use, disclosure by transmission, dissemination, or otherwise making available, alignment, or combination, restriction, erasure, or destruction performed on personal data, whether by automated means or not.</p>
         <p class="privacy">With regard to the data processing to be described in more detail below, users and data subjects have the right to confirmation of whether data concerning them is being processed, information about the data being processed, further information about the nature of the data processing, and copies of the data (cf. also Art. 15 GDPR); to correct or complete incorrect or incomplete data (cf. also Art. 16 GDPR); to the immediate deletion of data concerning them (cf. also Art. 17 DSGVO), or, alternatively, if further processing is necessary as stipulated in Art. 17 Para. 3 GDPR, to restrict said processing per Art. 18 GDPR; to receive copies of the data concerning them and/or provided by them and to have the same transmitted to other providers/controllers (cf. also Art. 20 GDPR); to file complaints with the supervisory authority if they believe that data concerning them is being processed by the controller in breach of data protection provisions (see also Art. 77 GDPR). In addition, the controller is obliged to inform all recipients to whom it discloses data of any such corrections, deletions, or restrictions placed on processing the same per Art. 16, 17 Para. 1, 18 GDPR. However, this obligation does not apply if such notification is impossible or involves a disproportionate effort. Nevertheless, users have a right to information about these recipients.</p>
@@ -202,19 +200,27 @@ $(document).ready(function(){
     });
 
     // nav
-    function refreshHash() {
+    /* function refreshHash() {
         var duration = 0;
-        var easing = "linear"; // easeOutCubic
+        var easing = "linear";
         var hash = window.location.hash;
         if ($("a[href='"+hash+"']").length == 0) {hash = $("#header a:first").attr("href");}
         $("a").removeClass("open");
         $("a[href='"+hash+"']").addClass("open");
-        //$("#" + hash.slice(2)).show(duration,easing).siblings().hide(duration,easing);
         $("#" + hash.slice(2)).addClass("show").siblings().removeClass("show");
-        //setTimeout(function(){$("#" + hash.slice(2)).fadeIn(duration,easing);},duration);
         return false;
     }
-    $(window).bind("hashchange",function(e){refreshHash();});
+    $(window).bind("hashchange",function(e){refreshHash();}); */
+    $("a[href^='/']").on("click",function(){
+        event.stopPropagation();
+        var state = null;
+        var url = $(this).attr("href");
+        var title = page.slice(1);
+        history.pushState(state,"",url);
+        document.title = title;
+        $(this).addClass("open").siblings().removeClass("open");
+        $("#" + title).addClass("show").siblings().removeClass("show");
+    });
     
     // gallery
     $(".gallery img").each(function(){
