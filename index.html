@@ -7,7 +7,7 @@
 <style>
     @font-face{font-family:webfont;src:url("font/Source_Code_Pro/SourceCodePro-Regular.ttf");} /*Inter-Medium   font/RobotoMono/RobotoMono-Regular   IBM-Plex-Mono/IBMPlexMono-Text   texgyrecursor-regular   SourceCodePro-Medium*/
     @font-face{font-family:webfont2;src:url("font/Source_Code_Pro/SourceCodePro-Regular.ttf");} /*Jost   Coconat-BoldExt   texgyreheros-bold   NimbusSanL-Bol   SourceCodePro-Regular  gnu-free-font/FreeSans   NimbusRomNo9L-Reg   Libre_Franklin/LibreFranklin-Bold*/
-    :root{--background:#ffe;--text:#f00;--spacer:8px;}
+    :root{--background:#eee;--text:#000;--spacer:8px;}
     ::-moz-selection{background:var(--text);color:var(--background);}
     ::selection{background:var(--text);color:var(--background);}
     /* ::-webkit-scrollbar{width:8px;height:8px;background:var(--background);}
@@ -16,7 +16,7 @@
 	html{font-size:13px;}
     html,body{background:var(--background);}
     body{padding:var(--spacer);color:var(--text);font:normal normal 1rem/1.28em webfont2,monospace;}
-	p{margin-top:.8em;max-width:55em;/* max-width:640px; */}hr+p,p:first-child{margin-top:0;}p+img,p+video,p+.cycle-slideshow,img+p,video+p,.cycle-slideshow+p{margin-top:var(--spacer);}
+	p{margin-top:.8rem;max-width:55rem;/* max-width:640px; */}hr+p,p:first-child{margin-top:0;}p+img,p+video,p+.cycle-slideshow,img+p,video+p,.cycle-slideshow+p{margin-top:var(--spacer);}
     small{opacity:.4;}
     i{font-style:italic;}
     a{text-decoration:underline;text-decoration-skip:none;text-decoration-thickness:1px;white-space:nowrap;}
@@ -25,8 +25,8 @@
     #header{display:flex;justify-content:flex-start;align-content:baseline;flex-wrap:wrap;column-gap:3em;}
     #header>*{white-space:nowrap;}
     /* h1{font:normal normal 16px/1.3rem webfont2,sans-serif;text-transform:uppercase;letter-spacing:.01rem;transform:scaleY(.8);transform-origin:center center;} */
-    #header a{text-decoration:none;color:inherit;padding-left:1.25em;background:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" x="0px" y="0px" viewBox="0 0 12 12"><circle stroke="%23f00" fill="transparent" stroke-width="1" cx="6" cy="6" r="4"/></svg>') left center no-repeat scroll;}
-    #header a.open{background-image:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" x="0px" y="0px" viewBox="0 0 12 12"><circle stroke="%23f00" fill="%23f00" stroke-width="1" cx="6" cy="6" r="4"/></svg>');}
+    #nav a{text-decoration:none;color:inherit;padding-left:1.25rem;background:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width=".6rem" height=".6rem" x="0px" y="0px" viewBox="0 0 .6rem .6rem"><circle stroke="%23000" stroke-width="1" fill="transparent" cx=".3em" cy=".3rem" r=".26rem"/></svg>') left center no-repeat scroll;}
+    #nav a.open{background-image:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width=".6rem" height=".6rem" x="0px" y="0px" viewBox="0 0 .6rem .6rem"><circle fill="%23000" stroke="%23000" stroke-width="1" cx=".3rem" cy=".3rem" r=".26rem"/></svg>');}
     .loading{animation:.3s blink steps(1) infinite;}
     #time-blink{animation:2s blink steps(1) infinite;}
     @keyframes blink{0%{opacity:0;}50%{opacity:1;}}
@@ -45,9 +45,8 @@
     .gallery{column-gap:var(--spacer);columns:8 280px;max-width:calc(8*280px + 9*var(--spacer));}
     .gallery>div{transition:all .1s;position:relative;cursor:zoom-in;margin-bottom:var(--spacer);break-inside:avoid;}
     .gallery>div>div{overflow:hidden;line-height:0;font-size:0;}
-    .gallery>div>div:after{inset:0;position:absolute;pointer-events:none;content:"";}
+    .gallery>div>div:after{opacity:0;inset:0;/* background:#00f;mix-blend-mode:screen; */position:absolute;pointer-events:none;content:"";}
     .gallery img{max-width:100%;}
-    .gallery>div>span>span{}
     /* LIGHTBOX */
     #lightbox{z-index:999997;background:var(--background);cursor:zoom-out;position:fixed;inset:0;display:none;}
     #lightbox img{cursor:pointer;max-height:90vh;max-width:90vw;box-sizing:border-box;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);}
@@ -72,7 +71,7 @@
 <div class="marquee3k" data-speed=".6"><div class="marquee"><span>歡迎</span><span>Bienvenidos</span><span>Welcome</span><span>स्वागत हे</span><span>اهلا وسهلا</span><span>Bem-vinda</span><span>স্বাগত</span><span>добро пожаловать</span><span>ようこそ</span><span>Sugeng Rawuh</span><span>ਸਵਾਗਤ ਹੈ</span><span>Willkommen</span><span>어서 오십시오</span><span>Bienvenue</span><span>Karibu</span><span>Svāgatam</span><span>Hoşgeldiniz</span><span>خوش آمدید</span><span>வரவேற்பு</span><span>Hoan nghênh</span><span>اهلا وسهلا</span><span>Benvenuto</span></div></div>
 <div id="header">
     <h1 class="loading">Joey W. Schweickhardt</h1>
-    <div>
+    <div id="nav">
         <a href="#/featured">Featured</a>
         <a href="#/works">Works</a>
         <a href="#/places">Places</a>
