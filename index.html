@@ -1,13 +1,11 @@
-
 <!DOCTYPE html>
 <html lang="en" translate="no"><head>
 <title>Joey W. Schweickhardt</title>
 <link rel="shortcut icon" type="image/x-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='32' width='32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%23000000' /%3E%3C/svg%3E">
 <meta charset="utf-8"><meta name="robots" content="index,nofollow,notranslate,noimageindex"><meta name="description" content="Welcome to the personal web page of Joey W. Schweickhardt."><meta name="keywords" content="schweickhardt,joey,stuttgart,joeyws,william"><meta name="geo.region" content="DE-BW"><meta name="geo.placename" content="Stuttgart"><meta name="geo.position" content="48.778600;9.179746"><meta name="ICBM" content="48.778600, 9.179746"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes,shrink-to-fit=no"><meta name="format-detection" content="telephone=no">
 <style>
-    @font-face{font-family:webfont;src:url("font/Source_Code_Pro/SourceCodePro-Regular.ttf");} /*Inter-Medium   font/RobotoMono/RobotoMono-Regular   IBM-Plex-Mono/IBMPlexMono-Text   texgyrecursor-regular   SourceCodePro-Medium*/
-    @font-face{font-family:webfont2;src:url("font/Source_Code_Pro/SourceCodePro-Regular.ttf");} /*Jost   Coconat-BoldExt   texgyreheros-bold   NimbusSanL-Bol   SourceCodePro-Regular  gnu-free-font/FreeSans   NimbusRomNo9L-Reg   Libre_Franklin/LibreFranklin-Bold*/
-    :root{--background:#eee;--text:#000;--spacer:8px;}
+    @font-face{font-family:webfont;src:url("font/nimbus-sans-l/NimbusSanL-Bol.otf");} /*Jost   Perun   texgyreheros-bold   NimbusSanL-Bol   SourceCodePro-Regular  gnu-free-font/FreeSans   NimbusRomNo9L-Reg   Libre_Franklin/LibreFranklin-Bold*/
+    :root{--background:#fff;--text:#222;--spacer:8px;}
     ::-moz-selection{background:var(--text);color:var(--background);}
     ::selection{background:var(--text);color:var(--background);}
     /* ::-webkit-scrollbar{width:8px;height:8px;background:var(--background);}
@@ -15,18 +13,19 @@
     /* RESET */*{user-select:none;font-kerning:normal;-webkit-tap-highlight-color:rgba(0,0,0,0)!important;}*:focus{outline:0 !important;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-appearance:none;border-radius:0;-webkit-border-radius:0;box-sizing:content-box;font-smoothing:antialiased;-moz-osx-font-smoothing: grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased;}
 	html{font-size:13px;}
     html,body{background:var(--background);}
-    body{padding:var(--spacer);color:var(--text);font:normal normal 1rem/1.28em webfont2,monospace;}
-	p{margin-top:.8rem;max-width:55rem;/* max-width:640px; */}hr+p,p:first-child{margin-top:0;}p+img,p+video,p+.cycle-slideshow,img+p,video+p,.cycle-slideshow+p{margin-top:var(--spacer);}
-    small{opacity:.4;}
+    body{letter-spacing:.03rem;padding:var(--spacer);color:var(--text);font:normal normal 1rem/1.35em webfont,monospace;}
+	/* h1{font-family:webfont2,sans-serif;transform:scaleY(.9);letter-spacing:.05em;text-transform:uppercase;} */
+    p{margin-top:var(--spacer);max-width:46rem;/* max-width:640px; */}hr+p,p:first-child{margin-top:0;}p+img,p+video,p+.cycle-slideshow,img+p,video+p,.cycle-slideshow+p{margin-top:var(--spacer);}
+    /* small{opacity:.4;} */
     i{font-style:italic;}
-    a{text-decoration:underline;text-decoration-skip:none;text-decoration-thickness:1px;white-space:nowrap;}
+    a{text-decoration:underline;text-decoration-skip:none;text-decoration-thickness:.06rem;white-space:nowrap;}
     /* a[href^=http]::after{content:"\2197";font-size:1.3rem;margin-left:.1em;font-style:normal;display:inline-block;} */
     /* LAYOUT */
-    #header{display:flex;justify-content:flex-start;align-content:baseline;flex-wrap:wrap;column-gap:3em;}
+    #header{display:flex;/* justify-content:flex-start; */justify-content:space-between;align-content:baseline;flex-wrap:wrap;column-gap:1.6rem;}
     #header>*{white-space:nowrap;}
     /* h1{font:normal normal 16px/1.3rem webfont2,sans-serif;text-transform:uppercase;letter-spacing:.01rem;transform:scaleY(.8);transform-origin:center center;} */
-    #nav a{text-decoration:none;color:inherit;padding-left:1.25rem;background:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width=".6rem" height=".6rem" x="0px" y="0px" viewBox="0 0 .6rem .6rem"><circle stroke="%23000" stroke-width="1" fill="transparent" cx=".3em" cy=".3rem" r=".26rem"/></svg>') left center no-repeat scroll;}
-    #nav a.open{background-image:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width=".6rem" height=".6rem" x="0px" y="0px" viewBox="0 0 .6rem .6rem"><circle fill="%23000" stroke="%23000" stroke-width="1" cx=".3rem" cy=".3rem" r=".26rem"/></svg>');}
+    #nav a{}
+    #nav a.open{text-decoration:none;color:inherit;}
     .loading{animation:.3s blink steps(1) infinite;}
     #time-blink{animation:2s blink steps(1) infinite;}
     @keyframes blink{0%{opacity:0;}50%{opacity:1;}}
@@ -34,8 +33,8 @@
     #content>*{min-height:100vh;}
     #content>*:not(.show){display:none;}
     /* MARQUEE */
-    .marquee3k{border-bottom:1px dotted var(--text);/* background:#ff8;color:#f00; */margin:calc(var(--spacer)*-1);margin-bottom:var(--spacer);/* width:200px;flex-grow:1; */line-height:1.6rem;white-space:nowrap;overflow:hidden;}
-    .marquee3k .marquee span{margin-right:1.4rem;}
+    .marquee3k{margin:calc(var(--spacer)*-1);/* margin-top:0; */margin-bottom:var(--spacer);/* width:200px;flex-grow:1; */line-height:1.6rem;white-space:nowrap;overflow:hidden;}
+    .marquee3k .marquee span{margin-right:1.8rem;}
     /* VIDEO */
     .video{cursor:pointer;overflow:hidden;position:relative;max-width:900px;font-size:0;line-height:0;}
     .video:after{border:.5rem solid transparent;border-left:1.3rem solid var(--text);border-right-width:0;width:0;height:0;display:inline-block;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);content:"";pointer-events:none;}
@@ -48,7 +47,7 @@
     .gallery>div>div:after{opacity:0;inset:0;/* background:#00f;mix-blend-mode:screen; */position:absolute;pointer-events:none;content:"";}
     .gallery img{max-width:100%;}
     /* LIGHTBOX */
-    #lightbox{z-index:999997;background:var(--background);cursor:zoom-out;position:fixed;inset:0;display:none;}
+    #lightbox{z-index:999997;/* background:var(--background); */backdrop-filter:blur(30px) saturate(0);cursor:zoom-out;position:fixed;inset:0;display:none;}
     #lightbox img{cursor:pointer;max-height:90vh;max-width:90vw;box-sizing:border-box;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);}
     /* SVG */
     #about svg{fill:var(--text);vertical-align:-10%;height:.9rem;width:.9rem;}
@@ -68,13 +67,13 @@
 
 
 
-<div class="marquee3k" data-speed=".6"><div class="marquee"><span>歡迎</span><span>Bienvenidos</span><span>Welcome</span><span>स्वागत हे</span><span>اهلا وسهلا</span><span>Bem-vinda</span><span>স্বাগত</span><span>добро пожаловать</span><span>ようこそ</span><span>Sugeng Rawuh</span><span>ਸਵਾਗਤ ਹੈ</span><span>Willkommen</span><span>어서 오십시오</span><span>Bienvenue</span><span>Karibu</span><span>Svāgatam</span><span>Hoşgeldiniz</span><span>خوش آمدید</span><span>வரவேற்பு</span><span>Hoan nghênh</span><span>اهلا وسهلا</span><span>Benvenuto</span></div></div>
+<!--<div class="marquee3k" data-speed=".6"><div class="marquee"><span>歡迎</span><span>Bienvenidos</span><span>Welcome</span><span>स्वागत हे</span><span>اهلا وسهلا</span><span>Bem-vinda</span><span>স্বাগত</span><span>добро пожаловать</span><span>ようこそ</span><span>Sugeng Rawuh</span><span>ਸਵਾਗਤ ਹੈ</span><span>Willkommen</span><span>어서 오십시오</span><span>Bienvenue</span><span>Karibu</span><span>Svāgatam</span><span>Hoşgeldiniz</span><span>خوش آمدید</span><span>வரவேற்பு</span><span>Hoan nghênh</span><span>اهلا وسهلا</span><span>Benvenuto</span></div></div>-->
 <div id="header">
     <h1 class="loading">Joey W. Schweickhardt</h1>
     <div id="nav">
-        <a href="#/featured">Featured</a>
-        <a href="#/works">Works</a>
-        <a href="#/places">Places</a>
+        <a href="#/featured">Featured</a>,
+        <a href="#/works">Works</a>,
+        <a href="#/places">Places</a>,
         <a href="#/about">About</a>
     </div>
     <div>Basel<span id="time"></span><span id="weather"></span></div>
@@ -89,7 +88,7 @@
                 <source src="https://www.dropbox.com/s/mmcykw5nus3m39u/LandDerEchsen1080.ogv?raw=1" type='video/ogg; codecs="theora, vorbis"' />
             </video>
         </div>
-        <p>Land der Echsen (Germany, 2021). The city council is planning a new quarter on a run-down railroad station site. There are various non-profit institutions housing in old loading halls, which are now forced to move out for the demolition which generates room for several new buildings. Suddenly lizards enter the game and endanger the entire undertaking.</p>
+        <p>Land der Echsen (Germany, 2021). The city council is planning a new quarter on a run-down railroad station site. There are various non-profit institutions housing in old loading halls, which are now forced to move out for the demolition generating room for several new buildings. Suddenly lizards enter the game and endanger the entire undertaking.</p>
         <p>Created as part of the <i>Anti-Stuttgart &mdash; A Determinate Negation</i> <a href="https://www.igma.uni-stuttgart.de/en/institute/">IGmA</a> design studio, in which certain urban developments and procedures were examined critically. The film was being shown at the University of Stuttgart department of architecture&#8217;s <a href="https://www.k1tv.watch/">graduate exhibition</a> and at the <a href="https://www.current-stuttgart.de/">CURRENT festival</a> for art and urban space.</p>
     </div>
     <div class="gallery" id="works">
@@ -136,21 +135,22 @@
     </div>
     <div id="about">
         <!-- <p>Experience</p>
-        <p><small>2023&mdash;Present</small><br>Herzog & de Meuron Basel Ltd.</p>
-        <p><small>2022</small><br>Behnisch Architekten Partnerschaft mbB</p>
-        <p><small>2021&mdash;2022</small><br>REM ASSETS Unternehmensimmobilien AG</p>
-        <p><small>2020&mdash;2021</small><br>Werner Sobek AG</p>
+        <p><small>2023 &mdash; Present</small><br>Herzog & de Meuron</p>
+        <p><small>2022</small><br>Behnisch Architekten</p>
+        <p><small>2021 &mdash; 2022</small><br>REM Assets</p>
+        <p><small>2020 &mdash; 2021</small><br>Werner Sobek</p>
         <hr>
         <p>Education</p>
-        <p><small>2022&mdash;2023</small><br>Study abroad, Erasmus+ schoolarship, Politecnico di Milano</p>
-        <p><small>2022</small><br>Summer School, Architectural Association/State Academy of Fine Arts Stuttgart</p>
-        <p><small>2021&mdash;Present</small><br>Master studies, University of Stuttgart</p>
-        <p><small>2018&mdash;2021</small><br>Bachelor of Science, University of Stuttgart</p>
+        <p><small>2022 &mdash; 2023</small><br>Study abroad, Erasmus+ schoolarship<br>Politecnico di Milano</p>
+        <p><small>2022</small><br>Summer School<br>Architectural Association<br>State Academy of Fine Arts Stuttgart</p>
+        <p><small>2021 &mdash; Present</small><br>Master studies<br>University of Stuttgart</p>
+        <p><small>2018 &mdash; 2021</small><br>Bachelor of Science<br>University of Stuttgart</p>
         <hr>
-        <p>Exhibitions</p>
-        <p><small data-title="24.06.2022-04.07.2022">2022</small><br>Graduate Selection, Department of Architecture, University of Stuttgart</p>
-        <p><small data-title="16.09.2021-17.09.2021">2021</small><br>CURRENT Festival for art and urban space, Kunstverein Wagenhalle e.V.</p>
-        <p><small data-title="13.01.2020-25.01.2020">2020</small><br>Annual Design Projects Selection, Institut für Raumkonzeptionen und Grundlagen des Entwerfens, University of Stuttgart</p>
+        <p>Exhibitions and Prices</p>
+        <p><small data-title="">2023</small><br>Deutschlandstipendium</p>
+        <p><small data-title="24.06.2022-04.07.2022">2022</small><br>Graduate Selection<br>Department of Architecture, University of Stuttgart</p>
+        <p><small data-title="16.09.2021-17.09.2021">2021</small><br>CURRENT Festival for Art and Urban Space</p>
+        <p><small data-title="13.01.2020-25.01.2020">2020</small><br>Annual Design Projects Selection<br>IRGE, University of Stuttgart</p>
         <hr> -->
         <p>
             Joey W. Schweickhardt<br>
@@ -166,11 +166,11 @@
             <a href="https://www.linkedin.com/in/joeyschweickhardt/"><?xml version="1.0" ?><svg style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:serif="http://www.serif.com/" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z"/></svg></a>
         </p> -->
         <p>
-            <a href="https://www.instagram.com/joeyws/">Instagram</a>,
-            <a href="https://www.linkedin.com/in/joeyschweickhardt/">LinkedIn</a>
+            <a href="https://www.instagram.com/joeyws/">Instagram</a><!-- ,
+            <a href="https://www.linkedin.com/in/joeyschweickhardt/">LinkedIn</a> -->
         </p>
         <hr>
-        <p>Hand-coded with <?xml version="1.0" ?><?xml version="1.0" ?><svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path fill="red" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" fill-rule="evenodd"/></svg></p>
+        <!--<p>Hand-coded with <?xml version="1.0" ?><?xml version="1.0" ?><svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path fill="red" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" fill-rule="evenodd"/></svg></p>-->
         <p><a id="show-privacy" href="javascript:;">Privacy</a></p>
         <p class="privacy">Personal data (usually referred to just as „data“ below) will only be processed by us to the extent necessary and for the purpose of providing a functional and user-friendly website, including its contents, and the services offered there. Per Art. 4 No. 1 of Regulation (EU) 2016/679, i.e. the General Data Protection Regulation (hereinafter referred to as the „GDPR“), „processing“ refers to any operation or set of operations such as collection, recording, organization, structuring, storage, adaptation, alteration, retrieval, consultation, use, disclosure by transmission, dissemination, or otherwise making available, alignment, or combination, restriction, erasure, or destruction performed on personal data, whether by automated means or not.</p>
         <p class="privacy">With regard to the data processing to be described in more detail below, users and data subjects have the right to confirmation of whether data concerning them is being processed, information about the data being processed, further information about the nature of the data processing, and copies of the data (cf. also Art. 15 GDPR); to correct or complete incorrect or incomplete data (cf. also Art. 16 GDPR); to the immediate deletion of data concerning them (cf. also Art. 17 DSGVO), or, alternatively, if further processing is necessary as stipulated in Art. 17 Para. 3 GDPR, to restrict said processing per Art. 18 GDPR; to receive copies of the data concerning them and/or provided by them and to have the same transmitted to other providers/controllers (cf. also Art. 20 GDPR); to file complaints with the supervisory authority if they believe that data concerning them is being processed by the controller in breach of data protection provisions (see also Art. 77 GDPR). In addition, the controller is obliged to inform all recipients to whom it discloses data of any such corrections, deletions, or restrictions placed on processing the same per Art. 16, 17 Para. 1, 18 GDPR. However, this obligation does not apply if such notification is impossible or involves a disproportionate effort. Nevertheless, users have a right to information about these recipients.</p>
@@ -192,7 +192,7 @@ $(document).ready(function(){
     // init
 	$(window).on("load",function(){
         hideLoading();
-        Marquee3k.init();
+        //Marquee3k.init();
         refreshHash();
     });
 
@@ -314,8 +314,8 @@ $(document).ready(function(){
     setTimeout(function(){loadWeather();},60000);
     
     // impressum
-    var address1 = 'S'+'i'+'g'+'n'+'a'+'l'+'s'+'t'+'r'+'.'+' '+'3'+'5'+'a'; // 'K'+'o'+'l'+'p'+'i'+'n'+'g'+'s'+'t'+'r'+'.'+' '+'5'+'6';
-    var address2 = 'C'+'H'+'-'+'4'+'0'+'5'+'8'+' '+'B'+'a'+'s'+'e'+'l'; // 'D'+'E'+'-'+'7'+'0'+'3'+'7'+'8'+' '+'S'+'t'+'u'+'t'+'t'+'g'+'a'+'r'+'t';
+    var address1 = 'K'+'o'+'l'+'p'+'i'+'n'+'g'+'s'+'t'+'r'+'.'+' '+'5'+'6'; //'S'+'i'+'g'+'n'+'a'+'l'+'s'+'t'+'r'+'.'+' '+'3'+'5'+'a';
+    var address2 = 'D'+'E'+' '+'&mdash;'+' '+'7'+'0'+'3'+'7'+'8'+' '+'S'+'t'+'u'+'t'+'t'+'g'+'a'+'r'+'t'; //'C'+'H'+' '+'&mdash;'+' '+'4'+'0'+'5'+'8'+' '+'B'+'a'+'s'+'e'+'l';
     var mail = 'm'+'a'+'i'+'l'+ String.fromCharCode(64) +'j'+'o'+'e'+'y'+'w'+'s'+'.'+'c'+'o'+'m';
     var phone = '+'+'4'+'9'+'1'+'5'+'7'+'7'+'8'+'8'+'5'+'0'+'5'+'0'+'2';
     $('.address1').html(address1);
