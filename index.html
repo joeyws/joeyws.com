@@ -76,7 +76,7 @@
         <a href="#/places">Places</a>,
         <a href="#/about">About</a>
     </div>
-    <div>Basel<span id="time"></span><span id="weather"></span></div>
+    <div>Stuttgart<span id="time"></span><span id="weather"></span></div>
 </div>
 <hr>
 <div id="content">
@@ -309,7 +309,7 @@ $(document).ready(function(){
             $("#weather").html(", " + temperature + " " + word);
         }
     }
-    function loadWeather() {getXMLFeed("https://weather-broker-cdn.api.bbci.co.uk/en/observation/rss/2661604", getWeather);} // Stuttgart:2825297 Milan:3173435 Basel:2661604
+    function loadWeather() {getXMLFeed("https://weather-broker-cdn.api.bbci.co.uk/en/observation/rss/2825297", getWeather);} // Stuttgart:2825297 Basel:2661604
     loadWeather();
     setTimeout(function(){loadWeather();},60000);
     
