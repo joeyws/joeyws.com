@@ -4,28 +4,29 @@
 <link rel="shortcut icon" type="image/x-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='32' width='32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%23000000' /%3E%3C/svg%3E">
 <meta charset="utf-8"><meta name="robots" content="index,nofollow,notranslate,noimageindex"><meta name="description" content="Welcome to the personal web page of Joey W. Schweickhardt."><meta name="keywords" content="schweickhardt,joey,stuttgart,joeyws,william"><meta name="geo.region" content="DE-BW"><meta name="geo.placename" content="Stuttgart"><meta name="geo.position" content="48.778600;9.179746"><meta name="ICBM" content="48.778600, 9.179746"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes,shrink-to-fit=no"><meta name="format-detection" content="telephone=no">
 <style>
-    @font-face{font-family:webfont;src:url("font/TeX-Gyre-Heros/texgyreheros-bold.otf");} /*Jost   Perun   texgyreheros-bold   NimbusSanL-Bol   SourceCodePro-Regular  gnu-free-font/FreeSans   NimbusRomNo9L-Reg   Libre_Franklin/LibreFranklin-Bold*/
-    :root{--background:#fff;--text:#222;--spacer:8px;}
+    @font-face{font-family:webfont;src:url("font/Source_Code_Pro/SourceCodePro-Regular.ttf");} /*Jost   Perun   texgyreheros-bold   NimbusSanL-Bol   SourceCodePro-Regular  gnu-free-font/FreeSans   NimbusRomNo9L-Reg   Libre_Franklin/LibreFranklin-Bold*/
+    @font-face{font-family:webfont2;src:url("font/nimbus-sans-l/NimbusSanL-Bol.otf");} /*Jost   Perun   texgyreheros-bold   NimbusSanL-Bol   SourceCodePro-Regular  gnu-free-font/FreeSans   NimbusRomNo9L-Reg   Libre_Franklin/LibreFranklin-Bold*/
+    :root{--background:#fff;--text:#000;--spacer:8px;}
     ::-moz-selection{background:var(--text);color:var(--background);}
     ::selection{background:var(--text);color:var(--background);}
     /* ::-webkit-scrollbar{width:8px;height:8px;background:var(--background);}
     ::-webkit-scrollbar-thumb{background:var(--text);} */
     /* RESET */*{user-select:none;font-kerning:normal;-webkit-tap-highlight-color:rgba(0,0,0,0)!important;}*:focus{outline:0 !important;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-appearance:none;border-radius:0;-webkit-border-radius:0;box-sizing:content-box;font-smoothing:antialiased;-moz-osx-font-smoothing: grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased;}
-	html{font-size:14px;}
+	html{font-size:13px;}
     html,body{background:var(--background);}
-    body{letter-spacing:.03rem;padding:var(--spacer);color:var(--text);font:normal normal 1rem/1.35em webfont,monospace;}
-	/* h1{font-family:webfont2,sans-serif;transform:scaleY(.9);letter-spacing:.05em;text-transform:uppercase;} */
-    p{margin-top:var(--spacer);max-width:46rem;/* max-width:640px; */}hr+p,p:first-child{margin-top:0;}p+img,p+video,p+.cycle-slideshow,img+p,video+p,.cycle-slideshow+p{margin-top:var(--spacer);}
-    /* small{opacity:.4;} */
+    body{letter-spacing:.01rem;padding:var(--spacer);color:var(--text);font:normal normal 1rem/1.35rem webfont,monospace;}
+    p,ul{margin-top:.8rem;/* max-width:46rem; */}hr+p,p:first-child{margin-top:0;}p+img,p+video,p+.cycle-slideshow,img+p,video+p,.cycle-slideshow+p{margin-top:var(--spacer);}
+    ul{list-style-type:none;list-style-position:inside;}
+    small{/* opacity:.4; */display:inline-block;width:10rem;}
     i{font-style:italic;}
     a{text-decoration:underline;text-decoration-skip:none;text-decoration-thickness:.06rem;white-space:nowrap;}
     /* a[href^=http]::after{content:"\2197";font-size:1.3rem;margin-left:.1em;font-style:normal;display:inline-block;} */
     /* LAYOUT */
     #header{display:flex;/* justify-content:flex-start; */justify-content:space-between;align-content:baseline;flex-wrap:wrap;column-gap:1.6rem;}
     #header>*{white-space:nowrap;}
-    /* h1{font:normal normal 16px/1.3rem webfont2,sans-serif;text-transform:uppercase;letter-spacing:.01rem;transform:scaleY(.8);transform-origin:center center;} */
-    #nav a{}
-    #nav a.open{text-decoration:none;color:inherit;}
+    @media only screen and (min-width:680px) {#header{position:sticky;top:var(--spacer);z-index:9999;}}
+    #nav a{text-decoration:none;}
+    #nav a.open{font-style:italic;}
     .loading{animation:.3s blink steps(1) infinite;}
     #time-blink{animation:2s blink steps(1) infinite;}
     @keyframes blink{0%{opacity:0;}50%{opacity:1;}}
@@ -36,18 +37,19 @@
     .marquee3k{margin:calc(var(--spacer)*-1);/* margin-top:0; */margin-bottom:var(--spacer);/* width:200px;flex-grow:1; */line-height:1.6rem;white-space:nowrap;overflow:hidden;}
     .marquee3k .marquee span{margin-right:1.8rem;}
     /* VIDEO */
-    .video{cursor:pointer;overflow:hidden;position:relative;max-width:900px;font-size:0;line-height:0;}
+    .video{cursor:pointer;overflow:hidden;position:relative;max-width:800px;font-size:0;line-height:0;}
+    .video.playing{cursor:pointer;}
     .video:after{border:.5rem solid transparent;border-left:1.3rem solid var(--text);border-right-width:0;width:0;height:0;display:inline-block;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);content:"";pointer-events:none;}
     .video.playing:after{display:none;}
-    video{max-width:100%;cursor:pointer;}
+    video{max-width:100%;}
     /* GALLERY */
-    .gallery{column-gap:var(--spacer);columns:8 280px;max-width:calc(8*280px + 9*var(--spacer));}
-    .gallery>div{transition:all .1s;position:relative;cursor:zoom-in;margin-bottom:var(--spacer);break-inside:avoid;}
-    .gallery>div>div{overflow:hidden;line-height:0;font-size:0;}
-    .gallery>div>div:after{opacity:0;inset:0;/* background:#00f;mix-blend-mode:screen; */position:absolute;pointer-events:none;content:"";}
-    .gallery img{max-width:100%;}
+    .gallery{column-gap:var(--spacer);display:grid;grid-template-columns:repeat(auto-fill,minmax(240px, 1fr));align-items:center;justify-items:center;}
+    .gallery>div{max-width:200px;margin:2.5rem 0;position:relative;cursor:zoom-in;}
+    .gallery>div>div{/* overflow:hidden; */line-height:0;font-size:0;}
+    .gallery>div>div>img{max-height:200px;max-width:100%;transition:all .1s;}
+    .gallery>div>span{transition:all .1s;position:absolute;inset:0;display:flex;text-align:center;justify-content:center;align-items:center;opacity:0;}
     /* LIGHTBOX */
-    #lightbox{z-index:999997;/* background:var(--background); */backdrop-filter:blur(30px) saturate(0);cursor:zoom-out;position:fixed;inset:0;display:none;}
+    #lightbox{z-index:999997;cursor:zoom-out;position:fixed;inset:0;display:none;}
     #lightbox img{cursor:pointer;max-height:90vh;max-width:90vw;box-sizing:border-box;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);}
     /* SVG */
     #about svg{fill:var(--text);vertical-align:-10%;height:.9rem;width:.9rem;}
@@ -55,11 +57,13 @@
     /* :HOVER */
     @keyframes outline{0%{outline:2px solid var(--text);}100%{outline:1px solid var(--text);outline-offset:5px;}}
     @media(hover:hover){
-        a:hover{text-decoration:none;}
+        a:hover{text-decoration:none;font-style:italic;}
         .video:hover:after{opacity:.4;}
-        .gallery>div:hover{opacity:.8;}
+        .gallery>div:hover>span{opacity:1;}
+        .gallery>div:hover img{opacity:0;}
         @keyframes blink{0%{opacity:1;}50%{opacity:0;}}
     }
+    /* #header,p,.video:after,.gallery>div>span{mix-blend-mode:difference;color:#fff;} */
     /* *{cursor:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" x="0px" y="0px" viewBox="0 0 12 12" style="fill:%23000;"><circle cx="6" cy="6" r="6"/></svg>') 6 6, auto !important;} */
 </style>
 </head>
@@ -71,16 +75,14 @@
 <div id="header">
     <h1 class="loading">Joey W. Schweickhardt</h1>
     <div id="nav">
-        <a href="#/featured">Featured</a>,
-        <a href="#/works">Works</a>,
-        <a href="#/places">Places</a>,
+        <a href="#/index">Index</a>,
         <a href="#/about">About</a>
     </div>
     <div>Stuttgart<span id="time"></span><span id="weather"></span></div>
 </div>
 <hr>
 <div id="content">
-    <div id="featured">
+    <div id="index">
         <div class="video">
             <video onclick="this.parentElement.classList.add('playing');this.setAttribute('controls','');this.setAttribute('autoplay','');this.setAttribute('preload','');" oncontextmenu="return false;" poster="img/landderechsen.jpg" tabindex="0" preload="none" controlsList="nodownload noplaybackrate" disablePictureInPicture>
                 <source src="video/LandDerEchsen1080.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
@@ -88,69 +90,79 @@
                 <source src="https://www.dropbox.com/s/mmcykw5nus3m39u/LandDerEchsen1080.ogv?raw=1" type='video/ogg; codecs="theora, vorbis"' />
             </video>
         </div>
-        <p>Land der Echsen (Germany, 2021). The city council is planning a new quarter on a run-down railroad station site. There are various non-profit institutions housing in old loading halls, which are now forced to move out for the demolition generating room for several new buildings. Suddenly lizards enter the game and endanger the entire undertaking.</p>
-        <p>Created as part of the <i>Anti-Stuttgart &mdash; A Determinate Negation</i> <a href="https://www.igma.uni-stuttgart.de/en/institute/">IGmA</a> design studio, in which certain urban developments and procedures were examined critically. The film was being shown at the University of Stuttgart department of architecture&#8217;s <a href="https://www.k1tv.watch/">graduate exhibition</a> and at the <a href="https://www.current-stuttgart.de/">CURRENT festival</a> for art and urban space.</p>
-    </div>
-    <div class="gallery" id="works">
-        <img loading="lazy" src="img/26.jpg" data-date="2022" alt="Lightweight pneu pavillons" />
-        <img loading="lazy" src="img/25.jpg" data-date="2021" alt="Vasikkasaari Climate Research Institute Helsinki" />
-        <img loading="lazy" src="img/23.jpg" data-date="2021" alt="Wardrobe with hand-sewn curtain" />
-        <img loading="lazy" src="img/droneport.gif" data-date="2020" alt="Droneport" />
-        <img loading="lazy" src="img/21.jpg" data-date="2020" alt="Light studies models" />
-        <img loading="lazy" src="img/20.jpg" data-date="2020" alt="Wooden structure with traction cables" />
-        <img loading="lazy" src="img/16.jpg" data-date="2019" alt="Sint-Aneke-Club Antwerp" />
-        <img loading="lazy" src="img/15.jpg" data-date="2019" alt="Model, laser cut, glueless" />
-        <img loading="lazy" src="img/14.jpg" data-date="2019" alt="Cuboid perspective" />
-        <img loading="lazy" src="img/13.jpg" data-date="2019" alt="Cuboid perspective preparation" />
-        <img loading="lazy" src="img/12.jpg" data-date="2019" alt="Cuboid axonometry" />
-        <img loading="lazy" src="img/11.jpg" data-date="2019" alt="Ruled surfaces" />
-        <img loading="lazy" src="img/10.jpg" data-date="2019" alt="Pineapple, etching" />
-        <img loading="lazy" src="img/9.2.jpg" data-date="2019" alt="Cup, ink" />
-        <img loading="lazy" src="img/9.jpg" data-date="2019" alt="Tools" />
-        <img loading="lazy" src="img/8.jpg" data-date="2018" alt="Leichtsinn" />
-    </div>
-    <div class="gallery" id="places">
-        <img loading="lazy" src="img/37.jpg" data-date="2023" alt="Reflection" />
-        <img loading="lazy" src="img/36.jpg" data-date="2023" alt="Sant&rsquo; Ireneo" />
-        <img loading="lazy" src="img/35.jpg" data-date="2023" alt="Via Albricci" />
-        <img loading="lazy" src="img/34.jpg" data-date="2023" alt="Garden" />
-        <img loading="lazy" src="img/33.jpg" data-date="2023" alt="Nilufar Gallery" />
-        <img loading="lazy" src="img/32.jpg" data-date="2022" alt="Monte Amiata" />
-        <img loading="lazy" src="img/30.jpg" data-date="2022" alt="Amendola" />
-        <img loading="lazy" src="img/29.jpg" data-date="2022" alt="ADI" />
-        <img loading="lazy" src="img/28.jpg" data-date="2022" alt="Emergence Pool, by courtesy of Nari Ward" />
-        <img loading="lazy" src="img/27.jpg" data-date="2022" alt="Clouds" />
-        <img loading="lazy" src="img/24.jpg" data-date="" alt="Creek" />
-        <img loading="lazy" src="img/22.jpg" data-date="2019" alt="Flora" />
-        <img loading="lazy" src="img/19.jpg" data-date="2019" alt="Death Valley" />
-        <img loading="lazy" src="img/18.jpg" data-date="2019" alt="Campfire in a sandy forest" />
-        <img loading="lazy" src="img/17.jpg" data-date="2018" alt="Switzerland" />
-        <img loading="lazy" src="img/7.jpg" data-date="2018" alt="S&ocirc;ng Ng&agrave;n Ph&#7889;" />
-        <img loading="lazy" src="img/6.jpg" data-date="2018" alt="Eel soup" />
-        <img loading="lazy" src="img/5.jpg" data-date="2018" alt="H&#432;&#x01A1;ng S&#x01A1;n" />
-        <img loading="lazy" src="img/4.jpg" data-date="2017" alt="Merano" />
-        <img loading="lazy" src="img/3.jpg" data-date="2016" alt="J&ouml;kuls&aacute;rl&oacute;n glacial lake" />
-        <img loading="lazy" src="img/2.jpg" data-date="2016" alt="N&yacute;idalur" />
-        <img loading="lazy" src="img/1.jpg" data-date="" alt="Fog" />
+        <p>Land der Echsen (Germany, 2021). The city council is planning a new quarter on a run-down railroad station site. There are various non-profit institutions housing in old loading halls, which are now forced to move out for the demolition generating room for several new buildings. Suddenly lizards enter the game and endanger the entire undertaking. Created as part of the <i>Anti-Stuttgart &mdash; A Determinate Negation</i> <a href="https://www.igma.uni-stuttgart.de/en/institute/">IGmA</a> design studio, in which certain urban developments and procedures were examined critically. The film was being shown at the University of Stuttgart department of architecture&#8217;s <a href="https://www.k1tv.watch/">graduates exhibition</a> and at the <a href="https://www.current-stuttgart.de/">CURRENT festival</a> for art and urban space.</p>
+        <hr>
+        <p>Works:</p>
+        <div class="gallery">
+            <img loading="lazy" src="img/26.jpg" data-date="2022" alt="Lightweight pneu pavillons" />
+            <img loading="lazy" src="img/25.jpg" data-date="2021" alt="Vasikkasaari Climate Research Institute Helsinki" />
+            <img loading="lazy" src="img/23.jpg" data-date="2021" alt="Wardrobe with hand-sewn curtain" />
+            <img loading="lazy" src="img/droneport.gif" data-date="2020" alt="Droneport" />
+            <img loading="lazy" src="img/21.jpg" data-date="2020" alt="Light studies models" />
+            <img loading="lazy" src="img/20.jpg" data-date="2020" alt="Wooden structure with traction cables" />
+            <img loading="lazy" src="img/16.jpg" data-date="2019" alt="Sint-Aneke-Club Antwerp" />
+            <img loading="lazy" src="img/15.jpg" data-date="2019" alt="Model, laser cut, glueless" />
+            <img loading="lazy" src="img/14.jpg" data-date="2019" alt="Cuboid perspective" />
+            <img loading="lazy" src="img/13.jpg" data-date="2019" alt="Cuboid perspective preparation" />
+            <img loading="lazy" src="img/12.jpg" data-date="2019" alt="Cuboid axonometry" />
+            <img loading="lazy" src="img/11.jpg" data-date="2019" alt="Ruled surfaces" />
+            <img loading="lazy" src="img/10.jpg" data-date="2019" alt="Pineapple, etching" />
+            <img loading="lazy" src="img/9.2.jpg" data-date="2019" alt="Cup, ink" />
+            <img loading="lazy" src="img/9.jpg" data-date="2019" alt="Tools" />
+            <img loading="lazy" src="img/8.jpg" data-date="2018" alt="Leichtsinn" />
+        </div>
+        <hr>
+        <p>Places:</p>
+        <div class="gallery">
+            <img loading="lazy" src="img/37.jpg" data-date="2023" alt="Reflection" />
+            <img loading="lazy" src="img/36.jpg" data-date="2023" alt="Sant&rsquo; Ireneo" />
+            <img loading="lazy" src="img/35.jpg" data-date="2023" alt="Via Albricci" />
+            <img loading="lazy" src="img/34.jpg" data-date="2023" alt="Garden" />
+            <img loading="lazy" src="img/33.jpg" data-date="2023" alt="Nilufar Gallery" />
+            <img loading="lazy" src="img/32.jpg" data-date="2022" alt="Monte Amiata" />
+            <img loading="lazy" src="img/30.jpg" data-date="2022" alt="Amendola" />
+            <img loading="lazy" src="img/29.jpg" data-date="2022" alt="ADI" />
+            <img loading="lazy" src="img/28.jpg" data-date="2022" alt="Emergence Pool, by courtesy of Nari Ward" />
+            <img loading="lazy" src="img/27.jpg" data-date="2022" alt="Clouds" />
+            <img loading="lazy" src="img/24.jpg" data-date="" alt="Creek" />
+            <img loading="lazy" src="img/22.jpg" data-date="2019" alt="Flora" />
+            <img loading="lazy" src="img/19.jpg" data-date="2019" alt="Death Valley" />
+            <img loading="lazy" src="img/18.jpg" data-date="2019" alt="Campfire in a sandy forest" />
+            <img loading="lazy" src="img/17.jpg" data-date="2018" alt="Switzerland" />
+            <img loading="lazy" src="img/7.jpg" data-date="2018" alt="S&ocirc;ng Ng&agrave;n Ph&#7889;" />
+            <img loading="lazy" src="img/6.jpg" data-date="2018" alt="Eel soup" />
+            <img loading="lazy" src="img/5.jpg" data-date="2018" alt="H&#432;&#x01A1;ng S&#x01A1;n" />
+            <img loading="lazy" src="img/4.jpg" data-date="2017" alt="Merano" />
+            <img loading="lazy" src="img/3.jpg" data-date="2016" alt="J&ouml;kuls&aacute;rl&oacute;n glacial lake" />
+            <img loading="lazy" src="img/2.jpg" data-date="2016" alt="N&yacute;idalur" />
+            <img loading="lazy" src="img/1.jpg" data-date="" alt="Fog" />
+        </div>
     </div>
     <div id="about">
-        <!-- <p>Experience</p>
-        <p><small>2023 &mdash; Present</small><br>Herzog & de Meuron</p>
-        <p><small>2022</small><br>Behnisch Architekten</p>
-        <p><small>2021 &mdash; 2022</small><br>REM Assets</p>
-        <p><small>2020 &mdash; 2021</small><br>Werner Sobek</p>
+        <!-- <h2>Experience</h2>
+        <ul>
+            <li><small>2023 &mdash; Present</small> Herzog & de Meuron</li>
+            <li><small>2022</small> Behnisch Architekten</li>
+            <li><small>2021 &mdash; 2022</small> REM Assets</li>
+            <li><small>2020 &mdash; 2021</small> Werner Sobek</li>
+        </ul>
         <hr>
-        <p>Education</p>
-        <p><small>2022 &mdash; 2023</small><br>Study abroad, Erasmus+ schoolarship<br>Politecnico di Milano</p>
-        <p><small>2022</small><br>Summer School<br>Architectural Association<br>State Academy of Fine Arts Stuttgart</p>
-        <p><small>2021 &mdash; Present</small><br>Master studies<br>University of Stuttgart</p>
-        <p><small>2018 &mdash; 2021</small><br>Bachelor of Science<br>University of Stuttgart</p>
+        <h2>Education</h2>
+        <ul>
+            <li><small>2021 &mdash; Present</small> Master studies, University of Stuttgart</li>
+            <li><small>2022 &mdash; 2023</small> Study abroad, Erasmus+ schoolarship, Politecnico di Milano</li>
+            <li><small>2022</small> Summer School, Architectural Association, State Academy of Fine Arts Stuttgart</li>
+            <li><small>2018 &mdash; 2021</small> Bachelor of Science, University of Stuttgart</li>
+        </ul>
         <hr>
-        <p>Exhibitions and Prices</p>
-        <p><small data-title="">2023</small><br>Deutschlandstipendium</p>
-        <p><small data-title="24.06.2022-04.07.2022">2022</small><br>Graduate Selection<br>Department of Architecture, University of Stuttgart</p>
-        <p><small data-title="16.09.2021-17.09.2021">2021</small><br>CURRENT Festival for Art and Urban Space</p>
-        <p><small data-title="13.01.2020-25.01.2020">2020</small><br>Annual Design Projects Selection<br>IRGE, University of Stuttgart</p>
+        <h2>Exhibitions, Awards</h2>
+        <ul>
+            <li><small data-title="">2023</small> Deutschlandstipendium scholarship</li>
+            <li><small data-title="01.03.2023-29.02.2024">2023 &mdash; Present</small> Swiss-European Mobility Programme</li>
+            <li><small data-title="24.06.2022-04.07.2022">2022</small> Graduate Design Projects Selection, Department of Architecture, University of Stuttgart</li>
+            <li><small data-title="16.09.2021-17.09.2021">2021</small> CURRENT Festival for Art and Urban Space</li>
+            <li><small data-title="13.01.2020-25.01.2020">2020</small> Annual IRGE Design Projects Selection, IRGE, University of Stuttgart</li>
+        </ul>
         <hr> -->
         <p>
             Joey W. Schweickhardt<br>
