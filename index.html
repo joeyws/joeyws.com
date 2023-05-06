@@ -25,7 +25,7 @@
     /* LAYOUT */
     #header{display:flex;/* justify-content:flex-start; */justify-content:space-between;align-content:baseline;flex-wrap:wrap;column-gap:1.6rem;}
     #header>*{white-space:nowrap;}
-    @media only screen and (min-width:680px) {#header{position:sticky;top:var(--spacer);z-index:9999;}}
+    @media only screen and (min-width:580px) {#header{position:sticky;top:var(--spacer);z-index:9999;}}
     #nav a{text-decoration:none;}
     #nav a.open{font-style:italic;}
     .loading{animation:.3s blink steps(1) infinite;}
@@ -218,6 +218,7 @@ $(document).ready(function(){
         $("a").removeClass("open");
         $("a[href='"+hash+"']").addClass("open");
         $("#" + hash.slice(2)).addClass("show").siblings().removeClass("show");
+        window.scrollTo(0,0);
         return false;
     }
     $(window).bind("hashchange",function(e){refreshHash();});
