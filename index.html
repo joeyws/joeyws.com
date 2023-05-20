@@ -44,7 +44,7 @@
     .video.playing:after{display:none;}
     video{max-width:100%;}
     /* GALLERY */
-    .gallery{column-gap:var(--spacer);display:grid;grid-template-columns:repeat(auto-fill,minmax(240px, 1fr));align-items:center;justify-items:center;}
+    .gallery{margin-top:1.5rem;column-gap:var(--spacer);display:grid;grid-template-columns:repeat(auto-fill,minmax(240px, 1fr));align-items:center;justify-items:center;}
     .gallery>div{max-width:200px;margin:2.5rem 0;position:relative;cursor:zoom-in;}
     .gallery>div>div{/* overflow:hidden; */line-height:0;font-size:0;}
     .gallery>div>div>img{max-height:200px;max-width:100%;transition:all .1s;}
@@ -85,8 +85,6 @@ Stuttgart<span id="time"></span><span id="weather"></span>
 <hr>
 <div id="content">
     <div id="index">
-        
-        <hr>
         <div class="video">
             <video onclick="this.parentElement.classList.add('playing');this.setAttribute('controls','');this.setAttribute('autoplay','');this.setAttribute('preload','');" oncontextmenu="return false;" poster="img/landderechsen.jpg" tabindex="0" preload="none" controlsList="nodownload noplaybackrate" disablePictureInPicture>
                 <source src="video/LandDerEchsen1080.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
@@ -169,6 +167,8 @@ Stuttgart<span id="time"></span><span id="weather"></span>
             <li><small data-title="13.01.2020-25.01.2020">2020</small> Annual IRGE Design Projects Selection, IRGE, University of Stuttgart</li>
         </ul>
         <hr> -->
+        <p>Coming soon</p>
+        <hr>
         <p>
             Joey W. Schweickhardt<br>
             <span class="address1"></span><br>
