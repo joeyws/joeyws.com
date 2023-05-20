@@ -16,7 +16,7 @@
     html,body{background:var(--background);}
     body{letter-spacing:.01rem;padding:var(--spacer);color:var(--text);font:normal normal 1rem/1.35rem webfont,monospace;}
     p,h2,ul{margin-top:.8rem;/* max-width:46rem; */}hr+p,p:first-child{margin-top:0;}p+img,p+video,p+.cycle-slideshow,img+p,video+p,.cycle-slideshow+p{margin-top:var(--spacer);}
-    h2{text-align:center;font:normal bold 1.6rem/1em webfont2,sans-serif;text-transform:uppercase;transform:scaleY(.85);letter-spacing:.05em;}
+    #header,h2{text-align:center;font:normal bold 4vw/1em webfont2,sans-serif;mix-blend-mode:difference;color:#fff;text-transform:uppercase;transform:scaleY(.8);letter-spacing:0;}
     ul{list-style-type:none;list-style-position:inside;}
     small{/* opacity:.4; */display:inline-block;width:10rem;}
     i{font-style:italic;}
@@ -26,8 +26,8 @@
     #header{display:flex;/* justify-content:flex-start; */justify-content:space-between;align-content:baseline;flex-wrap:wrap;column-gap:1.6rem;}
     #header>*{white-space:nowrap;}
     @media only screen and (min-width:580px) {#header{position:sticky;top:var(--spacer);z-index:9999;}}
-    #nav a{text-decoration:none;}
-    #nav a.open{font-style:italic;}
+    #nav a{text-decoration:none;font-style:normal;}
+    #nav a.open{text-decoration:underline;}
     .loading{animation:.3s blink steps(1) infinite;}
     #time-blink{animation:2s blink steps(1) infinite;}
     @keyframes blink{0%{opacity:0;}50%{opacity:1;}}
@@ -79,11 +79,14 @@
         <a href="#/index">Index</a>,
         <a href="#/about">About</a>
     </div>
-    <div>Stuttgart<span id="time"></span><span id="weather"></span></div>
+    <!-- <div>Stuttgart<span id="time"></span><span id="weather"></span></div> -->
 </div>
+Stuttgart<span id="time"></span><span id="weather"></span>
 <hr>
 <div id="content">
     <div id="index">
+        
+        <hr>
         <div class="video">
             <video onclick="this.parentElement.classList.add('playing');this.setAttribute('controls','');this.setAttribute('autoplay','');this.setAttribute('preload','');" oncontextmenu="return false;" poster="img/landderechsen.jpg" tabindex="0" preload="none" controlsList="nodownload noplaybackrate" disablePictureInPicture>
                 <source src="video/LandDerEchsen1080.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
