@@ -35,7 +35,7 @@
     #content>*{min-height:100vh;}
     #content>*:not(.show){display:none;}
     /* MARQUEE */
-    .marquee3k{margin:calc(var(--spacer)*-1);/* margin-top:0; */margin-bottom:var(--spacer);/* width:200px;flex-grow:1; */line-height:1.6rem;white-space:nowrap;overflow:hidden;}
+    .marquee3k{/* width:200px;flex-grow:1; */white-space:nowrap;overflow:hidden;}
     .marquee3k .marquee span{margin-right:1.8rem;}
     /* VIDEO */
     .video{cursor:pointer;overflow:hidden;position:relative;max-width:800px;font-size:0;line-height:0;}
@@ -72,7 +72,6 @@
 
 
 
-<!--<div class="marquee3k" data-speed=".6"><div class="marquee"><span>歡迎</span><span>Bienvenidos</span><span>Welcome</span><span>स्वागत हे</span><span>اهلا وسهلا</span><span>Bem-vinda</span><span>স্বাগত</span><span>добро пожаловать</span><span>ようこそ</span><span>Sugeng Rawuh</span><span>ਸਵਾਗਤ ਹੈ</span><span>Willkommen</span><span>어서 오십시오</span><span>Bienvenue</span><span>Karibu</span><span>Svāgatam</span><span>Hoşgeldiniz</span><span>خوش آمدید</span><span>வரவேற்பு</span><span>Hoan nghênh</span><span>اهلا وسهلا</span><span>Benvenuto</span></div></div>-->
 <div id="header">
     <h1 class="loading">Joey W. Schweickhardt</h1>
     <div id="nav">
@@ -81,7 +80,7 @@
     </div>
     <!-- <div>Stuttgart<span id="time"></span><span id="weather"></span></div> -->
 </div>
-Stuttgart<span id="time"></span><span id="weather"></span>
+<div>Stuttgart<span id="time"></span><span id="weather"></span></div>
 <hr>
 <div id="content">
     <div id="index">
@@ -117,7 +116,7 @@ Stuttgart<span id="time"></span><span id="weather"></span>
         <h2>Places</h1>
         <div class="gallery">
             <img loading="lazy" src="img/38.jpg" data-date="2023" alt="Goetheanum" />
-            <img loading="lazy" src="img/37.jpg" data-date="2023" alt="PoliMi" />
+            <!-- <img loading="lazy" src="img/37.jpg" data-date="2023" alt="PoliMi" /> -->
             <img loading="lazy" src="img/36.jpg" data-date="2023" alt="Sant&rsquo; Ireneo" />
             <img loading="lazy" src="img/35.jpg" data-date="2023" alt="Via Albricci" />
             <img loading="lazy" src="img/34.jpg" data-date="2023" alt="Garden" />
@@ -195,6 +194,8 @@ Stuttgart<span id="time"></span><span id="weather"></span>
         <p class="privacy">Source: Weiß & Partner, Esslingen</p>
     </div>
 </div>
+<hr>
+<div class="marquee3k" data-speed=".6"><div class="marquee"><span>歡迎</span><span>Bienvenidos</span><span>Welcome</span><span>स्वागत हे</span><span>اهلا وسهلا</span><span>Bem-vinda</span><span>স্বাগত</span><span>добро пожаловать</span><span>ようこそ</span><span>Sugeng Rawuh</span><span>ਸਵਾਗਤ ਹੈ</span><span>Willkommen</span><span>어서 오십시오</span><span>Bienvenue</span><span>Karibu</span><span>Svāgatam</span><span>Hoşgeldiniz</span><span>خوش آمدید</span><span>வரவேற்பு</span><span>Hoan nghênh</span><span>اهلا وسهلا</span><span>Benvenuto</span></div></div>
 
 
 
@@ -209,7 +210,7 @@ $(document).ready(function(){
     // init
 	$(window).on("load",function(){
         hideLoading();
-        //Marquee3k.init();
+        Marquee3k.init();
         refreshHash();
     });
 
