@@ -80,7 +80,7 @@
     </div>
     <!-- <div>Stuttgart<span id="time"></span><span id="weather"></span></div> -->
 </div>
-<div>Stuttgart<span id="time"></span><span id="weather"></span></div>
+<div>Basel<span id="time"></span><span id="weather"></span></div>
 <hr>
 <div id="content">
     <div id="index">
@@ -327,13 +327,13 @@ $(document).ready(function(){
             $("#weather").html(", " + temperature + " " + word);
         }
     }
-    function loadWeather() {getXMLFeed("https://weather-broker-cdn.api.bbci.co.uk/en/observation/rss/2825297", getWeather);} // Stuttgart:2825297 Basel:2661604
+    function loadWeather() {getXMLFeed("https://weather-broker-cdn.api.bbci.co.uk/en/observation/rss/2661604", getWeather);} // Stuttgart:2825297 Basel:2661604
     loadWeather();
     setTimeout(function(){loadWeather();},60000);
     
     // impressum
-    var address1 = 'K'+'o'+'l'+'p'+'i'+'n'+'g'+'s'+'t'+'r'+'.'+' '+'5'+'6'; //'S'+'i'+'g'+'n'+'a'+'l'+'s'+'t'+'r'+'.'+' '+'3'+'5'+'a';
-    var address2 = 'D'+'E'+' '+'&mdash;'+' '+'7'+'0'+'3'+'7'+'8'+' '+'S'+'t'+'u'+'t'+'t'+'g'+'a'+'r'+'t'; //'C'+'H'+' '+'&mdash;'+' '+'4'+'0'+'5'+'8'+' '+'B'+'a'+'s'+'e'+'l';
+    var address1 = 'S'+'i'+'g'+'n'+'a'+'l'+'s'+'t'+'r'+'.'+' '+'3'+'5'+'a'; // 'K'+'o'+'l'+'p'+'i'+'n'+'g'+'s'+'t'+'r'+'.'+' '+'5'+'6';
+    var address2 = 'C'+'H'+' '+'&mdash;'+' '+'4'+'0'+'5'+'8'+' '+'B'+'a'+'s'+'e'+'l'; // 'D'+'E'+' '+'&mdash;'+' '+'7'+'0'+'3'+'7'+'8'+' '+'S'+'t'+'u'+'t'+'t'+'g'+'a'+'r'+'t';
     var mail = 'm'+'a'+'i'+'l'+ String.fromCharCode(64) +'j'+'o'+'e'+'y'+'w'+'s'+'.'+'c'+'o'+'m';
     var phone = '+'+'4'+'9'+'1'+'5'+'7'+'7'+'8'+'8'+'5'+'0'+'5'+'0'+'2';
     $('.address1').html(address1);
