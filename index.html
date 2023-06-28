@@ -5,7 +5,7 @@
 <meta charset="utf-8"><meta name="robots" content="index,nofollow,notranslate,noimageindex"><meta name="description" content="Welcome to the personal web page of Joey W. Schweickhardt."><meta name="keywords" content="schweickhardt,joey,stuttgart,joeyws,william"><meta name="geo.region" content="DE-BW"><meta name="geo.placename" content="Stuttgart"><meta name="geo.position" content="48.778600;9.179746"><meta name="ICBM" content="48.778600, 9.179746"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes,shrink-to-fit=no"><meta name="format-detection" content="telephone=no">
 <style>
     @font-face{font-family:webfont;src:url("font/Source_Code_Pro/SourceCodePro-Regular.ttf");} /*Jost   Perun   texgyreheros-bold   NimbusSanL-Bol   SourceCodePro-Regular  gnu-free-font/FreeSans   NimbusRomNo9L-Reg   Libre_Franklin/LibreFranklin-Bold*/
-    @font-face{font-family:webfont2;src:url("font/nimbus-sans-l/NimbusSanL-Reg.otf");} /*Jost   Perun   texgyreheros-bold   NimbusSanL-Bol   SourceCodePro-Regular  gnu-free-font/FreeSans   NimbusRomNo9L-Reg   Libre_Franklin/LibreFranklin-Bold*/
+    @font-face{font-family:webfont2;src:url("font/nimbus-sans-l/NimbusSanL-Bol.otf");} /*Jost   Perun   texgyreheros-bold   NimbusSanL-Bol   SourceCodePro-Regular  gnu-free-font/FreeSans   NimbusRomNo9L-Reg   Libre_Franklin/LibreFranklin-Bold*/
     :root{--background:#eee;--text:#000;--spacer:8px;}
     ::-moz-selection{background:var(--text);color:var(--background);}
     ::selection{background:var(--text);color:var(--background);}
@@ -17,11 +17,11 @@
     body{letter-spacing:.01rem;padding:var(--spacer);color:var(--text);font:normal normal 1rem/1.35rem webfont,monospace;}
     h1{display:inline-block;}
     p,h2,ul{margin-top:.8rem;/* max-width:46rem; */}hr+p,p:first-child{margin-top:0;}p+img,p+video,p+.cycle-slideshow,img+p,video+p,.cycle-slideshow+p{margin-top:var(--spacer);}
-    #h2{text-align:center;/* font:normal bold 24px/1.3em webfont2,sans-serif; *//* mix-blend-mode:difference;color:#fff;*//* letter-spacing:0.03em; *//* transform:scaleY(1); */text-transform:uppercase;}
+    h2{text-align:center;/* font:normal bold 32px/1.3em webfont2,sans-serif;letter-spacing:0.03em;transform:scaleY(.8);text-transform:uppercase; */}
     ul{list-style-type:none;list-style-position:inside;}
     small{/* opacity:.4; */display:inline-block;width:10rem;}
     i{font-style:italic;}
-    a{color:#00f;text-decoration:underline;text-decoration-skip:none;text-decoration-thickness:.06rem;white-space:nowrap;}
+    a{text-decoration:underline;text-decoration-skip:none;text-decoration-thickness:.06rem;white-space:nowrap;}
     /* a[href^=http]::after{content:"\2197";font-size:1.3rem;margin-left:.15em;font-style:normal;display:inline-block;} */
     /* LAYOUT */
     #header{display:flex;/* justify-content:flex-start; */justify-content:space-between;align-content:baseline;flex-wrap:wrap;column-gap:1.6rem;}
@@ -49,8 +49,8 @@
     .gallery{margin-top:1.5rem;column-gap:var(--spacer);display:grid;grid-template-columns:repeat(auto-fill,minmax(240px, 1fr));align-items:center;justify-items:center;}
     .gallery>div{max-width:200px;margin:2.5rem 0;position:relative;cursor:zoom-in;}
     .gallery>div>div{/* overflow:hidden; */line-height:0;font-size:0;}
-    .gallery>div>div>img{max-height:200px;max-width:100%;transition:all .1s;}
-    .gallery>div>span{transition:all .08s;position:absolute;inset:0;display:flex;text-align:center;justify-content:center;align-items:center;opacity:0;}
+    .gallery>div>div>img{max-height:200px;max-width:100%;/* transition:all .1s; */}
+    .gallery>div>span{/* transition:all .1s; */position:absolute;inset:0;display:flex;text-align:center;justify-content:center;align-items:center;opacity:0;}
     /* LIGHTBOX */
     #lightbox{z-index:999997;cursor:zoom-out;position:fixed;inset:0;display:none;}
     #lightbox img{cursor:pointer;height:auto;max-height:90vh;max-width:90vw;box-sizing:border-box;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);}
