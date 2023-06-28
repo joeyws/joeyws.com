@@ -29,7 +29,7 @@
     @media only screen and (min-width:640px) {#header{position:sticky;top:var(--spacer);z-index:9999;}}
     h1,#nav{display:inline-block;}
     #nav a{text-decoration:none;color:inherit;}
-    #nav a.open{text-decoration:underline;outline:none !important;}
+    #nav a.open{text-decoration:underline;cursor:default;}
     .loading{animation:.3s blink steps(1) infinite;}
     #time-blink{animation:2s blink steps(1) infinite;}
     @keyframes blink{0%{opacity:0;}50%{opacity:1;}}
@@ -55,8 +55,8 @@
     #lightbox{z-index:999997;cursor:zoom-out;position:fixed;inset:0;display:none;}
     #lightbox img{cursor:pointer;height:auto;max-height:90vh;max-width:90vw;box-sizing:border-box;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);}
     /* SVG */
-    /* #about svg{fill:var(--text);vertical-align:-10%;height:.9rem;width:.9rem;}
-    #about a svg{vertical-align:-20%;height:1.1rem;width:1.1rem;} */
+    #about svg{fill:var(--text);vertical-align:-10%;height:.85rem;width:.85rem;}
+    /* #about a svg{vertical-align:-20%;height:1.1rem;width:1.1rem;} */
     /* :HOVER */
     @keyframes outline{0%{outline:1px solid var(--text);border-radius:100vmax;}100%{outline:1px solid var(--text);outline-offset:5px;border-radius:100vmax;}}
     @media(hover:hover){
@@ -189,9 +189,9 @@
         </p>
         <hr>
         <p>
-            Hand-coded with <span style="color:#f00;">&#9825;</span><!-- <?xml version="1.0" ?><?xml version="1.0" ?><svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" fill-rule="evenodd"/></svg> --><br>
+            Hand-coded with <!-- &#9825; --><?xml version="1.0" ?><?xml version="1.0" ?><svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path fill="red" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" fill-rule="evenodd"/></svg><br>
             Hosted on <a href="https://github.com/" rel="nofollow">GitHub</a><br>
-            Initial launch: 16/01/2011
+            Initial launch: <!-- 16/01/ -->2011
         </p>
         <hr>
         <p><a id="show-privacy" href="javascript:;">Privacy</a></p>
