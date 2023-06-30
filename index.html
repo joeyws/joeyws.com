@@ -14,10 +14,10 @@
     /* RESET */*{user-select:none;font-kerning:normal;-webkit-tap-highlight-color:rgba(0,0,0,0)!important;}*:focus{outline:0 !important;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-appearance:none;border-radius:0;-webkit-border-radius:0;box-sizing:content-box;font-smoothing:antialiased;-moz-osx-font-smoothing: grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased;}
 	html{font-size:13px;}
     html,body{background:var(--background);}
-    body{letter-spacing:.01rem;padding:var(--spacer);color:var(--text);font:normal normal 1rem/1.35rem webfont,monospace;}
+    body{letter-spacing:.01rem;padding:var(--spacer);color:var(--text);font:normal normal 1rem/1.28rem webfont,monospace;}
     h1{display:inline-block;}
     p,h2,ul{margin-top:.8rem;/* max-width:46rem; */}hr+p,p:first-child{margin-top:0;}p+img,p+video,p+.cycle-slideshow,img+p,video+p,.cycle-slideshow+p{margin-top:var(--spacer);}
-    h2{text-align:center;display:table;margin:0 auto;/* background:#0f0; */font:normal bold 48px/1.3rem webfont2,sans-serif;transform:scaleY(.75);text-transform:uppercase;}
+    h2{text-align:center;display:table;margin:0 auto;/* background:#0f0; */font:normal bold 48px/1rem webfont2,sans-serif;transform:scaleY(.75);text-transform:uppercase;}
     p{max-width:800px;}
     ul{list-style-type:none;list-style-position:inside;}
     small{/* opacity:.4; */display:inline-block;width:10rem;}
@@ -26,9 +26,9 @@
     /* a[href^=http]::after{content:"\2197";font-size:1.3rem;margin-left:.15em;font-style:normal;display:inline-block;} */
     /* LAYOUT */
     #header{display:flex;/* justify-content:flex-start; */justify-content:space-between;align-content:baseline;flex-wrap:wrap;column-gap:1.6rem;}
-    #header>*{white-space:nowrap;background:#0f0;height:1.3rem;}
+    #header>*{white-space:nowrap;background:#0f0;/* height:1.3rem; */}
     @media only screen and (min-width:640px) {#header{position:sticky;top:var(--spacer);z-index:9999;}}
-    #nav a{display:inline-block;text-decoration:none;color:inherit;height:1.3em;}
+    #nav a{display:inline-block;text-decoration:none;color:inherit;/* height:1.3em; */}
     #nav a.open{background:var(--text);color:var(--background);cursor:default;}
     .loading{animation:.3s blink steps(1) infinite;}
     #time-blink{animation:2s blink steps(1) infinite;}
@@ -47,10 +47,11 @@
     video{max-width:100%;}
     /* GALLERY */
     .gallery{margin-top:1.5rem;column-gap:var(--spacer);display:grid;grid-template-columns:repeat(auto-fill,minmax(240px, 1fr));align-items:center;justify-items:center;}
-    .gallery>div{max-width:200px;margin:2.5rem 0;position:relative;cursor:zoom-in;}
+    .gallery>div{max-width:220px;margin:2.5rem 0;position:relative;cursor:zoom-in;}
     .gallery>div>div{/* overflow:hidden; */line-height:0;font-size:0;}
-    .gallery>div>div>img{max-height:200px;max-width:100%;/* transition:all .1s; */}
-    .gallery>div>span{/* transition:all .1s; */position:absolute;inset:0;display:flex;text-align:center;justify-content:center;align-items:center;opacity:0;}
+    .gallery>div>div>img{max-height:220px;max-width:100%;/* transition:all .1s; */}
+    .gallery>div>span{transition:all .1s;position:absolute;inset:var(--spacer);text-align:center;display:inline-flex;justify-content:center;align-items:center;/* opacity:0; */}
+    .gallery>div>span>span>span{background:var(--text);color:var(--background);}
     /* LIGHTBOX */
     #lightbox{z-index:999997;cursor:zoom-out;position:fixed;inset:0;display:none;}
     #lightbox img{cursor:pointer;height:auto;max-height:90vh;max-width:90vw;box-sizing:border-box;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);}
@@ -61,10 +62,11 @@
     @keyframes outline{0%{outline:1px solid var(--text);border-radius:100vmax;}100%{outline:1px solid var(--text);outline-offset:5px;border-radius:100vmax;}}
     @media(hover:hover){
         #nav a:hover{background:var(--text);color:var(--background);}
-        a:hover{text-decoration:none;}
+        a:hover{text-decoration:none;background:var(--text);color:var(--background);}
         .video:hover:after{opacity:.4;}
-        .gallery>div:hover>span{opacity:1;}
-        .gallery>div:hover img{opacity:0;}
+        /* .gallery>div:hover>span{opacity:1;} */
+        /* .gallery>div:hover img{opacity:.9;} */
+        .gallery>div:not(:hover)>span{transform:translateY(3px);opacity:0;}
         @keyframes blink{0%{opacity:1;}50%{opacity:0;}}
     }
     /* #header,p,.video:after,.gallery>div>span{mix-blend-mode:difference;color:#fff;} */
@@ -249,7 +251,7 @@ $(document).ready(function(){
     // gallery
     $(".gallery img").each(function(){
         var ratio = $(this).prop("naturalWidth") / $(this).prop("naturalWidth");
-        $(this).wrap("<div><div></div></div>").parent().after("<span><span>" + $(this).attr("alt") + "</span></span>"); // style='width:" + (160/$(this).prop("naturalHeight")*$(this).prop("naturalWidth")) + "px;'
+        $(this).wrap("<div><div></div></div>").parent().after("<span><span><span>" + $(this).attr("alt") + "</span></span></span>"); // style='width:" + (160/$(this).prop("naturalHeight")*$(this).prop("naturalWidth")) + "px;'
     });
     // lightbox
     $("body").append("<div id='lightbox'><img src='' /></div>");
