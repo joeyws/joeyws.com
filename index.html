@@ -5,7 +5,7 @@
 <meta charset="utf-8"><meta name="robots" content="index,nofollow,notranslate,noimageindex"><meta name="description" content="Welcome to the personal web page of Joey W. Schweickhardt."><meta name="keywords" content="schweickhardt,joey,stuttgart,joeyws,william"><meta name="geo.region" content="DE-BW"><meta name="geo.placename" content="Stuttgart"><meta name="geo.position" content="48.778600;9.179746"><meta name="ICBM" content="48.778600, 9.179746"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes,shrink-to-fit=no"><meta name="format-detection" content="telephone=no">
 <style>
     @font-face{font-family:webfont;src:url("font/Source_Code_Pro/SourceCodePro-Regular.ttf");} /*Jost   Perun   texgyreheros-bold   NimbusSanL-Bol   SourceCodePro-Regular  gnu-free-font/FreeSans   NimbusRomNo9L-Reg   Libre_Franklin/LibreFranklin-Bold*/
-    @font-face{font-family:webfont2;src:url("font/TeX-Gyre-Heros/texgyreheros-bold.otf");} /*Jost   Perun   texgyreheros-bold   NimbusSanL-Bol   SourceCodePro-Regular  gnu-free-font/FreeSans   NimbusRomNo9L-Reg   Libre_Franklin/LibreFranklin-Bold*/
+    @font-face{font-family:webfont2;src:url("font/Inter/Inter-Black.ttf");} /*Jost   Perun   texgyreheros-bold   NimbusSanL-Bol   SourceCodePro-Regular  gnu-free-font/FreeSans   NimbusRomNo9L-Reg   Libre_Franklin/LibreFranklin-Bold*/
     :root{--background:#eee;--text:#000;--spacer:8px;}
     ::-moz-selection{background:var(--text);color:var(--background);}
     ::selection{background:var(--text);color:var(--background);}
@@ -15,9 +15,9 @@
 	html{font-size:13px;}
     html,body{background:var(--background);}
     body{letter-spacing:.01rem;padding:var(--spacer);color:var(--text);font:normal normal 1rem/1.28rem webfont,monospace;}
-    h1{display:inline-block;}
     p,h2,ul{margin-top:.8rem;/* max-width:46rem; */}hr+p,p:first-child{margin-top:0;}p+img,p+video,p+.cycle-slideshow,img+p,video+p,.cycle-slideshow+p{margin-top:var(--spacer);}
-    h2{text-align:center;display:table;margin:0 auto;/* background:#0f0; */font:normal bold 48px/1rem webfont2,sans-serif;transform:scaleY(.75);text-transform:uppercase;}
+    h1{display:inline-block;}
+    h2{text-align:center;display:table;margin:0 auto;/* background:#0f0; */font:normal bold 32px/1em webfont2,sans-serif;transform:scaleY(.8);text-transform:uppercase;}
     p{max-width:800px;}
     ul{list-style-type:none;list-style-position:inside;}
     small{/* opacity:.4; */display:inline-block;width:10rem;}
@@ -50,7 +50,7 @@
     .gallery>div{max-width:220px;margin:2.5rem 0;position:relative;cursor:zoom-in;}
     .gallery>div>div{/* overflow:hidden; */line-height:0;font-size:0;}
     .gallery>div>div>img{max-height:220px;max-width:100%;/* transition:all .1s; */}
-    .gallery>div>span{transition:all .1s;position:absolute;inset:var(--spacer);text-align:center;display:inline-flex;justify-content:center;align-items:center;/* opacity:0; */}
+    .gallery>div>span{transition:all .08s;position:absolute;inset:var(--spacer);text-align:center;display:inline-flex;justify-content:center;align-items:center;opacity:0;}
     .gallery>div>span>span>span{background:var(--text);color:var(--background);}
     /* LIGHTBOX */
     #lightbox{z-index:999997;cursor:zoom-out;position:fixed;inset:0;display:none;}
@@ -64,9 +64,8 @@
         #nav a:hover{background:var(--text);color:var(--background);}
         a:hover{text-decoration:none;background:var(--text);color:var(--background);}
         .video:hover:after{opacity:.4;}
-        /* .gallery>div:hover>span{opacity:1;} */
-        /* .gallery>div:hover img{opacity:.9;} */
-        .gallery>div:not(:hover)>span{transform:translateY(3px);opacity:0;}
+        .gallery>div:hover>span{opacity:1;}
+        .gallery>div:not(:hover)>span{transform:translateY(3px);}
         @keyframes blink{0%{opacity:1;}50%{opacity:0;}}
     }
     /* #header,p,.video:after,.gallery>div>span{mix-blend-mode:difference;color:#fff;} */
