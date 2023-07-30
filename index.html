@@ -6,7 +6,7 @@
 <style>
     @font-face{font-family:webfont;src:url("font/Source_Code_Pro/SourceCodePro-Regular.ttf");} /*Jost   Perun   texgyreheros-bold   NimbusSanL-Bol   SourceCodePro-Regular  gnu-free-font/FreeSans   NimbusRomNo9L-Reg   Libre_Franklin/LibreFranklin-Bold*/
     @font-face{font-family:webfont2;src:url("font/nimbus-sans-l/NimbusSanL-Bol.otf");} /*Jost   Perun   texgyreheros-bold   NimbusSanL-Bol   SourceCodePro-Regular  gnu-free-font/FreeSans   NimbusRomNo9L-Reg   Libre_Franklin/LibreFranklin-Bold*/
-    :root{--background:#eee;--text:#000;--spacer:8px;}
+    :root{--background:#0f0;--text:#000;--spacer:8px;}
     ::-moz-selection{background:var(--text);color:var(--background);}
     ::selection{background:var(--text);color:var(--background);}
     /* ::-webkit-scrollbar{width:8px;height:8px;background:var(--background);}
@@ -14,7 +14,7 @@
     /* RESET */*{user-select:none;font-kerning:normal;-webkit-tap-highlight-color:rgba(0,0,0,0)!important;}*:focus{outline:0 !important;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-appearance:none;border-radius:0;-webkit-border-radius:0;box-sizing:content-box;font-smoothing:antialiased;-moz-osx-font-smoothing: grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased;}
 	html{font-size:13px;}
     html,body{background:var(--background);}
-    body{letter-spacing:.01rem;padding:var(--spacer);color:var(--text);font:normal normal 1rem/1.25rem webfont,monospace;}
+    body{letter-spacing:.01rem;padding:var(--spacer);color:var(--text);font:normal normal 1rem/1.3rem webfont,monospace;}
     p,h2,ul{margin-top:.8rem;/* max-width:46rem; */}hr+p,p:first-child{margin-top:0;}p+img,p+video,p+.cycle-slideshow,img+p,video+p,.cycle-slideshow+p{margin-top:var(--spacer);}
     h1{display:inline-block;}
     h1,h2{font:normal bold 18px/1em webfont2,sans-serif;transform:scaleY(.8);text-transform:uppercase;}
@@ -23,15 +23,15 @@
     ul{list-style-type:none;list-style-position:inside;}
     small{/* opacity:.4; */display:inline-block;width:10rem;}
     i{font-style:italic;}
-    a{background:#ddd;transition:all .1s;padding:0 .35rem;border-radius:100vmax;text-decoration:none;/* text-decoration-skip:none;text-decoration-thickness:.06rem; */white-space:nowrap;}
+    a{text-decoration:none;background:rgba(0,0,0,.1);transition:all .1s;padding:0 .35rem;border-radius:100vmax;/* text-decoration-skip:none;text-decoration-thickness:.06rem; */white-space:nowrap;}
     /* a[href^=http]::after{content:"\2197";font-size:1.3rem;margin-left:.15em;font-style:normal;display:inline-block;} */
     /* LAYOUT */
     #header{display:flex;/* justify-content:flex-start; */justify-content:space-between;align-content:baseline;flex-wrap:wrap;column-gap:1.6rem;}
     #header>*{white-space:nowrap;}
-    @media only screen and (min-width:640px) {#header{position:sticky;top:var(--spacer);z-index:9999;}}
+    @media only screen and (min-width:640px) {h1{position:sticky;top:var(--spacer);z-index:9999;}}
     #nav{display:inline-block;}
-    #nav a{display:inline-block;text-decoration:none;}
-    #nav a.open{cursor:default;background:var(--text);color:var(--background);/* text-decoration:underline;text-decoration-thickness:.1em; */}
+    #nav a{display:inline-block;/* text-decoration:none; */}
+    #nav a.open{cursor:default;background:var(--text);color:var(--background);text-decoration:none;/* text-decoration:underline;text-decoration-thickness:.1em; */}
     .loading{animation:.3s blink steps(1) infinite;}
     #time-blink{animation:2s blink steps(1) infinite;}
     @keyframes blink{0%{opacity:0;}50%{opacity:1;}}
@@ -52,7 +52,7 @@
     .gallery>div{width:220px;margin:3rem 0;position:relative;text-align:center;}
     .gallery>div>div{display:inline-flex;justify-content:center;align-items:center;line-height:0;font-size:0;}
     .gallery>div>div>img{max-height:220px;max-width:100%;margin:0 auto;cursor:zoom-in;}
-    .gallery>div>span{position:absolute;left:0;right:0;padding-top:var(--spacer);display:block;transition:all .15s;/* opacity:0; */text-align:center;}
+    .gallery>div>span{position:absolute;left:0;right:0;padding-top:var(--spacer);display:block;transition:all .15s;text-align:center;pointer-events:none;}
     .gallery>div>span>span{margin:var(--spacer);}
     /* LIGHTBOX */
     #lightbox{z-index:999997;cursor:zoom-out;position:fixed;inset:0;display:none;}
@@ -63,12 +63,13 @@
     /* :HOVER */
     @keyframes outline{0%{outline:1px solid var(--text);border-radius:100vmax;}100%{outline:1px solid var(--text);outline-offset:5px;border-radius:100vmax;}}
     @media(hover:hover){
-        a:hover{box-shadow:inset 0 -1.25rem var(--text);color:var(--background);text-decoration:none;}
+        a:hover{text-decoration:none;box-shadow:inset 0 -1.3rem var(--text);color:var(--background);}
         .video:hover:after{opacity:.4;}
+        .gallery>div:not(:hover){color:transparent;}
         /* .gallery>div:hover>div>img{opacity:.8;} */
         /* .gallery>div>div{opacity:0;} */
         /* .gallery>div:not(:hover)>span>span{transform:translateY(5px);} */
-        .gallery>div:has(div>img:not(:hover))>span{opacity:0;}
+        /* .gallery>div:has(div>img:not(:hover))>span{opacity:0;} */
         @keyframes blink{0%{opacity:1;}50%{opacity:0;}}
     }
     /* #header,p,.video:after,.gallery>div>span{mix-blend-mode:difference;color:#fff;} */
