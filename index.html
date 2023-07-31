@@ -38,12 +38,12 @@
     #content>*{min-height:100vh;}
     #content>*:not(.show){display:none;}
     /* MARQUEE */
-    .marquee3k{color:#0f0;/* background:var(--text);color:var(--background);margin:calc(var(--spacer) * -1);margin-bottom:var(--spacer); */margin:0 calc(var(--spacer) * -1);margin-bottom:var(--spacer);/* width:200px;flex-grow:1; */white-space:nowrap;overflow:hidden;}
+    .marquee3k{background:var(--text);color:var(--background);margin:calc(var(--spacer) * -1);margin-bottom:var(--spacer);/* margin:0 calc(var(--spacer) * -1);margin-bottom:var(--spacer); *//* width:200px;flex-grow:1; */white-space:nowrap;overflow:hidden;}
     .marquee3k .marquee span{margin-right:1.8rem;}
     /* VIDEO */
     .video{cursor:pointer;overflow:hidden;position:relative;max-width:800px;font-size:0;line-height:0;}
     .video.playing{cursor:pointer;}
-    .video:after{border:.5rem solid transparent;border-left:1.2rem solid var(--text);border-right-width:0;width:0;height:0;display:inline-block;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);content:"";pointer-events:none;}
+    .video:after{border:.45rem solid transparent;border-left:1.2rem solid var(--text);border-right-width:0;width:0;height:0;display:inline-block;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);content:"";pointer-events:none;}
     .video.playing:after{display:none;}
     video{max-width:100%;}
     /* GALLERY */
@@ -65,10 +65,8 @@
         a:hover{/* text-decoration:none;font-style:italic; */box-shadow:inset 0 -1.3rem var(--text);color:var(--background);}
         .video:hover:after{opacity:.4;}
         /* .gallery>div:not(:hover){color:transparent;} */
-        /* .gallery>div:hover>div>img{opacity:.8;} */
-        /* .gallery>div>div{opacity:0;} */
         /* .gallery>div:not(:hover)>span>span{transform:translateY(5px);} */
-        .gallery>div:has(div>img:not(:hover))>span{opacity:0;}
+        /* .gallery>div:has(div>img:not(:hover))>span{opacity:0;} */
         @keyframes blink{0%{opacity:1;}50%{opacity:0;}}
     }
     /* #header,p,.video:after,.gallery>div>span{mix-blend-mode:difference;color:#fff;} */
