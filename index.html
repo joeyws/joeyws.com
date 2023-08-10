@@ -51,10 +51,11 @@
     /* GALLERY */
     .gallery{margin-top:1.5rem;column-gap:var(--spacer);display:grid;grid-template-columns:repeat(auto-fill,minmax(240px, 1fr));align-items:center;justify-items:center;}
     .gallery>div{width:220px;margin:3rem 0;position:relative;text-align:center;}
-    .gallery>div>div{display:inline-flex;justify-content:center;align-items:center;line-height:0;font-size:0;}
-    .gallery>div>div>img{max-height:220px;max-width:100%;margin:0 auto;cursor:zoom-in;}
+    .gallery>div>div{outline:3px solid var(--background);transition:all .2s;display:inline-flex;justify-content:center;align-items:center;line-height:0;font-size:0;}
+    .gallery>div>div:hover{outline-offset:-3px;}
+    .gallery>div>div>img{transition:all .1s;max-height:220px;max-width:100%;margin:0 auto;cursor:zoom-in;}
     .gallery>div>span{position:absolute;left:0;right:0;padding-top:var(--spacer);display:block;transition:all .15s;text-align:center;pointer-events:none;}
-    .gallery>div>span>span{margin:var(--spacer);}
+    .gallery>div>span>span{margin:calc(var(--spacer) - 3px);}
     /* LIGHTBOX */
     #lightbox{z-index:999997;cursor:zoom-out;position:fixed;inset:0;display:none;}
     #lightbox img{cursor:pointer;height:auto;max-height:90vh;max-width:90vw;box-sizing:border-box;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);}
@@ -64,7 +65,7 @@
     /* :HOVER */
     @keyframes outline{0%{outline:1px solid var(--text);border-radius:100vmax;}100%{outline:1px solid var(--text);outline-offset:5px;border-radius:100vmax;}}
     @media(hover:hover){
-        .gallery>div>div:not(:hover)+span{color:transparent;}
+        .gallery>div>div:not(:hover)+span{color:transparent;transform:translateY(5px);}
         /* .gallery>div:not(:hover){color:transparent;} */
         /* .gallery>div:not(:hover)>span>span{transform:translateY(5px);} */
         /* .gallery>div:has(div>img:not(:hover))>span{opacity:0;} */
@@ -106,7 +107,7 @@
                 <source src="https://www.dropbox.com/s/mmcykw5nus3m39u/LandDerEchsen1080.ogv?raw=1" type='video/ogg; codecs="theora, vorbis"' />
             </video>
         </div>
-        <p>&uarr; Land der Echsen (Germany, 2021). The city council is planning a new quarter on a run-down railroad station site. There are various non-profit institutions housing in old loading halls, which are now forced to move out for the demolition generating room for several new buildings. Suddenly lizards enter the game and endanger the entire undertaking. Created as part of the <i>Anti-Stuttgart &mdash; A Determinate Negation</i> <a href="https://www.igma.uni-stuttgart.de/en/institute/">IGmA</a> design studio, in which certain urban developments and procedures were examined critically. The film was being shown at the University of Stuttgart department of architecture&#8217;s <a href="https://www.k1.live/">graduates exhibition</a> and at the <a href="https://www.current-stuttgart.de/">CURRENT festival</a> for art and urban space.</p>
+        <p>&uarr; Land der Echsen (Germany, 2021). The council is planning a new quarter on a run-down railroad station site. There are various non-profit institutions housing in old loading halls, which are now forced to move out for the demolition generating room for several new buildings. Suddenly lizards enter the game and endanger the entire undertaking. Created as part of the <i>Anti-Stuttgart &mdash; A Determinate Negation</i> <a href="https://www.igma.uni-stuttgart.de/en/institute/">IGmA</a> design studio, in which certain urban developments and procedures were examined critically. The film was being shown at the University of Stuttgart department of architecture&#8217;s <a href="https://www.k1.live/">graduates exhibition</a> and at the <a href="https://www.current-stuttgart.de/">CURRENT festival</a> for art and urban space.</p>
         <hr>
         <h2>Works</h2>
         <div class="gallery">
