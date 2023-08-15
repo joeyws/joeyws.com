@@ -82,7 +82,7 @@
             <a href="#/index">Index</a>
             <a href="#/about">About</a>
         </div>
-        Basel<span id="time"></span><span id="weather"></span>
+        Basel (<span id="time"></span><span id="weather"></span>)
     </div>
     <!-- <div> -->
         <!--<svg viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"><path d="M192 0C85.97 0 0 85.97 0 192c0 77.41 26.97 99.03 172.3 309.7c9.531 13.77 29.91 13.77 39.44 0C357 291 384 269.4 384 192C384 85.97 298 0 192 0zM192 271.1c-44.13 0-80-35.88-80-80S147.9 111.1 192 111.1s80 35.88 80 80S236.1 271.1 192 271.1z"/></svg>-->
@@ -314,13 +314,13 @@ $(document).ready(function(){
         var h = today.getHours();
         h = (temp+h);
         ampm = h >= 12 ? "pm" : "am";
-        h = h % 12;
+        // h = h % 12;
         h = h ? h : 12;
         var m = today.getMinutes();
         var s = today.getSeconds();
         m = addZero(m);
         s = addZero(s);
-        $("#time").html(", " + h + "<span id='time-blink'>:</span>" + m + " " + ampm);
+        $("#time").html("" + h + "<span id='time-blink'>:</span>" + m /* + " " + ampm */);
         t = setTimeout(function(){startTime()},2000);
     }
     startTime();
@@ -345,12 +345,12 @@ $(document).ready(function(){
             var word = $(item).find("title").html().split(" ").slice(4).join(" ").split(" ").slice(0, -2).join(" ").slice(0, -1).toLowerCase(); // not available, heavy rain, light rain, light cloud, mist, clear sky, sunny
             //if (word=="not available") {word = "";} else {word = " " + word;}
             word = "not available" ? "" : " "+word;
-            $("#weather").html(", " + temperature + " " + word);
+            $("#weather").html(", " + temperature);
         }
     }
     function loadWeather() {getXMLFeed("https://weather-broker-cdn.api.bbci.co.uk/en/observation/rss/2661604", getWeather);} // Stuttgart:2825297 Basel:2661604
     loadWeather();
-    setTimeout(function(){loadWeather();},60000);
+    setTimeout(function(){loadWeather();},10000);
     
     // impressum
     var address1 = 'S'+'i'+'g'+'n'+'a'+'l'+'s'+'t'+'r'+'.'+' '+'3'+'5'+'a'; // 'K'+'o'+'l'+'p'+'i'+'n'+'g'+'s'+'t'+'r'+'.'+' '+'5'+'6';
