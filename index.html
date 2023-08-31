@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en" translate="no"><head>
 <title>Joey W. Schweickhardt</title>
@@ -7,7 +6,7 @@
 <style>
     @font-face{font-family:webfont;src:url("font/Source_Code_Pro/SourceCodePro-Regular.ttf");} /*Jost   Perun   texgyreheros-bold   NimbusSanL-Bol   SourceCodePro-Regular  gnu-free-font/FreeSans   NimbusRomNo9L-Reg   Libre_Franklin/LibreFranklin-Bold*/
     @font-face{font-family:webfont2;src:url("font/nimbus-sans-l/NimbusSanL-Bol.otf");} /*Jost   Perun   texgyreheros-bold   NimbusSanL-Bol   SourceCodePro-Regular  gnu-free-font/FreeSans   NimbusRomNo9L-Reg   Libre_Franklin/LibreFranklin-Bold*/
-    :root{--background:#000;--text:#bbb;--spacer:8px;}
+    :root{--background:#eee;--text:#111;--spacer:8px;}
     ::-moz-selection{background:var(--text);color:var(--background);}
     ::selection{background:var(--text);color:var(--background);}
     /* ::-webkit-scrollbar{width:8px;height:8px;background:var(--background);}
@@ -23,7 +22,7 @@
     ul{list-style-type:none;list-style-position:inside;}
     small{/* opacity:.4; */display:inline-block;width:10rem;}
     i{font-style:italic;}
-    a{text-decoration:none;padding:0 .38rem;border-radius:100vmax;transition:all .1s;background:#333;/* color:var(--background); *//* outline:1px solid #bbb6;outline-offset:-1px; *//* box-shadow:inset 0 -1px var(--text); *//* text-decoration-skip:none;text-decoration-thickness:.06rem; */white-space:nowrap;}
+    a{text-decoration:none;padding:0 .38rem;border-radius:100vmax;transition:all .1s;background:#ddd;/* color:var(--background); *//* outline:1px solid #bbb6;outline-offset:-1px; *//* box-shadow:inset 0 -1px var(--text); *//* text-decoration-skip:none;text-decoration-thickness:.06rem; */white-space:nowrap;}
     a:hover,#nav a.open{text-decoration:none;/* font-style:italic; */box-shadow:inset 0 -1.3rem var(--text);color:var(--background);}
     a[href^=http]::after{content:"\2197";margin-left:.15em;font-style:normal;font-size:1.3rem;display:inline-block;}
     /* LAYOUT */
@@ -36,7 +35,7 @@
     .loading{animation:.3s blink steps(1) infinite;}
     #time-blink{animation:2s blink steps(1) infinite;}
     @keyframes blink{0%{opacity:0;}50%{opacity:1;}}
-    hr{margin-top:5rem;}
+    hr{margin-top:5rem;/* border-top:1px solid #ddd; */}
     #content>*{min-height:100vh;}
     #content>*:not(.show){display:none;}
     /* MARQUEE */
@@ -58,7 +57,7 @@
     .gallery>div>span>span{margin:calc(var(--spacer) - 3px);}
     /* LIGHTBOX */
     #lightbox{z-index:999997;cursor:zoom-out;position:fixed;inset:0;display:none;}
-    #lightbox img{cursor:pointer;height:auto;max-height:90vh;max-width:90vw;box-sizing:border-box;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);}
+    #lightbox img{cursor:pointer;height:auto;max-height:90vh;max-width:calc(100vw - 2*var(--spacer));box-sizing:border-box;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);}
     /* SVG */
     svg{fill:var(--text);vertical-align:-10%;height:.85rem;width:.85rem;}
     /* a:has(svg) */a.svg{background:transparent !important;outline:none !important;padding:0;box-shadow:none !important;}
@@ -68,7 +67,7 @@
         .gallery>div>div:not(:hover)+span{color:transparent;}
         @keyframes blink{0%{opacity:1;}50%{opacity:0;}}
     }
-    *{cursor:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" x="0px" y="0px" viewBox="0 0 12 12" style="fill:%23bbb;"><circle cx="6" cy="6" r="6"/></svg>') 6 6, auto !important;}
+    *{cursor:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" x="0px" y="0px" viewBox="0 0 12 12" style="fill:%23000;"><circle cx="6" cy="6" r="6"/></svg>') 6 6, auto !important;}
 </style>
 </head>
 <body>
@@ -170,7 +169,7 @@
         <hr>
         <h2>Exhibitions, Awards</h2>
         <ul>
-            <li><small data-title="">2023</small> Deutschlandstipendium scholarship</li>
+            <li><small data-title="01.04.2023-">2023 &mdash; Present</small> Deutschlandstipendium scholarship</li>
             <li><small data-title="01.03.2023-29.02.2024">2023 &mdash; Present</small> Swiss-European Mobility Programme</li>
             <li><small data-title="24.06.2022-04.07.2022">2022</small> Graduate Design Projects Selection, Department of Architecture, University of Stuttgart</li>
             <li><small data-title="16.09.2021-17.09.2021">2021</small> CURRENT Festival for Art and Urban Space</li>
@@ -210,7 +209,6 @@
         <p class="privacy">Source: Weiß & Partner, Esslingen</p>
     </div>
 </div>
-<hr>
 
 
 
