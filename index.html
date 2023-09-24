@@ -19,13 +19,16 @@
     h1{display:inline-block;}
     h2{text-align:center;display:table;margin:0 auto;}
     ul{list-style-type:none;list-style-position:inside;}
+    table,tr,td{vertical-align:top;}
+    td:first-child{white-space:nowrap;opacity:.4;}
+    td:not(:last-child){padding-right:var(--spacer);}
     small{/* opacity:.4; */display:inline-block;width:10rem;}
     i{font-style:italic;}
     a{text-decoration:underline;color:#00f;text-underline-offset:2px;/* padding:0 .38rem;border-radius:100vmax;transition:all .1s;background:#333;color:var(--background);box-shadow:inset 0 -1px var(--text); *//* text-decoration-skip:none;text-decoration-thickness:.06rem; */white-space:nowrap;}
     a:hover{text-decoration:none;}
     /* a[href^=http]::after{content:"\2197";margin-left:.2em;font-style:normal;font-size:1.3rem;display:inline-block;} */
     /* LAYOUT */
-    #header{display:flex;justify-content:flex-start;column-gap:.7rem;align-content:flex-start;flex-wrap:wrap;}
+    #header{display:flex;justify-content:flex-start;column-gap:var(--spacer);align-content:flex-start;flex-wrap:wrap;}
     #header>*{white-space:nowrap;}
     #nav{display:inline-block;}
     #nav a{display:inline-block;}
@@ -75,7 +78,7 @@
 <div id="header">
     <h1 class="loading">Joey W. Schweickhardt</h1>
     <div id="nav">
-        <a href="#/index">Index</a>,
+        <a href="#/index">Index</a>
         <a href="#/about">About</a>
     </div>
     <div>Basel (<span id="time"></span><span id="weather"></span>)</div>
@@ -147,29 +150,30 @@
     </div>
     <div id="about">
         <!-- <h2>Experience</h2>
-        <ul>
-            <li><small>2023 &mdash; Present</small> Herzog & de Meuron</li>
-            <li><small>2022</small> Behnisch Architekten</li>
-            <li><small>2021 &mdash; 2022</small> REM Assets</li>
-            <li><small>2020 &mdash; 2021</small> Werner Sobek</li>
-        </ul>
+        <table>
+            <tr><td data-title="01.03.2023-">2023 &mdash; Present</td><td>Herzog & de Meuron</td></tr>
+            <tr><td data-title="14.03.2023-09.09.2023">2022 &mdash; 2022</td><td>Behnisch Architekten</td></tr>
+            <tr><td data-title="25.10.2022-28.02.2023">2021 &mdash; 2022</td><td>REM Assets</td></tr>
+            <tr><td data-title="01.10.2021-30.09.2022">2020 &mdash; 2021</td><td>Werner Sobek</td></tr>
+        </table>
         <hr>
         <h2>Education</h2>
-        <ul>
-            <li><small>2021 &mdash; Present</small> Master studies, University of Stuttgart</li>
-            <li><small>2022 &mdash; 2023</small> Study abroad, Erasmus+ schoolarship, Politecnico di Milano</li>
-            <li><small>2022</small> Summer School, Architectural Association, State Academy of Fine Arts Stuttgart</li>
-            <li><small>2018 &mdash; 2021</small> Bachelor of Science, University of Stuttgart</li>
-        </ul>
+        <table>
+            <tr><td data-title="01.10.2021-">2021 &mdash; Present</td><td>University of Stuttgart, Master studies</td></tr>
+            <tr><td data-title="05.09.2022-26.01.2023">2022 &mdash; 2023</td><td>Politecnico di Milano, study abroad</td></tr>
+            <tr><td data-title="15.07.2023-22.07.2023">2022</td><td>Architectural Association/State Academy of Fine Arts Stuttgart, Visiting School</td></tr>
+            <tr><td data-title="01.10.2018-30.09.2021">2018 &mdash; 2021</td><td>University of Stuttgart, BSc</td></tr>
+        </table>
         <hr>
-        <h2>Exhibitions, Awards</h2>
-        <ul>
-            <li><small data-title="01.04.2023-">2023 &mdash; Present</small> Deutschlandstipendium scholarship</li>
-            <li><small data-title="01.03.2023-29.02.2024">2023 &mdash; Present</small> Swiss-European Mobility Programme</li>
-            <li><small data-title="24.06.2022-04.07.2022">2022</small> Graduate Design Projects Selection, Department of Architecture, University of Stuttgart</li>
-            <li><small data-title="16.09.2021-17.09.2021">2021</small> CURRENT Festival for Art and Urban Space</li>
-            <li><small data-title="13.01.2020-25.01.2020">2020</small> Annual IRGE Design Projects Selection, IRGE, University of Stuttgart</li>
-        </ul>
+        <h2>Exhibitions and Schoolarships</h2>
+        <table>
+            <tr><td data-title="01.04.2023-">2023 &mdash; Present</td><td>Deutschlandstipendium</td></tr>
+            <tr><td data-title="01.03.2023-29.02.2024">2023 &mdash; Present</td><td>Swiss-European Mobility Programme</td></tr>
+            <tr><td data-title="05.09.2022-26.01.2023,01.03.2023-02.10.2023">2022 &mdash; 2023</td><td>Erasmus+ schoolarships</td></tr>
+            <tr><td data-title="24.06.2022-04.07.2022">2022</td><td>Graduate Design Projects Selection (Department of Architecture, University of Stuttgart)</td></tr>
+            <tr><td data-title="16.09.2021-17.09.2021">2021</td><td>CURRENT Festival for Art and Urban Space</td></tr>
+            <tr><td data-title="13.01.2020-25.01.2020">2020</td><td>Annual Design Projects Selection  (IRGE, University of Stuttgart)</td></tr>
+        </table>
         <hr> -->
         <p>
             Joey W. Schweickhardt<br>
