@@ -14,38 +14,36 @@
     /* RESET */*{user-select:none;font-kerning:normal;outline:none;-webkit-tap-highlight-color:rgba(0,0,0,0)!important;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-appearance:none;border-radius:0;-webkit-border-radius:0;box-sizing:content-box;font-smoothing:antialiased;-moz-osx-font-smoothing: grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased;}
 	html{font-size:13px;}
     html,body{background:var(--background);}
-    body{letter-spacing:.0rem;padding:var(--spacer);color:var(--text);font:normal normal 1rem/1.3rem webfont,monospace;}
+    body{/* letter-spacing:.0rem; */padding:var(--spacer);color:var(--text);font:normal normal 1rem/1.3rem webfont,monospace;}
     p,h2,ul{margin-top:.8rem;}hr+p,p:first-child{margin-top:0;}p+img,p+video,p+.cycle-slideshow,img+p,video+p,.cycle-slideshow+p{margin-top:var(--spacer);}
     h1{display:inline-block;}
-    /* h1,h2{font:normal bold 18px/1em webfont2,sans-serif;transform:scaleY(.8);text-transform:uppercase;} */
     h2{text-align:center;display:table;margin:0 auto;}
     ul{list-style-type:none;list-style-position:inside;}
     small{/* opacity:.4; */display:inline-block;width:10rem;}
     i{font-style:italic;}
-    a{text-decoration:underline;color:#00f;text-underline-offset:2px;/* padding:0 .38rem;border-radius:100vmax; *//* transition:all .1s; *//* background:#333; *//* color:var(--background); *//* box-shadow:inset 0 -1px var(--text); *//* text-decoration-skip:none;text-decoration-thickness:.06rem; */white-space:nowrap;}
-    a:hover{text-decoration:none;/* box-shadow:inset 0 -1.3rem var(--text); *//* color:var(--background); */}
+    a{text-decoration:underline;color:#00f;text-underline-offset:2px;/* padding:0 .38rem;border-radius:100vmax;transition:all .1s;background:#333;color:var(--background);box-shadow:inset 0 -1px var(--text); *//* text-decoration-skip:none;text-decoration-thickness:.06rem; */white-space:nowrap;}
+    a:hover{text-decoration:none;}
     /* a[href^=http]::after{content:"\2197";margin-left:.2em;font-style:normal;font-size:1.3rem;display:inline-block;} */
     /* LAYOUT */
     #header{display:flex;justify-content:flex-start;column-gap:.7rem;align-content:flex-start;flex-wrap:wrap;}
     #header>*{white-space:nowrap;}
-    /* @media only screen and (min-width:640px) {#header{position:sticky;top:var(--spacer);z-index:9999;}} */
     #nav{display:inline-block;}
-    #nav a{display:inline-block;/* padding:0 .38rem;border-radius:100vmax;text-decoration:none;border:1px solid var(--text); */}
-    #nav a.open{cursor:default;text-decoration:none;background:var(--text);color:var(--background);}
+    #nav a{display:inline-block;}
+    #nav a.open{cursor:default;text-decoration:none;background:#fff6aa;color:var(--text);}
     .loading{animation:.3s blink steps(1) infinite;}
     #time-blink{animation:2s blink steps(1) infinite;}
     @keyframes blink{0%{opacity:0;}50%{opacity:1;}}
-    hr{margin-top:5rem;/* border-top:1px solid #ddd; */}
+    hr{margin-top:5rem;}
     #content>*{min-height:100vh;}
     #content>*:not(.show){display:none;}
     /* MARQUEE */
-    .marquee3k{background:var(--text);color:var(--background);margin:calc(var(--spacer) * -1);margin-bottom:var(--spacer);/* margin:0 calc(var(--spacer) * -1);margin-bottom:var(--spacer); *//* width:200px;flex-grow:1; */white-space:nowrap;overflow:hidden;}
+    .marquee3k{background:var(--text);color:var(--background);margin:calc(var(--spacer) * -1);margin-bottom:var(--spacer);/* margin:0 calc(var(--spacer) * -1);margin-bottom:var(--spacer);width:200px;flex-grow:1; */white-space:nowrap;overflow:hidden;}
     .marquee3k .marquee span{margin-right:1.8rem;}
     /* VIDEO */
     .video{cursor:pointer;overflow:hidden;position:relative;max-width:800px;font-size:0;line-height:0;}
     .video.playing{cursor:pointer;}
     .video:after{border:.45rem solid transparent;border-left:1.2rem solid var(--text);border-right-width:0;width:0;height:0;display:inline-block;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);content:"";pointer-events:none;}
-    .video:hover:after{opacity:.4;}
+    .video:hover:after{opacity:.3;}
     .video.playing:after{display:none;}
     video{max-width:100%;}
     /* GALLERY */
@@ -60,7 +58,7 @@
     #lightbox img{cursor:pointer;height:auto;max-height:90vh;max-width:calc(100vw - 2*var(--spacer));box-sizing:border-box;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);}
     /* SVG */
     svg{fill:var(--text);vertical-align:-10%;height:.85rem;width:.85rem;}
-    /* a:has(svg) */a.svg{background:transparent !important;outline:none !important;padding:0;box-shadow:none !important;}
+    a.svg{background:transparent !important;outline:none !important;padding:0;box-shadow:none !important;}
     /* :HOVER */
     @keyframes outline{0%{outline:1px solid var(--text);}100%{outline:1px solid transparent;outline-offset:5px;}}
     @media(hover:hover){
@@ -77,16 +75,16 @@
 <div id="header">
     <h1 class="loading">Joey W. Schweickhardt</h1>
     <div id="nav">
-        <a href="#/index">Index</a>
+        <a href="#/index">Index</a>,
         <a href="#/about">About</a>
     </div>
     <div>Basel (<span id="time"></span><span id="weather"></span>)</div>
-    <!-- <div> -->
-        <!--<svg viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"><path d="M192 0C85.97 0 0 85.97 0 192c0 77.41 26.97 99.03 172.3 309.7c9.531 13.77 29.91 13.77 39.44 0C357 291 384 269.4 384 192C384 85.97 298 0 192 0zM192 271.1c-44.13 0-80-35.88-80-80S147.9 111.1 192 111.1s80 35.88 80 80S236.1 271.1 192 271.1z"/></svg>-->
-        <!--<svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M0 0l20 8-8 4-2 8z"/></svg>-->
-        <!-- Basel<span id="time"></span><span id="weather"></span> -->
-        <!-- <div>Stuttgart<span id="time"></span><span id="weather"></span></div> -->
-    <!-- </div> -->
+    <!-- <div>
+        <svg viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"><path d="M192 0C85.97 0 0 85.97 0 192c0 77.41 26.97 99.03 172.3 309.7c9.531 13.77 29.91 13.77 39.44 0C357 291 384 269.4 384 192C384 85.97 298 0 192 0zM192 271.1c-44.13 0-80-35.88-80-80S147.9 111.1 192 111.1s80 35.88 80 80S236.1 271.1 192 271.1z"/></svg>
+        <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M0 0l20 8-8 4-2 8z"/></svg>
+        Basel<span id="time"></span><span id="weather"></span>
+        <div>Stuttgart<span id="time"></span><span id="weather"></span></div>
+    </div> -->
 </div>
 <hr>
 <div id="content">
