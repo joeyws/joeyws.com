@@ -6,7 +6,7 @@
 <style>
     @font-face{font-family:webfont;src:url("font/Source_Code_Pro/SourceCodePro-Regular.ttf");} /*Jost   Perun   texgyreheros-bold   NimbusSanL-Bol   SourceCodePro-Regular  gnu-free-font/FreeSans   NimbusRomNo9L-Reg   Libre_Franklin/LibreFranklin-Bold*/
     @font-face{font-family:webfont2;src:url("font/Inter/Inter-Medium.ttf");} /*Jost   Perun   texgyreheros-bold   NimbusSanL-Bol   SourceCodePro-Regular  gnu-free-font/FreeSans   NimbusRomNo9L-Reg   Libre_Franklin/LibreFranklin-Bold*/
-    :root{--background:#fff;--text:#000;--spacer:8px;}
+    :root{--background:#000;--text:#ccc;--spacer:8px;}
     ::-moz-selection{background:var(--text);color:var(--background);}
     ::selection{background:var(--text);color:var(--background);}
     /* ::-webkit-scrollbar{width:8px;height:8px;background:var(--background);}
@@ -24,15 +24,15 @@
     td:not(:last-child){padding-right:var(--spacer);}
     small{/* opacity:.4; */display:inline-block;width:10rem;}
     i{font-style:italic;}
-    a{text-decoration:underline;color:#00f;text-underline-offset:2px;/* padding:0 .38rem;border-radius:100vmax;transition:all .1s;background:#333;color:var(--background);box-shadow:inset 0 -1px var(--text); *//* text-decoration-skip:none;text-decoration-thickness:.06rem; */white-space:nowrap;}
-    a:hover{text-decoration:none;}
+    a{text-decoration:underline;text-underline-offset:2px;/* padding:0 .38rem;border-radius:100vmax;transition:all .1s;background:#333;color:var(--background);box-shadow:inset 0 -1px var(--text); *//* text-decoration-skip:none;text-decoration-thickness:.06rem; */white-space:nowrap;}
+    a:hover{text-decoration:none;background:var(--text);color:var(--background);}
     /* a[href^=http]::after{content:"\2197";margin-left:.2em;font-style:normal;font-size:1.3rem;display:inline-block;} */
     /* LAYOUT */
     #header{display:flex;justify-content:flex-start;column-gap:var(--spacer);align-content:flex-start;flex-wrap:wrap;}
     #header>*{white-space:nowrap;}
     #nav{display:inline-block;}
     #nav a{display:inline-block;}
-    #nav a.open{cursor:default;text-decoration:none;background:#fff6aa;color:var(--text);}
+    #nav a.open{cursor:default;text-decoration:none;background:var(--text);color:var(--background);}
     .loading{animation:.3s blink steps(1) infinite;}
     #time-blink{animation:2s blink steps(1) infinite;}
     @keyframes blink{0%{opacity:0;}50%{opacity:1;}}
@@ -68,7 +68,7 @@
         .gallery>div>div:not(:hover)+span{color:transparent;}
         @keyframes blink{0%{opacity:1;}50%{opacity:0;}}
     }
-    *{cursor:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" x="0px" y="0px" viewBox="0 0 14 14" style="fill:%23000;"><circle cx="7" cy="7" r="6" stroke="%23000" stroke-width="0"/></svg>') 7 7, auto !important;}
+    /* *{cursor:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" x="0px" y="0px" viewBox="0 0 14 14" style="fill:%23000;"><circle cx="7" cy="7" r="6" stroke="%23000" stroke-width="0"/></svg>') 7 7, auto !important;} */
 </style>
 </head>
 <body>
