@@ -45,13 +45,13 @@
     /* VIDEO */
     .video{cursor:pointer;overflow:hidden;position:relative;max-width:800px;font-size:0;line-height:0;}
     .video.playing{cursor:pointer;}
-    .video:after{border:.45rem solid transparent;border-left:1.2rem solid var(--text);border-right-width:0;width:0;height:0;display:inline-block;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);content:"";pointer-events:none;}
+    .video:after{border:.4rem solid transparent;border-left:1.2rem solid var(--text);border-right-width:0;width:0;height:0;display:inline-block;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);content:"";pointer-events:none;}
     .video:hover:after{opacity:.3;}
     .video.playing:after{display:none;}
     video{max-width:100%;}
     /* GALLERY */
     .gallery{gap:var(--spacer);display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));}
-    .gallery>div{;/* width:calc(100%);position:relative;margin-bottom:var(--spacer);break-inside:avoid; */}
+    .gallery>div{/* width:calc(100%);position:relative;margin-bottom:var(--spacer);break-inside:avoid; */}
     .gallery img{max-width:100%;}
     /* .gallery>div>div:not(:hover)+span{color:transparent;} */
     /* LIGHTBOX */
