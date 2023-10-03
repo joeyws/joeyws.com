@@ -17,14 +17,14 @@
     body{letter-spacing:.01rem;padding:var(--spacer);color:var(--text);font:normal normal 1rem/1.3rem webfont,monospace;}
     p,h2,ul{margin-top:.7rem;}hr+p,p:first-child{margin-top:0;}p+img,p+video,p+.cycle-slideshow,img+p,video+p,.cycle-slideshow+p{margin-top:var(--spacer);}
     h1{display:inline-block;}
-    h2{margin-bottom:1em;/* text-align:center;display:table;margin:0 auto; */}
+    h2{/* text-align:center;display:table;margin:0 auto; */margin-bottom:1rem;}
     ul{list-style-type:none;list-style-position:inside;}
     table,tr,td{vertical-align:top;}
     td:first-child{white-space:nowrap;opacity:.4;}
     td:not(:last-child){padding-right:var(--spacer);}
-    small{/* opacity:.4; */display:inline-block;width:10rem;}
+    small{font-size:11px;}
     i{font-style:italic;}
-    a{text-decoration:underline;text-underline-offset:.15rem;text-decoration-thickness:.08rem;/* padding:0 .38rem;border-radius:100vmax;transition:all .1s;background:#333;color:var(--background);box-shadow:inset 0 -1px var(--text); */white-space:nowrap;}
+    a{text-decoration:underline;text-underline-offset:.15em;text-decoration-thickness:.08em;/* padding:0 .38rem;border-radius:100vmax;transition:all .1s;background:#333;color:var(--background);box-shadow:inset 0 -1px var(--text); */white-space:nowrap;}
     a:hover{text-decoration:none;}
     /* a[href^=http]::after{content:"\2197";margin-left:.2em;font-style:normal;font-size:1.3rem;display:inline-block;} */
     /* LAYOUT */
@@ -43,14 +43,14 @@
     .marquee3k{/* background:var(--text);color:var(--background); */margin:0 calc(var(--spacer) * -1);/* margin-bottom:var(--spacer); *//* margin:0 calc(var(--spacer) * -1);margin-bottom:var(--spacer);width:200px;flex-grow:1; */white-space:nowrap;overflow:hidden;}
     .marquee3k .marquee span{margin-right:1.8em;}
     /* VIDEO */
-    .video{cursor:pointer;overflow:hidden;position:relative;max-width:800px;font-size:0;line-height:0;}
+    .video{cursor:pointer;overflow:hidden;position:relative;max-width:960px;font-size:0;line-height:0;}
     .video.playing{cursor:pointer;}
     .video:after{border:.4rem solid transparent;border-left:1.2rem solid var(--text);border-right-width:0;width:0;height:0;display:inline-block;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);content:"";pointer-events:none;}
     .video:hover:after{opacity:.3;}
     .video.playing:after{display:none;}
-    video{max-width:100%;}
+    video{width:100%;}
     /* GALLERY */
-    .gallery{gap:var(--spacer);display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));}
+    .gallery{gap:var(--spacer);display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));}
     .gallery>div{/* width:calc(100%);position:relative;margin-bottom:var(--spacer);break-inside:avoid; */}
     .gallery img{max-width:100%;}
     /* .gallery>div>div:not(:hover)+span{color:transparent;} */
@@ -141,7 +141,7 @@
             <img loading="lazy" src="img/4.jpg" data-date="17/06/2017" alt="Merano" />
             <img loading="lazy" src="img/3.jpg" data-date="11/08/2016" alt="J&ouml;kuls&aacute;rl&oacute;n glacial lake" />
             <img loading="lazy" src="img/2.jpg" data-date="08/08/2016" alt="N&yacute;idalur" />
-            <img loading="lazy" src="img/1.jpg" data-date="?" alt="Fog" />
+            <img loading="lazy" src="img/1.jpg" data-date="" alt="Fog" />
         </div>
     </div>
     <div id="about">
@@ -252,7 +252,7 @@ $(document).ready(function(){
     // gallery
     $(".gallery img").each(function(){
         var ratio = $(this).prop("naturalWidth") / $(this).prop("naturalWidth");
-        $(this).wrap("<div><div></div></div>").parent().after("<span><span>"+$(this).attr("alt")+" <span style='opacity:.2;'>("+$(this).attr("data-date").substr(-4)+")</span></span></span>"); // style='width:" + (160/$(this).prop("naturalHeight")*$(this).prop("naturalWidth")) + "px;'
+        $(this).wrap("<div><div></div></div>").parent().after("<span>"+$(this).attr("alt")+"&nbsp; <small>"+$(this).attr("data-date").substr(-4)+"</small></span>"); // style='width:" + (160/$(this).prop("naturalHeight")*$(this).prop("naturalWidth")) + "px;'
     });
     // lightbox
     $("body").append("<div id='lightbox'><img src='' /></div>");
