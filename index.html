@@ -20,9 +20,9 @@
     h2{/* text-align:center;display:table;margin:0 auto; */margin-bottom:1rem;}
     ul{list-style-type:none;list-style-position:inside;}
     table,tr,td{vertical-align:top;}
-    td:first-child{white-space:nowrap;opacity:.4;}
+    td:first-child{white-space:nowrap;}
     td:not(:last-child){padding-right:var(--spacer);}
-    small{font-size:11px;}
+    small,td:first-child{font-size:11px;}
     i{font-style:italic;}
     a{text-decoration:underline;text-underline-offset:.15em;text-decoration-thickness:.08em;/* padding:0 .38rem;border-radius:100vmax;transition:all .1s;background:#333;color:var(--background);box-shadow:inset 0 -1px var(--text); */white-space:nowrap;}
     a:hover{text-decoration:none;}
@@ -145,25 +145,25 @@
     <div id="about">
         <!-- <h2>Experience</h2>
         <table>
-            <tr><td data-title="01.03.2023-">2023 &mdash; Present</td><td>Herzog & de Meuron</td></tr>
-            <tr><td data-title="14.03.2023-09.09.2023">2022 &mdash; 2022</td><td>Behnisch Architekten</td></tr>
-            <tr><td data-title="25.10.2022-28.02.2023">2021 &mdash; 2022</td><td>REM Assets</td></tr>
-            <tr><td data-title="01.10.2021-30.09.2022">2020 &mdash; 2021</td><td>Werner Sobek</td></tr>
+            <tr><td data-title="01.03.2023-">2023 &ndash; Present</td><td>Herzog & de Meuron</td></tr>
+            <tr><td data-title="14.03.2023-09.09.2023">2022 &ndash; 2022</td><td>Behnisch Architekten</td></tr>
+            <tr><td data-title="25.10.2022-28.02.2023">2021 &ndash; 2022</td><td>REM Assets</td></tr>
+            <tr><td data-title="01.10.2021-30.09.2022">2020 &ndash; 2021</td><td>Werner Sobek</td></tr>
         </table>
         <hr>
         <h2>Education</h2>
         <table>
-            <tr><td data-title="01.10.2021-">2021 &mdash; Present</td><td>University of Stuttgart, Master studies</td></tr>
-            <tr><td data-title="05.09.2022-26.01.2023">2022 &mdash; 2023</td><td>Politecnico di Milano, study abroad</td></tr>
+            <tr><td data-title="01.10.2021-">2021 &ndash; Present</td><td>University of Stuttgart, master studies</td></tr>
+            <tr><td data-title="05.09.2022-26.01.2023">2022 &ndash; 2023</td><td>Politecnico di Milano, study abroad</td></tr>
             <tr><td data-title="15.07.2023-22.07.2023">2022</td><td>Architectural Association/State Academy of Fine Arts Stuttgart, Visiting School</td></tr>
-            <tr><td data-title="01.10.2018-30.09.2021">2018 &mdash; 2021</td><td>University of Stuttgart, BSc</td></tr>
+            <tr><td data-title="01.10.2018-30.09.2021">2018 &ndash; 2021</td><td>University of Stuttgart, BSc</td></tr>
         </table>
         <hr>
         <h2>Exhibitions and Schoolarships</h2>
         <table>
-            <tr><td data-title="01.04.2023-">2023 &mdash; Present</td><td>Deutschlandstipendium</td></tr>
-            <tr><td data-title="01.03.2023-29.02.2024">2023 &mdash; Present</td><td>Swiss-European Mobility Programme</td></tr>
-            <tr><td data-title="05.09.2022-26.01.2023,01.03.2023-02.10.2023">2022 &mdash; 2023</td><td>Erasmus+ schoolarships</td></tr>
+            <tr><td data-title="01.04.2023-">2023 &ndash; Present</td><td>Deutschlandstipendium</td></tr>
+            <tr><td data-title="01.03.2023-29.02.2024">2023 &ndash; Present</td><td>Swiss-European Mobility Programme</td></tr>
+            <tr><td data-title="05.09.2022-26.01.2023,01.03.2023-02.10.2023">2022 &ndash; 2023</td><td>Erasmus+ schoolarships</td></tr>
             <tr><td data-title="24.06.2022-04.07.2022">2022</td><td>Graduate Design Projects Selection (Department of Architecture, University of Stuttgart)</td></tr>
             <tr><td data-title="16.09.2021-17.09.2021">2021</td><td>CURRENT Festival for Art and Urban Space</td></tr>
             <tr><td data-title="13.01.2020-25.01.2020">2020</td><td>Annual Design Projects Selection  (IRGE, University of Stuttgart)</td></tr>
@@ -196,10 +196,10 @@
         </p>
         <hr>
         <p><a id="show-privacy" href="javascript:;">Privacy</a></p>
-        <p class="privacy">Personal data (usually referred to just as „data“ below) will only be processed by us to the extent necessary and for the purpose of providing a functional and user-friendly website, including its contents, and the services offered there. Per Art. 4 No. 1 of Regulation (EU) 2016/679, i.e. the General Data Protection Regulation (hereinafter referred to as the „GDPR“), „processing“ refers to any operation or set of operations such as collection, recording, organization, structuring, storage, adaptation, alteration, retrieval, consultation, use, disclosure by transmission, dissemination, or otherwise making available, alignment, or combination, restriction, erasure, or destruction performed on personal data, whether by automated means or not.</p>
+        <p class="privacy">Personal data (usually referred to just as &ldquo;data&rdquo; below) will only be processed by us to the extent necessary and for the purpose of providing a functional and user-friendly website, including its contents, and the services offered there. Per Art. 4 No. 1 of Regulation (EU) 2016/679, i.e. the General Data Protection Regulation (hereinafter referred to as the &ldquo;GDPR&rdquo;), „processing“ refers to any operation or set of operations such as collection, recording, organization, structuring, storage, adaptation, alteration, retrieval, consultation, use, disclosure by transmission, dissemination, or otherwise making available, alignment, or combination, restriction, erasure, or destruction performed on personal data, whether by automated means or not.</p>
         <p class="privacy">With regard to the data processing to be described in more detail below, users and data subjects have the right to confirmation of whether data concerning them is being processed, information about the data being processed, further information about the nature of the data processing, and copies of the data (cf. also Art. 15 GDPR); to correct or complete incorrect or incomplete data (cf. also Art. 16 GDPR); to the immediate deletion of data concerning them (cf. also Art. 17 DSGVO), or, alternatively, if further processing is necessary as stipulated in Art. 17 Para. 3 GDPR, to restrict said processing per Art. 18 GDPR; to receive copies of the data concerning them and/or provided by them and to have the same transmitted to other providers/controllers (cf. also Art. 20 GDPR); to file complaints with the supervisory authority if they believe that data concerning them is being processed by the controller in breach of data protection provisions (see also Art. 77 GDPR). In addition, the controller is obliged to inform all recipients to whom it discloses data of any such corrections, deletions, or restrictions placed on processing the same per Art. 16, 17 Para. 1, 18 GDPR. However, this obligation does not apply if such notification is impossible or involves a disproportionate effort. Nevertheless, users have a right to information about these recipients.</p>
         <p class="privacy">Likewise, under Art. 21 GDPR, users and data subjects have the right to object to the controller&rsquo;s future processing of their data pursuant to Art. 6 Para. 1 lit. f) GDPR. In particular, an objection to data processing for the purpose of direct advertising is permissible. Your data processed when using our website will be deleted or blocked as soon as the purpose for its storage ceases to apply, provided the deletion of the same is not in breach of any statutory storage obligations or unless otherwise stipulated below.</p>
-        <p class="privacy">Source: Weiß & Partner, Esslingen</p>
+        <p class="privacy"><small>Source: Weiß & Partner, Esslingen</small></p>
     </div>
 </div>
 <hr>
@@ -232,20 +232,9 @@ $(document).ready(function(){
         $("a").removeClass("open");
         $("a[href='"+hash+"']").addClass("open");
         $("#" + hash.slice(2)).addClass("show").siblings().removeClass("show");
-        //window.scrollTo(0,0);
         return false;
     }
     $(window).bind("hashchange",function(e){refreshHash();});
-    /* $("a[href^='/']").on("click",function(){
-        event.stopPropagation();
-        var state = null;
-        var url = $(this).attr("href");
-        var title = page.slice(1);
-        history.pushState(state,"",url);
-        document.title = title;
-        $(this).addClass("open").siblings().removeClass("open");
-        $("#" + title).addClass("show").siblings().removeClass("show");
-    }); */
     
     // gallery
     $(".gallery img").each(function(){
@@ -255,7 +244,6 @@ $(document).ready(function(){
     // lightbox
     $("body").append("<div id='lightbox'><img src='' /></div>");
     function lightboxLoad() {
-        //showLoading();
         var imgURL = $("img.show").attr("src");
         $("#lightbox").show().children("img").attr("src",imgURL);
         //$("#lightbox img").on("load",function(){
@@ -300,50 +288,25 @@ $(document).ready(function(){
     });
 
     // time
-    function addZero(i) {if (i < 10) {i = "0" + i;} return i;}
-    function startTime() {
-        var today = new Date();
-        var temp = (0*60)/60;
-        var h = today.getHours();
-        h = (temp+h);
-        ampm = h >= 12 ? "pm" : "am";
-        // h = h % 12;
-        h = h ? h : 12;
-        var m = today.getMinutes();
-        var s = today.getSeconds();
-        m = addZero(m);
-        s = addZero(s);
-        $("#time").html("" + h + "<span id='time-blink'>:</span>" + m /* + " " + ampm */);
-        t = setTimeout(function(){startTime()},2000);
+    function getTime() {
+        function addZero(i) {if (i < 10) {i = "0" + i;} return i;}
+        var time = new Date();
+        var h = addZero(time.getHours());
+        var min = addZero(time.getMinutes());
+        var s = addZero(time.getSeconds());
+        $("#time").html(h + "<span id='time-blink'>:</span>" + min);
     }
-    startTime();
+    getTime();
+    setInterval(getTime,2000);
 
     // weather
-    function getXMLFeed (url, callback, param) {
-        var cors_api_url = "";
-        var options = {method: "GET", url: url};
-        var x = new XMLHttpRequest();
-        x.open(options.method, cors_api_url + options.url);
-        x.onload = function(e) {
-            var data = new window.DOMParser().parseFromString(x.responseText, "text/xml");
-            callback(data, param);
-        };
-        x.onerror = function(e) {return e}
-        x.send();
+    const getWeather = async () => {
+        const request = await fetch("https://api.open-meteo.com/v1/forecast?latitude=47.5584&longitude=7.5733&current_weather=true") // stuttgart: https://api.open-meteo.com/v1/forecast?latitude=48.7823&longitude=9.177&current_weather=true
+        const response = await request.json()
+        $("#weather").html(", " + Math.round(response.current_weather.temperature) + "°C");
     }
-    getWeather = (data) => {
-        var item = $(data).find("item");
-        if(item.length > 0) {
-            var temperature = $(item).find("description").html().split(' ')[1];
-            var word = $(item).find("title").html().split(" ").slice(4).join(" ").split(" ").slice(0, -2).join(" ").slice(0, -1).toLowerCase(); // not available, heavy rain, light rain, light cloud, mist, clear sky, sunny
-            //if (word=="not available") {word = "";} else {word = " " + word;}
-            word = "not available" ? "" : " "+word;
-            $("#weather").html(", " + temperature);
-        }
-    }
-    function loadWeather() {getXMLFeed("https://weather-broker-cdn.api.bbci.co.uk/en/observation/rss/2661604", getWeather);} // Stuttgart:2825297 Basel:2661604
-    loadWeather();
-    setTimeout(function(){loadWeather();},10000);
+    getWeather();
+    setInterval(getWeather,60000);
     
     // impressum
     var address1 = 'S'+'i'+'g'+'n'+'a'+'l'+'s'+'t'+'r'+'.'+' '+'3'+'5'+'a'; // 'K'+'o'+'l'+'p'+'i'+'n'+'g'+'s'+'t'+'r'+'.'+' '+'5'+'6';
@@ -368,12 +331,10 @@ $(document).ready(function(){
         });
     });
 
-    // imprint
+    // privacy
     $(".privacy").hide();
     $("#show-privacy").on("click",function(){
         $(".privacy").toggle(0);
-        //$(this).remove();
-        //$("html,body").animate({scrollTop:$("html,body").get(0).scrollHeight},800);
         return false;
     });
 
