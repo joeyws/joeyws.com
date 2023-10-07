@@ -58,7 +58,7 @@
     #lightbox{z-index:999997;cursor:zoom-out;position:fixed;inset:0;display:none;}
     #lightbox img{cursor:pointer;height:auto;max-height:90vh;max-width:calc(100vw - 2*var(--spacer));box-sizing:border-box;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);}
     /* SVG */
-    svg{fill:var(--text);vertical-align:-10%;height:.85rem;width:.85rem;}
+    svg{fill:var(--text);vertical-align:-5%;height:.75rem;width:.75rem;}
     a.svg{background:transparent !important;outline:none !important;padding:0;box-shadow:none !important;}
     /* :HOVER */
     @keyframes outline{0%{outline:1px solid var(--text);}100%{outline:1px solid transparent;outline-offset:5px;}}
@@ -272,10 +272,6 @@ $(document).ready(function(){
         $("#lightbox").hide().children("img").attr("src","data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");
         $("img.show").removeClass("show");
     };
-    /* $(".gallery>div").on("click",function(){
-        $(this).children("div").children("img").addClass("show");
-        lightboxLoad();
-    }); */
     $(".gallery>div>div>img").on("click",function(){
         $(this).addClass("show");
         lightboxLoad();
