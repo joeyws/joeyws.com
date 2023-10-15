@@ -28,11 +28,11 @@
     a:hover{text-decoration:none;}
     /* a[href^=http]::after{content:"\2197";margin-left:.2em;font-style:normal;font-size:1.3rem;display:inline-block;} */
     /* LAYOUT */
-    #header{display:flex;justify-content:flex-start;column-gap:calc(var(--spacer) * 3);align-content:flex-start;flex-wrap:wrap;}
+    #header{display:flex;justify-content:flex-start;column-gap:calc(var(--spacer) * 2);align-content:flex-start;flex-wrap:wrap;}
     #header>*{white-space:nowrap;}
     #nav{display:inline-block;}
-    #nav a{display:inline-block;}
-    #nav a.open{opacity:.3;cursor:default;text-decoration:none;}
+    #nav a{display:inline-block;background:#ddd;color:var(--background);border-radius:100vmax;padding:0 .4em;text-decoration:none;}
+    #nav a.open{background:#0f0 !important;cursor:default;text-decoration:none;}
     .loading{animation:.3s blink steps(1) infinite;}
     #time-blink{animation:2s blink steps(1) infinite;}
     @keyframes blink{0%{opacity:0;}50%{opacity:1;}}
@@ -61,8 +61,8 @@
     svg{fill:var(--text);vertical-align:-5%;height:.65rem;width:.65rem;}
     a.svg{background:transparent !important;outline:none !important;padding:0;box-shadow:none !important;}
     /* :HOVER */
-    @keyframes outline{0%{outline:1px solid var(--text);}100%{outline:1px solid transparent;outline-offset:5px;}}
-    @media(hover:hover){@keyframes blink{0%{opacity:1;}50%{opacity:0;}}}
+    @keyframes blink{0%{opacity:1;}50%{opacity:0;}}
+    @media(hover:hover){#nav a:hover{background:#e4e4e4;}}
     *{cursor:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" x="0px" y="0px" viewBox="0 0 16 16" style="fill:%23000;"><circle cx="8" cy="8" r="7" stroke="%23000" stroke-width="0"/></svg>') 7 7, auto !important;}
 </style>
 </head>
@@ -72,7 +72,7 @@
 <div id="header">
     <h1 class="loading">Joey W. Schweickhardt</h1>
     <div id="nav">
-        <a href="#/index">Index</a>,
+        <a href="#/index">Index</a>
         <a href="#/about">About</a>
     </div>
     <div>Basel (<span id="time"></span><span id="weather"></span>)</div>
@@ -134,8 +134,8 @@
             <img loading="lazy" src="img/17.jpg" data-date="25/09/2018" alt="Switzerland" />
             <img loading="lazy" src="img/40.jpg" data-date="12/07/2019" alt="ICD Pavilion" />
             <img loading="lazy" src="img/6.jpg" data-date="18/05/2018" alt="Eel soup" />
-            <img loading="lazy" src="img/7.jpg" data-date="2018" alt="S&ocirc;ng Ng&agrave;n Ph&#7889;" /><!-- S&ocirc;ng Ng&agrave;n Ph&#7889; -->
-            <img loading="lazy" src="img/5.jpg" data-date="12/05/2018" alt="Huong Son" /><!-- H&#432;&#x01A1;ng S&#x01A1;n -->
+            <img loading="lazy" src="img/7.jpg" data-date="2018" alt="S&ocirc;ng Ng&agrave;n Ph&#7889;" />
+            <img loading="lazy" src="img/5.jpg" data-date="12/05/2018" alt="H&#432;&#x01A1;ng S&#x01A1;n" />
             <img loading="lazy" src="img/4.jpg" data-date="17/06/2017" alt="Merano" />
             <img loading="lazy" src="img/3.jpg" data-date="11/08/2016" alt="J&ouml;kuls&aacute;rl&oacute;n glacial lake" />
             <img loading="lazy" src="img/2.jpg" data-date="08/08/2016" alt="N&yacute;idalur" />
@@ -172,8 +172,7 @@
         <p>
             Joey W. Schweickhardt<br>
             <span class="address1"></span><br>
-            <span class="address2"></span><br>
-            Switzerland
+            <span class="address2"></span>
         </p>
         <p>
             <a class="phone" href="javascript:"></a><br>
@@ -305,7 +304,7 @@ $(document).ready(function(){
     
     // impressum
     var address1 = 'S'+'i'+'g'+'n'+'a'+'l'+'s'+'t'+'r'+'.'+' '+'3'+'5'+'a'; // 'K'+'o'+'l'+'p'+'i'+'n'+'g'+'s'+'t'+'r'+'.'+' '+'5'+'6';
-    var address2 = '4'+'0'+'5'+'8'+' '+'B'+'a'+'s'+'e'+'l'; // 'D'+'E'+' '+'&mdash;'+' '+'7'+'0'+'3'+'7'+'8'+' '+'S'+'t'+'u'+'t'+'t'+'g'+'a'+'r'+'t';
+    var address2 = '4'+'0'+'5'+'8'+' '+'B'+'a'+'s'+'e'+'l'; // 'D'+'E'+' '+'&ndash;'+' '+'7'+'0'+'3'+'7'+'8'+' '+'S'+'t'+'u'+'t'+'t'+'g'+'a'+'r'+'t'; // 'C' + 'H' + ' ' + '&ndash;' + ' ' + 
     var mail = 'm'+'a'+'i'+'l'+ String.fromCharCode(64) +'j'+'o'+'e'+'y'+'w'+'s'+'.'+'c'+'o'+'m';
     var phone = '+'+'4'+'9'+'1'+'5'+'7'+'7'+'8'+'8'+'5'+'0'+'5'+'0'+'2';
     $('.address1').html(address1);
