@@ -17,12 +17,12 @@
     body{word-spacing:.05rem;padding:var(--spacer);color:var(--text);font:normal normal 1rem/1.3rem webfont,sans-serif,monospace;}
     p,h2,ul{margin-top:.7rem;}hr+p,p:first-child{margin-top:0;}p+img,p+video,p+.cycle-slideshow,img+p,video+p,.cycle-slideshow+p{margin-top:var(--spacer);}
     h1{display:inline-block;}
-    h2{font:normal normal 5rem/1em webfont2,sans-serif;/* text-align:center;display:table;margin:0 auto; */margin-bottom:1rem;}
+    h2{font:normal normal 4rem/1em webfont2,sans-serif;/* text-align:center;display:table;margin:0 auto; */margin-bottom:1rem;}
     ul{list-style-type:none;list-style-position:inside;}
     table,tr,td{vertical-align:top;}
     td:first-child{white-space:nowrap;}
     td:not(:last-child){padding-right:var(--spacer);}
-    small,td:first-child{font-family:monospace;font-size:11px;}
+    small,td:first-child{font-family:monospace;font-size:11px;text-transform:uppercase;}
     i{font-style:italic;}
     a{text-decoration:underline;text-underline-offset:.11em;text-decoration-thickness:.08em;text-decoration-thickness:1px;/* padding:0 .38rem;border-radius:100vmax;transition:all .1s;background:#333;color:var(--background);box-shadow:inset 0 -1px var(--text); */white-space:nowrap;}
     a:hover{text-decoration:none;}
@@ -31,7 +31,7 @@
     #header{display:flex;justify-content:flex-start;column-gap:calc(var(--spacer) * 2);align-content:flex-start;flex-wrap:wrap;}
     #header>*{white-space:nowrap;}
     #nav{display:inline-block;}
-    #nav a{display:inline-block;background:#ddd;color:var(--background);border-radius:100vmax;padding:0 .4em;text-decoration:none;}
+    #nav a{display:inline-block;color:var(--text);background:#ddd;border-radius:100vmax;padding:0 .45em;text-decoration:none;}
     #nav a.open{background:#0f0 !important;cursor:default;text-decoration:none;}
     .loading{animation:.3s blink steps(1) infinite;}
     #time-blink{animation:2s blink steps(1) infinite;}
@@ -45,14 +45,14 @@
     /* VIDEO */
     .video{cursor:pointer;overflow:hidden;position:relative;max-width:960px;font-size:0;line-height:0;}
     .video.playing{cursor:pointer;}
-    .video:after{border:.35rem solid transparent;border-left:1.1rem solid var(--text);border-right-width:0;width:0;height:0;display:inline-block;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);content:"";pointer-events:none;}
+    .video:after{border:.45rem solid transparent;border-left:1.4rem solid var(--text);border-right-width:0;width:0;height:0;display:inline-block;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);content:"";pointer-events:none;}
     .video:hover:after{opacity:.3;}
     .video.playing:after{display:none;}
     video{width:100%;}
     /* GALLERY */
     .gallery{gap:var(--spacer);display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));}
     .gallery>div{/* width:calc(100%);position:relative;margin-bottom:var(--spacer);break-inside:avoid; */}
-    .gallery img{max-width:100%;}
+    .gallery img{cursor:pointer;max-width:100%;}
     /* .gallery>div>div:not(:hover)+span{color:transparent;} */
     /* LIGHTBOX */
     #lightbox{z-index:999997;cursor:zoom-out;position:fixed;inset:0;display:none;}
@@ -63,7 +63,7 @@
     /* :HOVER */
     @keyframes blink{0%{opacity:1;}50%{opacity:0;}}
     @media(hover:hover){#nav a:hover{background:#e4e4e4;}}
-    *{cursor:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" x="0px" y="0px" viewBox="0 0 16 16" style="fill:%23000;"><circle cx="8" cy="8" r="7" stroke="%23000" stroke-width="0"/></svg>') 7 7, auto !important;}
+    /* *{cursor:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" x="0px" y="0px" viewBox="0 0 16 16" style="fill:%23000;"><circle cx="8" cy="8" r="7" stroke="%23000" stroke-width="0"/></svg>') 7 7, auto !important;} */
 </style>
 </head>
 <body>
@@ -76,16 +76,11 @@
         <a href="#/about">About</a>
     </div>
     <div>Basel (<span id="time"></span><span id="weather"></span>)</div>
-    <!-- <div>
-        <svg viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"><path d="M192 0C85.97 0 0 85.97 0 192c0 77.41 26.97 99.03 172.3 309.7c9.531 13.77 29.91 13.77 39.44 0C357 291 384 269.4 384 192C384 85.97 298 0 192 0zM192 271.1c-44.13 0-80-35.88-80-80S147.9 111.1 192 111.1s80 35.88 80 80S236.1 271.1 192 271.1z"/></svg>
-        <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M0 0l20 8-8 4-2 8z"/></svg>
-        Basel<span id="time"></span><span id="weather"></span>
-        <div>Stuttgart<span id="time"></span><span id="weather"></span></div>
-    </div> -->
 </div>
 <hr>
 <div id="content">
     <div id="index">
+        <!-- <h2>Featured</h2> -->
         <div class="video">
             <video onclick="this.parentElement.classList.add('playing');this.setAttribute('controls','');this.setAttribute('autoplay','');this.setAttribute('preload','');" oncontextmenu="return false;" poster="img/landderechsen.jpg" tabindex="0" preload="none" controlsList="nodownload noplaybackrate" disablePictureInPicture>
                 <source src="video/LandDerEchsen1080.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
@@ -146,7 +141,7 @@
         <!-- <h2>Experience</h2>
         <table>
             <tr><td data-title="01.03.2023-">2023 &ndash; Present</td><td>Herzog & de Meuron</td></tr>
-            <tr><td data-title="14.03.2023-09.09.2023">2022 &ndash; 2022</td><td>Behnisch Architekten</td></tr>
+            <tr><td data-title="14.03.2023-09.09.2023">2022</td><td>Behnisch Architekten</td></tr>
             <tr><td data-title="25.10.2022-28.02.2023">2021 &ndash; 2022</td><td>REM Assets</td></tr>
             <tr><td data-title="01.10.2021-30.09.2022">2020 &ndash; 2021</td><td>Werner Sobek</td></tr>
         </table>
@@ -161,12 +156,12 @@
         <hr>
         <h2>Exhibitions and Schoolarships</h2>
         <table>
-            <tr><td data-title="01.04.2023-">2023 &ndash; Present</td><td>Deutschlandstipendium</td></tr>
+            <tr><td data-title="01.04.2023-">2023 &ndash; Present</td><td>Deutschlandstipendium, scholarship by the Federal Republic of Germany</td></tr>
             <tr><td data-title="01.03.2023-29.02.2024">2023 &ndash; Present</td><td>Swiss-European Mobility Programme</td></tr>
-            <tr><td data-title="05.09.2022-26.01.2023,01.03.2023-02.10.2023">2022 &ndash; 2023</td><td>Erasmus+ schoolarships</td></tr>
-            <tr><td data-title="24.06.2022-04.07.2022">2022</td><td>Graduate Design Projects Selection (Department of Architecture, University of Stuttgart)</td></tr>
+            <tr><td data-title="05.09.2022-26.01.2023,01.03.2023-02.10.2023">2022 &ndash; 2023</td><td>2 Erasmus+ schoolarships</td></tr>
+            <tr><td data-title="24.06.2022-04.07.2022">2022</td><td>Graduate Design Projects Selection, Department of Architecture, University of Stuttgart</td></tr>
             <tr><td data-title="16.09.2021-17.09.2021">2021</td><td>CURRENT Festival for Art and Urban Space</td></tr>
-            <tr><td data-title="13.01.2020-25.01.2020">2020</td><td>Annual Design Projects Selection  (IRGE, University of Stuttgart)</td></tr>
+            <tr><td data-title="13.01.2020-25.01.2020">2020</td><td>Annual Design Projects Selection, IRGE, University of Stuttgart</td></tr>
         </table>
         <hr> -->
         <p>
@@ -178,12 +173,6 @@
             <a class="phone" href="javascript:"></a><br>
             <a class="email" href="javascript:"></a>
         </p>
-        <!-- <p>
-            <a href="https://www.instagram.com/joeyws/" class="svg"><?xml version="1.0" ?><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/></svg></a>
-            <a href="https://www.linkedin.com/in/joeyschweickhardt/" class="svg"><?xml version="1.0" ?><svg style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:serif="http://www.serif.com/" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z"/></svg></a>
-        </p> -->
-        <!-- <a href="https://www.instagram.com/joeyws/" class="svg"><?xml version="1.0" ?><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/></svg></a>
-        <a href="https://www.linkedin.com/in/joeyschweickhardt/" class="svg"><?xml version="1.0" ?><svg style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:serif="http://www.serif.com/" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z"/></svg></a> -->
         <p>
             <a href="https://www.instagram.com/joeyws/">Instagram</a>,
             <a href="https://www.linkedin.com/in/joeyschweickhardt/">LinkedIn</a>
