@@ -14,7 +14,7 @@
     /* RESET */*{/* text-decoration-skip-ink:none; */user-select:none;font-kerning:normal;outline:none;-webkit-tap-highlight-color:rgba(0,0,0,0)!important;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-appearance:none;border-radius:0;-webkit-border-radius:0;box-sizing:content-box;font-smoothing:antialiased;-moz-osx-font-smoothing: grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased;}
 	html{font-size:19px;}
     html,body{background:var(--background);}
-    body{word-spacing:.05rem;padding:var(--spacer);color:var(--text);font:normal normal 1rem/1.3rem webfont,sans-serif,monospace;}
+    body{word-spacing:.05rem;padding:var(--spacer);color:var(--text);font:normal normal 1rem/1.3rem webfont,serif,monospace;}
     p,h2,ul{margin-top:.7rem;}hr+p,p:first-child{margin-top:0;}p+img,p+video,p+.cycle-slideshow,img+p,video+p,.cycle-slideshow+p{margin-top:var(--spacer);}
     h1{display:inline-block;}
     h2{font:normal normal 4rem/1em webfont2,sans-serif;/* text-align:center;display:table;margin:0 auto; */margin-bottom:1rem;}
@@ -31,7 +31,7 @@
     #header{display:flex;justify-content:flex-start;column-gap:calc(var(--spacer) * 2);align-content:flex-start;flex-wrap:wrap;}
     #header>*{white-space:nowrap;}
     #nav{display:inline-block;}
-    #nav a{display:inline-block;color:var(--text);background:#ddd;border-radius:100vmax;padding:0 .45em;text-decoration:none;}
+    #nav a{display:inline-block;background:#ddd;padding:0 .3em;color:var(--text);border-radius:5px;text-decoration:none;}
     #nav a.open{background:#0f0 !important;cursor:default;text-decoration:none;}
     .loading{animation:.3s blink steps(1) infinite;}
     #time-blink{animation:2s blink steps(1) infinite;}
@@ -45,7 +45,7 @@
     /* VIDEO */
     .video{cursor:pointer;overflow:hidden;position:relative;max-width:960px;font-size:0;line-height:0;}
     .video.playing{cursor:pointer;}
-    .video:after{border:.4rem solid transparent;border-left:1.2rem solid #bbb;border-right-width:0;width:0;height:0;display:inline-block;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);content:"";pointer-events:none;}
+    .video:after{border:.4rem solid transparent;border-left:1.2rem solid var(--text);border-right-width:0;width:0;height:0;display:inline-block;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);content:"";pointer-events:none;}
     .video:hover:after{opacity:.3;}
     .video.playing:after{display:none;}
     video{width:100%;}
@@ -154,11 +154,11 @@
             <tr><td data-title="01.10.2018-30.09.2021">2018 &ndash; 2021</td><td>University of Stuttgart, BSc</td></tr>
         </table>
         <hr>
-        <h2>Exhibitions and Schoolarships</h2>
+        <h2>Honors</h2>
         <table>
-            <tr><td data-title="01.04.2023-">2023 &ndash; Present</td><td>Deutschlandstipendium, scholarship by the Federal Republic of Germany</td></tr>
+            <tr><td data-title="01.04.2023-">2023 &ndash; Present</td><td>Deutschlandstipendium scholarship, Federal Republic of Germany</td></tr>
             <tr><td data-title="01.03.2023-29.02.2024">2023 &ndash; Present</td><td>Swiss-European Mobility Programme</td></tr>
-            <tr><td data-title="05.09.2022-26.01.2023,01.03.2023-02.10.2023">2022 &ndash; 2023</td><td>2 Erasmus+ schoolarships</td></tr>
+            <tr><td data-title="05.09.2022-26.01.2023,01.03.2023-02.10.2023">2022 &ndash; 2023</td><td>Erasmus+ schoolarships</td></tr>
             <tr><td data-title="24.06.2022-04.07.2022">2022</td><td>Graduate Design Projects Selection, Department of Architecture, University of Stuttgart</td></tr>
             <tr><td data-title="16.09.2021-17.09.2021">2021</td><td>CURRENT Festival for Art and Urban Space</td></tr>
             <tr><td data-title="13.01.2020-25.01.2020">2020</td><td>Annual Design Projects Selection, IRGE, University of Stuttgart</td></tr>
@@ -179,7 +179,7 @@
         </p>
         <hr>
         <p>
-            Hand-coded with <!-- &#9825; --><svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path fill="red" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" fill-rule="evenodd"/></svg><br>
+            Hand-coded with <!-- &#9825; --><svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path fill="#f00" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" fill-rule="evenodd"/></svg><br>
             Hosted on <a href="https://github.com/" rel="nofollow">GitHub</a><br>
             Initial launch: <!-- 16/01/ -->2011
         </p>
