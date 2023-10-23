@@ -17,35 +17,37 @@
     body{word-spacing:.05rem;padding:var(--spacer);color:var(--text);font:normal normal 1rem/1.3rem webfont,serif,monospace;}
     p,h2,ul{margin-top:.7rem;}hr+p,p:first-child{margin-top:0;}p+img,p+video,p+.cycle-slideshow,img+p,video+p,.cycle-slideshow+p{margin-top:var(--spacer);}
     h1{display:inline-block;}
-    h2{font:normal normal 4rem/1em webfont2,sans-serif;/* text-align:center;display:table;margin:0 auto; */margin-bottom:1rem;}
+    h2{font:normal normal 64px/1em webfont2,sans-serif;/* text-align:center;display:table;margin:0 auto; */margin-bottom:1rem;}
     ul{list-style-type:none;list-style-position:inside;}
     table,tr,td{vertical-align:top;}
     td:first-child{white-space:nowrap;}
-    td:not(:last-child){padding-right:var(--spacer);}
+    td:not(:last-child){padding-right:calc(2* var(--spacer));}
     small,td:first-child{font-family:monospace;font-size:11px;text-transform:uppercase;}
     i{font-style:italic;}
     a{text-decoration:underline;text-underline-offset:.11em;text-decoration-thickness:.08em;text-decoration-thickness:1px;/* padding:0 .38rem;border-radius:100vmax;transition:all .1s;background:#333;color:var(--background);box-shadow:inset 0 -1px var(--text); */white-space:nowrap;}
     a:hover{text-decoration:none;}
     /* a[href^=http]::after{content:"\2197";margin-left:.2em;font-style:normal;font-size:1.3rem;display:inline-block;} */
     /* LAYOUT */
-    #header{display:flex;justify-content:flex-start;column-gap:calc(var(--spacer) * 2);align-content:flex-start;flex-wrap:wrap;}
+    #header{display:flex;justify-content:flex-start;column-gap:calc(var(--spacer) * 3);align-content:flex-start;flex-wrap:wrap;}
     #header>*{white-space:nowrap;}
     #nav{display:inline-block;}
-    #nav a{display:inline-block;background:#ddd;padding:0 .3em;color:var(--text);border-radius:5px;text-decoration:none;}
-    #nav a.open{background:#0f0 !important;cursor:default;text-decoration:none;}
+    #nav a{display:inline-block;background:#ddd;padding:0 .45em;color:var(--text);border-radius:100vmax;text-decoration:none;}
+    #nav a.open{background:#0f0 !important;outline:none;cursor:default;text-decoration:none;}
     .loading{animation:.3s blink steps(1) infinite;}
     #time-blink{animation:2s blink steps(1) infinite;}
     @keyframes blink{0%{opacity:0;}50%{opacity:1;}}
-    hr{margin:1.4rem 0;/* border-top:1px dotted var(--text); */}
+    hr{margin:1.8rem 0;/* border-top:1px dotted var(--text); */}
     #content>*{min-height:100vh;}
     #content>*:not(.show){display:none;}
     /* MARQUEE */
-    .marquee3k{/* background:var(--text);color:var(--background); */margin:0 calc(var(--spacer) * -1);/* margin-bottom:var(--spacer); *//* margin:0 calc(var(--spacer) * -1);margin-bottom:var(--spacer);width:200px;flex-grow:1; */white-space:nowrap;overflow:hidden;}
-    .marquee3k .marquee span{margin-right:1.8em;}
+    .marquee3k{white-space:nowrap;overflow:hidden;}
+    .marquee3k{/* position:relative; */margin:0 calc(var(--spacer) * -1);/* margin-bottom:var(--spacer); *//* width:200px;flex-grow:1; */}
+    /* .marquee3k:after{background:linear-gradient(to right, var(--background), transparent 10%, transparent 90%, var(--background));content:" ";display:block;position:absolute;top:0;bottom:0;left:0;right:0;margin:0 -1px;} */
+    .marquee3k .marquee span{margin-right:1.5em;}
     /* VIDEO */
     .video{cursor:pointer;overflow:hidden;position:relative;max-width:960px;font-size:0;line-height:0;}
     .video.playing{cursor:pointer;}
-    .video:after{border:.4rem solid transparent;border-left:1.2rem solid var(--text);border-right-width:0;width:0;height:0;display:inline-block;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);content:"";pointer-events:none;}
+    .video:after{border:.4rem solid transparent;border-left:1.2rem solid #f0f;border-right-width:0;width:0;height:0;display:inline-block;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);content:"";pointer-events:none;}
     .video:hover:after{opacity:.3;}
     .video.playing:after{display:none;}
     video{width:100%;}
@@ -142,7 +144,7 @@
         <table>
             <tr><td data-title="01.03.2023-">2023 &ndash; Present</td><td>Herzog & de Meuron</td></tr>
             <tr><td data-title="14.03.2023-09.09.2023">2022</td><td>Behnisch Architekten</td></tr>
-            <tr><td data-title="25.10.2022-28.02.2023">2021 &ndash; 2022</td><td>REM Assets</td></tr>
+            <tr><td data-title="25.10.2022-28.02.2023">2021 &ndash; 2022</td><td>REM ASSETS</td></tr>
             <tr><td data-title="01.10.2021-30.09.2022">2020 &ndash; 2021</td><td>Werner Sobek</td></tr>
         </table>
         <hr>
@@ -156,9 +158,9 @@
         <hr>
         <h2>Honors</h2>
         <table>
-            <tr><td data-title="01.04.2023-">2023 &ndash; Present</td><td>Deutschlandstipendium scholarship, Federal Republic of Germany</td></tr>
+            <tr><td data-title="01.04.2023-">2023 &ndash; Present</td><td>Deutschlandstipendium</td></tr>
             <tr><td data-title="01.03.2023-29.02.2024">2023 &ndash; Present</td><td>Swiss-European Mobility Programme</td></tr>
-            <tr><td data-title="05.09.2022-26.01.2023,01.03.2023-02.10.2023">2022 &ndash; 2023</td><td>Erasmus+ schoolarships</td></tr>
+            <tr><td data-title="05.09.2022-26.01.2023,01.03.2023-02.10.2023">2022 &ndash; 2023</td><td>Erasmus+ schoolarships, European Union</td></tr>
             <tr><td data-title="24.06.2022-04.07.2022">2022</td><td>Graduate Design Projects Selection, Department of Architecture, University of Stuttgart</td></tr>
             <tr><td data-title="16.09.2021-17.09.2021">2021</td><td>CURRENT Festival for Art and Urban Space</td></tr>
             <tr><td data-title="13.01.2020-25.01.2020">2020</td><td>Annual Design Projects Selection, IRGE, University of Stuttgart</td></tr>
@@ -193,7 +195,6 @@
 </div>
 <hr>
 <div class="marquee3k" data-speed="1"><div class="marquee"><span>歡迎</span><span>Bienvenidos</span><span>Welcome</span><span>स्वागत हे</span><span>اهلا وسهلا</span><span>Bem-vinda</span><span>স্বাগত</span><span>добро пожаловать</span><span>ようこそ</span><span>Sugeng Rawuh</span><span>ਸਵਾਗਤ ਹੈ</span><span>Willkommen</span><span>어서 오십시오</span><span>Bienvenue</span><span>Karibu</span><span>Svāgatam</span><span>Hoşgeldiniz</span><span>خوش آمدید</span><span>வரவேற்பு</span><span>Hoan nghênh</span><span>اهلا وسهلا</span><span>Benvenuto</span></div></div>
-
 
 
 
