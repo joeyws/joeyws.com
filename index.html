@@ -22,7 +22,7 @@
     table,tr,td{vertical-align:top;}
     td:first-child{white-space:nowrap;}
     td:not(:last-child){padding-right:calc(2* var(--spacer));}
-    /* small,td:first-child{font-family:monospace;font-size:11px;text-transform:uppercase;} */
+    small,td:first-child{font-family:monospace;font-size:11px;text-transform:uppercase;}
     i{font-style:italic;}
     a{text-decoration:underline;text-underline-offset:.11em;text-decoration-thickness:.08em;text-decoration-thickness:1px;/* padding:0 .38rem;border-radius:100vmax;transition:all .1s;background:#333;color:var(--background);box-shadow:inset 0 -1px var(--text); */white-space:nowrap;}
     a:hover{text-decoration:none;}
@@ -230,7 +230,7 @@ $(document).ready(function(){
     // gallery
     $(".gallery img").each(function(){
         //var ratio = $(this).prop("naturalWidth") / $(this).prop("naturalWidth");
-        $(this).wrap("<div><div></div></div>").parent().after("<span>"+$(this).attr("alt")+" <small>("+$(this).attr("data-date").substr(-4)+")</small></span>"); // style='width:" + (160/$(this).prop("naturalHeight")*$(this).prop("naturalWidth")) + "px;'
+        $(this).wrap("<div><div></div></div>").parent().after("<span>"+$(this).attr("alt")+" <small>"+$(this).attr("data-date").substr(-4)+"</small></span>"); // style='width:" + (160/$(this).prop("naturalHeight")*$(this).prop("naturalWidth")) + "px;'
     });
     // lightbox
     $("body").append("<div id='lightbox'><img src='' /></div>");
