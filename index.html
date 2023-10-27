@@ -4,7 +4,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='32' width='32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%23000000' /%3E%3C/svg%3E">
 <meta charset="utf-8"><meta name="robots" content="index,nofollow,notranslate,noimageindex"><meta name="description" content="Welcome to the personal web page of Joey W. Schweickhardt."><meta name="keywords" content="schweickhardt,joey,stuttgart,joeyws,william,herzogdemeuron,basel,architektur,universität,institut"><meta name="geo.region" content="DE-BW"><meta name="geo.placename" content="Stuttgart"><meta name="geo.position" content="48.778600;9.179746"><meta name="ICBM" content="48.778600, 9.179746"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes,shrink-to-fit=no"><meta name="format-detection" content="telephone=no">
 <style>
-    @font-face{font-family:webfont;src:url("font/gnu-free-font/FreeSerif.ttf");} /*PP_Neue_Montreal   Jost   Perun   texgyreheros-bold   NimbusSanL-Bol   SourceCodePro-Regular  gnu-free-font/FreeSans   NimbusRomNo9L-Reg   Libre_Franklin/LibreFranklin-Bold*/
+    @font-face{font-family:webfont;src:url("font/Source_Code_Pro/SourceCodePro-Regular.ttf");} /*PP_Neue_Montreal   Jost   Perun   texgyreheros-bold   NimbusSanL-Bol   SourceCodePro-Regular  gnu-free-font/FreeSans   NimbusRomNo9L-Reg   Libre_Franklin/LibreFranklin-Bold*/
     @font-face{font-family:webfont2;src:url("font/PP_Neue_Montreal/PPNeueMontreal-Medium.otf");}
     :root{--background:#fff;--text:#000;--spacer:8px;}
     ::-moz-selection{background:var(--text);color:var(--background);}
@@ -12,9 +12,9 @@
     /* ::-webkit-scrollbar{width:8px;height:8px;background:var(--background);}
     ::-webkit-scrollbar-thumb{background:var(--text);} */
     /* RESET */*{/* text-decoration-skip-ink:none; */user-select:none;font-kerning:normal;outline:none;-webkit-tap-highlight-color:rgba(0,0,0,0)!important;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-appearance:none;border-radius:0;-webkit-border-radius:0;box-sizing:content-box;font-smoothing:antialiased;-moz-osx-font-smoothing: grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased;}
-	html{font-size:19px;}
+	html{font-size:14px;}
     html,body{background:var(--background);}
-    body{word-spacing:.05rem;padding:var(--spacer);color:var(--text);font:normal normal 1rem/1.3rem webfont,serif,monospace;}
+    body{padding:var(--spacer);color:var(--text);font:normal normal 1rem/1.3rem webfont,serif,monospace;}
     p,h2,ul{margin-top:.7rem;}hr+p,p:first-child{margin-top:0;}p+img,p+video,p+.cycle-slideshow,img+p,video+p,.cycle-slideshow+p{margin-top:var(--spacer);}
     h1{display:inline-block;}
     h2{font:normal normal 64px/1em webfont2,sans-serif;/* text-align:center;display:table;margin:0 auto; */margin-bottom:1rem;}
@@ -22,7 +22,7 @@
     table,tr,td{vertical-align:top;}
     td:first-child{white-space:nowrap;}
     td:not(:last-child){padding-right:calc(2* var(--spacer));}
-    small,td:first-child{font-family:monospace;font-size:11px;text-transform:uppercase;}
+    /* small,td:first-child{font-family:monospace;font-size:11px;text-transform:uppercase;} */
     i{font-style:italic;}
     a{text-decoration:underline;text-underline-offset:.11em;text-decoration-thickness:.08em;text-decoration-thickness:1px;/* padding:0 .38rem;border-radius:100vmax;transition:all .1s;background:#333;color:var(--background);box-shadow:inset 0 -1px var(--text); */white-space:nowrap;}
     a:hover{text-decoration:none;}
@@ -31,8 +31,8 @@
     #header{display:flex;justify-content:flex-start;column-gap:calc(var(--spacer) * 3);align-content:flex-start;flex-wrap:wrap;}
     #header>*{white-space:nowrap;}
     #nav{display:inline-block;}
-    #nav a{display:inline-block;background:#ddd;padding:0 .45em;color:var(--text);border-radius:100vmax;text-decoration:none;}
-    #nav a.open{background:#0f0 !important;outline:none;cursor:default;text-decoration:none;}
+    #nav a{display:inline-block;outline:1px solid var(--text);border-radius:100vmax;padding:0 .35em;text-decoration:none;}
+    #nav a.open{cursor:default;background:var(--text);color:var(--background);text-decoration:none;}
     .loading{animation:.3s blink steps(1) infinite;}
     #time-blink{animation:2s blink steps(1) infinite;}
     @keyframes blink{0%{opacity:0;}50%{opacity:1;}}
@@ -41,7 +41,7 @@
     #content>*:not(.show){display:none;}
     /* MARQUEE */
     .marquee3k{white-space:nowrap;overflow:hidden;}
-    .marquee3k{/* position:relative; */margin:0 calc(var(--spacer) * -1);/* margin-bottom:var(--spacer); *//* width:200px;flex-grow:1; */}
+    .marquee3k{margin:0 calc(var(--spacer) * -1);/* margin-bottom:var(--spacer); *//* width:200px;flex-grow:1; */}
     /* .marquee3k:after{background:linear-gradient(to right, var(--background), transparent 10%, transparent 90%, var(--background));content:" ";display:block;position:absolute;top:0;bottom:0;left:0;right:0;margin:0 -1px;} */
     .marquee3k .marquee span{margin-right:1.5em;}
     /* VIDEO */
@@ -60,11 +60,11 @@
     #lightbox{z-index:999997;cursor:zoom-out;position:fixed;inset:0;display:none;}
     #lightbox img{cursor:pointer;height:auto;max-height:90vh;max-width:calc(100vw - 2*var(--spacer));box-sizing:border-box;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);}
     /* SVG */
-    svg{fill:var(--text);vertical-align:-5%;height:.65rem;width:.65rem;}
+    svg{fill:var(--text);vertical-align:0%;height:.7rem;width:.7rem;}
     a.svg{background:transparent !important;outline:none !important;padding:0;box-shadow:none !important;}
     /* :HOVER */
     @keyframes blink{0%{opacity:1;}50%{opacity:0;}}
-    @media(hover:hover){#nav a:hover{background:#e4e4e4;}}
+    @media(hover:hover){a:hover{text-decoration:none;}}
     /* *{cursor:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" x="0px" y="0px" viewBox="0 0 16 16" style="fill:%23000;"><circle cx="8" cy="8" r="7" stroke="%23000" stroke-width="0"/></svg>') 7 7, auto !important;} */
 </style>
 </head>
@@ -74,8 +74,7 @@
 <div id="header">
     <h1 class="loading">Joey W. Schweickhardt</h1>
     <div id="nav">
-        <a href="#/index">Index</a>
-        <a href="#/about">About</a>
+        <a href="#/index">Index</a> <a href="#/about">About</a>
     </div>
     <div>Basel (<span id="time"></span><span id="weather"></span>)</div>
 </div>
@@ -179,9 +178,13 @@
             <a href="https://www.instagram.com/joeyws/">Instagram</a>,
             <a href="https://www.linkedin.com/in/joeyschweickhardt/">LinkedIn</a>
         </p>
+        <!-- <p>
+            <a href="https://www.instagram.com/joeyws/"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 56.7 56.7" enable-background="new 0 0 56.7 56.7" xml:space="preserve"><path d="M28.2,16.7c-7,0-12.8,5.7-12.8,12.8s5.7,12.8,12.8,12.8S41,36.5,41,29.5S35.2,16.7,28.2,16.7z M28.2,37.7c-4.5,0-8.2-3.7-8.2-8.2s3.7-8.2,8.2-8.2s8.2,3.7,8.2,8.2S32.7,37.7,28.2,37.7z"/><circle cx="41.5" cy="16.4" r="2.9"/><path d="M49,8.9c-2.6-2.7-6.3-4.1-10.5-4.1H17.9c-8.7,0-14.5,5.8-14.5,14.5v20.5c0,4.3,1.4,8,4.2,10.7c2.7,2.6,6.3,3.9,10.4,3.9h20.4c4.3,0,7.9-1.4,10.5-3.9c2.7-2.6,4.1-6.3,4.1-10.6V19.3C53,15.1,51.6,11.5,49,8.9z M48.6,39.9c0,3.1-1.1,5.6-2.9,7.3s-4.3,2.6-7.3,2.6H18c-3,0-5.5-0.9-7.3-2.6C8.9,45.4,8,42.9,8,39.8V19.3c0-3,0.9-5.5,2.7-7.3c1.7-1.7,4.3-2.6,7.3-2.6h20.6c3,0,5.5,0.9,7.3,2.7c1.7,1.8,2.7,4.3,2.7,7.2V39.9L48.6,39.9z"/></svg></a>
+            <a href="https://www.linkedin.com/in/joeyschweickhardt/"><svg enable-background="new 0 0 56.693 56.693" height="56.693px" version="1.1" viewBox="0 0 56.693 56.693" width="56.693px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M30.071,27.101v-0.077c-0.016,0.026-0.033,0.052-0.05,0.077H30.071z"/><path d="M49.265,4.667H7.145c-2.016,0-3.651,1.596-3.651,3.563v42.613c0,1.966,1.635,3.562,3.651,3.562h42.12 c2.019,0,3.654-1.597,3.654-3.562V8.23C52.919,6.262,51.283,4.667,49.265,4.667z M18.475,46.304h-7.465V23.845h7.465V46.304z M14.743,20.777h-0.05c-2.504,0-4.124-1.725-4.124-3.88c0-2.203,1.67-3.88,4.223-3.88c2.554,0,4.125,1.677,4.175,3.88 C18.967,19.052,17.345,20.777,14.743,20.777z M45.394,46.304h-7.465V34.286c0-3.018-1.08-5.078-3.781-5.078 c-2.062,0-3.29,1.389-3.831,2.731c-0.197,0.479-0.245,1.149-0.245,1.821v12.543h-7.465c0,0,0.098-20.354,0-22.459h7.465v3.179 c0.992-1.53,2.766-3.709,6.729-3.709c4.911,0,8.594,3.211,8.594,10.11V46.304z"/></svg></a>
+        </p> -->
         <hr>
         <p>
-            Hand-coded with <!-- &#9825; --><svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path fill="#f00" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" fill-rule="evenodd"/></svg><br>
+            Hand-coded with <!-- &#9825; --><svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path fill="#f44" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" fill-rule="evenodd"/></svg><br>
             Hosted on <a href="https://github.com/" rel="nofollow">GitHub</a><br>
             Initial launch: <!-- 16/01/ -->2011
         </p>
@@ -226,8 +229,8 @@ $(document).ready(function(){
     
     // gallery
     $(".gallery img").each(function(){
-        var ratio = $(this).prop("naturalWidth") / $(this).prop("naturalWidth");
-        $(this).wrap("<div><div></div></div>").parent().after("<span>"+$(this).attr("alt")+"&nbsp; <small>"+$(this).attr("data-date").substr(-4)+"</small></span>"); // style='width:" + (160/$(this).prop("naturalHeight")*$(this).prop("naturalWidth")) + "px;'
+        //var ratio = $(this).prop("naturalWidth") / $(this).prop("naturalWidth");
+        $(this).wrap("<div><div></div></div>").parent().after("<span>"+$(this).attr("alt")+" <small>("+$(this).attr("data-date").substr(-4)+")</small></span>"); // style='width:" + (160/$(this).prop("naturalHeight")*$(this).prop("naturalWidth")) + "px;'
     });
     // lightbox
     $("body").append("<div id='lightbox'><img src='' /></div>");
