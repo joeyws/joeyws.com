@@ -6,7 +6,7 @@
 <style>
     @font-face{font-family:webfont;src:url("font/Source_Code_Pro/SourceCodePro-Regular.ttf");} /*PP_Neue_Montreal   Jost   Perun   texgyreheros-bold   NimbusSanL-Bol   SourceCodePro-Regular  gnu-free-font/FreeSans   NimbusRomNo9L-Reg   Libre_Franklin/LibreFranklin-Bold*/
     @font-face{font-family:webfont2;src:url("font/PP_Neue_Montreal/PPNeueMontreal-Medium.otf");}
-    :root{--background:#fff;--text:#000;--spacer:8px;}
+    :root{--background:#ddd;--text:#000;--spacer:8px;}
     ::-moz-selection{background:var(--text);color:var(--background);}
     ::selection{background:var(--text);color:var(--background);}
     /* ::-webkit-scrollbar{width:8px;height:8px;background:var(--background);}
@@ -25,14 +25,15 @@
     small,td:first-child{font-family:monospace;font-size:11px;text-transform:uppercase;}
     i{font-style:italic;}
     a{text-decoration:underline;text-underline-offset:.11em;text-decoration-thickness:.08em;text-decoration-thickness:1px;/* padding:0 .38rem;border-radius:100vmax;transition:all .1s;background:#333;color:var(--background);box-shadow:inset 0 -1px var(--text); */white-space:nowrap;}
-    a:hover{text-decoration:none;}
+    a:hover{text-decoration:none;background:var(--text);color:var(--background);}
     /* a[href^=http]::after{content:"\2197";margin-left:.2em;font-style:normal;font-size:1.3rem;display:inline-block;} */
     /* LAYOUT */
-    #header{display:flex;justify-content:flex-start;column-gap:calc(var(--spacer) * 3);align-content:flex-start;flex-wrap:wrap;}
+    #header{z-index:999999;position:sticky;top:0;background:var(--text);margin:0 calc(-1 * var(--spacer));margin-top:var(--spacer);color:var(--background);padding:0 var(--spacer);display:flex;justify-content:flex-start;column-gap:calc(var(--spacer) * 3);align-content:flex-start;flex-wrap:wrap;}
     #header>*{white-space:nowrap;}
     #nav{display:inline-block;}
-    #nav a{display:inline-block;outline:1px solid var(--text);border-radius:100vmax;padding:0 .35em;text-decoration:none;}
-    #nav a.open{cursor:default;background:var(--text);color:var(--background);text-decoration:none;}
+    #nav a{display:inline-block;text-decoration:none;}
+    #nav a:hover{background:#0f0;color:var(--text);}
+    #nav a.open{cursor:default;background:var(--background);color:var(--text);text-decoration:none;}
     .loading{animation:.3s blink steps(1) infinite;}
     #time-blink{animation:2s blink steps(1) infinite;}
     @keyframes blink{0%{opacity:0;}50%{opacity:1;}}
@@ -41,7 +42,7 @@
     #content>*:not(.show){display:none;}
     /* MARQUEE */
     .marquee3k{white-space:nowrap;overflow:hidden;}
-    .marquee3k{margin:0 calc(var(--spacer) * -1);/* margin-bottom:var(--spacer); *//* width:200px;flex-grow:1; */}
+    .marquee3k{background:#f0f;margin:calc(var(--spacer) * -1);/* width:200px;flex-grow:1; */}
     /* .marquee3k:after{background:linear-gradient(to right, var(--background), transparent 10%, transparent 90%, var(--background));content:" ";display:block;position:absolute;top:0;bottom:0;left:0;right:0;margin:0 -1px;} */
     .marquee3k .marquee span{margin-right:1.5em;}
     /* VIDEO */
@@ -64,13 +65,14 @@
     a.svg{background:transparent !important;outline:none !important;padding:0;box-shadow:none !important;}
     /* :HOVER */
     @keyframes blink{0%{opacity:1;}50%{opacity:0;}}
-    @media(hover:hover){a:hover{text-decoration:none;}}
+    @media(hover:hover){}
     /* *{cursor:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" x="0px" y="0px" viewBox="0 0 16 16" style="fill:%23000;"><circle cx="8" cy="8" r="7" stroke="%23000" stroke-width="0"/></svg>') 7 7, auto !important;} */
 </style>
 </head>
 <body>
 
 
+<div class="marquee3k" data-speed=".8"><div class="marquee"><span>歡迎</span><span>Bienvenidos</span><span>Welcome</span><span>स्वागत हे</span><span>اهلا وسهلا</span><span>Bem-vinda</span><span>স্বাগত</span><span>добро пожаловать</span><span>ようこそ</span><span>Sugeng Rawuh</span><span>ਸਵਾਗਤ ਹੈ</span><span>Willkommen</span><span>어서 오십시오</span><span>Bienvenue</span><span>Karibu</span><span>Svāgatam</span><span>Hoşgeldiniz</span><span>خوش آمدید</span><span>வரவேற்பு</span><span>Hoan nghênh</span><span>اهلا وسهلا</span><span>Benvenuto</span></div></div>
 <div id="header">
     <h1 class="loading">Joey W. Schweickhardt</h1>
     <div id="nav">
@@ -196,9 +198,6 @@
         <p class="privacy"><small>Source: Weiß & Partner, Esslingen</small></p>
     </div>
 </div>
-<hr>
-<div class="marquee3k" data-speed="1"><div class="marquee"><span>歡迎</span><span>Bienvenidos</span><span>Welcome</span><span>स्वागत हे</span><span>اهلا وسهلا</span><span>Bem-vinda</span><span>স্বাগত</span><span>добро пожаловать</span><span>ようこそ</span><span>Sugeng Rawuh</span><span>ਸਵਾਗਤ ਹੈ</span><span>Willkommen</span><span>어서 오십시오</span><span>Bienvenue</span><span>Karibu</span><span>Svāgatam</span><span>Hoşgeldiniz</span><span>خوش آمدید</span><span>வரவேற்பு</span><span>Hoan nghênh</span><span>اهلا وسهلا</span><span>Benvenuto</span></div></div>
-
 
 
 <script src="scripts.js"></script>
@@ -223,6 +222,7 @@ $(document).ready(function(){
         $("a").removeClass("open");
         $("a[href='"+hash+"']").addClass("open");
         $("#" + hash.slice(2)).addClass("show").siblings().removeClass("show");
+        window.scrollTo(0,0);
         return false;
     }
     $(window).bind("hashchange",function(e){refreshHash();});
