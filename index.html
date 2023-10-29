@@ -28,7 +28,7 @@
     a:hover{text-decoration:none;background:var(--text);color:var(--background);}
     /* a[href^=http]::after{content:"\2197";margin-left:.2em;font-style:normal;font-size:1.3rem;display:inline-block;} */
     /* LAYOUT */
-    #header{z-index:999999;position:sticky;top:0;background:var(--text);margin:0 calc(-1 * var(--spacer));margin-top:var(--spacer);color:var(--background);padding:0 var(--spacer);display:flex;justify-content:flex-start;column-gap:calc(var(--spacer) * 3);align-content:flex-start;flex-wrap:wrap;}
+    #header{z-index:999996;position:sticky;top:0;background:var(--text);margin:0 calc(-1 * var(--spacer));margin-top:var(--spacer);color:var(--background);padding:0 var(--spacer);display:flex;justify-content:flex-start;column-gap:calc(var(--spacer) * 3);align-content:flex-start;flex-wrap:wrap;}
     #header>*{white-space:nowrap;}
     #nav{display:inline-block;}
     #nav a{display:inline-block;text-decoration:none;}
@@ -222,6 +222,7 @@ $(document).ready(function(){
         $("a").removeClass("open");
         $("a[href='"+hash+"']").addClass("open");
         $("#" + hash.slice(2)).addClass("show").siblings().removeClass("show");
+        window.scrollTo(0,0);
         return false;
     }
     $(window).bind("hashchange",function(e){refreshHash();});
