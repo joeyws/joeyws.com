@@ -20,13 +20,14 @@
     h2{letter-spacing:.02em;font:normal normal 64px/1em webfont2,sans-serif;/* text-align:center;display:table;margin:0 auto; */margin-bottom:1rem;}
     ul{list-style-type:none;list-style-position:inside;}
     table,tr,td{vertical-align:top;}
+    /* tr td{padding-top:.5rem;}tr:first-child td{padding-top:0;} */
     td:first-child{white-space:nowrap;}
     td:not(:last-child){padding-right:calc(2* var(--spacer));}
-    small,td:first-child{font-family:monospace;font-size:11px;text-transform:uppercase;}
+    /* small,td:first-child{font-size:11px;font-family:webfont,monospace;text-transform:uppercase;} */
     i{font-style:italic;}
     a{text-decoration:underline;text-underline-offset:.11em;text-decoration-thickness:.08em;text-decoration-thickness:1px;/* padding:0 .38rem;border-radius:100vmax;transition:all .1s;background:#333;color:var(--background);box-shadow:inset 0 -1px var(--text); */white-space:nowrap;}
     a:hover{text-decoration:none;background:var(--text);color:var(--background);}
-    /* a[href^=http]::after{content:"\2197";margin-left:.2em;font-style:normal;font-size:1.3rem;display:inline-block;} */
+    a[href^=http]::after{content:"\2197";margin-left:.2em;font-style:normal;/* font-size:1.3rem; */display:inline-block;}
     /* LAYOUT */
     #header{z-index:999996;position:sticky;top:0;background:var(--text);margin:calc(-1 * var(--spacer));margin-bottom:0;color:var(--background);padding:0 var(--spacer);display:flex;justify-content:flex-start;column-gap:calc(var(--spacer) * 3);align-content:flex-start;flex-wrap:wrap;}
     #header>*{white-space:nowrap;}
@@ -48,7 +49,7 @@
     /* VIDEO */
     .video{cursor:pointer;overflow:hidden;position:relative;max-width:960px;font-size:0;line-height:0;}
     .video.playing{cursor:pointer;}
-    .video:after{border:.4rem solid transparent;border-left:1.2rem solid var(--text);border-right-width:0;width:0;height:0;display:inline-block;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);content:"";pointer-events:none;}
+    .video:after{border:.8rem solid transparent;border-left:2.4rem solid var(--text);border-right-width:0;width:0;height:0;display:inline-block;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);content:"";pointer-events:none;}
     .video:hover:after{opacity:.3;}
     .video.playing:after{display:none;}
     video{width:100%;}
@@ -136,7 +137,7 @@
             <img loading="lazy" src="img/4.jpg" data-date="17/06/2017" alt="Merano" />
             <img loading="lazy" src="img/3.jpg" data-date="11/08/2016" alt="J&ouml;kuls&aacute;rl&oacute;n glacial lake" />
             <img loading="lazy" src="img/2.jpg" data-date="08/08/2016" alt="N&yacute;idalur" />
-            <img loading="lazy" src="img/1.jpg" data-date="" alt="Fog" />
+            <img loading="lazy" src="img/1.jpg" data-date="?" alt="Fog" />
         </div>
     </div>
     <div id="about">
@@ -150,22 +151,23 @@
         <hr>
         <h2>Education</h2>
         <table>
-            <tr><td data-title="01.10.2021-">2021 &ndash; Present</td><td>University of Stuttgart, master studies</td></tr>
-            <tr><td data-title="05.09.2022-26.01.2023">2022 &ndash; 2023</td><td>Politecnico di Milano, study abroad</td></tr>
-            <tr><td data-title="15.07.2023-22.07.2023">2022</td><td>Architectural Association/State Academy of Fine Arts Stuttgart, Visiting School</td></tr>
-            <tr><td data-title="01.10.2018-30.09.2021">2018 &ndash; 2021</td><td>University of Stuttgart, BSc</td></tr>
+            <tr><td data-title="01.10.2021-">2021 &ndash; Present</td><td>University of Stuttgart<br>Master Studies, Architecture and Urban Planning</td></tr>
+            <tr><td data-title="05.09.2022-26.01.2023">2022 &ndash; 2023</td><td>Politecnico di Milano<br>Study Abroad, Architecture and Urban Design</td></tr>
+            <tr><td data-title="15.07.2023-22.07.2023">2022</td><td>Architectural Association and State Academy of Fine Arts Stuttgart<br>Visiting School</td></tr>
+            <tr><td data-title="01.10.2018-30.09.2021">2018 &ndash; 2021</td><td>University of Stuttgart<br>BSc Architecture and Urban Planning</td></tr>
         </table>
         <hr>
         <h2>Honors</h2>
         <table>
-            <tr><td data-title="01.04.2023-">2023 &ndash; Present</td><td>Deutschlandstipendium</td></tr>
+            <tr><td data-title="01.04.2023-">2023 &ndash; Present</td><td>Deutschlandstipendium<br>Federal Republic of Germany and Ed. Züblin AG</td></tr>
             <tr><td data-title="01.03.2023-29.02.2024">2023 &ndash; Present</td><td>Swiss-European Mobility Programme</td></tr>
-            <tr><td data-title="05.09.2022-26.01.2023,01.03.2023-02.10.2023">2022 &ndash; 2023</td><td>Erasmus+ schoolarships, European Union</td></tr>
-            <tr><td data-title="24.06.2022-04.07.2022">2022</td><td>Graduate Design Projects Selection, Department of Architecture, University of Stuttgart</td></tr>
+            <tr><td data-title="05.09.2022-26.01.2023,01.03.2023-02.10.2023">2022 &ndash; 2023</td><td>Erasmus+ schoolarships</td></tr>
+            <tr><td data-title="24.06.2022-04.07.2022">2022</td><td>Graduate Design Projects Selection<br>Department of Architecture, University of Stuttgart</td></tr>
             <tr><td data-title="16.09.2021-17.09.2021">2021</td><td>CURRENT Festival for Art and Urban Space</td></tr>
-            <tr><td data-title="13.01.2020-25.01.2020">2020</td><td>Annual Design Projects Selection, IRGE, University of Stuttgart</td></tr>
+            <tr><td data-title="13.01.2020-25.01.2020">2020</td><td>Annual Design Projects Selection<br>IRGE, University of Stuttgart</td></tr>
         </table>
         <hr> -->
+        <!-- <h2>Contact</h2> -->
         <p>
             Joey W. Schweickhardt<br>
             <span class="address1"></span><br>
@@ -184,6 +186,7 @@
             <a href="https://www.linkedin.com/in/joeyschweickhardt/"><svg enable-background="new 0 0 56.693 56.693" height="56.693px" version="1.1" viewBox="0 0 56.693 56.693" width="56.693px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M30.071,27.101v-0.077c-0.016,0.026-0.033,0.052-0.05,0.077H30.071z"/><path d="M49.265,4.667H7.145c-2.016,0-3.651,1.596-3.651,3.563v42.613c0,1.966,1.635,3.562,3.651,3.562h42.12 c2.019,0,3.654-1.597,3.654-3.562V8.23C52.919,6.262,51.283,4.667,49.265,4.667z M18.475,46.304h-7.465V23.845h7.465V46.304z M14.743,20.777h-0.05c-2.504,0-4.124-1.725-4.124-3.88c0-2.203,1.67-3.88,4.223-3.88c2.554,0,4.125,1.677,4.175,3.88 C18.967,19.052,17.345,20.777,14.743,20.777z M45.394,46.304h-7.465V34.286c0-3.018-1.08-5.078-3.781-5.078 c-2.062,0-3.29,1.389-3.831,2.731c-0.197,0.479-0.245,1.149-0.245,1.821v12.543h-7.465c0,0,0.098-20.354,0-22.459h7.465v3.179 c0.992-1.53,2.766-3.709,6.729-3.709c4.911,0,8.594,3.211,8.594,10.11V46.304z"/></svg></a>
         </p> -->
         <hr>
+        <!-- <h2>joeyws.com</h2> -->
         <p>
             Hand-coded with <!-- &#9825; --><svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path fill="#" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" fill-rule="evenodd"/></svg><br>
             Hosted on <a href="https://github.com/" rel="nofollow">GitHub</a><br>
@@ -231,7 +234,7 @@ $(document).ready(function(){
     // gallery
     $(".gallery img").each(function(){
         //var ratio = $(this).prop("naturalWidth") / $(this).prop("naturalWidth");
-        $(this).wrap("<div><div></div></div>").parent().after("<span>"+$(this).attr("alt")+" <small>"+$(this).attr("data-date").substr(-4)+"</small></span>"); // style='width:" + (160/$(this).prop("naturalHeight")*$(this).prop("naturalWidth")) + "px;'
+        $(this).wrap("<div><div></div></div>").parent().after("<span>"+$(this).attr("alt")+" <small>("+$(this).attr("data-date").substr(-4)+")</small></span>"); // style='width:" + (160/$(this).prop("naturalHeight")*$(this).prop("naturalWidth")) + "px;'
     });
     // lightbox
     $("body").append("<div id='lightbox'><img src='' /></div>");
