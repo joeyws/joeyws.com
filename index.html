@@ -6,7 +6,7 @@
 <style>
     @font-face{font-family:webfont;src:url("font/Source_Code_Pro/SourceCodePro-Regular.ttf");} /*PP_Neue_Montreal   Jost   Perun   texgyreheros-bold   NimbusSanL-Bol   SourceCodePro-Regular  gnu-free-font/FreeSans   NimbusRomNo9L-Reg   Libre_Franklin/LibreFranklin-Bold*/
     @font-face{font-family:webfont2;src:url("font/PP_Neue_Montreal/PPNeueMontreal-Medium.otf");}
-    :root{--background:#ddd;--text:#000;--spacer:8px;}
+    :root{--background:#ccc;--text:#000;--spacer:8px;}
     ::-moz-selection{background:var(--text);color:var(--background);}
     ::selection{background:var(--text);color:var(--background);}
     /* ::-webkit-scrollbar{width:8px;height:8px;background:var(--background);}
@@ -17,7 +17,7 @@
     body{padding:var(--spacer);color:var(--text);font:normal normal 1rem/1.3rem webfont,serif,monospace;}
     p,h2,ul{margin-top:.7rem;}hr+p,p:first-child{margin-top:0;}p+img,p+video,p+.cycle-slideshow,img+p,video+p,.cycle-slideshow+p{margin-top:var(--spacer);}
     h1{display:inline-block;}
-    h2{letter-spacing:.02em;font:normal normal 64px/1em webfont2,sans-serif;/* text-align:center;display:table;margin:0 auto; */margin-bottom:1rem;}
+    h2{/* letter-spacing:.02em; */font:normal normal 64px/1em webfont2,sans-serif;/* text-align:center;display:table;margin:0 auto; */margin-bottom:1rem;}
     ul{list-style-type:none;list-style-position:inside;}
     table,tr,td{vertical-align:top;}
     /* tr td{padding-top:.5rem;}tr:first-child td{padding-top:0;} */
@@ -29,7 +29,7 @@
     a:hover{text-decoration:none;background:var(--text);color:var(--background);}
     a[href^=http]::after{content:"\2197";margin-left:.2em;font-style:normal;/* font-size:1.3rem; */display:inline-block;}
     /* LAYOUT */
-    #header{z-index:999996;position:sticky;top:0;background:var(--text);margin:calc(-1 * var(--spacer));margin-bottom:0;color:var(--background);padding:0 var(--spacer);display:flex;justify-content:flex-start;column-gap:calc(var(--spacer) * 3);align-content:flex-start;flex-wrap:wrap;}
+    #header{z-index:999996;position:sticky;top:0;color:var(--background);background:var(--text);margin:calc(-1 * var(--spacer));margin-bottom:0;padding:0 var(--spacer);display:flex;justify-content:flex-start;column-gap:calc(var(--spacer) * 3);align-content:flex-start;flex-wrap:wrap;}
     #header>*{white-space:nowrap;}
     #nav{display:inline-block;}
     #nav a{display:inline-block;text-decoration:none;}
@@ -42,8 +42,7 @@
     #content{min-height:100vh;}
     #content>*:not(.show){display:none;}
     /* MARQUEE */
-    .marquee3k{white-space:nowrap;overflow:hidden;}
-    .marquee3k{margin:calc(var(--spacer) * -1);margin-top:var(--spacer);background:var(--text);color:var(--background);/* width:200px;flex-grow:1; */}
+    .marquee3k{white-space:nowrap;overflow:hidden;margin:0 calc(var(--spacer) * -1);/* width:200px;flex-grow:1; */}
     /* .marquee3k:after{background:linear-gradient(to right, var(--background), transparent 10%, transparent 90%, var(--background));content:" ";display:block;position:absolute;top:0;bottom:0;left:0;right:0;margin:0 -1px;} */
     .marquee3k .marquee span{margin-right:1.5em;}
     /* VIDEO */
@@ -74,12 +73,14 @@
 
 
 <div id="header">
+    <div class="marquee3k" data-speed=".6"><div class="marquee"><span>歡迎</span><span>Bienvenidos</span><span>Welcome</span><span>स्वागत हे</span><span>اهلا وسهلا</span><span>Bem-vinda</span><span>স্বাগত</span><span>добро пожаловать</span><span>ようこそ</span><span>Sugeng Rawuh</span><span>ਸਵਾਗਤ ਹੈ</span><span>Willkommen</span><span>어서 오십시오</span><span>Bienvenue</span><span>Karibu</span><span>Svāgatam</span><span>Hoşgeldiniz</span><span>خوش آمدید</span><span>வரவேற்பு</span><span>Hoan nghênh</span><span>اهلا وسهلا</span><span>Benvenuto</span></div></div>
     <h1 class="loading">Joey W. Schweickhardt</h1>
     <div id="nav">
         <a href="#/index">Index</a> <a href="#/about">About</a>
     </div>
     <div>Basel (<span id="time"></span><span id="weather"></span>)</div>
 </div>
+
 <hr>
 <div id="content">
     <div id="index">
@@ -201,8 +202,6 @@
     </div>
 </div>
 <hr>
-<div class="marquee3k" data-speed=".8"><div class="marquee"><span>歡迎</span><span>Bienvenidos</span><span>Welcome</span><span>स्वागत हे</span><span>اهلا وسهلا</span><span>Bem-vinda</span><span>স্বাগত</span><span>добро пожаловать</span><span>ようこそ</span><span>Sugeng Rawuh</span><span>ਸਵਾਗਤ ਹੈ</span><span>Willkommen</span><span>어서 오십시오</span><span>Bienvenue</span><span>Karibu</span><span>Svāgatam</span><span>Hoşgeldiniz</span><span>خوش آمدید</span><span>வரவேற்பு</span><span>Hoan nghênh</span><span>اهلا وسهلا</span><span>Benvenuto</span></div></div>
-
 
 <script src="scripts.js"></script>
 <script>
