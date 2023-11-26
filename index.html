@@ -17,7 +17,7 @@
     body{padding:var(--spacer);color:var(--text);font:normal normal 1rem/1.3rem webfont,serif,monospace;}
     p,h2,ul{margin-top:.7rem;}hr+p,p:first-child{margin-top:0;}p+img,p+video,p+.cycle-slideshow,img+p,video+p,.cycle-slideshow+p{margin-top:var(--spacer);}
     h1{display:inline-block;}
-    h2{pointer-events:none;background:var(--background);z-index:999996;position:sticky;top:calc(1.3rem + 2*var(--spacer));line-height:1em;letter-spacing:.03em;transform:scaleY(.9);font:normal normal 32px/1em webfont2,sans-serif;display:table;/*text-align:center;margin:0 auto;*/}
+    h2{pointer-events:none;background:var(--background);z-index:999996;line-height:1em;letter-spacing:.03em;transform:scaleY(.9);font:normal normal 32px/1em webfont2,sans-serif;display:table;/*text-align:center;margin:0 auto;*/}
     h2+*{margin-top:1.2rem;}
     ul{list-style-type:none;list-style-position:inside;}
     table,tr,td{vertical-align:top;}
@@ -149,33 +149,35 @@
         </div>
     </div>
     <div id="about">
-        <!-- <h2>Experience</h2>
-        <table>
-            <tr><td data-title="01.03.2023-">2023 &ndash; Present</td><td>Herzog & de Meuron</td></tr>
-            <tr><td data-title="14.03.2023-09.09.2023">2022</td><td>Behnisch Architekten</td></tr>
-            <tr><td data-title="25.10.2022-28.02.2023">2021 &ndash; 2022</td><td>REM ASSETS</td></tr>
-            <tr><td data-title="01.10.2021-30.09.2022">2020 &ndash; 2021</td><td>Werner Sobek</td></tr>
-        </table>
-        <hr>
-        <h2>Education</h2>
-        <table>
-            <tr><td data-title="01.10.2021-">2021 &ndash; Present</td><td>University of Stuttgart<br>Master Studies, Architecture and Urban Planning</td></tr>
-            <tr><td data-title="05.09.2022-26.01.2023">2022 &ndash; 2023</td><td>Politecnico di Milano<br>Study Abroad, Architecture and Urban Design</td></tr>
-            <tr><td data-title="15.07.2023-22.07.2023">2022</td><td>Architectural Association and State Academy of Fine Arts Stuttgart<br>Visiting School</td></tr>
-            <tr><td data-title="01.10.2018-30.09.2021">2018 &ndash; 2021</td><td>University of Stuttgart<br>BSc Architecture and Urban Planning</td></tr>
-        </table>
-        <hr>
-        <h2>Honors</h2>
-        <table>
-            <tr><td data-title="01.04.2023-">2023 &ndash; Present</td><td>Deutschlandstipendium<br>Federal Republic of Germany/Ed. Züblin AG</td></tr>
-            <tr><td data-title="01.03.2023-29.02.2024">2023 &ndash; Present</td><td>Swiss-European Mobility Programme</td></tr>
-            <tr><td data-title="05.09.2022-26.01.2023,01.03.2023-02.10.2023">2022 &ndash; 2023</td><td>Erasmus+ schoolarships</td></tr>
-            <tr><td data-title="24.06.2022-04.07.2022">2022</td><td>Graduate Design Projects Selection<br>Department of Architecture, University of Stuttgart</td></tr>
-            <tr><td data-title="16.09.2021-17.09.2021">2021</td><td>CURRENT Festival for Art and Urban Space</td></tr>
-            <tr><td data-title="13.01.2020-25.01.2020">2020</td><td>Annual Design Projects Selection<br>IRGE, University of Stuttgart</td></tr>
-        </table>
-        <hr>
-        <h2>Contact</h2> -->
+        <!-- <div class="section">
+            <h2>Experience</h2>
+            <table>
+                <tr><td data-title="01.03.2023-">2023 &ndash; Present</td><td>Herzog & de Meuron</td></tr>
+                <tr><td data-title="14.03.2023-09.09.2023">2022</td><td>Behnisch Architekten</td></tr>
+                <tr><td data-title="25.10.2022-28.02.2023">2021 &ndash; 2022</td><td>REM ASSETS</td></tr>
+                <tr><td data-title="01.10.2021-30.09.2022">2020 &ndash; 2021</td><td>Werner Sobek</td></tr>
+            </table>
+        </div>
+        <div class="section">
+            <h2>Education</h2>
+            <table>
+                <tr><td data-title="01.10.2021-">2021 &ndash; Present</td><td>University of Stuttgart<br>Master Studies, Architecture and Urban Planning</td></tr>
+                <tr><td data-title="05.09.2022-26.01.2023">2022 &ndash; 2023</td><td>Politecnico di Milano<br>Study Abroad, Architecture and Urban Design</td></tr>
+                <tr><td data-title="15.07.2023-22.07.2023">2022</td><td>Architectural Association and State Academy of Fine Arts Stuttgart<br>Visiting School</td></tr>
+                <tr><td data-title="01.10.2018-30.09.2021">2018 &ndash; 2021</td><td>University of Stuttgart<br>BSc Architecture and Urban Planning</td></tr>
+            </table>
+        </div>
+        <div class="section">
+            <h2>Honors</h2>
+            <table>
+                <tr><td data-title="01.04.2023-">2023 &ndash; Present</td><td>Deutschlandstipendium<br>Federal Republic of Germany/Ed. Züblin AG</td></tr>
+                <tr><td data-title="01.03.2023-29.02.2024">2023 &ndash; Present</td><td>Swiss-European Mobility Programme</td></tr>
+                <tr><td data-title="05.09.2022-26.01.2023,01.03.2023-02.10.2023">2022 &ndash; 2023</td><td>Erasmus+ schoolarships</td></tr>
+                <tr><td data-title="24.06.2022-04.07.2022">2022</td><td>Graduate Design Projects Selection<br>Department of Architecture, University of Stuttgart</td></tr>
+                <tr><td data-title="16.09.2021-17.09.2021">2021</td><td>CURRENT Festival for Art and Urban Space</td></tr>
+                <tr><td data-title="13.01.2020-25.01.2020">2020</td><td>Annual Design Projects Selection<br>IRGE, University of Stuttgart</td></tr>
+            </table>
+        </div> -->
         <div class="section">
             <h2>Contact</h2>
             <p>
