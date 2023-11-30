@@ -4,7 +4,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='32' width='32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%23000000' /%3E%3C/svg%3E">
 <meta charset="utf-8"><meta name="robots" content="index,nofollow,notranslate,noimageindex"><meta name="description" content="Welcome to the personal web page of Joey W. Schweickhardt."><meta name="keywords" content="schweickhardt,joey,stuttgart,joeyws,william,herzogdemeuron,basel,architektur,universität,institut"><meta name="geo.region" content="DE-BW"><meta name="geo.placename" content="Stuttgart"><meta name="geo.position" content="48.778600;9.179746"><meta name="ICBM" content="48.778600, 9.179746"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes,shrink-to-fit=no"><meta name="format-detection" content="telephone=no">
 <style>
-    @font-face{font-family:webfont;src:url("font/Source_Code_Pro/SourceCodePro-Medium.ttf");} /*PP_Neue_Montreal   Jost   Perun   texgyreheros-bold   NimbusSanL-Bol   SourceCodePro-Regular  gnu-free-font/FreeSans   NimbusRomNo9L-Reg   Libre_Franklin/LibreFranklin-Bold*/
+    @font-face{font-family:webfont;src:url("font/Source_Code_Pro/SourceCodePro-Regular.ttf");} /*PP_Neue_Montreal   Jost   Perun   texgyreheros-bold   NimbusSanL-Bol   SourceCodePro-Regular  gnu-free-font/FreeSans   NimbusRomNo9L-Reg   Libre_Franklin/LibreFranklin-Bold*/
     @font-face{font-family:webfont2;src:url("font/PP_Neue_Montreal/PPNeueMontreal-Bold.otf");}
     :root{--background:#000;--text:#999;--spacer:8px;}
     ::-moz-selection{background:var(--text);color:var(--background);}
@@ -17,11 +17,11 @@
     body{padding:var(--spacer);color:var(--text);font:normal normal 1rem/1.3rem webfont,serif,monospace;}
     p,h2,ul{margin-top:.7rem;}hr+p,p:first-child{margin-top:0;}p+img,p+video,p+.cycle-slideshow,img+p,video+p,.cycle-slideshow+p{margin-top:var(--spacer);}
     h1{display:inline-block;}
-    h2{pointer-events:none;background:var(--background);z-index:999996;line-height:1em;letter-spacing:.03em;transform:scaleY(.9);font:normal normal 32px/1em webfont2,sans-serif;display:table;/*text-align:center;margin:0 auto;*/}
+    h2{pointer-events:none;background:var(--background);z-index:999996;line-height:1em;letter-spacing:.03em;transform:scaleY(.9);font:normal normal 24px/1em webfont2,sans-serif;display:table;/*text-align:center;margin:0 auto;*/}
     h2+*{margin-top:1.2rem;}
     ul{list-style-type:none;list-style-position:inside;}
     table,tr,td{vertical-align:top;}
-    small{opacity:.5;}
+    small{font-size:11px;}
     /* tr td{padding-top:.5rem;}tr:first-child td{padding-top:0;} */
     td:first-child{white-space:nowrap;}
     td:not(:last-child){padding-right:calc(2* var(--spacer));}
@@ -31,19 +31,18 @@
     a:hover{text-decoration:none;background:var(--text);color:var(--background);}
     a[href^=http]::after{content:"\2197";margin-left:.2em;font-style:normal;display:inline-block;}
     /* LAYOUT */
-    #header{top:0;padding:var(--spacer);margin:calc(var(--spacer) * -1);margin-bottom:0;display:flex;column-gap:calc(var(--spacer) * 3);z-index:999997;position:sticky;justify-content:flex-start;align-content:flex-start;flex-wrap:wrap;}
+    #header{top:var(--spacer);display:flex;column-gap:calc(var(--spacer) * 3);z-index:999997;position:sticky;justify-content:flex-start;align-content:flex-start;flex-wrap:wrap;}
     #header>*{white-space:nowrap;background:var(--background);}
     #nav{display:inline-block;}
-    #nav a{display:inline-block;text-decoration:none;}
-    #nav a:hover{background:var(--background);color:var(--text);}
-    #nav a.open{cursor:default;background:#0f0;color:var(--background);}
+    #nav a{display:inline-block;text-decoration:none;background:transparent;color:var(--text);}
+    #nav a.open{cursor:default;background:#0f0 !important;color:var(--background) !important;}
     .loading{animation:.3s blink steps(1) infinite;}
     #time-blink{animation:2s blink steps(1) infinite;}
     @keyframes blink{0%{opacity:0;}50%{opacity:1;}}
     hr{margin:1.8rem 0;/* border-top:1px dotted var(--text); */}
     #content{min-height:100vh;}
     #content>*:not(.show){display:none;}
-    .marquee,.section{margin-top:2.8rem;}
+    .marquee,.section{margin-top:3.2rem;}
     /* MARQUEE */
     .marquee3k{white-space:nowrap;overflow:hidden;margin:0 calc(var(--spacer) * -1);/* margin-bottom:var(--spacer); *//* width:200px;flex-grow:1; */}
     /* .marquee3k:after{background:linear-gradient(to right, var(--background), transparent 10%, transparent 90%, var(--background));content:" ";display:block;position:absolute;top:0;bottom:0;left:0;right:0;margin:0 -1px;} */
