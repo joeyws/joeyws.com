@@ -4,9 +4,9 @@
 <link rel="shortcut icon" type="image/x-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='32' width='32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%23000000' /%3E%3C/svg%3E">
 <meta charset="utf-8"><meta name="robots" content="index,nofollow,notranslate,noimageindex"><meta name="description" content="Welcome to the personal web page of Joey W. Schweickhardt."><meta name="keywords" content="schweickhardt,joey,stuttgart,joeyws,william,herzogdemeuron,basel,architektur,universität,institut"><meta name="geo.region" content="DE-BW"><meta name="geo.placename" content="Stuttgart"><meta name="geo.position" content="48.778600;9.179746"><meta name="ICBM" content="48.778600, 9.179746"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes,shrink-to-fit=no"><meta name="format-detection" content="telephone=no">
 <style>
-    @font-face{font-family:webfont;src:url("font/Source_Code_Pro/SourceCodePro-Regular.ttf");} /*PP_Neue_Montreal   Jost   Perun   texgyreheros-bold   NimbusSanL-Bol   SourceCodePro-Regular  gnu-free-font/FreeSans   NimbusRomNo9L-Reg   Libre_Franklin/LibreFranklin-Bold*/
-    @font-face{font-family:webfont2;src:url("font/PP_Neue_Montreal/PPNeueMontreal-Bold.otf");}
-    :root{--background:#000;--text:#999;--spacer:8px;}
+    @font-face{font-family:webfont;src:url("font/PP_Neue_Montreal/PPNeueMontreal-Bold.otf");}
+    @font-face{font-family:webfont2;src:url("font/Source_Code_Pro/SourceCodePro-Regular.ttf");} /*PP_Neue_Montreal   Jost   Perun   texgyreheros-bold   NimbusSanL-Bol   SourceCodePro-Regular  gnu-free-font/FreeSans   NimbusRomNo9L-Reg   Libre_Franklin/LibreFranklin-Bold*/
+    :root{--background:#000;--text:#aaa;--spacer:8px;}
     ::-moz-selection{background:var(--text);color:var(--background);}
     ::selection{background:var(--text);color:var(--background);}
     /* ::-webkit-scrollbar{width:8px;height:8px;background:var(--background);}
@@ -14,29 +14,28 @@
     /* RESET */*{/* text-decoration-skip-ink:none; */user-select:none;font-kerning:normal;outline:none;-webkit-tap-highlight-color:rgba(0,0,0,0)!important;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-appearance:none;border-radius:0;-webkit-border-radius:0;box-sizing:content-box;font-smoothing:antialiased;-moz-osx-font-smoothing: grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased;}
 	html{font-size:14px;}
     html,body{background:var(--background);}
-    body{padding:var(--spacer);color:var(--text);font:normal normal 1rem/1.3rem webfont,serif,monospace;}
+    body{padding:var(--spacer);color:var(--text);font:normal normal 1rem/1.3rem webfont2,serif,monospace;}
     p,h2,ul{margin-top:.7rem;}hr+p,p:first-child{margin-top:0;}p+img,p+video,p+.cycle-slideshow,img+p,video+p,.cycle-slideshow+p{margin-top:var(--spacer);}
     h1{display:inline-block;}
-    h2{pointer-events:none;background:var(--background);background-clip:content-box;padding-top:calc(2*var(--spacer));z-index:999996;line-height:1em;font:normal normal 24px/1em webfont2,sans-serif;display:table;letter-spacing:.03em;transform:scaleY(.9);/*text-align:center;margin:0 auto;*/}
+    h2{pointer-events:none;mix-blend-mode:difference;text-transform:uppercase;/* background:var(--background); */background-clip:content-box;padding-top:calc(2*var(--spacer));z-index:999996;line-height:1em;font:normal normal 28px/1em webfont,sans-serif;display:table;letter-spacing:.04em;transform:scaleY(.92);/*text-align:center;margin:0 auto;*/}
     h2+*{margin-top:1.2rem;}
     ul{list-style-type:none;list-style-position:inside;}
     table,tr,td{vertical-align:top;}
-    small{font-size:11px;}
+    /* small{font-size:11px;} */
     /* tr td{padding-top:.5rem;}tr:first-child td{padding-top:0;} */
     td:first-child{white-space:nowrap;}
     td:not(:last-child){padding-right:calc(2* var(--spacer));}
     /* small,td:first-child{font-size:11px;font-family:webfont,monospace;text-transform:uppercase;} */
     i{font-style:italic;}
     a{text-decoration:underline;text-underline-offset:.11em;text-decoration-thickness:.08em;text-decoration-thickness:1px;white-space:nowrap;}
-    a:hover{text-decoration:none;background:var(--text);color:var(--background);}
+    a:hover{text-decoration:none;}
     a[href^=http]::after{content:"\2197";margin-left:.2em;font-style:normal;display:inline-block;}
     /* LAYOUT */
-    #header{top:var(--spacer);display:flex;column-gap:calc(var(--spacer) * 3);z-index:999997;position:sticky;justify-content:flex-start;align-content:flex-start;flex-wrap:wrap;}
-    #header>*{white-space:nowrap;background:var(--background);}
+    #header{mix-blend-mode:difference;top:var(--spacer);display:flex;column-gap:calc(var(--spacer) * 3);z-index:999997;position:sticky;justify-content:flex-start;align-content:flex-start;flex-wrap:wrap;}
+    #header>*{white-space:nowrap;/* background:var(--background); */}
     #nav{display:inline-block;}
-    #nav a{display:inline-block;/* border-radius:5px; */text-decoration:none;background:transparent;}
-    #nav a:hover{color:inherit;background:inherit;}
-    #nav a.open{cursor:default;background:#0f0 !important;color:var(--background) !important;}
+    #nav a{display:inline-block;text-decoration:none;}
+    #nav a.open{outline:none;background:#0f0;color:var(--background);cursor:default;box-shadow:none;}
     .loading{animation:.3s blink steps(1) infinite;}
     #time-blink{animation:2s blink steps(1) infinite;}
     @keyframes blink{0%{opacity:0;}50%{opacity:1;}}
@@ -95,7 +94,7 @@
                     <source src="https://www.dropbox.com/s/mmcykw5nus3m39u/LandDerEchsen1080.ogv?raw=1" type='video/ogg; codecs="theora, vorbis"' />
                 </video>
             </div>
-            <p>Land der Echsen (Germany, 2021). The council is planning a new quarter on a run-down railroad station site. There are various non-profit institutions housing in old loading halls, which are now forced to move out for the demolition generating room for several new buildings. Suddenly lizards enter the game and endanger the entire undertaking. Created as part of the <i>Anti-Stuttgart &mdash; A Determinate Negation</i> <a href="https://www.igma.uni-stuttgart.de/en/institute/">IGmA</a> design studio, in which certain urban developments and procedures were examined critically. The film was being shown at the University of Stuttgart department of architecture&#8217;s <a href="https://www.k1.live/">graduates exhibition</a> and at the <a href="https://www.current-stuttgart.de/">CURRENT festival</a> for art and urban space.</p>
+            <p class="indent">Land der Echsen (Germany, 2021). The council is planning a new quarter on a run-down railroad station site. There are various non-profit institutions housing in old loading halls, which are now forced to move out for the demolition generating room for several new buildings. Suddenly lizards enter the game and endanger the entire undertaking. Created as part of the <i>Anti-Stuttgart &mdash; A Determinate Negation</i> <a href="https://www.igma.uni-stuttgart.de/en/institute/">IGmA</a> design studio, in which certain urban developments and procedures were examined critically. The film was being shown at the University of Stuttgart department of architecture&#8217;s <a href="https://www.k1.live/">graduates exhibition</a> and at the <a href="https://www.current-stuttgart.de/">CURRENT festival</a> for art and urban space.</p>
         </div>
         <div class="section">
             <h2>Works</h2>
@@ -190,7 +189,7 @@
                 <a class="email" href="javascript:"></a>
             </p>
             <p>
-                <a href="https://www.instagram.com/joeyws/">Instagram</a>,
+                <a href="https://www.instagram.com/joeyws/">Instagram</a>
                 <a href="https://www.linkedin.com/in/joeyschweickhardt/">LinkedIn</a>
             </p>
         </div>
@@ -208,9 +207,9 @@
         </div>
         <div class="section">
             <p><a id="show-privacy" href="javascript:;">Privacy</a></p>
-            <p class="privacy">Personal data (usually referred to just as &ldquo;data&rdquo; below) will only be processed by us to the extent necessary and for the purpose of providing a functional and user-friendly website, including its contents, and the services offered there. Per Art. 4 No. 1 of Regulation (EU) 2016/679, i.e. the General Data Protection Regulation (hereinafter referred to as the &ldquo;GDPR&rdquo;), &ldquo;processing&rdquo; refers to any operation or set of operations such as collection, recording, organization, structuring, storage, adaptation, alteration, retrieval, consultation, use, disclosure by transmission, dissemination, or otherwise making available, alignment, or combination, restriction, erasure, or destruction performed on personal data, whether by automated means or not.</p>
-            <p class="privacy">With regard to the data processing to be described in more detail below, users and data subjects have the right to confirmation of whether data concerning them is being processed, information about the data being processed, further information about the nature of the data processing, and copies of the data (cf. also Art. 15 GDPR); to correct or complete incorrect or incomplete data (cf. also Art. 16 GDPR); to the immediate deletion of data concerning them (cf. also Art. 17 DSGVO), or, alternatively, if further processing is necessary as stipulated in Art. 17 Para. 3 GDPR, to restrict said processing per Art. 18 GDPR; to receive copies of the data concerning them and/or provided by them and to have the same transmitted to other providers/controllers (cf. also Art. 20 GDPR); to file complaints with the supervisory authority if they believe that data concerning them is being processed by the controller in breach of data protection provisions (see also Art. 77 GDPR). In addition, the controller is obliged to inform all recipients to whom it discloses data of any such corrections, deletions, or restrictions placed on processing the same per Art. 16, 17 Para. 1, 18 GDPR. However, this obligation does not apply if such notification is impossible or involves a disproportionate effort. Nevertheless, users have a right to information about these recipients.</p>
-            <p class="privacy">Likewise, under Art. 21 GDPR, users and data subjects have the right to object to the controller&rsquo;s future processing of their data pursuant to Art. 6 Para. 1 lit. f) GDPR. In particular, an objection to data processing for the purpose of direct advertising is permissible. Your data processed when using our website will be deleted or blocked as soon as the purpose for its storage ceases to apply, provided the deletion of the same is not in breach of any statutory storage obligations or unless otherwise stipulated below.</p>
+            <p class="privacy indent">Personal data (usually referred to just as &ldquo;data&rdquo; below) will only be processed by us to the extent necessary and for the purpose of providing a functional and user-friendly website, including its contents, and the services offered there. Per Art. 4 No. 1 of Regulation (EU) 2016/679, i.e. the General Data Protection Regulation (hereinafter referred to as the &ldquo;GDPR&rdquo;), &ldquo;processing&rdquo; refers to any operation or set of operations such as collection, recording, organization, structuring, storage, adaptation, alteration, retrieval, consultation, use, disclosure by transmission, dissemination, or otherwise making available, alignment, or combination, restriction, erasure, or destruction performed on personal data, whether by automated means or not.</p>
+            <p class="privacy indent">With regard to the data processing to be described in more detail below, users and data subjects have the right to confirmation of whether data concerning them is being processed, information about the data being processed, further information about the nature of the data processing, and copies of the data (cf. also Art. 15 GDPR); to correct or complete incorrect or incomplete data (cf. also Art. 16 GDPR); to the immediate deletion of data concerning them (cf. also Art. 17 DSGVO), or, alternatively, if further processing is necessary as stipulated in Art. 17 Para. 3 GDPR, to restrict said processing per Art. 18 GDPR; to receive copies of the data concerning them and/or provided by them and to have the same transmitted to other providers/controllers (cf. also Art. 20 GDPR); to file complaints with the supervisory authority if they believe that data concerning them is being processed by the controller in breach of data protection provisions (see also Art. 77 GDPR). In addition, the controller is obliged to inform all recipients to whom it discloses data of any such corrections, deletions, or restrictions placed on processing the same per Art. 16, 17 Para. 1, 18 GDPR. However, this obligation does not apply if such notification is impossible or involves a disproportionate effort. Nevertheless, users have a right to information about these recipients.</p>
+            <p class="privacy indent">Likewise, under Art. 21 GDPR, users and data subjects have the right to object to the controller&rsquo;s future processing of their data pursuant to Art. 6 Para. 1 lit. f) GDPR. In particular, an objection to data processing for the purpose of direct advertising is permissible. Your data processed when using our website will be deleted or blocked as soon as the purpose for its storage ceases to apply, provided the deletion of the same is not in breach of any statutory storage obligations or unless otherwise stipulated below.</p>
             <p class="privacy"><small>Source: Weiß & Partner, Esslingen</small></p>
         </div>
     </div>
