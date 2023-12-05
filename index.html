@@ -15,10 +15,9 @@
 	html{font-size:14px;}
     html,body{background:var(--background);}
     body{padding:var(--spacer);color:var(--text);font:normal normal 1rem/1.3rem webfont2,serif,monospace;}
-    p,h2,ul{margin-top:.7rem;}hr+p,p:first-child{margin-top:0;}p+img,p+video,p+.cycle-slideshow,img+p,video+p,.cycle-slideshow+p{margin-top:var(--spacer);}
+    p,h2,ul{margin-top:.7rem;}hr+p,p:first-child{margin-top:0;}p+img,p+video,img+p,video+p{margin-top:var(--spacer);}
     h1{display:inline-block;}
-    h2{/* background-clip:content-box;transform:scaleY(.95);font:normal normal 28px/1em webfont,sans-serif;pointer-events:none;padding-top:calc(2*var(--spacer));z-index:999996; *//*text-align:center;margin:0 auto; */display:table;}
-    h2+*{margin-top:1.2rem;}
+    h2{padding:0 .35em;background:#00f;color:var(--background);border-radius:100vmax;margin-bottom:.8rem;/* font:normal normal 28px/1em webfont,sans-serif;transform:scaleY(.95);*/display:table;}
     ul{list-style-type:none;list-style-position:inside;}
     table,tr,td{vertical-align:top;}
     small,td:first-child{font-size:11px;}
@@ -33,15 +32,15 @@
     #header{/* top:var(--spacer);z-index:999997;position:sticky; */display:inline-flex;column-gap:calc(var(--spacer) * 3);justify-content:flex-start;align-content:flex-start;flex-wrap:wrap;}
     #header>*{white-space:nowrap;}
     #nav{display:inline-block;}
-    #nav a{border-radius:100vmax;padding:0 .35em;background:#ccc;display:inline-block;text-decoration:none;}
+    #nav a{border-radius:100vmax;padding:0 .35em;background:#bbb;display:inline-block;text-decoration:none;}
+    #nav a:hover{background:#c8c8c8;}
     #nav a.open{background:#0f0;cursor:default;}
     .loading{animation:.3s blink steps(1) infinite;}
     #time-blink{animation:2s blink steps(1) infinite;}
     @keyframes blink{0%{opacity:0;}50%{opacity:1;}}
-    /* hr{margin:1.8rem 0;} */
+    hr{margin:1.8rem 0;}
     #content{min-height:100vh;}
     #content>*:not(.show){display:none;}
-    .section{margin-top:3.2rem;}
     /* MARQUEE */
     .marquee3k{background:var(--text);color:var(--background);white-space:nowrap;overflow:hidden;margin:calc(var(--spacer) * -1);margin-bottom:var(--spacer);/* width:200px;flex-grow:1; */}
     /* .marquee3k:after{background:linear-gradient(to right, var(--background), transparent 10%, transparent 90%, var(--background));content:" ";display:block;position:absolute;top:0;bottom:0;left:0;right:0;margin:0 -1px;} */
@@ -50,8 +49,8 @@
     .video{cursor:pointer;overflow:hidden;position:relative;max-width:960px;font-size:0;line-height:0;}
     .video.playing{cursor:pointer;}
     /* .video:after{border:.4rem solid transparent;border-left:1.3rem solid var(--text);border-right-width:0;width:0;height:0;display:inline-block;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);content:"";pointer-events:none;} */
-    .video:after{display:inline-block;color:var(--background);background:var(--text);padding:.1em .5em;border-radius:100vmax;font-size:1rem;line-height:1.3rem;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);content:"Play";pointer-events:none;}
-    .video:hover:after{text-decoration:underline;}
+    .video:after{display:inline-block;color:var(--background);background:var(--text);padding:0 .4rem;border-radius:100vmax;font-size:1rem;line-height:1.3rem;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);content:"Play";pointer-events:none;}
+    .video:hover:after{opacity:.67;}
     .video.playing:after{display:none;}
     video{width:100%;}
     /* GALLERY */
@@ -82,137 +81,127 @@
     </div>
     <div>Basel (<span id="time"></span><span id="weather"></span>)</div>
 </div>
+<hr>
 
 
 <div id="content">
     <div id="index">
-        <div class="section">
-            <h2>Featured</h2>
-            <div class="video">
-                <video onclick="this.parentElement.classList.add('playing');this.setAttribute('controls','');this.setAttribute('autoplay','');this.setAttribute('preload','');" oncontextmenu="return false;" poster="img/landderechsen.jpg" tabindex="0" preload="none" controlsList="nodownload noplaybackrate" disablePictureInPicture>
-                    <source src="video/LandDerEchsen1080.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
-                    <source src="video/LandDerEchsen720.webm" type='video/webm; codecs="vp8, vorbis"' />
-                    <source src="https://www.dropbox.com/s/mmcykw5nus3m39u/LandDerEchsen1080.ogv?raw=1" type='video/ogg; codecs="theora, vorbis"' />
-                </video>
-            </div>
-            <p class="indent">Land der Echsen (Germany, 2021). The council is planning a new quarter on a run-down railroad station site. There are various non-profit institutions housing in old loading halls, which are now forced to move out for the demolition generating room for several new buildings. Suddenly lizards enter the game and endanger the entire undertaking. Created as part of the <i>Anti-Stuttgart &mdash; A Determinate Negation</i> <a href="https://www.igma.uni-stuttgart.de/en/institute/">IGmA</a> design studio, in which certain urban developments and procedures were examined critically. The film was being shown at the University of Stuttgart department of architecture&#8217;s <a href="https://www.k1.live/">graduates exhibition</a> and at the <a href="https://www.current-stuttgart.de/">CURRENT festival</a> for art and urban space.</p>
+        <h2>Featured</h2>
+        <div class="video">
+            <video onclick="this.parentElement.classList.add('playing');this.setAttribute('controls','');this.setAttribute('autoplay','');this.setAttribute('preload','');" oncontextmenu="return false;" poster="img/landderechsen.jpg" tabindex="0" preload="none" controlsList="nodownload noplaybackrate" disablePictureInPicture>
+                <source src="video/LandDerEchsen1080.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+                <source src="video/LandDerEchsen720.webm" type='video/webm; codecs="vp8, vorbis"' />
+                <source src="https://www.dropbox.com/s/mmcykw5nus3m39u/LandDerEchsen1080.ogv?raw=1" type='video/ogg; codecs="theora, vorbis"' />
+            </video>
         </div>
-        <div class="section">
-            <h2>Works</h2>
-            <div class="gallery">
-                <img loading="lazy" src="img/26.jpg" data-date="2022" alt="Lightweight pneu pavillons" />
-                <img loading="lazy" src="img/inflate.gif" data-date="2022" alt="Pneu study" />
-                <img loading="lazy" src="img/25.jpg" data-date="2021" alt="Vasikkasaari Climate Research Institute Helsinki" />
-                <img loading="lazy" src="img/23.jpg" data-date="2021" alt="Wardrobe with hand-sewn curtain" />
-                <img loading="lazy" src="img/droneport.gif" data-date="2020" alt="Droneport" />
-                <img loading="lazy" src="img/21.jpg" data-date="2020" alt="Light studies models" />
-                <img loading="lazy" src="img/20.jpg" data-date="2020" alt="Wooden structure with traction cables" />
-                <img loading="lazy" src="img/16.jpg" data-date="2019" alt="Sint-Aneke-Club Antwerp" />
-                <img loading="lazy" src="img/15.jpg" data-date="2019" alt="Model, laser cut, glueless" />
-                <img loading="lazy" src="img/14.jpg" data-date="2019" alt="Cuboid perspective" />
-                <img loading="lazy" src="img/13.jpg" data-date="2019" alt="Cuboid perspective preparation" />
-                <img loading="lazy" src="img/12.jpg" data-date="2019" alt="Cuboid axonometry" />
-                <img loading="lazy" src="img/11.jpg" data-date="2019" alt="Ruled surfaces" />
-                <img loading="lazy" src="img/10.jpg" data-date="2019" alt="Pineapple, etching" />
-                <img loading="lazy" src="img/9.2.jpg" data-date="2019" alt="Cup, ink" />
-                <img loading="lazy" src="img/9.jpg" data-date="2019" alt="Tools" />
-                <img loading="lazy" src="img/8.jpg" data-date="2018" alt="Leichtsinn" />
-            </div>
+        <p class="indent">Land der Echsen (Germany, 2021). The council is planning a new quarter on a run-down railroad station site. There are various non-profit institutions housing in old loading halls, which are now forced to move out for the demolition generating room for several new buildings. Suddenly lizards enter the game and endanger the entire undertaking. Created as part of the <i>Anti-Stuttgart &mdash; A Determinate Negation</i> <a href="https://www.igma.uni-stuttgart.de/en/institute/">IGmA</a> design studio, in which certain urban developments and procedures were examined critically. The film was being shown at the University of Stuttgart department of architecture&#8217;s <a href="https://www.k1.live/">graduates exhibition</a> and at the <a href="https://www.current-stuttgart.de/">CURRENT festival</a> for art and urban space.</p>
+        <hr>
+        <h2>Works</h2>
+        <div class="gallery">
+            <img loading="lazy" src="img/26.jpg" data-date="2022" alt="Lightweight pneu pavillons" />
+            <img loading="lazy" src="img/inflate.gif" data-date="2022" alt="Pneu study" />
+            <img loading="lazy" src="img/25.jpg" data-date="2021" alt="Vasikkasaari Climate Research Institute Helsinki" />
+            <img loading="lazy" src="img/23.jpg" data-date="2021" alt="Wardrobe with hand-sewn curtain" />
+            <img loading="lazy" src="img/droneport.gif" data-date="2020" alt="Droneport" />
+            <img loading="lazy" src="img/21.jpg" data-date="2020" alt="Light studies models" />
+            <img loading="lazy" src="img/20.jpg" data-date="2020" alt="Wooden structure with traction cables" />
+            <img loading="lazy" src="img/16.jpg" data-date="2019" alt="Sint-Aneke-Club Antwerp" />
+            <img loading="lazy" src="img/15.jpg" data-date="2019" alt="Model, laser cut, glueless" />
+            <img loading="lazy" src="img/14.jpg" data-date="2019" alt="Cuboid perspective" />
+            <img loading="lazy" src="img/13.jpg" data-date="2019" alt="Cuboid perspective preparation" />
+            <img loading="lazy" src="img/12.jpg" data-date="2019" alt="Cuboid axonometry" />
+            <img loading="lazy" src="img/11.jpg" data-date="2019" alt="Ruled surfaces" />
+            <img loading="lazy" src="img/10.jpg" data-date="2019" alt="Pineapple, etching" />
+            <img loading="lazy" src="img/9.2.jpg" data-date="2019" alt="Cup, ink" />
+            <img loading="lazy" src="img/9.jpg" data-date="2019" alt="Tools" />
+            <img loading="lazy" src="img/8.jpg" data-date="2018" alt="Leichtsinn" />
         </div>
-        <div class="section">
-            <h2>Places</h2>
-            <div class="gallery">
-                <img loading="lazy" src="img/41.jpg" data-date="19/08/2023" alt="Railway Engine Depot" />
-                <img loading="lazy" src="img/36.jpg" data-date="14/01/2023" alt="Sant&rsquo; Ireneo" />
-                <img loading="lazy" src="img/35.jpg" data-date="09/01/2023" alt="Via Albricci" />
-                <img loading="lazy" src="img/34.jpg" data-date="05/01/2023" alt="Garden" />
-                <img loading="lazy" src="img/33.jpg" data-date="04/01/2023" alt="Nilufar Gallery" />
-                <img loading="lazy" src="img/32.jpg" data-date="04/11/2022" alt="Monte Amiata" />
-                <img loading="lazy" src="img/30.jpg" data-date="30/10/2022" alt="Amendola" />
-                <img loading="lazy" src="img/28.jpg" data-date="15/09/2022" alt="Emergence Pool, courtesy of Nari Ward" />
-                <img loading="lazy" src="img/29.jpg" data-date="22/09/2022" alt="ADI" />
-                <img loading="lazy" src="img/27.jpg" data-date="04/09/2022" alt="Clouds" />
-                <img loading="lazy" src="img/24.jpg" data-date="02/01/2021" alt="Creek" />
-                <img loading="lazy" src="img/22.jpg" data-date="27/09/2019" alt="Flora" />
-                <img loading="lazy" src="img/19.jpg" data-date="17/03/2019" alt="Death Valley" />
-                <img loading="lazy" src="img/18.jpg" data-date="15/03/2019" alt="Campfire in a sandy forest" />
-                <img loading="lazy" src="img/17.jpg" data-date="25/09/2018" alt="Switzerland" />
-                <img loading="lazy" src="img/40.jpg" data-date="12/07/2019" alt="ICD Pavilion" />
-                <img loading="lazy" src="img/6.jpg" data-date="18/05/2018" alt="Eel soup" />
-                <img loading="lazy" src="img/7.jpg" data-date="2018" alt="S&ocirc;ng Ng&agrave;n Ph&#7889;" />
-                <img loading="lazy" src="img/5.jpg" data-date="12/05/2018" alt="H&#432;&#x01A1;ng S&#x01A1;n" />
-                <img loading="lazy" src="img/4.jpg" data-date="17/06/2017" alt="Merano" />
-                <img loading="lazy" src="img/3.jpg" data-date="11/08/2016" alt="J&ouml;kuls&aacute;rl&oacute;n glacial lake" />
-                <img loading="lazy" src="img/2.jpg" data-date="08/08/2016" alt="N&yacute;idalur" />
-                <img loading="lazy" src="img/1.jpg" data-date="" alt="Fog" />
-            </div>
+        <hr>
+        <h2>Places</h2>
+        <div class="gallery">
+            <img loading="lazy" src="img/41.jpg" data-date="19/08/2023" alt="Railway Engine Depot" />
+            <img loading="lazy" src="img/36.jpg" data-date="14/01/2023" alt="Sant&rsquo; Ireneo" />
+            <img loading="lazy" src="img/35.jpg" data-date="09/01/2023" alt="Via Albricci" />
+            <img loading="lazy" src="img/34.jpg" data-date="05/01/2023" alt="Garden" />
+            <img loading="lazy" src="img/33.jpg" data-date="04/01/2023" alt="Nilufar Gallery" />
+            <img loading="lazy" src="img/32.jpg" data-date="04/11/2022" alt="Monte Amiata" />
+            <img loading="lazy" src="img/30.jpg" data-date="30/10/2022" alt="Amendola" />
+            <img loading="lazy" src="img/28.jpg" data-date="15/09/2022" alt="Emergence Pool, courtesy of Nari Ward" />
+            <img loading="lazy" src="img/29.jpg" data-date="22/09/2022" alt="ADI" />
+            <img loading="lazy" src="img/27.jpg" data-date="04/09/2022" alt="Clouds" />
+            <img loading="lazy" src="img/24.jpg" data-date="02/01/2021" alt="Creek" />
+            <img loading="lazy" src="img/22.jpg" data-date="27/09/2019" alt="Flora" />
+            <img loading="lazy" src="img/19.jpg" data-date="17/03/2019" alt="Death Valley" />
+            <img loading="lazy" src="img/18.jpg" data-date="15/03/2019" alt="Campfire in a sandy forest" />
+            <img loading="lazy" src="img/17.jpg" data-date="25/09/2018" alt="Switzerland" />
+            <img loading="lazy" src="img/40.jpg" data-date="12/07/2019" alt="ICD Pavilion" />
+            <img loading="lazy" src="img/6.jpg" data-date="18/05/2018" alt="Eel soup" />
+            <img loading="lazy" src="img/7.jpg" data-date="2018" alt="S&ocirc;ng Ng&agrave;n Ph&#7889;" />
+            <img loading="lazy" src="img/5.jpg" data-date="12/05/2018" alt="H&#432;&#x01A1;ng S&#x01A1;n" />
+            <img loading="lazy" src="img/4.jpg" data-date="17/06/2017" alt="Merano" />
+            <img loading="lazy" src="img/3.jpg" data-date="11/08/2016" alt="J&ouml;kuls&aacute;rl&oacute;n glacial lake" />
+            <img loading="lazy" src="img/2.jpg" data-date="08/08/2016" alt="N&yacute;idalur" />
+            <img loading="lazy" src="img/1.jpg" data-date="" alt="Fog" />
         </div>
     </div>
     <div id="about">
-        <!-- <div class="section">
-            <h2>Experience</h2>
-            <table>
-                <tr><td data-title="01.03.2023-">2023 &ndash; Present</td><td>Herzog & de Meuron</td></tr>
-                <tr><td data-title="14.03.2023-09.09.2023">2022</td><td>Behnisch Architekten</td></tr>
-                <tr><td data-title="25.10.2022-28.02.2023">2021 &ndash; 2022</td><td>REM ASSETS</td></tr>
-                <tr><td data-title="01.10.2021-30.09.2022">2020 &ndash; 2021</td><td>Werner Sobek</td></tr>
-            </table>
-        </div>
-        <div class="section">
-            <h2>Education</h2>
-            <table>
-                <tr><td data-title="01.10.2021-">2021 &ndash; Present</td><td>University of Stuttgart<br>Master Studies, Architecture and Urban Planning</td></tr>
-                <tr><td data-title="05.09.2022-26.01.2023">2022 &ndash; 2023</td><td>Politecnico di Milano<br>Study Abroad, Architecture and Urban Design</td></tr>
-                <tr><td data-title="15.07.2023-22.07.2023">2022</td><td>Architectural Association and State Academy of Fine Arts Stuttgart<br>Visiting School</td></tr>
-                <tr><td data-title="01.10.2018-30.09.2021">2018 &ndash; 2021</td><td>University of Stuttgart<br>BSc Architecture and Urban Planning</td></tr>
-            </table>
-        </div>
-        <div class="section">
-            <h2>Honors</h2>
-            <table>
-                <tr><td data-title="01.04.2023-">2023 &ndash; Present</td><td>Deutschlandstipendium<br>Federal Republic of Germany/Ed. Züblin AG</td></tr>
-                <tr><td data-title="01.03.2023-29.02.2024">2023 &ndash; Present</td><td>Swiss-European Mobility Programme</td></tr>
-                <tr><td data-title="05.09.2022-26.01.2023,01.03.2023-02.10.2023">2022 &ndash; 2023</td><td>Erasmus+ schoolarships</td></tr>
-                <tr><td data-title="24.06.2022-04.07.2022">2022</td><td>Graduate Design Projects Selection<br>Department of Architecture, University of Stuttgart</td></tr>
-                <tr><td data-title="16.09.2021-17.09.2021">2021</td><td>CURRENT Festival for Art and Urban Space</td></tr>
-                <tr><td data-title="13.01.2020-25.01.2020">2020</td><td>Annual Design Projects Selection<br>IRGE, University of Stuttgart</td></tr>
-            </table>
-        </div> -->
-        <div class="section">
-            <h2>Contact</h2>
-            <p>
-                Joey W. Schweickhardt<br>
-                <span class="address1"></span><br>
-                <span class="address2"></span>
-            </p>
-            <p>
-                <a class="phone" href="javascript:"></a><br>
-                <a class="email" href="javascript:"></a>
-            </p>
-            <p>
-                <a href="https://www.instagram.com/joeyws/">Instagram</a>,
-                <a href="https://www.linkedin.com/in/joeyschweickhardt/">LinkedIn</a>
-            </p>
-        </div>
+        <!-- <h2>Experience</h2>
+        <table>
+            <tr><td data-title="01.03.2023-">2023 &ndash; Present</td><td>Herzog & de Meuron</td></tr>
+            <tr><td data-title="14.03.2023-09.09.2023">2022</td><td>Behnisch Architekten</td></tr>
+            <tr><td data-title="25.10.2022-28.02.2023">2021 &ndash; 2022</td><td>REM ASSETS</td></tr>
+            <tr><td data-title="01.10.2021-30.09.2022">2020 &ndash; 2021</td><td>Werner Sobek</td></tr>
+        </table>
+        <hr>
+        <h2>Education</h2>
+        <table>
+            <tr><td data-title="01.10.2021-">2021 &ndash; Present</td><td>University of Stuttgart<br>Master Studies, Architecture and Urban Planning</td></tr>
+            <tr><td data-title="05.09.2022-26.01.2023">2022 &ndash; 2023</td><td>Politecnico di Milano<br>Study Abroad, Architecture and Urban Design</td></tr>
+            <tr><td data-title="15.07.2023-22.07.2023">2022</td><td>Architectural Association and State Academy of Fine Arts Stuttgart<br>Visiting School</td></tr>
+            <tr><td data-title="01.10.2018-30.09.2021">2018 &ndash; 2021</td><td>University of Stuttgart<br>BSc Architecture and Urban Planning</td></tr>
+        </table>
+        <hr>
+        <h2>Honors</h2>
+        <table>
+            <tr><td data-title="01.04.2023-">2023 &ndash; Present</td><td>Deutschlandstipendium<br>Federal Republic of Germany/Ed. Züblin AG</td></tr>
+            <tr><td data-title="01.03.2023-29.02.2024">2023 &ndash; Present</td><td>Swiss-European Mobility Programme</td></tr>
+            <tr><td data-title="05.09.2022-26.01.2023,01.03.2023-02.10.2023">2022 &ndash; 2023</td><td>Erasmus+ schoolarships</td></tr>
+            <tr><td data-title="24.06.2022-04.07.2022">2022</td><td>Graduate Design Projects Selection<br>Department of Architecture, University of Stuttgart</td></tr>
+            <tr><td data-title="16.09.2021-17.09.2021">2021</td><td>CURRENT Festival for Art and Urban Space</td></tr>
+            <tr><td data-title="13.01.2020-25.01.2020">2020</td><td>Annual Design Projects Selection<br>IRGE, University of Stuttgart</td></tr>
+        </table>
+        <hr> -->
+        <h2>Contact</h2>
+        <p>
+            Joey W. Schweickhardt<br>
+            <span class="address1"></span><br>
+            <span class="address2"></span>
+        </p>
+        <p>
+            <a class="phone" href="javascript:"></a><br>
+            <a class="email" href="javascript:"></a>
+        </p>
+        <p>
+            <a href="https://www.instagram.com/joeyws/">Instagram</a>,
+            <a href="https://www.linkedin.com/in/joeyschweickhardt/">LinkedIn</a>
+        </p>
         <!-- <p>
             <a href="https://www.instagram.com/joeyws/"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 56.7 56.7" enable-background="new 0 0 56.7 56.7" xml:space="preserve"><path d="M28.2,16.7c-7,0-12.8,5.7-12.8,12.8s5.7,12.8,12.8,12.8S41,36.5,41,29.5S35.2,16.7,28.2,16.7z M28.2,37.7c-4.5,0-8.2-3.7-8.2-8.2s3.7-8.2,8.2-8.2s8.2,3.7,8.2,8.2S32.7,37.7,28.2,37.7z"/><circle cx="41.5" cy="16.4" r="2.9"/><path d="M49,8.9c-2.6-2.7-6.3-4.1-10.5-4.1H17.9c-8.7,0-14.5,5.8-14.5,14.5v20.5c0,4.3,1.4,8,4.2,10.7c2.7,2.6,6.3,3.9,10.4,3.9h20.4c4.3,0,7.9-1.4,10.5-3.9c2.7-2.6,4.1-6.3,4.1-10.6V19.3C53,15.1,51.6,11.5,49,8.9z M48.6,39.9c0,3.1-1.1,5.6-2.9,7.3s-4.3,2.6-7.3,2.6H18c-3,0-5.5-0.9-7.3-2.6C8.9,45.4,8,42.9,8,39.8V19.3c0-3,0.9-5.5,2.7-7.3c1.7-1.7,4.3-2.6,7.3-2.6h20.6c3,0,5.5,0.9,7.3,2.7c1.7,1.8,2.7,4.3,2.7,7.2V39.9L48.6,39.9z"/></svg></a>
             <a href="https://www.linkedin.com/in/joeyschweickhardt/"><svg enable-background="new 0 0 56.693 56.693" height="56.693px" version="1.1" viewBox="0 0 56.693 56.693" width="56.693px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M30.071,27.101v-0.077c-0.016,0.026-0.033,0.052-0.05,0.077H30.071z"/><path d="M49.265,4.667H7.145c-2.016,0-3.651,1.596-3.651,3.563v42.613c0,1.966,1.635,3.562,3.651,3.562h42.12 c2.019,0,3.654-1.597,3.654-3.562V8.23C52.919,6.262,51.283,4.667,49.265,4.667z M18.475,46.304h-7.465V23.845h7.465V46.304z M14.743,20.777h-0.05c-2.504,0-4.124-1.725-4.124-3.88c0-2.203,1.67-3.88,4.223-3.88c2.554,0,4.125,1.677,4.175,3.88 C18.967,19.052,17.345,20.777,14.743,20.777z M45.394,46.304h-7.465V34.286c0-3.018-1.08-5.078-3.781-5.078 c-2.062,0-3.29,1.389-3.831,2.731c-0.197,0.479-0.245,1.149-0.245,1.821v12.543h-7.465c0,0,0.098-20.354,0-22.459h7.465v3.179 c0.992-1.53,2.766-3.709,6.729-3.709c4.911,0,8.594,3.211,8.594,10.11V46.304z"/></svg></a>
         </p> -->
-        <div class="section">
-            <h2>joeyws.com</h2>
-            <p>
-                Hand-coded with <!-- &#9825; --><svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path fill="#f40" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" fill-rule="evenodd"/></svg><br>
-                Hosted on <a href="https://github.com/" rel="nofollow">GitHub</a><br>
-                Initial launch: <!-- 16/01/ -->2011
-            </p>
-        </div>
-        <div class="section">
-            <p><a id="show-privacy" href="javascript:;">Privacy</a></p>
-            <p class="privacy indent">Personal data (usually referred to just as &ldquo;data&rdquo; below) will only be processed by us to the extent necessary and for the purpose of providing a functional and user-friendly website, including its contents, and the services offered there. Per Art. 4 No. 1 of Regulation (EU) 2016/679, i.e. the General Data Protection Regulation (hereinafter referred to as the &ldquo;GDPR&rdquo;), &ldquo;processing&rdquo; refers to any operation or set of operations such as collection, recording, organization, structuring, storage, adaptation, alteration, retrieval, consultation, use, disclosure by transmission, dissemination, or otherwise making available, alignment, or combination, restriction, erasure, or destruction performed on personal data, whether by automated means or not.</p>
-            <p class="privacy indent">With regard to the data processing to be described in more detail below, users and data subjects have the right to confirmation of whether data concerning them is being processed, information about the data being processed, further information about the nature of the data processing, and copies of the data (cf. also Art. 15 GDPR); to correct or complete incorrect or incomplete data (cf. also Art. 16 GDPR); to the immediate deletion of data concerning them (cf. also Art. 17 DSGVO), or, alternatively, if further processing is necessary as stipulated in Art. 17 Para. 3 GDPR, to restrict said processing per Art. 18 GDPR; to receive copies of the data concerning them and/or provided by them and to have the same transmitted to other providers/controllers (cf. also Art. 20 GDPR); to file complaints with the supervisory authority if they believe that data concerning them is being processed by the controller in breach of data protection provisions (see also Art. 77 GDPR). In addition, the controller is obliged to inform all recipients to whom it discloses data of any such corrections, deletions, or restrictions placed on processing the same per Art. 16, 17 Para. 1, 18 GDPR. However, this obligation does not apply if such notification is impossible or involves a disproportionate effort. Nevertheless, users have a right to information about these recipients.</p>
-            <p class="privacy indent">Likewise, under Art. 21 GDPR, users and data subjects have the right to object to the controller&rsquo;s future processing of their data pursuant to Art. 6 Para. 1 lit. f) GDPR. In particular, an objection to data processing for the purpose of direct advertising is permissible. Your data processed when using our website will be deleted or blocked as soon as the purpose for its storage ceases to apply, provided the deletion of the same is not in breach of any statutory storage obligations or unless otherwise stipulated below.</p>
-            <p class="privacy"><small>Source: Weiß & Partner, Esslingen</small></p>
-        </div>
+        <hr>
+        <h2>joeyws.com</h2>
+        <p>
+            Hand-coded with <!-- &#9825; --><svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path fill="#f40" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" fill-rule="evenodd"/></svg><br>
+            Hosted on <a href="https://github.com/" rel="nofollow">GitHub</a><br>
+            Initial launch: <!-- 16/01/ -->2011
+        </p>
+        <hr>
+        <p><a id="show-privacy" href="javascript:;">Privacy</a></p>
+        <p class="privacy indent">Personal data (usually referred to just as &ldquo;data&rdquo; below) will only be processed by us to the extent necessary and for the purpose of providing a functional and user-friendly website, including its contents, and the services offered there. Per Art. 4 No. 1 of Regulation (EU) 2016/679, i.e. the General Data Protection Regulation (hereinafter referred to as the &ldquo;GDPR&rdquo;), &ldquo;processing&rdquo; refers to any operation or set of operations such as collection, recording, organization, structuring, storage, adaptation, alteration, retrieval, consultation, use, disclosure by transmission, dissemination, or otherwise making available, alignment, or combination, restriction, erasure, or destruction performed on personal data, whether by automated means or not.</p>
+        <p class="privacy indent">With regard to the data processing to be described in more detail below, users and data subjects have the right to confirmation of whether data concerning them is being processed, information about the data being processed, further information about the nature of the data processing, and copies of the data (cf. also Art. 15 GDPR); to correct or complete incorrect or incomplete data (cf. also Art. 16 GDPR); to the immediate deletion of data concerning them (cf. also Art. 17 DSGVO), or, alternatively, if further processing is necessary as stipulated in Art. 17 Para. 3 GDPR, to restrict said processing per Art. 18 GDPR; to receive copies of the data concerning them and/or provided by them and to have the same transmitted to other providers/controllers (cf. also Art. 20 GDPR); to file complaints with the supervisory authority if they believe that data concerning them is being processed by the controller in breach of data protection provisions (see also Art. 77 GDPR). In addition, the controller is obliged to inform all recipients to whom it discloses data of any such corrections, deletions, or restrictions placed on processing the same per Art. 16, 17 Para. 1, 18 GDPR. However, this obligation does not apply if such notification is impossible or involves a disproportionate effort. Nevertheless, users have a right to information about these recipients.</p>
+        <p class="privacy indent">Likewise, under Art. 21 GDPR, users and data subjects have the right to object to the controller&rsquo;s future processing of their data pursuant to Art. 6 Para. 1 lit. f) GDPR. In particular, an objection to data processing for the purpose of direct advertising is permissible. Your data processed when using our website will be deleted or blocked as soon as the purpose for its storage ceases to apply, provided the deletion of the same is not in breach of any statutory storage obligations or unless otherwise stipulated below.</p>
+        <p class="privacy"><small>Source: Weiß & Partner, Esslingen</small></p>
     </div>
 </div>
 
