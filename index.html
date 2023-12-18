@@ -29,12 +29,12 @@
     a:hover{text-decoration:none;}
     /* a[href^=http]::after{content:"\2197";margin-left:.2em;font-style:normal;display:inline-block;} */
     /* LAYOUT */
-    #header{/* top:var(--spacer);z-index:999997;position:sticky; */display:inline-flex;column-gap:calc(var(--spacer) * 3);justify-content:flex-start;align-content:flex-start;flex-wrap:wrap;}
+    #header{/* top:var(--spacer);z-index:999997;position:sticky; */display:inline-flex;column-gap:calc(var(--spacer) * 4);justify-content:flex-start;align-content:flex-start;flex-wrap:wrap;}
     #header>*{white-space:nowrap;}
     #nav{display:inline-block;}
-    #nav a{border-radius:100vmax;padding:0 .35em;background:#bbb;box-shadow:none;display:inline-block;text-decoration:none;}
-    #nav a:hover{background:#c8c8c8;}
-    #nav a.open{background:#0f0;cursor:default;}
+    #nav a{border-radius:100vmax;padding:0 .35em;background:#c4c4c4;display:inline-block;text-decoration:none;}
+    #nav a:hover{background:#ccc;}
+    #nav a.open{/* text-decoration:underline; */background:#0f0;cursor:default;}
     .loading{animation:.3s blink steps(1) infinite;}
     #time-blink{animation:2s blink steps(1) infinite;}
     @keyframes blink{0%{opacity:0;}50%{opacity:1;}}
@@ -42,15 +42,15 @@
     #content{min-height:100vh;}
     #content>*:not(.show){display:none;}
     /* MARQUEE */
-    .marquee3k{background:var(--text);color:var(--background);white-space:nowrap;overflow:hidden;margin:calc(var(--spacer) * -1);margin-bottom:var(--spacer);/* width:200px;flex-grow:1; */}
-    /* .marquee3k:after{background:linear-gradient(to right, var(--background), transparent 10%, transparent 90%, var(--background));content:" ";display:block;position:absolute;top:0;bottom:0;left:0;right:0;margin:0 -1px;} */
+    .marquee3k{position:relative;background:var(--text);color:var(--background);white-space:nowrap;overflow:hidden;margin:calc(var(--spacer) * -1);margin-bottom:var(--spacer);/* width:200px;flex-grow:1; */}
+    /* .marquee3k:after{background:linear-gradient(to right, var(--text), transparent var(--spacer), transparent calc(100% - var(--spacer)), var(--text));content:" ";display:block;position:absolute;top:0;bottom:0;left:0;right:0;margin:0 -1px;} */
     .marquee3k .marquee span{margin-right:calc(var(--spacer) * 3);}
     /* VIDEO */
     .video{cursor:pointer;overflow:hidden;position:relative;max-width:960px;font-size:0;line-height:0;}
     .video.playing{cursor:pointer;}
     /* .video:after{border:.4rem solid transparent;border-left:1.3rem solid var(--text);border-right-width:0;width:0;height:0;display:inline-block;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);content:"";pointer-events:none;} */
-    .video:after{display:inline-block;color:var(--background);background:var(--text);padding:0 .4rem;border-radius:100vmax;font-size:1rem;line-height:1.3rem;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);content:"Play";pointer-events:none;}
-    .video:hover:after{text-decoration:underline;}
+    .video:after{display:inline-block;color:var(--background);background:var(--text);padding:0 .35rem;border-radius:100vmax;font-size:1rem;line-height:1.3rem;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);content:"Play";pointer-events:none;}
+    /* .video:hover:after{text-decoration:underline;} */
     .video.playing:after{display:none;}
     video{width:100%;}
     /* GALLERY */
@@ -193,7 +193,7 @@
         <h2>joeyws.com</h2>
         <p>
             Hand-coded with <!-- &#9825; --><svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path fill="#f40" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" fill-rule="evenodd"/></svg><br>
-            We don&rsquo;t use cookies.<br>
+            This site doesn&rsquo;t use cookies.<br>
             Hosted on <a href="https://github.com/" rel="nofollow">GitHub</a><br>
             Initial launch: <!-- 16/01/ -->2011
         </p>
