@@ -14,7 +14,8 @@
 	html{font-size:14px;}
     html,body{background:var(--background);}
     body{padding:var(--spacer);color:var(--text);font:normal normal 1rem/1.3rem webfont,serif,monospace;}
-    p,ul,p+img,*+video,img+p,.video,table,.gallery{margin-top:var(--spacer);}hr+*,#content * *:first-child{margin-top:0;}
+    p,ul,table,.video,.gallery{margin-top:var(--spacer);}
+    hr+*,img+p,#content * *:first-child{margin-top:0;}
     h1{display:inline-block;}
     h2{font-style:italic;display:table;}
     ul{list-style-type:none;list-style-position:inside;}
@@ -30,7 +31,7 @@
     #header>*{white-space:nowrap;}
     #nav{display:inline-block;}
     #nav a{outline:1px solid var(--text);border-radius:100vmax;padding:0 .35em;text-decoration:none;}
-    #nav a.open{/* text-decoration:underline; */background:var(--text);color:var(--background);box-shadow:none;cursor:default;}
+    #nav a.open{background:var(--text);color:var(--background);box-shadow:none;cursor:default;}
     .loading{animation:.3s blink steps(1) infinite;}
     #time-blink{animation:2s blink steps(1) infinite;}
     hr{margin:1.8rem 0;}
@@ -180,13 +181,13 @@
             <a href="https://www.linkedin.com/in/joeyschweickhardt/">LinkedIn</a>
         </p>
         <hr>
-        <div style="margin:78px 0 0 334px;animation:position 1s infinite;outline:1px solid var(--background);width:9px;height:9px;background:var(--background);border-radius:100vmax;pointer-events:none;position:absolute;transform:translate(-50%,-50%);display:block;"></div>
+        <div style="margin:77px 0 0 333px;animation:position 1s infinite;border:1px solid var(--text);outline:1px solid var(--background);width:9px;height:9px;background:var(--background);border-radius:100vmax;pointer-events:none;position:absolute;transform:translate(-50%,-50%);display:block;"></div>
         <!-- <div style="color:var(--background);text-shadow:0 0 2px #000;">
             <div style="margin:137px 0 0 310px;transform:translate(-50%,-50%);position:absolute;display:block;">&bull; Bad Cannstatt</div>
             <div style="margin:290px 0 0 133px;transform:translate(-50%,-50%);position:absolute;display:block;">&bull; Stuttgart</div>
         </div> -->
         <img src="img/map2.png" height="400px" width="400px" alt="Map of Stuttgart" />
-        <p style="width:400px;">&copy; Landeshauptstadt Stuttgart<!-- , Stadtmessungsamt & Arbeitsgemeinschaft Geoinformationssysteme (GIS-AG) --></p>
+        <p>&copy; Landeshauptstadt Stuttgart<!-- , Stadtmessungsamt & Arbeitsgemeinschaft Geoinformationssysteme (GIS-AG) --></p>
         <hr>
         <h2>joeyws.com</h2>
         <p>
