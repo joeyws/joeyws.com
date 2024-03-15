@@ -33,7 +33,6 @@
     #nav a.open{/* text-decoration:underline; */background:var(--text);color:var(--background);box-shadow:none;cursor:default;}
     .loading{animation:.3s blink steps(1) infinite;}
     #time-blink{animation:2s blink steps(1) infinite;}
-    @keyframes blink{0%{opacity:0;}50%{opacity:1;}}
     hr{margin:1.8rem 0;}
     #content{min-height:100vh;}
     #content>*:not(.show){display:none;}
@@ -60,6 +59,7 @@
     a.svg{background:transparent !important;outline:none !important;padding:0;box-shadow:none !important;}
     /* :HOVER */
     @keyframes blink{0%{opacity:1;}50%{opacity:0;}}
+    @keyframes position{100%{outline-color:transparent;outline-offset:12px;}}
     @media(hover:hover){}
     /* *{cursor:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" x="0px" y="0px" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="%23000" stroke="%23f00" stroke-width="0"/></svg>') 7 7, auto !important;} */
 </style>
@@ -179,6 +179,14 @@
             <a href="https://www.instagram.com/joeyws/">Instagram</a>,
             <a href="https://www.linkedin.com/in/joeyschweickhardt/">LinkedIn</a>
         </p>
+        <hr>
+        <div style="margin:78px 0 0 334px;animation:position 1s infinite;outline:1px solid var(--background);width:9px;height:9px;background:var(--background);border-radius:100vmax;pointer-events:none;position:absolute;transform:translate(-50%,-50%);display:block;"></div>
+        <!-- <div style="color:var(--background);text-shadow:0 0 2px #000;">
+            <div style="margin:137px 0 0 310px;transform:translate(-50%,-50%);position:absolute;display:block;">&bull; Bad Cannstatt</div>
+            <div style="margin:290px 0 0 133px;transform:translate(-50%,-50%);position:absolute;display:block;">&bull; Stuttgart</div>
+        </div> -->
+        <img src="img/map2.png" height="400px" width="400px" alt="Map of Stuttgart" />
+        <p style="width:400px;">&copy; Landeshauptstadt Stuttgart<!-- , Stadtmessungsamt & Arbeitsgemeinschaft Geoinformationssysteme (GIS-AG) --></p>
         <hr>
         <h2>joeyws.com</h2>
         <p>
