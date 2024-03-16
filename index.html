@@ -13,7 +13,7 @@
     /* RESET */*{/* text-decoration-skip-ink:none; */user-select:none;font-kerning:normal;outline:none;-webkit-tap-highlight-color:rgba(0,0,0,0)!important;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-appearance:none;border-radius:0;-webkit-border-radius:0;box-sizing:content-box;font-smoothing:antialiased;-moz-osx-font-smoothing: grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased;}
 	html{font-size:14px;}
     html,body{background:var(--background);}
-    body{padding:var(--spacer);color:var(--text);font:normal normal 1rem/1.3rem webfont,serif,monospace;}
+    body{padding:var(--spacer);color:var(--text);font:normal normal 1rem/1.25rem webfont,serif,monospace;}
     p,ul,table,.video,.gallery{margin-top:var(--spacer);}
     hr+*,img+p,#content * *:first-child{margin-top:0;}
     h1{display:inline-block;}
@@ -23,6 +23,7 @@
     /* table{width:100%;}tr{border-bottom:1px solid var(--text);}tr:last-child{border-bottom:0;} */
     td:first-child{white-space:nowrap;}
     td:not(:last-child){padding-right:calc(2* var(--spacer));}
+    small{font-style:italic;}
     i{font-style:italic;}
     a{text-decoration-thickness:.08em;text-decoration-thickness:1px;white-space:nowrap;}
     a:hover{text-decoration:none;}
@@ -38,20 +39,25 @@
     #content{min-height:100vh;}
     #content>*:not(.show){display:none;}
     /* MARQUEE */
-    .marquee3k{font:normal normal 2em/1.6em sans-serif;text-transform:uppercase;position:relative;white-space:nowrap;overflow:hidden;/* margin:calc(var(--spacer) * -1); */margin-top:var(--spacer);/* margin-bottom:var(--spacer); *//* width:200px;flex-grow:1; */}
+    .marquee3k{font:normal normal 2em/1.6em sans-serif;text-transform:uppercase;position:relative;white-space:nowrap;overflow:hidden;/* margin:calc(var(--spacer) * -1); */margin-top:var(--spacer);/* width:200px;flex-grow:1; */}
+    .marquee3k .marquee span:after{margin:0 .5em;content:" ";} /* \2055 \274B \2733 \273A */
     /* .marquee3k:after{background:linear-gradient(to right, var(--text), transparent var(--spacer), transparent calc(100% - var(--spacer)), var(--text));content:" ";display:block;position:absolute;top:0;bottom:0;left:0;right:0;margin:0 -1px;} */
-    .marquee3k .marquee span{margin-right:1.3em;}
     /* VIDEO */
     .video{cursor:pointer;overflow:hidden;position:relative;max-width:960px;font-size:0;line-height:0;}
     .video.playing{cursor:pointer;}
-    .video:after{border:.5rem solid transparent;border-left:1.6rem solid var(--text);border-right-width:0;width:0;height:0;display:inline-block;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);content:"";pointer-events:none;}
+    .video:after{border:.6rem solid transparent;border-left:1.8rem solid var(--text);border-right-width:0;width:0;height:0;display:inline-block;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);content:"";pointer-events:none;}
     video{cursor:pointer;max-width:960px;}
     .video.playing:after{display:none;}
     video{width:100%;}
     /* GALLERY */
-    .gallery{gap:var(--spacer);display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));}
-    .gallery>div{/* width:calc(100%);position:relative;margin-bottom:var(--spacer); */break-inside:avoid;}
-    .gallery img{cursor:zoom-in;max-width:100%;}
+    .gallery{font-size:0;line-height:0;gap:var(--spacer);display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));}
+    .gallery>div{break-inside:avoid;}
+    .gallery>div>div{font-size:1rem;line-height:1rem;position:relative;}
+    .gallery>div>div>img{transition:all .12s;max-width:100%;cursor:zoom-in;}
+    /* .gallery>div>div>img:hover{transform:translateY(-3px);} */
+    .gallery>div>div>span{transition:all .12s;pointer-events:none;position:absolute;margin:var(--spacer);top:0;left:0;right:0;}
+    .gallery>div>div:not(:hover)>span{opacity:0;transform:translateY(5px);}
+    .gallery>div>div>span>span{background:var(--text);color:var(--background);}
     /* LIGHTBOX */
     #lightbox{z-index:999997;cursor:zoom-out;position:fixed;inset:0;display:none;}
     #lightbox img{cursor:pointer;height:auto;max-height:90vh;max-width:calc(100vw - 2*var(--spacer));box-sizing:border-box;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);}
@@ -181,9 +187,9 @@
             <a href="https://www.linkedin.com/in/joeyschweickhardt/">LinkedIn</a>
         </p>
         <hr>
-        <div style="margin:98px 0 0 330px;animation:position 1s infinite;outline:1px solid var(--background);border:1px solid var(--text);background:var(--background);width:9px;height:9px;border-radius:100vmax;pointer-events:none;position:absolute;transform:translate(-50%,-50%);display:block;"></div>
+        <div style="margin:98px 0 0 330px;animation:position 1s infinite;outline:1px solid var(--background);border:1px solid var(--text);background:var(--background);width:10px;height:10px;border-radius:100vmax;pointer-events:none;position:absolute;transform:translate(-50%,-50%);display:block;"></div>
         <img src="img/map.png" height="400px" width="400px" alt="Map of Stuttgart" />
-        <p>&copy; Landeshauptstadt Stuttgart<!-- , Stadtmessungsamt & Arbeitsgemeinschaft Geoinformationssysteme (GIS-AG) --></p>
+        <p><small>&copy; Landeshauptstadt Stuttgart<!-- , Stadtmessungsamt & Arbeitsgemeinschaft Geoinformationssysteme (GIS-AG) --></small></p>
         <hr>
         <h2>joeyws.com</h2>
         <p>
@@ -234,7 +240,7 @@ $(document).ready(function(){
     
     // gallery
     $(".gallery img").each(function(){
-        $(this).wrap("<div><div></div></div>").parent().after("<span>"+$(this).attr("alt")+" <small>"+$(this).attr("data-date").substr(-4)+"</small></span>"); // style='width:" + (160/$(this).prop("naturalHeight")*$(this).prop("naturalWidth")) + "px;'
+        $(this).wrap("<div><div></div></div>").after("<span><span>"+$(this).attr("alt")+" <small>"+$(this).attr("data-date").substr(-4)+"</small></span></span>");
     });
     // lightbox
     $("body").append("<div id='lightbox'><img src='' /></div>");
@@ -248,7 +254,7 @@ $(document).ready(function(){
     function lightboxPrev() {
         if ($("#lightbox").is(":visible")) {
             if (!$(".gallery div:first-child div img").is(".show")) {
-                $("img.show").removeClass("show").parent().parent().prev("div").children("div").children("img").addClass("show");
+                $("img.show").removeClass("show")/* .parent() */.parent().prev("div")/* .children("div") */.children("img").addClass("show");
                 lightboxLoad();
             }
         }
@@ -256,7 +262,7 @@ $(document).ready(function(){
     function lightboxNext() {
         if ($("#lightbox").is(":visible")) {
             if (!$(".gallery div:last-child div img").is(".show")) {
-                $("img.show").removeClass("show").parent().parent().next("div").children("div").children("img").addClass("show");
+                $("img.show").removeClass("show")/* .parent() */.parent().next("div")/* .children("div") */.children("img").addClass("show");
                 lightboxLoad();
             } else {
                 lightboxClose();
@@ -267,7 +273,7 @@ $(document).ready(function(){
         $("#lightbox").hide().children("img").attr("src","data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");
         $("img.show").removeClass("show");
     };
-    $(".gallery>div>div>img").on("click",function(){
+    $(".gallery img").on("click",function(){
         $(this).addClass("show");
         lightboxLoad();
     });
@@ -292,8 +298,8 @@ $(document).ready(function(){
 
     // weather
     const getWeather = async () => {
-        const request = await fetch("https://api.open-meteo.com/v1/forecast?latitude=47.5584&longitude=7.5733&current_weather=true") // stuttgart: https://api.open-meteo.com/v1/forecast?latitude=48.7823&longitude=9.177&current_weather=true
-        const response = await request.json()
+        const request = await fetch("https://api.open-meteo.com/v1/forecast?latitude=48.7823&longitude=9.177&current_weather=true");
+        const response = await request.json();
         $("#weather").html(", " + Math.round(response.current_weather.temperature) + "&deg;C");
     }
     getWeather();
