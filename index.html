@@ -12,7 +12,7 @@
     ::-webkit-scrollbar-thumb{background:var(--text);} */
     /* RESET */*{/* text-decoration-skip-ink:none; */user-select:none;font-kerning:normal;outline:none;-webkit-tap-highlight-color:rgba(0,0,0,0)!important;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-appearance:none;border-radius:0;-webkit-border-radius:0;box-sizing:content-box;font-smoothing:antialiased;-moz-osx-font-smoothing: grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased;}
 	html{font-size:14px;}
-    html,body{background:var(--background);}
+    html,body{background:var(--background) url() center center repeat fixed;}
     body{padding:var(--spacer);color:var(--text);font:normal normal 1rem/1.25rem webfont,serif,monospace;}
     p,ul,table,.video,.gallery{margin-top:var(--spacer);}
     hr+*,img+p,#content * *:first-child{margin-top:0;}
@@ -40,32 +40,39 @@
     #content>*:not(.show){display:none;}
     /* MARQUEE */
     .marquee3k{font:normal normal 2em/1.6em sans-serif;text-transform:uppercase;position:relative;white-space:nowrap;overflow:hidden;/* margin:calc(var(--spacer) * -1); */margin-top:var(--spacer);/* width:200px;flex-grow:1; */}
-    .marquee3k .marquee span:after{margin:0 .5em;content:" ";} /* \2055 \274B \2733 \273A */
-    /* .marquee3k:after{background:linear-gradient(to right, var(--text), transparent var(--spacer), transparent calc(100% - var(--spacer)), var(--text));content:" ";display:block;position:absolute;top:0;bottom:0;left:0;right:0;margin:0 -1px;} */
+    .marquee3k .marquee span:after{margin:0 .5em;content:"";} /* \2055 \274B \2733 \273A */
+    /* .marquee3k:after{mix-blend-mode:luminosity;background:linear-gradient(to right, var(--background), transparent 40%, transparent calc(100% - 40%), var(--background));content:" ";display:block;position:absolute;top:0;bottom:0;left:0;right:0;margin:0 -1px;} */
     /* VIDEO */
     .video{cursor:pointer;overflow:hidden;position:relative;max-width:960px;font-size:0;line-height:0;}
     .video.playing{cursor:pointer;}
-    .video:after{border:.6rem solid transparent;border-left:1.8rem solid var(--text);border-right-width:0;width:0;height:0;display:inline-block;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);content:"";pointer-events:none;}
+    .video:after{border:.6rem solid transparent;border-left:1.7rem solid var(--text);border-right-width:0;width:0;height:0;display:inline-block;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);content:"";pointer-events:none;}
     video{cursor:pointer;max-width:960px;}
     .video.playing:after{display:none;}
     video{width:100%;}
     /* GALLERY */
-    .gallery{font-size:0;line-height:0;gap:var(--spacer);display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));}
+    /* .gallery{gap:var(--spacer);display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));}
     .gallery>div{break-inside:avoid;}
-    .gallery>div>div{font-size:1rem;line-height:1rem;position:relative;}
-    .gallery>div>div>img{transition:all .12s;max-width:100%;cursor:zoom-in;}
+    .gallery>div>div>img{max-width:100%;cursor:zoom-in;} */
+    /* .gallery>div>div{font-size:1rem;line-height:1rem;position:relative;}
+    .gallery>div>div>img{transition:all .12s;max-width:100%;cursor:zoom-in;} */
     /* .gallery>div>div>img:hover{transform:translateY(-3px);} */
-    .gallery>div>div>span{transition:all .12s;pointer-events:none;position:absolute;margin:var(--spacer);top:0;left:0;right:0;}
+    /* .gallery>div>div>span{transition:all .12s;pointer-events:none;position:absolute;margin:var(--spacer);top:0;left:0;right:0;}
     .gallery>div>div:not(:hover)>span{opacity:0;transform:translateY(5px);}
-    .gallery>div>div>span>span{background:var(--text);color:var(--background);}
+    .gallery>div>div>span>span{background:var(--text);color:var(--background);} */
+    .gallery{line-height:0;font-size:0;column-gap:var(--spacer);columns:8 280px;max-width:calc(8*280px + 9*var(--spacer));}
+    .gallery>div{position:relative;transition:all .2s;margin-bottom:var(--spacer);break-inside:avoid;}
+    .gallery>div>div>img{max-width:100%;cursor:zoom-in;margin-bottom:var(--spacer);}
+    .gallery>div>div>span{font-size:1rem;line-height:1.25rem;}
     /* LIGHTBOX */
     #lightbox{z-index:999997;cursor:zoom-out;position:fixed;inset:0;display:none;}
     #lightbox img{cursor:pointer;height:auto;max-height:90vh;max-width:calc(100vw - 2*var(--spacer));box-sizing:border-box;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);}
+    /* MAP */
+    .position{margin:101px 0 0 331px;animation:position 1s infinite;outline:1px solid var(--background);border:1px solid var(--text);background:var(--background);width:8px;height:8px;border-radius:100vmax;pointer-events:none;position:absolute;transform:translate(-50%,-50%);display:block;}
     /* SVG */
     svg{fill:var(--text);vertical-align:0%;height:.7rem;width:.7rem;}
     a.svg{background:transparent !important;outline:none !important;padding:0;box-shadow:none !important;}
     /* :HOVER */
-    @keyframes blink{0%{opacity:1;}50%{opacity:0;}}
+    @keyframes blink{0%{opacity:0;}50%{opacity:1;}}
     @keyframes position{100%{outline-color:transparent;outline-offset:12px;}}
     @media(hover:hover){}
     /* *{cursor:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" x="0px" y="0px" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="%23000" stroke="%23f00" stroke-width="0"/></svg>') 7 7, auto !important;} */
@@ -187,7 +194,7 @@
             <a href="https://www.linkedin.com/in/joeyschweickhardt/">LinkedIn</a>
         </p>
         <hr>
-        <div style="margin:98px 0 0 330px;animation:position 1s infinite;outline:1px solid var(--background);border:1px solid var(--text);background:var(--background);width:10px;height:10px;border-radius:100vmax;pointer-events:none;position:absolute;transform:translate(-50%,-50%);display:block;"></div>
+        <div class="position"></div>
         <img src="img/map.png" height="400px" width="400px" alt="Map of Stuttgart" />
         <p><small>&copy; Landeshauptstadt Stuttgart<!-- , Stadtmessungsamt & Arbeitsgemeinschaft Geoinformationssysteme (GIS-AG) --></small></p>
         <hr>
@@ -240,6 +247,7 @@ $(document).ready(function(){
     
     // gallery
     $(".gallery img").each(function(){
+        var date = $(this).attr("data-date").substr(-4);
         $(this).wrap("<div><div></div></div>").after("<span><span>"+$(this).attr("alt")+" <small>"+$(this).attr("data-date").substr(-4)+"</small></span></span>");
     });
     // lightbox
@@ -254,7 +262,7 @@ $(document).ready(function(){
     function lightboxPrev() {
         if ($("#lightbox").is(":visible")) {
             if (!$(".gallery div:first-child div img").is(".show")) {
-                $("img.show").removeClass("show")/* .parent() */.parent().prev("div")/* .children("div") */.children("img").addClass("show");
+                $("img.show").removeClass("show").parent().parent().prev("div").children("div").children("img").addClass("show");
                 lightboxLoad();
             }
         }
@@ -262,7 +270,7 @@ $(document).ready(function(){
     function lightboxNext() {
         if ($("#lightbox").is(":visible")) {
             if (!$(".gallery div:last-child div img").is(".show")) {
-                $("img.show").removeClass("show")/* .parent() */.parent().next("div")/* .children("div") */.children("img").addClass("show");
+                $("img.show").removeClass("show").parent().parent().next("div").children("div").children("img").addClass("show");
                 lightboxLoad();
             } else {
                 lightboxClose();
