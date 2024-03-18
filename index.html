@@ -20,8 +20,8 @@
     h2{font-style:italic;display:table;}
     ul{list-style-type:none;list-style-position:inside;}
     table,tr,td{vertical-align:top;}
-    /* table{width:100%;}tr{border-bottom:1px solid var(--text);}tr:last-child{border-bottom:0;} */
-    td:first-child{white-space:nowrap;}
+    table{width:100%;}tr{border-top:1px solid var(--text);}
+    td:first-child{white-space:nowrap;width:180px;}
     td:not(:last-child){padding-right:calc(2* var(--spacer));}
     small{font-style:italic;}
     i{font-style:italic;}
@@ -50,15 +50,6 @@
     .video.playing:after{display:none;}
     video{width:100%;}
     /* GALLERY */
-    /* .gallery{gap:var(--spacer);display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));}
-    .gallery>div{break-inside:avoid;}
-    .gallery>div>div>img{max-width:100%;cursor:zoom-in;} */
-    /* .gallery>div>div{font-size:1rem;line-height:1rem;position:relative;}
-    .gallery>div>div>img{transition:all .12s;max-width:100%;cursor:zoom-in;} */
-    /* .gallery>div>div>img:hover{transform:translateY(-3px);} */
-    /* .gallery>div>div>span{transition:all .12s;pointer-events:none;position:absolute;margin:var(--spacer);top:0;left:0;right:0;}
-    .gallery>div>div:not(:hover)>span{opacity:0;transform:translateY(5px);}
-    .gallery>div>div>span>span{background:var(--text);color:var(--background);} */
     .gallery{line-height:0;font-size:0;column-gap:var(--spacer);columns:8 280px;max-width:calc(8*280px + 9*var(--spacer));}
     .gallery>div{position:relative;transition:all .2s;margin-bottom:var(--spacer);break-inside:avoid;}
     .gallery>div>div>img{max-width:100%;cursor:zoom-in;margin-bottom:var(--spacer);}
@@ -155,7 +146,7 @@
     <div id="about">
         <!-- <h2>Experience</h2>
         <table>
-            <tr><td data-title="01.03.2023-">2023&ndash;Present</td><td>Herzog & de Meuron</td></tr>
+            <tr><td data-title="01.03.2023-29.02.2024">2023&ndash;2024</td><td>Herzog & de Meuron</td></tr>
             <tr><td data-title="14.03.2023-09.09.2023">2022</td><td>Behnisch Architekten</td></tr>
             <tr><td data-title="25.10.2022-28.02.2023">2021&ndash;2022</td><td>REM ASSETS</td></tr>
             <tr><td data-title="01.10.2021-30.09.2022">2020&ndash;2021</td><td>Werner Sobek</td></tr>
@@ -163,20 +154,20 @@
         <hr>
         <h2>Education</h2>
         <table>
-            <tr><td data-title="01.10.2021-">2021&ndash;Present</td><td>University of Stuttgart<br>Master Studies, Architecture and Urban Planning</td></tr>
-            <tr><td data-title="05.09.2022-26.01.2023">2022&ndash;2023</td><td>Politecnico di Milano<br>Study Abroad, Architecture and Urban Design</td></tr>
-            <tr><td data-title="15.07.2023-22.07.2023">2022</td><td>Architectural Association, State Academy of Fine Arts Stuttgart<br>Visiting School</td></tr>
-            <tr><td data-title="01.10.2018-30.09.2021">2018&ndash;2021</td><td>University of Stuttgart<br>BSc Architecture and Urban Planning</td></tr>
+            <tr><td data-title="01.10.2021-">2021&ndash;Present</td><td>University of Stuttgart, Master Studies, Architecture and Urban Planning</td></tr>
+            <tr><td data-title="05.09.2022-26.01.2023">2022&ndash;2023</td><td>Politecnico di Milano, Study Abroad, Architecture and Urban Design</td></tr>
+            <tr><td data-title="15.07.2022-22.07.2022">2022</td><td>Architectural Association/State Academy of Fine Arts Stuttgart, Visiting School</td></tr>
+            <tr><td data-title="01.10.2018-30.09.2021">2018&ndash;2021</td><td>University of Stuttgart, BSc Architecture and Urban Planning</td></tr>
         </table>
         <hr>
         <h2>Honors</h2>
         <table>
-            <tr><td data-title="01.04.2023-31.03.2024">2023&ndash;2024</td><td>Deutschlandstipendium<br>Federal Republic of Germany, Ed. Züblin AG</td></tr>
+            <tr><td data-title="01.04.2023-31.03.2024">2023&ndash;2024</td><td>Deutschlandstipendium, Federal Republic of Germany/Ed. Züblin AG</td></tr>
             <tr><td data-title="01.03.2023-29.02.2024">2023&ndash;Present</td><td>Swiss-European Mobility Programme</td></tr>
             <tr><td data-title="05.09.2022-26.01.2023,01.03.2023-02.10.2023">2022&ndash;2023</td><td>Erasmus+ schoolarships</td></tr>
-            <tr><td data-title="24.06.2022-04.07.2022">2022</td><td>Graduate Design Projects Selection<br>Department of Architecture, University of Stuttgart</td></tr>
+            <tr><td data-title="24.06.2022-04.07.2022">2022</td><td>Graduate Design Projects Selection, Department of Architecture, University of Stuttgart</td></tr>
             <tr><td data-title="16.09.2021-17.09.2021">2021</td><td>CURRENT Festival for Art and Urban Space</td></tr>
-            <tr><td data-title="13.01.2020-25.01.2020">2020</td><td>Annual Design Projects Selection<br>IRGE, University of Stuttgart</td></tr>
+            <tr><td data-title="13.01.2020-25.01.2020">2020</td><td>Annual Design Projects Selection, IRGE, University of Stuttgart</td></tr>
         </table>
         <hr> -->
         <h2>Contact</h2>
@@ -196,7 +187,7 @@
         <hr>
         <div class="position"></div>
         <img src="img/map.png" height="400px" width="400px" alt="Map of Stuttgart" />
-        <p><small>&copy; Landeshauptstadt Stuttgart<!-- , Stadtmessungsamt & Arbeitsgemeinschaft Geoinformationssysteme (GIS-AG) --></small></p>
+        <p>&copy; Landeshauptstadt Stuttgart<!-- , Stadtmessungsamt & Arbeitsgemeinschaft Geoinformationssysteme (GIS-AG) --></p>
         <hr>
         <h2>joeyws.com</h2>
         <p>
