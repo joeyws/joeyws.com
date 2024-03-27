@@ -29,12 +29,12 @@
     a:hover{text-decoration:none;}
     /* LAYOUT */
     #header{display:inline-flex;column-gap:calc(var(--spacer) * 4);justify-content:flex-start;align-content:flex-start;flex-wrap:wrap;}
-    #header>*{white-space:nowrap;}
-    #nav{display:inline-block;}
-    #nav a{outline:1px solid var(--text);border-radius:100vmax;padding:0 .35em;text-decoration:none;}
-    #nav a.open{background:var(--text);color:var(--background);box-shadow:none;cursor:default;}
-    .loading{animation:.3s blink steps(1) infinite;}
-    #time-blink{animation:2s blink steps(1) infinite;}
+        #header>*{white-space:nowrap;}
+        .loading{animation:.3s blink steps(1) infinite;}
+        #nav{display:inline-block;}
+        #nav a{outline:1px solid var(--text);border-radius:4px;padding:0 .35em;text-decoration:none;}
+        #nav a.open{background:var(--text);color:var(--background);box-shadow:none;cursor:default;}
+        #time-blink{animation:2s blink steps(1) infinite;}
     hr{margin:1.8rem 0;}
     #content{min-height:100vh;}
     #content>*:not(.show){display:none;}
@@ -44,28 +44,27 @@
     /* .marquee3k:after{mix-blend-mode:luminosity;background:linear-gradient(to right, var(--background), transparent 40%, transparent calc(100% - 40%), var(--background));content:" ";display:block;position:absolute;top:0;bottom:0;left:0;right:0;margin:0 -1px;} */
     /* VIDEO */
     .video{cursor:pointer;overflow:hidden;position:relative;max-width:960px;font-size:0;line-height:0;}
-    .video.playing{cursor:pointer;}
     .video:after{border:.6rem solid transparent;border-left:1.7rem solid var(--text);border-right-width:0;width:0;height:0;display:inline-block;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);content:"";pointer-events:none;}
-    video{cursor:pointer;max-width:960px;}
+    .video.playing{cursor:pointer;}
     .video.playing:after{display:none;}
-    video{width:100%;}
+    video{width:100%;cursor:pointer;max-width:960px;}
     /* GALLERY */
-    .gallery{line-height:0;font-size:0;column-gap:var(--spacer);columns:8 280px;max-width:calc(8*280px + 9*var(--spacer));}
-    .gallery>div{position:relative;transition:all .2s;margin-bottom:var(--spacer);break-inside:avoid;}
-    .gallery>div>div>img{max-width:100%;cursor:zoom-in;margin-bottom:var(--spacer);}
-    .gallery>div>div>span{font-size:1rem;line-height:1.25rem;}
+    .gallery{justify-content:space-evenly;margin:calc(3 * var(--spacer)) calc(0 * var(--spacer));grid-template-columns:repeat(auto-fit, 180px);gap:var(--spacer);display:grid;line-height:0;font-size:0;}
+    .gallery div{padding-top:var(--spacer);cursor:zoom-in;display:flex;align-items:center;justify-content:center;flex-direction:column;}
+    .gallery div img{max-height:180px;max-width:180px;transition:all .2s;}
+    /* .gallery div:hover img{transform:translateY(-3px);} */
+    .gallery div span{min-height:calc(3 * 1.25rem);text-align:center;margin-top:var(--spacer);line-height:1.25rem;font-size:1rem;}
     /* LIGHTBOX */
     #lightbox{z-index:999997;cursor:zoom-out;position:fixed;inset:0;display:none;}
     #lightbox img{cursor:pointer;height:auto;max-height:90vh;max-width:calc(100vw - 2*var(--spacer));box-sizing:border-box;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);}
     /* MAP */
-    .position{margin:101px 0 0 331px;animation:position 1s infinite;outline:1px solid var(--background);border:1px solid var(--text);background:var(--background);width:8px;height:8px;border-radius:100vmax;pointer-events:none;position:absolute;transform:translate(-50%,-50%);display:block;}
+    #map{width:400px;max-width:100%;aspect-ratio:1 / 1;background:center center url(img/map.webp) no-repeat scroll;position:relative;background-size:contain;}
+    #map:after{top:25.25%;left:82.75%;animation:position 1s infinite;outline:1px solid var(--background);border:1px solid var(--text);background:var(--background);width:8px;height:8px;border-radius:100vmax;pointer-events:none;position:absolute;transform:translate(-50%,-50%);display:block;content:" ";}
     /* SVG */
     svg{fill:var(--text);vertical-align:0%;height:.7rem;width:.7rem;}
     a.svg{background:transparent !important;outline:none !important;padding:0;box-shadow:none !important;}
-    /* :HOVER */
     @keyframes blink{0%{opacity:0;}50%{opacity:1;}}
     @keyframes position{100%{outline-color:transparent;outline-offset:12px;}}
-    @media(hover:hover){}
     /* *{cursor:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" x="0px" y="0px" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="%23000" stroke="%23f00" stroke-width="0"/></svg>') 7 7, auto !important;} */
 </style>
 </head>
@@ -97,6 +96,7 @@
         <hr>
         <h2>Works</h2>
         <div class="gallery">
+            <!-- <img loading="lazy" src="img/render.jpg" data-date="2024" alt="Render" /> -->
             <img loading="lazy" src="img/26.webp" data-date="2022" alt="Lightweight pneu pavillons" />
             <!-- <img loading="lazy" src="img/inflate.gif" data-date="2022" alt="Pneu study" /> -->
             <img loading="lazy" src="img/25.webp" data-date="2021" alt="Vasikkasaari Climate Research Institute Helsinki" />
@@ -144,7 +144,7 @@
         </div>
     </div>
     <div id="about">
-        <!-- <h2>Experience</h2>
+        <!-- <h2>Professional Experience</h2>
         <table>
             <tr><td data-title="01.03.2023-29.02.2024">2023&ndash;2024</td><td>Herzog & de Meuron</td></tr>
             <tr><td data-title="14.03.2023-09.09.2023">2022</td><td>Behnisch Architekten</td></tr>
@@ -163,8 +163,8 @@
         <h2>Honors</h2>
         <table>
             <tr><td data-title="01.04.2023-31.03.2024">2023&ndash;2024</td><td>Deutschlandstipendium, Federal Republic of Germany/Ed. Züblin AG</td></tr>
-            <tr><td data-title="01.03.2023-29.02.2024">2023&ndash;Present</td><td>Swiss-European Mobility Programme</td></tr>
-            <tr><td data-title="05.09.2022-26.01.2023,01.03.2023-02.10.2023">2022&ndash;2023</td><td>Erasmus+ schoolarships</td></tr>
+            <tr><td data-title="01.03.2023-29.02.2024">2023&ndash;2024</td><td>Swiss-European Mobility Programme</td></tr>
+            <tr><td data-title="05.09.2022-26.01.2023,01.03.2023-02.10.2023">2022&ndash;2023</td><td>Erasmus+ schoolarship (2&times;)</td></tr>
             <tr><td data-title="24.06.2022-04.07.2022">2022</td><td>Graduate Design Projects Selection, Department of Architecture, University of Stuttgart</td></tr>
             <tr><td data-title="16.09.2021-17.09.2021">2021</td><td>CURRENT Festival for Art and Urban Space</td></tr>
             <tr><td data-title="13.01.2020-25.01.2020">2020</td><td>Annual Design Projects Selection, IRGE, University of Stuttgart</td></tr>
@@ -185,9 +185,10 @@
             <a href="https://www.linkedin.com/in/joeyschweickhardt/">LinkedIn</a>
         </p>
         <hr>
-        <div class="position"></div>
-        <img loading="lazy" src="img/map.webp" height="400px" width="400px" alt="Map of Stuttgart" />
-        <p>&copy; Landeshauptstadt Stuttgart<!-- , Stadtmessungsamt & Arbeitsgemeinschaft Geoinformationssysteme (GIS-AG) --></p>
+        <!-- <div class="position"></div>
+        <img loading="lazy" src="img/map.webp" height="400px" width="400px" alt="Map of Stuttgart" /> -->
+        <div id="map"></div>
+        <p>&copy; <small>Landeshauptstadt Stuttgart</small><!-- , Stadtmessungsamt & Arbeitsgemeinschaft Geoinformationssysteme (GIS-AG) --></p>
         <hr>
         <h2>joeyws.com</h2>
         <p>
@@ -239,7 +240,8 @@ $(document).ready(function(){
     // gallery
     $(".gallery img").each(function(){
         var date = $(this).attr("data-date").substr(-4);
-        $(this).wrap("<div><div></div></div>").after("<span><span>"+$(this).attr("alt")+" <small>"+$(this).attr("data-date").substr(-4)+"</small></span></span>");
+        var date = (date != "") ? " ("+date+")" : "";
+        $(this).wrap("<div></div>").after("<span><span>"+$(this).attr("alt")+date+"</span></span>");
     });
     // lightbox
     $("body").append("<div id='lightbox'><img src='' /></div>");
@@ -253,7 +255,7 @@ $(document).ready(function(){
     function lightboxPrev() {
         if ($("#lightbox").is(":visible")) {
             if (!$(".gallery div:first-child div img").is(".show")) {
-                $("img.show").removeClass("show").parent().parent().prev("div").children("div").children("img").addClass("show");
+                $("img.show").removeClass("show")/* .parent() */.parent().prev("div")/* .children("div") */.children("img").addClass("show");
                 lightboxLoad();
             }
         }
@@ -261,7 +263,7 @@ $(document).ready(function(){
     function lightboxNext() {
         if ($("#lightbox").is(":visible")) {
             if (!$(".gallery div:last-child div img").is(".show")) {
-                $("img.show").removeClass("show").parent().parent().next("div").children("div").children("img").addClass("show");
+                $("img.show").removeClass("show")/* .parent() */.parent().next("div")/* .children("div") */.children("img").addClass("show");
                 lightboxLoad();
             } else {
                 lightboxClose();
@@ -272,8 +274,12 @@ $(document).ready(function(){
         $("#lightbox").hide().children("img").attr("src","data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");
         $("img.show").removeClass("show");
     };
-    $(".gallery img").on("click",function(){
+    /* $(".gallery img").on("click",function(){
         $(this).addClass("show");
+        lightboxLoad();
+    }); */
+    $(".gallery>div").on("click",function(){
+        $(this).children("img").addClass("show");
         lightboxLoad();
     });
     $("#lightbox").on("click",function(e){
