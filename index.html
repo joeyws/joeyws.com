@@ -4,20 +4,20 @@
 <link rel="shortcut icon" type="image/x-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='32' width='32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%23000000' /%3E%3C/svg%3E">
 <meta charset="utf-8"><meta name="robots" content="index,nofollow,notranslate,noimageindex"><meta name="description" content="Welcome to the personal web page of Joey W. Schweickhardt."><meta name="keywords" content="schweickhardt,joey,stuttgart,joeyws,william,herzogdemeuron,basel,architektur,universität,institut"><meta name="geo.region" content="DE-BW"><meta name="geo.placename" content="Stuttgart"><meta name="geo.position" content="48.778600;9.179746"><meta name="ICBM" content="48.778600, 9.179746"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes,shrink-to-fit=no"><meta name="format-detection" content="telephone=no">
 <style>
-    @font-face{font-family:webfont;src:url("font/Source_Code_Pro/SourceCodePro-Regular.ttf");font-display:swap;}
-    :root{--background:#6f0;--text:#000;--spacer:8px;}
+    @font-face{font-family:webfont;src:url("font/gnu-free-font/FreeMono.ttf");font-display:swap;}
+    :root{--background:#fff;--text:#000;--spacer:8px;} /*#6f0*/
     ::-moz-selection{background:var(--text);color:var(--background);}
     ::selection{background:var(--text);color:var(--background);}
     /* ::-webkit-scrollbar{width:8px;height:8px;background:var(--background);}
     ::-webkit-scrollbar-thumb{background:var(--text);} */
     /* RESET */*{/* text-decoration-skip-ink:none; */user-select:none;font-kerning:normal;outline:none;-webkit-tap-highlight-color:rgba(0,0,0,0)!important;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-appearance:none;border-radius:0;-webkit-border-radius:0;box-sizing:content-box;font-smoothing:antialiased;-moz-osx-font-smoothing: grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased;}
 	html{font-size:14px;}
-    html,body{background:var(--background) url() center center repeat fixed;}
-    body{padding:var(--spacer);color:var(--text);font:normal normal 1rem/1.25rem webfont,serif,monospace;}
+    html,body{background:var(--background) url() center center repeat fixed;text-decoration-thickness:1px;}
+    body{padding:var(--spacer);color:var(--text);font:normal normal 1rem/1.25rem webfont,monospace;}
     p,ul,table,.video,.gallery{margin-top:var(--spacer);}
     hr+*,img+p,#content * *:first-child{margin-top:0;}
     h1{display:inline-block;}
-    h2{font-style:italic;display:table;}
+    h2{font-style:italic;display:table;}/* h2:before{content:"\1F863\00a0";font-size:.75rem;} */ /* \1F863 \1F853 \1F80B \2BC6 */
     ul{list-style-type:none;list-style-position:inside;}
     table,tr,td{vertical-align:top;}
     table{width:100%;}tr{border-top:1px solid var(--text);}
@@ -25,46 +25,47 @@
     td:not(:last-child){padding-right:calc(2* var(--spacer));}
     small{font-style:italic;}
     i{font-style:italic;}
-    a{text-decoration-thickness:.08em;text-decoration-thickness:1px;white-space:nowrap;}
-    a:hover{text-decoration:none;}
+    a{white-space:nowrap;}
+    a:hover{text-decoration:none;background:var(--text);color:var(--background);}
     /* LAYOUT */
-    #header{display:inline-flex;column-gap:calc(var(--spacer) * 4);justify-content:flex-start;align-content:flex-start;flex-wrap:wrap;}
-        #header>*{white-space:nowrap;}
+    #header{display:flex;justify-content:space-between;column-gap:calc(var(--spacer) * 3);flex-wrap:wrap;}
+        #header>*{white-space:nowrap;display:inline-block;}
         .loading{animation:.3s blink steps(1) infinite;}
-        #nav{display:inline-block;}
-        #nav a{outline:1px solid var(--text);border-radius:4px;padding:0 .25em;text-decoration:none;}
-        #nav a.open{background:var(--text);color:var(--background);box-shadow:none;cursor:default;}
+        #nav a{/* outline:1px solid var(--text); *//* border-radius:4px;padding:0 .25em; *//* text-decoration:none; */}
+        #nav a.open{cursor:default;background:#f0f;color:var(--text);text-decoration:none;}
         #time-blink{animation:2s blink steps(1) infinite;}
     hr{margin:1.8rem 0;}
     #content{min-height:100vh;}
     #content>*:not(.show){display:none;}
     /* MARQUEE */
-    .marquee3k{font:normal normal 2em/1.6em sans-serif;text-transform:uppercase;position:relative;white-space:nowrap;overflow:hidden;/* margin:calc(var(--spacer) * -1); */margin-top:var(--spacer);/* width:200px;flex-grow:1; */}
-    .marquee3k .marquee span:after{margin:0 .5em;content:"";} /* \2055 \274B \2733 \273A */
+    .marquee3k{background:#ff0;/* font:normal normal 2em/1.6em sans-serif;text-transform:uppercase; *//* margin:calc(var(--spacer) * -1); *//* margin-bottom:var(--spacer); *//* width:200px;flex-grow:1; */position:relative;white-space:nowrap;overflow:hidden;}
+    .marquee3k .marquee span:after{margin:0 .8em;content:"";} /* \2B58 \2B57 \2055 \274B \2733 \273A */
     /* .marquee3k:after{mix-blend-mode:luminosity;background:linear-gradient(to right, var(--background), transparent 40%, transparent calc(100% - 40%), var(--background));content:" ";display:block;position:absolute;top:0;bottom:0;left:0;right:0;margin:0 -1px;} */
     /* VIDEO */
-    .video{cursor:pointer;overflow:hidden;position:relative;max-width:960px;font-size:0;line-height:0;}
-    .video:after{border:.6rem solid transparent;border-left:1.7rem solid var(--text);border-right-width:0;width:0;height:0;display:inline-block;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);content:"";pointer-events:none;}
+    .video{cursor:pointer;overflow:hidden;position:relative;max-width:760px;font-size:0;line-height:0;}
+    .video:after{line-height:1rem;font-size:1rem;background:var(--text);color:var(--background);/* border:.6rem solid transparent;border-left:1.7rem solid var(--text);border-right-width:0;width:0;height:0; */content:"Play";display:inline-block;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);pointer-events:none;}
+    .video:hover:after{text-decoration:underline;}
     .video.playing{cursor:pointer;}
     .video.playing:after{display:none;}
-    video{width:100%;cursor:pointer;max-width:960px;}
+    video{width:100%;cursor:pointer;max-width:760px;}
     /* GALLERY */
-    .gallery{justify-content:space-evenly;margin:calc(3 * var(--spacer)) calc(0 * var(--spacer));grid-template-columns:repeat(auto-fit, 180px);gap:var(--spacer);display:grid;line-height:0;font-size:0;}
+    .gallery{color:#00f;justify-content:space-evenly;margin:calc(3 * var(--spacer)) calc(0 * var(--spacer));grid-template-columns:repeat(auto-fit, 180px);gap:var(--spacer);display:grid;line-height:0;font-size:0;}
     .gallery div{padding-top:var(--spacer);cursor:zoom-in;display:flex;align-items:center;justify-content:center;flex-direction:column;}
-    .gallery div img{max-height:180px;max-width:180px;transition:all .2s;}
-    /* .gallery div:hover img{transform:translateY(-3px);} */
-    .gallery div span{min-height:calc(3 * 1.25rem);text-align:center;margin-top:var(--spacer);line-height:1.25rem;font-size:1rem;}
+    .gallery div img{max-height:180px;max-width:180px;transition:all .15s;}
+    .gallery div:hover img{transform:translateY(-4px);}
+    .gallery div span{min-height:calc(3 * 1.25rem);text-align:center;margin-top:var(--spacer);line-height:1.25rem;font-size:1rem;margin-top:var(--spacer);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;}
+    .gallery div:hover span span{text-decoration:underline;}
     /* LIGHTBOX */
     #lightbox{z-index:999997;cursor:zoom-out;position:fixed;inset:0;display:none;}
     #lightbox img{cursor:pointer;height:auto;max-height:90vh;max-width:calc(100vw - 2*var(--spacer));box-sizing:border-box;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);}
     /* MAP */
     #map{width:400px;max-width:100%;aspect-ratio:1 / 1;background:center center url(img/map.webp) no-repeat scroll;position:relative;background-size:contain;}
-    #map:after{top:25.25%;left:82.75%;animation:position 1s infinite;outline:1px solid var(--background);border:1px solid var(--text);background:var(--background);width:8px;height:8px;border-radius:100vmax;pointer-events:none;position:absolute;transform:translate(-50%,-50%);display:block;content:" ";}
+    #map:after{outline:2px solid #f00;border:1px solid var(--text);background:#f00;animation:position 1s infinite linear;width:7px;height:7px;top:25.25%;left:82.75%;border-radius:100vmax;pointer-events:none;position:absolute;transform:translate(-50%,-50%);display:block;content:"";}
+    @keyframes position{100%{outline-color:transparent;outline-offset:12px;}}
     /* SVG */
     svg{fill:var(--text);vertical-align:0%;height:.7rem;width:.7rem;}
     a.svg{background:transparent !important;outline:none !important;padding:0;box-shadow:none !important;}
     @keyframes blink{0%{opacity:0;}50%{opacity:1;}}
-    @keyframes position{100%{outline-color:transparent;outline-offset:12px;}}
     /* *{cursor:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" x="0px" y="0px" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="%23000" stroke="%23f00" stroke-width="0"/></svg>') 7 7, auto !important;} */
 </style>
 </head>
@@ -74,11 +75,10 @@
 <div id="header">
     <h1 class="loading">Joey W. Schweickhardt</h1>
     <div id="nav">
-        <a href="#/index">Index</a> <a href="#/about">About</a>
+        <a href="#/index">Index</a>, <a href="#/about">About</a>
     </div>
-    <div>Stuttgart (<span id="time"></span><span id="weather"></span>)</div>
+    <div>Stuttgart<span id="time"></span><span id="weather"></span></div>
 </div>
-<div class="marquee3k" data-speed=".4"><div class="marquee"><span>歡迎</span><span>Bienvenidos</span><span>Welcome</span><span>स्वागत हे</span><span>اهلا وسهلا</span><span>Bem-vinda</span><span>স্বাগত</span><span>добро пожаловать</span><span>ようこそ</span><span>Sugeng Rawuh</span><span>ਸਵਾਗਤ ਹੈ</span><span>Willkommen</span><span>어서 오십시오</span><span>Bienvenue</span><span>Karibu</span><span>Svāgatam</span><span>Hoşgeldiniz</span><span>خوش آمدید</span><span>வரவேற்பு</span><span>Hoan nghênh</span><span>اهلا وسهلا</span><span>Benvenuto</span></div></div>
 <hr>
 
 
@@ -96,7 +96,6 @@
         <hr>
         <h2>Works</h2>
         <div class="gallery">
-            <!-- <img loading="lazy" src="img/render.jpg" data-date="2024" alt="Render" /> -->
             <img loading="lazy" src="img/26.webp" data-date="2022" alt="Lightweight pneu pavillons" />
             <!-- <img loading="lazy" src="img/inflate.gif" data-date="2022" alt="Pneu study" /> -->
             <img loading="lazy" src="img/25.webp" data-date="2021" alt="Vasikkasaari Climate Research Institute Helsinki" />
@@ -164,7 +163,7 @@
         <table>
             <tr><td data-title="01.04.2023-31.03.2024">2023&ndash;2024</td><td>Deutschlandstipendium, Federal Republic of Germany/Ed. Züblin AG</td></tr>
             <tr><td data-title="01.03.2023-29.02.2024">2023&ndash;2024</td><td>Swiss-European Mobility Programme</td></tr>
-            <tr><td data-title="05.09.2022-26.01.2023,01.03.2023-02.10.2023">2022&ndash;2023</td><td>Erasmus+ schoolarship (2&times;)</td></tr>
+            <tr><td data-title="05.09.2022-26.01.2023,01.03.2023-02.10.2023">2022&ndash;2023</td><td>Erasmus+ schoolarship</td></tr>
             <tr><td data-title="24.06.2022-04.07.2022">2022</td><td>Graduate Design Projects Selection, Department of Architecture, University of Stuttgart</td></tr>
             <tr><td data-title="16.09.2021-17.09.2021">2021</td><td>CURRENT Festival for Art and Urban Space</td></tr>
             <tr><td data-title="13.01.2020-25.01.2020">2020</td><td>Annual Design Projects Selection, IRGE, University of Stuttgart</td></tr>
@@ -174,7 +173,8 @@
         <p>
             Joey W. Schweickhardt<br>
             <span class="address1"></span><br>
-            <span class="address2"></span>
+            <span class="address2"></span><br>
+            Germany
         </p>
         <p>
             <a class="phone" href="javascript:"></a><br>
@@ -192,7 +192,7 @@
         <hr>
         <h2>joeyws.com</h2>
         <p>
-            Hand-coded with <!-- &#9825; --><svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path fill="#000" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" fill-rule="evenodd"/></svg><br>
+            <!-- Hand-coded with <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path fill="#000" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" fill-rule="evenodd"/></svg><br> -->
             This site doesn&rsquo;t use cookies.<br>
             Hosted on <a href="https://github.com/" rel="nofollow">GitHub</a><br>
             Initial launch: <!-- 16/01/ -->2011
@@ -207,6 +207,8 @@
 </div>
 
 
+<hr>
+<div class="marquee3k" data-speed=".4"><div class="marquee"><span>歡迎</span><span>Bienvenidos</span><span>Welcome</span><span>स्वागत हे</span><span>اهلا وسهلا</span><span>Bem-vinda</span><span>স্বাগত</span><span>добро пожаловать</span><span>ようこそ</span><span>Sugeng Rawuh</span><span>ਸਵਾਗਤ ਹੈ</span><span>Willkommen</span><span>어서 오십시오</span><span>Bienvenue</span><span>Karibu</span><span>Svāgatam</span><span>Hoşgeldiniz</span><span>خوش آمدید</span><span>வரவேற்பு</span><span>Hoan nghênh</span><span>اهلا وسهلا</span><span>Benvenuto</span></div></div>
 <!-- <div style="position:fixed;top:0;left:0;right:0;height:80px;pointer-events:none;background:linear-gradient(var(--background),transparent);">&nbsp;</div> -->
 
 
@@ -241,7 +243,8 @@ $(document).ready(function(){
     $(".gallery img").each(function(){
         var date = $(this).attr("data-date").substr(-4);
         var date = (date != "") ? " ("+date+")" : "";
-        $(this).wrap("<div></div>").after("<span><span>"+$(this).attr("alt")+date+"</span></span>");
+        var caption = $(this).attr("alt") + date;
+        $(this).wrap("<div></div>").after("<span><span>"+caption+"</span></span>");
     });
     // lightbox
     $("body").append("<div id='lightbox'><img src='' /></div>");
@@ -296,7 +299,7 @@ $(document).ready(function(){
         var h = addZero(time.getHours());
         var min = addZero(time.getMinutes());
         var s = addZero(time.getSeconds());
-        $("#time").html(h + "<span id='time-blink'>:</span>" + min);
+        $("#time").html(" &nbsp; " + h + "<span id='time-blink'>:</span>" + min);
     }
     getTime();
     setInterval(getTime,2000);
@@ -305,14 +308,14 @@ $(document).ready(function(){
     const getWeather = async () => {
         const request = await fetch("https://api.open-meteo.com/v1/forecast?latitude=48.7823&longitude=9.177&current_weather=true");
         const response = await request.json();
-        $("#weather").html(", " + Math.round(response.current_weather.temperature) + "&deg;C");
+        $("#weather").html(" &nbsp; " + Math.round(response.current_weather.temperature) + "&deg;C");
     }
     getWeather();
     setInterval(getWeather,60000);
     
     // impressum
     var address1 = 'P'+'f'+'l'+'a'+'u'+'m'+'w'+'e'+'g'+' '+'1'+'4';
-    var address2 = 'D'+'E'+'&ndash;'+'7'+'0'+'3'+'7'+'4'+' '+'S'+'t'+'u'+'t'+'t'+'g'+'a'+'r'+'t';
+    var address2 = '7'+'0'+'3'+'7'+'4'+' '+'S'+'t'+'u'+'t'+'t'+'g'+'a'+'r'+'t'; // 'D'+'E'+'&ndash;'+
     var mail = 'm'+'a'+'i'+'l'+ String.fromCharCode(64) +'j'+'o'+'e'+'y'+'w'+'s'+'.'+'c'+'o'+'m';
     var phone = '+'+'4'+'9'+'1'+'5'+'7'+'7'+'8'+'8'+'5'+'0'+'5'+'0'+'2';
     $('.address1').html(address1);
