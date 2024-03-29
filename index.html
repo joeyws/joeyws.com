@@ -299,7 +299,7 @@ $(document).ready(function(){
         var h = addZero(time.getHours());
         var min = addZero(time.getMinutes());
         var s = addZero(time.getSeconds());
-        $("#time").html(" &nbsp; " + h + "<span id='time-blink'>:</span>" + min);
+        $("#time").html("&nbsp; " + h + ":" + min); // $("#time").html("&nbsp; " + h + "<span id='time-blink'>:</span>" + min);
     }
     getTime();
     setInterval(getTime,2000);
@@ -308,7 +308,7 @@ $(document).ready(function(){
     const getWeather = async () => {
         const request = await fetch("https://api.open-meteo.com/v1/forecast?latitude=48.7823&longitude=9.177&current_weather=true");
         const response = await request.json();
-        $("#weather").html(" &nbsp; " + Math.round(response.current_weather.temperature) + "&deg;C");
+        $("#weather").html("&nbsp; " + Math.round(response.current_weather.temperature) + "&deg;C");
     }
     getWeather();
     setInterval(getWeather,60000);
