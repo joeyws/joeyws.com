@@ -17,7 +17,7 @@
     p,ul,table,.video,.gallery{margin-top:var(--spacer);}
     hr+*,img+p,#content * *:first-child{margin-top:0;}
     h1{display:inline-block;}
-    h2{/* font:normal normal 1.4rem/1em sans-serif;transform:scaleY(.95); */font-style:italic;display:table;}/* h2:after{content:"\00a0\1F863";font-size:.75rem;} */ /* \1F863 \1F853 \1F80B \2BC6 */
+    h2{font-style:italic/* font:normal normal 1.4rem/1em sans-serif;transform:scaleY(.95); */;display:table;}/* h2:after{content:"\00a0\1F863";font-size:.75rem;} */ /* \1F863 \1F853 \1F80B \2BC6 */
     ul{list-style-type:none;list-style-position:inside;}
     table,tr,td{vertical-align:top;}
     table{width:100%;}tr{border-top:1px solid var(--text);}
@@ -31,7 +31,7 @@
     #header{display:flex;justify-content:space-between;column-gap:calc(var(--spacer) * 3);flex-wrap:wrap;}
         #header>*{white-space:nowrap;display:inline-block;}
         .loading{animation:.3s blink steps(1) infinite;}
-        #nav a{/* outline:1px solid var(--text); *//* border-radius:4px;padding:0 .25em; *//* text-decoration:none; */}
+        #nav a{}
         #nav a.open{pointer-events:none;background:#f0f;color:var(--text);text-decoration:none;}
         #time-blink{animation:2s blink steps(1) infinite;}
     hr{margin:1.8rem 0;}
@@ -303,7 +303,7 @@ $(document).ready(function(){
         h = h ? h : 12;
         var min = addZero(time.getMinutes());
         var s = addZero(time.getSeconds());
-        $("#time").html("&nbsp;&nbsp;&nbsp;" + h + "<span id='time-blink'>:</span>" + min + " " + ampm);
+        $("#time").html("&nbsp;&nbsp;" + h + "<span id='time-blink'>:</span>" + min + " " + ampm);
     }
     getTime();
     setInterval(getTime,2000);
@@ -312,7 +312,7 @@ $(document).ready(function(){
     const getWeather = async () => {
         const request = await fetch("https://api.open-meteo.com/v1/forecast?latitude=48.7823&longitude=9.177&current_weather=true");
         const response = await request.json();
-        $("#weather").html("&nbsp;&nbsp;&nbsp;" + Math.round(response.current_weather.temperature) + "&deg;C");
+        $("#weather").html("&nbsp;&nbsp;" + Math.round(response.current_weather.temperature) + "&deg;C");
     }
     getWeather();
     setInterval(getWeather,60000);
