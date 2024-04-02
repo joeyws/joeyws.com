@@ -32,7 +32,7 @@
         #header>*{white-space:nowrap;display:inline-block;}
         .loading{animation:.3s blink steps(1) infinite;}
         #nav a{/* outline:1px solid var(--text); *//* border-radius:4px;padding:0 .25em; *//* text-decoration:none; */}
-        #nav a.open{cursor:default;background:#f0f;color:var(--text);text-decoration:none;}
+        #nav a.open{pointer-events:none;background:#f0f;color:var(--text);text-decoration:none;}
         #time-blink{animation:2s blink steps(1) infinite;}
     hr{margin:1.8rem 0;}
     #content{min-height:100vh;}
@@ -66,6 +66,7 @@
     svg{fill:var(--text);vertical-align:0%;height:.7rem;width:.7rem;}
     a.svg{background:transparent !important;outline:none !important;padding:0;box-shadow:none !important;}
     @keyframes blink{0%{opacity:0;}50%{opacity:1;}}
+    /* *{cursor:crosshair;} */
     /* *{cursor:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" x="0px" y="0px" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="%23000" stroke="%23f00" stroke-width="0"/></svg>') 7 7, auto !important;} */
 </style>
 </head>
@@ -297,9 +298,12 @@ $(document).ready(function(){
         function addZero(i) {if (i < 10) {i = "0" + i;} return i;}
         var time = new Date();
         var h = addZero(time.getHours());
+        ampm = h >= 12 ? "pm" : "am";
+        h = h % 12;
+        h = h ? h : 12;
         var min = addZero(time.getMinutes());
         var s = addZero(time.getSeconds());
-        $("#time").html("&nbsp; " + h + "<span id='time-blink'>:</span>" + min);
+        $("#time").html("&nbsp; " + h + "<span id='time-blink'>:</span>" + min + " " + ampm);
     }
     getTime();
     setInterval(getTime,2000);
