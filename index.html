@@ -78,7 +78,7 @@
     <div id="nav">
         <a href="#/index">Index</a>, <a href="#/about">About</a>
     </div>
-    <div>Stuttgart<span id="time"></span><span id="weather"></span></div>
+    <div>Stuttgart <span style="border:.06rem solid var(--text);border-radius:100%;font-size:.8em;padding:0 .5em;">D</span><span id="time"></span><span id="weather"></span></div>
 </div>
 <hr>
 
@@ -303,7 +303,7 @@ $(document).ready(function(){
         h = h ? h : 12;
         var min = addZero(time.getMinutes());
         var s = addZero(time.getSeconds());
-        $("#time").html("&nbsp; " + h + "<span id='time-blink'>:</span>" + min + " " + ampm);
+        $("#time").html("&nbsp;&nbsp;&nbsp;" + h + "<span id='time-blink'>:</span>" + min + " " + ampm);
     }
     getTime();
     setInterval(getTime,2000);
@@ -312,7 +312,7 @@ $(document).ready(function(){
     const getWeather = async () => {
         const request = await fetch("https://api.open-meteo.com/v1/forecast?latitude=48.7823&longitude=9.177&current_weather=true");
         const response = await request.json();
-        $("#weather").html("&nbsp; " + Math.round(response.current_weather.temperature) + "&deg;C");
+        $("#weather").html("&nbsp;&nbsp;&nbsp;" + Math.round(response.current_weather.temperature) + "&deg;C");
     }
     getWeather();
     setInterval(getWeather,60000);
