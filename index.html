@@ -5,11 +5,9 @@
 <meta charset="utf-8"><meta name="robots" content="index,nofollow,notranslate,noimageindex"><meta name="description" content="Welcome to the personal web page of Joey W. Schweickhardt."><meta name="keywords" content="schweickhardt,joey,stuttgart,joeyws,william,herzogdemeuron,basel,architektur,universität,institut"><meta name="geo.region" content="DE-BW"><meta name="geo.placename" content="Stuttgart"><meta name="geo.position" content="48.778600;9.179746"><meta name="ICBM" content="48.778600, 9.179746"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes,shrink-to-fit=no"><meta name="format-detection" content="telephone=no">
 <style>
     @font-face{font-family:webfont;src:url("font/gnu-free-font/FreeMono.ttf");font-display:swap;}
-    :root{--background:#f6f4ee;--text:#000;--spacer:8px;} /*#6f0*/
+    :root{--background:#f6f4ee;--text:#000;--spacer:8px;} /*#f6f4ee #6f0*/
     ::-moz-selection{background:var(--text);color:var(--background);}
     ::selection{background:var(--text);color:var(--background);}
-    /* ::-webkit-scrollbar{width:8px;height:8px;background:var(--background);}
-    ::-webkit-scrollbar-thumb{background:var(--text);} */
     /* RESET */*{/* text-decoration-skip-ink:none; */user-select:none;font-kerning:normal;outline:none;-webkit-tap-highlight-color:rgba(0,0,0,0)!important;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-appearance:none;border-radius:0;-webkit-border-radius:0;box-sizing:content-box;font-smoothing:antialiased;-moz-osx-font-smoothing: grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased;}
 	html{font-size:14px;}
     html,body{background:var(--background) url() center center repeat fixed;text-decoration-thickness:1px;}
@@ -17,33 +15,29 @@
     p,ul,table,.video,.gallery{margin-top:var(--spacer);}
     hr+*,img+p,#content * *:first-child{margin-top:0;}
     h1{display:inline-block;}
-    h2{font-style:italic/* font:normal normal 1.4rem/1em sans-serif;transform:scaleY(.95); */;display:table;}/* h2:after{content:"\00a0\1F863";font-size:.75rem;} */ /* \1F863 \1F853 \1F80B \2BC6 */
+    h2{font-style:italic;display:table;} /* h2:after{content:"\00a0\1F863";font-size:.75rem;} */ /* \1F863 \1F853 \1F80B \2BC6 */
     ul{list-style-type:none;list-style-position:inside;}
-    table,tr,td{vertical-align:top;}
-    table{width:100%;}tr{border-top:1px solid var(--text);}
-    td:first-child{white-space:nowrap;width:180px;}
-    td:not(:last-child){padding-right:calc(2* var(--spacer));}
+    table,tr,td{vertical-align:top;} table{width:100%;} tr{border-top:1px solid var(--text);} td:first-child{white-space:nowrap;width:180px;} td:not(:last-child){padding-right:calc(2* var(--spacer));}
     small{font-style:italic;}
     i{font-style:italic;}
-    a{white-space:nowrap;}
-    a:hover{text-decoration:none;background:var(--text);color:var(--background);}
+    a{white-space:nowrap;text-decoration:underline;}
+    a:hover{text-decoration:none;}
     /* LAYOUT */
     #header{display:flex;justify-content:space-between;column-gap:calc(var(--spacer) * 3);flex-wrap:wrap;}
         #header>*{white-space:nowrap;display:inline-block;}
         .loading{animation:.3s blink steps(1) infinite;}
-        #nav a{}
-        #nav a.open{pointer-events:none;background:#f0f;color:var(--text);text-decoration:none;}
+        #nav a.open{pointer-events:none;background:#f0f;text-decoration:none;}
         #time-blink{animation:2s blink steps(1) infinite;}
     hr{margin:1.8rem 0;}
     #content{min-height:100vh;}
     #content>*:not(.show){display:none;}
     /* MARQUEE */
-    .marquee3k{background:#ff0;/* font:normal normal 2rem/1.5em sans-serif; *//* margin:calc(var(--spacer) * -1); *//* margin-bottom:var(--spacer); *//* width:200px;flex-grow:1; */position:relative;white-space:nowrap;overflow:hidden;}
+    .marquee3k{background:#ff0;/* margin-bottom:var(--spacer); *//* width:200px;flex-grow:1; */position:relative;white-space:nowrap;overflow:hidden;}
     .marquee3k .marquee span:after{margin:0 1em;content:"";} /* \2B58 \2B57 \2055 \274B \2733 \273A */
     /* .marquee3k:after{mix-blend-mode:luminosity;background:linear-gradient(to right, var(--background), transparent 40%, transparent calc(100% - 40%), var(--background));content:" ";display:block;position:absolute;top:0;bottom:0;left:0;right:0;margin:0 -1px;} */
     /* VIDEO */
     .video{cursor:pointer;overflow:hidden;position:relative;max-width:760px;font-size:0;line-height:0;}
-    .video:after{line-height:1rem;font-size:1rem;background:var(--text);color:var(--background);content:"Play";/* border:.6rem solid transparent;border-left:1.7rem solid var(--text);border-right-width:0;width:0;height:0; */display:inline-block;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);pointer-events:none;}
+    .video:after{line-height:1rem;font-size:1rem;color:var(--background);background:#000;content:"Play";/* border:.4rem solid transparent;border-left:1.2rem solid var(--background);border-right-width:0;width:0;height:0; */display:inline-block;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);pointer-events:none;}
     .video:hover:after{text-decoration:underline;}
     .video.playing{cursor:pointer;}
     .video.playing:after{display:none;}
@@ -53,8 +47,8 @@
     .gallery div{padding-top:var(--spacer);cursor:zoom-in;display:flex;align-items:center;justify-content:center;flex-direction:column;}
     .gallery div img{max-height:180px;max-width:180px;transition:all .15s;}
     .gallery div:hover img{transform:translateY(-4px);}
-    .gallery div span{min-height:calc(3 * 1.25rem);text-align:center;margin-top:var(--spacer);line-height:1.25rem;font-size:1rem;margin-top:var(--spacer);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;}
-    .gallery div:hover span span{text-decoration:underline;}
+    .gallery div span{min-height:calc(3 * 1.25rem);text-align:center;margin-top:var(--spacer);line-height:1.25rem;font-size:1rem;margin-top:var(--spacer);/* display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical; */overflow:hidden;}
+    .gallery div:hover span{text-decoration:underline;}
     /* LIGHTBOX */
     #lightbox{z-index:999997;cursor:zoom-out;position:fixed;inset:0;display:none;}
     #lightbox img{cursor:pointer;height:auto;max-height:90vh;max-width:calc(100vw - 2*var(--spacer));box-sizing:border-box;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);}
@@ -62,11 +56,7 @@
     #map{width:400px;max-width:100%;aspect-ratio:1 / 1;background:center center url(img/map.webp) no-repeat scroll;position:relative;background-size:contain;}
     #map:after{outline:2px solid #f00;border:1px solid var(--text);background:#f00;animation:position 1.2s infinite ease-out;width:7px;height:7px;top:25.25%;left:82.75%;border-radius:100vmax;pointer-events:none;position:absolute;transform:translate(-50%,-50%);display:block;content:"";}
     @keyframes position{100%{outline-color:transparent;outline-offset:12px;}}
-    /* SVG */
-    svg{fill:var(--text);vertical-align:0%;height:.7rem;width:.7rem;}
-    a.svg{background:transparent !important;outline:none !important;padding:0;box-shadow:none !important;}
     @keyframes blink{0%{opacity:0;}50%{opacity:1;}}
-    /* *{cursor:crosshair;} */
     /* *{cursor:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" x="0px" y="0px" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="%23000" stroke="%23f00" stroke-width="0"/></svg>') 7 7, auto !important;} */
 </style>
 </head>
@@ -78,7 +68,7 @@
     <div id="nav">
         <a href="#/index">Index</a>, <a href="#/about">About</a>
     </div>
-    <div>Stuttgart <span style="border:.06rem solid var(--text);border-radius:100%;font-size:.85em;padding:0 .5em;">D</span><span id="time"></span><span id="weather"></span></div>
+    <div>Stuttgart <span style="outline:.05rem solid var(--text);font-size:.9rem;outline-offset:-1px;border-radius:100%;padding:0 .55em .1em .55em;">D</span><span id="time"></span><span id="weather"></span></div>
 </div>
 <hr>
 
