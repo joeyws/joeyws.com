@@ -6,7 +6,7 @@
 <style>
     @font-face{font-family:webfont;src:url("font/gnu-free-font/FreeMono.ttf");font-display:swap;}
     @font-face{font-family:webfont2;src:url("font/gnu-free-font/FreeSansBold.ttf");font-display:swap;}
-    :root{--background:#fff;--text:#000;--spacer:8px;} /*#f6f4ee #6f0*/
+    :root{--background:#eee;--text:#000;--spacer:8px;} /*#f6f4ee #6f0*/
     ::-moz-selection{background:var(--text);color:var(--background);}
     ::selection{background:var(--text);color:var(--background);}
     /* RESET */*{/* text-decoration-skip-ink:none; */user-select:none;font-kerning:normal;outline:none;-webkit-tap-highlight-color:rgba(0,0,0,0)!important;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-appearance:none;border-radius:0;-webkit-border-radius:0;box-sizing:content-box;font-smoothing:antialiased;-moz-osx-font-smoothing: grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased;}
@@ -28,7 +28,6 @@
     #header{display:flex;justify-content:space-between;column-gap:calc(var(--spacer) * 3);flex-wrap:wrap;}
         #header>*{white-space:nowrap;display:inline-block;}
         .loading{animation:.3s blink steps(1) infinite;}
-        #nav a{text-decoration:none;}
         #nav a.open{background:#f0f;line-height:1em;pointer-events:none;text-decoration:none;}
         #time-blink{animation:2s blink steps(1) infinite;}
     hr{margin:1.8rem 0;}
@@ -40,7 +39,7 @@
     /* .marquee3k:after{mix-blend-mode:luminosity;background:linear-gradient(to right, var(--background), transparent 40%, transparent calc(100% - 40%), var(--background));content:" ";display:block;position:absolute;top:0;bottom:0;left:0;right:0;margin:0 -1px;} */
     /* VIDEO */
     .video{cursor:pointer;overflow:hidden;position:relative;max-width:760px;font-size:0;line-height:0;}
-    .video:after{/* line-height:1rem;font-size:1rem; */content:"";border:7px solid transparent;border-left:20px solid var(--text);border-right-width:0;width:0;height:0;display:inline-block;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);pointer-events:none;}
+    .video:after{line-height:1rem;font-size:1rem;content:"Play";background:var(--text);color:var(--background);/* border:7px solid transparent;border-left:20px solid var(--text);border-right-width:0;width:0;height:0; */display:inline-block;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);pointer-events:none;}
     .video:hover:after{opacity:1;/* text-decoration:underline; */}
     .video.playing{cursor:pointer;}
     .video.playing:after{display:none;}
@@ -50,7 +49,7 @@
     .gallery div{padding-top:var(--spacer);cursor:zoom-in;display:flex;align-items:center;justify-content:center;flex-direction:column;}
     .gallery div img{max-height:180px;max-width:180px;transition:all .15s;}
     .gallery div:hover img{transform:translateY(-4px);}
-    .gallery div span{/* color:#00f;font-family:webfont2,monospace; */font-size:1rem;line-height:1.25em;min-height:calc(3 * 1.25rem);text-align:center;margin-top:var(--spacer);margin-top:var(--spacer);/* display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical; */overflow:hidden;}
+    .gallery div span{color:#00f;font-size:1rem;line-height:1.25em;min-height:calc(3 * 1.25rem);text-align:center;margin-top:var(--spacer);margin-top:var(--spacer);/* display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical; */overflow:hidden;}
     .gallery div:hover span{text-decoration:underline;}
     /* LIGHTBOX */
     #lightbox{z-index:999997;cursor:zoom-out;position:fixed;inset:0;display:none;}
@@ -71,7 +70,7 @@
     <div id="nav">
         <a href="#/index">Index</a>, <a href="#/about">About</a>
     </div>
-    <div>Stuttgart <span style="outline:.05rem solid var(--text);font-size:.8rem;padding:0 .5em .02em .5em;outline-offset:-1px;border-radius:100%;">D</span><span id="time"></span><span id="weather"></span></div>
+    <div>Stuttgart <span style="outline:.05rem solid var(--text);font-size:.9rem;padding:0 .5em .06em .5em;outline-offset:-1px;border-radius:100%;">D</span><span id="time"></span><span id="weather"></span></div>
 </div>
 <hr>
 
