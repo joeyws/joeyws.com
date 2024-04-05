@@ -5,8 +5,8 @@
 <meta charset="utf-8"><meta name="robots" content="index,nofollow,notranslate,noimageindex"><meta name="description" content="Welcome to the personal web page of Joey W. Schweickhardt."><meta name="keywords" content="schweickhardt,joey,stuttgart,joeyws,william,herzogdemeuron,basel,architektur,universität,institut"><meta name="geo.region" content="DE-BW"><meta name="geo.placename" content="Stuttgart"><meta name="geo.position" content="48.778600;9.179746"><meta name="ICBM" content="48.778600, 9.179746"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes,shrink-to-fit=no"><meta name="format-detection" content="telephone=no">
 <style>
     @font-face{font-family:webfont;src:url("font/gnu-free-font/FreeMono.ttf");font-display:swap;}
-    @font-face{font-family:webfont2;src:url("font/gnu-free-font/FreeSans.ttf");font-display:swap;}
-    :root{--background:#f6f4ee;--text:#000;--spacer:8px;} /*#f6f4ee #6f0*/
+    @font-face{font-family:webfont2;src:url("font/gnu-free-font/FreeSansBold.ttf");font-display:swap;}
+    :root{--background:#fff;--text:#000;--spacer:8px;} /*#f6f4ee #6f0*/
     ::-moz-selection{background:var(--text);color:var(--background);}
     ::selection{background:var(--text);color:var(--background);}
     /* RESET */*{/* text-decoration-skip-ink:none; */user-select:none;font-kerning:normal;outline:none;-webkit-tap-highlight-color:rgba(0,0,0,0)!important;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-appearance:none;border-radius:0;-webkit-border-radius:0;box-sizing:content-box;font-smoothing:antialiased;-moz-osx-font-smoothing: grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased;}
@@ -16,7 +16,7 @@
     p,ul,table,.video,.gallery{margin-top:var(--spacer);}
     hr+*,img+p,#content * *:first-child{margin-top:0;}
     h1{display:inline-block;}
-    h2{font-style:italic;/* transform:scaleY(.92);font:normal normal 1.4em/1em webfont2,sans-serif; */display:table;}
+    h2{font-style:italic;/* transform:scaleY(.92);*/display:table;}
     /* h2:after{content:"\1F863";margin-left:var(--spacer);font-size:1rem;} */ /* \00a0 \1F863 \1F853 \1F80B \2BC6 */
     ul{list-style-type:none;list-style-position:inside;}
     table,tr,td{vertical-align:top;} table{width:100%;} tr{border-top:1px solid var(--text);} td:first-child{white-space:nowrap;width:180px;} td:not(:last-child){padding-right:calc(2* var(--spacer));}
@@ -28,7 +28,8 @@
     #header{display:flex;justify-content:space-between;column-gap:calc(var(--spacer) * 3);flex-wrap:wrap;}
         #header>*{white-space:nowrap;display:inline-block;}
         .loading{animation:.3s blink steps(1) infinite;}
-        #nav a.open{pointer-events:none;background:#f0f;text-decoration:none;}
+        #nav a{text-decoration:none;}
+        #nav a.open{background:#f0f;line-height:1em;pointer-events:none;text-decoration:none;}
         #time-blink{animation:2s blink steps(1) infinite;}
     hr{margin:1.8rem 0;}
     #content{min-height:100vh;}
@@ -39,17 +40,17 @@
     /* .marquee3k:after{mix-blend-mode:luminosity;background:linear-gradient(to right, var(--background), transparent 40%, transparent calc(100% - 40%), var(--background));content:" ";display:block;position:absolute;top:0;bottom:0;left:0;right:0;margin:0 -1px;} */
     /* VIDEO */
     .video{cursor:pointer;overflow:hidden;position:relative;max-width:760px;font-size:0;line-height:0;}
-    .video:after{line-height:1rem;font-size:1rem;color:var(--background);background:#000;content:"Play";/* border:.4rem solid transparent;border-left:1.2rem solid var(--background);border-right-width:0;width:0;height:0; */display:inline-block;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);pointer-events:none;}
-    .video:hover:after{text-decoration:underline;}
+    .video:after{/* line-height:1rem;font-size:1rem; */content:"";border:7px solid transparent;border-left:20px solid var(--text);border-right-width:0;width:0;height:0;display:inline-block;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);pointer-events:none;}
+    .video:hover:after{opacity:1;/* text-decoration:underline; */}
     .video.playing{cursor:pointer;}
     .video.playing:after{display:none;}
     video{width:100%;cursor:pointer;max-width:760px;}
     /* GALLERY */
-    .gallery{color:#00f;justify-content:space-evenly;margin:calc(2 * var(--spacer)) calc(0 * var(--spacer));grid-template-columns:repeat(auto-fit, 180px);gap:var(--spacer);display:grid;line-height:0;font-size:0;}
+    .gallery{justify-content:space-evenly;margin:calc(2 * var(--spacer)) calc(0 * var(--spacer));grid-template-columns:repeat(auto-fit, 180px);gap:var(--spacer);display:grid;line-height:0;font-size:0;}
     .gallery div{padding-top:var(--spacer);cursor:zoom-in;display:flex;align-items:center;justify-content:center;flex-direction:column;}
     .gallery div img{max-height:180px;max-width:180px;transition:all .15s;}
     .gallery div:hover img{transform:translateY(-4px);}
-    .gallery div span{min-height:calc(3 * 1.25rem);text-align:center;margin-top:var(--spacer);line-height:1.25rem;font-size:1rem;margin-top:var(--spacer);/* display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical; */overflow:hidden;}
+    .gallery div span{/* color:#00f;font-family:webfont2,monospace; */font-size:1rem;line-height:1.25em;min-height:calc(3 * 1.25rem);text-align:center;margin-top:var(--spacer);margin-top:var(--spacer);/* display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical; */overflow:hidden;}
     .gallery div:hover span{text-decoration:underline;}
     /* LIGHTBOX */
     #lightbox{z-index:999997;cursor:zoom-out;position:fixed;inset:0;display:none;}
@@ -70,7 +71,7 @@
     <div id="nav">
         <a href="#/index">Index</a>, <a href="#/about">About</a>
     </div>
-    <div>Stuttgart <span style="outline:.05rem solid var(--text);font-size:.9rem;outline-offset:-1px;border-radius:100%;padding:0 .55em .1em .55em;">D</span><span id="time"></span><span id="weather"></span></div>
+    <div>Stuttgart <span style="outline:.05rem solid var(--text);font-size:.8rem;padding:0 .5em .02em .5em;outline-offset:-1px;border-radius:100%;">D</span><span id="time"></span><span id="weather"></span></div>
 </div>
 <hr>
 
