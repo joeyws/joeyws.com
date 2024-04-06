@@ -29,13 +29,13 @@
         #header>*{white-space:nowrap;display:inline-block;}
         .loading{animation:.3s blink steps(1) infinite;}
         /* #nav a{text-decoration:none;} */
-        #nav a.open{background:#0f0;text-decoration:none;pointer-events:none;}
+        #nav a.open{background:#f0f;text-decoration:none;pointer-events:none;}
         #time-blink{animation:1s blink steps(1) infinite;}
     hr{margin:1.8rem 0;}
     #content{min-height:100vh;}
     #content>*:not(.show){display:none;}
     /* MARQUEE */
-    .marquee3k{/* background:#ddd; *//* margin-bottom:var(--spacer); *//* width:200px;flex-grow:1; */position:relative;white-space:nowrap;overflow:hidden;}
+    .marquee3k{background:#ff0;/* margin-bottom:var(--spacer); *//* width:200px;flex-grow:1; */position:relative;white-space:nowrap;overflow:hidden;}
     .marquee3k .marquee span:after{margin:0 1em;content:"";} /* \2B58 \2B57 \2055 \274B \2733 \273A */
     /* .marquee3k:after{mix-blend-mode:luminosity;background:linear-gradient(to right, var(--background), transparent 40%, transparent calc(100% - 40%), var(--background));content:" ";display:block;position:absolute;top:0;bottom:0;left:0;right:0;margin:0 -1px;} */
     /* VIDEO */
@@ -51,7 +51,7 @@
     .gallery div img{max-height:180px;max-width:180px;transition:all .15s;}
     .gallery div:hover img{transform:translateY(-4px);}
     .gallery div span{/* color:#00f; */font-size:1rem;line-height:1.25em;min-height:calc(3 * 1.25rem);text-align:center;margin-top:var(--spacer);margin-top:var(--spacer);/* display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical; */overflow:hidden;}
-    .gallery div:hover span{text-decoration:underline;}
+    .gallery div:hover span span{/* background:#ff0; */text-decoration:underline;}
     /* LIGHTBOX */
     #lightbox{z-index:999997;cursor:zoom-out;position:fixed;inset:0;display:none;}
     #lightbox img{cursor:pointer;height:auto;max-height:90vh;max-width:calc(100vw - 2*var(--spacer));box-sizing:border-box;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);}
