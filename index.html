@@ -46,12 +46,13 @@
     .video.playing:after{display:none;}
     video{width:100%;cursor:pointer;max-width:760px;}
     /* GALLERY */
-    .gallery{color:#00f;justify-content:space-evenly;margin-top:calc(3 * var(--spacer));grid-template-columns:repeat(auto-fit, 180px);gap:var(--spacer);display:grid;line-height:0;font-size:0;}
+    .gallery{justify-content:space-evenly;margin-top:calc(3 * var(--spacer));grid-template-columns:repeat(auto-fit, 180px);gap:var(--spacer);display:grid;line-height:0;font-size:0;}
     .gallery div{padding-top:var(--spacer);cursor:zoom-in;display:flex;align-items:center;justify-content:center;flex-direction:column;}
     .gallery div img{max-height:180px;max-width:180px;transition:all .15s;}
     .gallery div:hover img{transform:translateY(-4px);}
-    .gallery div span{/* color:#00f; */font-size:1rem;line-height:1.25em;min-height:calc(3 * 1.25rem);text-align:center;margin-top:var(--spacer);margin-top:var(--spacer);/* display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical; */overflow:hidden;}
-    .gallery div:hover span span{/* background:#ff0; */text-decoration:underline;}
+    .gallery div span{opacity:0;transition:all .15s;/* color:#00f; */font-size:1rem;line-height:1.25em;min-height:calc(3 * 1.25rem);text-align:center;margin-top:var(--spacer);margin-top:var(--spacer);/* display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical; */overflow:hidden;}
+    .gallery div:hover span{opacity:1;}
+    /* .gallery div:hover span span{text-decoration:underline;} */
     /* LIGHTBOX */
     #lightbox{z-index:999997;cursor:zoom-out;position:fixed;inset:0;display:none;}
     #lightbox img{cursor:pointer;height:auto;max-height:90vh;max-width:calc(100vw - 2*var(--spacer));box-sizing:border-box;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);}
@@ -71,7 +72,7 @@
     <div id="nav">
         <a href="#/index">Index</a>, <a href="#/about">About</a>
     </div>
-    <div>Stuttgart <span style="outline:.05rem solid var(--text);font-size:.9rem;padding:0 .5em .06em .5em;outline-offset:-1px;border-radius:100%;">D</span><span id="time"></span><span id="weather"></span></div>
+    <div>Stuttgart <span style="outline:.05rem solid var(--text);font-size:.9rem;padding:0 .5em .06em .5em;outline-offset:-1px;border-radius:100%;">D</span><span id="weather"></span><span id="time"></span></div>
 </div>
 <hr>
 
@@ -296,7 +297,7 @@ $(document).ready(function(){
         h = h ? h : 12;
         var min = addZero(time.getMinutes());
         var s = addZero(time.getSeconds());
-        $("#time").html("&nbsp;&nbsp;" + h + "<span id='time-blink'>:</span>" + min + " " + ampm);
+        $("#time").html("&nbsp;&nbsp;&nbsp;" + h + "<span id='time-blink'>:</span>" + min + " " + ampm);
     }
     getTime();
     setInterval(getTime,2000);
@@ -305,8 +306,8 @@ $(document).ready(function(){
     const getWeather = async () => {
         const request = await fetch("https://api.open-meteo.com/v1/forecast?latitude=48.7823&longitude=9.177&current_weather=true");
         const response = await request.json();
-        $("#weather").html("&nbsp;&nbsp;" + Math.round(response.current_weather.temperature) + "&deg;C");
-    }
+        $("#weather").html("&nbsp;&nbsp;&nbsp;" + Math.round(response.current_weather.temperature) + "&deg;C");
+    } // Sonne: &#128978; &#128955; &#128974;
     getWeather();
     setInterval(getWeather,60000);
     
