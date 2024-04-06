@@ -17,7 +17,7 @@
     hr+*,img+p,#content * *:first-child{margin-top:0;}
     h1{display:inline-block;}
     h2{/* font-style:italic; *//* display:none; *//* margin:0 auto; *//* text-transform:uppercase; *//* transform:scaleY(calc(12/14)); *//* font:normal normal 14px/1em webfont2,sans-serif; *//* text-shadow:1px 1px 0 var(--text),-1px 1px 0 var(--text),-1px -1px 0 var(--text),1px -1px 0 var(--text); */display:table;}
-    /* h2:after{content:"\1F863";margin-left:var(--spacer);font-size:1rem;} */ /* \00a0 \1F863 \1F853 \1F80B \2BC6 */
+    h2:has(+ .gallery):before{content:"\1F5C7\00a0";}
     ul{list-style-type:none;list-style-position:inside;}
     table,tr,td{vertical-align:top;} table{width:100%;} tr{border-top:1px solid var(--text);} td:first-child{white-space:nowrap;width:180px;} td:not(:last-child){padding-right:calc(2* var(--spacer));}
     small{font-style:italic;}
@@ -28,7 +28,6 @@
     #header{display:flex;justify-content:space-between;column-gap:calc(var(--spacer) * 3);flex-wrap:wrap;}
         #header>*{white-space:nowrap;display:inline-block;}
         .loading{animation:.3s blink steps(1) infinite;}
-        /* #nav a{text-decoration:none;} */
         #nav a.open{background:#0f0;text-decoration:none;pointer-events:none;}
         #time-blink{animation:2s blink steps(1) infinite;}
     hr{margin:1.8rem 0;}
@@ -46,15 +45,16 @@
     .gallery div{padding-top:var(--spacer);cursor:zoom-in;display:flex;align-items:center;justify-content:center;flex-direction:column;}
     .gallery div img{max-height:180px;max-width:180px;transition:all .15s;}
     .gallery div:hover img{transform:translateY(-4px);}
-    .gallery div span{opacity:0;transition:all .15s;/* color:#00f; */font-size:1rem;line-height:1.25em;min-height:calc(3 * 1.25rem);text-align:center;margin-top:var(--spacer);margin-top:var(--spacer);/* display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical; */overflow:hidden;}
+    .gallery div span{opacity:0;transition:all .15s;font-size:1rem;line-height:1.25em;min-height:calc(3 * 1.25rem);text-align:center;margin-top:var(--spacer);margin-top:var(--spacer);/* display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical; */overflow:hidden;}
     .gallery div:hover span{opacity:1;}
+    /* .gallery div span span:before{content:"i";font:italic bold 1em serif;margin-right:.7em;padding:0 .5em 0 .44em;outline-offset:-1px;outline:1px solid var(--text);border-radius:100vmax;display:inline-block;} */
     /* .gallery div:hover span span{text-decoration:underline;} */
     /* SPECIAL */
     #lightbox{z-index:999997;cursor:zoom-out;position:fixed;inset:0;display:none;}
     #lightbox img{cursor:pointer;height:auto;max-height:90vh;max-width:calc(100vw - 2*var(--spacer));box-sizing:border-box;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);}
     #map{width:400px;max-width:100%;aspect-ratio:1 / 1;background:center center url(img/map.webp) no-repeat scroll;position:relative;background-size:contain;}
     #map:after{outline:2px solid #f00;border:1px solid var(--text);background:#f00;animation:position 1.2s infinite ease-out;width:7px;height:7px;top:25.25%;left:82.75%;border-radius:100vmax;pointer-events:none;position:absolute;transform:translate(-50%,-50%);display:block;content:"";}
-    #dice{font-size:34px;cursor:pointer;}
+    #dice{font-size:34px;color:#f0f;cursor:pointer;}
     .marquee3k{background:#ff0;/* margin-bottom:var(--spacer); *//* width:200px;flex-grow:1; */position:relative;white-space:nowrap;overflow:hidden;}
     .marquee3k .marquee span:after{margin:0 1em;content:"";} /* \2B58 \2B57 \2055 \274B \2733 \273A */
     /* .marquee3k:after{mix-blend-mode:luminosity;background:linear-gradient(to right, var(--background), transparent 40%, transparent calc(100% - 40%), var(--background));content:" ";display:block;position:absolute;top:0;bottom:0;left:0;right:0;margin:0 -1px;} */
@@ -93,7 +93,7 @@
         </div>
         <p>Land der Echsen (Germany, 2021). The council is planning a new quarter on a run-down railroad station site. There are various non-profit institutions housing in old loading halls, which are now forced to move out for the demolition generating room for several new buildings. Suddenly lizards enter the game and endanger the entire undertaking. Created as part of the <i>Anti-Stuttgart &mdash; A Determinate Negation</i> <a href="https://www.igma.uni-stuttgart.de/en/institute/">IGmA</a> design studio, in which certain urban developments and procedures were examined critically. The film was being shown at the University of Stuttgart department of architecture&#8217;s <a href="https://www.k1.live/">graduates exhibition</a> and at the <a href="https://www.current-stuttgart.de/">CURRENT festival</a> for art and urban space.</p>
         <hr>
-        <h2>&#x1F5C7; Works</h2>
+        <h2>Works</h2>
         <div class="gallery">
             <img loading="lazy" src="img/26.webp" data-date="2022" alt="Lightweight pneu pavillons" />
             <!-- <img loading="lazy" src="img/inflate.gif" data-date="2022" alt="Pneu study" /> -->
@@ -114,7 +114,7 @@
             <img loading="lazy" src="img/8.webp" data-date="2018" alt="Leichtsinn" />
         </div>
         <hr>
-        <h2>&#x1F5C7; Places</h2>
+        <h2>Places</h2>
         <div class="gallery">
             <img loading="lazy" src="img/41.webp" data-date="19/08/2023" alt="Railway Engine Depot" />
             <img loading="lazy" src="img/36.webp" data-date="14/01/2023" alt="Sant&rsquo; Ireneo" />
