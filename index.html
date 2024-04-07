@@ -15,7 +15,7 @@
     p,ul,table,.video,.gallery{margin-top:var(--spacer);}
     hr+*,img+p,#content * *:first-child{margin-top:0;}
     h1{display:inline-block;}
-    h2{/* font-style:italic; *//* display:none; *//* margin:0 auto; *//* text-transform:uppercase; *//* transform:scaleY(calc(12/14)); *//* font:normal normal 14px/1em webfont2,sans-serif; *//* text-shadow:1px 1px 0 var(--text),-1px 1px 0 var(--text),-1px -1px 0 var(--text),1px -1px 0 var(--text); */display:table;}
+    h2{/* border-top:1px dotted var(--text);padding-top:var(--spacer); *//* font-style:italic; *//* display:none; *//* margin:0 auto; *//* text-transform:uppercase; *//* transform:scaleY(calc(12/14)); *//* font:normal normal 14px/1em webfont2,sans-serif; *//* text-shadow:1px 1px 0 var(--text),-1px 1px 0 var(--text),-1px -1px 0 var(--text),1px -1px 0 var(--text); *//* display:table; */}
     h2:has(+ .gallery):before{content:"\1F5C7\00a0";}
     ul{list-style-type:none;list-style-position:inside;}
     table,tr,td{vertical-align:top;} table{width:100%;} tr{border-top:1px solid var(--text);} td:first-child{white-space:nowrap;width:180px;} td:not(:last-child){padding-right:calc(2* var(--spacer));}
@@ -40,7 +40,7 @@
     .video.playing:after{display:none;}
     video{width:100%;cursor:pointer;max-width:760px;}
     /* GALLERY */
-    .gallery{justify-content:space-evenly;margin-top:calc(3 * var(--spacer));grid-template-columns:repeat(auto-fit, 180px);gap:var(--spacer);display:grid;line-height:0;font-size:0;}
+    .gallery{justify-content:space-evenly;margin-top:calc(3 * var(--spacer));grid-template-columns:repeat(auto-fit,180px);gap:var(--spacer);display:grid;line-height:0;font-size:0;}
     .gallery div{padding-top:var(--spacer);cursor:zoom-in;display:flex;align-items:center;justify-content:center;flex-direction:column;}
     .gallery div img{max-height:180px;max-width:180px;transition:all .15s;}
     .gallery div:hover img{transform:translateY(-4px);}
@@ -51,9 +51,9 @@
     /* SPECIAL */
     #lightbox{z-index:999997;cursor:zoom-out;position:fixed;inset:0;display:none;}
     #lightbox img{cursor:pointer;height:auto;max-height:90vh;max-width:calc(100vw - 2*var(--spacer));box-sizing:border-box;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);}
-    #map{width:400px;max-width:100%;aspect-ratio:1 / 1;background:center center url(img/map.webp) no-repeat scroll;position:relative;background-size:contain;}
+    #map{width:400px;max-width:100%;aspect-ratio:1/1;background:center center url(img/map.webp) no-repeat scroll;position:relative;background-size:contain;}
     #map:after{outline:2px solid #f00;border:1px solid var(--text);background:#f00;animation:position 1.2s infinite ease-out;width:7px;height:7px;top:25.25%;left:82.75%;border-radius:100vmax;pointer-events:none;position:absolute;transform:translate(-50%,-50%);display:block;content:"";}
-    #dice{font-size:34px;color:#f0f;cursor:pointer;}
+    #dice{font-size:48px;text-align:center;display:block;line-height:2em;color:#f0f;cursor:pointer;}
     .marquee3k{background:#ff0;/* margin-bottom:var(--spacer); *//* width:200px;flex-grow:1; */position:relative;white-space:nowrap;overflow:hidden;}
     .marquee3k .marquee span:after{margin:0 1em;content:"";} /* \2B58 \2B57 \2055 \274B \2733 \273A */
     /* .marquee3k:after{mix-blend-mode:luminosity;background:linear-gradient(to right, var(--background), transparent 40%, transparent calc(100% - 40%), var(--background));content:" ";display:block;position:absolute;top:0;bottom:0;left:0;right:0;margin:0 -1px;} */
@@ -200,12 +200,14 @@
         <p class="privacy">Likewise, under Art. 21 GDPR, users and data subjects have the right to object to the controller&rsquo;s future processing of their data pursuant to Art. 6 Para. 1 lit. f) GDPR. In particular, an objection to data processing for the purpose of direct advertising is permissible. Your data processed when using our website will be deleted or blocked as soon as the purpose for its storage ceases to apply, provided the deletion of the same is not in breach of any statutory storage obligations or unless otherwise stipulated below.</p>
         <p class="privacy"><small>Source: Weiß & Partner, Esslingen</small></p>
         <hr>
-        <span id="dice"></span>
+        
     </div>
 </div>
 
 
+
 <hr>
+<span id="dice"></span>
 <div class="marquee3k" data-speed=".4"><div class="marquee"><span>歡迎</span><span>Bienvenidos</span><span>Welcome</span><span>स्वागत हे</span><span>اهلا وسهلا</span><span>Bem-vinda</span><span>স্বাগত</span><span>добро пожаловать</span><span>ようこそ</span><span>Sugeng Rawuh</span><span>ਸਵਾਗਤ ਹੈ</span><span>Willkommen</span><span>어서 오십시오</span><span>Bienvenue</span><span>Karibu</span><span>Svāgatam</span><span>Hoşgeldiniz</span><span>خوش آمدید</span><span>வரவேற்பு</span><span>Hoan nghênh</span><span>اهلا وسهلا</span><span>Benvenuto</span></div></div>
 <!-- <div style="position:fixed;top:0;left:0;right:0;height:80px;pointer-events:none;background:linear-gradient(var(--background),transparent);">&nbsp;</div> -->
 
@@ -238,12 +240,18 @@ $(document).ready(function(){
     $(window).bind("hashchange",function(e){refreshHash();});
     
     // dice
-    function rollDice() {
-        var number = Math.floor(Math.random() * 6);
-        $("#dice").html("&#" + (9856 + number) + ";");
+    function rollDice(counter) {
+        var i = 0;
+        while(i < counter){
+            setTimeout(function(){
+                var number = Math.floor(Math.random() * 6);
+                $("#dice").html("&#" + (9856 + number) + ";");
+            },(100 * i));
+            i++;
+        }
     }
-    rollDice();
-    $("#dice").on("click",function(){rollDice();});
+    rollDice(1);
+    $("#dice").on("click",function(){rollDice(5);});
 
     // gallery
     $(".gallery img").each(function(){
