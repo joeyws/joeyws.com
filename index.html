@@ -53,8 +53,8 @@
     #lightbox img{cursor:pointer;height:auto;max-height:90vh;max-width:calc(100vw - 2*var(--spacer));box-sizing:border-box;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);}
     #map{width:400px;max-width:100%;aspect-ratio:1/1;background:center center url(img/map.webp) no-repeat scroll;position:relative;background-size:contain;}
     #map:after{outline:2px solid #f00;border:1px solid var(--text);background:#f00;animation:position 1.2s infinite ease-out;width:7px;height:7px;top:25.25%;left:82.75%;border-radius:100vmax;pointer-events:none;position:absolute;transform:translate(-50%,-50%);display:block;content:"";}
-    #dice{font-size:48px;text-align:center;display:block;line-height:2em;color:#f0f;cursor:pointer;}
-    .marquee3k{background:#ff0;/* margin-bottom:var(--spacer); *//* width:200px;flex-grow:1; */position:relative;white-space:nowrap;overflow:hidden;}
+    #dice{font-size:2em;transform:scaleY(.95);text-align:center;display:block;line-height:2em;color:#f0f;cursor:pointer;}
+    .marquee3k{background:#ff0;position:absolute;/* margin-bottom:var(--spacer); *//* width:200px;flex-grow:1; */position:relative;white-space:nowrap;overflow:hidden;}
     .marquee3k .marquee span:after{margin:0 1em;content:"";} /* \2B58 \2B57 \2055 \274B \2733 \273A */
     /* .marquee3k:after{mix-blend-mode:luminosity;background:linear-gradient(to right, var(--background), transparent 40%, transparent calc(100% - 40%), var(--background));content:" ";display:block;position:absolute;top:0;bottom:0;left:0;right:0;margin:0 -1px;} */
     @keyframes position{100%{outline-color:transparent;outline-offset:12px;}}
@@ -203,7 +203,6 @@
         
     </div>
 </div>
-
 
 
 <hr>
