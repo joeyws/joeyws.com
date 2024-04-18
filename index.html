@@ -18,7 +18,12 @@
     h2{/* border-top:1px dotted var(--text);padding-top:var(--spacer); *//* font-style:italic; *//* display:none; *//* margin:0 auto; *//* text-transform:uppercase; *//* transform:scaleY(calc(12/14)); *//* font:normal normal 14px/1em webfont2,sans-serif; *//* text-shadow:1px 1px 0 var(--text),-1px 1px 0 var(--text),-1px -1px 0 var(--text),1px -1px 0 var(--text); *//* display:table; */}
     h2:has(+ .gallery):before{content:"\1F5C7\00a0";}
     ul{list-style-type:none;list-style-position:inside;}
-    table,tr,td{vertical-align:top;} table{width:100%;} tr{border-top:1px solid var(--text);} td:first-child{white-space:nowrap;width:180px;} td:not(:last-child){padding-right:calc(2* var(--spacer));}
+    table,tr,td{vertical-align:top;}
+    table{width:100%;}
+    tr{border-top:1px solid var(--text);}
+    tr:hover{background:var(--text);color:var(--background);}
+    td:first-child{white-space:nowrap;width:180px;}
+    td:not(:last-child){padding-right:calc(2* var(--spacer));}
     small{font-style:italic;}
     i{font-style:italic;}
     a{white-space:nowrap;text-decoration:underline;}
@@ -53,10 +58,10 @@
     #lightbox img{cursor:pointer;height:auto;max-height:90vh;max-width:calc(100vw - 2*var(--spacer));box-sizing:border-box;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);}
     #map{width:400px;max-width:100%;aspect-ratio:1/1;background:center center url(img/map.webp) no-repeat scroll;position:relative;background-size:contain;}
     #map:after{outline:2px solid #f00;border:1px solid var(--text);background:#f00;animation:position 1.2s infinite ease-out;width:7px;height:7px;top:25.25%;left:82.75%;border-radius:100vmax;pointer-events:none;position:absolute;transform:translate(-50%,-50%);display:block;content:"";}
-    #dice{font-size:2em;transform:scaleY(.95);text-align:center;display:block;line-height:2em;color:#f0f;cursor:pointer;}
+    #dice{font-size:2em;transform:scaleY(.95);text-align:center;display:block;line-height:2em;cursor:pointer;}
     .marquee3k{background:#ff0;position:absolute;/* margin-bottom:var(--spacer); *//* width:200px;flex-grow:1; */position:relative;white-space:nowrap;overflow:hidden;}
     .marquee3k .marquee span:after{margin:0 1em;content:"";} /* \2B58 \2B57 \2055 \274B \2733 \273A */
-    /* .marquee3k:after{mix-blend-mode:luminosity;background:linear-gradient(to right, var(--background), transparent 40%, transparent calc(100% - 40%), var(--background));content:" ";display:block;position:absolute;top:0;bottom:0;left:0;right:0;margin:0 -1px;} */
+        /* .marquee3k:after{mix-blend-mode:luminosity;background:linear-gradient(to right, var(--background), transparent 40%, transparent calc(100% - 40%), var(--background));content:" ";display:block;position:absolute;top:0;bottom:0;left:0;right:0;margin:0 -1px;} */
     @keyframes position{100%{outline-color:transparent;outline-offset:12px;}}
     @keyframes blink{0%{opacity:0;}50%{opacity:1;}}
     /* *{cursor:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" x="0px" y="0px" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="%23000" stroke="%23f00" stroke-width="0"/></svg>') 7 7, auto !important;} */
@@ -94,21 +99,22 @@
         <hr>
         <h2>Works</h2>
         <div class="gallery">
-            <img loading="lazy" src="img/26.webp" data-date="2022" alt="Lightweight pneu pavillons" />
+            <img loading="lazy" src="img/26.webp" data-date="2022" alt="Lightweight Pneu Pavillons" />
+            <img loading="lazy" src="img/42.webp" data-date="2021" alt="Form Concept" />
             <!-- <img loading="lazy" src="img/inflate.gif" data-date="2022" alt="Pneu study" /> -->
             <img loading="lazy" src="img/25.webp" data-date="2021" alt="Vasikkasaari Climate Research Institute Helsinki" />
-            <img loading="lazy" src="img/23.webp" data-date="2021" alt="Wardrobe with hand-sewn curtain" />
+            <img loading="lazy" src="img/23.webp" data-date="2021" alt="Wardrobe with Hand-sewn Curtain" />
             <img loading="lazy" src="img/droneport.gif" data-date="2020" alt="Droneport" />
-            <img loading="lazy" src="img/21.webp" data-date="2020" alt="Light studies models" />
-            <img loading="lazy" src="img/20.webp" data-date="2020" alt="Wooden structure with traction cables" />
+            <img loading="lazy" src="img/21.webp" data-date="2020" alt="Light Studies Models" />
+            <img loading="lazy" src="img/20.webp" data-date="2020" alt="Wooden Structure with Traction Cables" />
             <img loading="lazy" src="img/16.webp" data-date="2019" alt="Sint-Aneke-Club Antwerp" />
-            <img loading="lazy" src="img/15.webp" data-date="2019" alt="Model, laser cut, glueless" />
-            <img loading="lazy" src="img/14.webp" data-date="2019" alt="Cuboid perspective" />
-            <img loading="lazy" src="img/13.webp" data-date="2019" alt="Cuboid perspective preparation" />
-            <img loading="lazy" src="img/12.webp" data-date="2019" alt="Cuboid axonometry" />
-            <img loading="lazy" src="img/11.webp" data-date="2019" alt="Ruled surfaces" />
-            <img loading="lazy" src="img/10.webp" data-date="2019" alt="Pineapple, etching" />
-            <img loading="lazy" src="img/9.2.webp" data-date="2019" alt="Cup, ink" />
+            <img loading="lazy" src="img/15.webp" data-date="2019" alt="Model, Laser Cut, Glueless" />
+            <img loading="lazy" src="img/14.webp" data-date="2019" alt="Cuboid Perspective" />
+            <img loading="lazy" src="img/13.webp" data-date="2019" alt="Cuboid Perspective Preparation" />
+            <img loading="lazy" src="img/12.webp" data-date="2019" alt="Cuboid Axonometry" />
+            <img loading="lazy" src="img/11.webp" data-date="2019" alt="Ruled Surfaces" />
+            <img loading="lazy" src="img/10.webp" data-date="2019" alt="Pineapple, Etching" />
+            <img loading="lazy" src="img/9.2.webp" data-date="2019" alt="Cup, Ink" />
             <img loading="lazy" src="img/9.webp" data-date="2019" alt="Tools" />
             <img loading="lazy" src="img/8.webp" data-date="2018" alt="Leichtsinn" />
         </div>
@@ -122,20 +128,20 @@
             <img loading="lazy" src="img/33.webp" data-date="04/01/2023" alt="Nilufar Gallery" />
             <img loading="lazy" src="img/32.webp" data-date="04/11/2022" alt="Monte Amiata" />
             <img loading="lazy" src="img/30.webp" data-date="30/10/2022" alt="Amendola" />
-            <img loading="lazy" src="img/28.webp" data-date="15/09/2022" alt="Emergence Pool, courtesy of Nari Ward" />
+            <img loading="lazy" src="img/28.webp" data-date="15/09/2022" alt="Emergence Pool, Courtesy of Nari Ward" />
             <img loading="lazy" src="img/29.webp" data-date="22/09/2022" alt="ADI" />
             <img loading="lazy" src="img/27.webp" data-date="04/09/2022" alt="Clouds" />
             <img loading="lazy" src="img/24.webp" data-date="02/01/2021" alt="Creek" />
             <img loading="lazy" src="img/22.webp" data-date="27/09/2019" alt="Flora" />
             <img loading="lazy" src="img/19.webp" data-date="17/03/2019" alt="Death Valley" />
-            <img loading="lazy" src="img/18.webp" data-date="15/03/2019" alt="Campfire in a sandy forest" />
+            <img loading="lazy" src="img/18.webp" data-date="15/03/2019" alt="Campfire in a Sandy Forest" />
             <img loading="lazy" src="img/17.webp" data-date="25/09/2018" alt="Switzerland" />
             <img loading="lazy" src="img/40.webp" data-date="12/07/2019" alt="ICD Pavilion" />
             <img loading="lazy" src="img/6.webp" data-date="18/05/2018" alt="Eel soup" />
             <img loading="lazy" src="img/7.webp" data-date="2018" alt="S&ocirc;ng Ng&agrave;n Ph&#7889;" />
             <img loading="lazy" src="img/5.webp" data-date="12/05/2018" alt="H&#432;&#x01A1;ng S&#x01A1;n" />
             <img loading="lazy" src="img/4.webp" data-date="17/06/2017" alt="Merano" />
-            <img loading="lazy" src="img/3.webp" data-date="11/08/2016" alt="J&ouml;kuls&aacute;rl&oacute;n glacial lake" />
+            <img loading="lazy" src="img/3.webp" data-date="11/08/2016" alt="J&ouml;kuls&aacute;rl&oacute;n Glacial Lake" />
             <img loading="lazy" src="img/2.webp" data-date="08/08/2016" alt="N&yacute;idalur" />
             <img loading="lazy" src="img/1.webp" data-date="" alt="Fog" />
         </div>
