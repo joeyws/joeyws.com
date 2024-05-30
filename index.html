@@ -5,7 +5,7 @@
 <meta charset="utf-8"><meta name="robots" content="index,nofollow,notranslate,noimageindex"><meta name="description" content="Welcome to the personal web page of Joey Schweickhardt."><meta name="keywords" content="joey,schweickhardt,stuttgart,architektur,architekt"><meta name="geo.region" content="DE-BW"><meta name="geo.placename" content="Stuttgart"><meta name="geo.position" content="48.778600;9.179746"><meta name="ICBM" content="48.778600, 9.179746"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes,shrink-to-fit=no"><meta name="format-detection" content="telephone=no">
 <style>
     @font-face{font-family:webfont;src:url("font/gnu-free-font-FreeMono.ttf");font-display:swap;}
-    @font-face{font-family:webfont2;src:url("font/EBGaramond-Regular.ttf");font-display:swap;}
+    @font-face{font-family:webfont2;src:url("font/texgyreheros-bold.otf");font-display:swap;}
     :root{--background:#fff;--text:#000;--spacer:8px;} /*#f6f4ee #6f0*/
     ::-moz-selection{background:var(--text);color:var(--background);}
     ::selection{background:var(--text);color:var(--background);}
@@ -29,11 +29,11 @@
     a{white-space:nowrap;text-decoration:underline;text-decoration-thickness:.04em;}
     a:hover,#nav a.open{text-decoration:none;font-style:italic;}
     /* LAYOUT */
-    #header{/* transform:scaleY(.97);transform-origin:top left; */font-family:webfont2;font-size:24px;line-height:1.3em;mix-blend-mode:difference;color:#fff;position:sticky;top:var(--spacer);z-index:999996;display:flex;justify-content:space-between;/* flex-direction:column; */column-gap:calc(var(--spacer) * 5);flex-wrap:wrap;}
+    #header{transform:scaleY(.97);transform-origin:top left;font-family:webfont2;text-transform:uppercase;font-size:18px;line-height:1.3em;mix-blend-mode:difference;color:#fff;position:sticky;top:var(--spacer);z-index:999996;display:flex;justify-content:space-between;/* flex-direction:column; */column-gap:calc(var(--spacer) * 5);flex-wrap:wrap;}
         #header>*{white-space:nowrap;display:inline-block;}
         .loading{animation:.3s blink steps(1) infinite;}
-        #nav a{font-style:normal !important;text-decoration:none;}
-        #nav a.open{text-decoration:underline;pointer-events:none;}
+        #nav a{color:inherit;font-style:normal !important;text-decoration:none;}
+        #nav a.open{font-style:italic !important;pointer-events:none;}
         #time-blink{animation:2s blink steps(1) infinite;}
     hr{margin:1.8rem 0;}
     #content{min-height:100vh;}
