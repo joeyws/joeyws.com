@@ -5,16 +5,18 @@
 <meta charset="utf-8"><meta name="robots" content="index,nofollow,notranslate,noimageindex"><meta name="description" content="Welcome to the personal web page of Joey Schweickhardt."><meta name="keywords" content="joey,schweickhardt,stuttgart,architektur,architekt"><meta name="geo.region" content="DE-BW"><meta name="geo.placename" content="Stuttgart"><meta name="geo.position" content="48.778600;9.179746"><meta name="ICBM" content="48.778600, 9.179746"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes,shrink-to-fit=no"><meta name="format-detection" content="telephone=no">
 <style>
     /* RESET */*{/* text-decoration-skip-ink:none; */user-select:none;font-kerning:normal;outline:none;-webkit-tap-highlight-color:rgba(0,0,0,0)!important;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-appearance:none;border-radius:0;-webkit-border-radius:0;box-sizing:content-box;font-smoothing:antialiased;-moz-osx-font-smoothing: grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased;}
-	html,body{background:#000;color:#bbb;text-decoration-thickness:1px;}
-    body{padding:var(--spacer);color:var(--text);font:normal normal 17px/1em sans-serif;}
+	html,body{background:#000;color:#aaa;text-decoration-thickness:1px;}
+    body{padding:var(--spacer);color:var(--text);font:normal normal 17px/1.3em sans-serif;}
     a{text-decoration:none;}
     /* LAYOUT */
-    #container{display:flex;flex-direction:column;}
-    #nav{display:flex;flex-wrap:nowrap;justify-content:center;align-items:stretch;}
-        #nav a{line-height:6vh;padding:0 6vh;flex-grow:1;white-space:nowrap;text-align:center;}
+    #container{display:flex;}
+    #footer{position:absolute;bottom:0;margin:20px;pointer-events:none;}
+        #footer img{height:50px;}
+    #nav{width:18vw;/* background:transparent url(intcdc.png) 20px 20px no-repeat scroll;background-size:120px; */padding-bottom:20vw;display:flex;flex-wrap:nowrap;flex-direction:column;/* align-items:stretch; */}
+        #nav a{border-bottom:1px solid #181818;padding:20px;flex-grow:1;white-space:nowrap;transition:all .1s;/* text-align:center; */}
         #nav a:hover{background:#111;}
-        #nav a.active{background:#222;}
-    #film{background:#222;box-sizing:border-box;align-items:stretch;height:94vh;display:flex;justify-content:center;align-items:center;}
+        #nav a.active{background:#222;color:#fff;}
+    #film{flex-grow:1;background:#222;box-sizing:border-box;align-items:stretch;height:100vh;display:flex;justify-content:center;align-items:center;}
         #film div{display:none;}
 </style>
 </head>
@@ -23,32 +25,39 @@
 
 <div id="container">
     <div id="nav">
-        <a href="#" data-film="">Film 1</a>
-        <a href="#" data-film="">Film 2</a>
-        <a href="#" data-film="">Film 3</a>
-        <a href="#" data-film="">Film 4</a>
+        <a href="#">Film 1</a>
+        <a href="#">Film 2</a>
+        <a href="#">Film 3</a>
+        <a href="#">Film 4</a>
     </div>
     <div id="film">
+
+
         <div>
             1
         </div>
+
         <div>
             2
         </div>
+
         <div>
             3
         </div>
+
         <div>
             4
         </div>
+
+
     </div>
+    <div id="footer"><img src="intcdc.png" /></div>
 </div>
 
 
 <script src="script.js"></script>
 <script>
 $(document).ready(function(){
-
     $("#nav a").click(function(){
         // nav
         $(this).addClass("active").siblings().removeClass("active");
@@ -56,7 +65,6 @@ $(document).ready(function(){
         var index = $(this).index();
         $("#film div").eq(index).show().siblings().hide();
     });
-
 });
 </script>
 </body>
