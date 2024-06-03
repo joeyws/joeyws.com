@@ -9,15 +9,18 @@
     body{padding:var(--spacer);color:var(--text);font:normal normal 17px/1.3em sans-serif;}
     a{text-decoration:none;}
     /* LAYOUT */
-    #container{display:flex;}
-    #footer{position:absolute;bottom:0;margin:20px;pointer-events:none;}
-        #footer img{height:50px;}
-    #nav{width:18vw;/* background:transparent url(intcdc.png) 20px 20px no-repeat scroll;background-size:120px; */padding-bottom:20vw;display:flex;flex-wrap:nowrap;flex-direction:column;/* align-items:stretch; */}
-        #nav a{border-bottom:1px solid #181818;padding:20px;flex-grow:1;white-space:nowrap;transition:all .1s;/* text-align:center; */}
-        #nav a:hover{background:#111;}
-        #nav a.active{background:#222;color:#fff;}
-    #film{flex-grow:1;background:#222;box-sizing:border-box;align-items:stretch;height:100vh;display:flex;justify-content:center;align-items:center;}
-        #film div{display:none;}
+    #container{}
+    #nav{z-index:999998;position:fixed;width:18vw;border-right:1px solid #222;overflow-y:auto;/* background:transparent url(intcdc.png) 20px 20px no-repeat scroll;background-size:120px; */display:flex;flex-wrap:nowrap;flex-direction:column;height:100vh;/* align-items:stretch; */}
+        #nav a{position:relative;border-bottom:1px solid #222;padding:20px;min-height:110px;/* flex-grow:1; */white-space:nowrap;transition:all .15s;/* text-align:center; */}
+        #nav a:before{opacity:0;pointer-events:none;border-radius:100vmax;position:absolute;content:" ";background:#fff;width:10px;height:10px;margin-top:6px;margin-left:-20px;display:inline-block;font-size:0;line-height:0;}
+        #nav a:hover{padding-left:25px;padding-right:15px;}
+        #nav a.active{background:#181818;color:#fff;padding-left:40px;padding-right:0px;}
+        #nav a.active:before{animation:blink 1.4s infinite;}
+    #video{position:fixed;left:18vw;top:0;bottom:0;right:0;/* background:#181818; */box-sizing:border-box;/* align-items:stretch; */height:100vh;display:flex;justify-content:center;/* align-items:center; */}
+        #video video{width:100%;}
+    #logo{z-index:999999;width:160px;mix-blend-mode:difference;position:fixed;top:0;right:0;margin:20px;pointer-events:none;}
+        #footer img{height:60px;}
+    @keyframes blink{0%{opacity:0;}50%{opacity:100%;}}
 </style>
 </head>
 <body>
@@ -25,45 +28,31 @@
 
 <div id="container">
     <div id="nav">
-        <a href="#">Film 1</a>
-        <a href="#">Film 2</a>
-        <a href="#">Film 3</a>
-        <a href="#">Film 4</a>
+        <!-- AB HIER FILMDATEIEN UND TITEL AENDERN -->
+        <a href="#" data-url="https://www.dropbox.com/s/mmcykw5nus3m39u/LandDerEchsen1080.ogv?raw=1">Titel 1</a>
+        <a href="#" data-url="https://www.dropbox.com/s/mmcykw5nus3m39u/LandDerEchsen1080.ogv?raw=1">Titel 2</a>
+        <a href="#" data-url="https://www.dropbox.com/s/mmcykw5nus3m39u/LandDerEchsen1080.ogv?raw=1">Titel 3</a>
+        <a href="#" data-url="https://www.dropbox.com/s/mmcykw5nus3m39u/LandDerEchsen1080.ogv?raw=1">Titel 4</a>
+        <!-- BIS HIER FILMDATEIEN UND TITEL AENDERN -->
     </div>
-    <div id="film">
-
-
-        <div>
-            1
-        </div>
-
-        <div>
-            2
-        </div>
-
-        <div>
-            3
-        </div>
-
-        <div>
-            4
-        </div>
-
-
-    </div>
-    <div id="footer"><img src="intcdc.png" /></div>
+    <div id="video"></div>
+    <img id="logo" src="intcdc.png" />
 </div>
 
 
 <script src="script.js"></script>
 <script>
 $(document).ready(function(){
+    document.addEventListener('contextmenu', event => event.preventDefault());
+
     $("#nav a").click(function(){
         // nav
         $(this).addClass("active").siblings().removeClass("active");
         // film laden
-        var index = $(this).index();
-        $("#film div").eq(index).show().siblings().hide();
+        /* var index = $(this).index();
+        $("#videos div").eq(index).show().siblings().hide(); */
+        //$("#video").html('' + $(this).attr('data-url') + '');
+        $("#video").html('<video autoplay="" controls controlsList="nodownload noplaybackrate" disablePictureInPicture><source src="' + $(this).attr("data-url") + '" type="video/ogg" /></video>');
     });
 });
 </script>
