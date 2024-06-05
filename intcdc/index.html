@@ -33,7 +33,7 @@
         <div style="text-align:center;padding:20px;">Film wählen</div>
         <!-- AB HIER FILMDATEIEN UND TITEL AENDERN -->
         <a href="#" data-url="https://www.dropbox.com/s/mmcykw5nus3m39u/LandDerEchsen1080.ogv?raw=1">Titel 1</a>
-        <a href="#" data-url="https://www.dropbox.com/s/mmcykw5nus3m39u/LandDerEchsen1080.ogv?raw=1">Titel 2</a>
+        <a href="#" data-url="https://www.quirksmode.org/html5/videos/big_buck_bunny.mp4">Titel 2</a>
         <a href="#" data-url="https://www.dropbox.com/s/mmcykw5nus3m39u/LandDerEchsen1080.ogv?raw=1">Titel 3</a>
         <a href="#" data-url="https://www.dropbox.com/s/mmcykw5nus3m39u/LandDerEchsen1080.ogv?raw=1">Titel 4</a>
         <!-- BIS HIER FILMDATEIEN UND TITEL AENDERN -->
@@ -46,11 +46,25 @@
 <script>
 $(document).ready(function(){
     document.addEventListener('contextmenu', event => event.preventDefault());
+    // filme anwaehlen
     $("#nav a").click(function(){
         // nav
         $(this).addClass("active").siblings().removeClass("active");
         // film laden
-        $("#video").html('<video autoplay="" controls controlsList="nodownload noplaybackrate" disablePictureInPicture><source src="' + $(this).attr("data-url") + '" type="video/ogg" /></video>');
+        $("#video").html('<video autoplay="" controls controlsList="nodownload noplaybackrate" disablePictureInPicture><source src="' + $(this).attr("data-url") + '" /></video>');
+    });
+    // video play/pause
+    function togglePlay(){
+        var video = $("#video video")[0];
+        video.paused ? video.play() : video.pause();
+    }
+    // keyboard control
+	$(document).keydown(function(e){
+        //event.preventDefault();
+		switch(e.which) {
+			case 32: togglePlay(); break; // space
+			default: return;
+		}
     });
 });
 </script>
