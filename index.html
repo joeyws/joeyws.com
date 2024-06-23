@@ -48,7 +48,7 @@
     /* GALLERY */
     .gallery{justify-content:space-evenly;margin-top:calc(3 * var(--spacer));grid-template-columns:repeat(auto-fit,220px);gap:var(--spacer);display:grid;line-height:0;font-size:0;}
     .gallery div{padding-top:var(--spacer);cursor:zoom-in;display:flex;align-items:center;justify-content:center;flex-direction:column;}
-    .gallery div img{max-height:220px;max-width:180px;transition:all .15s;}
+    .gallery div img{max-height:200px;max-width:200px;transition:all .15s;}
     .gallery div span{font-size:1rem;line-height:1.25em;min-height:calc(3 * 1.25rem);text-align:center;margin-top:var(--spacer);margin-top:var(--spacer);/* display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical; */overflow:hidden;}
     .gallery div:hover span span{text-decoration:underline;}
     /* SPECIAL */
@@ -59,7 +59,7 @@
     #dice{font-size:1.4em;/* text-align:center; */display:block;line-height:2em;cursor:pointer;}
     .marquee3k{position:absolute;/* margin:calc(var(--spacer) * -1) calc(var(--spacer) * -1) var(--spacer) calc(var(--spacer) * -1); *//* width:200px;flex-grow:1; */position:relative;white-space:nowrap;overflow:hidden;}
     .marquee3k .marquee span:after{margin:0 1em;content:"";} /* \2B58 \2B57 \2055 \274B \2733 \273A */
-        /* .marquee3k:after{mix-blend-mode:luminosity;background:linear-gradient(to right, var(--background), transparent 40%, transparent calc(100% - 40%), var(--background));content:" ";display:block;position:absolute;top:0;bottom:0;left:0;right:0;margin:0 -1px;} */
+    /* .marquee3k:after{mix-blend-mode:luminosity;background:linear-gradient(to right, var(--background), transparent 40%, transparent calc(100% - 40%), var(--background));content:" ";display:block;position:absolute;top:0;bottom:0;left:0;right:0;margin:0 -1px;} */
     @keyframes position{100%{outline-color:transparent;outline-offset:12px;}}
     @keyframes blink{0%{opacity:0;}50%{opacity:1;}}
     /* *{cursor:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" x="0px" y="0px" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="%23000" stroke="%23f00" stroke-width="0"/></svg>') 7 7, auto !important;} */
@@ -96,7 +96,7 @@
         <hr>
         <h2>Works</h2>
         <div class="gallery">
-            <img loading="lazy" src="img/43.jpg" data-date="2023" alt="Facade&nbsp;Model Helvetia&nbsp;Campus &copy;&nbsp;Herzog&nbsp;&&nbsp;de&nbsp;Meuron" />
+            <img loading="lazy" src="img/43.jpg" data-date="2023" alt="Facade&nbsp;Model<br>419&nbsp;Helvetia&nbsp;Campus<br>&copy;&nbsp;Herzog&nbsp;&&nbsp;de&nbsp;Meuron" />
             <img loading="lazy" src="img/26.jpg" data-date="2022" alt="Lightweight Pavilion" />
             <img loading="lazy" src="img/42.jpg" data-date="2021" alt="Pneu Concept" />
             <img loading="lazy" src="img/25.jpg" data-date="2021" alt="Vasikkasaari Climate Research Institute Helsinki" />
@@ -104,7 +104,7 @@
             <img loading="lazy" src="img/droneport.gif" data-date="2020" alt="Droneport" />
             <img loading="lazy" src="img/21.jpg" data-date="2020" alt="Light Studies Models" />
             <img loading="lazy" src="img/20.jpg" data-date="2020" alt="Wooden Structure with Traction Cables" />
-            <img loading="lazy" src="img/16.jpg" data-date="2019" alt="Sint-Aneke-Club Antwerp" />
+            <img loading="lazy" src="img/16.jpg" data-date="2019" alt="Sint Aneke Club, Antwerp" />
             <img loading="lazy" src="img/15.jpg" data-date="2019" alt="Glueless Model" />
             <img loading="lazy" src="img/14.jpg" data-date="2019" alt="Cuboid Perspective" />
             <img loading="lazy" src="img/13.jpg" data-date="2019" alt="Cuboid Perspective Preparation" />
@@ -171,7 +171,7 @@
             <tr><td data-title="16.09.2021-17.09.2021">2021</td><td>CURRENT Festival for Art and Urban Space</td></tr>
             <tr><td data-title="13.01.2020-25.01.2020">2020</td><td>Annual Design Projects Selection, IRGE, University of Stuttgart</td></tr>
         </table>
-        <hr>-->
+        <hr> -->
         <p>
             Joey W. Schweickhardt<br>
             <span class="address1"></span><br>
@@ -190,9 +190,7 @@
         <div id="map"></div>
         <p>&copy; <small>NASA</small></p>
         <hr>
-        <!-- <h2>joeyws.com</h2> -->
         <p>
-            <!-- Hand-coded with <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path fill="#000" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" fill-rule="evenodd"/></svg><br> -->
             This site doesn&rsquo;t use cookies.<br>
             Hosted on <a href="https://github.com/" rel="nofollow">GitHub</a><br>
             Initial launch: <!-- 16/01/ -->2011
@@ -203,8 +201,8 @@
         <p class="privacy">With regard to the data processing to be described in more detail below, users and data subjects have the right to confirmation of whether data concerning them is being processed, information about the data being processed, further information about the nature of the data processing, and copies of the data (cf. also Art. 15 GDPR); to correct or complete incorrect or incomplete data (cf. also Art. 16 GDPR); to the immediate deletion of data concerning them (cf. also Art. 17 DSGVO), or, alternatively, if further processing is necessary as stipulated in Art. 17 Para. 3 GDPR, to restrict said processing per Art. 18 GDPR; to receive copies of the data concerning them and/or provided by them and to have the same transmitted to other providers/controllers (cf. also Art. 20 GDPR); to file complaints with the supervisory authority if they believe that data concerning them is being processed by the controller in breach of data protection provisions (see also Art. 77 GDPR). In addition, the controller is obliged to inform all recipients to whom it discloses data of any such corrections, deletions, or restrictions placed on processing the same per Art. 16, 17 Para. 1, 18 GDPR. However, this obligation does not apply if such notification is impossible or involves a disproportionate effort. Nevertheless, users have a right to information about these recipients.</p>
         <p class="privacy">Likewise, under Art. 21 GDPR, users and data subjects have the right to object to the controller&rsquo;s future processing of their data pursuant to Art. 6 Para. 1 lit. f) GDPR. In particular, an objection to data processing for the purpose of direct advertising is permissible. Your data processed when using our website will be deleted or blocked as soon as the purpose for its storage ceases to apply, provided the deletion of the same is not in breach of any statutory storage obligations or unless otherwise stipulated below.</p>
         <p class="privacy"><small>Source: Weiß & Partner, Esslingen</small></p>
-        <hr>
-        <span id="dice"></span>
+        <!-- <hr>
+        <span id="dice"></span> -->
     </div>
 </div>
 <hr>
