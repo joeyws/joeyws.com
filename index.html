@@ -47,7 +47,7 @@
     video{width:100%;cursor:pointer;max-width:760px;}
     /* GALLERY */
     .gallery{justify-content:space-evenly;margin-top:calc(3 * var(--spacer));grid-template-columns:repeat(auto-fit,220px);gap:var(--spacer);display:grid;line-height:0;font-size:0;}
-    .gallery div{padding-top:var(--spacer);cursor:zoom-in;display:flex;align-items:center;justify-content:center;flex-direction:column;}
+    .gallery div{padding-top:calc(var(--spacer)*2);cursor:zoom-in;display:flex;align-items:center;justify-content:center;flex-direction:column;}
     .gallery div img{max-height:200px;max-width:200px;transition:all .15s;}
     .gallery div span{font-size:1rem;line-height:1.25em;min-height:calc(3 * 1.25rem);text-align:center;margin-top:var(--spacer);margin-top:var(--spacer);/* display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical; */overflow:hidden;}
     .gallery div:hover span span{text-decoration:underline;}
