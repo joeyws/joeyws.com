@@ -6,7 +6,7 @@
 <style>
     @font-face{font-family:webfont;src:url("font/gnu-free-font-FreeMono.ttf");font-display:swap;}
     @font-face{font-family:webfont2;src:url("font/texgyreheros-bold.otf");font-display:swap;}
-    :root{--background:#eee;--text:#000;--spacer:8px;} /*#f6f4ee #6f0*/
+    :root{--background:#f4f4f4;--text:#000;--spacer:8px;} /*#f6f4ee #6f0*/
     ::-moz-selection{background:var(--text);color:var(--background);}
     ::selection{background:var(--text);color:var(--background);}
     /* RESET */*{/* text-decoration-skip-ink:none; */user-select:none;font-kerning:normal;outline:none;-webkit-tap-highlight-color:rgba(0,0,0,0)!important;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-appearance:none;border-radius:0;-webkit-border-radius:0;box-sizing:content-box;font-smoothing:antialiased;-moz-osx-font-smoothing: grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased;}
@@ -29,8 +29,8 @@
     a{white-space:nowrap;text-decoration:underline;text-decoration-thickness:.04em;}
     a:hover,#nav a.open{text-decoration:none;font-style:italic;}
     /* LAYOUT */
-    #header{transform:scaleY(.97);transform-origin:top left;font-family:webfont2;text-transform:uppercase;font-size:19px;line-height:1.3em;mix-blend-mode:difference;color:#fff;position:sticky;top:var(--spacer);z-index:999996;display:flex;justify-content:space-between;/* flex-direction:column; */column-gap:calc(var(--spacer) * 3);flex-wrap:wrap;}
-        #header>*{white-space:nowrap;display:inline-block;background:var(--text);color:var(--background);}
+    #header{transform:scaleY(.97);transform-origin:top left;font-family:webfont2;text-transform:uppercase;font-size:19px;line-height:1.3em;/* mix-blend-mode:difference;color:#fff; */position:sticky;top:var(--spacer);z-index:999996;display:flex;justify-content:space-between;/* flex-direction:column; */column-gap:calc(var(--spacer) * 3);flex-wrap:wrap;}
+        #header>*{white-space:nowrap;display:inline-block;}
         .loading{animation:.3s blink steps(1) infinite;}
         #nav a{font-style:normal !important;text-decoration:none;}
         #nav a.open{font-style:italic !important;pointer-events:none;}
@@ -97,9 +97,9 @@
         <hr>
         <h2>Works</h2>
         <div class="gallery">
-            <img loading="lazy" src="img/44.jpg" data-date="2024" alt="Pauluskirche Extension, Urban Situation" />
-            <img loading="lazy" src="img/45.jpg" data-date="2024" alt="Pauluskirche Extension, Floor Plan" />
-            <img loading="lazy" src="img/46.jpg" data-date="2024" alt="Pauluskirche Extension, Interior" />
+            <img loading="lazy" src="img/46.jpg" data-date="2024" alt="Pauluskirche Extension Interior" />
+            <img loading="lazy" src="img/45.jpg" data-date="2024" alt="Pauluskirche Extension Floor Plan" />
+            <img loading="lazy" src="img/44.jpg" data-date="2024" alt="Pauluskirche Extension Urban Situation" />
             <img loading="lazy" src="img/43.jpg" data-date="2023" alt="419&nbsp;Helvetia&nbsp;Campus<br>Facade&nbsp;Model<br>&copy;&nbsp;Herzog&nbsp;&&nbsp;de&nbsp;Meuron" />
             <img loading="lazy" src="img/26.jpg" data-date="2022" alt="Lightweight Pavilions" />
             <img loading="lazy" src="img/42.jpg" data-date="2021" alt="Pneu Concept" />
