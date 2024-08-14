@@ -28,9 +28,9 @@
     a{white-space:nowrap;text-decoration:underline;text-decoration-thickness:.04em;}
     a:hover,#nav a.open{text-decoration:none;/* font-style:italic; */}
     /* LAYOUT */
-    #header-logo,#header-text{top:var(--spacer);z-index:999996;}
+    #header-logo,#header{top:var(--spacer);z-index:999996;}
     #header-logo{position:sticky;left:var(--spacer);pointer-events:none;}
-    #header-text{position:fixed;left:calc(var(--spacer) + 158px + 4rem);white-space:nowrap;}
+    #header{position:fixed;left:calc(var(--spacer) + 158px + 4rem);white-space:nowrap;}
         .loading{animation:.3s blink steps(1) infinite;}
         #nav a{font-style:normal !important;text-decoration:none;}
         #nav a.open{background:var(--text);color:var(--background);pointer-events:none;}
@@ -73,7 +73,7 @@
 
 
 <h1 id="header-logo"><img src="img/joeyws.gif" class="loading" style="height:120px;" alt="Joey W. Schweickhardt" /></h1>
-<div id="header-text">
+<div id="header">
     Stuttgart
     <span id="weather"></span>
     <span id="time"></span><br>
