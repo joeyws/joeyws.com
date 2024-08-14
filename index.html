@@ -27,13 +27,15 @@
     small{font-style:italic;}
     i{font-style:italic;}
     a{white-space:nowrap;text-decoration:underline;text-decoration-thickness:.04em;}
-    a:hover,#nav a.open{text-decoration:none;font-style:italic;}
+    a:hover,#nav a.open{text-decoration:none;/* font-style:italic; */}
     /* LAYOUT */
-    #header{transform:scaleY(.95);transform-origin:top left;font-family:webfont2;text-transform:uppercase;font-size:19px;line-height:1em;mix-blend-mode:difference;color:#fff;position:sticky;top:var(--spacer);z-index:999996;display:flex;justify-content:space-between;/* flex-direction:column; */column-gap:calc(var(--spacer) * 3);flex-wrap:wrap;}
-        #header>*{white-space:nowrap;display:/* inline- */block;}
+    #header{/* transform:scaleY(.95);transform-origin:top left;font-family:webfont2;text-transform:uppercase;font-size:19px;line-height:1em; *//*mix-blend-mode:difference;color:#fff;*/position:sticky;top:var(--spacer);z-index:999996;display:flex;/* justify-content:space-between; *//* flex-direction:column; */column-gap:calc(var(--spacer) * 3);flex-wrap:wrap;}
+        #header>*{white-space:nowrap;display:block;}
         .loading{animation:.3s blink steps(1) infinite;}
         #nav a{font-style:normal !important;text-decoration:none;}
-        #nav a.open{font-style:italic !important;pointer-events:none;}
+        #nav a:before{content:"\25CB\00a0";}
+        #nav a.open{/* background:#f0f; */pointer-events:none;}
+        #nav a.open:before{content:"\25CF\00a0";}
         /* #nav #switch{margin:0 5px;width:30px;outline-offset:-1px;outline:3px solid #fff;border-radius:100vmax;height:15px;background:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" x="0px" y="0px" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" fill="%23fff" stroke-width="0"/></svg>') no-repeat scroll;display:inline-block;}
         #nav #switch.right{background-position-x:15px;} */
         #time-blink{animation:2s blink steps(1) infinite;}
@@ -59,7 +61,7 @@
     #map{width:750px;max-width:100%;aspect-ratio:1500/750;background:center center url(img/world.gif) no-repeat scroll;position:relative;background-size:contain;}
     #map:after{top:23%;left:52.5%;outline:1px solid #0f0;border:1px solid var(--text);background:#0f0;animation:position 1.2s infinite ease-out;width:7px;height:7px;border-radius:100vmax;pointer-events:none;position:absolute;transform:translate(-50%,-50%);display:block;content:"";}
     #dice{font-size:1.4em;/* text-align:center; */display:block;line-height:2em;cursor:pointer;}
-    .marquee3k{background:var(--text);color:var(--background);position:absolute;/* margin:calc(var(--spacer) * -1) calc(var(--spacer) * -1) var(--spacer) calc(var(--spacer) * -1); *//* width:200px;flex-grow:1; */position:relative;white-space:nowrap;overflow:hidden;}
+    .marquee3k{/* background:var(--text);color:var(--background); */position:absolute;/* margin:calc(var(--spacer) * -1) calc(var(--spacer) * -1) var(--spacer) calc(var(--spacer) * -1); *//* width:200px;flex-grow:1; */position:relative;white-space:nowrap;overflow:hidden;}
     .marquee3k .marquee span:after{margin:0 1.2em;content:"";} /* \2B58 \2B57 \2055 \274B \2733 \273A */
     /* .marquee3k:after{mix-blend-mode:luminosity;background:linear-gradient(to right, var(--background), transparent 40%, transparent calc(100% - 40%), var(--background));content:" ";display:block;position:absolute;top:0;bottom:0;left:0;right:0;margin:0 -1px;} */
     @keyframes position{100%{outline-color:transparent;outline-offset:12px;}}
@@ -71,15 +73,17 @@
 
 
 <div id="header">
-    <h1 class="loading">Joey W. Schweickhardt</h1>
+    <h1><img src="img/joeyws.png" class="loading" style="height:120px;" alt="Joey W. Schweickhardt" /></h1>
     <div id="nav">
-        <a href="#/index">Index</a>, <a href="#/about">About</a>
+        <div>
+            Stuttgart <!-- <span style="outline:.05rem solid var(--text);font-size:.9rem;padding:0 .5em .06em .55em;outline-offset:-1px;border-radius:100%;">D</span> -->
+            <span id="weather"></span>
+            <span id="time"></span>
+        </div><br>
+        <a href="#/index">Index</a><br>
+        <a href="#/about">About</a>
     </div>
-    <div>
-        Stuttgart <!-- <span style="outline:.05rem solid var(--text);font-size:.9rem;padding:0 .5em .06em .55em;outline-offset:-1px;border-radius:100%;">D</span> -->
-        <span id="weather"></span>
-        <span id="time"></span>
-    </div>
+
 </div>
 <hr>
 
@@ -230,8 +234,8 @@
 $(document).ready(function(){
 
     // #loading
-    function showLoading() {$("h1").addClass("loading");}
-	function hideLoading() {$("h1").removeClass("loading");}
+    function showLoading() {$(".loading").addClass("loading");}
+	function hideLoading() {$(".loading").removeClass("loading");}
 
     // init
 	$(window).on("load",function(){
@@ -247,7 +251,7 @@ $(document).ready(function(){
         $("a").removeClass("open");
         $("a[href='"+hash+"']").addClass("open");
         $("#" + hash.slice(2)).addClass("show").siblings().removeClass("show");
-        //window.scrollTo(0,0);
+        window.scrollTo(0,0);
         return false;
     }
     $(window).bind("hashchange",function(e){refreshHash();});
