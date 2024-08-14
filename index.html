@@ -28,8 +28,9 @@
     a{white-space:nowrap;text-decoration:underline;text-decoration-thickness:.04em;}
     a:hover,#nav a.open{text-decoration:none;/* font-style:italic; */}
     /* LAYOUT */
-    #header{/* justify-content:space-between; *//* flex-direction:column; */column-gap:calc(var(--spacer) * 3);flex-wrap:wrap;position:sticky;top:var(--spacer);z-index:999996;display:flex;}
-        #header>*{white-space:nowrap;display:block;}
+    #header-logo,#header-text{top:var(--spacer);z-index:999996;}
+    #header-logo{position:sticky;left:var(--spacer);pointer-events:none;}
+    #header-text{position:fixed;left:calc(var(--spacer) + 158px + 4rem);white-space:nowrap;}
         .loading{animation:.3s blink steps(1) infinite;}
         #nav a{font-style:normal !important;text-decoration:none;}
         #nav a.open{background:var(--text);color:var(--background);pointer-events:none;}
@@ -71,18 +72,15 @@
 <body>
 
 
-<div id="header">
-    <h1><img src="img/joeyws.gif" class="loading" style="height:120px;" alt="Joey W. Schweickhardt" /></h1>
-    <div>
-        Stuttgart <!-- <span style="outline:.05rem solid var(--text);font-size:.9rem;padding:0 .5em .06em .55em;outline-offset:-1px;border-radius:100%;">D</span> -->
-        <span id="weather"></span>
-        <span id="time"></span><br>
-        <div id="nav">
-            <a href="#/index">Index</a>,
-            <a href="#/about">About</a>
-        </div>
+<h1 id="header-logo"><img src="img/joeyws.gif" class="loading" style="height:120px;" alt="Joey W. Schweickhardt" /></h1>
+<div id="header-text">
+    Stuttgart
+    <span id="weather"></span>
+    <span id="time"></span><br>
+    <div id="nav">
+        <a href="#/index">Index</a>,
+        <a href="#/about">About</a>
     </div>
-
 </div>
 <hr>
 
