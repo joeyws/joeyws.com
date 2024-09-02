@@ -34,8 +34,8 @@
     #header>*:last-child{border-right:0;}
     /* #header>*:nth-child(2n){background:#f0f;} */
         .loading{animation:.3s blink steps(1) infinite;}
-        #nav a{font-style:normal !important;text-decoration:none;}
-        #nav a.open{pointer-events:none;}
+        #nav a{font-style:normal !important;color:inherit;text-decoration:none;padding:0 .25em;border-radius:100vmax;}
+        #nav a.open{pointer-events:none;outline:1px solid #0f0;outline-offset:1px;/* background:#80f;color:var(--text); */}
         #nav a:before{content:"\25CB\00A0";}
         #nav a.open:before{content:"\25CF\00A0";}
         /* #nav a:before{content:"\25CB\00a0";}
@@ -64,7 +64,7 @@
     #map{width:750px;max-width:100%;aspect-ratio:1500/750;background:center center url(img/world.gif) no-repeat scroll;position:relative;background-size:contain;}
     #map:after{top:23%;left:52.5%;outline:1px solid #0f0;border:1px solid var(--text);background:#0f0;animation:position 1.2s infinite ease-out;width:7px;height:7px;border-radius:100vmax;pointer-events:none;position:absolute;transform:translate(-50%,-50%);display:block;content:"";}
     #dice{font-size:1.4em;/* text-align:center; */display:block;line-height:2em;cursor:pointer;}
-    .marquee3k{color:#ccc;position:absolute;/* margin:calc(var(--spacer) * -1) calc(var(--spacer) * -1) var(--spacer) calc(var(--spacer) * -1); */width:200px;flex-grow:1;position:relative;white-space:nowrap;overflow:hidden;}
+    .marquee3k{color:#bbb;position:absolute;/* margin:calc(var(--spacer) * -1) calc(var(--spacer) * -1) var(--spacer) calc(var(--spacer) * -1); */width:200px;flex-grow:1;position:relative;white-space:nowrap;overflow:hidden;}
     .marquee3k .marquee span:after{margin:0 1.2em;content:"";} /* \2B58 \2B57 \2055 \274B \2733 \273A */
     /* .marquee3k:after{background:linear-gradient(to right, #000, transparent 50px, transparent calc(100% - 50px), #000);content:" ";display:block;position:absolute;top:0;bottom:0;left:0;right:0;margin:0 -1px;} */
     @keyframes position{100%{outline-color:transparent;outline-offset:12px;}}
