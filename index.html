@@ -28,7 +28,7 @@
     a,.gallery div span span{text-decoration:underline;/* transition:all .12s;border-radius:100vmax;padding:0 .3em;background:#ddd;white-space:nowrap;text-decoration-thickness:.04em; */}
     a:hover,#nav a.open,.gallery div:hover span span{text-decoration:none;/* text-decoration:none;box-shadow:inset 0 -1.3rem var(--text);background:var(--text);color:var(--background); */}
     /* LAYOUT */
-    #header{/* font:bold normal 13px/1.5em sans-serif; */padding:1px 0;color:#0f0;background:#000;/* backdrop-filter:blur(5px) brightness(.1); */display:flex;flex-wrap:wrap;line-height:1.5em;/* gap:calc(4 * var(--spacer)); *//* background:#0f0; *//* color:var(--background); */justify-content:space-between;top:var(--spacer);z-index:999996;position:sticky;}
+    #header{/* font:bold normal 13px/1.5em sans-serif; */color:#0f0;background:#000;/* backdrop-filter:blur(5px) brightness(.1); */display:flex;flex-wrap:wrap;line-height:1.5em;/* gap:calc(4 * var(--spacer)); *//* background:#0f0; *//* color:var(--background); */justify-content:space-between;top:var(--spacer);z-index:999996;position:sticky;}
     #header>*{display:inline-block;padding:0 calc(var(--spacer));white-space:nowrap;}
     #header>*{border-right:1px solid #666;}
     #header>*:last-child{border-right:0;}
@@ -56,7 +56,8 @@
     /* GALLERY */
     .gallery{justify-content:space-evenly;margin-top:calc(3 * var(--spacer));grid-template-columns:repeat(auto-fit,220px);gap:var(--spacer);display:grid;line-height:0;font-size:0;}
     .gallery div{padding-top:calc(var(--spacer)*2);cursor:zoom-in;display:flex;align-items:center;justify-content:center;flex-direction:column;}
-    .gallery div img{max-height:200px;max-width:200px;transition:all .15s;}
+    .gallery div img{box-shadow:0 6px 12px #0003;max-height:200px;max-width:200px;transition:all .15s;}
+    .gallery div:hover img{transform:translateY(-5px);}
     .gallery div span{font-size:1rem;line-height:1.25em;min-height:calc(3 * 1.25rem);text-align:center;margin-top:var(--spacer);margin-top:var(--spacer);/* display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical; */overflow:hidden;}
     /* SPECIAL */
     #lightbox{z-index:999997;cursor:zoom-out;position:fixed;inset:0;display:none;}
