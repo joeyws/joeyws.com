@@ -31,19 +31,18 @@
     a{text-decoration:underline;text-decoration-style:dotted;text-decoration-thickness:1px;/* text-decoration-thickness:.04em;text-underline-offset:4px;white-space:nowrap; */}
     a:hover,.gallery div:hover span,.video:hover:after,#nav a.open{text-decoration:underline;text-decoration-style:solid;/* color:#f00; */}
     /* LAYOUT */
-    #headerbg{background:linear-gradient(transparent,#0f0);pointer-events:none;height:120px;left:0;right:0;bottom:0;z-index:999995;position:fixed;}
+    #headerbg{/* backdrop-filter:blur(10px) sepia(1) hue-rotate(50deg); */background:#0f0;mask-mode:alpha;mask-image:linear-gradient(transparent,#000);pointer-events:none;height:160px;left:0;right:0;bottom:0;z-index:999995;position:fixed;}
     #header{color:#000;/* transform:translateX(-50%); */gap:calc(5*var(--spacer));left:0;bottom:0;margin:calc(var(--spacer));margin-top:0;z-index:999996;position:fixed;display:flex;flex-wrap:wrap;justify-content:space-between;}
     #header>*{display:inline-block;white-space:nowrap;}
         .loading{animation:.3s blink steps(1) infinite;}
         #nav a,#weather,#time{margin-left:1em;text-decoration:none;}
-        #nav a{padding:0 3px;margin-left:calc(1em - 3px);margin-right:-3px;}
-        #nav a:first-child{margin-left:-3px;}
-        #nav a.open{/* opacity:.3; */outline:1px solid #000;border-radius:5px;outline-offset:2px;pointer-events:none;text-decoration:none;}
+        #nav a{padding:0 4px;margin-left:calc(1em - 4px);margin-right:-4px;}
+        #nav a:first-child{margin-left:-4px;}
+        #nav a.open{/* opacity:.3; */outline:1px solid #0005;border-radius:100vmax;outline-offset:2px;pointer-events:none;text-decoration:none;}
         /* #nav a:before{content:"\25CB\00a0";}
         #nav a.open:before{content:"\25CF\00a0";} */
         #time-blink{animation:2s blink steps(1) infinite;}
     hr{margin:3rem 0;}
-    #content{}
     #content>*{position:absolute;width:100%;padding:0 var(--spacer);padding-bottom:180px;box-sizing:border-box;}
     #content>*:not(.show){display:none;}
     /* VIDEO */
@@ -97,7 +96,7 @@
         </div>
         <p>Land der Echsen, Germany, 2021</p>
         <p class="big">The city council is planning a new quarter on a run-down railroad station site. There are various non-profit institutions housing in old loading halls, which are now forced to move out for the demolition generating room for several new buildings. Suddenly lizards enter the game and endanger the entire undertaking.</p>
-        <p>Created as part of the <i>Anti-Stuttgart &mdash; A Determinate Negation</i> <a href="https://www.igma.uni-stuttgart.de/en/institute/">IGmA</a> design studio, in which certain urban developments and procedures were examined critically. The film was being shown at the University of Stuttgart department of architecture&#8217;s <a href="https://www.k1.live/">graduates exhibition</a> and at the <a href="https://www.current-stuttgart.de/">CURRENT festival</a> for art and urban space.</p>
+        <p>Created as part of the <i>Anti-Stuttgart &mdash; A Determinate Negation</i> <a href="https://www.igma.uni-stuttgart.de/en/institute/">IGmA</a> design studio, in which certain urban developments and procedures were examined critically. The film was being shown at the University of Stuttgart department of architecture&#8217;s <a href="https://www.k1.live/">graduates exhibition</a> and <a href="https://www.current-stuttgart.de/">CURRENT festival</a> for art and urban space.</p>
         <hr>
         <div class="gallery">
             <img loading="lazy" src="img/46.jpg" data-date="2024" alt="Pauluskirche Extension, Interior" />
@@ -154,7 +153,9 @@
         </div>
     </div>
     <div id="about">
-        <!-- <h2>Professional</h2>
+        <!-- <img src="img/joey.jpg" style="width:320px;" alt="Joey" /> -->
+        <!-- <hr>
+        <h2>Professional</h2>
         <table>
             <tr><td data-title="01.05.2024-30.09.2024">2024-Present</td><td>IntCDC Cluster of Excellence</td></tr>
             <tr><td data-title="01.03.2023-29.02.2024">2023&ndash;2024</td><td>Herzog & de Meuron</td></tr>
@@ -179,8 +180,8 @@
             <tr><td data-title="24.06.2022-04.07.2022">2022</td><td>Graduate Design Projects Selection, Department of Architecture, University of Stuttgart</td></tr>
             <tr><td data-title="16.09.2021-17.09.2021">2021</td><td>Film screening, CURRENT Festival for Art and Urban Space</td></tr>
             <tr><td data-title="13.01.2020-25.01.2020">2020</td><td>Annual Design Projects Selection, IRGE, University of Stuttgart</td></tr>
-        </table>
-        <hr> -->
+        </table> -->
+        <hr>
         <p>
             Joey W. Schweickhardt<br>
             <span class="address1"></span><br>
