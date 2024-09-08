@@ -6,7 +6,7 @@
 <style>
     @font-face{font-family:webfont;src:url("font/Inter-Medium.ttf");font-display:swap;}
     @font-face{font-family:webfont2;src:url("font/EBGaramond-Regular.ttf");font-display:swap;}
-    :root{--background:#fff;--text:#000;--spacer:8px;} /*#f6f4ee #6f0*/
+    :root{--background:#000;--text:#bbb;--spacer:8px;} /*#f6f4ee #6f0*/
     ::-moz-selection{background:var(--text);color:var(--background);}
     ::selection{background:var(--text);color:var(--background);}
     /* RESET */*{text-decoration-skip-ink:none;user-select:none;font-kerning:normal;outline:none;-webkit-tap-highlight-color:rgba(0,0,0,0)!important;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-appearance:none;border-radius:0;-webkit-border-radius:0;box-sizing:content-box;font-smoothing:antialiased;-moz-osx-font-smoothing: grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased;}
@@ -32,7 +32,7 @@
     a:hover,.gallery div:hover span,.video:hover:after,#nav a.open{text-decoration:underline;text-decoration-style:solid;/* color:#f00; */}
     /* LAYOUT */
     #headerbg{/* mix-blend-mode:multiply; *//* backdrop-filter:blur(10px) sepia(1) hue-rotate(50deg); */background:#0f0;mask-mode:alpha;mask-image:linear-gradient(transparent,#000);pointer-events:none;height:120px;left:0;right:0;bottom:0;z-index:999995;position:fixed;}
-    #header{/* transform:translateX(-50%); */gap:calc(5*var(--spacer));left:0;bottom:0;margin:calc(var(--spacer));margin-top:0;z-index:999996;position:fixed;display:flex;flex-wrap:wrap;justify-content:space-between;}
+    #header{color:#000;gap:calc(5*var(--spacer));left:0;bottom:0;margin:calc(var(--spacer));margin-top:0;z-index:999996;position:fixed;display:flex;flex-wrap:wrap;justify-content:space-between;}
     #header>*{display:inline-block;white-space:nowrap;}
         .loading{animation:.3s blink steps(1) infinite;}
         #nav a,#weather,#time{margin-left:1em;text-decoration:none;}
@@ -46,7 +46,7 @@
     #content>*{position:absolute;width:100%;padding:0 var(--spacer);padding-bottom:180px;box-sizing:border-box;}
     #content>*:not(.show){display:none;}
     /* VIDEO */
-    .video{cursor:pointer;overflow:hidden;position:relative;max-width:760px;font-size:0;line-height:0;}
+    .video{border-radius:3px;cursor:pointer;overflow:hidden;position:relative;max-width:760px;font-size:0;line-height:0;}
     .video:after{color:#fff;line-height:1rem;font-size:1rem;content:"Play";display:inline-block;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);pointer-events:none;}
     .video.playing{cursor:pointer;}
     .video.playing:after{display:none;}
@@ -54,7 +54,7 @@
     /* GALLERY */
     .gallery{justify-content:space-evenly;margin-top:calc(3 * var(--spacer));grid-template-columns:repeat(auto-fit,220px);gap:var(--spacer);display:grid;line-height:0;font-size:0;}
         .gallery div{padding-top:calc(var(--spacer)*2);cursor:zoom-in;display:flex;align-items:center;justify-content:center;flex-direction:column;}
-            .gallery div img{box-shadow:0 8px 20px #0002;max-height:200px;max-width:200px;transition:all .1s;}
+            .gallery div img{border-radius:3px;box-shadow:0 8px 20px #0002;max-height:200px;max-width:200px;transition:all .1s;}
             .gallery div:hover img{transform:translateY(-3px);}
             .gallery div span{font-size:1rem;line-height:1.25em;min-height:calc(3 * 1.25rem);text-align:center;margin-top:var(--spacer);margin-top:var(--spacer);/* display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical; */overflow:hidden;}
     /* SPECIAL */
