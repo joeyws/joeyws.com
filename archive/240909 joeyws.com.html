@@ -31,23 +31,24 @@
     a{text-decoration:underline;text-decoration-style:dotted;text-decoration-thickness:1px;/* text-decoration-thickness:.04em;text-underline-offset:4px;white-space:nowrap; */}
     a:hover,.gallery div:hover span,.video:hover:after,#nav a.open{text-decoration:underline;text-decoration-style:solid;/* color:#f00; */}
     /* LAYOUT */
-    #headerbg{backdrop-filter:blur(10px);background:var(--background);mask-mode:alpha;mask-image:linear-gradient(transparent,#000);pointer-events:none;height:120px;left:0;right:0;bottom:0;z-index:999995;position:fixed;}
-    #header{color:#0f0;gap:calc(5*var(--spacer));left:0;bottom:0;right:0;margin:calc(var(--spacer));margin-top:0;z-index:999996;position:fixed;display:flex;flex-wrap:wrap;justify-content:flex-start;}
+    #headerbg{/* mix-blend-mode:multiply; */background:var(--background);backdrop-filter:blur(10px);mask-mode:alpha;mask-image:linear-gradient(transparent,#000);pointer-events:none;height:120px;left:0;right:0;bottom:0;z-index:999995;position:fixed;}
+    #header{color:#0f0;gap:calc(5*var(--spacer));left:0;bottom:0;margin:calc(var(--spacer));margin-top:0;z-index:999996;position:fixed;display:flex;flex-wrap:wrap;justify-content:space-between;}
     #header>*{display:inline-block;white-space:nowrap;}
         .loading{animation:.3s blink steps(1) infinite;}
         #nav a,#weather,#time{margin-left:1em;text-decoration:none;}
         #nav a{padding:0 4px;margin-left:calc(1em - 4px);margin-right:-4px;}
         #nav a:first-child{margin-left:-4px;}
-        #nav a.open{/* opacity:.3; */outline:1px solid #0f0;border-radius:100vmax;outline-offset:2px;pointer-events:none;text-decoration:none;}
+        #nav a.open{outline:1px solid #0f07;border-radius:100vmax;outline-offset:2px;pointer-events:none;text-decoration:none;}
         /* #nav a:before{content:"\25CB\00a0";}
         #nav a.open:before{content:"\25CF\00a0";} */
         #time-blink{animation:2s blink steps(1) infinite;}
     hr{margin:3rem 0;}
     #content>*{position:absolute;width:100%;padding:0 var(--spacer);padding-bottom:180px;box-sizing:border-box;}
     #content>*:not(.show){display:none;}
+    /* .video,.gallery img,#map,#lightbox img{border-radius:3px;} */
     /* VIDEO */
     .video{cursor:pointer;overflow:hidden;position:relative;max-width:760px;font-size:0;line-height:0;}
-    .video:after{line-height:1rem;font-size:1rem;content:"Play";display:inline-block;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);pointer-events:none;}
+    .video:after{/* color:#fff; */line-height:1rem;font-size:1rem;content:"Play";display:inline-block;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);pointer-events:none;}
     .video.playing{cursor:pointer;}
     .video.playing:after{display:none;}
     video{width:100%;cursor:pointer;max-width:760px;}
@@ -63,7 +64,7 @@
     #map{width:750px;max-width:100%;aspect-ratio:1500/750;background:center center url(img/world.gif) no-repeat scroll;position:relative;background-size:contain;}
     #map:after{top:23%;left:52.5%;outline:1px solid #0f0;border:1px solid #000;background:#0f0;animation:position 1.2s infinite ease-out;width:7px;height:7px;border-radius:100vmax;pointer-events:none;position:absolute;transform:translate(-50%,-50%);display:block;content:"";}
     #dice{font-size:2em;display:block;line-height:1em;cursor:pointer;}
-    .marquee3k{color:var(--text);mask-mode:alpha;mask-image:linear-gradient(to right, transparent, #000 100px, #000 calc(100% - 100px), transparent);width:200px;flex-grow:1;position:relative;white-space:nowrap;overflow:hidden;}
+    .marquee3k{margin:0 var(--spacer);mask-mode:alpha;mask-image:linear-gradient(to right, transparent, #000 100px, #000 calc(100% - 100px), transparent);position:absolute;/* width:200px;flex-grow:1; */position:relative;white-space:nowrap;overflow:hidden;}
     .marquee3k .marquee span:after{margin:0 .7em;content:"";} /* \2B58 \2B57 \2055 \274B \2733 \273A */
     @keyframes blink{0%{color:transparent;}50%{color:inherit;}}
     @keyframes position{100%{outline-color:transparent;outline-offset:12px;}}
@@ -79,9 +80,10 @@
     <div id="nav">
         <a href="#/works">Works</a><a href="#/places">Places</a><a href="#/about">About</a>
     </div>
-    <div>Stuttgart<span id="weather"></span><span id="time"></span></div>
-    <div class="marquee3k" data-speed=".5"><div class="marquee"><span>歡迎</span><span>Bienvenidos</span><span>Welcome</span><span>स्वागत हे</span><span>اهلا وسهلا</span><span>Bem-vinda</span><span>স্বাগত</span><span>добро пожаловать</span><span>ようこそ</span><span>Sugeng Rawuh</span><span>ਸਵਾਗਤ ਹੈ</span><span>Willkommen</span><span>어서 오십시오</span><span>Bienvenue</span><span>Karibu</span><span>Svāgatam</span><span>Hoşgeldiniz</span><span>خوش آمدید</span><span>வரவேற்பு</span><span>Hoan nghênh</span><span>اهلا وسهلا</span><span>Benvenuto</span></div></div>
+    <span>Stuttgart<span id="weather"></span><span id="time"></span></span>
 </div>
+<div class="marquee3k" data-speed=".5"><div class="marquee"><span>歡迎</span><span>Bienvenidos</span><span>Welcome</span><span>स्वागत हे</span><span>اهلا وسهلا</span><span>Bem-vinda</span><span>স্বাগত</span><span>добро пожаловать</span><span>ようこそ</span><span>Sugeng Rawuh</span><span>ਸਵਾਗਤ ਹੈ</span><span>Willkommen</span><span>어서 오십시오</span><span>Bienvenue</span><span>Karibu</span><span>Svāgatam</span><span>Hoşgeldiniz</span><span>خوش آمدید</span><span>வரவேற்பு</span><span>Hoan nghênh</span><span>اهلا وسهلا</span><span>Benvenuto</span></div></div>
+<hr>
 
 
 <div id="content">
@@ -96,21 +98,21 @@
         <p>Land der Echsen, Germany, 2021. The city council is planning a new quarter on a run-down railroad station site. There are various non-profit institutions housing in old loading halls, which are now forced to move out for the demolition generating room for several new buildings. Suddenly lizards enter the game and endanger the entire undertaking. Created as part of the <i>Anti-Stuttgart &mdash; A Determinate Negation</i> <a href="https://www.igma.uni-stuttgart.de/en/institute/">IGmA</a> design studio, in which certain urban developments and procedures were examined critically. The film was being shown at the University of Stuttgart department of architecture&#8217;s <a href="https://www.k1.live/">graduates exhibition</a> and <a href="https://www.current-stuttgart.de/">CURRENT festival</a> for art and urban space.</p>
         <hr>
         <div class="gallery">
-            <img loading="lazy" src="img/46.jpg" data-date="2024" alt="Pauluskirche Extension<br>Interior" />
-            <img loading="lazy" src="img/45.jpg" data-date="2024" alt="Pauluskirche Extension<br>Floor Plan" />
-            <img loading="lazy" src="img/44.jpg" data-date="2024" alt="Pauluskirche Extension<br>Urban Situation" />
-            <img loading="lazy" src="img/43.jpg" data-date="2023" alt="&nbsp;Helvetia&nbsp;Campus Facade Herzog&nbsp;&&nbsp;de&nbsp;Meuron" />
+            <img loading="lazy" src="img/46.jpg" data-date="2024" alt="Pauluskirche Extension, Interior" />
+            <img loading="lazy" src="img/45.jpg" data-date="2024" alt="Pauluskirche Extension, Floor Plan" />
+            <img loading="lazy" src="img/44.jpg" data-date="2024" alt="Pauluskirche Extension, Urban Situation" />
+            <img loading="lazy" src="img/43.jpg" data-date="2023" alt="Facade<br>419&nbsp;Helvetia&nbsp;Campus<br>&copy;&nbsp;Herzog&nbsp;&&nbsp;de&nbsp;Meuron" />
             <img loading="lazy" src="img/26.jpg" data-date="2022" alt="Lightweight Pavilions" />
             <img loading="lazy" src="img/42.jpg" data-date="2021" alt="Pneu Concept" />
-            <img loading="lazy" src="img/25.jpg" data-date="2021" alt="Vasikkasaari Climate Institute Helsinki" />
+            <img loading="lazy" src="img/25.jpg" data-date="2021" alt="Vasikkasaari Climate Institute, Helsinki" />
             <img loading="lazy" src="img/23.jpg" data-date="2021" alt="Wardrobe with Hand-sewn Curtain" />
             <img loading="lazy" src="img/droneport.gif" data-date="2020" alt="Droneport" />
             <img loading="lazy" src="img/21.jpg" data-date="2020" alt="Light Studies Models" />
             <img loading="lazy" src="img/20.jpg" data-date="2020" alt="Wooden Structure with Traction Cables" />
-            <img loading="lazy" src="img/16.jpg" data-date="2019" alt="Sint Aneke Club<br>Antwerp" />
+            <img loading="lazy" src="img/16.jpg" data-date="2019" alt="Sint Aneke Club, Antwerp" />
             <img loading="lazy" src="img/15.jpg" data-date="2019" alt="Glueless Model" />
             <img loading="lazy" src="img/14.jpg" data-date="2019" alt="Cuboid Perspective" />
-            <img loading="lazy" src="img/13.jpg" data-date="2019" alt="Cuboid Perspective<br>Preparation" />
+            <img loading="lazy" src="img/13.jpg" data-date="2019" alt="Cuboid Perspective Preparation" />
             <img loading="lazy" src="img/12.jpg" data-date="2019" alt="Cuboid Axonometry" />
             <img loading="lazy" src="img/11.jpg" data-date="2019" alt="Ruled Surfaces" />
             <img loading="lazy" src="img/10.jpg" data-date="2019" alt="Pineapple, Etching" />
@@ -120,24 +122,23 @@
         </div>
     </div>
     <div id="places">
-        <hr>
         <div class="gallery">
-            <img loading="lazy" src="img/41.jpg" data-date="19/08/2023" alt="Railway Engine Depot<br>Herzog & de Meuron" />
-            <img loading="lazy" src="img/36.jpg" data-date="14/01/2023" alt="Sant&rsquo; Ireneo<br>Mauro Galantino" />
-            <img loading="lazy" src="img/35.jpg" data-date="09/01/2023" alt="Via Albricci<br>Asnago Vender" />
+            <img loading="lazy" src="img/41.jpg" data-date="19/08/2023" alt="Railway Engine Depot" />
+            <img loading="lazy" src="img/36.jpg" data-date="14/01/2023" alt="Sant&rsquo; Ireneo" />
+            <img loading="lazy" src="img/35.jpg" data-date="09/01/2023" alt="Via Albricci" />
             <img loading="lazy" src="img/34.jpg" data-date="05/01/2023" alt="Garden" />
             <img loading="lazy" src="img/33.jpg" data-date="04/01/2023" alt="Nilufar Gallery" />
-            <img loading="lazy" src="img/31.jpg" data-date="04/11/2022" alt="Monte Amiata<br>Carlo Aymonino" />
-            <img loading="lazy" src="img/32.jpg" data-date="04/11/2022" alt="Monte Amiata<br>Carlo Aymonino" />
-            <img loading="lazy" src="img/30.jpg" data-date="30/10/2022" alt="Amendola<br>Arrigo Arrighetti" />
-            <img loading="lazy" src="img/28.jpg" data-date="15/09/2022" alt="Emergence&nbsp;Pool<br>Nari&nbsp;Ward" />
-            <!-- <img loading="lazy" src="img/29.jpg" data-date="22/09/2022" alt="ADI" /> -->
+            <img loading="lazy" src="img/31.jpg" data-date="04/11/2022" alt="Monte Amiata" />
+            <img loading="lazy" src="img/32.jpg" data-date="04/11/2022" alt="Monte Amiata" />
+            <img loading="lazy" src="img/30.jpg" data-date="30/10/2022" alt="Amendola" />
+            <img loading="lazy" src="img/28.jpg" data-date="15/09/2022" alt="Emergence&nbsp;Pool<br>&copy;&nbsp;Nari&nbsp;Ward" />
+            <img loading="lazy" src="img/29.jpg" data-date="22/09/2022" alt="ADI" />
             <img loading="lazy" src="img/27.jpg" data-date="04/09/2022" alt="Clouds" />
             <img loading="lazy" src="img/24.jpg" data-date="02/01/2021" alt="Creek" />
             <img loading="lazy" src="img/22.jpg" data-date="27/09/2019" alt="Flora" />
             <img loading="lazy" src="img/19.jpg" data-date="17/03/2019" alt="Death Valley" />
             <img loading="lazy" src="img/18.jpg" data-date="15/03/2019" alt="Campfire in a Sandy Forest" />
-            <img loading="lazy" src="img/40.jpg" data-date="11/03/2019" alt="Salk Institute<br>Louis Kahn" />
+            <img loading="lazy" src="img/40.jpg" data-date="11/03/2019" alt="Salk" />
             <img loading="lazy" src="img/17.jpg" data-date="25/09/2018" alt="Switzerland" />
             <img loading="lazy" src="img/6.jpg" data-date="18/05/2018" alt="Eel soup" />
             <img loading="lazy" src="img/7.jpg" data-date="2018" alt="S&ocirc;ng Ng&agrave;n Ph&#7889;" />
@@ -196,6 +197,11 @@
         <div id="map"></div>
         <p>&copy; <small>NASA</small></p>
         <hr>
+        <!-- <p>
+            This site doesn&rsquo;t use cookies.<br>
+            Hosted on <a href="https://github.com/" rel="nofollow">GitHub</a><br>
+            Initial launch: 2011
+        </p> -->
         <p>
             This website doesn&rsquo;t use cookies<br>
             Hosted on <a href="https://github.com/" rel="nofollow">GitHub</a><br>
