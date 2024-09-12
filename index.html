@@ -4,14 +4,15 @@
 <link rel="shortcut icon" type="image/x-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='32' width='32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%23000000' /%3E%3C/svg%3E">
 <meta charset="utf-8"><meta name="robots" content="index,nofollow,notranslate,noimageindex"><meta name="description" content="Welcome to the personal web page of Joey Schweickhardt."><meta name="keywords" content="joey,schweickhardt,stuttgart,architektur,architekt"><meta name="geo.region" content="DE-BW"><meta name="geo.placename" content="Stuttgart"><meta name="geo.position" content="48.778600;9.179746"><meta name="ICBM" content="48.778600, 9.179746"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes,shrink-to-fit=no"><meta name="format-detection" content="telephone=no">
 <style>
-    @font-face{font-family:webfont;src:url("font/Inter-Medium.ttf");font-display:swap;}
-    :root{--background:#000;--text:#aaa;--spacer:8px;} /*#f6f4ee #6f0*/
+    @font-face{font-family:webfont;src:url("font/Inter-Regular.ttf");font-display:swap;}
+    @font-face{font-family:webfont;src:url("font/SourceCodePro-Regular.ttf");font-display:swap;}
+    :root{--background:#000;--text:#aaa;--spacer:16px;} /*#f6f4ee #6f0*/
     ::-moz-selection{background:var(--text);color:var(--background);}
     ::selection{background:var(--text);color:var(--background);}
     /* RESET */*{text-decoration-skip-ink:none;user-select:none;font-kerning:normal;outline:none;-webkit-tap-highlight-color:rgba(0,0,0,0)!important;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-appearance:none;border-radius:0;-webkit-border-radius:0;box-sizing:content-box;font-smoothing:antialiased;-moz-osx-font-smoothing: grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased;}
 	html{font-size:13px;}
     html,body{/* background:var(--background); */}
-    body{background:var(--background) url(img/joeyws-dark.gif) center center no-repeat fixed;background-size:600px;color:var(--text);font:normal normal 1rem/1.3em webfont,monospace;}
+    body{background:var(--background) url(img/joeyws-dark.gif) center center no-repeat fixed;background-size:60vw;color:var(--text);font:normal normal 1rem/1.3em webfont,monospace;}
     p,.p,ul,table,.video,.gallery{margin-top:var(--spacer);}
     hr+*,img+p,#content * *:first-child{margin-top:0;}
     h2{/* margin:0 auto;display:table; */}
@@ -25,17 +26,17 @@
     .big{font:normal normal 2.4vw/1.2em webfont2,serif;}
     small{font-style:italic;}
     i{font-style:italic;}
-    a{text-decoration:underline;text-decoration-style:dotted;text-decoration-thickness:1px;/* text-decoration-thickness:.04em;text-underline-offset:4px;white-space:nowrap; */}
+    a{text-decoration:underline;/* text-decoration-style:dotted; */text-decoration-thickness:1px;/* text-decoration-thickness:.04em;text-underline-offset:4px;white-space:nowrap; */}
     a:hover,.gallery div:hover span,.video:hover:after,#nav a.open{text-decoration:underline;text-decoration-style:solid;/* color:#f00; */}
     /* LAYOUT */
-    #headerbg{backdrop-filter:blur(10px);background:var(--background);mask-mode:alpha;mask-image:linear-gradient(transparent,#000);pointer-events:none;height:180px;left:0;right:0;bottom:0;z-index:999994;position:fixed;}
-    #header{color:#0f0;gap:var(--spacer) calc(5*var(--spacer));left:0;bottom:0;right:0;padding:calc(var(--spacer));padding-top:0;z-index:999996;position:fixed;display:flex;flex-wrap:wrap;justify-content:center;}
+    #headerbg{backdrop-filter:blur(10px);background:var(--background);mask-mode:alpha;mask-image:linear-gradient(transparent,#000);pointer-events:none;height:200px;left:0;right:0;bottom:0;z-index:999994;position:fixed;}
+    #header{color:#0f0;gap:var(--spacer) 4em;left:0;bottom:0;right:0;padding:calc(var(--spacer));padding-top:0;z-index:999996;position:fixed;display:flex;flex-wrap:wrap;justify-content:center;}
     #header>*{display:inline-block;white-space:nowrap;}
         .loading{animation:.3s blink steps(1) infinite;}
         #nav a,#weather,#time{margin-left:1em;text-decoration:none;}
-        #nav a{padding:0 4px;margin-left:calc(1em - 4px);margin-right:-4px;}
-        #nav a:first-child{margin-left:-4px;}
-        #nav a.open{outline:1px solid #0f0;border-radius:100vmax;outline-offset:2px;pointer-events:none;text-decoration:none;}
+        #nav a{padding:0 5px;margin-left:calc(1em - 5px);margin-right:-5px;}
+        #nav a:first-child{margin-left:-5px;}
+        #nav a.open{outline:1px solid #0f09;border-radius:100vmax;outline-offset:1px;text-decoration:none;pointer-events:none;}
         /* #nav a:before{content:"\25CB\00a0";}
         #nav a.open:before{content:"\25CF\00a0";} */
         #time-blink{animation:2s blink steps(1) infinite;}
@@ -97,7 +98,7 @@
             <img loading="lazy" src="img/46.jpg" data-date="2024" alt="Pauluskirche Extension<br>Interior" />
             <img loading="lazy" src="img/45.jpg" data-date="2024" alt="Pauluskirche Extension<br>Floor Plan" />
             <img loading="lazy" src="img/44.jpg" data-date="2024" alt="Pauluskirche Extension<br>Urban Situation" />
-            <img loading="lazy" src="img/43.jpg" data-date="2023" alt="&nbsp;Helvetia&nbsp;Campus Facade Herzog&nbsp;&&nbsp;de&nbsp;Meuron" />
+            <img loading="lazy" src="img/43.jpg" data-date="2023" alt="Helvetia Campus Facade Herzog&nbsp;&&nbsp;de&nbsp;Meuron" />
             <img loading="lazy" src="img/26.jpg" data-date="2022" alt="Lightweight Pavilions" />
             <img loading="lazy" src="img/42.jpg" data-date="2021" alt="Pneu Concept" />
             <img loading="lazy" src="img/25.jpg" data-date="2021" alt="Vasikkasaari Climate Institute Helsinki" />
