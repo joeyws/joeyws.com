@@ -14,7 +14,6 @@
     body{color:var(--text);background:var(--background);font:normal normal 1rem/1.25em webfont,monospace;}
     p,.p,ul,table{margin-top:var(--spacer);}
     hr+*,img+p,#content * *:first-child{margin-top:0;}
-    h2{/* margin:0 auto;display:table; */}
     ul{list-style-type:none;list-style-position:inside;}
     table,tr,td{vertical-align:top;}
     table{width:100%;}
@@ -27,10 +26,9 @@
     a:hover,.gallery div:hover span span{background:var(--text);color:var(--background);text-decoration:none;/* text-decoration-style:solid; *//* color:#f00; */}
     /* .video,.gallery div img{box-shadow:0 8px 20px #0002;} */
     /* LAYOUT */
-    /* #header,.marquee3k,p,.video:after,.gallery div span span{mix-blend-mode:difference;} */
-    #header{mix-blend-mode:difference;padding:var(--spacer);position:fixed;top:0;left:0;right:0;gap:var(--spacer) 4em;z-index:999996;display:flex;flex-wrap:wrap;justify-content:space-between;}
+    #header{mix-blend-mode:difference;padding:var(--spacer);gap:var(--spacer) 4em;z-index:999996;display:flex;flex-wrap:wrap;justify-content:space-between;}
     #header>*{display:inline-block;white-space:nowrap;}
-    .marquee3k{font:42px/1.3em webfont2,serif;/* mask-mode:alpha;mask-image:linear-gradient(to right, transparent, #000 25%, #000 calc(100% - 25%), transparent); *//* width:200px;flex-grow:1; */position:relative;white-space:nowrap;overflow:hidden;}
+    .marquee3k{font:42px/1.3em webfont2,serif;/* mask-mode:alpha;mask-image:linear-gradient(to right, transparent, #000 25%, #000 calc(100% - 25%), transparent);position:relative; *//* width:200px;flex-grow:1; */white-space:nowrap;overflow:hidden;}
         .marquee3k .marquee span:after{margin:0 .5em;content:"";} /* \2B58 \2B57 \2055 \274B \2733 \273A */
         .loading{animation:.3s blink steps(1) infinite;}
         #nav a,#weather{margin:0 1em;}
@@ -39,8 +37,8 @@
         #nav a.open{text-decoration:none;pointer-events:none;}
         #time-blink{animation:2s blink steps(1) infinite;}
     hr{margin:2.5rem 0;}
-    .content{transition:all .3s;position:absolute;width:100%;padding:var(--spacer);padding-top:1rem;box-sizing:border-box;}
-    .content:not(.show){transform:translateY(var(--spacer));opacity:0;visibility:hidden;}
+    .content{width:100%;padding:var(--spacer);box-sizing:border-box;}
+    .content:not(.show){display:none;}
     /* VIDEO */
     .video{cursor:pointer;overflow:hidden;position:relative;max-width:760px;font-size:0;line-height:0;}
     .video:after{border:0 solid transparent;border-width:7px 16px;border-left-color:var(--text);border-right:0;line-height:0;font-size:0;content:"";display:inline-block;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);pointer-events:none;}
@@ -74,13 +72,11 @@
     </div>
     <div>Stuttgart<span id="weather"></span><span id="time"></span></div>
 </div>
+<div class="marquee3k" data-speed=".5"><div class="marquee"><span>歡迎</span><span>Bienvenidos</span><span>Welcome</span><span>स्वागत हे</span><span>اهلا وسهلا</span><span>Bem-vinda</span><span>স্বাগত</span><span>добро пожаловать</span><span>ようこそ</span><span>Sugeng Rawuh</span><span>ਸਵਾਗਤ ਹੈ</span><span>Willkommen</span><span>어서 오십시오</span><span>Bienvenue</span><span>Karibu</span><span>Svāgatam</span><span>Hoşgeldiniz</span><span>خوش آمدید</span><span>வரவேற்பு</span><span>Hoan nghênh</span><span>اهلا وسهلا</span><span>Benvenuto</span></div></div>
 <hr>
 
 
-
 <div class="content" id="works">
-    <div class="marquee3k" data-speed=".5"><div class="marquee"><span>歡迎</span><span>Bienvenidos</span><span>Welcome</span><span>स्वागत हे</span><span>اهلا وسهلا</span><span>Bem-vinda</span><span>স্বাগত</span><span>добро пожаловать</span><span>ようこそ</span><span>Sugeng Rawuh</span><span>ਸਵਾਗਤ ਹੈ</span><span>Willkommen</span><span>어서 오십시오</span><span>Bienvenue</span><span>Karibu</span><span>Svāgatam</span><span>Hoşgeldiniz</span><span>خوش آمدید</span><span>வரவேற்பு</span><span>Hoan nghênh</span><span>اهلا وسهلا</span><span>Benvenuto</span></div></div>
-    <hr>
     <div class="video">
         <video onclick="this.parentElement.classList.add('playing');this.setAttribute('controls','');this.setAttribute('autoplay','');this.setAttribute('preload','');" oncontextmenu="return false;" poster="img/landderechsen.jpg" tabindex="0" preload="none" controlsList="nodownload noplaybackrate" disablePictureInPicture>
             <source src="video/LandDerEchsen1080.mp4" type="video/mp4" />
@@ -243,7 +239,7 @@ $(document).ready(function(){
         //$("#" + hash.slice(2)).stop().fadeIn(duration).siblings().stop().fadeOut(duration);
         $("#" + hash.slice(2)).addClass("show").siblings(".content").removeClass("show");
         //$("html,body").stop().animate({scrollTop:0},300);
-        //window.scrollTo(500,0);
+        window.scrollTo(500,0);
         return false;
     }
     $(window).bind("hashchange",function(e){refreshHash();});
