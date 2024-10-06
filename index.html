@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+<!-- █████ █████ █████ ██ ██ █ █ █ █████    █████ █████ █████    
+     █████ █████ ████  █████ █████ ████     █████ █████ █████    
+      ████ ██ ██ █████ █████ █████ █████    ████  ██ ██ █████    
+     █████ █████ ████   ████ █████  ████    █████ █████ █████    
+     █████ █████ █████ █████ █████ █████ ██ █████ █████ █ █ █ -->
 <html lang="en" translate="no"><head>
 <title>Joey W. Schweickhardt</title>
 <link rel="shortcut icon" type="image/x-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='32' width='32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%23000000' /%3E%3C/svg%3E">
@@ -31,8 +36,7 @@
     .marquee3k{font:42px/1.3em webfont2,serif;/* mask-mode:alpha;mask-image:linear-gradient(to right, transparent, #000 25%, #000 calc(100% - 25%), transparent);position:relative; *//* width:200px;flex-grow:1; */white-space:nowrap;overflow:hidden;}
         .marquee3k .marquee span:after{margin:0 .5em;content:"";}
         .loading{animation:.3s blink steps(1) infinite;}
-        #nav a:last-child{margin-right:0;}
-        #nav a.open{text-decoration:none;outline:1px solid var(--text);outline-offset:3px;border-radius:3px;pointer-events:none;}
+        #nav a.open{box-shadow:0 0 8px 8px #00f,inset 0 0 0 5px #00f;background:#00f;text-decoration:none;/* outline:1px solid var(--text);outline-offset:3px; */border-radius:10px;pointer-events:none;}
         #time-blink{animation:2s blink steps(1) infinite;}
     hr{margin:2.5rem 0;}
     .content{width:100%;padding:var(--spacer);box-sizing:border-box;}
@@ -52,7 +56,7 @@
     #lightbox{z-index:999997;cursor:zoom-out;position:fixed;inset:0;display:none;}
     #lightbox img{cursor:pointer;max-height:90vh;max-width:calc(100vw - 2*var(--spacer));box-sizing:border-box;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);}
     #map{width:750px;max-width:100%;aspect-ratio:1500/750;background:center center url(img/world.gif) no-repeat scroll;position:relative;background-size:contain;}
-    #map:after{top:23%;left:52.5%;outline:1px solid #0f0;border:1px solid var(--background);background:#0f0;animation:position 1.2s infinite ease-out;width:7px;height:7px;border-radius:100vmax;pointer-events:none;position:absolute;transform:translate(-50%,-50%);display:block;content:"";}
+    #map:after{top:23%;left:52.5%;outline:1px solid #0f0;/* border:1px solid var(--background); */background:#0f0;animation:position 1.2s infinite ease-out;width:7px;height:7px;border-radius:100vmax;pointer-events:none;position:absolute;transform:translate(-50%,-50%);display:block;content:"";}
     #dice{font-size:2em;display:block;line-height:1em;cursor:pointer;}
     @keyframes blink{0%{color:transparent;}50%{color:inherit;}}
     @keyframes position{100%{outline-color:transparent;outline-offset:20px;}}
