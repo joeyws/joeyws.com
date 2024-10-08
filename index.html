@@ -36,7 +36,8 @@
     .marquee3k{font:32px/1.3em webfont2,serif;/* mask-mode:alpha;mask-image:linear-gradient(to right, transparent, #000 25%, #000 calc(100% - 25%), transparent);position:relative; *//* width:200px;flex-grow:1; */white-space:nowrap;overflow:hidden;}
         .marquee3k .marquee span:after{margin:0 .7em;content:"";}
         .loading{animation:.3s blink steps(1) infinite;}
-        #nav a.open{box-shadow:0 0 10px 10px #00f,inset 0 0 0 .2em #00f;background:#00f;text-decoration:none;/* outline:1px solid var(--text);outline-offset:3px; */border-radius:10px;pointer-events:none;}
+        #nav a{transition:all .5s;text-decoration:none;}
+        #nav a.open{box-shadow:0 0 10px 10px #00f/* ,inset 0 0 0 .2em #00f */;background:#00f;text-decoration:none;/* outline:1px solid var(--text);outline-offset:3px; */border-radius:10px;pointer-events:none;}
         #time-blink{animation:2s blink steps(1) infinite;}
     hr{margin:2.5rem 0;}
     .content{width:100%;padding:var(--spacer);box-sizing:border-box;}
