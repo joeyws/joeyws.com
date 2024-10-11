@@ -204,7 +204,7 @@
         <p><small>Source: Weiß & Partner, Esslingen</small></p>
     </div>
 </div>
-<div class="content" id="sound">
+<!-- <div class="content" id="sound">
     <h2>Music and sound design services</h2>
     <hr>
     Clients:<br>
@@ -213,7 +213,7 @@
     &bull; Kolping Bildung
     <hr>
     <iframe style="width:100%;max-width:800px;height:400px;" scrolling="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/130807438&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=false"></iframe>
-</div>
+</div> -->
 
 
 <script src="scripts.js"></script>
@@ -232,16 +232,28 @@ $(document).ready(function(){
     });
 
     // nav
-    function refreshHash() {
-        var duration = 0;
+    /* function refreshHash() {
         var hash = window.location.hash;
         if ($("a[href='"+hash+"']").length == 0) {hash = $("#header a:first").attr("href");}
         $("a").removeClass("open");
         $("a[href='"+hash+"']").addClass("open");
         //$("#" + hash.slice(2)).stop().fadeIn(duration).siblings().stop().fadeOut(duration);
         $("#" + hash.slice(2)).addClass("show").siblings(".content").removeClass("show");
-        //$("html,body").stop().animate({scrollTop:0},300);
-        window.scrollTo(500,0);
+        window.scrollTo(0,0);
+        return false;
+    } */
+    function refreshHash() {
+        var duration = 300;
+        var hash = window.location.hash;
+        if ($("a[href='"+hash+"']").length == 0) {hash = $("#header a:first").attr("href");}
+        $("a").removeClass("open");
+        $("a[href='"+hash+"']").addClass("open");
+        //$("#" + hash.slice(2)).stop().fadeIn(duration).siblings().stop().fadeOut(duration);
+        $("#" + hash.slice(2)).siblings(".content").fadeOut(duration);
+        setTimeout(function (){
+            //window.scrollTo(0,0);
+            $("#" + hash.slice(2)).fadeIn(duration);
+        },duration);
         return false;
     }
     $(window).bind("hashchange",function(e){refreshHash();});
@@ -252,7 +264,7 @@ $(document).ready(function(){
     }).next().hide();
 
     // dice
-    function rollDice(counter) {
+    /*function rollDice(counter) {
         var i = 0;
         while(i < counter){
             setTimeout(function(){
@@ -265,7 +277,7 @@ $(document).ready(function(){
         }
     }
     rollDice(1);
-    $("#dice").on("click",function(){rollDice(6);});
+    $("#dice").on("click",function(){rollDice(6);});*/
 
     // gallery
     $(".gallery img").each(function(){
@@ -366,14 +378,6 @@ $(document).ready(function(){
         },() => {
             $(this).next("span").html("copying failed");
         });
-    });
-
-    // privacy
-    $(".privacy").hide();
-    $("#show-privacy").on("click",function(){
-        $(this).toggleClass("show");
-        $(".privacy").toggle(0);
-        return false;
     });
 
     // keyboard control
