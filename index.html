@@ -14,7 +14,7 @@
     ::-moz-selection{background:var(--text);color:var(--background);}
     ::selection{background:var(--text);color:var(--background);}
     /* RESET */*{text-decoration-thickness:1px;text-underline-offset:2px;text-decoration-skip-ink:none;user-select:none;font-kerning:normal;outline:none;-webkit-tap-highlight-color:rgba(0,0,0,0)!important;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-appearance:none;border-radius:0;-webkit-border-radius:0;box-sizing:content-box;font-smoothing:antialiased;-moz-osx-font-smoothing: grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased;}
-	html{font-size:13px;/* letter-spacing:.02em; */}
+	html{font-size:13px;}
     body{color:var(--text);background:var(--background);font:normal normal 1rem/1.2em webfont,monospace;/* background:url(img/noise.png) center center repeat fixed,url(img/bg_bw.png) center center repeat fixed;background-size:200px,cover; */}
     h1{display:inline-block;/* font:normal normal 3.6rem/1em webfont2; */}
     p,.p,ul,table,#map{margin-top:var(--spacer);}
@@ -50,7 +50,7 @@
     .gallery{justify-content:space-evenly;grid-template-columns:repeat(auto-fit,220px);gap:var(--spacer);display:grid;line-height:0;font-size:0;}
     .gallery div{padding-top:calc(var(--spacer)*2);cursor:zoom-in;display:flex;align-items:center;justify-content:center;flex-direction:column;}
     .gallery div img{max-height:200px;max-width:200px;}
-    .gallery div span{font-size:1rem;line-height:1.2em;min-height:calc(3 * 1.2rem);text-align:center;margin-top:var(--spacer);margin-top:var(--spacer);overflow:hidden;}
+    .gallery div span{font-size:1rem;line-height:1.2em;min-height:calc(3*1.2rem);text-align:center;margin-top:var(--spacer);margin-top:var(--spacer);overflow:hidden;}
     /* SPECIAL */
     #lightbox{z-index:999997;cursor:zoom-out;position:fixed;inset:0;display:none;}
     #lightbox img{cursor:pointer;max-height:90vh;max-width:calc(100vw - 2*var(--spacer));box-sizing:border-box;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);}
@@ -92,55 +92,55 @@
     <p style="max-width:760px;">Created as part of the <i>Anti-Stuttgart &mdash; A Determinate Negation</i> <a href="https://www.igma.uni-stuttgart.de/en/institute/">IGmA</a> design studio, in which certain urban developments and procedures were examined critically. The film was being shown at the University of Stuttgart department of architecture&#8217;s <a href="https://www.k1.live/">graduates exhibition</a> and <a href="https://www.current-stuttgart.de/">CURRENT festival</a> for art and urban space.</p>
     <hr>
     <div class="gallery">
-        <img loading="lazy" src="img/46.jpg" data-date="2024" alt="Pauluskirche Extension<br>Interior" />
-        <img loading="lazy" src="img/44.jpg" data-date="2024" alt="Pauluskirche Extension<br>Urban Situation" />
-        <img loading="lazy" src="img/43.jpg" data-date="2023" alt="Helvetia Campus Facade Herzog&nbsp;&&nbsp;de&nbsp;Meuron" />
-        <img loading="lazy" src="img/26.jpg" data-date="2022" alt="Lightweight Pavilions" />
-        <img loading="lazy" src="img/42.jpg" data-date="2021" alt="Pneu Concept" />
-        <img loading="lazy" src="img/25.jpg" data-date="2021" alt="Vasikkasaari Climate Institute Helsinki" />
-        <img loading="lazy" src="img/23.jpg" data-date="2021" alt="Wardrobe with Hand-sewn Curtain" />
-        <img loading="lazy" src="img/droneport.gif" data-date="2020" alt="Droneport" />
-        <img loading="lazy" src="img/21.jpg" data-date="2020" alt="Light Studies Models" />
-        <img loading="lazy" src="img/20.jpg" data-date="2020" alt="Wooden Structure with Traction Cables" />
-        <img loading="lazy" src="img/16.jpg" data-date="2019" alt="Sint Aneke Club<br>Antwerp" />
-        <img loading="lazy" src="img/15.jpg" data-date="2019" alt="Glueless Model" />
-        <img loading="lazy" src="img/14.jpg" data-date="2019" alt="Cuboid Perspective" />
-        <img loading="lazy" src="img/13.jpg" data-date="2019" alt="Cuboid Perspective<br>Preparation" />
-        <img loading="lazy" src="img/12.jpg" data-date="2019" alt="Cuboid Axonometry" />
-        <img loading="lazy" src="img/11.jpg" data-date="2019" alt="Ruled Surfaces" />
-        <img loading="lazy" src="img/10.jpg" data-date="2019" alt="Pineapple, Etching" />
-        <img loading="lazy" src="img/9.2.jpg" data-date="2019" alt="Cup" />
-        <img loading="lazy" src="img/9.jpg" data-date="2019" alt="Tools" />
-        <img loading="lazy" src="img/8.jpg" data-date="2018" alt="Leichtsinn" />
+        <img loading="lazy" src="img/s/46.jpg" data-date="2024" alt="Pauluskirche Extension<br>Interior" />
+        <img loading="lazy" src="img/s/44.jpg" data-date="2024" alt="Pauluskirche Extension<br>Urban Situation" />
+        <img loading="lazy" src="img/s/43.jpg" data-date="2023" alt="Helvetia Campus Facade Herzog&nbsp;&&nbsp;de&nbsp;Meuron" />
+        <img loading="lazy" src="img/s/26.jpg" data-date="2022" alt="Lightweight Pavilions" />
+        <img loading="lazy" src="img/s/42.jpg" data-date="2021" alt="Pneu Concept" />
+        <img loading="lazy" src="img/s/25.jpg" data-date="2021" alt="Vasikkasaari Climate Institute Helsinki" />
+        <img loading="lazy" src="img/s/23.jpg" data-date="2021" alt="Wardrobe with Hand-sewn Curtain" />
+        <img loading="lazy" src="img/s/droneport.gif" data-date="2020" alt="Droneport" />
+        <img loading="lazy" src="img/s/21.jpg" data-date="2020" alt="Light Studies Models" />
+        <img loading="lazy" src="img/s/20.jpg" data-date="2020" alt="Wooden Structure with Traction Cables" />
+        <img loading="lazy" src="img/s/16.jpg" data-date="2019" alt="Sint Aneke Club<br>Antwerp" />
+        <img loading="lazy" src="img/s/15.jpg" data-date="2019" alt="Glueless Model" />
+        <img loading="lazy" src="img/s/14.jpg" data-date="2019" alt="Cuboid Perspective" />
+        <img loading="lazy" src="img/s/13.jpg" data-date="2019" alt="Cuboid Perspective<br>Preparation" />
+        <img loading="lazy" src="img/s/12.jpg" data-date="2019" alt="Cuboid Axonometry" />
+        <img loading="lazy" src="img/s/11.jpg" data-date="2019" alt="Ruled Surfaces" />
+        <img loading="lazy" src="img/s/10.jpg" data-date="2019" alt="Pineapple, Etching" />
+        <img loading="lazy" src="img/s/9.2.jpg" data-date="2019" alt="Cup" />
+        <img loading="lazy" src="img/s/9.jpg" data-date="2019" alt="Tools" />
+        <img loading="lazy" src="img/s/8.jpg" data-date="2018" alt="Leichtsinn" />
     </div>
 </div>
 <div class="content" id="places">
     <div class="gallery">
-        <img loading="lazy" src="img/41.jpg" data-date="19/08/2023" alt="Railway Engine Depot" />
-        <img loading="lazy" src="img/36.jpg" data-date="14/01/2023" alt="Sant&rsquo; Ireneo<br>Mauro Galantino" />
-        <img loading="lazy" src="img/35.jpg" data-date="09/01/2023" alt="Via Albricci<br>Asnago Vender" />
-        <img loading="lazy" src="img/34.jpg" data-date="05/01/2023" alt="Garden" />
-        <img loading="lazy" src="img/33.jpg" data-date="04/01/2023" alt="Nilufar Gallery" />
-        <img loading="lazy" src="img/31.jpg" data-date="04/11/2022" alt="Monte Amiata<br>Carlo Aymonino" />
-        <img loading="lazy" src="img/32.jpg" data-date="04/11/2022" alt="Monte Amiata<br>Carlo Aymonino" />
-        <img loading="lazy" src="img/30.jpg" data-date="30/10/2022" alt="Amendola<br>Arrigo Arrighetti" />
-        <img loading="lazy" src="img/28.jpg" data-date="15/09/2022" alt="Emergence&nbsp;Pool<br>Nari&nbsp;Ward" />
-        <img loading="lazy" src="img/27.jpg" data-date="04/09/2022" alt="Clouds" />
-        <img loading="lazy" src="img/24.jpg" data-date="02/01/2021" alt="Creek" />
-        <img loading="lazy" src="img/22.jpg" data-date="27/09/2019" alt="Flora" />
-        <img loading="lazy" src="img/19.jpg" data-date="17/03/2019" alt="Death Valley" />
-        <img loading="lazy" src="img/18.jpg" data-date="15/03/2019" alt="Campfire in a Sandy Forest" />
-        <img loading="lazy" src="img/40.jpg" data-date="11/03/2019" alt="Salk Institute<br>Louis Kahn" />
-        <img loading="lazy" src="img/17.jpg" data-date="25/09/2018" alt="Switzerland" />
-        <img loading="lazy" src="img/6.jpg" data-date="18/05/2018" alt="Eel soup" />
-        <img loading="lazy" src="img/7.jpg" data-date="2018" alt="S&ocirc;ng Ng&agrave;n Ph&#7889;" />
-        <img loading="lazy" src="img/5.jpg" data-date="12/05/2018" alt="H&#432;&#x01A1;ng S&#x01A1;n" />
-        <img loading="lazy" src="img/4.jpg" data-date="17/06/2017" alt="Merano" />
-        <img loading="lazy" src="img/3.jpg" data-date="11/08/2016" alt="J&ouml;kuls&aacute;rl&oacute;n Glacial Lake" />
-        <img loading="lazy" src="img/48.jpg" data-date="09/08/2016" alt="Landmannalaugar" />
-        <img loading="lazy" src="img/47.jpg" data-date="09/08/2016" alt="Footprints" />
-        <img loading="lazy" src="img/2.jpg" data-date="08/08/2016" alt="N&yacute;idalur" />
-        <img loading="lazy" src="img/1.jpg" data-date="" alt="Fog" />
+        <img loading="lazy" src="img/s/41.jpg" data-date="19/08/2023" alt="Railway Engine Depot" />
+        <img loading="lazy" src="img/s/36.jpg" data-date="14/01/2023" alt="Sant&rsquo; Ireneo<br>Mauro Galantino" />
+        <img loading="lazy" src="img/s/35.jpg" data-date="09/01/2023" alt="Via Albricci<br>Asnago Vender" />
+        <img loading="lazy" src="img/s/34.jpg" data-date="05/01/2023" alt="Garden" />
+        <img loading="lazy" src="img/s/33.jpg" data-date="04/01/2023" alt="Nilufar Gallery" />
+        <img loading="lazy" src="img/s/31.jpg" data-date="04/11/2022" alt="Monte Amiata<br>Carlo Aymonino" />
+        <img loading="lazy" src="img/s/32.jpg" data-date="04/11/2022" alt="Monte Amiata<br>Carlo Aymonino" />
+        <img loading="lazy" src="img/s/30.jpg" data-date="30/10/2022" alt="Amendola<br>Arrigo Arrighetti" />
+        <img loading="lazy" src="img/s/28.jpg" data-date="15/09/2022" alt="Emergence&nbsp;Pool<br>Nari&nbsp;Ward" />
+        <img loading="lazy" src="img/s/27.jpg" data-date="04/09/2022" alt="Clouds" />
+        <img loading="lazy" src="img/s/24.jpg" data-date="02/01/2021" alt="Creek" />
+        <img loading="lazy" src="img/s/22.jpg" data-date="27/09/2019" alt="Flora" />
+        <img loading="lazy" src="img/s/19.jpg" data-date="17/03/2019" alt="Death Valley" />
+        <img loading="lazy" src="img/s/18.jpg" data-date="15/03/2019" alt="Campfire in a Sandy Forest" />
+        <img loading="lazy" src="img/s/40.jpg" data-date="11/03/2019" alt="Salk Institute<br>Louis Kahn" />
+        <img loading="lazy" src="img/s/17.jpg" data-date="25/09/2018" alt="Switzerland" />
+        <img loading="lazy" src="img/s/6.jpg" data-date="18/05/2018" alt="Eel soup" />
+        <img loading="lazy" src="img/s/7.jpg" data-date="2018" alt="S&ocirc;ng Ng&agrave;n Ph&#7889;" />
+        <img loading="lazy" src="img/s/5.jpg" data-date="12/05/2018" alt="H&#432;&#x01A1;ng S&#x01A1;n" />
+        <img loading="lazy" src="img/s/4.jpg" data-date="17/06/2017" alt="Merano" />
+        <img loading="lazy" src="img/s/3.jpg" data-date="11/08/2016" alt="J&ouml;kuls&aacute;rl&oacute;n Glacial Lake" />
+        <img loading="lazy" src="img/s/48.jpg" data-date="09/08/2016" alt="Landmannalaugar" />
+        <img loading="lazy" src="img/s/47.jpg" data-date="09/08/2016" alt="Footprints" />
+        <img loading="lazy" src="img/s/2.jpg" data-date="08/08/2016" alt="N&yacute;idalur" />
+        <img loading="lazy" src="img/s/1.jpg" data-date="" alt="Fog" />
     </div>
 </div>
 <div class="content" id="about">
@@ -278,7 +278,7 @@ $(document).ready(function(){
     // lightbox
     $("body").append("<div id='lightbox'><img src='' /></div>");
     function lightboxLoad() {
-        var imgURL = $("img.show").attr("src");
+        var imgURL = $("img.show").attr("src").replace("s","l");
         $("#lightbox").show().children("img").attr("src",imgURL);
         /* $("#lightbox img").on("load",function(){
             hideLoading();
