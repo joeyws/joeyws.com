@@ -50,6 +50,7 @@
     .gallery{justify-content:space-evenly;grid-template-columns:repeat(auto-fit,220px);gap:var(--spacer);display:grid;line-height:0;font-size:0;}
     .gallery div{padding-top:calc(var(--spacer)*2);cursor:zoom-in;display:flex;align-items:center;justify-content:center;flex-direction:column;}
     .gallery div img{max-height:200px;max-width:200px;}
+    .gallery div img.show{filter:brightness(0);}
     .gallery div span{font-size:1rem;line-height:1.2em;min-height:calc(3*1.2rem);text-align:center;margin-top:var(--spacer);margin-top:var(--spacer);overflow:hidden;}
     /* SPECIAL */
     #lightbox{z-index:999997;cursor:zoom-out;position:fixed;inset:0;display:none;}
@@ -94,7 +95,7 @@
     <div class="gallery">
         <img src="img/s/46.jpg" data-date="2024" alt="Pauluskirche Extension<br>Interior" />
         <img src="img/s/44.jpg" data-date="2024" alt="Pauluskirche Extension<br>Urban Situation" />
-        <img src="img/s/43.jpg" data-date="2023" alt="Helvetia Campus Facade Herzog&nbsp;&&nbsp;de&nbsp;Meuron" />
+        <img src="img/s/43.jpg" data-date="2023" alt="Helvetia Campus Basel<br>Facade Model<br>&copy; Herzog&nbsp;&&nbsp;de&nbsp;Meuron" />
         <img src="img/s/26.jpg" data-date="2022" alt="Lightweight Pavilions" />
         <img src="img/s/42.jpg" data-date="2021" alt="Pneu Concept" />
         <img src="img/s/25.jpg" data-date="2021" alt="Vasikkasaari Climate Institute Helsinki" />
@@ -278,11 +279,12 @@ $(document).ready(function(){
     // lightbox
     $("body").append("<div id='lightbox'><img src='' /></div>");
     function lightboxLoad() {
+        showLoading();
         var imgURL = $("img.show").attr("src").replace("/s/","/l/");
         $("#lightbox").show().children("img").attr("src",imgURL);
-        /* $("#lightbox img").on("load",function(){
+        $("#lightbox img").on("load",function(){
             hideLoading();
-        }); */
+        });
     };
     function lightboxPrev() {
         if ($("#lightbox").is(":visible")) {
