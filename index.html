@@ -279,14 +279,13 @@ $(document).ready(function(){
     // lightbox
     $("body").append("<div id='lightbox'><img src='' /></div>");
     function lightboxLoad() {
-        $("#lightbox").hide();
-        showLoading();
+        //showLoading();
         var imgURL = $("img.show").attr("src").replace("/s/","/l/");
         $("#lightbox").show().children("img").attr("src",imgURL);
-        $("#lightbox img").on("load",function(){
+        /* $("#lightbox img").on("load",function(){
             hideLoading();
             $("#lightbox").show();
-        });
+        }); */
     };
     function lightboxPrev() {
         if ($("#lightbox").is(":visible")) {
