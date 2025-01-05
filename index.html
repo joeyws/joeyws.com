@@ -15,7 +15,7 @@
     ::selection{background:var(--text);color:var(--background);}
     /* RESET */*{text-decoration-thickness:1px;text-underline-offset:2px;text-decoration-skip-ink:none;user-select:none;font-kerning:normal;outline:none;-webkit-tap-highlight-color:rgba(0,0,0,0)!important;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-appearance:none;border-radius:0;-webkit-border-radius:0;box-sizing:content-box;font-smoothing:antialiased;-moz-osx-font-smoothing: grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased;}
 	html{font-size:13px;}
-    body{color:var(--text);background-color:var(--background);background:url(archive/noise.png) center center repeat fixed,url(img/other/bg_kenaim.webp) center center no-repeat fixed;background-size:auto,cover;font:normal normal 1rem/1.2em webfont,monospace;/* background:url(img/noise.png) center center repeat fixed,url(img/bg_bw.png) center center repeat fixed;background-size:200px,cover; */}
+    body{color:var(--text);background-color:var(--background);background:url(archive/bg75.png) center center repeat fixed,url(img/other/bg_symmetryinchaos.webp) center center no-repeat fixed;background-size:auto,cover;font:normal normal 1rem/1.2em webfont,monospace;/* background:url(img/noise.png) center center repeat fixed,url(img/bg_bw.png) center center repeat fixed;background-size:200px,cover; */}
     h1{display:inline-block;/* font:normal normal 3.6rem/1em webfont2; */}
     p,.p,ul,table,#map{margin-top:var(--spacer);}
     hr+*,img+p,.content *:first-child{margin-top:0;}
@@ -26,8 +26,9 @@
     td:first-child{white-space:nowrap;width:140px;}
     td:not(:last-child){padding-right:calc(2* var(--spacer));}
     small,i{font-style:italic;}
-    a{text-decoration:none;box-shadow:inset 0 -.05em var(--text);white-space:nowrap;/* text-decoration-style:dotted; */}
-    a:hover,#nav a.open,.gallery div:hover span span{box-shadow:none;text-decoration:none;background:var(--text);color:var(--background);}
+    a{text-decoration:none;white-space:nowrap;/* text-decoration-style:dotted; */}
+    a,.gallery div span span{transition:all .12s;box-shadow:inset 0 -.05em var(--text);}
+    a:hover,#nav a.open,.gallery div:hover span span{box-shadow:inset 0 -1.25rem var(--text);text-decoration:none;/* background:var(--text); */color:var(--background);}
     /* LAYOUT */
     /* #header,.marquee3k,p,.video:after,.gallery div span span{mix-blend-mode:exclusion;} */
     #header{padding:var(--spacer);padding-bottom:0;gap:var(--spacer) calc(var(--spacer)*4);z-index:999996;display:flex;flex-wrap:wrap;justify-content:space-between;}
@@ -59,6 +60,7 @@
     #map:after{top:23%;left:52.5%;outline:1px solid #0f0;background:#0f0;animation:position 1.2s infinite ease-out;width:7px;height:7px;border-radius:100vmax;pointer-events:none;position:absolute;transform:translate(-50%,-50%);display:block;content:"";}
     @keyframes blink{0%{color:transparent;}50%{color:inherit;}}
     @keyframes position{100%{outline-color:transparent;outline-offset:20px;}}
+    .marquee3k,#header,p,.gallery div span{mix-blend-mode:difference;}
     /* *{cursor:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" x="0px" y="0px" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6" fill="%23f00" stroke="%23000" stroke-width="0"/></svg>') 8 8, auto !important;} */
 </style>
 </head>
@@ -194,7 +196,7 @@
     <p id="website">
         This webpage doesn&rsquo;t use cookies.<br>
         Hosted on <a href="https://github.com/" rel="nofollow">GitHub</a><br>
-        Background by <a href="https://www.kenaim.com/" rel="nofollow">Kenaim</a><br>
+        Background by <a href="https://www.instagram.com/symmetryinchaosart" rel="nofollow">symmetryinchaos</a><br>
         Initial launch: 2011/01<!-- /16 -->
     </p>
     <!-- <hr>
