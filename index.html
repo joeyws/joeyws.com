@@ -10,10 +10,10 @@
 <meta charset="utf-8"><meta name="robots" content="index,nofollow,notranslate,noimageindex"><meta name="description" content="Welcome to the personal web page of Joey Schweickhardt."><meta name="keywords" content="joey,schweickhardt,stuttgart,architektur,architekt"><meta name="geo.region" content="DE-BW"><meta name="geo.placename" content="Stuttgart"><meta name="geo.position" content="48.778600;9.179746"><meta name="ICBM" content="48.778600, 9.179746"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes,shrink-to-fit=no"><meta name="format-detection" content="telephone=no">
 <style>
     @font-face{font-family:webfont;src:url("font/SourceCodePro-Regular.ttf");font-display:swap;}
-    :root{--background:#eee;--text:#000;--spacer:8px;}
+    :root{--background:#000;--text:#0f0;--spacer:8px;}
     ::-moz-selection{background:var(--text);color:var(--background);}
     ::selection{background:var(--text);color:var(--background);}
-    /* RESET */*{text-decoration-thickness:1px;text-underline-offset:2px;text-decoration-skip-ink:none;user-select:none;font-kerning:normal;outline:none;-webkit-tap-highlight-color:rgba(0,0,0,0)!important;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-appearance:none;border-radius:0;-webkit-border-radius:0;box-sizing:content-box;font-smoothing:antialiased;-moz-osx-font-smoothing: grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased;}
+    /* RESET */*{/* user-select:none; */text-decoration-thickness:1px;text-underline-offset:2px;text-decoration-skip-ink:none;font-kerning:normal;outline:none;-webkit-tap-highlight-color:rgba(0,0,0,0)!important;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-appearance:none;border-radius:0;-webkit-border-radius:0;box-sizing:content-box;font-smoothing:antialiased;-moz-osx-font-smoothing: grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased;}
 	html{font-size:13px;}
     body{color:var(--text);background-color:var(--background);/* background:url(archive/bg60.png) center center repeat fixed,url(img/other/bg_symmetryinchaos.webp) center center no-repeat fixed;background-size:auto,cover; */font:normal normal 1rem/1.2em webfont,monospace;/* background:url(img/noise.png) center center repeat fixed,url(img/bg_bw.png) center center repeat fixed;background-size:200px,cover; */}
     h1{display:inline-block;/* font:normal normal 3.6rem/1em webfont2; */}
@@ -28,7 +28,7 @@
     small,i{font-style:italic;}
     a{text-decoration:none;white-space:nowrap;/* text-decoration-style:dotted; */}
     a,.gallery div span span{transition:all .12s;box-shadow:inset 0 -.05em var(--text);}
-    a:hover,#nav a.open,.gallery div:hover span span{box-shadow:inset 0 -1.25rem var(--text);text-decoration:none;/* background:var(--text); */color:var(--background);}
+    a:hover,#nav a.open,.gallery div:hover span span,.gallery div.show span span{box-shadow:inset 0 -1.25rem var(--text);text-decoration:none;/* background:var(--text); */color:var(--background);}
     /* LAYOUT */
     /* #header,.marquee3k,p,.video:after,.gallery div span span{mix-blend-mode:exclusion;} */
     #header{padding:var(--spacer);padding-bottom:0;gap:var(--spacer) calc(var(--spacer)*4);z-index:999996;display:flex;flex-wrap:wrap;justify-content:space-between;}
@@ -69,13 +69,11 @@
 
 <div class="marquee3k" data-speed=".8"><div class="marquee"><span>歡迎</span><span>Bienvenidos</span><span>Welcome</span><span>स्वागत हे</span><span>اهلا وسهلا</span><span>Bem-vinda</span><span>স্বাগত</span><span>добро пожаловать</span><span>ようこそ</span><span>Sugeng Rawuh</span><span>ਸਵਾਗਤ ਹੈ</span><span>Willkommen</span><span>어서 오십시오</span><span>Bienvenue</span><span>Karibu</span><span>Svāgatam</span><span>Hoşgeldiniz</span><span>خوش آمدید</span><span>வரவேற்பு</span><span>Hoan nghênh</span><span>اهلا وسهلا</span><span>Benvenuto</span></div></div>    
 <div id="header">
-    <div>
-        <h1 class="loading">Joey W. Schweickhardt</h1>,
-        <div id="nav">
-            <a href="#/works">Works</a>,
-            <a href="#/places">Places</a>,
-            <a href="#/about">About</a>
-        </div>
+    <h1 class="loading">Joey W. Schweickhardt</h1>
+    <div id="nav">
+        <a href="#/works">Works</a>,
+        <a href="#/places">Places</a>,
+        <a href="#/about">About</a>
     </div>
     <div>Stuttgart<span id="weather"></span><span id="time"></span></div>
 </div>
@@ -199,7 +197,7 @@
         Initial launch: 2011/01<!-- /16 -->
     </p>
     <hr>
-    <pre style="font-size:5px;line-height:1.25em;transform:scaleY(.95);;">
+    <pre>
 ██████████████    ██        ██      ██████████████
 ██          ██  ████  ██████████    ██          ██
 ██  ██████  ██    ██████  ██    ██  ██  ██████  ██
@@ -226,8 +224,6 @@
 ██          ██  ██      ████      ██████████  ██  
 ██████████████  ████    ██  ██              ██████</pre>
     <hr>
-    <!-- <img src="archive/atomkraft_en.svg" style="width:120px;margin:-5px;" />
-    <hr> -->
     <p class="toggle"><a href="javascript:">Privacy</a></p>
     <div class="p">
         <p>Personal data (usually referred to just as &ldquo;data&rdquo; below) will only be processed by us to the extent necessary and for the purpose of providing a functional and user-friendly website, including its contents, and the services offered there. Per Art. 4 No. 1 of Regulation (EU) 2016/679, i.e. the General Data Protection Regulation (hereinafter referred to as the &ldquo;GDPR&rdquo;), &ldquo;processing&rdquo; refers to any operation or set of operations such as collection, recording, organization, structuring, storage, adaptation, alteration, retrieval, consultation, use, disclosure by transmission, dissemination, or otherwise making available, alignment, or combination, restriction, erasure, or destruction performed on personal data, whether by automated means or not.</p>
@@ -291,28 +287,22 @@ $(document).ready(function(){
     // lightbox
     $("body").append("<div id='lightbox'><img src='' /></div>");
     function lightboxLoad() {
-        //showLoading();
-        //var imgURL = $("img.show").attr("src") + '_l';
-        var [fileName, fileExtension] = $("img.show").attr("src").split('.');
+        var [fileName, fileExtension] = $(".gallery div.show img").attr("src").split('.');
         var imgURL = fileName + '_l.' + fileExtension;
         $("#lightbox").show().children("img").attr("src",imgURL);
-        /* $("#lightbox img").on("load",function(){
-            hideLoading();
-            $("#lightbox").show();
-        }); */
     };
     function lightboxPrev() {
         if ($("#lightbox").is(":visible")) {
-            if (!$(".gallery div:first-child img").is(".show")) {
-                $("img.show").removeClass("show").parent().prev("div").children("img").addClass("show");
+            if (!$(".gallery div:first-child").is(".show")) {
+                $(".gallery div.show").removeClass("show").prev("div").addClass("show");
                 lightboxLoad();
             }
         }
     };
     function lightboxNext() {
         if ($("#lightbox").is(":visible")) {
-            if (!$(".gallery div:last-child img").is(".show")) {
-                $("img.show").removeClass("show").parent().next("div").children("img").addClass("show");
+            if (!$(".gallery div:last-child").is(".show")) {
+                $(".gallery div.show").removeClass("show").next("div").addClass("show");
                 lightboxLoad();
             } else {
                 lightboxClose();
@@ -321,10 +311,10 @@ $(document).ready(function(){
     };
     function lightboxClose() {
         $("#lightbox").hide().children("img").attr("src","data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");
-        $("img.show").removeClass("show");
+        $(".gallery div.show").removeClass("show");
     };
     $(".gallery>div").on("click",function(){
-        $(this).children("img").addClass("show");
+        $(this).addClass("show");
         lightboxLoad();
     });
     $("#lightbox").on("click",function(e){
@@ -338,9 +328,10 @@ $(document).ready(function(){
     function getTime() {
         function addZero(i) {if (i < 10) {i = "0" + i;} return i;}
         var time = new Date();
-        var h = time.getHours(); // var h = addZero(time.getHours());
-        ampm = h >= 12 ? "pm" : "am";
-        //h = h % 12;
+        var h = time.getHours();
+        // var h = addZero(time.getHours());
+        // ampm = h >= 12 ? "pm" : "am";
+        // h = h % 12;
         h = h ? h : 12;
         var min = addZero(time.getMinutes());
         var s = addZero(time.getSeconds());
@@ -354,7 +345,7 @@ $(document).ready(function(){
         const request = await fetch("https://api.open-meteo.com/v1/forecast?latitude=48.7823&longitude=9.177&current_weather=true");
         const response = await request.json();
         $("#weather").html("&nbsp;&nbsp;" + Math.round(response.current_weather.temperature) + "&deg;C");
-    } // Sonne: &#128978; &#128955; &#128974; &#9788;
+    }
     getWeather();
     setInterval(getWeather,60000);
 
