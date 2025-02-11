@@ -19,7 +19,7 @@
     #footer a{text-decoration:none;}
     /* .marker{bottom:0;width:1px;background:#fff;position:absolute;transform:translateX(-50%);pointer-events:none;} */
     .parties div span,#parties1:after,#parties2:after,.marker,#footer{color:#fff;mix-blend-mode:difference;}
-    .blink{animation:1s blink steps(1) infinite;}@keyframes blink{0%{opacity:1;}50%{filter:saturate(0);}}
+    /* .blink{animation:1s blink steps(1) infinite;}@keyframes blink{0%{opacity:1;}50%{filter:saturate(0);}} */
 </style>
 </head>
 <body>
@@ -111,7 +111,7 @@ $(document).ready(function(){
                 
             if(result !== undefined){ // && result >= 5
                 $(partyNum).css("width",result+"%").append("<br>"+result.toFixed(1).split(".").join(",")+"<span> %</span>").wrapInner("<span></span>");
-                if(result < 5){$(partyNum).addClass("blink");}
+                //if(result < 5){$(partyNum).addClass("blink");}
             } else {
                 $(partyNum).hide().remove();
             }
