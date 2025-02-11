@@ -9,10 +9,22 @@
     a{text-decoration:none;}
     .parties{display:flex;flex-direction:row;align-items:stretch;height:50vh;}
     .parties div{flex-grow:1;/* writing-mode:vertical-rl; *//* text-orientation:mixed; */justify-content:start;align-items:start;display:flex;overflow:hidden;}
-    .parties div span{/* transition:opacity .2s; */mix-blend-mode:difference;color:#fff;padding:5px 6px;}
+    .parties div span{/* transition:opacity .2s; */mix-blend-mode:difference;color:#fff;}
     .parties div span:after{content:" %";font-size:67%;}
     /* #parteien div:not(:hover) span{opacity:0;} */
     #footer{font-size:11px;line-height:1.3em;}
+    #parties1:after,#parties2:after{font-size:12vw;opacity:.1;position:absolute;z-index:1;transform:translate(-50%,-50%);left:50%;mix-blend-mode:difference;color:#fff;pointer-events:none;}
+    #parties1:after{content:"Zweitstimmen";top:25%;}
+    #parties2:after{content:"Sitze";top:75%;}
+    .party0{background:#aaaaaa;}
+    .party1{background:#000000;}
+    .party2{background:#e3000f;}
+    .party3{background:#ffe209;}
+    .party4{background:#1e4038;}
+    .party5{background:#ff0000;}
+    .party7{background:#009ee0;}
+    .party8{background:#00519e;}
+    .party23{background:#cf0055;}
 </style>
 </head>
 <body>
@@ -29,26 +41,26 @@
         <circle r="25%" cx="50%" cy="50%" style="stroke:#ff0000; stroke-dasharray:6 100; stroke-dashoffset: -94.1;" id="fw"></circle>
         <circle r="25%" cx="50%" cy="50%" style="stroke:#ff0000; stroke-dasharray:6 100; stroke-dashoffset: -94.1;" id="bsw"></circle>
     </svg> -->
-    <div class="parties">
-        <div style="background:#cf0055;" id="1party23">BSW</div>
-        <div style="background:#ff0000;" id="1party5">LINKE</div>
-        <div style="background:#6fb068;" id="1party4">Grüne</div>
-        <div style="background:#e3000f;" id="1party2">SPD</div>
-        <div style="background:#ffe209;" id="1party3">FDP</div>
-        <div style="background:#000000;" id="1party1">CDU/CSU</div>
-        <div style="background:#00519e;" id="1party8">FW</div>
-        <div style="background:#009ee0;" id="1party7">AfD</div>
-        <div style="background:#aaaaaa;" id="1party0">Sonstige</div>
+    <div class="parties" id="parties1">
+        <div class="party23">BSW</div>
+        <div class="party5">LINKE</div>
+        <div class="party4">Grüne</div>
+        <div class="party2">SPD</div>
+        <div class="party3">FDP</div>
+        <div class="party1">CDU/CSU</div>
+        <div class="party8">FW</div>
+        <div class="party7">AfD</div>
+        <div class="party0">Sonstige</div>
     </div>
-    <div class="parties">
-        <div style="background:#cf0055;" id="2party23">BSW</div>
-        <div style="background:#ff0000;" id="2party5">LINKE</div>
-        <div style="background:#6fb068;" id="2party4">Grüne</div>
-        <div style="background:#e3000f;" id="2party2">SPD</div>
-        <div style="background:#ffe209;" id="2party3">FDP</div>
-        <div style="background:#000000;" id="2party1">CDU/CSU</div>
-        <div style="background:#00519e;" id="2party8">FW</div>
-        <div style="background:#009ee0;" id="2party7">AfD</div>
+    <div class="parties" id="parties2">
+        <div class="party23">BSW</div>
+        <div class="party5">LINKE</div>
+        <div class="party4">Grüne</div>
+        <div class="party2">SPD</div>
+        <div class="party3">FDP</div>
+        <div class="party1">CDU/CSU</div>
+        <div class="party8">FW</div>
+        <div class="party7">AfD</div>
     </div>
     <div id="footer"></div>
 </body><script src="jquery.js"></script>
@@ -80,7 +92,7 @@ $(document).ready(function(){
         for(let i=0; i<26; i++){
             if (i<19 || i>20) {
                 var party = json.Parties[i].Shortcut;               // CDU/CSU
-                var partyNum = "#1party"+i;                         // #1party1
+                var partyNum = "#parties1 .party"+i;                // #parties1 .party1
                 var result = json.Surveys[surveyNum].Results[i];    // 29
                 
                 if(result !== undefined){ // && result >= 5
@@ -95,7 +107,7 @@ $(document).ready(function(){
         for(let i=1; i<26; i++){
             if (i<19 || i>20) {
                 var party = json.Parties[i].Shortcut;                                   // CDU/CSU
-                var partyNum = "#2party"+i;                                             // #2party1
+                var partyNum = "#parties2 .party"+i;                                    // #parties2 .party1
                 var result = json.Surveys[surveyNum].Results[i]/percentageTotal*100;    // 29
                 
                 if(result !== undefined && result >= 5){ 
