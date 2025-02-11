@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sonntagsfrage</title>
+<meta charset="utf-8">
+<style>
+    /* RESET */*{user-select:none;text-decoration-thickness:1px;text-underline-offset:2px;text-decoration-skip-ink:none;font-kerning:normal;outline:none;-webkit-tap-highlight-color:rgba(0,0,0,0)!important;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-appearance:none;border-radius:0;-webkit-border-radius:0;box-sizing:content-box;font-smoothing:antialiased;-moz-osx-font-smoothing: grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased;}
+    body{font:normal normal 1.5vw/1em sans-serif;}
+    a{text-decoration:none;}
+    .parties{display:flex;flex-direction:row;align-items:stretch;height:50vh;}
+    .parties div{flex-grow:1;/* writing-mode:vertical-rl; *//* text-orientation:mixed; */justify-content:start;align-items:start;display:flex;overflow:hidden;}
+    .parties div span{/* transition:opacity .2s; */mix-blend-mode:difference;color:#fff;padding:5px 6px;}
+    .parties div span:after{content:" %";font-size:67%;}
+    /* #parteien div:not(:hover) span{opacity:0;} */
+    #footer{font-size:11px;line-height:1.3em;}
+</style>
+</head>
+<body>
+    <!-- <style>
+    .pie {width: 500px;background:transparent;border-radius:50%;}
+    .pie circle {fill:none;stroke-width:31.8309886184;}
+    </style> -->
+    <!-- <svg viewBox="0 0 63.6619772368 63.6619772368" class="pie">
+        <circle r="25%" cx="50%" cy="50%" style="stroke:#ffe209; stroke-dasharray:0 100; stroke-dashoffset: 0;" id="fdp"></circle>
+        <circle r="25%" cx="50%" cy="50%" style="stroke:#009ee0; stroke-dasharray:25 100; stroke-dashoffset: 0;" id="afd"></circle>
+        <circle r="25%" cx="50%" cy="50%" style="stroke:#000000; stroke-dasharray:34.5 100; stroke-dashoffset: -25;" id="union"></circle>
+        <circle r="25%" cx="50%" cy="50%" style="stroke:#e3000f; stroke-dasharray:17.9 100; stroke-dashoffset: -59.5;" id="spd"></circle>
+        <circle r="25%" cx="50%" cy="50%" style="stroke:#6fb068; stroke-dasharray:16.7 100; stroke-dashoffset: -77.4;" id="gruene"></circle>
+        <circle r="25%" cx="50%" cy="50%" style="stroke:#ff0000; stroke-dasharray:6 100; stroke-dashoffset: -94.1;" id="fw"></circle>
+        <circle r="25%" cx="50%" cy="50%" style="stroke:#ff0000; stroke-dasharray:6 100; stroke-dashoffset: -94.1;" id="bsw"></circle>
+    </svg> -->
+    <div class="parties">
+        <div style="background:#cf0055;" id="1party23">BSW</div>
+        <div style="background:#ff0000;" id="1party5">LINKE</div>
+        <div style="background:#6fb068;" id="1party4">Grüne</div>
+        <div style="background:#e3000f;" id="1party2">SPD</div>
+        <div style="background:#ffe209;" id="1party3">FDP</div>
+        <div style="background:#000000;" id="1party1">CDU/CSU</div>
+        <div style="background:#00519e;" id="1party8">FW</div>
+        <div style="background:#009ee0;" id="1party7">AfD</div>
+        <div style="background:#aaaaaa;" id="1party0">Sonstige</div>
+    </div>
+    <div class="parties">
+        <div style="background:#cf0055;" id="2party23">BSW</div>
+        <div style="background:#ff0000;" id="2party5">LINKE</div>
+        <div style="background:#6fb068;" id="2party4">Grüne</div>
+        <div style="background:#e3000f;" id="2party2">SPD</div>
+        <div style="background:#ffe209;" id="2party3">FDP</div>
+        <div style="background:#000000;" id="2party1">CDU/CSU</div>
+        <div style="background:#00519e;" id="2party8">FW</div>
+        <div style="background:#009ee0;" id="2party7">AfD</div>
+    </div>
+    <div id="footer"></div>
+</body><script src="jquery.js"></script>
+<script>
+$(document).ready(function(){
+    $.getJSON("https://api.dawum.de/newest_surveys.json",function(json){
+        // get latest bundestagswahl
+        var surveyNum = 0;
+        for(let i=3747; i>1000; i--){
+            //alert(json.Surveys[i].Parliament_ID);
+            if (json.Surveys[i].Parliament_ID == 0) {
+                var surveyNum = i;
+                break;
+            }
+        }
+
+        // percentTotal
+        let percentageTotal = 0;
+        const summands = Object.values(json.Surveys[surveyNum].Results);
+        summands[0] = 0; // ohne Sonstige
+        summands.forEach(addToSum);
+        function addToSum(summand) {
+            if (summand >= 5) {
+                percentageTotal += summand;
+            }
+        }
+
+        // werte ausgeben 1
+        for(let i=0; i<26; i++){
+            if (i<19 || i>20) {
+                var party = json.Parties[i].Shortcut;               // CDU/CSU
+                var partyNum = "#1party"+i;                         // #1party1
+                var result = json.Surveys[surveyNum].Results[i];    // 29
+                
+                if(result !== undefined){ // && result >= 5
+                    $(partyNum).css("width",result+"%").append("<br>"+result.toFixed(0).toLocaleString('de-DE')).wrapInner("<span></span>");
+                } else {
+                    $(partyNum).hide().remove();
+                }
+            }
+        }
+
+        // werte ausgeben 2
+        for(let i=1; i<26; i++){
+            if (i<19 || i>20) {
+                var party = json.Parties[i].Shortcut;                                   // CDU/CSU
+                var partyNum = "#2party"+i;                                             // #2party1
+                var result = json.Surveys[surveyNum].Results[i]/percentageTotal*100;    // 29
+                
+                if(result !== undefined && result >= 5){ 
+                    $(partyNum).css("width",result+"%").append("<br>"+result.toFixed(0).toLocaleString('de-DE')).wrapInner("<span></span>");
+                } else {
+                    $(partyNum).hide().remove();
+                }
+            }
+        }
+        
+        // footer
+        var date = json.Surveys[surveyNum].Date.split("-").reverse().join(".");
+        var institute = json.Institutes[+json.Surveys[surveyNum].Institute_ID].Name;
+        var surveyedPersons = json.Surveys[surveyNum].Surveyed_Persons;
+        $("#footer").append("Umfrage vom "+date+" durchgeführt von "+institute+ " mit "+surveyedPersons+" Befragten.<br>Daten bereitgestellt von <a href='https://dawum.de/'>dawum.de</a> unter der Open Database License (ODbL)");
+        
+    });
+
+});
+</script>
+</html>

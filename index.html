@@ -350,7 +350,7 @@ $(document).ready(function(){
 
     // last updated
     $.getJSON("https://api.github.com/repos/"+"joeyws/joeyws.com/commits",function(json){
-        $("#website").append( "<br>Last updated: " + json[0].commit.author.date.slice(0,-13).replaceAll("-","/"));
+        $("#website").append( "<br>Last updated: " + json[0].commit.author.date.slice(0,-13).split("-")/* .reverse() */.join("/"));
     });
     
     // impressum
