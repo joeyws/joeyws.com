@@ -118,7 +118,7 @@ $(document).ready(function(){
                 
             if(result !== undefined){ // && result >= 5
                 $(partyNum).css("width",result+"%").append("<br>"+result.toFixed(1).split(".").join(",")+"<span> %</span>").wrapInner("<span></span>");
-                if(result < 5){$(partyNum).addClass("blink");}
+                //if(result < 5){$(partyNum).addClass("blink");}
             } else {
                 $(partyNum).hide().remove();
             }
