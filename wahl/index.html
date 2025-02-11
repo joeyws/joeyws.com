@@ -6,7 +6,7 @@
 <style>
     /* RESET */*{user-select:none;text-decoration-thickness:1px;text-underline-offset:2px;text-decoration-skip-ink:none;font-kerning:normal;outline:none;-webkit-tap-highlight-color:rgba(0,0,0,0)!important;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-appearance:none;border-radius:0;-webkit-border-radius:0;box-sizing:content-box;font-smoothing:antialiased;-moz-osx-font-smoothing: grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased;}
     body{font:normal normal 1.5vw/1em sans-serif;background:#000;color:#fff;}
-    #parties1:after,#parties2:after{padding-left:.8vw;font-size:8vw;line-height:1em;position:absolute;z-index:99;/* transform:translate(-50%,-50%); */left:0;mix-blend-mode:difference;color:#fff;pointer-events:none;}
+    #parties1:after,#parties2:after{font-size:8vw;line-height:1.2em;position:absolute;z-index:99;left:0;mix-blend-mode:difference;color:#fff;pointer-events:none;}
     #parties1:after{content:"Stimmen";bottom:50%;}
     #parties2:after{content:"Sitze";bottom:0;}
     .parties{display:flex;flex-direction:row;height:50vh;align-items:stretch;}
@@ -14,15 +14,16 @@
     .parties div span{padding:0 1px;}
     .parties div span span{font-size:67%;line-height:1em;line-break:normal;}
     .seats{display:flex;flex-wrap:wrap;max-width:12em;/* flex-wrap:wrap-reverse; */font-size:.5em;line-height:.7em;}
-    .party0{background:#bbbbbb;}.party1{background:#2d3c4b;}.party2{background:#e3000f;}.party3{background:#ffe209;}.party4{background:#1e4038;}.party5{background:#ff0000;}.party7{background:#009ee0;}.party8{background:#00519e;}.party23{background:#cf0055;}
-    #footer{font-size:.4em;line-height:1.2em;text-align:right;}
+    .party0{background:#bbbbbb;}.party1{background:#2d3c4b;}.party2{background:#e3000f;}.party3{background:#ffe209;}.party4{background:#6fb068;}.party5{background:#ff0000;}.party7{background:#009ee0;}.party8{background:#00519e;}.party23{background:#cf0055;}
+    #footer{position:fixed;bottom:0;right:0;font-size:.5em;line-height:1.2em;text-align:right;}
     #footer a{text-decoration:none;}
     /* .marker{bottom:0;width:1px;background:#fff;position:absolute;transform:translateX(-50%);pointer-events:none;} */
-    .parties div span,#parties1:after,#parties2:after,.marker{color:#fff;mix-blend-mode:difference;}
-    .blink{animation:1s blink infinite;}@keyframes blink{0%{opacity:1;}50%{opacity:.5;}}
+    .parties div span,#parties1:after,#parties2:after,.marker,#footer{color:#fff;mix-blend-mode:difference;}
+    .blink{animation:1s blink steps(1) infinite;}@keyframes blink{0%{opacity:1;}50%{filter:saturate(0);}}
 </style>
 </head>
 <body>
+    <div id="footer"></div>
     <!-- <style>
     .pie {width: 500px;background:transparent;border-radius:50%;}
     .pie circle {fill:none;stroke-width:31.8309886184;}
@@ -57,7 +58,6 @@
         <div class="party8">FW</div>
         <div class="party7">AfD</div>
     </div>
-    <div id="footer"></div>
 </body>
 <script src="jquery.js"></script>
 <script>
@@ -111,7 +111,7 @@ $(document).ready(function(){
                 
             if(result !== undefined){ // && result >= 5
                 $(partyNum).css("width",result+"%").append("<br>"+result.toFixed(1).split(".").join(",")+"<span> %</span>").wrapInner("<span></span>");
-                //if(result < 5){$(partyNum).addClass("blink");}
+                if(result < 5){$(partyNum).addClass("blink");}
             } else {
                 $(partyNum).hide().remove();
             }
@@ -139,7 +139,7 @@ $(document).ready(function(){
         var date = json.Surveys[surveyNum].Date.split("-").reverse().join(".");
         var institute = json.Institutes[+json.Surveys[surveyNum].Institute_ID].Name;
         var surveyedPersons = json.Surveys[surveyNum].Surveyed_Persons;
-        $("#footer").append("Umfrage vom "+date+" durchgeführt von "+institute+ " mit "+surveyedPersons+" Befragten. Daten bereitgestellt von <a href='https://dawum.de/'>dawum.de</a> unter der Open Database License (ODbL)");
+        $("#footer").html("Umfrage vom "+date+" durchgeführt von "+institute+ " mit "+surveyedPersons+" Befragten.<br>Daten bereitgestellt von <a href='https://dawum.de/'>dawum.de</a> unter der Open Database License (ODbL)");
         
 
     });
