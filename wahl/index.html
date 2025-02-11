@@ -5,16 +5,16 @@
 <meta charset="utf-8">
 <style>
     /* RESET */*{user-select:none;text-decoration-thickness:1px;text-underline-offset:2px;text-decoration-skip-ink:none;font-kerning:normal;outline:none;-webkit-tap-highlight-color:rgba(0,0,0,0)!important;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-appearance:none;border-radius:0;-webkit-border-radius:0;box-sizing:content-box;font-smoothing:antialiased;-moz-osx-font-smoothing: grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased;}
-    body{font:normal normal 1.5vw/1em sans-serif;}
-    a{text-decoration:none;}
-    .parties{display:flex;flex-direction:row;align-items:stretch;height:50vh;}
-    .parties div{position:relative;flex-grow:1;/* writing-mode:vertical-rl; *//* text-orientation:mixed; */justify-content:start;align-items:start;display:flex;overflow:hidden;}
-    .parties div span{mix-blend-mode:difference;color:#fff;}
-    .parties div span:after{content:" %";font-size:67%;}
-    #parties1:after,#parties2:after{/* opacity:.1; */font-size:10vw;position:absolute;z-index:99;transform:translate(-50%,-50%);left:50%;mix-blend-mode:difference;color:#fff;pointer-events:none;}
-    #parties1:after{content:"Zweitstimmen";top:25%;}
-    #parties2:after{content:"\007ESitze";top:75%;}
-    .party0{background:#aaaaaa;}
+    body{font:normal normal 1.5vw/1em sans-serif;background:#000;color:#fff;}
+    h2{display:none;font-size:2em;margin-bottom:1em;line-height:1em;/* text-align:center; */}
+    #parties1:after,#parties2:after{/* opacity:.1; */padding-left:1.5vw;font-size:8vw;line-height:1.2em;position:absolute;z-index:99;/* transform:translate(-50%,-50%); */left:0;mix-blend-mode:difference;color:#fff;pointer-events:none;}
+    #parties1:after{content:"Zweitstimmen";bottom:50%;}
+    #parties2:after{content:"Sitzverteilung";bottom:0;}
+    .parties{height:50vh;display:flex;flex-direction:row;align-items:stretch;}
+    .parties div{/* writing-mode:vertical-rl; *//* text-orientation:mixed; */justify-content:start;align-items:start;display:flex;overflow:hidden;}
+    .parties div span span{font-size:67%;line-height:1em;line-break: normal;}
+    .seats{display:flex;flex-wrap:wrap;width:12em;/* flex-wrap:wrap-reverse; */font-size:.4em;line-height:1em;}
+    .party0{background:#bbbbbb;}
     .party1{background:#2d3c4b;}
     .party2{background:#e3000f;}
     .party3{background:#ffe209;}
@@ -23,7 +23,11 @@
     .party7{background:#009ee0;}
     .party8{background:#00519e;}
     .party23{background:#cf0055;}
-    #footer{font-size:11px;line-height:1.3em;}
+    #footer{font-size:.5em;line-height:1.3em;text-align:right;}
+    #footer a{text-decoration:none;}
+    .marker{bottom:0;width:1px;background:#fff;position:absolute;transform:translateX(-50%);pointer-events:none;}
+    .parties div span,#parties1:after,#parties2:after,.marker{color:#fff;mix-blend-mode:difference;}
+    .blink{animation:1s blink steps(1) infinite;}@keyframes blink{0%{opacity:1;}50%{opacity:.9;}}
 </style>
 </head>
 <body>
@@ -51,6 +55,7 @@
         <div class="party7">AfD</div>
         <div class="party0">Sonstige</div>
     </div>
+    <h2>Zweitstimmen</h2>
     <div class="parties" id="parties2">
         <div class="party23">BSW</div>
         <div class="party5">LINKE</div>
@@ -61,22 +66,39 @@
         <div class="party8">FW</div>
         <div class="party7">AfD</div>
     </div>
+    <h2>Sitzverteilung</h2>
     <div id="footer"></div>
 </body><script src="jquery.js"></script>
 <script>
 $(document).ready(function(){
     $.getJSON("https://api.dawum.de/newest_surveys.json",function(json){
-        // get latest bundestagswahl
+
+
+        // marker
+        /* for(let i=1; i<100; i++){
+            if (i%10 == 0) {
+                var markerHeight = "3vh";
+            }else if(i%5 == 0){
+                var markerHeight = "2vh";
+            }else{
+                var markerHeight = "1vh";
+            }
+            $("body").append('<div class="marker" style="left:'+i+'%;height:'+markerHeight+';">&nbsp;</div>');
+        } */
+
+
+        // finde letzte bundestagswahl-umfrage
         var surveyNum = 0;
-        for(let i=3747; i>1000; i--){
-            //alert(json.Surveys[i].Parliament_ID);
-            if (json.Surveys[i].Parliament_ID == 0) {
-                var surveyNum = i;
+        var surveyNums = Object.keys(json.Surveys).reverse();
+        for(let i=0; i<surveyNums.length; i++){
+            if (json.Surveys[surveyNums[i]].Parliament_ID == 0) {
+                var surveyNum = surveyNums[i];
                 break;
             }
         }
 
-        // percentTotal
+
+        // anteil einzug in bundestag
         let percentageTotal = 0;
         const summands = Object.values(json.Surveys[surveyNum].Results);
         summands[0] = 0; // ohne Sonstige
@@ -87,42 +109,48 @@ $(document).ready(function(){
             }
         }
 
-        // werte ausgeben 1
-        for(let i=0; i<26; i++){
-            if (i<19 || i>20) {
-                var party = json.Parties[i].Shortcut;               // CDU/CSU
-                var partyNum = "#parties1 .party"+i;                // #parties1 .party1
-                var result = json.Surveys[surveyNum].Results[i];    // 29
+
+        // werte ausgeben
+        const parties = Object.keys(json.Parties);
+        // 1: stimmen
+        for(let i=0; i<parties.length; i++){
+            var party = json.Parties[parties[i]].Shortcut;      // CDU/CSU
+            var partyNum = "#parties1 .party"+i;                // #parties1 .party1
+            var result = json.Surveys[surveyNum].Results[i];    // 29
                 
-                if(result !== undefined){ // && result >= 5
-                    $(partyNum).css("width",result+"%").append("<br>"+result.toFixed(0).toLocaleString('de-DE')).wrapInner("<span></span>");
-                } else {
-                    $(partyNum).hide().remove();
-                }
+            if(result !== undefined){ // && result >= 5
+                $(partyNum).css("width",result+"%").append("<br>"+result.toFixed(1).split(".").join(",")+"<span> %</span>").wrapInner("<span></span>");
+                if(result < 5){$(partyNum).addClass("blink");}
+            } else {
+                $(partyNum).hide().remove();
             }
         }
-
-        // werte ausgeben 2
-        for(let i=1; i<26; i++){
-            if (i<19 || i>20) {
-                var party = json.Parties[i].Shortcut;                                   // CDU/CSU
-                var partyNum = "#parties2 .party"+i;                                    // #parties2 .party1
-                var result = json.Surveys[surveyNum].Results[i]/percentageTotal*100;    // 29
+        // 2: sitze
+        for(let i=1; i<parties.length; i++){
+            var party = json.Parties[parties[i]].Shortcut;                          // CDU/CSU
+            var partyNum = "#parties2 .party"+i;                                    // #parties2 .party1
+            var result = json.Surveys[surveyNum].Results[i]/percentageTotal*100;    // 29
+            var seats = result*630/100;                                             // 215
                 
-                if(result !== undefined && result >= 5){ 
-                    $(partyNum).css("width",result+"%").append("<br>"+result.toFixed(0).toLocaleString('de-DE')).wrapInner("<span></span>");
-                } else {
-                    $(partyNum).hide().remove();
+            if(result !== undefined && result >= 5){ 
+                $(partyNum).css("width",result+"vw").append("<br>"+result.toFixed(1).split(".").join(",")+"<span>% / "+seats.toFixed(0)+"</span>").wrapInner("<span></span>");
+                $(partyNum).children("span").append('<br><div class="seats"></div>');
+                for(let i=1; i<seats; i++){
+                    $(partyNum).children("span").children(".seats").append("<div>&#9787;</div>");
                 }
+            } else {
+                $(partyNum).hide().remove();
             }
         }
         
+
         // footer
         var date = json.Surveys[surveyNum].Date.split("-").reverse().join(".");
         var institute = json.Institutes[+json.Surveys[surveyNum].Institute_ID].Name;
         var surveyedPersons = json.Surveys[surveyNum].Surveyed_Persons;
-        $("#footer").append("Umfrage vom "+date+" durchgeführt von "+institute+ " mit "+surveyedPersons+" Befragten.<br>Daten bereitgestellt von <a href='https://dawum.de/'>dawum.de</a> unter der Open Database License (ODbL)");
+        $("#footer").append("Umfrage vom "+date+" durchgeführt von "+institute+ " mit "+surveyedPersons+" Befragten. Daten bereitgestellt von <a href='https://dawum.de/'>dawum.de</a> unter der Open Database License (ODbL)");
         
+
     });
 
 });
