@@ -92,7 +92,7 @@ $(document).ready(function(){
         // anteil einzug in bundestag
         let percentageTotal = 0;
         const summands = Object.values(json.Surveys[surveyNum].Results);
-        summands[0] = 0; // ohne Sonstige
+        summands[0] = 0; // sontige mit 0 überschreiben
         summands.forEach(addToSum);
         function addToSum(summand) {
             if (summand >= 5) {
