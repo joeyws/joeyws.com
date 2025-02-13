@@ -27,7 +27,7 @@
     td:not(:last-child){padding-right:calc(2* var(--spacer));}
     small,i{font-style:italic;}
     a{text-decoration:none;white-space:nowrap;/* text-decoration-style:dotted; */}
-    a,.gallery div span span{transition:all .12s;box-shadow:inset 0 -.05em var(--text);}
+    a,.gallery div span span{transition:all .1s;box-shadow:inset 0 -.05em var(--text);}
     a:hover,#nav a.open,.gallery div:hover span span,.gallery div.show span span{box-shadow:inset 0 -1.25rem var(--text);text-decoration:none;/* background:var(--text); */color:var(--background);}
     /* LAYOUT */
     /* #header,.marquee3k,p,.video:after,.gallery div span span{mix-blend-mode:exclusion;} */
@@ -48,10 +48,10 @@
     .video.playing:after{display:none;}
     video{width:100%;cursor:pointer;max-width:760px;}
     /* GALLERY */
-    .gallery{justify-content:space-evenly;grid-template-columns:repeat(auto-fit,220px);gap:var(--spacer);display:grid;line-height:0;font-size:0;}
+    .gallery{justify-content:space-evenly;grid-template-columns:repeat(auto-fit,220px);display:grid;line-height:0;font-size:0;}
     .gallery div{padding-top:calc(var(--spacer)*2);cursor:zoom-in;display:flex;align-items:center;justify-content:center;flex-direction:column;}
     .gallery div img{max-height:200px;max-width:200px;}
-    .gallery div span{font-size:1rem;line-height:1.2em;min-height:calc(3*1.2rem);text-align:center;margin-top:var(--spacer);margin-top:var(--spacer);overflow:hidden;}
+    .gallery div span{width:200px;font-size:1rem;line-height:1.2em;min-height:calc(3*1.2rem);text-align:center;margin-top:var(--spacer);margin-top:var(--spacer);overflow:hidden;}
     /* SPECIAL */
     #lightbox{z-index:999997;cursor:zoom-out;position:fixed;inset:0;display:none;}
     #lightbox img{cursor:pointer;max-height:90vh;max-width:calc(100vw - 2*var(--spacer));box-sizing:border-box;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);}
@@ -93,7 +93,7 @@
     <div class="gallery">
         <img src="img/240719.jpg" alt="Pauluskirche Extension<br>Interior" />
         <img src="img/240719-3.jpg" alt="Pauluskirche Extension<br>Urban Situation" />
-        <img src="img/231005.jpg" alt="Helvetia Campus Basel<br>Facade Model<br>&copy; Herzog&nbsp;&&nbsp;de&nbsp;Meuron" />
+        <img src="img/231005.jpg" alt="Helvetia Campus Basel<br>Facade Model<br>Herzog&nbsp;&&nbsp;de&nbsp;Meuron" />
         <img src="img/220311.jpg" alt="Lightweight Pavilions" />
         <img src="img/220311-2.jpg" alt="Pneu Concept" />
         <img src="img/210211.jpg" alt="Vasikkasaari Climate Institute Helsinki" />
@@ -117,7 +117,7 @@
     <div class="gallery">
         <img src="img/241229.jpg" alt="San Pietro" />
         <img src="img/241215.jpg" alt="PR16" />
-        <img src="img/230820.jpg" alt="048 Railway Engine Depot,<br>Herzog&nbsp;&&nbsp;de&nbsp;Meuron" />
+        <img src="img/230820.jpg" alt="Railway Engine Depot,<br>Herzog&nbsp;&&nbsp;de&nbsp;Meuron" />
         <img src="img/230114.jpg" alt="Sant&rsquo; Ireneo,<br>Mauro Galantino" />
         <img src="img/230109.jpg" alt="Via Albricci,<br>Asnago Vender" />
         <img src="img/230105.jpg" alt="Garden" />
@@ -134,7 +134,7 @@
         <img src="img/190315.jpg" alt="Campfire in a Sandy Forest" />
         <img src="img/190311.jpg" alt="Salk Institute,<br>Louis Kahn" />
         <img src="img/180925.jpg" alt="Switzerland" />
-        <img src="img/180524.jpg" alt="Eel soup" />
+        <img src="img/180524.jpg" alt="Eel Soup" />
         <img src="img/180512.jpg" alt="H&#432;&#x01A1;ng S&#x01A1;n" />
         <img src="img/170617.jpg" alt="Merano" />
         <img src="img/160811.jpg" alt="J&ouml;kuls&aacute;rl&oacute;n Glacial Lake" />
@@ -183,7 +183,7 @@
         <a class="email" href="javascript:"></a>
     </p>
     <p>
-        <a href="https://www.instagram.com/joeyws/">Instagram</a>,
+        <!-- <a href="https://www.instagram.com/joeyws/">Instagram</a>, -->
         <a href="https://www.linkedin.com/in/joeyschweickhardt/">LinkedIn</a>
     </p>
     <hr>

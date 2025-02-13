@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Umfrage Bundestag</title>
+<title>Aktuelle Umfrage zum Bundestag</title>
 <meta charset="utf-8">
 <style>
     /* RESET */*{user-select:none;text-decoration-thickness:1px;text-underline-offset:2px;text-decoration-skip-ink:none;font-kerning:normal;outline:none;-webkit-tap-highlight-color:rgba(0,0,0,0)!important;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-appearance:none;border-radius:0;-webkit-border-radius:0;box-sizing:content-box;font-smoothing:antialiased;-moz-osx-font-smoothing: grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased;}
@@ -120,11 +120,12 @@ $(document).ready(function(){
         for(let i=1; i<parties.length; i++){
             var party = json.Parties[parties[i]].Shortcut;                          // CDU/CSU
             var partyNum = "#parties2 .party"+i;                                    // #parties2 .party1
-            var result = json.Surveys[surveyNum].Results[i]/percentageTotal*100;    // 29
+            var result = json.Surveys[surveyNum].Results[i];
+            var resultNew = json.Surveys[surveyNum].Results[i]/percentageTotal*100; // 29
             var seats = result*630/100;                                             // 215
                 
             if(result !== undefined && result >= 5){ 
-                $(partyNum).css("width",result+"vw").append("<br>"+result.toFixed(1).split(".").join(",")+"<span>% / "+seats.toFixed(0)+"</span>").wrapInner("<span></span>");
+                $(partyNum).css("width",resultNew+"vw").append("<br>"+resultNew.toFixed(1).split(".").join(",")+"<span>% / "+seats.toFixed(0)+"</span>").wrapInner("<span></span>");
                 $(partyNum).children("span").append('<br><div class="seats"></div>');
                 for(let i=1; i<seats; i++){
                     $(partyNum).children("span").children(".seats").append("<div>&#9679;</div>");
