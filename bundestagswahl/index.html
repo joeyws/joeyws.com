@@ -140,10 +140,10 @@ $(document).ready(function(){
         var date = json.Surveys[surveyNum].Date.split("-").reverse().join(".");
         var institute = json.Institutes[+json.Surveys[surveyNum].Institute_ID].Name;
         var surveyedPersons = json.Surveys[surveyNum].Surveyed_Persons;
-        $("#footer").html("Umfrage vom "+date+" durchgeführt von "+institute+ " mit "+surveyedPersons+" Befragten.<br>Daten bereitgestellt von <a href='https://dawum.de/'>dawum.de</a> unter der Open Database License (ODbL)");
+        $("#footer").html('Umfrage vom '+date+' durchgeführt von '+institute+' mit '+surveyedPersons+' Befragten.<br>Daten bereitgestellt von <a href="https://dawum.de/">dawum.de</a> <a href="https://opendatacommons.org/licenses/odbl/1-0/">Open Database License (ODbL)</a>');
         
 
-    }).fail(function(){$("body").html("Datenbank gerade nicht erreichbar.<br>Bitte versuchen Sie es in ein paar Stunden noch einmal.");});
+    }).fail(function(){$("body").html("Umfragen-Datenbank gerade nicht erreichbar<br>Bitte versuchen Sie es in ein paar Stunden noch einmal.");});
 
 });
 </script>
