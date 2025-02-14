@@ -143,7 +143,7 @@ $(document).ready(function(){
         $("#footer").html("Umfrage vom "+date+" durchgeführt von "+institute+ " mit "+surveyedPersons+" Befragten.<br>Daten bereitgestellt von <a href='https://dawum.de/'>dawum.de</a> unter der Open Database License (ODbL)");
         
 
-    });
+    }).fail(function(){$("body").html("Database not available.<br>Please try again in a few hours.");});
 
 });
 </script>
