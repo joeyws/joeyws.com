@@ -23,7 +23,6 @@
 </style>
 </head>
 <body>
-    <div id="footer"></div>
     <!-- <style>
     .pie {width: 500px;background:transparent;border-radius:50%;}
     .pie circle {fill:none;stroke-width:31.8309886184;}
@@ -58,6 +57,7 @@
         <div class="party8">FW</div>
         <div class="party7">AfD</div>
     </div>
+    <div id="footer"></div>
 </body>
 <script src="jquery.js"></script>
 <script>
@@ -116,6 +116,8 @@ $(document).ready(function(){
                 $(partyNum).hide().remove();
             }
         }
+
+
         // 2: sitze
         for(let i=1; i<parties.length; i++){
             var party = json.Parties[parties[i]].Shortcut;                          // CDU/CSU
@@ -144,7 +146,6 @@ $(document).ready(function(){
         
 
     }).fail(function(){$("body").html("Datenbank gerade nicht erreichbar<br>Bitte versuchen Sie es in ein paar Stunden noch einmal.");});
-
 });
 </script>
 </html>
