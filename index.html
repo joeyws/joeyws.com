@@ -10,7 +10,7 @@
 <meta charset="utf-8"><meta name="robots" content="index,nofollow,notranslate,noimageindex"><meta name="description" content="Welcome to the personal web page of Joey Schweickhardt."><meta name="keywords" content="joey,schweickhardt,stuttgart,architektur,architekt"><meta name="geo.region" content="DE-BW"><meta name="geo.placename" content="Stuttgart"><meta name="geo.position" content="48.778600;9.179746"><meta name="ICBM" content="48.778600, 9.179746"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes,shrink-to-fit=no"><meta name="format-detection" content="telephone=no">
 <style>
     @font-face{font-family:webfont;src:url("font/SourceCodePro-Regular.ttf");font-display:swap;}
-    :root{--background:#000;--text:#bbb;--spacer:8px;}
+    :root{--background:#eee;--text:#000;--spacer:8px;}
     ::-moz-selection{background:var(--text);color:var(--background);}
     ::selection{background:var(--text);color:var(--background);}
     /* RESET */*{/* user-select:none; */text-decoration-thickness:1px;text-underline-offset:2px;text-decoration-skip-ink:none;font-kerning:normal;outline:none;-webkit-tap-highlight-color:rgba(0,0,0,0)!important;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-appearance:none;border-radius:0;-webkit-border-radius:0;box-sizing:content-box;font-smoothing:antialiased;-moz-osx-font-smoothing: grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased;}
@@ -27,8 +27,8 @@
     td:not(:last-child){padding-right:calc(2* var(--spacer));}
     small,i{font-style:italic;}
     a{text-decoration:none;white-space:nowrap;/* text-decoration-style:dotted; */}
-    a,.gallery div span span{transition:all .1s;box-shadow:inset 0 -.05em var(--text);}
-    a:hover,#nav a.open,.gallery div:hover span span,.gallery div.show span span{box-shadow:inset 0 -1.25rem var(--text);text-decoration:none;/* background:var(--text); */color:var(--background);}
+    a,.gallery div span span{color:#00f;transition:all .1s;box-shadow:inset 0 -.05em #00f;}
+    a:hover,#nav a.open,.gallery div:hover span span,.gallery div.show span span{box-shadow:inset 0 -1.25rem #00f;text-decoration:none;/* background:var(--text); */color:var(--background);}
     /* LAYOUT */
     /* #header,.marquee3k,p,.video:after,.gallery div span span{mix-blend-mode:exclusion;} */
     #header{padding:var(--spacer);padding-bottom:0;gap:var(--spacer) calc(var(--spacer)*4);z-index:999996;display:flex;flex-wrap:wrap;justify-content:space-between;}
@@ -70,8 +70,8 @@
 <div id="header">
     <h1 class="loading">Joey W. Schweickhardt</h1>
     <div id="nav">
-        <a href="#/works">Works</a>&nbsp;
-        <a href="#/places">Places</a>&nbsp;
+        <a href="#/works">Works</a>,
+        <a href="#/places">Places</a>,
         <a href="#/about">About</a>
     </div>
     <div>Stuttgart<span id="weather"></span><span id="time"></span></div>
@@ -323,6 +323,15 @@ $(document).ready(function(){
         lightboxNext();
     });
 
+    // weather
+    const getWeather = async () => {
+        const request = await fetch("https://api.open-meteo.com/v1/forecast?latitude=48.7823&longitude=9.177&current_weather=true");
+        const response = await request.json();
+        $("#weather").html("&nbsp;&nbsp;" + Math.round(response.current_weather.temperature) + "&deg;C");
+    }
+    getWeather();
+    setInterval(getWeather,60000);
+
     // time
     function getTime() {
         function addZero(i) {if (i < 10) {i = "0" + i;} return i;}
@@ -338,15 +347,6 @@ $(document).ready(function(){
     }
     getTime();
     setInterval(getTime,2000);
-
-    // weather
-    const getWeather = async () => {
-        const request = await fetch("https://api.open-meteo.com/v1/forecast?latitude=48.7823&longitude=9.177&current_weather=true");
-        const response = await request.json();
-        $("#weather").html("&nbsp;&nbsp;" + Math.round(response.current_weather.temperature) + "&deg;C");
-    }
-    getWeather();
-    setInterval(getWeather,60000);
 
     // last updated
     $.getJSON("https://api.github.com/repos/"+"joeyws/joeyws.com/commits",function(json){
