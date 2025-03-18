@@ -10,12 +10,12 @@
 <meta charset="utf-8"><meta name="robots" content="index,nofollow,notranslate,noimageindex"><meta name="description" content="Welcome to the personal web page of Joey Schweickhardt."><meta name="keywords" content="joey,schweickhardt,stuttgart,architektur,architekt"><meta name="geo.region" content="DE-BW"><meta name="geo.placename" content="Stuttgart"><meta name="geo.position" content="48.778600;9.179746"><meta name="ICBM" content="48.778600, 9.179746"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes,shrink-to-fit=no"><meta name="format-detection" content="telephone=no">
 <style>
     @font-face{font-family:webfont;src:url("font/SourceCodePro-Regular.ttf");font-display:swap;}
-    :root{--background:#eee;--text:#000;--spacer:8px;}
+    :root{--background:#000;--text:#aaa;--spacer:8px;}
     ::-moz-selection{background:var(--text);color:var(--background);}
     ::selection{background:var(--text);color:var(--background);}
     /* RESET */*{/* user-select:none; */text-decoration-thickness:1px;text-underline-offset:2px;text-decoration-skip-ink:none;font-kerning:normal;outline:none;-webkit-tap-highlight-color:rgba(0,0,0,0)!important;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-appearance:none;border-radius:0;-webkit-border-radius:0;box-sizing:content-box;font-smoothing:antialiased;-moz-osx-font-smoothing: grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased;}
 	html{font-size:13px;}
-    body{color:var(--text);background-color:var(--background);/* background:url(archive/bg60.png) center center repeat fixed,url(img/other/bg_symmetryinchaos.webp) center center no-repeat fixed;background-size:auto,cover; */font:normal normal 1rem/1.2em webfont,monospace;/* background:url(img/noise.png) center center repeat fixed,url(img/bg_bw.png) center center repeat fixed;background-size:200px,cover; */}
+    body{color:var(--text);background:var(--background);/* background:url(archive/bg60.png) center center repeat fixed,url(img/other/bg_symmetryinchaos.webp) center center no-repeat fixed;background-size:auto,cover; */font:normal normal 1rem/1.2em webfont,monospace;/* background:url(img/noise.png) center center repeat fixed,url(img/bg_bw.png) center center repeat fixed;background-size:200px,cover; */}
     h1{display:inline-block;/* font:normal normal 3.6rem/1em webfont2; */}
     p,.p,ul,table,#map{margin-top:var(--spacer);}
     hr+*,img+p,.content *:first-child{margin-top:0;}
@@ -27,8 +27,8 @@
     td:not(:last-child){padding-right:calc(2* var(--spacer));}
     small,i{font-style:italic;}
     a{text-decoration:none;white-space:nowrap;/* text-decoration-style:dotted; */}
-    a,.gallery div span span{color:#00f;transition:all .1s;box-shadow:inset 0 -.05em #00f;}
-    a:hover,#nav a.open,.gallery div:hover span span,.gallery div.show span span{box-shadow:inset 0 -1.25rem #00f;text-decoration:none;/* background:var(--text); */color:var(--background);}
+    a,.gallery div span span{transition:all .1s;box-shadow:inset 0 -.05em var(--text);}
+    a:hover,#nav a.open,.gallery div:hover span span,.gallery div.show span span{box-shadow:inset 0 -1.25rem var(--text);text-decoration:none;/* background:var(--text); */color:var(--background);}
     /* LAYOUT */
     /* #header,.marquee3k,p,.video:after,.gallery div span span{mix-blend-mode:exclusion;} */
     #header{padding:var(--spacer);padding-bottom:0;gap:var(--spacer) calc(var(--spacer)*4);z-index:999996;display:flex;flex-wrap:wrap;justify-content:space-between;}
@@ -43,7 +43,7 @@
     .content:not(.show){display:none;}
     /* VIDEO */
     .video{cursor:pointer;overflow:hidden;position:relative;max-width:760px;font-size:0;line-height:0;}
-    .video:after{border:0 solid transparent;border-width:14px 32px;border-left-color:var(--text);border-right:0;line-height:0;font-size:0;content:"";display:inline-block;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);pointer-events:none;}
+    .video:after{border:0 solid transparent;border-width:8px 22px;border-left-color:var(--text);border-right:0;line-height:0;font-size:0;content:"";display:inline-block;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);pointer-events:none;}
     .video.playing{cursor:pointer;}
     .video.playing:after{display:none;}
     video{width:100%;cursor:pointer;max-width:760px;}
