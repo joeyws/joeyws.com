@@ -40,6 +40,7 @@ TIN Z	(((0 0 0, 1 0 1, 0 1 2, 0 0 0)),
 INITIALIZING
 ============================================================*/
 
+// create full window sized canvas with z-axis pointing up
 THREE.Object3D.DefaultUp = new THREE.Vector3(0,0,1);
 const scene = new THREE.Scene();
 const renderer = new THREE.WebGLRenderer({antialias:true});
@@ -47,12 +48,12 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.setClearColor(0x000000, 1);
 document.body.appendChild(renderer.domElement);
 
-// camera
+// camera and camera orbit control
 const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.01, 1000);
 camera.position.set(0, 10, 10);
 const controls = new THREE.OrbitControls(camera, renderer.domElement);
 
-// add rotated grid
+// add grid on base
 var grid = new THREE.GridHelper(10, 10, 0x333333, 0x333333);
 grid.geometry.rotateX(Math.PI / 2);
 var gridVector = new THREE.Vector3(0, 0, 1);
@@ -68,16 +69,16 @@ scene.add(axesHelper);
 GET USER INPUT AND TRANSLATE TO THREE.JS GEOMETRY FUNCTIONS
 ============================================================*/
 
-// get input
+// get user input on input change
 var userInput = document.getElementById("userinput");
 userInput.addEventListener("input", updateUserInput);
 function updateUserInput() {
 	alert("Value changed.");
 };
 
-// splitting single wkt geometries and put them into list each
+// splitting single wkt geometries and put them into list as an item each
 
-// switch case of commands with functions
+// switch case: translate wkt to functions
 /* for (String s : myStringArray) {
     switch(expression) {
 		case point:
@@ -147,10 +148,16 @@ const pg = new THREE.Mesh(pgGeometry, pgMaterial);
 scene.add(pg);
 
 // polyhedralsurface
-function drawPolyhedralsurface() {}
+function drawPolyhedralsurface() {
+	// loop, draw single polygons
+	drawPolygon();
+}
 
 // tin
-function drawTin() {}
+function drawTin() {
+	// loop, draw single polygons
+	drawPolygon();
+}
 
 
 /*============================================================
@@ -160,7 +167,7 @@ OTHER
 // center scene in viewport
 //camera.lookAt(scene.position);
 
-// on window resize
+// on window resize: resize canvas to full window size
 window.addEventListener('resize', onWindowResize);
 function onWindowResize() {
 	camera.aspect = window.innerWidth / window.innerHeight;
@@ -168,7 +175,7 @@ function onWindowResize() {
 	camera.updateProjectionMatrix();
 }
 
-// render
+// always render on (view) change
 render();
 function render() {
   requestAnimationFrame(render);
