@@ -5,9 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-:root{--background:#000;--text:#fff;}
-::-moz-selection{background:var(--text);color:var(--background);}
-::selection{background:var(--text);color:var(--background);}
+:root{--background:#000;--text:#ddd;}::-moz-selection{background:var(--text);color:var(--background);}::selection{background:var(--text);color:var(--background);}
 /* RESET */*{text-decoration-thickness:1px;text-underline-offset:2px;text-decoration-skip-ink:none;font-kerning:normal;outline:none;-webkit-tap-highlight-color:rgba(0,0,0,0)!important;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-appearance:none;border-radius:0;-webkit-border-radius:0;box-sizing:content-box;font-smoothing:antialiased;-moz-osx-font-smoothing: grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased;}
 html,body{font:normal normal 11px/1.2em monospace;background:var(--background);color:var(--text);}
 #controls{position:absolute;left:0;top:0;right:0;background:#0008;border-bottom:1px solid #fff5;}
@@ -41,22 +39,26 @@ TIN Z	(((0 0 0, 1 0 1, 0 1 2, 0 0 0)),
 /*============================================================
 INITIALIZING
 ============================================================*/
+
 THREE.Object3D.DefaultUp = new THREE.Vector3(0,0,1);
 const scene = new THREE.Scene();
 const renderer = new THREE.WebGLRenderer({antialias:true});
 renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.setClearColor(0x000000, 1);
 document.body.appendChild(renderer.domElement);
+
 // camera
 const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.01, 1000);
 camera.position.set(0, 10, 10);
 const controls = new THREE.OrbitControls(camera, renderer.domElement);
+
 // add rotated grid
 var grid = new THREE.GridHelper(10, 10, 0x333333, 0x333333);
 grid.geometry.rotateX(Math.PI / 2);
 var gridVector = new THREE.Vector3(0, 0, 1);
 grid.lookAt(gridVector);
 scene.add(grid);
+
 // add origin lines
 const axesHelper = new THREE.AxesHelper(5);
 scene.add(axesHelper);
@@ -65,12 +67,14 @@ scene.add(axesHelper);
 /*============================================================
 GET USER INPUT AND TRANSLATE TO THREE.JS GEOMETRY FUNCTIONS
 ============================================================*/
+
 // get input
 var userInput = document.getElementById("userinput");
 userInput.addEventListener("input", updateUserInput);
 function updateUserInput() {
 	alert("Value changed.");
 };
+
 // splitting single wkt geometries and put them into list each
 
 // switch case of commands with functions
@@ -98,13 +102,21 @@ function updateUserInput() {
 /*============================================================
 CREATING GEOMETRIES FUNCTIONS
 ============================================================*/
+
 // point
+function drawPoint(x, y, z) {
+
+}
 var ptGeometry = new THREE.Geometry();
 ptGeometry.vertices.push(new THREE.Vector3(1, 1, 2));
 var ptMaterial = new THREE.PointsMaterial({size:5, sizeAttenuation:false, color:0xffffff});
 var pt = new THREE.Points(ptGeometry, ptMaterial);
 scene.add(pt);
+
 // linestring
+function drawLinestring() {
+
+}
 const lnMaterial = new THREE.LineBasicMaterial({color: 0xffffff});
 const lnPoints = [];
 lnPoints.push(new THREE.Vector3(3, 1, 0));
@@ -113,7 +125,11 @@ lnPoints.push(new THREE.Vector3(4, 4, 1));
 const lnGeometry = new THREE.BufferGeometry().setFromPoints(lnPoints);
 const ln = new THREE.Line(lnGeometry, lnMaterial);
 scene.add(ln);
+
 // polygon
+function drawPolygon() {
+
+}
 const pgVertices = [
     new THREE.Vector3(0, 0, 0),
     new THREE.Vector3(2, 0, 0),
@@ -129,16 +145,21 @@ pgGeometry.setAttribute('position', new THREE.BufferAttribute(pgPositions, 3));
 const pgMaterial = new THREE.MeshBasicMaterial({color:0xffffff});
 const pg = new THREE.Mesh(pgGeometry, pgMaterial);
 scene.add(pg);
+
 // polyhedralsurface
+function drawPolyhedralsurface() {}
 
 // tin
+function drawTin() {}
 
 
 /*============================================================
 OTHER
 ============================================================*/
+
 // center scene in viewport
 //camera.lookAt(scene.position);
+
 // on window resize
 window.addEventListener('resize', onWindowResize);
 function onWindowResize() {
@@ -146,6 +167,7 @@ function onWindowResize() {
 	renderer.setSize(window.innerWidth, window.innerHeight);
 	camera.updateProjectionMatrix();
 }
+
 // render
 render();
 function render() {
