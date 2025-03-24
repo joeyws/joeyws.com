@@ -52,7 +52,7 @@ const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerH
 camera.position.set(0, 10, 10);
 const controls = new THREE.OrbitControls(camera, renderer.domElement);
 // add rotated grid
-var grid = new THREE.GridHelper(10, 10);
+var grid = new THREE.GridHelper(10, 10, 0x333333, 0x333333);
 grid.geometry.rotateX(Math.PI / 2);
 var gridVector = new THREE.Vector3(0, 0, 1);
 grid.lookAt(gridVector);
@@ -135,8 +135,10 @@ scene.add(pg);
 
 
 /*============================================================
-RENDERING
+OTHER
 ============================================================*/
+// center scene in viewport
+//camera.lookAt(scene.position);
 // on window resize
 window.addEventListener('resize', onWindowResize);
 function onWindowResize() {
