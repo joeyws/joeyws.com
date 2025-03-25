@@ -27,55 +27,59 @@ scene.add(grid);
 const axesHelper = new THREE.AxesHelper(5);
 scene.add(axesHelper);
 
+// add light
+const light = new THREE.AmbientLight(0xffffff, 1);
+scene.add(light);
+
 
 /*============================================================
 GET USER INPUT AND TRANSLATE TO THREE.JS GEOMETRY FUNCTIONS
 ============================================================*/
 
+
 // get user input on input change
 var userInput = document.getElementById("userinput");
 userInput.addEventListener("input", updateUserInput);
 function updateUserInput() {
-	alert("Value changed.");
+	clearScene(scene);
+	parseAndDraw(userInput.value);
 };
 
-// splitting single wkt geometries and put them into list as an item each
-/*
-
-POINT Z	(1 2 2)
-LINESTRING Z (3 1 0, 1 3 2, 4 4 1)
-POLYGON Z ((0 0 0, 2 0 0, 2 2 0, 0 2 0, 0 0 0))
-POLYHEDRALSURFACE Z	(((0 0 0, 0 1 0, 1 0 0, 0 0 0 )),
-	((0 0 0, 1 0 0, 0 0 1, 0 0 0 )),
-	((0 0 0, 0 0 1, 0 1 0, 0 0 0 )),
-	((1 0 0, 0 1 0, 0 0 1, 1 0 0 )))
-TIN Z (((0 0 0, 1 0 1, 0 1 2, 0 0 0)),
-	((1 0 1, 1 1 2, 0 1 2, 1 0 1)),
-	((1 0 1, 2 0 0, 1 1 2, 1 0 1)))
-
-
-// switch case: translate wkt to functions
-for (String s : myStringArray) {
-    switch(expression) {
-		case point:
-			drawPoint(x, y, z);
-			break;
-		case linestring:
-			drawLinestring();
-			break;
-		case polygon:
-			drawPolygon();
-			break;
-		case polyhedralsurface:
-			drawPolyhedralsurface();
-			break;
-		case tin:
-			drawTin();
-			break;
-	}
+// parsing
+function parseAndDraw(input) {
+	const lines = input.trim().split('\n');
+	lines.forEach(line => {
+		const match = line.match(/([A-Za-z]+ Z)\s*\((.*)\)/);
+		if (match) {
+			const type = match[1].trim();
+			const coords = match[2].trim();
+			switch (type) {
+				case 'POINT Z':
+					const pointCoords = coords;
+					drawPoint(pointCoords);
+					break;
+				case 'LINESTRING Z':
+					const lineCoords = coords.split(',').map(coord => coord.trim());
+					drawLinestring(...lineCoords);
+					break;
+				case 'POLYGON Z':
+					const polygonCoords = coords.replace(/[()]/g, '').split(',').map(coord => coord.trim());
+					drawPolygon(...polygonCoords);
+					break;
+				case 'POLYHEDRALSURFACE Z':
+					const polyhedronCoords = coords.split('),').map(mesh => mesh.trim().replace(/[()]/g, ''));
+					polyhedronCoords.forEach(mesh => drawMesh(...mesh.split(',').map(coord => coord.trim())));
+					break;
+				case 'TIN Z':
+					const tinCoords = coords.split('),').map(mesh => mesh.trim().replace(/[()]/g, ''));
+					tinCoords.forEach(mesh => drawMesh(...mesh.split(',').map(coord => coord.trim())));
+					break;
+				default:
+					alert("Unknown type");
+			}
+		}
+	});
 }
-
-*/
 
 
 /*============================================================
@@ -84,57 +88,89 @@ CREATING GEOMETRIES FUNCTIONS
 
 
 // point
-function drawPoint(x, y, z) {
-
+function drawPoint(...coordinates) {
+	if (coordinates.length !== 1) {
+	  console.error("Enter coordinates for point.");
+	  return;
+	}
+	const coords = coordinates[0].split(' ').map(Number);
+	if (coords.length !== 3) {
+		console.error("A point needs 3 coordinates.");
+		return;
+	}
+	const point = new THREE.Vector3(coords[0], coords[1], coords[2]);
+	const material = new THREE.PointsMaterial({color:0xff0000, size:.2});
+	const geometry = new THREE.BufferGeometry().setFromPoints([point]);
+	const pointObject = new THREE.Points(geometry, material);
+	scene.add(pointObject);
 }
-var ptGeometry = new THREE.Geometry();
-ptGeometry.vertices.push(new THREE.Vector3(1, 1, 2));
-var ptMaterial = new THREE.PointsMaterial({size:8, sizeAttenuation:false, color:0xffffff});
-var pt = new THREE.Points(ptGeometry, ptMaterial);
-scene.add(pt);
+drawPoint("1 2 2");
 
 // linestring
-function drawLinestring() {
-
+function drawLinestring(...points) {
+	if (points.length < 2) {
+		console.error("You need at least 2 points to draw a line.");
+		return;
+	}
+	points = points.map(p => {
+		const coords = p.split(' ').map(Number);
+		return new THREE.Vector3(coords[0], coords[1], coords[2]);
+	});
+	const geometry = new THREE.BufferGeometry().setFromPoints(points);
+	const material = new THREE.LineBasicMaterial({color: 0xffff00});
+	const line = new THREE.Line(geometry, material);
+	scene.add(line);
 }
-const lnMaterial = new THREE.LineBasicMaterial({color: 0xffffff});
-const lnPoints = [];
-lnPoints.push(new THREE.Vector3(3, 1, 0));
-lnPoints.push(new THREE.Vector3(1, 3, 2));
-lnPoints.push(new THREE.Vector3(4, 4, 1));
-const lnGeometry = new THREE.BufferGeometry().setFromPoints(lnPoints);
-const ln = new THREE.Line(lnGeometry, lnMaterial);
-scene.add(ln);
+drawLinestring("3 1 0","1 3 2","4 4 1");
 
 // polygon
-function drawPolygon() {
-
+function drawPolygon(...points) {
+	if (points.length < 3) {
+		alert("You need at least 3 points to draw a polygon.");
+		return;
+	}
+	const shape = new THREE.Shape();
+	points = points.map(p => {
+	  const coords = p.split(' ').map(Number);
+	  return new THREE.Vector3(coords[0], coords[1], coords[2]);
+	});
+	shape.moveTo(points[0].x, points[0].y);
+	for (let i = 1; i < points.length; i++) {
+	  shape.lineTo(points[i].x, points[i].y);
+	}
+	shape.closePath();
+	const geometry = new THREE.ShapeGeometry(shape);
+	const material = new THREE.MeshBasicMaterial({color:0x999999, side:THREE.DoubleSide});
+	const polygon = new THREE.Mesh(geometry, material);
+	scene.add(polygon);
 }
-const pgVertices = [
-    new THREE.Vector3(0, 0, 0),
-    new THREE.Vector3(2, 0, 0),
-    new THREE.Vector3(2, 2, 0)
-];
-const pgGeometry = new THREE.BufferGeometry();
-const pgPositions = new Float32Array([
-    pgVertices[0].x, pgVertices[0].y, pgVertices[0].z,
-    pgVertices[1].x, pgVertices[1].y, pgVertices[1].z,
-    pgVertices[2].x, pgVertices[2].y, pgVertices[2].z
-]);
-pgGeometry.setAttribute('position', new THREE.BufferAttribute(pgPositions, 3));
-const pgMaterial = new THREE.MeshBasicMaterial({color:0xffffff});
-const pg = new THREE.Mesh(pgGeometry, pgMaterial);
-scene.add(pg);
+drawPolygon("0 2 0","2 2 0","2 4 0","0 2 0");
 
-// polyhedralsurface
-function drawPolyhedralsurface() {
-	// loop, draw single polygons drawPolygon();
+// polyhedral surface / tin
+function drawMesh(...faces) {
+    const parseVertices = (str) => {
+        return str.split(',').map(v => {
+            const coords = v.trim().split(' ').map(Number);
+            return new THREE.Vector3(...coords);
+        });
+    };
+    const geometry = new THREE.Geometry();
+    let faceOffset = 0;
+    faces.forEach(face => {
+        const verticesArray = parseVertices(face);
+        geometry.vertices.push(...verticesArray);
+        for (let i = 1; i < verticesArray.length - 1; i++) {
+            geometry.faces.push(new THREE.Face3(
+                faceOffset, faceOffset + i, faceOffset + i + 1
+            ));
+        }
+        faceOffset += verticesArray.length;
+    });
+    const material = new THREE.MeshLambertMaterial({color:0xff00ff, side:THREE.DoubleSide});
+    const mesh = new THREE.Mesh(geometry, material);
+    scene.add(mesh);
 }
-
-// tin
-function drawTin() {
-	// loop, draw single polygons drawPolygon();
-}
+drawMesh("0 0 0, 2 0 0, 2 2 0, 0 0 0","0 0 0, 0 1 0, 1 0 0, 0 0 0","0 0 0, 1 0 0, 0 0 1, 0 0 0","0 0 0, 0 0 1, 0 1 0, 0 0 0","1 0 0, 0 1 0, 0 0 1, 1 0 0");
 
 
 /*============================================================
@@ -142,18 +178,54 @@ OTHER
 ============================================================*/
 
 
-// on keypress: add functions
+// keyboard control
 document.onkeypress = function (e) {
 	if (!(document.activeElement === userInput)) {
-		switch(event.keyCode) {
-			case 99: centerScene(); break; // c
+		//alert(event.which);
+		switch(event.which) {
+			case 111: goToOrigin(); break; // c
+			case 103: toggleGrid(); break; // g
 			default: return;
 		}
 	}
 };
-function centerScene() {
+// go to origin
+function goToOrigin() {
 	camera.lookAt(scene.position);
     controls.target.set(0, 0, 0);
+}
+// toggle grid/axes
+let gridVisible = true;
+function toggleGrid() {
+	gridVisible = !gridVisible; // Umkehren des Sichtbarkeitsstatus
+	grid.visible = gridVisible;
+	axesHelper.visible = gridVisible;
+}
+
+// remove all objects in scene
+function clearScene(scene) {
+    while (scene.children.length > 0) {
+        const object = scene.children[0];
+        if (object !== grid && object !== axesHelper) {
+			if (object.geometry) object.geometry.dispose();
+			if (object.material) {
+				if (Array.isArray(object.material)) {
+					object.material.forEach(mat => mat.dispose());
+				} else {
+					object.material.dispose();
+				}
+			}
+			scene.remove(object);
+		}
+        /* if (object.material) {
+            if (Array.isArray(object.material)) {
+                object.material.forEach(mat => mat.dispose());
+            } else {
+                object.material.dispose();
+            }
+        } */
+        scene.remove(object);
+    }
 }
 
 // focus textarea
