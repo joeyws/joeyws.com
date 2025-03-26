@@ -7,10 +7,10 @@
 <style>
 :root{--background:#000;--text:#ddd;}::-moz-selection{background:var(--text);color:var(--background);}::selection{background:var(--text);color:var(--background);}
 /* RESET */*{text-decoration-thickness:1px;text-underline-offset:2px;text-decoration-skip-ink:none;font-kerning:normal;outline:none;-webkit-tap-highlight-color:rgba(0,0,0,0)!important;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-appearance:none;border-radius:0;-webkit-border-radius:0;box-sizing:content-box;font-smoothing:antialiased;-moz-osx-font-smoothing: grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased;}
-html,body{font:normal normal 11px/1.2em monospace;background:var(--background);color:var(--text);}
+html,body{overflow:hidden;font:normal normal 11px/1.2em monospace;background:var(--background);color:var(--text);}
 #controls,#footer{position:fixed;left:0;right:0;background:#0008;}
-#controls{top:0;border-bottom:1px solid #fff5;}
-textarea{height:14em;width:100%;resize:vertical;min-height:1.2em;}
+#controls{top:0;border-bottom:1px solid #333;}
+textarea{width:100%;resize:vertical;min-height:1.2em;}
 #footer{bottom:0;pointer-events:none;}
 </style>
 </head>
@@ -20,20 +20,21 @@ textarea{height:14em;width:100%;resize:vertical;min-height:1.2em;}
 
 
 <div id="controls">
-    <textarea id="userinput">POINT Z		(1 2 2)
-LINESTRING Z	(3 1 0, 1 3 2, 4 4 1)
-POLYGON Z	((0 0 0, 2 0 0, 2 2 0, 0 2 0, 0 0 0))
-POLYHEDRALSURFACE Z	(((0 0 0, 0 1 0, 1 0 0, 0 0 0 )),
-			 ((0 0 0, 1 0 0, 0 0 1, 0 0 0 )),
-			 ((0 0 0, 0 0 1, 0 1 0, 0 0 0 )),
-			 ((1 0 0, 0 1 0, 0 0 1, 1 0 0 )))
-TIN Z	(((0 0 0, 1 0 1, 0 1 2, 0 0 0)),
-	 ((1 0 1, 1 1 2, 0 1 2, 1 0 1)),
-	 ((1 0 1, 2 0 0, 1 1 2, 1 0 1)))</textarea>
+    <textarea id="userinput" rows="10">POINT Z	(1 2 2)
+POINT Z	(3 2 5)
+LINESTRING Z (3 1 0, 1 3 2, 4 4 1)
+POLYGON Z ((-4 0 2, -2 0 2, -2 2 2, -4 0 2))
+POLYGON Z ((-7 0 0, -5 0 0, -5 2 0, -7 2 0, -7 0 0))
+POLYHEDRALSURFACE Z (((0 0 0, 0 1 0, 1 0 0, 0 0 0 )),
+		     ((0 0 0, 1 0 0, 0 0 1, 0 0 0 )),
+		     ((0 0 0, 0 0 1, 0 1 0, 0 0 0 )),
+		     ((1 0 0, 0 1 0, 0 0 1, 1 0 0 )))
+TIN Z (((0 0 0, 1 0 1, 0 1 2, 0 0 0)),
+       ((1 0 1, 1 1 2, 0 1 2, 1 0 1)),
+       ((1 0 1, 2 0 0, 1 1 2, 1 0 1)))</textarea>
 </div>
 <div id="footer">
-	[o] go to origin<br>
-	[g] toggle grid
+	[o] go to origin &nbsp; [c] go to geometries &nbsp; [g] toggle grid
 </div>
 
 

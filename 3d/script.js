@@ -1,5 +1,5 @@
 /*============================================================
-INITIALIZING
+INITIALIZING / BUILD SCENE BASICS
 ============================================================*/
 
 
@@ -13,11 +13,11 @@ document.body.appendChild(renderer.domElement);
 
 // camera and camera orbit control
 const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.01, 1000);
-camera.position.set(0, 10, 10);
+camera.position.set(0, 16, 16);
 const controls = new THREE.OrbitControls(camera, renderer.domElement);
 
 // add grid on base
-var grid = new THREE.GridHelper(10, 10, 0x333333, 0x333333);
+var grid = new THREE.GridHelper(20, 20, 0x333333, 0x333333);
 grid.geometry.rotateX(Math.PI / 2);
 var gridVector = new THREE.Vector3(0, 0, 1);
 grid.lookAt(gridVector);
@@ -50,12 +50,7 @@ function updateUserInput() {
 };
 updateUserInput();
 
-// parsing
-/* function parseAndDraw(input) {
-    // Füge ein Trennzeichen zwischen den Geometrietypen ein, ohne Zeilenumbrüche.
-    const inputWithDelimiters = input.trim().replace(/(\r\n|\n|\t|\r)/gm, "").replace(/(\b(?:POINT|LINESTRING|POLYGON|POLYHEDRALSURFACE|TIN) Z\b)/g,'\n$1');
-	alert(inputWithDelimiters);
-} */
+// parse: translate input to geometry drawing functions
 function parseAndDraw(input) {
     // Entfernen von Leerzeichen und Zeilenumbrüchen an den Rändern und dann in einzelne Befehle aufteilen
     const inputWithDelimiters = input.trim().replace(/(\r\n|\n|\t|\r)/gm, "").replace(/(\b(?:POINT|LINESTRING|POLYGON|POLYHEDRALSURFACE|TIN) Z\b)/g, '\n$1');
@@ -79,12 +74,12 @@ function parseAndDraw(input) {
                     drawPolygon(...polygonCoords);
 					break;
                 case 'POLYHEDRALSURFACE Z':
-					const polyhedralsurfaceMeshCoords = coords.trim().split(")), ((").map(coord => coord.trim().replace(/\(\(/g, "").replace(/\)\)/g, ""));
-					polyhedralsurfaceMeshCoords.forEach((element) => drawMesh(element));
+					const polyhedralsurfaceCoords = coords.trim().split(")), ((").map(coord => coord.trim().replace(/\(\(/g, "").replace(/\)\)/g, ""));
+					polyhedralsurfaceCoords.forEach((element) => drawMesh(element));
                     break;
                 case 'TIN Z':
-					const tinMeshCoords = coords.trim().split(")), ((").map(coord => coord.trim().replace(/\(\(/g, "").replace(/\)\)/g, ""));
-					tinMeshCoords.forEach((element) => drawMesh(element));
+					const tinCoords = coords.trim().split(")), ((").map(coord => coord.trim().replace(/\(\(/g, "").replace(/\)\)/g, ""));
+					tinCoords.forEach((element) => drawMesh(element));
                     break;
                 default:
                     alert("Unknown type");
@@ -111,7 +106,7 @@ function drawPoint(...coordinates) {
 		return;
 	}
 	const point = new THREE.Vector3(coords[0], coords[1], coords[2]);
-	const material = new THREE.PointsMaterial({color:0xff0000, size:.2});
+	const material = new THREE.PointsMaterial({color:0xff0000, size:5, sizeAttenuation:false});
 	const geometry = new THREE.BufferGeometry().setFromPoints([point]);
 	const pointObject = new THREE.Points(geometry, material);
 	group.add(pointObject);
@@ -129,7 +124,7 @@ function drawLinestring(...points) {
 		return new THREE.Vector3(coords[0], coords[1], coords[2]);
 	});
 	const geometry = new THREE.BufferGeometry().setFromPoints(points);
-	const material = new THREE.LineBasicMaterial({color: 0xffff00});
+	const material = new THREE.LineBasicMaterial({color:0xffff00});
 	const line = new THREE.Line(geometry, material);
 	group.add(line);
 }
@@ -137,29 +132,33 @@ function drawLinestring(...points) {
 
 // polygon
 function drawPolygon(...points) {
-	if (points.length < 3) {
-		alert("You need at least 3 points to draw a polygon.");
-		return;
+	const vertices = points.flatMap(point => point.split(' ').map(parseFloat));
+	const geometry = new THREE.BufferGeometry();
+	geometry.setAttribute('position', new THREE.Float32BufferAttribute(vertices, 3));
+	const indices = [];
+	for (let i = 1; i < points.length - 1; i++) {
+	    indices.push(0, i, i + 1);
 	}
-	const shape = new THREE.Shape();
-	points = points.map(p => {
-	  const coords = p.split(' ').map(Number);
-	  return new THREE.Vector3(coords[0], coords[1], coords[2]);
-	});
-	shape.moveTo(points[0].x, points[0].y);
-	for (let i = 1; i < points.length; i++) {
-	  shape.lineTo(points[i].x, points[i].y);
-	}
-	shape.closePath();
-	const geometry = new THREE.ShapeGeometry(shape);
-	const material = new THREE.MeshBasicMaterial({color:0x999999, side:THREE.DoubleSide});
-	const polygon = new THREE.Mesh(geometry, material);
-	group.add(polygon);
+	geometry.setIndex(indices);
+	const material = new THREE.MeshBasicMaterial({color:0xffffff, transparent:true, opacity:0.15, side:THREE.DoubleSide});
+	const mesh = new THREE.Mesh(geometry, material);
+	group.add(mesh);
+	const lineGeometry = new THREE.BufferGeometry();
+	const closedVertices = [...vertices, ...vertices.slice(0, 3)];
+	lineGeometry.setAttribute('position', new THREE.Float32BufferAttribute(closedVertices, 3));
+	const lineMaterial = new THREE.LineBasicMaterial({ color: 0xffffff });
+	const line = new THREE.Line(lineGeometry, lineMaterial);
+	group.add(line);
 }
 //drawPolygon("0 0 0","2 0 0","2 2 0","0 2 0","0 0 0");
 
+// polyhedral surface
+function drawPolyhedralSurface() {
+
+}
+
 // polyhedral surface / tin
-function drawMesh(...faces) {
+/* function drawMesh(...faces) {
     const parseVertices = (str) => {
         return str.split(',').map(v => {
             const coords = v.trim().split(' ').map(Number);
@@ -178,9 +177,53 @@ function drawMesh(...faces) {
         }
         faceOffset += verticesArray.length;
     });
-    const material = new THREE.MeshLambertMaterial({color:0xff00ff, side:THREE.DoubleSide});
+    const material = new THREE.MeshLambertMaterial({color:0xffffff, transparent:true, opacity:0.15, side:THREE.DoubleSide});
     const mesh = new THREE.Mesh(geometry, material);
     group.add(mesh);
+} */
+function drawMesh(...faces) {
+	const parseVertices = (str) => {
+		return str.split(',').map(v => {
+			const coords = v.trim().split(' ').map(Number);
+			return new THREE.Vector3(...coords);
+		});
+	};
+	const geometry = new THREE.Geometry();
+	let faceOffset = 0;
+	faces.forEach(face => {
+		const verticesArray = parseVertices(face);
+		geometry.vertices.push(...verticesArray);
+		if (verticesArray.length === 4) {
+			geometry.faces.push(new THREE.Face3(faceOffset, faceOffset + 1, faceOffset + 2));
+			geometry.faces.push(new THREE.Face3(faceOffset, faceOffset + 2, faceOffset + 3));
+		}
+		else if (verticesArray.length > 4) {
+			for (let i = 1; i < verticesArray.length - 1; i++) {
+				geometry.faces.push(new THREE.Face3(faceOffset, faceOffset + i, faceOffset + i + 1));
+			}
+		}
+		else {
+			geometry.faces.push(new THREE.Face3(faceOffset, faceOffset + 1, faceOffset + 2));
+		}
+		faceOffset += verticesArray.length;
+	});
+	const material = new THREE.MeshLambertMaterial({
+		color: 0xffffff,
+		transparent: true,
+		opacity: 0.15,
+		side: THREE.DoubleSide,
+	});
+	const mesh = new THREE.Mesh(geometry, material);
+	const wireframeMaterial = new THREE.MeshBasicMaterial({
+		color: 0xffffff,
+		wireframe: true,
+		transparent: true,
+		opacity: 1, // volle Opazität für den Wireframe
+		side: THREE.DoubleSide
+	});
+	const wireframeMesh = new THREE.Mesh(geometry, wireframeMaterial);
+	group.add(mesh);
+	group.add(wireframeMesh);
 }
 //drawMesh("0 0 0, 0 1 0, 1 0 0, 0 0 0","0 0 0, 1 0 0, 0 0 1, 0 0 0","0 0 0, 0 0 1, 0 1 0, 0 0 0","1 0 0, 0 1 0, 0 0 1, 1 0 0");
 
@@ -195,21 +238,36 @@ document.onkeypress = function (e) {
 	if (!(document.activeElement === userInput)) {
 		//alert(event.which);
 		switch(event.which) {
-			case 111: goToOrigin(); break; // c
+			case 99: centerObjectsInView(); break; // c
 			case 103: toggleGrid(); break; // g
+			case 111: goToOrigin(); break; // o
 			default: return;
 		}
 	}
 };
+
 // go to origin
 function goToOrigin() {
 	camera.lookAt(scene.position);
     controls.target.set(0, 0, 0);
 }
+
+// center objects
+/* function centerObjectsInView() {
+	camera.lookAt(group.position);
+    controls.target.set(group.getCenter);
+} */
+function centerObjectsInView() {
+	const groupPosition = new THREE.Vector3();
+	group.getWorldPosition(groupPosition);
+	camera.lookAt(groupPosition);
+	controls.target.copy(groupPosition);
+}
+
 // toggle grid/axes
 let gridVisible = true;
 function toggleGrid() {
-	gridVisible = !gridVisible; // Umkehren des Sichtbarkeitsstatus
+	gridVisible = !gridVisible;
 	grid.visible = gridVisible;
 	axesHelper.visible = gridVisible;
 }
@@ -237,7 +295,7 @@ function onWindowResize() {
 	camera.updateProjectionMatrix();
 }
 
-// render
+// always render
 render();
 function render() {
   requestAnimationFrame(render);
