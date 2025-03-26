@@ -31,6 +31,10 @@ scene.add(axesHelper);
 const light = new THREE.AmbientLight(0xffffff, 1);
 scene.add(light);
 
+// add group for objects
+const group = new THREE.Group();
+scene.add(group);
+
 
 /*============================================================
 GET USER INPUT AND TRANSLATE TO THREE.JS GEOMETRY FUNCTIONS
@@ -41,44 +45,52 @@ GET USER INPUT AND TRANSLATE TO THREE.JS GEOMETRY FUNCTIONS
 var userInput = document.getElementById("userinput");
 userInput.addEventListener("input", updateUserInput);
 function updateUserInput() {
-	clearScene(scene);
+	removeObjects(group);
 	parseAndDraw(userInput.value);
 };
+updateUserInput();
 
 // parsing
+/* function parseAndDraw(input) {
+    // Füge ein Trennzeichen zwischen den Geometrietypen ein, ohne Zeilenumbrüche.
+    const inputWithDelimiters = input.trim().replace(/(\r\n|\n|\t|\r)/gm, "").replace(/(\b(?:POINT|LINESTRING|POLYGON|POLYHEDRALSURFACE|TIN) Z\b)/g,'\n$1');
+	alert(inputWithDelimiters);
+} */
 function parseAndDraw(input) {
-	const lines = input.trim().split('\n');
+    // Entfernen von Leerzeichen und Zeilenumbrüchen an den Rändern und dann in einzelne Befehle aufteilen
+    const inputWithDelimiters = input.trim().replace(/(\r\n|\n|\t|\r)/gm, "").replace(/(\b(?:POINT|LINESTRING|POLYGON|POLYHEDRALSURFACE|TIN) Z\b)/g, '\n$1');
+    const lines = inputWithDelimiters.split('\n').filter(line => line.trim() !== ''); // Trennt nach den Zeilenumbrüchen und entfernt leere Zeilen
 	lines.forEach(line => {
-		const match = line.match(/([A-Za-z]+ Z)\s*\((.*)\)/);
-		if (match) {
-			const type = match[1].trim();
-			const coords = match[2].trim();
-			switch (type) {
-				case 'POINT Z':
-					const pointCoords = coords;
-					drawPoint(pointCoords);
+        const match = line.match(/([A-Za-z]+ Z)\s*\((.*)\)/);
+        if (match) {
+            const type = match[1].trim();
+            const coords = match[2].trim();
+            switch (type) {
+                case 'POINT Z':
+                    const pointCoords = coords;
+                    drawPoint(pointCoords);
 					break;
-				case 'LINESTRING Z':
-					const lineCoords = coords.split(',').map(coord => coord.trim());
-					drawLinestring(...lineCoords);
+                case 'LINESTRING Z':
+                    const linestringCoords = coords.split(',').map(coord => coord.trim());
+                    drawLinestring(...linestringCoords);
+                    break;
+                case 'POLYGON Z':
+                    const polygonCoords = coords.replace(/[()]/g, '').split(',').map(coord => coord.trim());
+                    drawPolygon(...polygonCoords);
 					break;
-				case 'POLYGON Z':
-					const polygonCoords = coords.replace(/[()]/g, '').split(',').map(coord => coord.trim());
-					drawPolygon(...polygonCoords);
-					break;
-				case 'POLYHEDRALSURFACE Z':
-					const polyhedronCoords = coords.split('),').map(mesh => mesh.trim().replace(/[()]/g, ''));
-					polyhedronCoords.forEach(mesh => drawMesh(...mesh.split(',').map(coord => coord.trim())));
-					break;
-				case 'TIN Z':
-					const tinCoords = coords.split('),').map(mesh => mesh.trim().replace(/[()]/g, ''));
-					tinCoords.forEach(mesh => drawMesh(...mesh.split(',').map(coord => coord.trim())));
-					break;
-				default:
-					alert("Unknown type");
-			}
-		}
-	});
+                case 'POLYHEDRALSURFACE Z':
+					const polyhedralsurfaceMeshCoords = coords.trim().split(")), ((").map(coord => coord.trim().replace(/\(\(/g, "").replace(/\)\)/g, ""));
+					polyhedralsurfaceMeshCoords.forEach((element) => drawMesh(element));
+                    break;
+                case 'TIN Z':
+					const tinMeshCoords = coords.trim().split(")), ((").map(coord => coord.trim().replace(/\(\(/g, "").replace(/\)\)/g, ""));
+					tinMeshCoords.forEach((element) => drawMesh(element));
+                    break;
+                default:
+                    alert("Unknown type");
+            }
+        }
+    });
 }
 
 
@@ -102,9 +114,9 @@ function drawPoint(...coordinates) {
 	const material = new THREE.PointsMaterial({color:0xff0000, size:.2});
 	const geometry = new THREE.BufferGeometry().setFromPoints([point]);
 	const pointObject = new THREE.Points(geometry, material);
-	scene.add(pointObject);
+	group.add(pointObject);
 }
-drawPoint("1 2 2");
+//drawPoint("1 2 2");
 
 // linestring
 function drawLinestring(...points) {
@@ -119,9 +131,9 @@ function drawLinestring(...points) {
 	const geometry = new THREE.BufferGeometry().setFromPoints(points);
 	const material = new THREE.LineBasicMaterial({color: 0xffff00});
 	const line = new THREE.Line(geometry, material);
-	scene.add(line);
+	group.add(line);
 }
-drawLinestring("3 1 0","1 3 2","4 4 1");
+//drawLinestring("3 1 0","1 3 2","4 4 1");
 
 // polygon
 function drawPolygon(...points) {
@@ -142,9 +154,9 @@ function drawPolygon(...points) {
 	const geometry = new THREE.ShapeGeometry(shape);
 	const material = new THREE.MeshBasicMaterial({color:0x999999, side:THREE.DoubleSide});
 	const polygon = new THREE.Mesh(geometry, material);
-	scene.add(polygon);
+	group.add(polygon);
 }
-drawPolygon("0 2 0","2 2 0","2 4 0","0 2 0");
+//drawPolygon("0 0 0","2 0 0","2 2 0","0 2 0","0 0 0");
 
 // polyhedral surface / tin
 function drawMesh(...faces) {
@@ -168,9 +180,9 @@ function drawMesh(...faces) {
     });
     const material = new THREE.MeshLambertMaterial({color:0xff00ff, side:THREE.DoubleSide});
     const mesh = new THREE.Mesh(geometry, material);
-    scene.add(mesh);
+    group.add(mesh);
 }
-drawMesh("0 0 0, 2 0 0, 2 2 0, 0 0 0","0 0 0, 0 1 0, 1 0 0, 0 0 0","0 0 0, 1 0 0, 0 0 1, 0 0 0","0 0 0, 0 0 1, 0 1 0, 0 0 0","1 0 0, 0 1 0, 0 0 1, 1 0 0");
+//drawMesh("0 0 0, 0 1 0, 1 0 0, 0 0 0","0 0 0, 1 0 0, 0 0 1, 0 0 0","0 0 0, 0 0 1, 0 1 0, 0 0 0","1 0 0, 0 1 0, 0 0 1, 1 0 0");
 
 
 /*============================================================
@@ -202,34 +214,20 @@ function toggleGrid() {
 	axesHelper.visible = gridVisible;
 }
 
-// remove all objects in scene
-function clearScene(scene) {
-    while (scene.children.length > 0) {
-        const object = scene.children[0];
-        if (object !== grid && object !== axesHelper) {
-			if (object.geometry) object.geometry.dispose();
-			if (object.material) {
-				if (Array.isArray(object.material)) {
-					object.material.forEach(mat => mat.dispose());
-				} else {
-					object.material.dispose();
-				}
-			}
-			scene.remove(object);
-		}
-        /* if (object.material) {
-            if (Array.isArray(object.material)) {
-                object.material.forEach(mat => mat.dispose());
+function removeObjects(group) {
+    while (group.children.length > 0) {
+        const child = group.children[0];
+        if (child.geometry) child.geometry.dispose();
+        if (child.material) {
+            if (Array.isArray(child.material)) {
+                child.material.forEach((mat) => mat.dispose());
             } else {
-                object.material.dispose();
+                child.material.dispose();
             }
-        } */
-        scene.remove(object);
+        }
+        group.remove(child);
     }
 }
-
-// focus textarea
-//userInput.focus();
 
 // on window resize: resize canvas to full window size
 window.addEventListener('resize', onWindowResize);
