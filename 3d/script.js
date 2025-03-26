@@ -12,12 +12,14 @@ renderer.setClearColor(0x000000, 1);
 document.body.appendChild(renderer.domElement);
 
 // camera and camera orbit control
-const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.01, 1000);
+const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.01, 100000);
 camera.position.set(0, 16, 16);
 const controls = new THREE.OrbitControls(camera, renderer.domElement);
 
 // add grid on base
-var grid = new THREE.GridHelper(20, 20, 0x333333, 0x333333);
+var grid = new THREE.GridHelper(40, 40, 0xffffff, 0xffffff);
+grid.material.opacity = 0.15;
+grid.material.transparent = true;
 grid.geometry.rotateX(Math.PI / 2);
 var gridVector = new THREE.Vector3(0, 0, 1);
 grid.lookAt(gridVector);
@@ -31,7 +33,7 @@ scene.add(axesHelper);
 const light = new THREE.AmbientLight(0xffffff, 1);
 scene.add(light);
 
-// add group for objects
+// add group for user's geometry objects
 const group = new THREE.Group();
 scene.add(group);
 
@@ -152,11 +154,6 @@ function drawPolygon(...points) {
 }
 //drawPolygon("0 0 0","2 0 0","2 2 0","0 2 0","0 0 0");
 
-// polyhedral surface
-function drawPolyhedralSurface() {
-
-}
-
 // old mesh function
 /* function drawMesh(...faces) {
     const parseVertices = (str) => {
@@ -253,12 +250,25 @@ function goToOrigin() {
 }
 
 // go to center of all objects
-function centerGeometries() {
+/* function centerGeometries() {
     const boundingBox = new THREE.Box3().setFromObject(group);
 	const center = new THREE.Vector3();
     boundingBox.getCenter(center);
 	camera.lookAt(center);
     controls.target.copy(center);
+} */
+function centerGeometries() {
+	const boundingBox = new THREE.Box3().setFromObject(group);
+	const center = new THREE.Vector3();
+	boundingBox.getCenter(center);
+	const size = new THREE.Vector3();
+	boundingBox.getSize(size);
+	const maxSize = Math.max(size.x, size.y, size.z);
+	const distance = maxSize / (2 * Math.tan(Math.PI * camera.fov / 360));
+	camera.position.copy(center).z += distance;
+	camera.position.copy(center).y += 2*distance;
+	camera.lookAt(center);
+	controls.target.copy(center);
 }
 
 // toggle grid/axes
@@ -269,6 +279,7 @@ function toggleGrid() {
 	axesHelper.visible = gridVisible;
 }
 
+// remove all objects
 function removeObjects(group) {
     while (group.children.length > 0) {
         const child = group.children[0];
