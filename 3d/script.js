@@ -157,7 +157,7 @@ function drawPolyhedralSurface() {
 
 }
 
-// polyhedral surface / tin
+// old mesh function
 /* function drawMesh(...faces) {
     const parseVertices = (str) => {
         return str.split(',').map(v => {
@@ -238,7 +238,7 @@ document.onkeypress = function (e) {
 	if (!(document.activeElement === userInput)) {
 		//alert(event.which);
 		switch(event.which) {
-			case 99: centerObjectsInView(); break; // c
+			case 99: centerGeometries(); break; // c
 			case 103: toggleGrid(); break; // g
 			case 111: goToOrigin(); break; // o
 			default: return;
@@ -252,16 +252,13 @@ function goToOrigin() {
     controls.target.set(0, 0, 0);
 }
 
-// center objects
-/* function centerObjectsInView() {
-	camera.lookAt(group.position);
-    controls.target.set(group.getCenter);
-} */
-function centerObjectsInView() {
-	const groupPosition = new THREE.Vector3();
-	group.getWorldPosition(groupPosition);
-	camera.lookAt(groupPosition);
-	controls.target.copy(groupPosition);
+// go to center of all objects
+function centerGeometries() {
+    const boundingBox = new THREE.Box3().setFromObject(group);
+	const center = new THREE.Vector3();
+    boundingBox.getCenter(center);
+	camera.lookAt(center);
+    controls.target.copy(center);
 }
 
 // toggle grid/axes
