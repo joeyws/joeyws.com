@@ -142,7 +142,7 @@ function drawPolygon(...points) {
 	    indices.push(0, i, i + 1);
 	}
 	geometry.setIndex(indices);
-	const material = new THREE.MeshBasicMaterial({color:0xffffff, transparent:true, opacity:0.15, side:THREE.DoubleSide});
+	const material = new THREE.MeshBasicMaterial({color:0xffffff, transparent:true, depthWrite:false, opacity:0.2, side:THREE.DoubleSide});
 	const mesh = new THREE.Mesh(geometry, material);
 	group.add(mesh);
 	const lineGeometry = new THREE.BufferGeometry();
@@ -174,10 +174,11 @@ function drawPolygon(...points) {
         }
         faceOffset += verticesArray.length;
     });
-    const material = new THREE.MeshLambertMaterial({color:0xffffff, transparent:true, opacity:0.15, side:THREE.DoubleSide});
+    const material = new THREE.MeshLambertMaterial({color:0xffffff, transparent:true, opacity:0.2, side:THREE.DoubleSide});
     const mesh = new THREE.Mesh(geometry, material);
     group.add(mesh);
 } */
+// newer mesh function
 function drawMesh(...faces) {
 	const parseVertices = (str) => {
 		return str.split(',').map(v => {
@@ -204,20 +205,9 @@ function drawMesh(...faces) {
 		}
 		faceOffset += verticesArray.length;
 	});
-	const material = new THREE.MeshLambertMaterial({
-		color: 0xffffff,
-		transparent: true,
-		opacity: 0.15,
-		side: THREE.DoubleSide,
-	});
+	const material = new THREE.MeshLambertMaterial({color:0xffffff,	transparent:true, opacity:0.2, side:THREE.DoubleSide, depthWrite:false});
 	const mesh = new THREE.Mesh(geometry, material);
-	const wireframeMaterial = new THREE.MeshBasicMaterial({
-		color: 0xffffff,
-		wireframe: true,
-		transparent: true,
-		opacity: 1, // volle Opazität für den Wireframe
-		side: THREE.DoubleSide
-	});
+	const wireframeMaterial = new THREE.MeshBasicMaterial({color:0xffffff, wireframe:true, side:THREE.DoubleSide});
 	const wireframeMesh = new THREE.Mesh(geometry, wireframeMaterial);
 	group.add(mesh);
 	group.add(wireframeMesh);
