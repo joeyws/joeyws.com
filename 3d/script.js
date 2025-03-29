@@ -58,9 +58,8 @@ updateUserInput();
 
 // parse: translate input to geometry drawing functions
 function parseAndDraw(input) {
-    // Entfernen von Leerzeichen und Zeilenumbrüchen an den Rändern und dann in einzelne Befehle aufteilen
     const inputWithDelimiters = input.trim().replace(/(\r\n|\n|\t|\r)/gm, "").replace(/(\b(?:POINT|LINESTRING|POLYGON|POLYHEDRALSURFACE|TIN) Z\b)/g, '\n$1');
-    const lines = inputWithDelimiters.split('\n').filter(line => line.trim() !== ''); // Trennt nach den Zeilenumbrüchen und entfernt leere Zeilen
+    const lines = inputWithDelimiters.split('\n').filter(line => line.trim() !== '');
 	lines.forEach(line => {
         const match = line.match(/([A-Za-z]+ Z)\s*\((.*)\)/);
         if (match) {
@@ -184,13 +183,6 @@ function goToOrigin() {
 }
 
 // go to center of all objects
-/* function centerGeometries() {
-    const boundingBox = new THREE.Box3().setFromObject(group);
-	const center = new THREE.Vector3();
-    boundingBox.getCenter(center);
-	camera.lookAt(center);
-    controls.target.copy(center);
-} */
 function centerGeometries() {
 	const boundingBox = new THREE.Box3().setFromObject(group);
 	const center = new THREE.Vector3();
