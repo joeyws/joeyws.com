@@ -97,7 +97,6 @@ CREATING GEOMETRIES FUNCTIONS
 
 
 // point
-// drawPoint("1 2 2");
 function drawPoint(...coordinates) {
 	if (coordinates.length !== 1) {
 	  console.error("Enter coordinates for point.");
@@ -114,10 +113,14 @@ function drawPoint(...coordinates) {
 	const pointObject = new THREE.Points(geometry, material);
 	group.add(pointObject);
 }
+//drawPoint("1 2 2");
 
 // linestring
-// drawLinestring("3 1 0","1 3 2","4 4 1");
 function drawLinestring(...points) {
+	if (points.length < 2) {
+		console.error("You need at least 2 points to draw a line.");
+		return;
+	}
 	points = points.map(p => {
 		const coords = p.split(' ').map(Number);
 		return new THREE.Vector3(coords[0], coords[1], coords[2]);
@@ -127,28 +130,109 @@ function drawLinestring(...points) {
 	const line = new THREE.Line(geometry, material);
 	group.add(line);
 }
+//drawLinestring("3 1 0","1 3 2","4 4 1");
 
 // polygon
-// drawPolygon("0 0 0, 0 1 0, 1 0 0, 0 0 0");
+/* function drawPolygon(...points) {
+	const vertices = points.flatMap(point => point.split(' ').map(parseFloat));
+	const geometry = new THREE.BufferGeometry();
+	geometry.setAttribute('position', new THREE.Float32BufferAttribute(vertices, 3));
+	const indices = [];
+	for (let i = 1; i < points.length - 1; i++) {
+	    indices.push(0, i, i + 1);
+	}
+	geometry.setIndex(indices);
+	const material = new THREE.MeshBasicMaterial({color:0xffffff, transparent:true, depthWrite:false, opacity:0.5, side:THREE.DoubleSide});
+	const mesh = new THREE.Mesh(geometry, material);
+	group.add(mesh);
+	const lineGeometry = new THREE.BufferGeometry();
+	const closedVertices = [...vertices, ...vertices.slice(0, 3)];
+	lineGeometry.setAttribute('position', new THREE.Float32BufferAttribute(closedVertices, 3));
+	const lineMaterial = new THREE.LineBasicMaterial({ color: 0xffffff });
+	const line = new THREE.Line(lineGeometry, lineMaterial);
+	group.add(line);
+} */
+//drawPolygon("0 0 0","2 0 0","2 2 0","0 2 0","0 0 0");
+
+//
 function drawPolygon(...points) {
     const vertices = points.map(point => {
         const [x, y, z] = point.split(' ').map(Number);
         return new THREE.Vector3(x, y, z);
     });
+
     const geometry = new THREE.BufferGeometry().setFromPoints(vertices);
-    const material = new THREE.LineBasicMaterial({color:0xff00ff});
+    const material = new THREE.LineBasicMaterial({ color: 0x00ff00 });
     const line = new THREE.Line(geometry, material);
     group.add(line);
 }
-
 // polyhedron/tin
-// drawMesh("0 0 0, 0 1 0, 1 0 0, 0 0 0","0 0 0, 1 0 0, 0 0 1, 0 0 0","0 0 0, 0 0 1, 0 1 0, 0 0 0","1 0 0, 0 1 0, 0 0 1, 1 0 0");
 function drawMesh(...polygons) {
 	polygons.forEach(polygon => {
 		const points = polygon.split(',').map(point => point.trim());
 		drawPolygon(...points);
 	});
 }
+//drawMesh("0 0 0, 0 1 0, 1 0 0, 0 0 0","0 0 0, 1 0 0, 0 0 1, 0 0 0","0 0 0, 0 0 1, 0 1 0, 0 0 0","1 0 0, 0 1 0, 0 0 1, 1 0 0");
+
+// old mesh function
+/* function drawMesh(...faces) {
+    const parseVertices = (str) => {
+        return str.split(',').map(v => {
+            const coords = v.trim().split(' ').map(Number);
+            return new THREE.Vector3(...coords);
+        });
+    };
+    const geometry = new THREE.Geometry();
+    let faceOffset = 0;
+    faces.forEach(face => {
+        const verticesArray = parseVertices(face);
+        geometry.vertices.push(...verticesArray);
+        for (let i = 1; i < verticesArray.length - 1; i++) {
+            geometry.faces.push(new THREE.Face3(
+                faceOffset, faceOffset + i, faceOffset + i + 1
+            ));
+        }
+        faceOffset += verticesArray.length;
+    });
+    const material = new THREE.MeshLambertMaterial({color:0xffffff, transparent:true, opacity:0.2, side:THREE.DoubleSide});
+    const mesh = new THREE.Mesh(geometry, material);
+    group.add(mesh);
+} */
+// newer mesh function
+/* function drawMesh(...faces) {
+	const parseVertices = (str) => {
+		return str.split(',').map(v => {
+			const coords = v.trim().split(' ').map(Number);
+			return new THREE.Vector3(...coords);
+		});
+	};
+	const geometry = new THREE.Geometry();
+	let faceOffset = 0;
+	faces.forEach(face => {
+		const verticesArray = parseVertices(face);
+		geometry.vertices.push(...verticesArray);
+		if (verticesArray.length === 4) {
+			geometry.faces.push(new THREE.Face3(faceOffset, faceOffset + 1, faceOffset + 2));
+			geometry.faces.push(new THREE.Face3(faceOffset, faceOffset + 2, faceOffset + 3));
+		}
+		else if (verticesArray.length > 4) {
+			for (let i = 1; i < verticesArray.length - 1; i++) {
+				geometry.faces.push(new THREE.Face3(faceOffset, faceOffset + i, faceOffset + i + 1));
+			}
+		}
+		else {
+			geometry.faces.push(new THREE.Face3(faceOffset, faceOffset + 1, faceOffset + 2));
+		}
+		faceOffset += verticesArray.length;
+	});
+	const material = new THREE.MeshLambertMaterial({color:0xffffff,	transparent:true, opacity:0.2, side:THREE.DoubleSide, depthWrite:false});
+	const mesh = new THREE.Mesh(geometry, material);
+	const wireframeMaterial = new THREE.MeshBasicMaterial({color:0xffffff, wireframe:true, side:THREE.DoubleSide});
+	const wireframeMesh = new THREE.Mesh(geometry, wireframeMaterial);
+	group.add(mesh);
+	group.add(wireframeMesh);
+} */
 
 
 /*============================================================
