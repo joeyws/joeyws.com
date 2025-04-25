@@ -105,12 +105,12 @@ GEOMETRIES FUNCTIONS
 // drawPoint("1 2 2");
 function drawPoint(...coordinates) {
 	if (coordinates.length !== 1) {
-		alert("Invalid point: Enter point coordinates.");
-		return;
+	  console.error("Enter coordinates for point.");
+	  return;
 	}
 	const coords = coordinates[0].split(' ').map(Number);
-	if (coords.length !== 3 || coords.some(isNaN)) {
-		alert("Invalid point: Enter 3 numeric coordinates.");
+	if (coords.length !== 3) {
+		console.error("A point needs 3 coordinates.");
 		return;
 	}
 	const point = new THREE.Vector3(coords[0], coords[1], coords[2]);
@@ -123,21 +123,12 @@ function drawPoint(...coordinates) {
 // linestring
 // drawLinestring("3 1 0","1 3 2","4 4 1");
 function drawLinestring(...points) {
-	if (points.length < 2) {
-		alert("Invalid LINESTRING: Enter at least 2 points.");
-		return;
-	}
-	const vectorPoints = [];
-	for (let i = 0; i < points.length; i++) {
-		const coords = points[i].split(' ').map(Number);
-		if (coords.length !== 3 || coords.some(isNaN)) {
-			alert("Invalid LINESTRING: Each point must have 3 numeric coordinates.");
-			return;
-		}
-		vectorPoints.push(new THREE.Vector3(coords[0], coords[1], coords[2]));
-	}
-	const geometry = new THREE.BufferGeometry().setFromPoints(vectorPoints);
-	const material = new THREE.LineBasicMaterial({ color: 0xffff00 });
+	points = points.map(p => {
+		const coords = p.split(' ').map(Number);
+		return new THREE.Vector3(coords[0], coords[1], coords[2]);
+	});
+	const geometry = new THREE.BufferGeometry().setFromPoints(points);
+	const material = new THREE.LineBasicMaterial({color:0xffff00});
 	const line = new THREE.Line(geometry, material);
 	group.add(line);
 }
@@ -145,24 +136,14 @@ function drawLinestring(...points) {
 // polygon
 // drawPolygon("0 0 0, 0 1 0, 1 0 0, 0 0 0");
 function drawPolygon(...points) {
-	if (points.length < 3) {
-		alert("Invalid surface (POLYGON/POLYHEDRON/TIN): Enter at least 3 points.");
-		return;
-	}
-	const vertices = [];
-	for (let i = 0; i < points.length; i++) {
-		const coords = points[i].split(' ').map(Number);
-		if (coords.length !== 3 || coords.some(isNaN)) {
-			alert("Invalid surface (POLYGON/POLYHEDRON/TIN): Each point must have 3 numeric coordinates.");
-			return;
-		}
-		vertices.push(new THREE.Vector3(coords[0], coords[1], coords[2]));
-	}
-	vertices.push(vertices[0]);
-	const geometry = new THREE.BufferGeometry().setFromPoints(vertices);
-	const material = new THREE.LineBasicMaterial({ color: 0xff00ff });
-	const line = new THREE.Line(geometry, material);
-	group.add(line);
+    const vertices = points.map(point => {
+        const [x, y, z] = point.split(' ').map(Number);
+        return new THREE.Vector3(x, y, z);
+    });
+    const geometry = new THREE.BufferGeometry().setFromPoints(vertices);
+    const material = new THREE.LineBasicMaterial({color:0xff00ff});
+    const line = new THREE.Line(geometry, material);
+    group.add(line);
 }
 
 // polyhedron/tin
