@@ -105,12 +105,12 @@ GEOMETRIES FUNCTIONS
 // drawPoint("1 2 2");
 function drawPoint(...coordinates) {
 	if (coordinates.length !== 1) {
-		alert("Invalid point: Enter point coordinates.");
+		alert("Invalid POINT: Enter point coordinates.");
 		return;
 	}
 	const coords = coordinates[0].split(' ').map(Number);
 	if (coords.length !== 3 || coords.some(isNaN)) {
-		alert("Invalid point: Enter 3 numeric coordinates.");
+		alert("Invalid POINT: Enter 3 numeric coordinates.");
 		return;
 	}
 	const point = new THREE.Vector3(coords[0], coords[1], coords[2]);
