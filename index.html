@@ -15,7 +15,7 @@
     ::selection{background:var(--text);color:var(--background);}
     /* RESET */*{/* user-select:none; */text-decoration-thickness:1px;text-underline-offset:2px;text-decoration-skip-ink:none;font-kerning:normal;outline:none;-webkit-tap-highlight-color:rgba(0,0,0,0)!important;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-appearance:none;border-radius:0;-webkit-border-radius:0;box-sizing:content-box;font-smoothing:antialiased;-moz-osx-font-smoothing: grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased;}
 	html{font-size:13px;background:var(--text);}
-    body{color:var(--text);background:var(--background);min-height:100vh;font:normal normal 1rem/1.2em webfont,monospace;letter-spacing:.01em;/* background:url(archive/bg60.png) center center repeat fixed,url(img/other/bg_symmetryinchaos.webp) center center no-repeat fixed;background-size:auto,cover; *//* background:url(img/noise.png) center center repeat fixed,url(img/bg_bw.png) center center repeat fixed;background-size:200px,cover; */}
+    body{padding:var(--spacer);color:var(--text);background:var(--background);min-height:100vh;font:normal normal 1rem/1.2em webfont,monospace;letter-spacing:.01em;/* background:url(archive/bg60.png) center center repeat fixed,url(img/other/bg_symmetryinchaos.webp) center center no-repeat fixed;background-size:auto,cover; *//* background:url(img/noise.png) center center repeat fixed,url(img/bg_bw.png) center center repeat fixed;background-size:200px,cover; */}
     h1{display:inline-block;/* font:normal normal 3.6rem/1em webfont2; */}
     p,.p,ul,table,#map{margin-top:var(--spacer);}
     hr+*,img+p,.content *:first-child{margin-top:0;}
@@ -25,23 +25,24 @@
     tr{border-top:1px solid var(--text);}
     td:first-child{white-space:nowrap;width:140px;}
     td:not(:last-child){padding-right:calc(2* var(--spacer));}
-    small,i{font-style:italic;}
+    small{font-style:italic;/* font-size:11px; */}
+    i{font-style:italic;}
     a{text-decoration:none;white-space:nowrap;/* text-decoration-style:dotted; */}
-    a,.gallery div span span{color:#00f;text-decoration:underline;/* text-decoration-style:dotted; */text-underline-offset:2px;/* color:#00f; *//* transition:all .15s;box-shadow:inset 0 -.05em #aaa; */}
-    a:hover,.gallery div:hover span span,.gallery div.show span span{text-decoration:none;/* box-shadow:inset 0 -1.25rem #ccc; *//* box-shadow:inset 0 -.05rem var(--text); */}
+    a,.gallery div span span{color:#00f;text-decoration:none;/* background:#ddf; *//* text-decoration-style:dotted; */text-underline-offset:2px;/* color:#00f; *//* transition:all .15s;box-shadow:inset 0 -.05em #aaa; */}
+    a:hover,.gallery div:hover span span,.gallery div.show span span{background:var(--text);color:var(--background);text-decoration:none;/* box-shadow:inset 0 -1.25rem #ccc; *//* box-shadow:inset 0 -.05rem var(--text); */}
     /* LAYOUT */
     /* #header,.marquee3k,p,.video:after,.gallery div span span{mix-blend-mode:exclusion;} */
-    #header{padding:var(--spacer);padding-bottom:0;gap:var(--spacer) calc(var(--spacer)*4);z-index:999996;display:flex;flex-wrap:wrap;justify-content:space-between;}
-    #header>*{display:inline-block;white-space:nowrap;}
-    .marquee3k{background:#0f0;/* mask-mode:alpha;mask-image:linear-gradient(to right, transparent, #000 25%, #000 calc(100% - 25%), transparent);position:relative; *//* width:200px;flex-grow:1; */white-space:nowrap;overflow:hidden;}
+    .marquee3k{line-height:21px;user-select:none;background:#0f0;/* mask-mode:alpha;mask-image:linear-gradient(to right, transparent, #000 25%, #000 calc(100% - 25%), transparent);position:relative; *//* width:200px;flex-grow:1; */white-space:nowrap;overflow:hidden;}
     .marquee3k .marquee span:after{margin:0 .8em;content:"";}
+    #header{user-select:none;gap:0 calc(var(--spacer)*4);z-index:999996;display:flex;flex-wrap:wrap;justify-content:space-between;}
+    #header>*{/* display:inline-block; */white-space:nowrap;background:#0f0;padding:0 6px;}
     .loading{animation:.3s blink steps(1) infinite;}
-    #nav{display:inline-block;}
-    #nav a,#nav a:hover{text-decoration:none;background:#ccc;color:var(--text);border-radius:100vmax;padding:1px 7px;box-shadow:none !important;}
+    #nav{display:inline-block;padding-left:0;padding-right:0;}
+    #nav a,#nav a:hover{text-decoration:none;color:var(--text);background:#0f0;padding:3px 6px;line-height:21px;/* border-radius:100vmax; */}
     #nav a.open{background:var(--text);color:var(--background);}
     #time-blink{animation:2s blink steps(1) infinite;}
     hr{margin:2.5rem 0;}
-    .content{width:100%;padding:var(--spacer);padding-top:0;box-sizing:border-box;}
+    .content{width:100%;box-sizing:border-box;}
     .content:not(.show){display:none;}
     /* VIDEO */
     .video{cursor:pointer;overflow:hidden;position:relative;max-width:760px;/* font-size:0;line-height:0; */}
@@ -78,9 +79,7 @@
 <div id="header">
     <h1 class="loading">Joey W. Schweickhardt</h1>
     <div id="nav">
-        <a href="#/works">Works</a>
-        <a href="#/places">Places</a>
-        <a href="#/about">About</a>
+        <a href="#/works">Works</a><a href="#/places">Places</a><a href="#/about">About</a>
     </div>
     <div>Stuttgart<span id="weather"></span><span id="time"></span></div>
 </div>
@@ -95,13 +94,14 @@
             <source src="https://www.dropbox.com/s/mmcykw5nus3m39u/LandDerEchsen1080.ogv?raw=1" type="video/ogg" />
         </video>
     </div>
-    <p style="max-width:760px;">Land der Echsen, Germany, 2021. On the forgotten grounds of a derelict freight yard, a new urban quarter is in the making. For years, non-profit collectives have occupied the old loading halls &mdash; breathing life into the decaying space. But now, as redevelopment plans advance and demolition looms, they are forced to leave. Just then, an unexpected presence appears: lizards. Silent, enigmatic, and strangely defiant, they threaten to derail the entire project.</p>
+    <p>Land der Echsen (Germany, 2021)</p>
+    <p style="max-width:760px;">On the forgotten grounds of a derelict freight yard, a new urban quarter is in the making. For years, non-profit collectives have occupied the old loading halls &mdash; breathing life into the decaying space. But now, as redevelopment plans advance and demolition looms, they are forced to leave. Just then, an unexpected presence appears: lizards. Silent, enigmatic, and strangely defiant, they threaten to derail the entire project.</p>
     <p style="max-width:760px;">Born from <i>Anti-Stuttgart &mdash; A Determinate Negation</i>, a critical design studio at <a href="https://www.igma.uni-stuttgart.de/en/institute/">IGmA</a>, the Institute for Principles of Modern Architecture at the University of Stuttgart. The film reimagines urban development as a stage for ecological and political tension. Premiered at the University of Stuttgart&#8217;s architecture <a href="https://www.k1.live/">graduate exhibition</a> and featured at the <a href="https://www.current-stuttgart.de/">CURRENT Festival</a> for Art and Urban Space.</p>
     <hr>
     <div class="gallery">
         <img src="img/250610.jpg" alt="IntCDC Urbach Tower Model with Transport Box" />
-        <img src="img/240719.jpg" alt="Pauluskirche Extension<br>Interior" />
-        <img src="img/240719-3.jpg" alt="Pauluskirche Extension<br>Urban Situation" />
+        <img src="img/240719.jpg" alt="Pauluskirche Stuttgart Extension, Interior" />
+        <img src="img/240719-3.jpg" alt="Pauluskirche Stuttgart Extension, Urban Situation" />
         <img src="img/231005.jpg" alt="Helvetia Campus Basel<br>Facade Model<br>Herzog&nbsp;&&nbsp;de&nbsp;Meuron" />
         <img src="img/220311.jpg" alt="Lightweight Pavilions" />
         <img src="img/220311-2.jpg" alt="Pneu Concept" />
@@ -198,7 +198,7 @@
     </p>
     <hr>
     <div id="map"></div>
-    <p>Image: NASA</p>
+    <p><small>Image: NASA</small></p>
     <hr>
     <p id="website">
         This webpage doesn&rsquo;t use cookies.<br>
