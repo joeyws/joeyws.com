@@ -32,18 +32,18 @@
     a,.gallery div span span{color:#00f;text-decoration:underline;text-underline-offset:2px;/* color:#00f; *//* transition:all .15s;box-shadow:inset 0 -.05em #aaa; */}
     a:hover,.gallery div:hover span span,.gallery div.show span span{background:var(--text);color:var(--background);text-decoration:none;/* box-shadow:inset 0 -1.25rem #ccc; *//* box-shadow:inset 0 -.05rem var(--text); */}
     /* LAYOUT */
-    .marquee3k{margin:calc(var(--spacer)*-1) calc(var(--spacer)*-1) var(--spacer) calc(var(--spacer)*-1);user-select:none;/* mask-mode:alpha;mask-image:linear-gradient(to right, transparent, #000 25%, #000 calc(100% - 25%), transparent);position:relative; *//* width:200px;flex-grow:1; */white-space:nowrap;overflow:hidden;}
+    .marquee3k{user-select:none;padding-bottom:var(--spacer);/* mask-mode:alpha;mask-image:linear-gradient(to right, transparent, #000 25%, #000 calc(100% - 25%), transparent);position:relative; *//* width:200px;flex-grow:1; */white-space:nowrap;overflow:hidden;}
     .marquee3k .marquee span:after{margin:0 .8em;content:"";}
-    #header,.content{padding:var(--spacer);width:100%;box-sizing:border-box;}
-    #header{/* transform:scaleY(.95); */letter-spacing:.02em;text-transform:uppercase;font-family:webfont2;font-size:24px;line-height:1.3em;font-weight:bold;mix-blend-mode:difference;color:#fff;position:sticky;top:0;left:0;right:0;user-select:none;z-index:999996;display:flex;flex-wrap:wrap;justify-content:space-between;}
+    #header,.content{padding:0 var(--spacer);width:100%;box-sizing:border-box;}
+    #header{padding-top:var(--spacer);/* mix-blend-mode:difference;color:#fff; */letter-spacing:.02em;text-transform:uppercase;font-family:webfont2;font-size:24px;line-height:1.3em;font-weight:bold;position:sticky;top:0;left:0;right:0;user-select:none;z-index:999996;display:flex;flex-wrap:wrap;justify-content:space-between;}
     #header>*{}
     h1,#nav a{margin-right:.9em;}#weather,#time{margin-left:.9em;}
     .content:not(.show){display:none;}
     #nav{display:inline-block;}
-    #nav a,#nav a:hover{color:#fff;background:transparent;text-decoration:none;}
+    #nav a,#nav a:hover{color:inherit;background:transparent;text-decoration:none;}
     #nav a.open{text-decoration:underline;text-decoration-thickness:3px;text-underline-offset:4px;}
     #time-blink{animation:2s blink steps(1) infinite;}
-    hr{margin:2.5rem 0;}
+    hr{margin:3rem 0;}
     /* VIDEO */
     .video{cursor:pointer;overflow:hidden;position:relative;max-width:760px;/* font-size:0;line-height:0; */}
     .video:after{border:0 solid transparent;border-width:8px 22px;border-left-color:var(--text);border-right:0;line-height:0;font-size:0;content:"";display:inline-block;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);pointer-events:none;}
@@ -71,7 +71,6 @@
 <body>
 
 
-<!-- <div class="marquee3k" data-speed=".7"><div class="marquee"><span>歡迎</span><span>Bienvenidos</span><span>Welcome</span><span>स्वागत हे</span><span>اهلا وسهلا</span><span>Bem-vinda</span><span>স্বাগত</span><span>добро пожаловать</span><span>ようこそ</span><span>Sugeng Rawuh</span><span>ਸਵਾਗਤ ਹੈ</span><span>Willkommen</span><span>어서 오십시오</span><span>Bienvenue</span><span>Karibu</span><span>Svāgatam</span><span>Hoşgeldiniz</span><span>خوش آمدید</span><span>வரவேற்பு</span><span>Hoan nghênh</span><span>اهلا وسهلا</span><span>Benvenuto</span></div></div> -->
 <div id="header">
     <div>
     <h1 class="loading">Joey W. Schweickhardt</h1><div id="nav"><a href="#/works">Works</a><a href="#/places">Places</a><a href="#/about">About</a></div>
@@ -247,6 +246,8 @@
     <hr>
     <iframe style="width:100%;max-width:760px;height:400px;" scrolling="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/130807438&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=false"></iframe>
 </div>
+<hr>
+<div class="marquee3k" data-speed=".7"><div class="marquee"><span>歡迎</span><span>Bienvenidos</span><span>Welcome</span><span>स्वागत हे</span><span>اهلا وسهلا</span><span>Bem-vinda</span><span>স্বাগত</span><span>добро пожаловать</span><span>ようこそ</span><span>Sugeng Rawuh</span><span>ਸਵਾਗਤ ਹੈ</span><span>Willkommen</span><span>어서 오십시오</span><span>Bienvenue</span><span>Karibu</span><span>Svāgatam</span><span>Hoşgeldiniz</span><span>خوش آمدید</span><span>வரவேற்பு</span><span>Hoan nghênh</span><span>اهلا وسهلا</span><span>Benvenuto</span></div></div>
 
 
 <script src="scripts.js"></script>
