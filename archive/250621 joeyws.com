@@ -10,7 +10,7 @@
 <meta charset="utf-8"><meta name="robots" content="index,nofollow,notranslate,noimageindex"><meta name="description" content="Welcome to the personal web page of Joey Schweickhardt."><meta name="keywords" content="joey,schweickhardt,stuttgart,architektur,architekt"><meta name="geo.region" content="DE-BW"><meta name="geo.placename" content="Stuttgart"><meta name="geo.position" content="48.778600;9.179746"><meta name="ICBM" content="48.778600, 9.179746"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes,shrink-to-fit=no"><meta name="format-detection" content="telephone=no">
 <style>
     @font-face{font-family:webfont;src:url("font/SourceCodePro-Regular.ttf");font-display:swap;}
-    :root{--background:#eee;--text:#000;--spacer:8px;}
+    :root{--background:#eee;--text:#111;--spacer:8px;}
     ::-moz-selection{background:var(--text);color:var(--background);}
     ::selection{background:var(--text);color:var(--background);}
     /* RESET */*{/* user-select:none; */text-decoration-thickness:1px;text-underline-offset:2px;text-decoration-skip-ink:none;font-kerning:normal;outline:none;-webkit-tap-highlight-color:rgba(0,0,0,0)!important;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-appearance:none;border-radius:0;-webkit-border-radius:0;box-sizing:content-box;font-smoothing:antialiased;-moz-osx-font-smoothing: grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased;}
@@ -27,13 +27,13 @@
     td:not(:last-child){padding-right:calc(2* var(--spacer));}
     small,i{font-style:italic;}
     a{text-decoration:none;white-space:nowrap;/* text-decoration-style:dotted; */}
-    a,.gallery div span span{color:#00f;text-decoration:underline;/* text-decoration-style:dotted; */text-underline-offset:2px;/* color:#00f; *//* transition:all .15s;box-shadow:inset 0 -.05em #aaa; */}
-    a:hover,.gallery div:hover span span,.gallery div.show span span{text-decoration:none;/* box-shadow:inset 0 -1.25rem #ccc; *//* box-shadow:inset 0 -.05rem var(--text); */}
+    a,.gallery div span span{text-decoration:underline;/* text-decoration-style:dotted; */text-underline-offset:2px;/* color:#00f; *//* transition:all .15s;box-shadow:inset 0 -.05em #aaa; */}
+    a:hover,.gallery div:hover span span,.gallery div.show span span{text-decoration:none;/* color:var(--background); *//* box-shadow:inset 0 -1.25rem #ccc; *//* box-shadow:inset 0 -.05rem var(--text); */}
     /* LAYOUT */
     /* #header,.marquee3k,p,.video:after,.gallery div span span{mix-blend-mode:exclusion;} */
     #header{padding:var(--spacer);padding-bottom:0;gap:var(--spacer) calc(var(--spacer)*4);z-index:999996;display:flex;flex-wrap:wrap;justify-content:space-between;}
     #header>*{display:inline-block;white-space:nowrap;}
-    .marquee3k{background:#0f0;/* mask-mode:alpha;mask-image:linear-gradient(to right, transparent, #000 25%, #000 calc(100% - 25%), transparent);position:relative; *//* width:200px;flex-grow:1; */white-space:nowrap;overflow:hidden;}
+    .marquee3k{background:#0f0;padding:0;/* mask-mode:alpha;mask-image:linear-gradient(to right, transparent, #000 25%, #000 calc(100% - 25%), transparent);position:relative; *//* width:200px;flex-grow:1; */white-space:nowrap;overflow:hidden;}
     .marquee3k .marquee span:after{margin:0 .8em;content:"";}
     .loading{animation:.3s blink steps(1) infinite;}
     #nav{display:inline-block;}
@@ -50,16 +50,11 @@
     .video.playing:after{display:none;}
     video{width:100%;cursor:pointer;max-width:760px;}
     /* GALLERY */
-    /* .gallery{justify-content:space-evenly;grid-template-columns:repeat(auto-fit,220px);display:grid;line-height:0;font-size:0;}
+    .gallery{justify-content:space-evenly;grid-template-columns:repeat(auto-fit,220px);display:grid;line-height:0;font-size:0;}
     .gallery div{padding-top:calc(var(--spacer)*2);cursor:zoom-in;display:flex;align-items:center;justify-content:center;flex-direction:column;}
-    .gallery div img{max-height:200px;transition:all .1s ease-out;}
+    .gallery div img{max-height:200px;max-width:200px;transition:all .1s ease-out;}
     .gallery div:hover img,.gallery div.show img{transform:translateY(-5px);}
-    .gallery div span{width:200px;font-size:1rem;line-height:1.2em;min-height:calc(4*1.2rem);text-align:center;margin-top:var(--spacer);overflow:hidden;} */
-    .gallery{justify-content:flex-start;display:flex;flex-wrap:wrap;line-height:0;font-size:0;}
-    .gallery div{width:200px;padding-top:calc(var(--spacer)*4);padding-right:calc(var(--spacer)*2);cursor:zoom-in;display:flex;align-items:flex-start;justify-content:flex-start;flex-direction:column;}
-    .gallery div img{max-width:100%;max-height:200px;transition:all .1s ease-out;}
-    .gallery div:hover img,.gallery div.show img{transform:translateY(-5px);}
-    .gallery div span{width:200px;font-size:1rem;line-height:1.2em;min-height:calc(1.2em*3);margin-top:var(--spacer);overflow:hidden;}
+    .gallery div span{width:200px;font-size:1rem;line-height:1.2em;min-height:calc(4*1.2rem);text-align:center;margin-top:var(--spacer);margin-top:var(--spacer);overflow:hidden;}
     /* SPECIAL */
     #lightbox{z-index:999997;cursor:zoom-out;position:fixed;inset:0;display:none;}
     #lightbox img{cursor:pointer;max-height:90vh;max-width:calc(100vw - 2*var(--spacer));box-sizing:border-box;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);}
@@ -99,7 +94,7 @@
     <p style="max-width:760px;">Born from <i>Anti-Stuttgart &mdash; A Determinate Negation</i>, a critical design studio at <a href="https://www.igma.uni-stuttgart.de/en/institute/">IGmA</a>, the Institute for Principles of Modern Architecture at the University of Stuttgart. The film reimagines urban development as a stage for ecological and political tension. Premiered at the University of Stuttgart&#8217;s architecture <a href="https://www.k1.live/">graduate exhibition</a> and featured at the <a href="https://www.current-stuttgart.de/">CURRENT Festival</a> for Art and Urban Space.</p>
     <hr>
     <div class="gallery">
-        <img src="img/250610.jpg" alt="IntCDC Urbach Tower Model with Transport Box" />
+        <img src="img/250610.jpg" alt="Urbach Tower Model with Transport Box<br>IntCDC" />
         <img src="img/240719.jpg" alt="Pauluskirche Extension<br>Interior" />
         <img src="img/240719-3.jpg" alt="Pauluskirche Extension<br>Urban Situation" />
         <img src="img/231005.jpg" alt="Helvetia Campus Basel<br>Facade Model<br>Herzog&nbsp;&&nbsp;de&nbsp;Meuron" />
@@ -176,7 +171,7 @@
     <table>
         <tr><td data-title="01.04.2023-31.03.2024">2023&ndash;2024</td><td>Deutschlandstipendium scholarship, Federal Republic of Germany/Ed. Züblin AG</td></tr>
         <tr><td data-title="01.03.2023-29.02.2024">2023&ndash;2024</td><td>Swiss-European Mobility Programme</td></tr>
-        <tr><td data-title="05.09.2022-26.01.2023,01.03.2023-02.10.2023">2022&ndash;2023</td><td>Erasmus+ schoolarship, European Union</td></tr>
+        <tr><td data-title="05.09.2022-26.01.2023,01.03.2023-02.10.2023">2022&ndash;2023</td><td>Erasmus+ schoolarship</td></tr>
         <tr><td data-title="24.06.2022-04.07.2022">2022</td><td>Graduate Design Projects Selection, Department of Architecture, University of Stuttgart</td></tr>
         <tr><td data-title="16.09.2021-17.09.2021">2021</td><td>Film screening, CURRENT Festival for Art and Urban Space</td></tr>
         <tr><td data-title="13.01.2020-25.01.2020">2020</td><td>Annual Design Projects Selection, IRGE, University of Stuttgart</td></tr>
