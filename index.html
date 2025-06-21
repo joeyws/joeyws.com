@@ -10,12 +10,13 @@
 <meta charset="utf-8"><meta name="robots" content="index,nofollow,notranslate,noimageindex"><meta name="description" content="Welcome to the personal web page of Joey Schweickhardt."><meta name="keywords" content="joey,schweickhardt,stuttgart,architektur,architekt"><meta name="geo.region" content="DE-BW"><meta name="geo.placename" content="Stuttgart"><meta name="geo.position" content="48.778600;9.179746"><meta name="ICBM" content="48.778600, 9.179746"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes,shrink-to-fit=no"><meta name="format-detection" content="telephone=no">
 <style>
     @font-face{font-family:webfont;src:url("font/SourceCodePro-Regular.ttf");font-display:swap;}
+    @font-face{font-family:webfont2;src:url("font/gnu-free-font-FreeSansBold.ttf");font-display:swap;}
     :root{--background:#eee;--text:#000;--spacer:8px;}
     ::-moz-selection{background:var(--text);color:var(--background);}
     ::selection{background:var(--text);color:var(--background);}
     /* RESET */*{/* user-select:none; */text-decoration-thickness:1px;text-underline-offset:2px;text-decoration-skip-ink:none;font-kerning:normal;outline:none;-webkit-tap-highlight-color:rgba(0,0,0,0)!important;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-appearance:none;border-radius:0;-webkit-border-radius:0;box-sizing:content-box;font-smoothing:antialiased;-moz-osx-font-smoothing: grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased;}
-	html{font-size:13px;background:var(--text);}
-    body{padding:var(--spacer);color:var(--text);background:var(--background);min-height:100vh;font:normal normal 1rem/1.2em webfont,monospace;letter-spacing:.01em;/* background:url(archive/bg60.png) center center repeat fixed,url(img/other/bg_symmetryinchaos.webp) center center no-repeat fixed;background-size:auto,cover; *//* background:url(img/noise.png) center center repeat fixed,url(img/bg_bw.png) center center repeat fixed;background-size:200px,cover; */}
+	html{font-size:13px;background:var(--background);}
+    body{color:var(--text);background:var(--background);min-height:100vh;font:normal normal 1rem/1.2em webfont,monospace;letter-spacing:.01em;/* background:url(archive/bg60.png) center center repeat fixed,url(img/other/bg_symmetryinchaos.webp) center center no-repeat fixed;background-size:auto,cover; *//* background:url(img/noise.png) center center repeat fixed,url(img/bg_bw.png) center center repeat fixed;background-size:200px,cover; */}
     h1{display:inline-block;/* font:normal normal 3.6rem/1em webfont2; */}
     p,.p,ul,table,#map{margin-top:var(--spacer);}
     hr+*,img+p,.content *:first-child{margin-top:0;}
@@ -31,19 +32,18 @@
     a,.gallery div span span{color:#00f;text-decoration:underline;text-underline-offset:2px;/* color:#00f; *//* transition:all .15s;box-shadow:inset 0 -.05em #aaa; */}
     a:hover,.gallery div:hover span span,.gallery div.show span span{background:var(--text);color:var(--background);text-decoration:none;/* box-shadow:inset 0 -1.25rem #ccc; *//* box-shadow:inset 0 -.05rem var(--text); */}
     /* LAYOUT */
-    /* #header,.marquee3k,p,.video:after,.gallery div span span{mix-blend-mode:exclusion;} */
-    .marquee3k{margin:calc(var(--spacer)*-1) calc(var(--spacer)*-1) var(--spacer) calc(var(--spacer)*-1);user-select:none;background:#0f0;/* mask-mode:alpha;mask-image:linear-gradient(to right, transparent, #000 25%, #000 calc(100% - 25%), transparent);position:relative; *//* width:200px;flex-grow:1; */white-space:nowrap;overflow:hidden;}
+    .marquee3k{margin:calc(var(--spacer)*-1) calc(var(--spacer)*-1) var(--spacer) calc(var(--spacer)*-1);user-select:none;/* mask-mode:alpha;mask-image:linear-gradient(to right, transparent, #000 25%, #000 calc(100% - 25%), transparent);position:relative; *//* width:200px;flex-grow:1; */white-space:nowrap;overflow:hidden;}
     .marquee3k .marquee span:after{margin:0 .8em;content:"";}
-    #header{user-select:none;gap:calc(var(--spacer)*1) calc(var(--spacer)*4);z-index:999996;display:flex;flex-wrap:wrap;justify-content:space-between;}
-    #header>*{/* display:inline-block; */white-space:nowrap;}
-    .loading{animation:.3s blink steps(1) infinite;}
-    #nav{display:inline-block;padding-left:0;padding-right:0;}
-    #nav a,#nav a:hover{text-decoration:none;background:#ddd;color:var(--text);padding:1px 6px;border-radius:100vmax;}
-    #nav a.open{background:var(--text);color:var(--background);}
+    #header,.content{padding:var(--spacer);width:100%;box-sizing:border-box;}
+    #header{text-transform:uppercase;font-family:webfont2;font-size:24px;line-height:1.3em;font-weight:bold;mix-blend-mode:difference;color:#fff;position:sticky;top:0;left:0;right:0;user-select:none;z-index:999996;display:flex;flex-wrap:wrap;justify-content:space-between;}
+    #header>*{}
+    h1,#nav a{margin-right:.9em;}#weather,#time{margin-left:.9em;}
+    .content:not(.show){display:none;}
+    #nav{display:inline-block;}
+    #nav a,#nav a:hover{color:#fff;background:transparent;text-decoration:none;}
+    #nav a.open{text-decoration:underline;text-decoration-thickness:3px;text-underline-offset:4px;}
     #time-blink{animation:2s blink steps(1) infinite;}
     hr{margin:2.5rem 0;}
-    .content{width:100%;box-sizing:border-box;}
-    .content:not(.show){display:none;}
     /* VIDEO */
     .video{cursor:pointer;overflow:hidden;position:relative;max-width:760px;/* font-size:0;line-height:0; */}
     .video:after{border:0 solid transparent;border-width:8px 22px;border-left-color:var(--text);border-right:0;line-height:0;font-size:0;content:"";display:inline-block;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);pointer-events:none;}
@@ -51,17 +51,13 @@
     .video.playing:after{display:none;}
     video{width:100%;cursor:pointer;max-width:760px;}
     /* GALLERY */
-    /* .gallery{justify-content:space-evenly;grid-template-columns:repeat(auto-fit,220px);display:grid;line-height:0;font-size:0;}
-    .gallery div{padding-top:calc(var(--spacer)*2);cursor:zoom-in;display:flex;align-items:center;justify-content:center;flex-direction:column;}
-    .gallery div img{max-height:200px;transition:all .1s ease-out;}
-    .gallery div:hover img,.gallery div.show img{transform:translateY(-5px);}
-    .gallery div span{width:200px;font-size:1rem;line-height:1.2em;min-height:calc(4*1.2rem);text-align:center;margin-top:var(--spacer);overflow:hidden;} */
     .gallery{justify-content:flex-start;display:flex;flex-wrap:wrap;line-height:0;font-size:0;}
     .gallery div{width:200px;padding-top:calc(var(--spacer)*4);padding-right:calc(var(--spacer)*2);cursor:zoom-in;display:flex;align-items:flex-start;justify-content:flex-start;flex-direction:column;}
     .gallery div img{max-width:100%;max-height:200px;transition:all .1s ease-out;}
     .gallery div:hover img,.gallery div.show img{transform:translateY(-5px);}
     .gallery div span{width:200px;font-size:1rem;line-height:1.2em;min-height:calc(1.2em*3);margin-top:var(--spacer);overflow:hidden;}
     /* SPECIAL */
+    .loading{animation:.3s blink steps(1) infinite;}
     #lightbox{z-index:999997;cursor:zoom-out;position:fixed;inset:0;display:none;}
     #lightbox img{cursor:pointer;max-height:90vh;max-width:calc(100vw - 2*var(--spacer));box-sizing:border-box;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);}
     #map{width:760px;max-width:100%;aspect-ratio:1500/750;background:center center url(img/other/world.gif) no-repeat scroll;position:relative;background-size:contain;}
@@ -75,15 +71,12 @@
 <body>
 
 
-<div class="marquee3k" data-speed=".7"><div class="marquee"><span>歡迎</span><span>Bienvenidos</span><span>Welcome</span><span>स्वागत हे</span><span>اهلا وسهلا</span><span>Bem-vinda</span><span>স্বাগত</span><span>добро пожаловать</span><span>ようこそ</span><span>Sugeng Rawuh</span><span>ਸਵਾਗਤ ਹੈ</span><span>Willkommen</span><span>어서 오십시오</span><span>Bienvenue</span><span>Karibu</span><span>Svāgatam</span><span>Hoşgeldiniz</span><span>خوش آمدید</span><span>வரவேற்பு</span><span>Hoan nghênh</span><span>اهلا وسهلا</span><span>Benvenuto</span></div></div>    
+<!-- <div class="marquee3k" data-speed=".7"><div class="marquee"><span>歡迎</span><span>Bienvenidos</span><span>Welcome</span><span>स्वागत हे</span><span>اهلا وسهلا</span><span>Bem-vinda</span><span>স্বাগত</span><span>добро пожаловать</span><span>ようこそ</span><span>Sugeng Rawuh</span><span>ਸਵਾਗਤ ਹੈ</span><span>Willkommen</span><span>어서 오십시오</span><span>Bienvenue</span><span>Karibu</span><span>Svāgatam</span><span>Hoşgeldiniz</span><span>خوش آمدید</span><span>வரவேற்பு</span><span>Hoan nghênh</span><span>اهلا وسهلا</span><span>Benvenuto</span></div></div> -->
 <div id="header">
-    <h1 class="loading">Joey W. Schweickhardt</h1>
-    <div id="nav">
-        <a href="#/works">Works</a>
-        <a href="#/places">Places</a>
-        <a href="#/about">About</a>
+    <div>
+    <h1 class="loading">Joey W. Schweickhardt</h1><div id="nav"><a href="#/works">Works</a><a href="#/places">Places</a><a href="#/about">About</a></div>
     </div>
-    <div>Stuttgart<span id="weather"></span><span id="time"></span></div>
+    <div>Stuttgart<!-- <span style="outline:1px solid #fff;background:transparent;text-decoration:none;padding:0 .6em;border-radius:100px;">D</span> --><span id="weather"></span><span id="time"></span></div>
 </div>
 <hr>
 
@@ -104,7 +97,7 @@
         <img src="img/250610.jpg" alt="IntCDC Urbach Tower Model with Transport Box" />
         <img src="img/240719.jpg" alt="Pauluskirche Stuttgart Extension, Interior" />
         <img src="img/240719-3.jpg" alt="Pauluskirche Stuttgart Extension, Urban Situation" />
-        <img src="img/231005.jpg" alt="Helvetia Campus Basel<br>Facade Model<br>Herzog&nbsp;&&nbsp;de&nbsp;Meuron" />
+        <img src="img/231005.jpg" alt="Helvetia Campus Basel Facade Model, Herzog&nbsp;&&nbsp;de&nbsp;Meuron" />
         <img src="img/220311.jpg" alt="Lightweight Pavilions" />
         <img src="img/220311-2.jpg" alt="Pneu Concept" />
         <img src="img/210211.jpg" alt="Vasikkasaari Climate Institute Helsinki" />
@@ -339,7 +332,7 @@ $(document).ready(function(){
     const getWeather = async () => {
         const request = await fetch("https://api.open-meteo.com/v1/forecast?latitude=48.7823&longitude=9.177&current_weather=true");
         const response = await request.json();
-        $("#weather").html("&nbsp;&nbsp;" + Math.round(response.current_weather.temperature) + "&deg;C");
+        $("#weather").html("" + Math.round(response.current_weather.temperature) + "&deg;C");
     }
     getWeather();
     setInterval(getWeather,60000);
@@ -355,7 +348,7 @@ $(document).ready(function(){
         h = h ? h : 12;
         var min = addZero(time.getMinutes());
         var s = addZero(time.getSeconds());
-        $("#time").html("&nbsp;&nbsp;" + h + "<span id='time-blink'>:</span>" + min);
+        $("#time").html("" + h + "<span id='time-blink'>:</span>" + min);
     }
     getTime();
     setInterval(getTime,2000);
