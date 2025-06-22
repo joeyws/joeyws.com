@@ -11,7 +11,7 @@
 <style>
     @font-face{font-family:webfont;src:url("font/SourceCodePro-Regular.ttf");font-display:swap;}
     @font-face{font-family:webfont2;src:url("font/NimbusSanL-Bol.otf");font-display:swap;}
-    :root{--background:#eee;--text:#000;--spacer:8px;}
+    :root{--background:#fff;--text:#000;--spacer:8px;}
     ::-moz-selection{background:var(--text);color:var(--background);}
     ::selection{background:var(--text);color:var(--background);}
     /* RESET */*{/* user-select:none; */text-decoration-thickness:1px;text-underline-offset:2px;text-decoration-skip-ink:none;font-kerning:normal;outline:none;-webkit-tap-highlight-color:rgba(0,0,0,0)!important;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-appearance:none;border-radius:0;-webkit-border-radius:0;box-sizing:content-box;font-smoothing:antialiased;-moz-osx-font-smoothing: grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased;}
@@ -32,8 +32,7 @@
     a,.gallery div span span{text-decoration:underline;text-underline-offset:2px;/* box-shadow:inset 0 -.05em #aaa; */}
     a:hover,.gallery div:hover span span,.gallery div.show span span{text-decoration:none;/* box-shadow:inset 0 -1.25rem #ccc; */}
     /* LAYOUT */
-    /* .js-marquee{border:1px dotted var(--text);border-left:0;border-right:0;} */
-    .marquee{overflow:hidden;max-width:100%;margin-top:6px;}
+    .marquee{overflow:hidden;max-width:100%;margin-top:var(--spacer);}
     .marquee span:after{margin:0 1em;content:"";}
     #header,.content{padding:var(--spacer);width:100%;box-sizing:border-box;}
     #header{padding-bottom:0;font-size:22px;text-transform:uppercase;letter-spacing:.01em;font-family:webfont2,sans-serif;line-height:1.3em;font-weight:bold;user-select:none;z-index:999996;display:flex;flex-wrap:wrap;justify-content:space-between;}
@@ -52,8 +51,8 @@
     .video.playing:after{display:none;}
     video{width:100%;cursor:pointer;max-width:760px;}
     /* GALLERY */
-    .gallery{justify-content:flex-start;display:flex;gap:calc(var(--spacer)*4) 0;flex-wrap:wrap;line-height:0;font-size:0;}
-    .gallery div{width:200px;padding-right:calc(var(--spacer)*2);cursor:zoom-in;display:flex;align-items:flex-start;justify-content:flex-start;flex-direction:column;}
+    .gallery{justify-content:flex-start;display:flex;flex-wrap:wrap;line-height:0;font-size:0;}
+    .gallery div{width:200px;padding-bottom:calc(var(--spacer)*4);padding-right:calc(var(--spacer)*2);cursor:zoom-in;display:flex;align-items:flex-start;justify-content:flex-start;flex-direction:column;}
     .gallery div img{max-width:100%;max-height:200px;transition:all .1s ease-out;}
     .gallery div:hover img,.gallery div.show img{transform:translateY(-5px);}
     .gallery div span{width:200px;font-size:1rem;line-height:1.2em;min-height:calc(1.2em*3);margin-top:var(--spacer);overflow:hidden;}
@@ -71,13 +70,13 @@
 <body>
 
 
+<div class="marquee"><span>歡迎</span><span>Bienvenidos</span><span>Welcome</span><span>स्वागत हे</span><span>اهلا وسهلا</span><span>Bem-vinda</span><span>স্বাগত</span><span>добро пожаловать</span><span>ようこそ</span><span>Sugeng Rawuh</span><span>ਸਵਾਗਤ ਹੈ</span><span>Willkommen</span><span>어서 오십시오</span><span>Bienvenue</span><span>Karibu</span><span>Svāgatam</span><span>Hoşgeldiniz</span><span>خوش آمدید</span><span>வரவேற்பு</span><span>Hoan nghênh</span><span>اهلا وسهلا</span><span>Benvenuto</span></div>
 <div id="header">
     <div>
     <h1 class="loading">Joey W. Schweickhardt</h1><div id="nav"><a href="#/works">Works</a><a href="#/places">Places</a><a href="#/about">About</a></div>
     </div>
     <div>Stuttgart<!-- <span style="outline:1px solid #fff;background:transparent;text-decoration:none;padding:0 .6em;border-radius:100px;">D</span> --><span id="weather"></span><span id="time"></span></div>
 </div>
-<div class="marquee"><span>歡迎</span><span>Bienvenidos</span><span>Welcome</span><span>स्वागत हे</span><span>اهلا وسهلا</span><span>Bem-vinda</span><span>স্বাগত</span><span>добро пожаловать</span><span>ようこそ</span><span>Sugeng Rawuh</span><span>ਸਵਾਗਤ ਹੈ</span><span>Willkommen</span><span>어서 오십시오</span><span>Bienvenue</span><span>Karibu</span><span>Svāgatam</span><span>Hoşgeldiniz</span><span>خوش آمدید</span><span>வரவேற்பு</span><span>Hoan nghênh</span><span>اهلا وسهلا</span><span>Benvenuto</span></div>
 <hr>
 
 
