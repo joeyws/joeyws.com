@@ -26,7 +26,7 @@
     tr{border-top:1px solid var(--text);}
     td:first-child{white-space:nowrap;width:140px;}
     td:not(:last-child){padding-right:calc(2* var(--spacer));}
-    small{/* color:#aaa; *//* font-style:italic; */}
+    small{}
     i{font-style:italic;}
     a{text-decoration:none;white-space:nowrap;}
     a,.gallery div span span{text-decoration:underline;text-underline-offset:2px;/* box-shadow:inset 0 -.05em #aaa; */}
@@ -39,8 +39,7 @@
     h1,#nav a{margin-right:1em;}#weather,#time{margin-left:1em;}
     .content{position:absolute;display:none;padding-top:0;}
     #nav{display:inline-block;}
-    #nav a,#nav a:hover{opacity:.2;transition:opacity .3s;color:inherit;background:transparent;text-decoration:none;}
-    #nav a:hover{opacity:.4;}
+    #nav a,#nav a:hover{opacity:.2;color:inherit;background:transparent;text-decoration:none;}
     #nav a.open{opacity:1;text-decoration-thickness:3px;text-underline-offset:3px;}
     #time-blink{animation:2s blink steps(1) infinite;}
     hr{margin:3rem 0;}
@@ -88,9 +87,8 @@
             <source src="https://www.dropbox.com/s/mmcykw5nus3m39u/LandDerEchsen1080.ogv?raw=1" type="video/ogg" />
         </video>
     </div>
-    <p><small>Land der Echsen (Germany, 2021)</small></p>
-    <p style="max-width:760px;">On the forgotten grounds of a derelict freight yard, a new urban quarter is in the making. For years, non-profit collectives have occupied the old loading halls &mdash; breathing life into the decaying space. But now, as redevelopment plans advance and demolition looms, they are forced to leave. Just then, an unexpected presence appears: lizards. Silent, enigmatic, and strangely defiant, they threaten to derail the entire project.</p>
-    <p style="max-width:760px;">Born from <i>Anti-Stuttgart &mdash; A Determinate Negation</i>, a critical design studio at <a href="https://www.igma.uni-stuttgart.de/en/institute/">IGmA</a>, the Institute for Principles of Modern Architecture at the University of Stuttgart. The film reimagines urban development as a stage for ecological and political tension. Premiered at the University of Stuttgart&#8217;s architecture <a href="https://www.k1.live/">graduate exhibition</a> and featured at the <a href="https://www.current-stuttgart.de/">CURRENT Festival</a> for Art and Urban Space.</p>
+    <p style="max-width:760px;">Land der Echsen (Germany, 2021). On the forgotten grounds of a derelict freight yard, a new urban quarter is in the making. For years, non-profit collectives have occupied the old loading halls &mdash; breathing life into the decaying space. But now, as redevelopment plans advance and demolition looms, they are forced to leave. Just then, an unexpected presence appears: lizards. Silent, enigmatic, and strangely defiant, they threaten to derail the entire project.</p>
+    <p style="max-width:760px;">Born from <i>Anti-Stuttgart &mdash; A Determinate Negation</i>, a critical design studio at <a href="https://www.igma.uni-stuttgart.de/en/institute/">IGmA</a>, the film reimagines urban development as a stage for ecological and political tension. Premiered at the University of Stuttgart&#8217;s architecture <a href="https://www.k1.live/">graduate exhibition</a> and featured at the <a href="https://www.current-stuttgart.de/">CURRENT Festival</a> for Art and Urban Space.</p>
     <hr>
     <div class="gallery">
         <img src="img/250610.jpg" alt="IntCDC Urbach Tower Model with Transport Box" />
@@ -270,7 +268,7 @@ $(document).ready(function(){
 
     // nav
     function refreshHash() {
-        var duration = 350;
+        var duration = 200;
         var hash = window.location.hash;
         if ($("a[href='"+hash+"']").length == 0) {hash = $("#header a:first").attr("href");}
         $("a").removeClass("open");
