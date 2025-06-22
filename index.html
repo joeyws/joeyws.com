@@ -11,7 +11,7 @@
 <style>
     @font-face{font-family:webfont;src:url("font/SourceCodePro-Regular.ttf");font-display:swap;}
     @font-face{font-family:webfont2;src:url("font/NimbusSanL-Bol.otf");font-display:swap;}
-    :root{--background:#fff;--text:#000;--spacer:8px;}
+    :root{--background:#eee;--text:#000;--spacer:8px;}
     ::-moz-selection{background:var(--text);color:var(--background);}
     ::selection{background:var(--text);color:var(--background);}
     /* RESET */*{/* user-select:none; */text-decoration-thickness:1px;text-underline-offset:2px;text-decoration-skip-ink:none;font-kerning:normal;outline:none;-webkit-tap-highlight-color:rgba(0,0,0,0)!important;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-appearance:none;border-radius:0;-webkit-border-radius:0;box-sizing:content-box;font-smoothing:antialiased;-moz-osx-font-smoothing: grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased;}
@@ -26,7 +26,7 @@
     tr{border-top:1px solid var(--text);}
     td:first-child{white-space:nowrap;width:140px;}
     td:not(:last-child){padding-right:calc(2* var(--spacer));}
-    small{opacity:.3;/* font-style:italic; */}
+    small{color:#aaa;/* font-style:italic; */}
     i{font-style:italic;}
     a{text-decoration:none;white-space:nowrap;}
     a,.gallery div span span{text-decoration:underline;text-underline-offset:2px;/* box-shadow:inset 0 -.05em #aaa; */}
@@ -88,7 +88,7 @@
             <source src="https://www.dropbox.com/s/mmcykw5nus3m39u/LandDerEchsen1080.ogv?raw=1" type="video/ogg" />
         </video>
     </div>
-    <p>Land der Echsen (Germany, 2021)</p>
+    <p><small>Land der Echsen (Germany, 2021)</small></p>
     <p style="max-width:760px;">On the forgotten grounds of a derelict freight yard, a new urban quarter is in the making. For years, non-profit collectives have occupied the old loading halls &mdash; breathing life into the decaying space. But now, as redevelopment plans advance and demolition looms, they are forced to leave. Just then, an unexpected presence appears: lizards. Silent, enigmatic, and strangely defiant, they threaten to derail the entire project.</p>
     <p style="max-width:760px;">Born from <i>Anti-Stuttgart &mdash; A Determinate Negation</i>, a critical design studio at <a href="https://www.igma.uni-stuttgart.de/en/institute/">IGmA</a>, the Institute for Principles of Modern Architecture at the University of Stuttgart. The film reimagines urban development as a stage for ecological and political tension. Premiered at the University of Stuttgart&#8217;s architecture <a href="https://www.k1.live/">graduate exhibition</a> and featured at the <a href="https://www.current-stuttgart.de/">CURRENT Festival</a> for Art and Urban Space.</p>
     <hr>
@@ -270,11 +270,12 @@ $(document).ready(function(){
 
     // nav
     function refreshHash() {
+        var duration = 350;
         var hash = window.location.hash;
         if ($("a[href='"+hash+"']").length == 0) {hash = $("#header a:first").attr("href");}
         $("a").removeClass("open");
         $("a[href='"+hash+"']").addClass("open");
-        $("#" + hash.slice(2)).fadeIn(300).siblings(".content").fadeOut(300);
+        $("#" + hash.slice(2)).fadeIn(duration).siblings(".content").fadeOut(duration);
         //window.scrollTo(0,0);
         return false;
     }
