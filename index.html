@@ -11,7 +11,7 @@
 <style>
     @font-face{font-family:webfont;src:url("font/SourceCodePro-Regular.ttf");font-display:swap;}
     @font-face{font-family:webfont2;src:url("font/NimbusSanL-Bol.otf");font-display:swap;}
-    :root{--background:#eee;--text:#000;--spacer:8px;}
+    :root{--background:#fff;--text:#000;--spacer:8px;}
     ::-moz-selection{background:var(--text);color:var(--background);}
     ::selection{background:var(--text);color:var(--background);}
     /* RESET */*{/* user-select:none; */text-decoration-thickness:1px;text-underline-offset:2px;text-decoration-skip-ink:none;font-kerning:normal;outline:none;-webkit-tap-highlight-color:rgba(0,0,0,0)!important;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-appearance:none;border-radius:0;-webkit-border-radius:0;box-sizing:content-box;font-smoothing:antialiased;-moz-osx-font-smoothing: grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased;}
@@ -33,14 +33,14 @@
     a:hover,.gallery div:hover span span,.gallery div.show span span{text-decoration:none;/* box-shadow:inset 0 -1.25rem #ccc; */}
     /* LAYOUT */
     .marquee{overflow:hidden;max-width:100%;margin-top:var(--spacer);}
-    .marquee span:after{margin:0 1em;content:"";}
+    .marquee span:after{padding-right:1em;content:"";}
     #header,.content{padding:var(--spacer);width:100%;box-sizing:border-box;}
-    #header{padding-bottom:0;font-size:22px;text-transform:uppercase;letter-spacing:.01em;font-family:webfont2,sans-serif;line-height:1.3em;font-weight:bold;user-select:none;z-index:999996;display:flex;flex-wrap:wrap;justify-content:space-between;}
+    #header{position:sticky;top:0;left:0;right:0;mix-blend-mode:difference;color:#fff;padding-bottom:0;font-size:22px;text-transform:uppercase;letter-spacing:.01em;font-family:webfont2,sans-serif;line-height:1.3em;font-weight:bold;user-select:none;z-index:999996;display:flex;flex-wrap:wrap;justify-content:space-between;}
     h1,#nav a{margin-right:1em;}#weather,#time{margin-left:1em;}
-    .content{position:absolute;display:none;padding-top:0;}
+    .content{display:none;padding-top:0;}
     #nav{display:inline-block;}
-    #nav a,#nav a:hover{opacity:.2;color:inherit;background:transparent;text-decoration:none;}
-    #nav a.open{opacity:1;text-decoration-thickness:3px;text-underline-offset:3px;}
+    #nav a,#nav a:hover{color:inherit;background:transparent;text-decoration:none;}
+    #nav a.open{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px;}
     #time-blink{animation:2s blink steps(1) infinite;}
     hr{margin:3rem 0;}
     /* VIDEO */
@@ -268,13 +268,12 @@ $(document).ready(function(){
 
     // nav
     function refreshHash() {
-        var duration = 200;
         var hash = window.location.hash;
         if ($("a[href='"+hash+"']").length == 0) {hash = $("#header a:first").attr("href");}
         $("a").removeClass("open");
         $("a[href='"+hash+"']").addClass("open");
-        $("#" + hash.slice(2)).fadeIn(duration).siblings(".content").fadeOut(duration);
-        //window.scrollTo(0,0);
+        $("#" + hash.slice(2)).show().siblings(".content").hide();
+        window.scrollTo(0,0);
         return false;
     }
     $(window).bind("hashchange",function(e){refreshHash();});
