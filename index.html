@@ -11,6 +11,7 @@
 <style>
     @font-face{font-family:webfont;src:url("font/SourceCodePro-Regular.ttf");font-display:swap;}
     @font-face{font-family:webfont2;src:url("font/NimbusSanL-Bol.otf");font-display:swap;}
+    @font-face{font-family:webfont3;src:url("font/EBGaramond-Regular.ttf");font-display:swap;}
     :root{--background:#fff;--text:#000;--spacer:8px;}
     ::-moz-selection{background:var(--text);color:var(--background);}
     ::selection{background:var(--text);color:var(--background);}
@@ -42,18 +43,19 @@
     #nav a,#nav a:hover{color:inherit;background:transparent;text-decoration:none;}
     #nav a.open{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px;}
     #time-blink{animation:2s blink steps(1) infinite;}
-    hr{margin:3rem 0;}
+    hr{margin:4rem 0;}
     /* VIDEO */
-    .video{cursor:pointer;overflow:hidden;position:relative;max-width:760px;}
+    .video{cursor:pointer;overflow:hidden;position:relative;max-width:960px;}
     .video:after{border:0 solid transparent;border-width:8px 22px;border-left-color:var(--text);border-right:0;line-height:0;font-size:0;content:"";display:inline-block;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);pointer-events:none;}
     .video.playing{cursor:pointer;}
     .video.playing:after{display:none;}
-    video{width:100%;cursor:pointer;max-width:760px;}
+    video{width:100%;cursor:pointer;max-width:960px;}
     /* GALLERY */
     .gallery{justify-content:flex-start;display:flex;flex-wrap:wrap;line-height:0;font-size:0;}
     .gallery div{width:200px;padding-bottom:calc(var(--spacer)*4);padding-right:calc(var(--spacer)*2);cursor:zoom-in;display:flex;align-items:flex-start;justify-content:flex-start;flex-direction:column;}
     .gallery div img{max-width:100%;max-height:200px;transition:all .1s ease-out;}
     .gallery div:hover img,.gallery div.show img{transform:translateY(-5px);}
+    .gallery div:hover img{animation:imghue .2s steps(4) infinite;}
     .gallery div span{width:200px;font-size:1rem;line-height:1.2em;min-height:calc(1.2em*3);margin-top:var(--spacer);overflow:hidden;}
     /* SPECIAL */
     .loading{animation:.3s blink steps(1) infinite;}
@@ -63,6 +65,7 @@
     #map:after{top:23%;left:52.5%;outline:1px solid #0f0;background:#0f0;animation:position 1.2s infinite ease-out;width:7px;height:7px;border-radius:100vmax;pointer-events:none;position:absolute;transform:translate(-50%,-50%);display:block;content:"";}
     @keyframes blink{0%{color:transparent;}50%{color:inherit;}}
     @keyframes position{100%{outline-color:transparent;outline-offset:20px;}}
+    @keyframes imghue{100%{filter:hue-rotate(360deg) saturate(10) invert(.2);}}
     /* *{cursor:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" x="0px" y="0px" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6" fill="%23000" stroke="%23000" stroke-width="1"/></svg>') 8 8, auto !important;} */
 </style>
 </head>
@@ -87,8 +90,8 @@
             <source src="https://www.dropbox.com/s/mmcykw5nus3m39u/LandDerEchsen1080.ogv?raw=1" type="video/ogg" />
         </video>
     </div>
-    <p style="max-width:760px;">Land der Echsen (Germany, 2021). On the forgotten grounds of a derelict freight yard, a new urban quarter is in the making. For years, non-profit collectives have occupied the old loading halls &mdash; breathing life into the decaying space. But now, as redevelopment plans advance and demolition looms, they are forced to leave. Just then, an unexpected presence appears: lizards. Silent, enigmatic, and strangely defiant, they threaten to derail the entire project.</p>
-    <p style="max-width:760px;">Born from <i>Anti-Stuttgart &mdash; A Determinate Negation</i>, a critical design studio at <a href="https://www.igma.uni-stuttgart.de/en/institute/">IGmA</a>, the film reimagines urban development as a stage for ecological and political tension. Premiered at the University of Stuttgart&#8217;s architecture <a href="https://www.k1.live/">graduate exhibition</a> and featured at the <a href="https://www.current-stuttgart.de/">CURRENT Festival</a> for Art and Urban Space.</p>
+    <p style="font-family:webfont3,serif;font-size:32px;line-height:1.2em;">Land der Echsen (Germany, 2021). On the forgotten grounds of a derelict freight yard, a new urban quarter is in the making. For years, non-profit collectives have occupied the old loading halls &mdash; breathing life into the decaying space. But now, as redevelopment plans advance and demolition looms, they are forced to leave. Just then, an unexpected presence appears: lizards. Silent, enigmatic, and strangely defiant, they threaten to derail the entire project.</p>
+    <p style="font-family:webfont3,serif;font-size:32px;line-height:1.2em;">Born from <i>Anti-Stuttgart &mdash; A Determinate Negation</i>, a critical design studio at <a href="https://www.igma.uni-stuttgart.de/en/institute/">IGmA</a>, the film reimagines urban development as a stage for ecological and political tension. Premiered at the University of Stuttgart&#8217;s architecture <a href="https://www.k1.live/">graduate exhibition</a> and featured at the <a href="https://www.current-stuttgart.de/">CURRENT Festival</a> for Art and Urban Space.</p>
     <hr>
     <div class="gallery">
         <img src="img/250610.jpg" alt="IntCDC Urbach Tower Model with Transport Box" />
