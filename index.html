@@ -420,10 +420,10 @@ $(document).ready(function(){
     void main() {
         float x = vUv.x * 10.0;
         float y = vUv.y * 10.0;
-        float n1 = sin(x + time * 0.8) + cos(y - time * 0.003);
-        float n2 = sin(x * 1.5 - time * 1.2) * cos(y * 1.2 + time * 0.013);
-        float n3 = sin((x + y) * 0.7 + time * 0.002);
-        float n4 = cos(length(vUv - 0.5) * 8.0 - time * 0.001);
+        float n1 = sin(x + time * 0.8) + cos(y - time * 0.2);
+        float n2 = sin(x * 1.5 - time * 1.2) * cos(y * 1.2 + time * 0.3);
+        float n3 = sin((x + y) * 0.7 + time * 0.5);
+        float n4 = cos(length(vUv - 0.5) * 8.0 - time * 0.4);
         float combined = (n1 + n2 + n3 + n4) / 4.0;
         combined = combined * combined * (2.0 - 1.0 * combined) - .9;
         float brightness = 0.5 + 0.5 * combined;
@@ -452,7 +452,7 @@ $(document).ready(function(){
     scene.add(mesh);
     function animate() {
         requestAnimationFrame(animate);
-        uniforms.time.value += 0.02;
+        uniforms.time.value += 0.005;
         renderer.render(scene, camera);
     }
     animate();
