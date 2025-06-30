@@ -13,8 +13,8 @@
     @font-face{font-family:webfont2;src:url("font/NimbusSanL-Bol.otf");font-display:swap;}
     @font-face{font-family:webfont3;src:url("font/EBGaramond-Regular.ttf");font-display:swap;}
     :root{--background:#fff;--text:#000;--spacer:8px;}
-    ::-moz-selection{background:var(--text);color:var(--background);}
-    ::selection{background:var(--text);color:var(--background);}
+    ::-moz-selection{background:#fff;color:#000;}
+    ::selection{background:#fff;color:#000;}
     /* RESET */*{/* user-select:none; */text-decoration-thickness:1px;text-underline-offset:2px;text-decoration-skip-ink:none;font-kerning:normal;outline:none;-webkit-tap-highlight-color:rgba(0,0,0,0)!important;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-appearance:none;border-radius:0;-webkit-border-radius:0;box-sizing:content-box;font-smoothing:antialiased;-moz-osx-font-smoothing: grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased;}
 	html{font-size:13px;background:var(--background);}
     body{color:var(--text);background:var(--background);min-height:100vh;font:normal normal 1rem/1.2em webfont,monospace;/* background:url(archive/bg60.png) center center repeat fixed,url(img/other/bg_symmetryinchaos.webp) center center no-repeat fixed;background-size:auto,cover; *//* background:url(img/noise.png) center center repeat fixed,url(img/bg_bw.png) center center repeat fixed;background-size:200px,cover; */}
@@ -32,13 +32,14 @@
     a{text-decoration:none;white-space:nowrap;}
     a,.gallery div span span{text-decoration:underline;text-underline-offset:2px;/* box-shadow:inset 0 -.05em #aaa; */}
     a:hover,.gallery div:hover span span,.gallery div.show span span{text-decoration:none;/* box-shadow:inset 0 -1.25rem #ccc; */}
+    /* BACKGROUND */
+    canvas{display:block;position:fixed;inset:0;}    
     /* LAYOUT */
     .marquee{overflow:hidden;max-width:100%;margin-top:var(--spacer);}
-    .marquee span:after{padding-right:1em;content:"";}
     #header,.content{padding:var(--spacer);width:100%;box-sizing:border-box;}
-    #header{position:sticky;top:0;left:0;right:0;mix-blend-mode:difference;color:#fff;padding-bottom:0;font-size:22px;text-transform:uppercase;letter-spacing:.01em;font-family:webfont2,sans-serif;line-height:1.3em;font-weight:bold;user-select:none;z-index:999996;display:flex;flex-wrap:wrap;justify-content:space-between;}
-    h1,#nav a{margin-right:1em;}#weather,#time{margin-left:1em;}
-    .content{display:none;padding-top:0;}
+    #header{position:sticky;top:0;left:0;right:0;/* mix-blend-mode:difference;color:#fff; */padding-bottom:0;font-size:22px;text-transform:uppercase;letter-spacing:.01em;font-family:webfont2,sans-serif;line-height:1.3em;font-weight:bold;user-select:none;z-index:999996;display:flex;flex-wrap:wrap;justify-content:space-between;}
+    h1,#nav a{margin-right:1.2em;}#weather,#time{margin-left:1.2em;}.marquee span{margin-right:1.7em;}
+    .content{position:absolute;display:none;padding-top:0;}
     #nav{display:inline-block;}
     #nav a,#nav a:hover{color:inherit;background:transparent;text-decoration:none;}
     #nav a.open{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px;}
@@ -46,7 +47,7 @@
     hr{margin:4rem 0;}
     /* VIDEO */
     .video{cursor:pointer;overflow:hidden;position:relative;max-width:960px;}
-    .video:after{border:0 solid transparent;border-width:8px 22px;border-left-color:var(--text);border-right:0;line-height:0;font-size:0;content:"";display:inline-block;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);pointer-events:none;}
+    .video:after{border:0 solid transparent;border-width:8px 22px;border-left-color:#0f0;border-right:0;line-height:0;font-size:0;content:"";display:inline-block;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);pointer-events:none;}
     .video.playing{cursor:pointer;}
     .video.playing:after{display:none;}
     video{width:100%;cursor:pointer;max-width:100%;}
@@ -67,6 +68,7 @@
     /* .gallery div:hover img{animation:imghue .2s steps(4) infinite;}
     @keyframes imghue{100%{filter:hue-rotate(360deg) invert(.2);}} */
     /* *{cursor:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" x="0px" y="0px" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6" fill="%23000" stroke="%23000" stroke-width="1"/></svg>') 8 8, auto !important;} */
+    #header,.marquee,p,.gallery div span,#qr{color:#0f0;mix-blend-mode:difference;}
 </style>
 </head>
 <body>
@@ -201,7 +203,7 @@
         Initial launch: 2011/01<!-- /16 -->
     </p>
     <hr>
-    <pre style="font-size:8px;line-height:1.2em;">
+    <pre id="qr" style="font-size:8px;line-height:1.2em;">
 ██████████████    ██        ██      ██████████████
 ██          ██  ████  ██████████    ██          ██
 ██  ██████  ██    ██████  ██    ██  ██  ██████  ██
@@ -401,6 +403,62 @@ $(document).ready(function(){
 	});
 
 });
+</script>
+
+
+<script src="three.js"></script>
+<script id="vertexShader" type="x-shader/x-vertex">
+    varying vec2 vUv;
+    void main() {
+        vUv = uv;
+        gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
+    }
+</script>
+<script id="fragmentShader" type="x-shader/x-fragment">
+    uniform float time;
+    varying vec2 vUv;
+    void main() {
+        float x = vUv.x * 10.0;
+        float y = vUv.y * 10.0;
+        float n1 = sin(x + time * 0.8) + cos(y - time * 0.003);
+        float n2 = sin(x * 1.5 - time * 1.2) * cos(y * 1.2 + time * 0.013);
+        float n3 = sin((x + y) * 0.7 + time * 0.002);
+        float n4 = cos(length(vUv - 0.5) * 8.0 - time * 0.001);
+        float combined = (n1 + n2 + n3 + n4) / 4.0;
+        combined = combined * combined * (2.0 - 1.0 * combined) - .9;
+        float brightness = 0.5 + 0.5 * combined;
+        vec3 baseColor = vec3(0, 1, 0);
+        vec3 color = baseColor * brightness;
+        gl_FragColor = vec4(color, 1.0);
+    }
+</script>
+<script>
+    const scene = new THREE.Scene();
+    const camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0.1, 10);
+    camera.position.z = 1;
+    const renderer = new THREE.WebGLRenderer();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    document.body.prepend(renderer.domElement);
+    const uniforms = {
+        time: { value: 0.0 }
+    };
+    const material = new THREE.ShaderMaterial({
+        uniforms: uniforms,
+        vertexShader: document.getElementById('vertexShader').textContent,
+        fragmentShader: document.getElementById('fragmentShader').textContent
+    });
+    const geometry = new THREE.PlaneGeometry(2, 2);
+    const mesh = new THREE.Mesh(geometry, material);
+    scene.add(mesh);
+    function animate() {
+        requestAnimationFrame(animate);
+        uniforms.time.value += 0.02;
+        renderer.render(scene, camera);
+    }
+    animate();
+    window.addEventListener('resize', () => {
+        renderer.setSize(window.innerWidth, window.innerHeight);
+    });
 </script>
 </body>
 </html>
