@@ -40,11 +40,18 @@
     #header{position:sticky;top:0;left:0;right:0;/* mix-blend-mode:difference;color:#fff; */padding-bottom:0;font-size:22px;text-transform:uppercase;letter-spacing:.01em;font-family:webfont2,sans-serif;line-height:1.3em;font-weight:bold;user-select:none;z-index:999996;display:flex;flex-wrap:wrap;justify-content:space-between;}
     h1,#nav a{margin-right:1em;}#weather,#time{margin-left:1em;}.marquee span{margin-right:1.7em;}
     .content{position:absolute;display:none;padding-top:0;}
-    #nav{display:inline-block;}
-    #nav a,#nav a:hover{color:inherit;background:transparent;text-decoration:none;}
-    #nav a.open{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px;}
-    #time-blink{animation:2s blink steps(1) infinite;}
     hr{margin:4rem 0;}
+    /* NAV */
+    /* #nav{display:inline-block;}
+    #nav a,#nav a:hover{color:inherit;background:transparent;text-decoration:none;}
+    #nav a.open{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px;} */
+    #nav{display:inline-flex;position:relative;padding-bottom:1px;}
+    #nav a{position:relative;text-decoration:none;}
+    .nav-underline{position:absolute;bottom:0;left:0;height:3px;width:0;background:var(--text);transition:transform 0.3s ease, width 0.3s ease;}
+    #nav[data-active-index="0"] .nav-underline{transform:translateX(var(--x0));width:var(--w0);}
+    #nav[data-active-index="1"] .nav-underline{transform:translateX(var(--x1));width:var(--w1);}
+    #nav[data-active-index="2"] .nav-underline{transform:translateX(var(--x2));width: var(--w2);}
+    #nav[data-active-index="3"] .nav-underline{transform:translateX(var(--x3));width:var(--w3);}
     /* VIDEO */
     .video{cursor:pointer;overflow:hidden;position:relative;max-width:960px;}
     .video:after{border:0 solid transparent;border-width:8px 22px;border-left-color:var(--text);border-right:0;line-height:0;font-size:0;content:"";display:inline-block;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);pointer-events:none;}
@@ -57,18 +64,19 @@
     .gallery div img{max-width:100%;max-height:200px;transition:all .1s ease-out;}
     .gallery div:hover img,.gallery div.show img{transform:translateY(-5px);}
     .gallery div span{width:200px;font-size:1rem;line-height:1.2em;min-height:calc(1.2em*3);margin-top:var(--spacer);overflow:hidden;}
-    /* SPECIAL */
+    /* EFFECTS / SPECIAL */
     .loading{animation:.3s blink steps(1) infinite;}
     #lightbox{z-index:999997;cursor:zoom-out;position:fixed;inset:0;display:none;}
     #lightbox img{cursor:pointer;max-height:90vh;max-width:calc(100vw - 2*var(--spacer));box-sizing:border-box;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);}
     #map{width:760px;max-width:100%;aspect-ratio:1500/750;background:center center url(img/other/world.gif) no-repeat scroll;position:relative;background-size:contain;}
     #map:after{top:23%;left:52.5%;outline:1px solid #0f0;background:#0f0;animation:position 1.2s infinite ease-out;width:7px;height:7px;border-radius:100vmax;pointer-events:none;position:absolute;transform:translate(-50%,-50%);display:block;content:"";}
+    #time-blink{animation:2s blink steps(1) infinite;}
     @keyframes blink{0%{color:transparent;}50%{color:inherit;}}
     @keyframes position{100%{outline-color:transparent;outline-offset:20px;}}
     /* .gallery div:hover img{animation:imghue .2s steps(4) infinite;}
     @keyframes imghue{100%{filter:hue-rotate(360deg) invert(.2);}} */
-    /* *{cursor:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" x="0px" y="0px" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6" fill="%23000" stroke="%23000" stroke-width="1"/></svg>') 8 8, auto !important;} */
     #header,.marquee,p,.gallery div span,#qr{mix-blend-mode:difference;}
+    /* *{cursor:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" x="0px" y="0px" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6" fill="%230f0" stroke="%23000" stroke-width="1"/></svg>') 8 8, auto !important;} */
 </style>
 </head>
 <body>
@@ -76,7 +84,7 @@
 
 <div id="header">
     <div>
-    <h1 class="loading">Joey Schweickhardt</h1><div id="nav"><a href="#/works">Works</a><a href="#/places">Places</a><a href="#/about">About</a></div>
+    <h1 class="loading">Joey Schweickhardt</h1><div id="nav"><a href="#/works">Works</a><a href="#/places">Places</a><a href="#/about">About</a><div class="nav-underline"></div></div>
     </div>
     <div>Stuttgart<!-- <span style="outline:1px solid #fff;background:transparent;text-decoration:none;padding:0 .6em;border-radius:100px;">D</span> --><span id="weather"></span><span id="time"></span></div>
 </div>
@@ -278,10 +286,37 @@ $(document).ready(function(){
         $("a").removeClass("open");
         $("a[href='"+hash+"']").addClass("open");
         $("#" + hash.slice(2)).show().siblings(".content").hide();
+        updateUnderline();
         window.scrollTo(0,0);
         return false;
     }
     $(window).bind("hashchange",function(e){refreshHash();});
+
+    // nav underline
+    const nav = document.querySelector('#nav');
+    const links = document.querySelectorAll('#nav a');
+    function updateUnderline() {
+        links.forEach((link, index) => {
+            const rect = link.getBoundingClientRect();
+            const navRect = nav.getBoundingClientRect();
+            const center = rect.left + rect.width / 2 - navRect.left;
+            const width = rect.width;
+            nav.style.setProperty(`--x${index}`, `${center - width/2}px`);
+            nav.style.setProperty(`--w${index}`, `${width}px`);
+        });
+        links.forEach((link, index) => {
+            if (link.classList.contains("open")) {
+                nav.dataset.activeIndex = index;
+            }
+        });
+    }
+    $(document).ready(function(){
+        updateUnderline();
+        refreshHash();
+    });
+    $(window).on('resize', function(){
+        updateUnderline();
+    });
     
     // toggle section
     $(".toggle").on("click",function(){
@@ -429,7 +464,7 @@ $(document).ready(function(){
         float brightness = 0.5 + 0.5 * combined;
             // grain
             float grain = fract(sin(dot(vUv * time, vec2(12.9898,78.233))) * 43758.5453);
-            grain = grain * 0.08 - 0.1; // -0.1 bis +0.1
+            grain = grain * 0.05 - 0.1; // -0.1 bis +0.1
             brightness += grain;
         vec3 baseColor = vec3(1, 0, .33);
         vec3 color = baseColor * brightness;

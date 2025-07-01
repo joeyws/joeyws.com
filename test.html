@@ -4,80 +4,86 @@
   <meta charset="UTF-8">
   <title>Flüssiges geschmolzenes Metall</title>
   <style>
-    body { margin: 0; overflow: hidden; }
-    canvas { display: block; }
+#nav {
+  display: flex;
+  position: relative;
+  gap: 2rem;
+  padding-bottom: 8px;
+}
+
+#nav a {
+  position: relative;
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  padding: 4px 0;
+}
+
+.nav-underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background: #007acc;
+  transition: transform 0.3s ease, width 0.3s ease;
+}
+
+#nav[data-active-index="0"] .nav-underline { 
+  transform: translateX(var(--x0)); 
+  width: var(--w0);
+}
+#nav[data-active-index="1"] .nav-underline { 
+  transform: translateX(var(--x1)); 
+  width: var(--w1);
+}
+#nav[data-active-index="2"] .nav-underline { 
+  transform: translateX(var(--x2)); 
+  width: var(--w2);
+}
+#nav[data-active-index="3"] .nav-underline { 
+  transform: translateX(var(--x3)); 
+  width: var(--w3);
+}
+
   </style>
 </head>
 <body>
-<script src="https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.min.js"></script>
 
-<script id="vertexShader" type="x-shader/x-vertex">
-  varying vec2 vUv;
-  void main() {
-    vUv = uv;
-    gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
-  }
-</script>
 
-<script id="fragmentShader" type="x-shader/x-fragment">
-  uniform float time;
-  varying vec2 vUv;
+<div id="nav"><a href="#/works">Works</a><a href="#/places">Places</a><a href="#/about">About</a><div class="nav-underline"></div></div>
 
-  void main() {
-    float x = vUv.x * 10.0;
-    float y = vUv.y * 10.0;
-
-    // mehrere Wellen verschiedener Frequenzen & Phasen
-    float n1 = sin(x + time * 0.8) + cos(y - time * 0.6);
-    float n2 = sin(x * 1.5 - time * 1.2) * cos(y * 1.2 + time * 0.9);
-    float n3 = sin((x + y) * 0.7 + time * 0.5);
-    float n4 = cos(length(vUv - 0.5) * 8.0 - time);
-
-    // Kombinieren
-    float combined = (n1 + n2 + n3 + n4) / 4.0;
-
-    // metallisch silbrige Farbe
-    float brightness = 0.5 + 0.5 * combined;
-    vec3 baseColor = vec3(0.8, 0.85, 0.9);
-    vec3 color = baseColor * brightness;
-
-    gl_FragColor = vec4(color, 1.0);
-  }
-</script>
 
 <script>
-  const scene = new THREE.Scene();
-  const camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0.1, 10);
-  camera.position.z = 1;
+const nav = document.querySelector('#nav');
+const links = document.querySelectorAll('#nav a');
 
-  const renderer = new THREE.WebGLRenderer();
-  renderer.setSize(window.innerWidth, window.innerHeight);
-  document.body.appendChild(renderer.domElement);
-
-  const uniforms = {
-    time: { value: 0.0 }
-  };
-
-  const material = new THREE.ShaderMaterial({
-    uniforms: uniforms,
-    vertexShader: document.getElementById('vertexShader').textContent,
-    fragmentShader: document.getElementById('fragmentShader').textContent
+function updateUnderline() {
+  links.forEach((link, index) => {
+    const rect = link.getBoundingClientRect();
+    const navRect = nav.getBoundingClientRect();
+    const center = rect.left + rect.width / 2 - navRect.left;
+    const width = rect.width;
+    nav.style.setProperty(`--x${index}`, `${center - width/2}px`);
+    nav.style.setProperty(`--w${index}`, `${width}px`);
   });
+}
 
-  const geometry = new THREE.PlaneGeometry(2, 2);
-  const mesh = new THREE.Mesh(geometry, material);
-  scene.add(mesh);
+updateUnderline();
+window.addEventListener('resize', updateUnderline);
 
-  function animate() {
-    requestAnimationFrame(animate);
-    uniforms.time.value += 0.02;
-    renderer.render(scene, camera);
-  }
-  animate();
-
-  window.addEventListener('resize', () => {
-    renderer.setSize(window.innerWidth, window.innerHeight);
+links.forEach((link, index) => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    nav.dataset.activeIndex = index;
+    links.forEach(l => l.classList.remove('active'));
+    link.classList.add('active');
   });
+});
+
 </script>
+
+
+
 </body>
 </html>
