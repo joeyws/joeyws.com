@@ -3,7 +3,8 @@
      █████ █████ ████  █████ █████ ████     █████ █████ █████    
       ████ ██ ██ █████ █████ █████ █████    ████  ██ ██ █████    
      █████ █████ ████   ████ █████  ████    █████ █████ █████    
-     █████ █████ █████ █████ ██ ██ █████ ██ █████ █████ █ █ █ -->
+     █████ █████ █████ █████ ██ ██ █████ ██ █████ █████ █ █ █
+-->
 <html lang="en" translate="no"><head>
 <title>Joey Schweickhardt</title>
 <link rel="shortcut icon" type="image/x-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='32' width='32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%23000000' /%3E%3C/svg%3E">
@@ -67,13 +68,13 @@
     /* BACKGROUND */
     canvas{display:block;position:fixed;inset:0;}
     .content{position:relative;}
-    /* #header,.marquee,p,.gallery div span,#qr{mix-blend-mode:difference;} */
+    #header,.marquee,p,.gallery div span,#qr{mix-blend-mode:difference;}
     /* EFFECTS / SPECIAL */
     .loading{animation:.3s blink steps(1) infinite;}
     #map{width:760px;max-width:100%;aspect-ratio:1500/750;background:center center url(img/other/world.gif) no-repeat scroll;position:relative;background-size:contain;}
     #map:after{top:23%;left:52.5%;outline:1px solid #0f0;background:#0f0;animation:position 1.2s infinite ease-out;width:7px;height:7px;border-radius:100vmax;pointer-events:none;position:absolute;transform:translate(-50%,-50%);display:block;content:"";}
     #time-blink{animation:2s blink steps(1) infinite;}
-    @keyframes blink{0%{color:transparent;}50%{color:inherit;}}
+    @keyframes blink{0%{opacity:0;}50%{opacity:1;}}
     @keyframes position{100%{outline-color:transparent;outline-offset:20px;}}
     /* *{cursor:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" x="0px" y="0px" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6" fill="%230f0" stroke="%23000" stroke-width="1"/></svg>') 8 8, auto !important;} */
 </style>
@@ -459,11 +460,11 @@ $(document).ready(function(){
         float n3 = sin((x + y) * 0.7 + time * 0.5);
         float n4 = cos(length(vUv - 0.5) * 8.0 - time * 0.4);
         float combined = (n1 + n2 + n3 + n4) / 4.0;
-        combined = combined * combined * (2.0 - 1.0 * combined) - 0.9;
-        float brightness = 0.5 + 0.9 * combined;
+        combined = combined * combined * (2.5 - 1.0 * combined) - 0.9;
+        float brightness = 0.3 + 0.9 * combined;
             // grain
             float grain = fract(sin(dot(vUv * time, vec2(12.9898,78.233))) * 43758.5453);
-            grain = grain * 0.05 - 0.1; // -0.1 bis +0.1
+            grain = grain * 0.1 - 0.1; // -0.1 bis +0.1
             brightness += grain;
         vec3 baseColor = vec3(1, 0, .33);
         vec3 color = baseColor * brightness;
