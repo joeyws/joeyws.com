@@ -14,8 +14,8 @@
     @font-face{font-family:webfont2;src:url("font/NimbusSanL-Bol.otf");font-display:swap;}
     @font-face{font-family:webfont3;src:url("font/EBGaramond-Regular.ttf");font-display:swap;}
     :root{--background:#000;--text:#0f0;--spacer:8px;}
-    ::-moz-selection{background:var(--background);color:var(--text);}
-    ::selection{background:var(--background);color:var(--text);}
+    ::-moz-selection{background:var(--text);color:var(--background);}
+    ::selection{background:var(--text);color:var(--background);}
     /* RESET */*{/* user-select:none; */text-decoration-thickness:1px;text-underline-offset:2px;text-decoration-skip-ink:none;font-kerning:normal;outline:none;-webkit-tap-highlight-color:rgba(0,0,0,0)!important;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-appearance:none;border-radius:0;-webkit-border-radius:0;box-sizing:content-box;font-smoothing:antialiased;-moz-osx-font-smoothing: grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased;}
 	html{font-size:13px;background:var(--background);}
     body{overflow-y:scroll;color:var(--text);background:var(--background);min-height:100vh;font:normal normal 1rem/1.2em webfont,monospace;/* background:url(archive/bg60.png) center center repeat fixed,url(img/other/bg_symmetryinchaos.webp) center center no-repeat fixed;background-size:auto,cover; *//* background:url(img/noise.png) center center repeat fixed,url(img/bg_bw.png) center center repeat fixed;background-size:200px,cover; */}
@@ -46,7 +46,7 @@
     #nav a.open{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px;} */
     #nav{display:inline-flex;position:relative;}
     #nav a{position:relative;text-decoration:none;}
-    .nav-underline{position:absolute;bottom:0;left:0;height:2px;width:0;background:var(--text);transition:transform 0.3s ease, width 0.3s ease;}
+    .nav-underline{position:absolute;bottom:0;left:0;height:2px;width:0;background:var(--text);transition:transform 0.2s ease-out, width 0.2s ease-out;}
     #nav[data-active-index="0"] .nav-underline{transform:translateX(var(--x0));width:var(--w0);}
     #nav[data-active-index="1"] .nav-underline{transform:translateX(var(--x1));width:var(--w1);}
     #nav[data-active-index="2"] .nav-underline{transform:translateX(var(--x2));width: var(--w2);}
@@ -58,8 +58,8 @@
     video{width:100%;cursor:pointer;max-width:100%;}
     /* GALLERY */
     .gallery{justify-content:flex-start;display:flex;flex-wrap:wrap;line-height:0;font-size:0;}
-    .gallery div{width:200px;padding-bottom:calc(var(--spacer)*4);padding-right:calc(var(--spacer)*2);cursor:zoom-in;display:flex;align-items:flex-start;justify-content:flex-start;flex-direction:column;}
-    .gallery div img{max-width:100%;max-height:200px;transition:all .1s ease-out;}
+    .gallery div{width:200px;padding-bottom:calc(var(--spacer)*2);padding-right:calc(var(--spacer)*2);cursor:zoom-in;display:flex;align-items:flex-start;justify-content:flex-start;flex-direction:column;}
+    .gallery div img{max-width:100%;/* max-height:200px; */transition:all .1s ease-out;}
     .gallery div:hover img,.gallery div.show img{transform:translateY(-5px);}
     .gallery div span{width:200px;font-size:1rem;line-height:1.2em;min-height:calc(1.2em*3);margin-top:var(--spacer);overflow:hidden;}
     /* LIGHTBOX */
@@ -109,7 +109,7 @@
         <img src="img/240719.jpg" alt="Pauluskirche Stuttgart Extension, Interior" />
         <img src="img/240719-3.jpg" alt="Pauluskirche Stuttgart Extension, Urban Situation" />
         <img src="img/231005.jpg" alt="Helvetia Campus Basel Facade Model, Herzog&nbsp;&&nbsp;de&nbsp;Meuron" />
-        <img src="img/220311.jpg" alt="Lightweight Pavilions" />
+        <img src="img/220311.jpg" alt="Lightweight Pneu Pavilions" />
         <img src="img/220311-2.jpg" alt="Pneu Concept" />
         <img src="img/210211.jpg" alt="Vasikkasaari Climate Institute Helsinki" />
         <img src="img/201018.jpg" alt="Wardrobe with Hand-sewn Curtain" />
@@ -454,7 +454,7 @@ $(document).ready(function(){
     uniform float scrollOffset;
     varying vec2 vUv;
     void main() {
-        vec2 scrollUv = vUv - 0.1 * vec2(0.0, scrollOffset);
+        vec2 scrollUv = vUv - vec2(0.0, scrollOffset);
         float x = scrollUv.x * 10.0;
         float y = scrollUv.y * 10.0;
         float n1 = sin(x + time * 0.8) + cos(y - time * 0.2);
@@ -463,11 +463,16 @@ $(document).ready(function(){
         float n4 = cos(length(scrollUv - 0.5) * 8.0 - time * 0.4);
         float combined = (n1 + n2 + n3 + n4) / 4.0;
         combined = combined * combined * (2.5 - combined) - 0.9;
-        float brightness = 0.3 + 0.9 * combined;
-        float grain = fract(sin(dot(vUv * time, vec2(12.9898,78.233))) * 43758.5453);
-        grain = grain * 0.1 - 0.1;
+        float brightness = 0.3 + 0.4 * combined;
+        float grain = fract(sin(dot(scrollUv * time, vec2(12.9898,78.233))) * 43758.5453);
+        grain = grain * 0.08 - 0.1;
         brightness += grain;
-        vec3 baseColor = vec3(1, 0, .33);
+        vec3 baseColor = vec3(
+            0.8 + 0.2 * sin(time + x),
+            0.8 + 0.2 * sin(time + y + 2.0),
+            0.8 + 0.2 * sin(time - x - y)
+        );
+        baseColor = mix(baseColor, vec3(1, .1, .1), 0.2 * sin(time + combined * 2.0));
         vec3 color = baseColor * brightness;
         gl_FragColor = vec4(color, 1.0);
     }
@@ -493,15 +498,12 @@ $(document).ready(function(){
     scene.add(mesh);
     function animate() {
         requestAnimationFrame(animate);
-        uniforms.time.value += 0.002;
+        uniforms.time.value += 0.004;
         renderer.render(scene, camera);
     }
     animate();
     window.addEventListener('resize', () => {
         renderer.setSize(window.innerWidth, window.innerHeight);
-    });
-    window.addEventListener('scroll', () => {
-        uniforms.scrollOffset.value = window.scrollY * 0.001; 
     });
 </script>
 </body>
