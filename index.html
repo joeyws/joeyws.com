@@ -463,20 +463,17 @@ $(document).ready(function(){
         float n4 = cos(length(scrollUv - 0.5) * 8.0 - time * 0.4);
         float combined = (n1 + n2 + n3 + n4) / 4.0;
         combined = combined * combined * (2.5 - combined) - 0.9;
-        float brightness = 0.3 + 0.9 * combined;
-
+        float brightness = 0.3 + 0.5 * combined;
         float grain = fract(sin(dot(scrollUv * time, vec2(12.9898,78.233))) * 43758.5453);
-        grain = grain * 0.1 - 0.1;
+        grain = grain * 0.08 - 0.1;
         brightness += grain;
-
         vec3 baseColor = vec3(
             0.8 + 0.2 * sin(time + x),
             0.8 + 0.2 * sin(time + y + 2.0),
             0.8 + 0.2 * sin(time - x - y)
         );
-        baseColor = mix(baseColor, vec3(1.0, 0.9, 0.0), 0.2 * sin(time + combined * 2.0));
+        baseColor = mix(baseColor, vec3(1, .1, .1), 0.2 * sin(time + combined * 2.0));
         vec3 color = baseColor * brightness;
-
         gl_FragColor = vec4(color, 1.0);
     }
 </script>
@@ -485,13 +482,11 @@ $(document).ready(function(){
     const camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0.1, 10);
     camera.position.z = 1;
     const renderer = new THREE.WebGLRenderer();
-    // Einmalig initialisieren, damit Browser-UI keine Sprünge erzeugt
     renderer.setSize(window.innerWidth, window.innerHeight);
     document.body.prepend(renderer.domElement);
-
     const uniforms = {
-        time: { value: 0.0 },
-        scrollOffset: { value: 0.0 }
+        time: {value: 0.0},
+        scrollOffset: {value: 0.0}
     };
     const material = new THREE.ShaderMaterial({
         uniforms: uniforms,
@@ -501,23 +496,15 @@ $(document).ready(function(){
     const geometry = new THREE.PlaneGeometry(2, 2);
     const mesh = new THREE.Mesh(geometry, material);
     scene.add(mesh);
-
     function animate() {
         requestAnimationFrame(animate);
-        uniforms.time.value += 0.002;
+        uniforms.time.value += 0.004;
         renderer.render(scene, camera);
     }
     animate();
-
-    // Resize absichtlich entfernt, damit es bei Handy-Scroll nicht springt
-    // window.addEventListener('resize', () => {
-    //     renderer.setSize(window.innerWidth, window.innerHeight);
-    // });
-
-    window.addEventListener('scroll', () => {
-        uniforms.scrollOffset.value = window.scrollY * 0.001;
+    window.addEventListener('resize', () => {
+        renderer.setSize(window.innerWidth, window.innerHeight);
     });
 </script>
-
 </body>
 </html>
