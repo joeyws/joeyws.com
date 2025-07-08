@@ -12,8 +12,7 @@
 <style>
     @font-face{font-family:webfont;src:url("font/SourceCodePro-Regular.ttf");font-display:swap;}
     @font-face{font-family:webfont2;src:url("font/NimbusSanL-Bol.otf");font-display:swap;}
-    @font-face{font-family:webfont3;src:url("font/EBGaramond-Regular.ttf");font-display:swap;}
-    :root{--background:#000;--text:#0f0;--spacer:8px;}
+    :root{--background:#fff;--text:#000;--spacer:8px;}
     ::-moz-selection{background:var(--text);color:var(--background);}
     ::selection{background:var(--text);color:var(--background);}
     /* RESET */*{/* user-select:none; */text-decoration-thickness:1px;text-underline-offset:2px;text-decoration-skip-ink:none;font-kerning:normal;outline:none;-webkit-tap-highlight-color:rgba(0,0,0,0)!important;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-appearance:none;border-radius:0;-webkit-border-radius:0;box-sizing:content-box;font-smoothing:antialiased;-moz-osx-font-smoothing: grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased;}
@@ -31,13 +30,13 @@
     small{}
     i{font-style:italic;}
     a{text-decoration:none;white-space:nowrap;}
-    a,.gallery div span span{text-decoration:underline;text-underline-offset:2px;/* box-shadow:inset 0 -.05em #aaa; */}
+    a,.gallery div span span{color:#00f;text-decoration:underline;text-underline-offset:2px;/* box-shadow:inset 0 -.05em #aaa; */}
     a:hover,.gallery div:hover span span,.gallery div.show span span{text-decoration:none;/* box-shadow:inset 0 -1.25rem #ccc; */}
     /* LAYOUT */
     .marquee{overflow:hidden;max-width:100%;margin-top:var(--spacer);}
     #header,.content{padding:var(--spacer);width:100%;box-sizing:border-box;}
-    #header{position:sticky;top:0;left:0;right:0;/* mix-blend-mode:difference;color:#fff; */padding-bottom:0;font-size:22px;text-transform:uppercase;letter-spacing:.01em;font-family:webfont2,sans-serif;line-height:1.3em;font-weight:bold;user-select:none;z-index:999996;display:flex;flex-wrap:wrap;justify-content:space-between;}
-    h1,#nav a{margin-right:1em;}#weather,#time{margin-left:1em;}.marquee span{margin-right:1.7em;}
+    #header{position:sticky;top:0;left:0;right:0;/* mix-blend-mode:difference;color:#fff; */letter-spacing:.01em;padding-bottom:0;font-size:24px;font-family:webfont2,sans-serif;line-height:1.3em;font-weight:bold;user-select:none;z-index:999996;display:flex;flex-wrap:wrap;justify-content:space-between;}
+    h1,#nav a{margin-right:.8em;}#weather,#time{margin-left:.8em;}.marquee span{margin-right:1.7em;}
     .content{padding-top:0;}
     hr{margin:4rem 0;}
     /* NAV */
@@ -45,11 +44,8 @@
     #nav a,#nav a:hover{color:inherit;background:transparent;text-decoration:none;}
     #nav a.open{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px;} */
     #nav{display:inline-flex;position:relative;}
-    #nav a{position:relative;text-decoration:none;}
-    .nav-underline{position:absolute;bottom:2px;left:0;height:2px;width:0;background:var(--text);transition:transform 0.2s ease-out, width 0.2s ease-out;}
-    #nav[data-active-index="0"] .nav-underline{transform:translateX(var(--x0));width:var(--w0);}
-    #nav[data-active-index="1"] .nav-underline{transform:translateX(var(--x1));width:var(--w1);}
-    #nav[data-active-index="2"] .nav-underline{transform:translateX(var(--x2));width: var(--w2);}
+    #nav a{position:relative;text-decoration:none;color:inherit;}
+    #nav a.open{text-decoration:underline;text-decoration-thickness:3px;text-underline-offset:3px;}
     /* VIDEO */
     .video{cursor:pointer;overflow:hidden;position:relative;max-width:960px;}
     .video:after{border:0 solid transparent;border-width:8px 22px;border-left-color:var(--text);border-right:0;line-height:0;font-size:0;content:"";display:inline-block;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);pointer-events:none;}
@@ -66,9 +62,9 @@
     #lightbox{user-select:none;z-index:999997;cursor:zoom-out;position:fixed;inset:0;display:none;}
     #lightbox img{cursor:pointer;max-height:90vh;max-width:calc(100vw - 2*var(--spacer));box-sizing:border-box;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);}
     /* BACKGROUND */
-    canvas{display:block;position:fixed;inset:0;}
+    /* canvas{display:block;position:fixed;inset:0;}
     .content{position:relative;}
-    #header,.marquee,p,.gallery div span,#qr{mix-blend-mode:difference;}
+    #header,.marquee,p,.gallery div span,#qr{mix-blend-mode:difference;} */
     /* EFFECTS / SPECIAL */
     .loading{animation:.3s blink steps(1) infinite;}
     #map{width:760px;max-width:100%;aspect-ratio:1500/750;background:center center url(img/other/world.gif) no-repeat scroll;position:relative;background-size:contain;}
@@ -84,7 +80,7 @@
 
 <div id="header">
     <div>
-    <h1 class="loading">Joey Schweickhardt</h1><div id="nav"><a href="#/works">Works</a><a href="#/places">Places</a><a href="#/about">About</a><div class="nav-underline"></div></div>
+    <h1 class="loading">Joey Schweickhardt</h1><div id="nav"><a href="#/works">Works</a><a href="#/places">Places</a><a href="#/about">About</a></div>
     </div>
     <div>Stuttgart<!-- <span style="outline:1px solid #fff;background:transparent;text-decoration:none;padding:0 .6em;border-radius:100px;">D</span> --><span id="weather"></span><span id="time"></span></div>
 </div>
@@ -286,37 +282,10 @@ $(document).ready(function(){
         $("a").removeClass("open");
         $("a[href='"+hash+"']").addClass("open");
         $("#" + hash.slice(2)).show().siblings(".content").hide();
-        updateUnderline();
         window.scrollTo(0,0);
         return false;
     }
     $(window).bind("hashchange",function(e){refreshHash();});
-
-    // nav underline
-    const nav = document.querySelector('#nav');
-    const links = document.querySelectorAll('#nav a');
-    function updateUnderline() {
-        links.forEach((link, index) => {
-            const rect = link.getBoundingClientRect();
-            const navRect = nav.getBoundingClientRect();
-            const center = rect.left + rect.width / 2 - navRect.left;
-            const width = rect.width;
-            nav.style.setProperty(`--x${index}`, `${center - width/2}px`);
-            nav.style.setProperty(`--w${index}`, `${width}px`);
-        });
-        links.forEach((link, index) => {
-            if (link.classList.contains("open")) {
-                nav.dataset.activeIndex = index;
-            }
-        });
-    }
-    $(document).ready(function(){
-        updateUnderline();
-        refreshHash();
-    });
-    $(window).on('resize', function(){
-        updateUnderline();
-    });
     
     // toggle section
     $(".toggle").on("click",function(){
@@ -441,7 +410,7 @@ $(document).ready(function(){
 </script>
 
 
-<script src="three.js"></script>
+<!-- <script src="three.js"></script>
 <script id="vertexShader" type="x-shader/x-vertex">
     varying vec2 vUv;
     void main() {
@@ -505,6 +474,6 @@ $(document).ready(function(){
     window.addEventListener('resize', () => {
         renderer.setSize(window.innerWidth, window.innerHeight);
     });
-</script>
+</script> -->
 </body>
 </html>
