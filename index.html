@@ -30,15 +30,16 @@
     tr{border-top:1px solid var(--text);}
     td:nth-child(1){width:8em;padding-right:var(--spacer);}
     td:nth-child(2){width:auto;}
-    /* LAYOUT */
-    .marquee{user-select:none;overflow:hidden;max-width:100%;margin:calc(2* var(--spacer)) calc(var(--spacer));}
-    #header,.content{padding:var(--spacer);width:100%;box-sizing:border-box;}
-    /* HEADER / NAV */
-    #header{color:#fff;mix-blend-mode:difference;position:sticky;top:var(--spacer);left:0;right:0;padding-top:0;padding-bottom:0;font-size:24px;line-height:1.1em;user-select:none;z-index:999996;display:flex;flex-wrap:wrap;justify-content:space-between;}
-    h1,#nav a,#nav{margin-right:1.2em;}#nav a:last-child{margin-right:0;}#weather,#time{margin-left:1.2em;}.marquee span{margin-right:1.7em;}
+    /* NAV */
+    #header{column-gap:3.5em;color:#fff;mix-blend-mode:difference;font-size:24px;line-height:1.2em;position:sticky;top:var(--spacer);left:0;right:0;margin:var(--spacer);user-select:none;z-index:999996;display:flex;flex-wrap:wrap;justify-content:space-between;}
+    #nav a{margin-right:.8em;}#nav a:last-child{margin-right:0;}#weather,#time{margin-left:1em;}
+    .marquee span{margin-right:1.5em;}
     #nav{display:inline-flex;}
     #nav a{position:relative;color:inherit;text-decoration:none;}
-    #nav a.open{color:inherit;text-decoration:underline;text-decoration-thickness:.1em;text-underline-offset:.15em;cursor:default;}
+    #nav a.open{color:inherit;text-decoration:underline;text-decoration-thickness:.1em;text-underline-offset:.1em;cursor:default;}
+    .marquee{flex-grow:1;user-select:none;overflow:hidden;width:200px;/* margin:calc(2* var(--spacer)) calc(var(--spacer)); */}
+    /* LAYOUT */
+    .content{padding:var(--spacer);width:100%;box-sizing:border-box;}
     /* VIDEO */
     .video{cursor:pointer;overflow:hidden;position:relative;max-width:960px;}
     .video:after{border:0 solid transparent;border-width:8px 22px;border-left-color:var(--text);border-right:0;line-height:0;font-size:0;content:"";display:inline-block;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);pointer-events:none;}
@@ -75,8 +76,8 @@
         <a href="#/about">About</a>
     </div>
     <div>Stuttgart<span id="weather"></span><span id="time"></span></div>
+    <div class="marquee"><span>歡迎</span><span>Bienvenidos</span><span>Welcome</span><span>स्वागत हे</span><span>اهلا وسهلا</span><span>Bem-vinda</span><span>স্বাগত</span><span>добро пожаловать</span><span>ようこそ</span><span>Sugeng Rawuh</span><span>ਸਵਾਗਤ ਹੈ</span><span>Willkommen</span><span>어서 오십시오</span><span>Bienvenue</span><span>Karibu</span><span>Svāgatam</span><span>Hoşgeldiniz</span><span>خوش آمدید</span><span>வரவேற்பு</span><span>Hoan nghênh</span><span>اهلا وسهلا</span><span>Benvenuto</span></div>
 </div>
-<div class="marquee"><span>歡迎</span><span>Bienvenidos</span><span>Welcome</span><span>स्वागत हे</span><span>اهلا وسهلا</span><span>Bem-vinda</span><span>স্বাগত</span><span>добро пожаловать</span><span>ようこそ</span><span>Sugeng Rawuh</span><span>ਸਵਾਗਤ ਹੈ</span><span>Willkommen</span><span>어서 오십시오</span><span>Bienvenue</span><span>Karibu</span><span>Svāgatam</span><span>Hoşgeldiniz</span><span>خوش آمدید</span><span>வரவேற்பு</span><span>Hoan nghênh</span><span>اهلا وسهلا</span><span>Benvenuto</span></div>
 <hr>
 
 
