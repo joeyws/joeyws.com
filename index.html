@@ -61,9 +61,10 @@
     #map{width:760px;max-width:100%;aspect-ratio:1500/750;background:center center url(img/other/world.gif) no-repeat scroll;position:relative;background-size:contain;}
     #map:after{top:23%;left:52.5%;outline:1px solid #0f0;background:#0f0;animation:position 1.2s infinite ease-out;width:7px;height:7px;border-radius:100vmax;pointer-events:none;position:absolute;transform:translate(-50%,-50%);display:block;content:"";}
     #time-blink{animation:2s blink steps(1) infinite;}
+    *{cursor:none !important;}#cursor{z-index:999999999;will-change:left,top;background:#fff;mix-blend-mode:difference;width:20px;height:20px;border-radius:100vmax;position:fixed;pointer-events:none;transform:translate(-50%,-50%);}
     @keyframes blink{0%{opacity:0;}50%{opacity:1;}}
     @keyframes position{100%{outline-color:transparent;outline-offset:20px;}}
-    *{cursor:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" x="0px" y="0px" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6" fill="%23000" stroke="%23000" stroke-width="1"/></svg>') 8 8, auto !important;}
+    /* *{cursor:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" x="0px" y="0px" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6" fill="%23000" stroke="%23000" stroke-width="1"/></svg>') 8 8, auto !important;} */
 </style>
 </head>
 <body>
@@ -262,6 +263,11 @@ $(document).ready(function(){
         startVisible: true,
         gap: 0
     });
+
+    // cursor
+    $("body").append("<div id='cursor'></div>");
+    if (("ontouchstart" in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0)) {$("#cursor").remove();}
+    $(window).on("mousemove",function(e){$("#cursor").css({"top":(e.pageY-window.scrollY),"left":e.pageX});});
 
     // nav
     function refreshHash() {
