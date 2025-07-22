@@ -247,32 +247,31 @@
 <script>
 $(document).ready(function(){
 
-    // #loading
+    // LOADING
     function showLoading() {$(".loading").addClass("loading");}
 	function hideLoading() {$(".loading").removeClass("loading");}
 
-    // init
+    // INIT
 	$(window).on("load",function(){
         hideLoading();
         refreshHash();
+        // MARQUEE
+        $('.marquee').marquee({
+            speed: 50,
+            delayBeforeStart: 0,
+            direction: 'left',
+            duplicated: true,
+            startVisible: true,
+            gap: 0
+        });
     });
 
-    // marquee
-    $('.marquee').marquee({
-        speed: 50,
-        delayBeforeStart: 0,
-        direction: 'left',
-        duplicated: true,
-        startVisible: true,
-        gap: 0
-    });
-
-    // cursor
+    // CURSOR
     /* $("body").append("<div id='cursor'></div>");
     if (("ontouchstart" in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0)) {$("#cursor").remove();}
     $(window).on("mousemove",function(e){$("#cursor").css({"top":(e.pageY-window.scrollY),"left":e.pageX});}); */
 
-    // nav
+    // NAV
     function refreshHash() {
         var hash = window.location.hash;
         if ($("a[href='"+hash+"']").length == 0) {hash = $("#header a:first").attr("href");}
@@ -285,17 +284,16 @@ $(document).ready(function(){
     }
     $(window).bind("hashchange",function(e){refreshHash();});
     
-    // toggle section
+    // TOGGLE SECTION
     $(".toggle").on("click",function(){
         $(this).next().toggle();
     }).next().hide();
 
-    // gallery
+    // GALLERY / LIGHTBOX
     $(".gallery img").each(function(){
         var caption = $(this).attr("alt");
         $(this).wrap("<div></div>").after("<span><span>"+caption+"</span></span>");
     });
-    // lightbox
     $("body").append("<div id='lightbox'><img src='' /></div>");
     function lightboxLoad() {
         var [fileName, fileExtension] = $(".gallery div.show img").attr("src").split('.');
@@ -335,7 +333,7 @@ $(document).ready(function(){
         lightboxNext();
     });
 
-    // weather
+    // WEATHER
     const getWeather = async () => {
         const request = await fetch("https://api.open-meteo.com/v1/forecast?latitude=48.7823&longitude=9.177&current_weather=true");
         const response = await request.json();
@@ -344,7 +342,7 @@ $(document).ready(function(){
     getWeather();
     setInterval(getWeather,60000);
 
-    // time
+    // TIME
     function getTime() {
         function addZero(i) {if (i < 10) {i = "0" + i;} return i;}
         var time = new Date();
@@ -360,12 +358,12 @@ $(document).ready(function(){
     getTime();
     setInterval(getTime,2000);
 
-    // last updated
+    // LAST UPDATED
     $.getJSON("https://api.github.com/repos/"+"joeyws/joeyws.com/commits",function(json){
         $("#website").append( "<br>Last updated: " + json[0].commit.author.date.slice(0,-13).split("-")/* .reverse() */.join("/"));
     });
     
-    // impressum
+    // CONTACT
     var address1 = 'P'+'f'+'l'+'a'+'u'+'m'+'w'+'e'+'g'+' '+'1'+'4';
     var address2 = '7'+'0'+'3'+'7'+'4'+' '+'S'+'t'+'u'+'t'+'t'+'g'+'a'+'r'+'t';
     var mail = 'm'+'a'+'i'+'l'+ String.fromCharCode(64) +'j'+'o'+'e'+'y'+'w'+'s'+'.'+'c'+'o'+'m';
@@ -388,7 +386,7 @@ $(document).ready(function(){
         });
     });
 
-    // keyboard control
+    // KEYBOARD CONTROL
 	$(document).keydown(function(e){
 		if(!($("input,textarea").is(":focus"))) {
             //event.preventDefault();
