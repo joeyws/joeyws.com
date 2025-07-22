@@ -64,9 +64,9 @@
     @keyframes blink{0%{opacity:0;}50%{opacity:1;}}
     @keyframes position{100%{outline-color:transparent;outline-offset:20px;}}
     /* CURSOR */
-    *{cursor:none !important;}
+    /* *{cursor:none !important;} */
     /* #cursor{z-index:999999999;will-change:left,top;background:transparent url(archive/cursor-osx.png) center center no-repeat scroll;background-size:contain;width:32px;height:32px;position:fixed;pointer-events:none;transform:translate(-14px,0);} */
-    #cursor{z-index:999999999;will-change:left,top;background:#fff;mix-blend-mode:difference;width:12px;height:12px;border-radius:100vmax;position:fixed;pointer-events:none;transform:translate(-50%,-50%);}
+    /* #cursor{z-index:999999999;will-change:left,top;background:#fff;mix-blend-mode:difference;width:12px;height:12px;border-radius:100vmax;position:fixed;pointer-events:none;transform:translate(-50%,-50%);} */
     /* *{cursor:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" x="0px" y="0px" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6" fill="%23000" stroke="%23000" stroke-width="1"/></svg>') 8 8, auto !important;} */
 </style>
 </head>
@@ -268,9 +268,9 @@ $(document).ready(function(){
     });
 
     // cursor
-    $("body").append("<div id='cursor'></div>");
+    /* $("body").append("<div id='cursor'></div>");
     if (("ontouchstart" in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0)) {$("#cursor").remove();}
-    $(window).on("mousemove",function(e){$("#cursor").css({"top":(e.pageY-window.scrollY),"left":e.pageX});});
+    $(window).on("mousemove",function(e){$("#cursor").css({"top":(e.pageY-window.scrollY),"left":e.pageX});}); */
 
     // nav
     function refreshHash() {
