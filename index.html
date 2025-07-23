@@ -23,7 +23,7 @@
     i{font-style:italic;}
     a{text-decoration:none;white-space:nowrap;}
     a,.gallery div span span{text-decoration:underline;text-underline-offset:2px;}
-    a:hover,.gallery div:hover span span{text-decoration:none;}
+    a:hover,.gallery div:hover span span,.gallery div.show span span{text-decoration:none;}
     p,.p,ul,table,#map{margin-top:var(--spacer);}
     hr+*,img+p,.content *:first-child{margin-top:0;}
     hr{margin:3rem 0;}
@@ -31,13 +31,15 @@
     tr{border-top:1px solid var(--text);}
     td:nth-child(1){width:8em;padding-right:var(--spacer);}
     td:nth-child(2){width:auto;}
-    /* NAV */
+    /* LAYOUT */
     #header{column-gap:3.5em;color:#fff;letter-spacing:.01em;mix-blend-mode:difference;font-family:webfont2,sans-serif;font-size:24px;line-height:1.2em;position:sticky;top:var(--spacer);left:0;right:0;margin:var(--spacer);user-select:none;z-index:999996;display:flex;flex-wrap:wrap;justify-content:space-between;}
     #nav a{margin-right:.8em;}#nav a:last-child{margin-right:0;}#weather,#time{margin-left:1em;}
     .marquee span{margin-right:1.5em;}
+    /* NAV */
     #nav{display:inline-flex;}
     #nav a{position:relative;color:inherit;text-decoration:none;}
     #nav a.open{color:inherit;text-decoration:underline;text-decoration-thickness:.1em;text-underline-offset:.1em;cursor:default;}
+    /* #nav a:not(.open){opacity:.2;} */
     .marquee{flex-grow:1;user-select:none;overflow:hidden;width:200px;position:relative;mask-mode:alpha;mask-image:linear-gradient(to right, transparent, #000 20px, #000 calc(100% - 20px), transparent);}
     /* LAYOUT */
     .content{padding:var(--spacer);width:100%;box-sizing:border-box;}
@@ -81,7 +83,7 @@
         <a href="#/about">About</a>
     </div>
     <div>Stuttgart<span id="weather"></span><span id="time"></span></div>
-    <div class="marquee"><span>歡迎</span><span>Bienvenidos</span><span>Welcome</span><span>स्वागत हे</span><span>اهلا وسهلا</span><span>Bem-vinda</span><span>স্বাগত</span><span>добро пожаловать</span><span>ようこそ</span><span>Sugeng Rawuh</span><span>ਸਵਾਗਤ ਹੈ</span><span>Willkommen</span><span>어서 오십시오</span><span>Bienvenue</span><span>Karibu</span><span>Svāgatam</span><span>Hoşgeldiniz</span><span>خوش آمدید</span><span>வரவேற்பு</span><span>Hoan nghênh</span><span>اهلا وسهلا</span><span>Benvenuto</span></div>
+    <div class="marquee"><span>歡迎</span><span>Bienvenidos</span><span>Welcome</span><span>स्वागत हे</span><span>اهلا وسهلا</span><span>Bem-vindo</span><span>স্বাগত</span><span>добро пожаловать</span><span>ようこそ</span><span>Sugeng Rawuh</span><span>ਸਵਾਗਤ ਹੈ</span><span>Willkommen</span><span>어서 오십시오</span><span>Bienvenue</span><span>Karibu</span><span>Svāgatam</span><span>Hoşgeldiniz</span><span>خوش آمدید</span><span>வரவேற்பு</span><span>Hoan nghênh</span><span>Benvenuto</span></div>
 </div>
 <hr>
 
@@ -233,7 +235,7 @@
 ██████████████  ████    ██  ██              ██████</pre>
     <hr>
     <p class="toggle"><a href="javascript:">Privacy</a></p>
-    <div class="p">
+    <div>
         <p>Personal data (usually referred to just as &ldquo;data&rdquo; below) will only be processed by us to the extent necessary and for the purpose of providing a functional and user-friendly website, including its contents, and the services offered there. Per Art. 4 No. 1 of Regulation (EU) 2016/679, i.e. the General Data Protection Regulation (hereinafter referred to as the &ldquo;GDPR&rdquo;), &ldquo;processing&rdquo; refers to any operation or set of operations such as collection, recording, organization, structuring, storage, adaptation, alteration, retrieval, consultation, use, disclosure by transmission, dissemination, or otherwise making available, alignment, or combination, restriction, erasure, or destruction performed on personal data, whether by automated means or not.</p>
         <p>With regard to the data processing to be described in more detail below, users and data subjects have the right to confirmation of whether data concerning them is being processed, information about the data being processed, further information about the nature of the data processing, and copies of the data (cf. also Art. 15 GDPR); to correct or complete incorrect or incomplete data (cf. also Art. 16 GDPR); to the immediate deletion of data concerning them (cf. also Art. 17 DSGVO), or, alternatively, if further processing is necessary as stipulated in Art. 17 Para. 3 GDPR, to restrict said processing per Art. 18 GDPR; to receive copies of the data concerning them and/or provided by them and to have the same transmitted to other providers/controllers (cf. also Art. 20 GDPR); to file complaints with the supervisory authority if they believe that data concerning them is being processed by the controller in breach of data protection provisions (see also Art. 77 GDPR). In addition, the controller is obliged to inform all recipients to whom it discloses data of any such corrections, deletions, or restrictions placed on processing the same per Art. 16, 17 Para. 1, 18 GDPR. However, this obligation does not apply if such notification is impossible or involves a disproportionate effort. Nevertheless, users have a right to information about these recipients.</p>
         <p>Likewise, under Art. 21 GDPR, users and data subjects have the right to object to the controller&rsquo;s future processing of their data pursuant to Art. 6 Para. 1 lit. f) GDPR. In particular, an objection to data processing for the purpose of direct advertising is permissible. Your data processed when using our website will be deleted or blocked as soon as the purpose for its storage ceases to apply, provided the deletion of the same is not in breach of any statutory storage obligations or unless otherwise stipulated below.</p>
@@ -286,7 +288,7 @@ $(document).ready(function(){
     
     // TOGGLE SECTION
     $(".toggle").on("click",function(){
-        $(this).next().toggle();
+        $(this).hide().next().show();
     }).next().hide();
 
     // GALLERY / LIGHTBOX
