@@ -8,7 +8,7 @@
 -->
 <html lang="en" translate="no"><head>
 <title>Joey Schweickhardt</title>
-<meta charset="utf-8"><meta name="robots" content="index,nofollow,notranslate,noimageindex"><meta name="description" content="Welcome to the personal web page of Joey Schweickhardt."><meta name="keywords" content="joey,schweickhardt,stuttgart,architektur,architekt"><meta name="geo.region" content="DE-BW"><meta name="geo.placename" content="Stuttgart"><meta name="geo.position" content="48.778600;9.179746"><meta name="ICBM" content="48.778600, 9.179746"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes,shrink-to-fit=no"><meta name="format-detection" content="telephone=no">
+<meta charset="utf-8"><meta name="robots" content="index,nofollow,notranslate,noimageindex"><meta name="description" content="Welcome to the personal website of Joey Schweickhardt."><meta name="keywords" content="joey schweickhardt,stuttgart,architektur"><meta name="geo.region" content="DE-BW"><meta name="geo.placename" content="Stuttgart"><meta name="geo.position" content="48.778600;9.179746"><meta name="ICBM" content="48.778600, 9.179746"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes,shrink-to-fit=no"><meta name="format-detection" content="telephone=no">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http://www.w3.org/2000/svg%22%20height%3D%2232%22%20width%3D%2232%22%3E%3Ccircle%20cx%3D%2216%22%20cy%3D%2216%22%20r%3D%2214%22%20fill%3D%22%23000%22/%3E%3C/svg%3E">
 <style>
     @font-face{font-family:webfont;src:url("font/SourceCodePro-Regular.ttf");font-display:swap;}
@@ -282,7 +282,6 @@ $(document).ready(function(){
         $("#nav a[href='"+hash+"']").addClass("open");
         $("#" + hash.slice(2)).show().siblings(".content").hide();
         window.scrollTo(0,0);
-        document.title = "Joey Schweickhardt" + " \u2014 " + $("#nav a.open").html(); 
         return false;
     }
     $(window).bind("hashchange",function(e){refreshHash();});
@@ -404,6 +403,19 @@ $(document).ready(function(){
 	});
 
 });
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Joey Schweickhardt",
+  "url": "https://joeyws.com/",
+  "birthPlace": "Stuttgart"
+  "sameAs": [
+    "https://www.linkedin.com/in/joeyschweickhardt",
+    "https://www.instagram.com/joeyws/"
+  ]
+}
 </script>
 </body>
 </html>
