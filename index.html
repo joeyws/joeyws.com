@@ -54,11 +54,15 @@
     .video.playing:after{display:none;}
     video{width:100%;cursor:pointer;max-width:100%;}
     /* GALLERY */
-    .gallery{justify-content:flex-start;margin-right:calc(-1 * var(--spacer));display:flex;flex-wrap:wrap;line-height:0;font-size:0;}
+    /* .gallery{justify-content:flex-start;margin-right:calc(-1 * var(--spacer));display:flex;flex-wrap:wrap;line-height:0;font-size:0;}
     .gallery div{width:200px;padding-bottom:var(--spacer);padding-right:var(--spacer);cursor:zoom-in;display:flex;align-items:flex-start;justify-content:flex-start;flex-direction:column;}
     .gallery div img{max-width:100%;transition:all .1s ease-out;}
     .gallery div:hover img,.gallery div.show img{transform:translateY(-5px);}
-    .gallery div span{width:200px;font-size:1rem;line-height:1.2em;min-height:calc(1.2em*3);margin-top:var(--spacer);overflow:hidden;}
+    .gallery div span{width:200px;font-size:1rem;line-height:1.2em;min-height:calc(1.2em*3);margin-top:var(--spacer);overflow:hidden;} */
+    .gallery{column-gap:var(--spacer);columns:4 200px;}
+    .gallery>div{margin-bottom:calc(4 * var(--spacer));break-inside:avoid;cursor:pointer;}
+    .gallery div img{max-width:100%;transition:all .1s ease-out;}
+    .gallery div:hover img,.gallery div.show img{transform:translateY(-5px);}
     /* LIGHTBOX */
     #lightbox{user-select:none;z-index:999997;cursor:zoom-out;position:fixed;inset:0;display:none;}
     #lightbox img{cursor:pointer;max-height:90vh;max-width:calc(100vw - 2*var(--spacer));box-sizing:border-box;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);}
@@ -246,8 +250,8 @@
         <p>The font <a href="https://fontlibrary.org/en/font/nimbus-sans-l" rel="nofollow">Nimbus Sans L</a> used on this site is licensed under the <a href="https://www.gnu.org/licenses/gpl-2.0.html" rel="nofollow">GNU General Public License</a> (GPL) with the Font Exception.</p>
         <p><small><a href="https://www.ratgeberrecht.eu/rechtsgebiete/it-recht/" rel="nofollow">Weiß & Partner, Esslingen</a></small></p>
     </div>
-    <hr>
 </div>
+<hr>
 
 
 <script src="scripts.js"></script>
@@ -414,7 +418,6 @@ $(document).ready(function(){
   "@type": "Person",
   "name": "Joey Schweickhardt",
   "url": "https://joeyws.com/",
-  "birthPlace": "Stuttgart"
   "sameAs": [
     "https://ioeb-sammlung.de/node/210",
     "https://www.linkedin.com/in/joeyschweickhardt",
