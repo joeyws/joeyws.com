@@ -26,8 +26,8 @@
     body{overflow-y:scroll;color:var(--text);background:var(--background);background-size:cover;min-height:100vh;font:normal normal 1rem/1.2em webfont,monospace;}
     h1{display:inline-block;}
     i{font-style:italic;}
-    a,.gallery div span span{text-decoration:underline;text-underline-offset:2px;}
-    a:hover,.gallery div:hover span span,.gallery div.show span span{text-decoration:none;}
+    a,.gallery div span{text-decoration:underline;text-underline-offset:2px;}
+    a:hover,.gallery div:hover span,.gallery div.show span{text-decoration:none;}
     p,.p,ul,table,#map{margin-top:.8rem;}
     hr+*,img+p,.content *:first-child{margin-top:0;}
     hr{margin:3rem 0;}
@@ -39,7 +39,7 @@
     #header{gap:var(--spacer) 2em;/* font-family:webfont2,sans-serif;letter-spacing:.02em; */font-size:19px;line-height:1.4em;position:sticky;top:0;left:0;right:0;padding:var(--spacer);user-select:none;z-index:999996;display:flex;flex-wrap:wrap;justify-content:space-between;}
     #header>*{background:#0f0;border-radius:5px;padding:0 .6em;}
     .content{padding:var(--spacer);box-sizing:border-box;}
-    #nav a{margin-right:1.2em;}#nav a:last-child{margin-right:0;}#weather,#time{margin-left:1.2em;}
+        #nav a{margin-right:1.2em;}#nav a:last-child{margin-right:0;}#weather,#time{margin-left:1.2em;}
     /* MARQUEE */
     .marquee{flex-grow:1;user-select:none;overflow:hidden;width:180px;/* mask-mode:alpha;mask-image:linear-gradient(to right, transparent, #000 20px, #000 calc(100% - 20px), transparent); */}
     .marquee span{margin-right:1.5em;}
@@ -54,11 +54,12 @@
     .video.playing:after{display:none;}
     video{width:100%;cursor:pointer;max-width:100%;}
     /* GALLERY */
-    .gallery{justify-content:flex-start;margin-right:calc(-1 * var(--spacer));display:flex;flex-wrap:wrap;line-height:0;font-size:0;}
-    .gallery div{width:200px;padding-bottom:calc(3 * var(--spacer));padding-right:var(--spacer);cursor:zoom-in;display:flex;align-items:flex-start;justify-content:flex-start;flex-direction:column;}
-    .gallery div img{max-width:100%;transition:all .08s ease-out;}
-    .gallery div:hover img,.gallery div.show img{transform:translateY(-5px);}
-    .gallery div span{font-size:1rem;line-height:1.2em;margin-top:var(--spacer);overflow:hidden;}
+    .gallery{justify-content:flex-start;gap:calc(3* var(--spacer));/* margin:calc(-1 * var(--spacer)); */display:flex;flex-wrap:wrap;line-height:0;font-size:0;}
+    .gallery div{cursor:zoom-in;display:flex;/* padding:calc(1 * var(--spacer)); *//* flex-direction:column; */align-items:flex-start;}
+    .gallery div img{max-height:140px;transition:all .08s ease-out;}
+    /* .gallery div:hover img,.gallery div.show img{transform:translateY(-5px);} */
+    /* .gallery div:hover,.gallery div.show{outline:1px solid #faa;background:#fee;border-radius:var(--spacer);} */
+    .gallery div span{font-size:1rem;line-height:1.2em;margin-left:var(--spacer);max-width:180px;}
     /* LIGHTBOX */
     #lightbox{user-select:none;z-index:999997;cursor:zoom-out;position:fixed;inset:0;display:none;}
     #lightbox img{cursor:pointer;max-height:90vh;max-width:calc(100vw - 2*var(--spacer));box-sizing:border-box;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);}
@@ -200,12 +201,6 @@
     <div id="map"></div>
     <p><small>Image: NASA/Blue Marble</small></p>
     <hr>
-    <p id="website">
-        This website does not use cookies.<br>
-        Hosted on <a href="https://github.com/" rel="nofollow">GitHub</a>.<br>
-        Launched: 2011/01<!-- /16 -->
-    </p>
-    <hr>
     <pre id="qr" style="font-size:5px;line-height:1.2em;">
 ██████████████    ██        ██      ██████████████
 ██          ██  ████  ██████████    ██          ██
@@ -233,7 +228,15 @@
 ██          ██  ██      ████      ██████████  ██  
 ██████████████  ████    ██  ██              ██████</pre>
     <hr>
-    <p class="toggle"><a href="javascript:">Legal Notice</a></p>
+    <p>
+        This website does not use cookies.<br>
+        Hosted on <a href="https://github.com/" rel="nofollow">GitHub</a>.
+    </p>
+    <p id="website">
+        Launched:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2011/01/16
+    </p>
+    <hr>
+    <p class="toggle"><a href="javascript:">Legal & Policies</a></p>
     <div>
         <p>Privacy Policy</p>
         <p>Personal data (usually referred to just as &ldquo;data&rdquo; below) will only be processed by us to the extent necessary and for the purpose of providing a functional and user-friendly website, including its contents, and the services offered there. Per Art. 4 No. 1 of Regulation (EU) 2016/679, i.e. the General Data Protection Regulation (hereinafter referred to as the &ldquo;GDPR&rdquo;), &ldquo;processing&rdquo; refers to any operation or set of operations such as collection, recording, organization, structuring, storage, adaptation, alteration, retrieval, consultation, use, disclosure by transmission, dissemination, or otherwise making available, alignment, or combination, restriction, erasure, or destruction performed on personal data, whether by automated means or not.</p>
@@ -243,7 +246,7 @@
         <p>Likewise, under Art. 21 GDPR, users and data subjects have the right to object to the controller&rsquo;s future processing of their data pursuant to Art. 6 Para. 1 lit. f) GDPR. In particular, an objection to data processing for the purpose of direct advertising is permissible. Your data processed when using our website will be deleted or blocked as soon as the purpose for its storage ceases to apply, provided the deletion of the same is not in breach of any statutory storage obligations or unless otherwise stipulated below.</p>
         <p>Third-party Services</p>
         <p>This website is hosted via GitHub Pages. When you access the site, certain technical data (such as your IP address, browser type, and time of access) may be automatically processed by GitHub to ensure secure and reliable delivery of the website. For further details, please refer to <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub’s Privacy Statement</a>.</p>
-        <p>The font <a href="https://fontlibrary.org/en/font/nimbus-sans-l" rel="nofollow">Nimbus Sans L</a> used on this site is licensed under the <a href="https://www.gnu.org/licenses/gpl-2.0.html" rel="nofollow">GNU General Public License</a> (GPL) with the Font Exception.</p>
+        <!-- <p>The font <a href="https://fontlibrary.org/en/font/nimbus-sans-l" rel="nofollow">Nimbus Sans L</a> used on this site is licensed under the <a href="https://www.gnu.org/licenses/gpl-2.0.html" rel="nofollow">GNU General Public License</a> (GPL) with the Font Exception.</p> -->
         <p><small><a href="https://www.ratgeberrecht.eu/rechtsgebiete/it-recht/" rel="nofollow">Weiß & Partner, Esslingen</a></small></p>
     </div>
 </div>
@@ -299,7 +302,7 @@ $(document).ready(function(){
     // GALLERY / LIGHTBOX
     $(".gallery img").each(function(){
         var caption = $(this).attr("alt");
-        $(this).wrap("<div></div>").after("<span><span>"+caption+"</span></span>");
+        $(this).wrap("<div></div>").after("<span>"+caption+"</span>");
     });
     $("body").append("<div id='lightbox'><img src=''></div>");
     function lightboxLoad() {
@@ -365,9 +368,9 @@ $(document).ready(function(){
     getTime();
     setInterval(getTime,2000);
 
-    // LAST UPDATED
+    // LAST MODIFIED
     $.getJSON("https://api.github.com/repos/"+"joeyws/joeyws.com/commits",function(json){
-        $("#website").append( "<br>Last updated: " + json[0].commit.author.date.slice(0,-13).split("-")/* .reverse() */.join("/"));
+        $("#website").append( "<br>Last modified: " + json[0].commit.author.date.slice(0,-10).split("-")/* .reverse() */.join("/"));
     });
     
     // CONTACT
