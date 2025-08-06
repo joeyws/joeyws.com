@@ -305,7 +305,7 @@ $(document).ready(function(){
     $(".gallery img").each(function(){
         var caption = $(this).attr("alt");
         var date = "20" + $(this).attr("src").slice(4,6);
-        $(this).wrap("<div></div>").after("<span><span>"+caption+"</span> <sup>"+date+"</sup></span>");
+        $(this).wrap("<div></div>").after("<span><span>"+caption+"</span><br><sup>"+date+"</sup></span>");
     });
     $("body").append("<div id='lightbox'><img src=''></div>");
     function lightboxLoad() {
