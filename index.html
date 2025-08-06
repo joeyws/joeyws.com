@@ -56,8 +56,8 @@
     .video.playing:after{display:none;}
     video{width:100%;cursor:pointer;max-width:100%;}
     /* GALLERY */
-    .gallery{justify-content:flex-start;gap:calc(8* var(--spacer)) calc(6* var(--spacer));/* margin:calc(-1 * var(--spacer)); */display:flex;flex-wrap:wrap;line-height:0;font-size:0;}
-    .gallery div{max-width:100%;transition:all .08s ease-out;gap:var(--spacer);cursor:zoom-in;display:flex;/* flex-direction:column; */align-items:flex-start;}
+    .gallery{justify-content:flex-start;/* gap:calc(8* var(--spacer)) calc(6* var(--spacer)); */margin:calc(-4 * var(--spacer)) calc(-3 * var(--spacer));display:flex;flex-wrap:wrap;line-height:0;font-size:0;}
+    .gallery div{padding:calc(4* var(--spacer)) calc(3* var(--spacer));max-width:100%;transition:all .08s ease-out;gap:var(--spacer);cursor:zoom-in;display:flex;/* flex-direction:column; */align-items:flex-start;}
     .gallery div img{max-height:140px;/* max-width:200px; */}
     .gallery div:hover,.gallery div.show{transform:translateY(-5px);}
     .gallery div span{font-size:1rem;line-height:1.2em;max-width:140px;}
@@ -101,11 +101,12 @@
     </div>
     <hr>
     <div class="gallery">
-        <img src="img/250625.jpg" alt="Casa di accoglienza dei pellegrini di San Pietro">
+        <img src="img/250625-2.jpg" alt="Casa di accoglienza dei pellegrini di San Pietro, Renovation">
+        <img src="img/250625.jpg" alt="Casa di accoglienza dei pellegrini di San Pietro, Model">
         <img src="img/250531.jpg" alt="WKT Geometry Visualizer Web App">
         <img src="img/250610.jpg" alt="IntCDC Urbach Tower Model with Transport Box">
-        <img src="img/240719.jpg" alt="Pauluskirche Stuttgart Extension, Interior">
-        <img src="img/240719-3.jpg" alt="Pauluskirche Stuttgart Extension, Urban Situation">
+        <img src="img/240719.jpg" alt="Pauluskirche Extension, Interior">
+        <img src="img/240719-3.jpg" alt="Pauluskirche Extension, Urban Situation">
         <img src="img/231005.jpg" alt="Helvetia Campus Basel Facade Model, Herzog&nbsp;& de Meuron">
         <img src="img/220311.jpg" alt="Lightweight Pneu Pavilions">
         <img src="img/220311-2.jpg" alt="Pneu Concept">
@@ -201,6 +202,15 @@
     <div id="map"></div>
     <p><small>Image: NASA/Blue Marble</small></p>
     <hr>
+    <h2>joeyws.com</h2>
+    <p>
+        This website does not use cookies.<br>
+        Hosted on <a href="https://github.com/" rel="nofollow">GitHub</a>.
+    </p>
+    <p id="website">
+        Launched:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2011/01/16
+    </p>
+    <hr>
     <pre id="qr" style="font-size:5px;line-height:1.2em;">
 ██████████████    ██        ██      ██████████████
 ██          ██  ████  ██████████    ██          ██
@@ -228,14 +238,6 @@
 ██          ██  ██      ████      ██████████  ██  
 ██████████████  ████    ██  ██              ██████</pre>
     <hr>
-    <h2>joeyws.com</h2>
-    <p>
-        This website does not use cookies.<br>
-        Hosted on <a href="https://github.com/" rel="nofollow">GitHub</a>.
-    </p>
-    <p id="website">
-        Launched:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2011/01/16
-    </p>
     <hr>
     <p class="toggle"><a href="javascript:">Legal & Policies</a></p>
     <div>
