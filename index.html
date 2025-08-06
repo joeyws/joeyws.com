@@ -26,8 +26,8 @@
     body{overflow-y:scroll;color:var(--text);background:var(--background);background-size:cover;min-height:100vh;font:normal normal 1rem/1.2em webfont,monospace;}
     h1{display:inline-block;}
     i{font-style:italic;}
-    a,.gallery div span{text-decoration:underline;text-underline-offset:2px;}
-    a:hover,.gallery div:hover span,.gallery div.show span{text-decoration:none;}
+    a,.gallery div>span>span{text-decoration:underline;text-underline-offset:2px;}
+    a:hover,.gallery div:hover span span,.gallery div.show span span{text-decoration:none;}
     p,pre,ul,table,#map{margin-top:.8rem;}
     hr+*,img+p,.content *:first-child{margin-top:0;}
     hr{margin:3rem 0;}
@@ -36,6 +36,7 @@
     td:nth-child(1){width:8em;padding-right:var(--spacer);}
     td:nth-child(2){width:auto;}
     pre{font-family:webfont,monospace;}
+    sup{vertical-align:5%;font-size:.7em;text-decoration:none;background:var(--text);color:var(--background);padding:0 3px;border-radius:100vmax;}
     /* LAYOUT */
     #header{gap:var(--spacer) 2em;/* font-family:webfont2,sans-serif;letter-spacing:.02em; */font-size:19px;line-height:1.4em;position:sticky;top:0;left:0;right:0;padding:var(--spacer);padding-bottom:0;user-select:none;z-index:999996;display:flex;flex-wrap:wrap;justify-content:space-between;}
     #header>*{background:#0f0;border-radius:5px;padding:0 .6em;}
@@ -56,10 +57,10 @@
     video{width:100%;cursor:pointer;max-width:100%;}
     /* GALLERY */
     .gallery{justify-content:flex-start;gap:calc(8* var(--spacer)) calc(6* var(--spacer));/* margin:calc(-1 * var(--spacer)); */display:flex;flex-wrap:wrap;line-height:0;font-size:0;}
-    .gallery div{cursor:zoom-in;display:flex;/* flex-direction:column; */align-items:flex-start;}
-    .gallery div img{max-height:140px;/* max-width:200px; */transition:all .08s ease-out;}
-    .gallery div:hover img,.gallery div.show img{transform:translateY(-5px);}
-    .gallery div span{font-size:1rem;line-height:1.2em;padding-left:var(--spacer);max-width:160px;}
+    .gallery div{transition:all .08s ease-out;gap:var(--spacer);cursor:zoom-in;display:flex;/* flex-direction:column; */align-items:flex-start;}
+    .gallery div img{max-height:140px;/* max-width:200px; */}
+    .gallery div:hover,.gallery div.show{transform:translateY(-5px);}
+    .gallery div span{font-size:1rem;line-height:1.2em;max-width:140px;}
     /* LIGHTBOX */
     #lightbox{user-select:none;z-index:999997;cursor:zoom-out;position:fixed;inset:0;display:none;}
     #lightbox img{cursor:pointer;max-height:90vh;max-width:calc(100vw - 2*var(--spacer));box-sizing:border-box;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);}
@@ -304,7 +305,7 @@ $(document).ready(function(){
     $(".gallery img").each(function(){
         var caption = $(this).attr("alt");
         var date = "20" + $(this).attr("src").slice(4,6);
-        $(this).wrap("<div></div>").after("<span>"+caption+" ("+date+")</span>");
+        $(this).wrap("<div></div>").after("<span><span>"+caption+"</span> <sup>"+date+"</sup></span>");
     });
     $("body").append("<div id='lightbox'><img src=''></div>");
     function lightboxLoad() {
