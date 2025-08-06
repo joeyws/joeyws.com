@@ -28,17 +28,18 @@
     i{font-style:italic;}
     a,.gallery div span{text-decoration:underline;text-underline-offset:2px;}
     a:hover,.gallery div:hover span,.gallery div.show span{text-decoration:none;}
-    p,.p,ul,table,#map{margin-top:.8rem;}
+    p,pre,ul,table,#map{margin-top:.8rem;}
     hr+*,img+p,.content *:first-child{margin-top:0;}
     hr{margin:3rem 0;}
     table{width:100%;}
     tr{border-top:1px solid var(--text);}
     td:nth-child(1){width:8em;padding-right:var(--spacer);}
     td:nth-child(2){width:auto;}
+    pre{font-family:webfont,monospace;}
     /* LAYOUT */
-    #header{gap:var(--spacer) 2em;/* font-family:webfont2,sans-serif;letter-spacing:.02em; */font-size:19px;line-height:1.4em;position:sticky;top:0;left:0;right:0;padding:var(--spacer);user-select:none;z-index:999996;display:flex;flex-wrap:wrap;justify-content:space-between;}
+    #header{gap:var(--spacer) 2em;/* font-family:webfont2,sans-serif;letter-spacing:.02em; */font-size:19px;line-height:1.4em;position:sticky;top:0;left:0;right:0;padding:var(--spacer);padding-bottom:0;user-select:none;z-index:999996;display:flex;flex-wrap:wrap;justify-content:space-between;}
     #header>*{background:#0f0;border-radius:5px;padding:0 .6em;}
-    .content{padding:var(--spacer);box-sizing:border-box;}
+    .content{padding:var(--spacer);padding-top:0;box-sizing:border-box;}
         #nav a{margin-right:1.2em;}#nav a:last-child{margin-right:0;}#weather,#time{margin-left:1.2em;}
     /* MARQUEE */
     .marquee{flex-grow:1;user-select:none;overflow:hidden;width:180px;/* mask-mode:alpha;mask-image:linear-gradient(to right, transparent, #000 20px, #000 calc(100% - 20px), transparent); */}
@@ -47,19 +48,18 @@
     #nav{display:inline-flex;}
     #nav a{text-decoration:none;border-radius:5px;padding:0 .6em;}
         #nav a{margin-left:-1.2em;}#nav a:first-child{margin-left:-.6em;}#nav a:last-child{margin-right:-.6em;}
-    #nav a.open{/* box-shadow:inset 0 3px 10px #0005; */background:var(--text);color:var(--background);/* text-decoration:underline;text-decoration-thickness:.1em;text-underline-offset:.1em; */cursor:default;}
+    #nav a.open{background:var(--text);color:var(--background);/* text-decoration:underline;text-decoration-thickness:.1em;text-underline-offset:.1em; */cursor:default;}
     /* VIDEO */
     .video{cursor:pointer;overflow:hidden;position:relative;max-width:960px;}
     .video:after{border:0 solid transparent;border-width:10px 30px;border-left-color:var(--text);border-right:0;line-height:0;font-size:0;content:"";display:inline-block;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);pointer-events:none;}
     .video.playing:after{display:none;}
     video{width:100%;cursor:pointer;max-width:100%;}
     /* GALLERY */
-    .gallery{justify-content:flex-start;gap:calc(3* var(--spacer));/* margin:calc(-1 * var(--spacer)); */display:flex;flex-wrap:wrap;line-height:0;font-size:0;}
-    .gallery div{cursor:zoom-in;display:flex;/* padding:calc(1 * var(--spacer)); *//* flex-direction:column; */align-items:flex-start;}
-    .gallery div img{max-height:140px;transition:all .08s ease-out;}
-    /* .gallery div:hover img,.gallery div.show img{transform:translateY(-5px);} */
-    /* .gallery div:hover,.gallery div.show{outline:1px solid #faa;background:#fee;border-radius:var(--spacer);} */
-    .gallery div span{font-size:1rem;line-height:1.2em;margin-left:var(--spacer);max-width:180px;}
+    .gallery{justify-content:flex-start;gap:calc(8* var(--spacer)) calc(6* var(--spacer));/* margin:calc(-1 * var(--spacer)); */display:flex;flex-wrap:wrap;line-height:0;font-size:0;}
+    .gallery div{cursor:zoom-in;display:flex;/* flex-direction:column; */align-items:flex-start;}
+    .gallery div img{max-height:140px;/* max-width:200px; */transition:all .08s ease-out;}
+    .gallery div:hover img,.gallery div.show img{transform:translateY(-5px);}
+    .gallery div span{font-size:1rem;line-height:1.2em;padding-left:var(--spacer);max-width:160px;}
     /* LIGHTBOX */
     #lightbox{user-select:none;z-index:999997;cursor:zoom-out;position:fixed;inset:0;display:none;}
     #lightbox img{cursor:pointer;max-height:90vh;max-width:calc(100vw - 2*var(--spacer));box-sizing:border-box;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);}
@@ -87,7 +87,7 @@
 
 
 <div class="content" id="works">
-    <div style="width:800px;">
+    <div style="max-width:800px;">
         <div class="video">
             <video onclick="this.parentElement.classList.add('playing');this.setAttribute('controls','');this.setAttribute('autoplay','');" onload="this.setAttribute('controlsList','nodownload noplaybackrate');this.setAttribute('controlsList','');" oncontextmenu="return false;" poster="img/other/landderechsen.jpg" tabindex="0" preload="none">
                 <source src="video/LandDerEchsen1080.mp4" type="video/mp4">
@@ -106,12 +106,12 @@
         <img src="img/250610.jpg" alt="IntCDC Urbach Tower Model with Transport Box">
         <img src="img/240719.jpg" alt="Pauluskirche Stuttgart Extension, Interior">
         <img src="img/240719-3.jpg" alt="Pauluskirche Stuttgart Extension, Urban Situation">
-        <img src="img/231005.jpg" alt="Helvetia Campus Basel Facade Model, Herzog&nbsp;&&nbsp;de&nbsp;Meuron">
+        <img src="img/231005.jpg" alt="Helvetia Campus Basel Facade Model, Herzog&nbsp;& de Meuron">
         <img src="img/220311.jpg" alt="Lightweight Pneu Pavilions">
         <img src="img/220311-2.jpg" alt="Pneu Concept">
         <img src="img/210211.jpg" alt="Vasikkasaari Climate Institute Helsinki">
         <img src="img/201018.jpg" alt="Wardrobe with Hand-sewn Curtain">
-        <img src="img/other/droneport.gif" alt="Droneport">
+        <img src="img/200728.gif" alt="Droneport">
         <img src="img/200125.jpg" alt="Light Studies Models">
         <img src="img/191115.jpg" alt="Wooden Structure with Traction Cables">
         <img src="img/190722.jpg" alt="Sint Aneke Club Antwerp">
@@ -131,7 +131,7 @@
         <img src="img/250610-2.jpg" alt="Stuttgart Marketplace">
         <img src="img/241229.jpg" alt="San Pietro">
         <img src="img/241215.jpg" alt="PR16">
-        <img src="img/230820.jpg" alt="Railway Engine Depot, Herzog&nbsp;&&nbsp;de&nbsp;Meuron">
+        <img src="img/230820.jpg" alt="Railway Engine Depot, Herzog&nbsp;& de Meuron">
         <img src="img/230114.jpg" alt="Sant&rsquo; Ireneo, Mauro Galantino">
         <img src="img/230109.jpg" alt="Via Albricci, Asnago Vender">
         <img src="img/230104.jpg" alt="Nilufar Gallery">
@@ -228,12 +228,13 @@
 ██          ██  ██      ████      ██████████  ██  
 ██████████████  ████    ██  ██              ██████</pre>
     <hr>
+    <p>joeyws.com</p>
     <p>
         This website does not use cookies.<br>
         Hosted on <a href="https://github.com/" rel="nofollow">GitHub</a>.
     </p>
     <p id="website">
-        Launched:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2011/01/16
+        Launched:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2011/01/16
     </p>
     <hr>
     <p class="toggle"><a href="javascript:">Legal & Policies</a></p>
@@ -302,7 +303,8 @@ $(document).ready(function(){
     // GALLERY / LIGHTBOX
     $(".gallery img").each(function(){
         var caption = $(this).attr("alt");
-        $(this).wrap("<div></div>").after("<span>"+caption+"</span>");
+        var date = "20" + $(this).attr("src").slice(4,6);
+        $(this).wrap("<div></div>").after("<span>"+caption+" ("+date+")</span>");
     });
     $("body").append("<div id='lightbox'><img src=''></div>");
     function lightboxLoad() {
@@ -370,7 +372,7 @@ $(document).ready(function(){
 
     // LAST MODIFIED
     $.getJSON("https://api.github.com/repos/"+"joeyws/joeyws.com/commits",function(json){
-        $("#website").append( "<br>Last modified: " + json[0].commit.author.date.slice(0,-10).split("-")/* .reverse() */.join("/"));
+        $("#website").append( "<br>Last modified:&nbsp;&nbsp;&nbsp;" + json[0].commit.author.date.slice(0,-10).split("-")/* .reverse() */.join("/"));
     });
     
     // CONTACT
