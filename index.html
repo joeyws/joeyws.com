@@ -38,18 +38,17 @@
     pre{font-family:webfont,monospace;}
     small{vertical-align:5%;font-size:.7em;text-decoration:none;}
     /* LAYOUT */
-    #header{gap:var(--spacer) 2em;/* font-family:webfont2,sans-serif;letter-spacing:.02em; */font-size:19px;line-height:1.4em;position:sticky;top:0;left:0;right:0;padding:var(--spacer);padding-bottom:0;user-select:none;z-index:999996;display:flex;flex-wrap:wrap;justify-content:space-between;}
-    #header>*{padding:0 .6em;background:#0f0;border-radius:5px;}
+    #header{gap:var(--spacer) 3em;/* font-family:webfont2,sans-serif;letter-spacing:.02em;font-size:19px; *//* position:sticky;top:0;left:0;right:0; */padding:var(--spacer);padding-bottom:0;user-select:none;z-index:999996;display:flex;flex-wrap:wrap;justify-content:space-between;}
+    #weather,#time,#nav a{margin-left:1.2em;}
     .content{padding:var(--spacer);padding-top:0;box-sizing:border-box;}
-        #nav a{margin-right:1.2em;}#nav a:last-child{margin-right:0;}#weather,#time{margin-left:1.2em;}
     /* MARQUEE */
-    .marquee{flex-grow:1;user-select:none;overflow:hidden;width:180px;/* mask-mode:alpha;mask-image:linear-gradient(to right, transparent, #000 20px, #000 calc(100% - 20px), transparent); */}
+    .marquee{line-height:1.4em;background:var(--text);color:var(--background);user-select:none;overflow:hidden;/* width:180px;flex-grow:1; *//* mask-mode:alpha;mask-image:linear-gradient(to right, transparent, #000 20px, #000 calc(100% - 20px), transparent); */}
     .marquee span{margin-right:1.5em;}
     /* NAV */
     #nav{display:inline-flex;}
-    #nav a{text-decoration:none;padding:0 .6em;}
-        #nav a{margin-left:-1.2em;}#nav a:first-child{margin-left:-.6em;}#nav a:last-child{margin-right:-.6em;}
-    #nav a.open{border-radius:5px;background:var(--text);color:var(--background);/* text-decoration:underline;text-decoration-thickness:.1em;text-underline-offset:.1em; */cursor:default;}
+    /* #nav a{text-decoration:none;} */
+    #nav a:first-child{margin-left:0;}
+    #nav a.open{background:var(--text);color:var(--background);text-decoration:none !important;/* text-decoration-thickness:.1em;text-underline-offset:.1em; */cursor:default;}
     /* VIDEO */
     .video{cursor:pointer;overflow:hidden;position:relative;max-width:960px;}
     .video:after{border:0 solid transparent;border-width:10px 30px;border-left-color:var(--text);border-right:0;line-height:0;font-size:0;content:"";display:inline-block;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);pointer-events:none;}
@@ -76,13 +75,13 @@
 <body>
 
 
+<div class="marquee"><span lang="zh-Hant">歡迎</span><span lang="es">Bienvenidos</span><span lang="en">Welcome</span><span lang="hi">स्वागत हे</span><span lang="ar">اهلا وسهلا</span><span lang="bn">স্বাগত</span><span lang="pt">Bem-vindo</span><span lang="ru">добро пожаловать</span><span lang="ur">خوش آمدید</span><span lang="ja">ようこそ</span><span lang="id">Selamat datang</span><span lang="de">Willkommen</span><span lang="tr">Hoşgeldiniz</span><span lang="ta">வரவேற்பு</span><span lang="fr">Bienvenue</span><span lang="ko">어서 오십시오</span><span lang="vi">Hoan nghênh</span><span lang="jv">Sugeng Rawuh</span><span lang="sw">Karibu</span><span lang="sa">Svāgatam</span><span lang="it">Benvenuto</span><span lang="pa">ਸਵਾਗਤ ਹੈ</span></div>
 <div id="header">
     <h1 class="loading">Joey Schweickhardt</h1>
     <div id="nav">
         <a href="#/works">Works</a><a href="#/places">Places</a><a href="#/about">About</a>
     </div>
     <div>Stuttgart<span id="weather"></span><span id="time"></span></div>
-    <div class="marquee"><span lang="zh-Hant">歡迎</span><span lang="es">Bienvenidos</span><span lang="en">Welcome</span><span lang="hi">स्वागत हे</span><span lang="ar">اهلا وسهلا</span><span lang="bn">স্বাগত</span><span lang="pt">Bem-vindo</span><span lang="ru">добро пожаловать</span><span lang="ur">خوش آمدید</span><span lang="ja">ようこそ</span><span lang="id">Selamat datang</span><span lang="de">Willkommen</span><span lang="tr">Hoşgeldiniz</span><span lang="ta">வரவேற்பு</span><span lang="fr">Bienvenue</span><span lang="ko">어서 오십시오</span><span lang="vi">Hoan nghênh</span><span lang="jv">Sugeng Rawuh</span><span lang="sw">Karibu</span><span lang="sa">Svāgatam</span><span lang="it">Benvenuto</span><span lang="pa">ਸਵਾਗਤ ਹੈ</span></div>
 </div>
 <hr>
 
