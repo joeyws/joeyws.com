@@ -36,7 +36,7 @@
     td:nth-child(1){width:8em;padding-right:var(--spacer);}
     td:nth-child(2){width:auto;}
     pre{font-family:webfont,monospace;}
-    small{vertical-align:5%;font-size:.7em;text-decoration:none;/* text-transform:uppercase; */}
+    small{vertical-align:5%;font-size:.7em;text-decoration:none;}
     /* LAYOUT */
     #header{gap:var(--spacer) 3em;/* font-family:webfont2,sans-serif;letter-spacing:.02em;font-size:19px; *//* position:sticky;top:0;left:0;right:0; */padding:var(--spacer);padding-bottom:0;user-select:none;z-index:999996;display:flex;flex-wrap:wrap;justify-content:space-between;}
     #weather,#time,#nav a{margin-left:1.2em;}
@@ -48,19 +48,19 @@
     #nav{display:inline-flex;}
     /* #nav a{text-decoration:none;} */
     #nav a:first-child{margin-left:0;}
-    #nav a.open{background:var(--text);color:var(--background);text-decoration:none !important;/* text-decoration-thickness:.1em;text-underline-offset:.1em; */cursor:default;}
+    #nav a.open{background:#f0f;text-decoration:none !important;/* text-decoration-thickness:.1em;text-underline-offset:.1em; */cursor:default;}
     /* VIDEO */
     .video{cursor:pointer;overflow:hidden;position:relative;max-width:960px;}
     .video:after{border:0 solid transparent;border-width:10px 30px;border-left-color:var(--text);border-right:0;line-height:0;font-size:0;content:"";display:inline-block;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);pointer-events:none;}
     .video.playing:after{display:none;}
     video{width:100%;cursor:pointer;max-width:100%;}
     /* GALLERY */
-    .gallery{justify-content:flex-start;gap:calc(10* var(--spacer)) calc(6* var(--spacer));display:flex;flex-wrap:wrap;line-height:0;font-size:0;}
-    .gallery div{max-width:100%;transition:all .08s ease-out;gap:var(--spacer);cursor:zoom-in;display:flex;/* flex-direction:column; */align-items:flex-start;}
-    .gallery div img{max-height:140px;}
+    .gallery{justify-content:space-evenly;grid-template-columns:repeat(auto-fit,180px);gap:calc(3* var(--spacer)) calc(6* var(--spacer));display:grid;line-height:0;font-size:0;}
+    .gallery div{gap:var(--spacer);cursor:zoom-in;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;}
+    .gallery div img{max-height:160px;max-width:160px;/* transition:all .12s; */}
     /* .gallery div:hover img,.gallery div.show img{transform:translateY(-5px);} */
     /* .gallery div:hover span span,.gallery div.show span span{background:#ff0;} */
-    .gallery div span{font-size:1rem;line-height:1.2em;max-width:140px;}
+    .gallery div span{font-size:1rem;line-height:1.2em;height:calc(4* 1.2em);/* max-width:140px; */}
     /* LIGHTBOX */
     #lightbox{user-select:none;z-index:999997;cursor:zoom-out;position:fixed;inset:0;display:none;}
     #lightbox img{cursor:pointer;max-height:90vh;max-width:calc(100vw - 2*var(--spacer));box-sizing:border-box;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);}
@@ -302,7 +302,7 @@ $(document).ready(function(){
     $(".gallery img").each(function(){
         var caption = $(this).attr("alt");
         var date = "20" + $(this).attr("src").slice(4,6);
-        $(this).wrap("<div></div>").after("<span><span>"+caption+"</span><br><small>"+date+"</small></span>");
+        $(this).wrap("<div></div>").after("<span><span>"+caption+"</span></span>"); // <br><small>"+date+"</small>
     });
     $("body").append("<div id='lightbox'><img src=''></div>");
     function lightboxLoad() {
