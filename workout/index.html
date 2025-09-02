@@ -1,13 +1,12 @@
-<!DOCTYPE>
+<!DOCTYPE html>
 <html>
 <head>
 	<title>Workout</title>
 	<meta name=viewport content="width=width=device-width,initial-scale=1.0,user-scalable=no">
 	<meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <link rel="apple-touch-icon" href="">
-  <meta name="theme-color" content="#000000">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="theme-color" content="#000000">
 	<style>
 		:root{--background:#000;--text:#0f0;--spacer:.5vh;}
 		/* RESET */ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{user-select:none;margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;vertical-align:baseline;background:transparent;} body{line-height:1;} table{border-collapse:collapse;border-spacing:0;} caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;} q,blockquote{quotes:none;} q:before,q:after,blockquote:before,blockquote:after{content:"";content:none;} article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;} *{-webkit-text-size-adjust:none;-webkit-appearance:none;-webkit-border-radius:0;box-sizing:content-box;} *{font-smoothing:antialiased;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased;} *:active{outline:none;} ::selection{background:#2990f9;color:#fff;} ::-moz-selection{background:#2990f9;color:#fff;}
@@ -15,7 +14,7 @@
 		#timer{padding:var(--spacer);font-size:4em;line-height:1em;}
 		ol{list-style:arabic inside;}
 		li{cursor:pointer;padding:var(--spacer);border-top:1px dotted var(--text);}
-		li:not(.active):hover{}
+		/* li:not(.active):hover{} */
 		li.active{background:var(--text);color:var(--background);}
 		a{text-decoration:none;}
 	</style>
@@ -35,7 +34,7 @@
 		<li>Bergsteiger</li>
 		<li>Ausfallschritte</li>
 		<li>Kraulen</li>
-		<li>Burpees (Streck-Sprung, Liegestütz)</li>
+		<li>Burpees<!--  (Streck-Sprung, Liegestütz) --></li>
 	</ol>
 </div>
 
@@ -75,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
       highlight(currentIndex + 1);
       startTimer();
     } else {
-      timerEl.textContent = "0";
+      timerEl.textContent = "Geschafft!";
     }
   }
 
