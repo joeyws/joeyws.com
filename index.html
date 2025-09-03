@@ -27,7 +27,7 @@
     h1{display:inline-block;}
     i{font-style:italic;}
     a,.gallery div>span>span{text-decoration:underline;}
-    a:hover,.gallery div:hover span span,.gallery div.show span span{text-decoration:none;}
+    a:hover,.gallery div:hover span span,.gallery div.show span span{text-decoration:none;background:var(--text);color:var(--background);}
     h2,p,pre,ul,table,#map{margin-top:.8rem;}
     hr+*,img+p,.content *:first-child{margin-top:0;}
     hr{margin:3rem 0;}
@@ -47,7 +47,7 @@
     /* NAV */
     #nav{display:inline-flex;}
     #nav a:first-child{margin-left:0;}
-    #nav a.open{background:#f0f;text-decoration:none !important;cursor:default;}
+    #nav a.open{background:var(--text);color:var(--background);text-decoration:none !important;cursor:default;}
     /* VIDEO */
     .video{cursor:pointer;overflow:hidden;position:relative;max-width:960px;}
     .video:after{border:0 solid transparent;border-width:10px 30px;border-left-color:var(--text);border-right:0;line-height:0;font-size:0;content:"";display:inline-block;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);pointer-events:none;}
@@ -56,7 +56,7 @@
     /* GALLERY */
     .gallery{justify-content:space-between;grid-template-columns:repeat(auto-fit,180px);gap:calc(3* var(--spacer)) calc(6* var(--spacer));display:grid;line-height:0;font-size:0;}
     .gallery div{gap:var(--spacer);cursor:zoom-in;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;}
-    .gallery div img{max-height:160px;max-width:160px;transition:all .1s;}
+    .gallery div img{max-height:160px;max-width:160px;transition:all .2s;}
     .gallery div:hover img,.gallery div.show img{transform:translateY(-5px);}
     .gallery div span{font-size:1rem;line-height:1.2em;height:calc(4* 1.2em);}
     /* LIGHTBOX */
