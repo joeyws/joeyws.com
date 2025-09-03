@@ -55,7 +55,7 @@
     video{width:100%;cursor:pointer;max-width:100%;}
     /* GALLERY */
     .gallery{justify-content:space-between;grid-template-columns:repeat(auto-fit,180px);gap:calc(3* var(--spacer)) calc(6* var(--spacer));display:grid;line-height:0;font-size:0;}
-    .gallery div{gap:var(--spacer);cursor:zoom-in;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;}
+    .gallery div{/* padding:calc(3* var(--spacer)) calc(6* var(--spacer)); */gap:var(--spacer);cursor:zoom-in;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;}
     .gallery div img{max-height:160px;max-width:160px;/* transition:all .2s; */}
     /* .gallery div:hover img,.gallery div.show img{transform:translateY(-5px);} */
     .gallery div span{font-size:1rem;line-height:1.2em;height:calc(4* 1.2em);}
@@ -280,7 +280,7 @@ $(document).ready(function(){
         $("#nav a").removeClass("open");
         $("#nav a[href='"+hash+"']").addClass("open");
         $("#" + hash.slice(2)).show().siblings(".content").hide();
-        window.scrollTo(0,0);
+        /* window.scrollTo(0,0); */
         return false;
     }
     $(window).bind("hashchange",function(e){refreshHash();});
