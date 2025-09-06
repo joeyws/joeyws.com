@@ -26,8 +26,8 @@
     body{overflow-y:scroll;color:var(--text);background:var(--background);background-size:cover;min-height:100vh;font:normal normal 1rem/1.2em webfont,monospace;}
     h1{display:inline-block;}
     i{font-style:italic;}
-    a,.gallery div>span>span{text-decoration:underline;}
-    a:hover,.gallery div:hover span span,.gallery div.show span span{text-decoration:none;background:var(--text);color:var(--background);}
+    a/* ,.gallery div>span>span */{text-decoration:underline;}
+    a:hover/* ,.gallery div:hover span span,.gallery div.show span span */{text-decoration:none;background:var(--text);color:var(--background);}
     h2,p,pre,ul,table,#map{margin-top:.8rem;}
     hr+*,img+p,.content *:first-child{margin-top:0;}
     hr{margin:3rem 0;}
@@ -54,11 +54,13 @@
     .video.playing:after{display:none;}
     video{width:100%;cursor:pointer;max-width:100%;}
     /* GALLERY */
-    .gallery{justify-content:space-between;grid-template-columns:repeat(auto-fit,180px);gap:calc(3* var(--spacer)) calc(6* var(--spacer));display:grid;line-height:0;font-size:0;}
+    .gallery{justify-content:space-evenly;justify-items:center;grid-template-columns:repeat(auto-fit,180px);gap:calc(2* var(--spacer));display:grid;line-height:0;font-size:0;}
     .gallery div{/* padding:calc(3* var(--spacer)) calc(6* var(--spacer)); */gap:var(--spacer);cursor:zoom-in;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;}
-    .gallery div img{max-height:160px;max-width:160px;/* transition:all .2s; */}
-    /* .gallery div:hover img,.gallery div.show img{transform:translateY(-5px);} */
-    .gallery div span{font-size:1rem;line-height:1.2em;height:calc(4* 1.2em);}
+    .gallery div img{max-height:160px;max-width:160px;transition:all .12s;}
+    .gallery div:hover img,.gallery div.show img{transform:translateY(-5px);}
+    .gallery div span{opacity:0;transition:all .12s;}
+    .gallery div:hover span,.gallery div.show span{opacity:1;transform:translateY(-5px);}
+    .gallery div span{font-size:1rem;line-height:1.2em;height:calc(3* 1.2em);}
     /* LIGHTBOX */
     #lightbox{user-select:none;z-index:999997;cursor:zoom-out;position:fixed;inset:0;display:none;}
     #lightbox img{cursor:pointer;max-height:90vh;max-width:calc(100vw - 2*var(--spacer));box-sizing:border-box;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);}
