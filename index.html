@@ -26,7 +26,7 @@
     body{overflow-y:scroll;color:var(--text);background:var(--background);background-size:cover;min-height:100vh;font:normal normal 1rem/1.2em webfont,monospace;}
     h1{display:inline-block;}
     i{font-style:italic;}
-    a/* ,.gallery div>span>span */{text-decoration:underline;}
+    a/* ,.gallery div>span>span */{text-decoration:none;box-shadow:inset 0 -.05em var(--text);}
     a:hover/* ,.gallery div:hover span span,.gallery div.show span span */{text-decoration:none;background:var(--text);color:var(--background);}
     h2,p,pre,ul,table,#map{margin-top:.8rem;}
     hr+*,img+p,.content *:first-child{margin-top:0;}
@@ -50,11 +50,12 @@
     #nav a.open{background:var(--text);color:var(--background);text-decoration:none !important;cursor:default;}
     /* VIDEO */
     .video{cursor:pointer;overflow:hidden;position:relative;max-width:960px;}
-    .video:after{border:0 solid transparent;border-width:10px 30px;border-left-color:var(--text);border-right:0;line-height:0;font-size:0;content:"";display:inline-block;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);pointer-events:none;}
+    /* .video:after{border:0 solid transparent;border-width:10px 30px;border-left-color:var(--text);border-right:0;line-height:0;font-size:0;content:"";display:inline-block;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);pointer-events:none;} */
+    .video:after{content:"Play";background:var(--text);color:var(--background);display:inline-block;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);pointer-events:none;}
     .video.playing:after{display:none;}
     video{width:100%;cursor:pointer;max-width:100%;}
     /* GALLERY */
-    .gallery{padding:calc(2*var(--spacer));padding-top:0;justify-content:stretch;grid-template-columns:repeat(auto-fit,minmax(200px, 1fr));/* gap:calc(4* var(--spacer)); */display:grid;line-height:0;font-size:0;}
+    .gallery{padding:calc(2*var(--spacer));padding-top:0;justify-content:stretch;grid-template-columns:repeat(auto-fit,minmax(220px, 1fr));/* gap:calc(4* var(--spacer)); */display:grid;line-height:0;font-size:0;}
     .gallery div{padding:calc(3*var(--spacer));padding-top:0;gap:var(--spacer);cursor:zoom-in;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;}
     .gallery div img{max-height:180px;max-width:100%;}
     /* .gallery div:hover img,.gallery div.show img{transform:translateY(-5px);} */
@@ -204,9 +205,7 @@
         This website does not use cookies.<br>
         Hosted on <a href="https://github.com/" rel="nofollow">GitHub</a>.
     </p>
-    <p id="website">
-        Launched:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2011/01/16
-    </p>
+    <pre id="website">Launched:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;16/01/2011</pre>
     <hr>
     <pre id="qr" style="font-size:5px;line-height:1.2em;">
 ██████████████    ██        ██      ██████████████
@@ -363,7 +362,7 @@ $(document).ready(function(){
 
     // LAST MODIFIED
     $.getJSON("https://api.github.com/repos/"+"joeyws/joeyws.com/commits",function(json){
-        $("#website").append( "<br>Last modified:&nbsp;&nbsp;" + json[0].commit.author.date.slice(0,-10).split("-")/* .reverse() */.join("/"));
+        $("#website").append( "<br>Last modified:&nbsp;&nbsp;" + json[0].commit.author.date.slice(0,-10).split("-").reverse().join("/"));
     });
     
     // CONTACT
