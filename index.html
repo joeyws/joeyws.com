@@ -30,8 +30,7 @@
     i{font-style:italic;}
     a,.gallery div span span{color:#00f;text-decoration:underline;}
     a:hover,.gallery div:hover span span,.gallery div.show span span,#nav a.open{text-decoration:none;background:var(--text);color:var(--background);}
-    p,pre,table,#map{margin-top:.8rem;}
-    h2,h3{margin-top:.8rem;}
+    h2,h3,p,pre,table,#map{margin-top:.8rem;}
     hr+*,img+p,.content *:first-child{margin-top:0;}
     p{max-width:800px;}
     hr{margin:3rem 0;}
@@ -39,39 +38,37 @@
     tr{border-top:1px solid var(--text);}
     td:nth-child(1){width:8em;padding-right:var(--spacer);}
     td:nth-child(2){width:auto;}
-    pre{font-family:webfont,monospace;}
-    /* LAYOUT */
-    #header{gap:var(--spacer) 3em;user-select:none;z-index:999996;display:flex;flex-wrap:wrap;justify-content:space-between;}
-    #weather,#time,#nav a{margin-left:1.2em;}
     /* MARQUEE */
     .marquee{margin:calc(-1 * var(--spacer));margin-bottom:var(--spacer);line-height:1.4em;background:var(--text);color:var(--background);user-select:none;overflow:hidden;white-space:nowrap;/* mask-mode:alpha;mask-image:linear-gradient(to right, transparent, #000 20px, #000 calc(100% - 20px), transparent); */}
     .marquee span{margin-right:1.5em;}
+    /* LAYOUT */
+    #header{gap:var(--spacer) 3em;user-select:none;z-index:999996;display:flex;flex-wrap:wrap;justify-content:space-between;}
+    #weather,#time,#nav a{margin-left:1.2em;}
     /* NAV */
     #nav{display:inline-flex;}
     #nav a:first-child{margin-left:0;}
     #nav a.open{text-decoration:none !important;cursor:default;}
     /* VIDEO */
-    .video{cursor:pointer;overflow:hidden;position:relative;max-width:960px;}
-    .video:after{content:"Play";background:var(--text);color:var(--background);display:inline-block;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);pointer-events:none;}
-    .video.playing:after{display:none;}
-    video{width:100%;cursor:pointer;max-width:100%;}
+    .video{overflow:hidden;position:relative;max-width:960px;}
+    .video img,.video video{width:100%;max-width:100%;cursor:pointer;}
+    .video:not(.playing)::after{content:"Play";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:var(--text);color:var(--background);display:inline-block;pointer-events:none;}
+    .video video{display:none;}
     /* GALLERY */
     .gallery{padding:calc(2*var(--spacer));padding-top:0;justify-content:stretch;grid-template-columns:repeat(auto-fit,minmax(220px, 1fr));display:grid;line-height:0;font-size:0;}
     .gallery div{padding:calc(3*var(--spacer));padding-top:0;gap:var(--spacer);cursor:zoom-in;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;}
-    .gallery div img{height:auto;max-height:180px;width:auto;max-width:100%;}
-    /* .gallery div:hover img,.gallery div.show img{transform:translateY(-5px);} */
+    .gallery div img{height:auto;width:auto;max-height:180px;max-width:100%;}
     .gallery div span{font-size:1rem;line-height:1.2em;height:calc(3* 1.2em);}
     /* LIGHTBOX */
     #lightbox{user-select:none;z-index:999997;cursor:zoom-out;position:fixed;inset:0;display:none;}
     #lightbox img{cursor:pointer;max-height:90vh;max-width:calc(100vw - 2*var(--spacer));box-sizing:border-box;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);}
     /* EFFECTS */
+    @keyframes blink{0%{opacity:0;}50%{opacity:1;}}
     .loading{animation:.3s blink steps(1) infinite;}
+    #time-blink{animation:2s blink steps(1) infinite;}
+    @keyframes position{100%{outline-color:transparent;outline-offset:20px;}}
     #map{width:760px;max-width:100%;aspect-ratio:150/75;background:center center url(img/other/world.gif) no-repeat scroll;position:relative;background-size:contain;}
     #map:after{top:23%;left:52.5%;outline:1px solid #0f0;background:#0f0;animation:position 1.2s infinite ease-out;width:7px;height:7px;border-radius:100vmax;pointer-events:none;position:absolute;transform:translate(-50%,-50%);display:block;content:"";}
-    #time-blink{animation:2s blink steps(1) infinite;}
-    @keyframes blink{0%{opacity:0;}50%{opacity:1;}}
-    @keyframes position{100%{outline-color:transparent;outline-offset:20px;}}
-</style>
+    </style>
 </head>
 <body>
 
@@ -91,17 +88,16 @@
 
 <main>
 <div class="content" id="works">
-    <div style="max-width:800px;">
-        <div class="video">
-            <video fetchpriority="high" onclick="this.parentElement.classList.add('playing');this.setAttribute('controls','');this.setAttribute('autoplay','');" onload="this.setAttribute('controlsList','nodownload noplaybackrate');this.setAttribute('controlsList','');" oncontextmenu="return false;" poster="img/other/landderechsen.jpg" tabindex="0" preload="auto">
-                <source src="video/LandDerEchsen1080.mp4" type="video/mp4">
-                <source src="video/LandDerEchsen720.webm" type="video/webm">
-                <source src="https://www.dropbox.com/s/mmcykw5nus3m39u/LandDerEchsen1080.ogv?raw=1" type="video/ogg">
-            </video>
-        </div>
-        <p>Land der Echsen (Germany, 2021). On the forgotten grounds of a derelict freight yard, a new urban quarter is in the making. For years, non-profit collectives have occupied the old loading halls &mdash; breathing life into the decaying space. But now, as redevelopment plans advance and demolition looms, they are forced to leave. Just then, an unexpected presence appears: lizards. Silent, enigmatic, and strangely defiant, they threaten to derail the entire project.</p>
-        <p>Born from <i>Anti-Stuttgart &mdash; A Determinate Negation</i>, a critical design studio at <a href="https://www.igma.uni-stuttgart.de/en/">IGmA</a>, the film reimagines urban development as a stage for ecological and political tension. Premiered at the University of Stuttgart&#8217;s architecture <a href="https://www.k1.live/">graduate exhibition</a> and featured at the <a href="https://www.current-stuttgart.de/">CURRENT Festival</a> for Art and Urban Space.</p>
+    <div class="video">
+        <img src="img/other/landderechsen.jpg" alt="Land der Echsen" />
+        <video fetchpriority="high" oncontextmenu="return false;" tabindex="0" preload="auto">
+            <source src="video/LandDerEchsen1080.mp4" type="video/mp4">
+            <source src="video/LandDerEchsen720.webm" type="video/webm">
+            <source src="https://www.dropbox.com/s/mmcykw5nus3m39u/LandDerEchsen1080.ogv?raw=1" type="video/ogg">
+        </video>
     </div>
+    <p>Land der Echsen (Germany, 2021). On the forgotten grounds of a derelict freight yard, a new urban quarter is in the making. For years, non-profit collectives have occupied the old loading halls &mdash; breathing life into the decaying space. But now, as redevelopment plans advance and demolition looms, they are forced to leave. Just then, an unexpected presence appears: lizards. Silent, enigmatic, and strangely defiant, they threaten to derail the entire project.</p>
+    <p>Born from <i>Anti-Stuttgart &mdash; A Determinate Negation</i>, a critical design studio at <a href="https://www.igma.uni-stuttgart.de/en/">IGmA</a>, the film reimagines urban development as a stage for ecological and political tension. Premiered at the University of Stuttgart&#8217;s architecture <a href="https://www.k1.live/">graduate exhibition</a> and featured at the <a href="https://www.current-stuttgart.de/">CURRENT Festival</a> for Art and Urban Space.</p>
     <hr>
     <div class="gallery">
         <img loading="lazy" decoding="async" src="img/250625-2.jpg" alt="Casa di accoglienza dei pellegrini di San Pietro, Renovation">
@@ -233,8 +229,11 @@
 ██          ██  ██      ████      ██████████  ██  
 ██████████████  ████    ██  ██              ██████</pre>
     <hr>
-
-    Live gesehen: 
+    <p>
+        Live gesehen:<br>
+        Yellowjackets, Chick Corea, Herbie Hancock, Jacob Collier, Quincy Jones, Lee Ritenour, Dave Grusin, Toto, George Benson, Dee Dee Bridgewater, ...
+        <!-- Phil Collins, Raye, Jon Batiste, Supertramp, Roger Hodgson, Lenny Kravitz -->
+    </p> 
     <hr>
     <!-- <h2>Berufsbezeichnung<h2>
     <p>
@@ -294,56 +293,6 @@ $(document).ready(function(){
         return false;
     }
     $(window).bind("hashchange",function(e){refreshHash();});
-    
-    /* // TOGGLE SECTION
-    $(".toggle").on("click",function(){
-        $(this).hide().next().show();
-    }).next().hide(); */
-
-    // GALLERY / LIGHTBOX
-    $(".gallery img").each(function(){
-        var caption = $(this).attr("alt");
-        var date = "20" + $(this).attr("src").slice(4,6);
-        $(this).wrap("<div></div>").after("<span><span>"+caption+"</span></span>");
-    });
-    $("body").append("<div id='lightbox'><img src=''></div>");
-    function lightboxLoad() {
-        var [fileName, fileExtension] = $(".gallery div.show img").attr("src").split('.');
-        var imgURL = fileName + '_l.' + fileExtension;
-        $("#lightbox").show().children("img").attr("src",imgURL);
-    };
-    function lightboxPrev() {
-        if ($("#lightbox").is(":visible")) {
-            if (!$(".gallery div:first-child").is(".show")) {
-                $(".gallery div.show").removeClass("show").prev("div").addClass("show");
-                lightboxLoad();
-            }
-        }
-    };
-    function lightboxNext() {
-        if ($("#lightbox").is(":visible")) {
-            if (!$(".gallery div:last-child").is(".show")) {
-                $(".gallery div.show").removeClass("show").next("div").addClass("show");
-                lightboxLoad();
-            } else {
-                lightboxClose();
-            }
-        }
-    };
-    function lightboxClose() {
-        $("#lightbox").hide().children("img").attr("src","data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");
-        $(".gallery div.show").removeClass("show");
-    };
-    $(".gallery>div").on("click",function(){
-        $(this).addClass("show");
-        lightboxLoad();
-    });
-    $("#lightbox").on("click",function(e){
-        lightboxClose();
-    }).on("click","img",function(e){
-        e.stopPropagation();
-        lightboxNext();
-    });
 
     // WEATHER
     const getWeather = async () => {
@@ -396,6 +345,60 @@ $(document).ready(function(){
         },() => {
             $(this).next("span").html("copying failed");
         });
+    });
+
+    // GALLERY / LIGHTBOX
+    $(".gallery img").each(function(){
+        var caption = $(this).attr("alt");
+        var date = "20" + $(this).attr("src").slice(4,6);
+        $(this).wrap("<div></div>").after("<span><span>"+caption+"</span></span>");
+    });
+    $("body").append("<div id='lightbox'><img src=''></div>");
+    function lightboxLoad() {
+        var [fileName, fileExtension] = $(".gallery div.show img").attr("src").split('.');
+        var imgURL = fileName + '_l.' + fileExtension;
+        $("#lightbox").show().children("img").attr("src",imgURL);
+    };
+    function lightboxPrev() {
+        if ($("#lightbox").is(":visible")) {
+            if (!$(".gallery div:first-child").is(".show")) {
+                $(".gallery div.show").removeClass("show").prev("div").addClass("show");
+                lightboxLoad();
+            }
+        }
+    };
+    function lightboxNext() {
+        if ($("#lightbox").is(":visible")) {
+            if (!$(".gallery div:last-child").is(".show")) {
+                $(".gallery div.show").removeClass("show").next("div").addClass("show");
+                lightboxLoad();
+            } else {
+                lightboxClose();
+            }
+        }
+    };
+    function lightboxClose() {
+        $("#lightbox").hide().children("img").attr("src","data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");
+        $(".gallery div.show").removeClass("show");
+    };
+    $(".gallery>div").on("click",function(){
+        $(this).addClass("show");
+        lightboxLoad();
+    });
+    $("#lightbox").on("click",function(e){
+        lightboxClose();
+    }).on("click","img",function(e){
+        e.stopPropagation();
+        lightboxNext();
+    });
+
+    // VIDEO
+    $(".video img").on("click",function(){
+        $(this).hide();
+        const $video = $(this).parent().addClass("playing").find("video");
+        $video.show();
+        $video[0].setAttribute('controlsList','nodownload noplaybackrate');
+        $video[0].play();
     });
 
     // KEYBOARD CONTROL
