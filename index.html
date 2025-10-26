@@ -76,21 +76,24 @@
 <body>
 
 
-<div class="marquee"><span lang="zh-Hant">歡迎</span><span lang="es">Bienvenidos</span><span lang="en">Welcome</span><span lang="hi">स्वागत हे</span><span lang="ar">اهلا وسهلا</span><span lang="bn">স্বাগত</span><span lang="pt">Bem-vindo</span><span lang="ru">добро пожаловать</span><span lang="ur">خوش آمدید</span><span lang="ja">ようこそ</span><span lang="id">Selamat datang</span><span lang="de">Willkommen</span><span lang="tr">Hoşgeldiniz</span><span lang="ta">வரவேற்பு</span><span lang="fr">Bienvenue</span><span lang="ko">어서 오십시오</span><span lang="vi">Hoan nghênh</span><span lang="jv">Sugeng Rawuh</span><span lang="sw">Karibu</span><span lang="sa">Svāgatam</span><span lang="it">Benvenuto</span><span lang="pa">ਸਵਾਗਤ ਹੈ</span></div>
-<div id="header">
-    <h1 class="loading">Joey Schweickhardt</h1>
-    <div id="nav">
-        <a href="#/works">Works</a><a href="#/places">Places</a><a href="#/contact">Contact</a>
+<header>
+    <div class="marquee"><span lang="zh-Hant">歡迎</span><span lang="es">Bienvenidos</span><span lang="en">Welcome</span><span lang="hi">स्वागत हे</span><span lang="ar">اهلا وسهلا</span><span lang="bn">স্বাগত</span><span lang="pt">Bem-vindo</span><span lang="ru">добро пожаловать</span><span lang="ur">خوش آمدید</span><span lang="ja">ようこそ</span><span lang="id">Selamat datang</span><span lang="de">Willkommen</span><span lang="tr">Hoşgeldiniz</span><span lang="ta">வரவேற்பு</span><span lang="fr">Bienvenue</span><span lang="ko">어서 오십시오</span><span lang="vi">Hoan nghênh</span><span lang="jv">Sugeng Rawuh</span><span lang="sw">Karibu</span><span lang="sa">Svāgatam</span><span lang="it">Benvenuto</span><span lang="pa">ਸਵਾਗਤ ਹੈ</span></div>
+    <div id="header">
+        <h1 class="loading">Joey Schweickhardt</h1>
+        <div id="nav">
+            <a href="#/works">Works</a><a href="#/places">Places</a><a href="#/contact">Contact</a>
+        </div>
+        <div>Stuttgart<span id="weather"></span><span id="time"></span></div>
     </div>
-    <div>Stuttgart<span id="weather"></span><span id="time"></span></div>
-</div>
+</header>
 <hr>
 
 
+<main>
 <div class="content" id="works">
     <div style="max-width:800px;">
         <div class="video">
-            <video onclick="this.parentElement.classList.add('playing');this.setAttribute('controls','');this.setAttribute('autoplay','');" onload="this.setAttribute('controlsList','nodownload noplaybackrate');this.setAttribute('controlsList','');" oncontextmenu="return false;" poster="img/other/landderechsen.jpg" tabindex="0" preload="none">
+            <video fetchpriority="high" onclick="this.parentElement.classList.add('playing');this.setAttribute('controls','');this.setAttribute('autoplay','');" onload="this.setAttribute('controlsList','nodownload noplaybackrate');this.setAttribute('controlsList','');" oncontextmenu="return false;" poster="img/other/landderechsen.jpg" tabindex="0" preload="none">
                 <source src="video/LandDerEchsen1080.mp4" type="video/mp4">
                 <source src="video/LandDerEchsen720.webm" type="video/webm">
                 <source src="https://www.dropbox.com/s/mmcykw5nus3m39u/LandDerEchsen1080.ogv?raw=1" type="video/ogg">
@@ -252,6 +255,7 @@
     <p>This website does not collect or store any personal data. Certain technical data may be processed by the hosting provider, GitHub, solely to deliver the site. For details, see <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="nofollow">GitHub’s Privacy Statement</a>.</p>
     <!-- <p>The font <a href="https://fontlibrary.org/en/font/nimbus-sans-l" rel="nofollow">Nimbus Sans L</a> used on this site is licensed under the <a href="https://www.gnu.org/licenses/gpl-2.0.html" rel="nofollow">GNU General Public License</a> (GPL) with the Font Exception.</p> -->
 </div>
+</main>
 
 
 <script src="scripts.js"></script>
