@@ -7,6 +7,33 @@
             █████ █████ ████   ████ █████  ████    █████ █████ █████
             █████ █████ █████ █████ ██ ██ █████ ██ █████ █████ █ █ █
 
+
+            ██████████████    ██        ██      ██████████████
+            ██          ██  ████  ██████████    ██          ██
+            ██  ██████  ██    ██████  ██    ██  ██  ██████  ██
+            ██  ██████  ██  ████  ██  ██████    ██  ██████  ██
+            ██  ██████  ██      ██  ██  ██  ██  ██  ██████  ██
+            ██          ██  ██  ██    ████      ██          ██
+            ██████████████  ██  ██  ██  ██  ██  ██████████████
+                                    ████                      
+            ██████████  ██████████  ██  ████████  ██  ██  ██  
+            ████  ████  ██  ██        ██    ██  ████      ██
+            ████  ████  ████████  ████    ████████  ██  ██    
+                        ██████████        ██                
+            ████    ██  ██    ██  ██      ████    ██████  ████
+            ██    ██      ████  ██  ████    ██    ████        
+            ██    ████  ██    ██      ████████████  ██  ██  ██
+            ██    ██      ██    ██  ████    ██            ████
+            ██  ██  ██  ██████      ██  ████████████████    ██
+                            ██████          ██      ██      ██
+            ██████████████  ████  ████    ████  ██  ██  ██████
+            ██          ██    ██  ██    ██████      ████      
+            ██  ██████  ██  ████  ██        ████████████      
+            ██  ██████  ██  ████    ██████  ████    ██    ████
+            ██  ██████  ██  ████      ████    ██    ██  ██  ██
+            ██          ██  ██      ████      ██████████  ██  
+            ██████████████  ████    ██  ██              ██████
+
 -->
 <html lang="en" translate="no">
 <head>
@@ -38,11 +65,12 @@
     hr{margin:3rem 0;}
     table{width:100%;}
     tr{border-top:1px solid var(--text);}
+    td{vertical-align:top;}
     td:nth-child(1){width:8em;padding-right:var(--spacer);}
     td:nth-child(2){width:auto;}
     /* MARQUEE */
     .marquee{margin:calc(-1 * var(--spacer));margin-bottom:var(--spacer);line-height:1.4em;background:var(--text);color:var(--background);user-select:none;overflow:hidden;white-space:nowrap;/* mask-mode:alpha;mask-image:linear-gradient(to right, transparent, #000 20px, #000 calc(100% - 20px), transparent); */}
-    .marquee span{margin-right:1.5em;}
+    .marquee span{margin-right:1.8em;}
     /* LAYOUT */
     #header{gap:var(--spacer) 3em;user-select:none;z-index:999996;display:flex;flex-wrap:wrap;justify-content:space-between;}
     #weather,#time,#nav a{margin-left:1.2em;}
@@ -80,7 +108,7 @@
     <div id="header">
         <h1 class="loading">Joey Schweickhardt</h1>
         <div id="nav">
-            <a href="#/works">Works</a><a href="#/places">Places</a><a href="#/contact">Contact</a>
+            <a href="#/works">Works</a><a href="#/places">Places</a><!-- <a href="#/about">About</a> --><a href="#/contact">Contact</a>
         </div>
         <div>Stuttgart<span id="weather"></span><span id="time"></span></div>
     </div>
@@ -158,9 +186,14 @@
         <img loading="lazy" src="img/160808.jpg" alt="N&yacute;idalur">
     </div>
 </div>
-<div class="content" id="contact">
-    <!-- <h2>Professional</h2>
+<!-- <div class="content" id="about">
+    <h2>Artists seen live</h2>
+    <p>Herbie&nbsp;Hancock&nbsp;(2025), Jacob&nbsp;Collier&nbsp;(2025,&nbsp;2023,&nbsp;2017), Chick&nbsp;Corea&nbsp;†&nbsp;(2019), Yellowjackets&nbsp;(2018), Quincy&nbsp;Jones&nbsp;†&nbsp;(2017), George&nbsp;Benson&nbsp;(2017), Dee&nbsp;Dee&nbsp;Bridgewater&nbsp;(2017), Lee&nbsp;Ritenour&nbsp;(2017), Dave&nbsp;Grusin&nbsp;(2017), Toto&nbsp;(2015), ...</p>
+    Phil Collins (2019), Raye (2025), Jon Batiste (2023), Supertramp (2010), Roger Hodgson (2013), Lenny Kravitz (2008)
+    <hr>
+    <h2>Professional</h2>
     <table>
+        <tr><td data-title="01.10.2025-">2025-Present</td><td>Schmelzle+Partner Architekten mbB BDA</td></tr>
         <tr><td data-title="01.03.2024-31.07.2025">2025</td><td>Institute for Computational Design and Construction, University of Stuttgart</td></tr>
         <tr><td data-title="01.05.2024-31.05.2025">2024-2025</td><td>IntCDC Cluster of Excellence, University of Stuttgart</td></tr>
         <tr><td data-title="01.03.2023-29.02.2024">2023&ndash;2024</td><td>Herzog & de Meuron</td></tr>
@@ -171,7 +204,7 @@
     <hr>
     <h2>Academic</h2>
     <table>
-        <tr><td data-title="01.10.2021-..2025">2021&ndash;2025</td><td>University of Stuttgart, MSc Architecture and Urban Planning</td></tr>
+        <tr><td data-title="01.10.2021-16.06.2025">2021&ndash;2025</td><td>University of Stuttgart, MSc Architecture and Urban Planning</td></tr>
         <tr><td data-title="05.09.2022-26.01.2023">2022&ndash;2023</td><td>Politecnico di Milano, Study Abroad, Architecture and Urban Design</td></tr>
         <tr><td data-title="15.07.2022-22.07.2022">2022</td><td>Architectural Association School of Architecture/State Academy of Fine Arts Stuttgart, Visiting School</td></tr>
         <tr><td data-title="01.10.2018-30.09.2021">2018&ndash;2021</td><td>University of Stuttgart, BSc Architecture and Urban Planning</td></tr>
@@ -186,7 +219,8 @@
         <tr><td data-title="16.09.2021-17.09.2021">2021</td><td>Film screening, CURRENT Festival for Art and Urban Space</td></tr>
         <tr><td data-title="13.01.2020-25.01.2020">2020</td><td>Annual Design Projects Selection, IRGE, University of Stuttgart</td></tr>
     </table>
-    <hr> -->
+</div> -->
+<div class="content" id="contact">
     <p>
         Joey Schweickhardt<br>
         <span class="address1"></span><br>
@@ -200,43 +234,11 @@
     <p><a href="https://www.linkedin.com/in/joeyschweickhardt/">LinkedIn</a></p>
     <hr>
     <div id="map"></div>
-    <p>Image: NASA, Visible Earth</p>
+    <p>Image: NASA/Blue Marble</p>
     <hr>
-    <h2>joeyws.com</h2>
-    <p id="website">Launched: 16/01/2011</p>
-    <pre id="qr" style="font-size:5px;line-height:1.2em;">
-██████████████    ██        ██      ██████████████
-██          ██  ████  ██████████    ██          ██
-██  ██████  ██    ██████  ██    ██  ██  ██████  ██
-██  ██████  ██  ████  ██  ██████    ██  ██████  ██
-██  ██████  ██      ██  ██  ██  ██  ██  ██████  ██
-██          ██  ██  ██    ████      ██          ██
-██████████████  ██  ██  ██  ██  ██  ██████████████
-                        ████                      
-██████████  ██████████  ██  ████████  ██  ██  ██  
-  ████  ████  ██  ██        ██    ██  ████      ██
-████  ████  ████████  ████    ████████  ██  ██    
-              ██████████        ██                
-████    ██  ██    ██  ██      ████    ██████  ████
-██    ██      ████  ██  ████    ██    ████        
-██    ████  ██    ██      ████████████  ██  ██  ██
-██    ██      ██    ██  ████    ██            ████
-██  ██  ██  ██████      ██  ████████████████    ██
-                ██████          ██      ██      ██
-██████████████  ████  ████    ████  ██  ██  ██████
-██          ██    ██  ██    ██████      ████      
-██  ██████  ██  ████  ██        ████████████      
-██  ██████  ██  ████    ██████  ████    ██    ████
-██  ██████  ██  ████      ████    ██    ██  ██  ██
-██          ██  ██      ████      ██████████  ██  
-██████████████  ████    ██  ██              ██████</pre>
+    <h2>About this site</h2>
+    <p id="website">Launched:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;16/01/2011</p>
     <hr>
-    <!-- <hr>
-    <p>
-        Live gesehen:<br>
-        Yellowjackets, Chick Corea, Herbie Hancock, Jacob Collier, Quincy Jones, Lee Ritenour, Dave Grusin, Toto, George Benson, Dee Dee Bridgewater, ...
-        Phil Collins, Raye, Jon Batiste, Supertramp, Roger Hodgson, Lenny Kravitz
-    </p>  -->
     <!-- <h2>Berufsbezeichnung<h2>
     <p>
         Architekt im Praktikum (AL-Nr. 171294), verliehen in Deutschland<br>
@@ -251,9 +253,7 @@
         Registration number: 171294
     </p>
     <p>
-        Applicable regulations:<br>
-        - Architektengesetz Baden-Württemberg (ArchG BW)<br>
-        - Berufsordnung der Architektenkammer Baden-Württemberg
+        The Architektengesetz Baden-Württemberg (ArchG BW) and the professional code of the Chamber of Architects of Baden-Württemberg apply.
     </p> -->
     <h2>Privacy</h2>
     <p>This website does not collect or store any personal data. Certain technical data may be processed by the hosting provider, GitHub, solely to deliver the site. For details, see <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="nofollow">GitHub’s Privacy Statement</a>.</p>
