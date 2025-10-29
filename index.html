@@ -7,33 +7,6 @@
             █████ █████ ████   ████ █████  ████    █████ █████ █████
             █████ █████ █████ █████ ██ ██ █████ ██ █████ █████ █ █ █
 
-
-            ██████████████    ██        ██      ██████████████
-            ██          ██  ████  ██████████    ██          ██
-            ██  ██████  ██    ██████  ██    ██  ██  ██████  ██
-            ██  ██████  ██  ████  ██  ██████    ██  ██████  ██
-            ██  ██████  ██      ██  ██  ██  ██  ██  ██████  ██
-            ██          ██  ██  ██    ████      ██          ██
-            ██████████████  ██  ██  ██  ██  ██  ██████████████
-                                    ████                      
-            ██████████  ██████████  ██  ████████  ██  ██  ██  
-            ████  ████  ██  ██        ██    ██  ████      ██
-            ████  ████  ████████  ████    ████████  ██  ██    
-                        ██████████        ██                
-            ████    ██  ██    ██  ██      ████    ██████  ████
-            ██    ██      ████  ██  ████    ██    ████        
-            ██    ████  ██    ██      ████████████  ██  ██  ██
-            ██    ██      ██    ██  ████    ██            ████
-            ██  ██  ██  ██████      ██  ████████████████    ██
-                            ██████          ██      ██      ██
-            ██████████████  ████  ████    ████  ██  ██  ██████
-            ██          ██    ██  ██    ██████      ████      
-            ██  ██████  ██  ████  ██        ████████████      
-            ██  ██████  ██  ████    ██████  ████    ██    ████
-            ██  ██████  ██  ████      ████    ██    ██  ██  ██
-            ██          ██  ██      ████      ██████████  ██  
-            ██████████████  ████    ██  ██              ██████
-
 -->
 <html lang="en" translate="no">
 <head>
@@ -54,7 +27,7 @@
     ::selection{background:var(--text);color:var(--background);}
     /* RESET */* {text-decoration-thickness:1px;text-underline-offset:2px;text-decoration-skip-ink:none;font-kerning:normal;outline:none;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{box-sizing:content-box;border-radius:0;/* -webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-border-radius:0;-webkit-text-size-adjust:none;-webkit-appearance:none;font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased; */}
 	html{font-size:13px;}
-    body{padding:var(--spacer);overflow-y:scroll;color:var(--text);background:var(--background);background-size:cover;min-height:100vh;font:normal normal 1rem/1.2em webfont,monospace;}
+    body{padding:var(--spacer);overflow-y:scroll;color:var(--text);background:var(--background);font:normal normal 1rem/1.2em webfont,monospace;}
     h1{display:inline-block;}
     i{font-style:italic;}
     a,.gallery div span span{color:#00f;text-decoration:underline;}
@@ -62,7 +35,7 @@
     h2,h3,p,pre,table,#map{margin-top:.8rem;}
     hr+*,img+p,.content *:first-child{margin-top:0;}
     p{max-width:800px;}
-    hr{margin:3rem 0;}
+    hr{margin:3rem 0;/* border-top:1px solid #aaa; */}
     table{width:100%;}
     tr{border-top:1px solid var(--text);}
     td{vertical-align:top;}
@@ -74,6 +47,7 @@
     /* LAYOUT */
     #header{gap:var(--spacer) 3em;user-select:none;z-index:999996;display:flex;flex-wrap:wrap;justify-content:space-between;}
     #weather,#time,#nav a{margin-left:1.2em;}
+    footer{text-align:right;}
     /* NAV */
     #nav{display:inline-flex;}
     #nav a:first-child{margin-left:0;}
@@ -84,10 +58,10 @@
     .video:not(.playing)::after{content:"Play";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:var(--text);color:var(--background);display:inline-block;pointer-events:none;}
     .video video{display:none;}
     /* GALLERY */
-    .gallery{padding:calc(2*var(--spacer));padding-top:0;justify-content:stretch;grid-template-columns:repeat(auto-fit,minmax(220px, 1fr));display:grid;line-height:0;font-size:0;}
-    .gallery div{padding:calc(3*var(--spacer));padding-top:0;gap:var(--spacer);cursor:zoom-in;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;}
+    .gallery{padding:0 calc(2*var(--spacer));justify-content:stretch;grid-template-columns:repeat(auto-fit,minmax(220px, 1fr));display:grid;line-height:0;font-size:0;}
+    .gallery div{padding:calc(3*var(--spacer));padding-top:0;row-gap:var(--spacer);cursor:zoom-in;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;}
     .gallery div img{height:auto;width:auto;max-height:180px;max-width:100%;}
-    .gallery div span{font-size:1rem;line-height:1.2em;height:calc(3* 1.2em);}
+    .gallery div>span{font-size:1rem;line-height:1.2em;height:calc(3* 1.2em);}
     /* LIGHTBOX */
     #lightbox{user-select:none;z-index:999997;cursor:zoom-out;position:fixed;inset:0;display:none;}
     #lightbox img{cursor:pointer;max-height:90vh;max-width:calc(100vw - 2*var(--spacer));box-sizing:border-box;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);}
@@ -98,7 +72,7 @@
     @keyframes position{100%{outline-color:transparent;outline-offset:20px;}}
     #map{width:760px;max-width:100%;aspect-ratio:150/75;background:center center url(img/other/world.gif) no-repeat scroll;position:relative;background-size:contain;}
     #map:after{top:23%;left:52.5%;outline:1px solid #0f0;background:#0f0;animation:position 1.2s infinite ease-out;width:7px;height:7px;border-radius:100vmax;pointer-events:none;position:absolute;transform:translate(-50%,-50%);display:block;content:"";}
-    </style>
+</style>
 </head>
 <body>
 
@@ -108,7 +82,7 @@
     <div id="header">
         <h1 class="loading">Joey Schweickhardt</h1>
         <div id="nav">
-            <a href="#/works">Works</a><a href="#/places">Places</a><!-- <a href="#/about">About</a> --><a href="#/contact">Contact</a>
+            <a href="#/works">Works</a><a href="#/places">Places</a><a href="#/contact">Contact</a>
         </div>
         <div>Stuttgart<span id="weather"></span><span id="time"></span></div>
     </div>
@@ -186,40 +160,6 @@
         <img loading="lazy" src="img/160808.jpg" alt="N&yacute;idalur">
     </div>
 </div>
-<!-- <div class="content" id="about">
-    <h2>Artists seen live</h2>
-    <p>Herbie&nbsp;Hancock&nbsp;(2025), Jacob&nbsp;Collier&nbsp;(2025,&nbsp;2023,&nbsp;2017), Chick&nbsp;Corea&nbsp;†&nbsp;(2019), Yellowjackets&nbsp;(2018), Quincy&nbsp;Jones&nbsp;†&nbsp;(2017), George&nbsp;Benson&nbsp;(2017), Dee&nbsp;Dee&nbsp;Bridgewater&nbsp;(2017), Lee&nbsp;Ritenour&nbsp;(2017), Dave&nbsp;Grusin&nbsp;(2017), Toto&nbsp;(2015), ...</p>
-    Phil Collins (2019), Raye (2025), Jon Batiste (2023), Supertramp (2010), Roger Hodgson (2013), Lenny Kravitz (2008)
-    <hr>
-    <h2>Professional</h2>
-    <table>
-        <tr><td data-title="01.10.2025-">2025-Present</td><td>Schmelzle+Partner Architekten mbB BDA</td></tr>
-        <tr><td data-title="01.03.2024-31.07.2025">2025</td><td>Institute for Computational Design and Construction, University of Stuttgart</td></tr>
-        <tr><td data-title="01.05.2024-31.05.2025">2024-2025</td><td>IntCDC Cluster of Excellence, University of Stuttgart</td></tr>
-        <tr><td data-title="01.03.2023-29.02.2024">2023&ndash;2024</td><td>Herzog & de Meuron</td></tr>
-        <tr><td data-title="14.03.2023-09.09.2023">2022</td><td>Behnisch Architekten</td></tr>
-        <tr><td data-title="25.10.2022-28.02.2023">2021&ndash;2022</td><td>REM ASSETS</td></tr>
-        <tr><td data-title="01.10.2021-30.09.2022">2020&ndash;2021</td><td>Werner Sobek</td></tr>
-    </table>
-    <hr>
-    <h2>Academic</h2>
-    <table>
-        <tr><td data-title="01.10.2021-16.06.2025">2021&ndash;2025</td><td>University of Stuttgart, MSc Architecture and Urban Planning</td></tr>
-        <tr><td data-title="05.09.2022-26.01.2023">2022&ndash;2023</td><td>Politecnico di Milano, Study Abroad, Architecture and Urban Design</td></tr>
-        <tr><td data-title="15.07.2022-22.07.2022">2022</td><td>Architectural Association School of Architecture/State Academy of Fine Arts Stuttgart, Visiting School</td></tr>
-        <tr><td data-title="01.10.2018-30.09.2021">2018&ndash;2021</td><td>University of Stuttgart, BSc Architecture and Urban Planning</td></tr>
-    </table>
-    <hr>
-    <h2>Honors</h2>
-    <table>
-        <tr><td data-title="01.04.2023-31.03.2024">2023&ndash;2024</td><td>Deutschlandstipendium Scholarship, Federal Republic of Germany/Ed. Züblin AG</td></tr>
-        <tr><td data-title="01.03.2023-29.02.2024">2023&ndash;2024</td><td>Swiss-European Mobility Programme</td></tr>
-        <tr><td data-title="05.09.2022-26.01.2023,01.03.2023-02.10.2023">2022&ndash;2023</td><td>Erasmus+ schoolarship, European Union</td></tr>
-        <tr><td data-title="24.06.2022-04.07.2022">2022</td><td>Graduate Design Projects Selection, Department of Architecture, University of Stuttgart</td></tr>
-        <tr><td data-title="16.09.2021-17.09.2021">2021</td><td>Film screening, CURRENT Festival for Art and Urban Space</td></tr>
-        <tr><td data-title="13.01.2020-25.01.2020">2020</td><td>Annual Design Projects Selection, IRGE, University of Stuttgart</td></tr>
-    </table>
-</div> -->
 <div class="content" id="contact">
     <p>
         Joey Schweickhardt<br>
@@ -236,28 +176,23 @@
     <div id="map"></div>
     <p>Image: NASA/Blue Marble</p>
     <hr>
-    <h2>About this site</h2>
-    <p id="website">Launched:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;16/01/2011</p>
-    <hr>
-    <!-- <h2>Berufsbezeichnung<h2>
-    <p>
-        Architekt im Praktikum (AL-Nr. 171294), verliehen in Deutschland<br>
-        Mitglied der Architektenkammer Baden-Württemberg, Danneckerstraße 54, 70182 Stuttgart<br>
-        Es gelten das Architektengesetz Baden-Württemberg (ArchG BW) und die Berufsordnung der Architektenkammer Baden-Württemberg.
-    </p> -->
     <!-- <h2>Legal Notice</h2>
-    <h2>Professional Title</h2>
+    <h3>Professional Title</h3>
     <p>
         <i>Architekt im Praktikum</i>, conferred in Germany<br>
-        Member of the Chamber of Architects Baden-Württemberg, Danneckerstraße 54, 70182 Stuttgart<br>
         Registration number: 171294
     </p>
     <p>
-        The Architektengesetz Baden-Württemberg (ArchG BW) and the professional code of the Chamber of Architects of Baden-Württemberg apply.
+        Member of the Chamber of Architects Baden-Württemberg,<br>
+        Danneckerstraße 54, 70182 Stuttgart<br>
+    </p>
+    <p>
+        Applicable regulations:<br>
+        &bull; Architektengesetz Baden-Württemberg (ArchG BW)<br>
+        &bull; Berufsordnung der Architektenkammer Baden-Württemberg
     </p> -->
-    <h2>Privacy</h2>
+    <h3>Privacy</h3>
     <p>This website does not collect or store any personal data. Certain technical data may be processed by the hosting provider, GitHub, solely to deliver the site. For details, see <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="nofollow">GitHub’s Privacy Statement</a>.</p>
-    <!-- <p>The font <a href="https://fontlibrary.org/en/font/nimbus-sans-l" rel="nofollow">Nimbus Sans L</a> used on this site is licensed under the <a href="https://www.gnu.org/licenses/gpl-2.0.html" rel="nofollow">GNU General Public License</a> (GPL) with the Font Exception.</p> -->
 </div>
 </main>
 
@@ -322,8 +257,16 @@ $(document).ready(function(){
     setInterval(getTime,2000);
 
     // LAST MODIFIED
-    $.getJSON("https://api.github.com/repos/"+"joeyws/joeyws.com/commits",function(json){
+    /* $.getJSON("https://api.github.com/repos/"+"joeyws/joeyws.com/commits",function(json){
         $("#website").append( "<br>Last modified: " + json[0].commit.author.date.slice(0,-10).split("-").reverse().join("/"));
+    }); */
+    $.getJSON("https://api.github.com/repos/"+"joeyws/joeyws.com/commits",function(json){
+        const date = new Date(json[0].commit.author.date.slice(0,-10));
+        const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        const monthName = months[date.getMonth()];
+        const day = date.getDate();
+        const year = date.getFullYear();
+        $("body").append(`<hr><footer>Last modified: ${monthName} ${day}, ${year}.</footer>`);
     });
     
     // CONTACT
