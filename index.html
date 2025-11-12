@@ -46,13 +46,13 @@
     .marquee{margin:calc(-1 * var(--spacer));margin-bottom:var(--spacer);line-height:1.4em;background:var(--text);color:var(--background);user-select:none;overflow:hidden;white-space:nowrap;/* mask-mode:alpha;mask-image:linear-gradient(to right, transparent, #000 20px, #000 calc(100% - 20px), transparent); */}
     .marquee span{margin-right:2.2em;}
     /* LAYOUT */
-    #header{font-size:1.4rem;line-height:1.2em;gap:0 3em;user-select:none;z-index:999996;display:flex;flex-wrap:wrap;justify-content:space-between;}
+    #header{font-size:1.4rem;line-height:1.2em;gap:0 3em;user-select:none;z-index:999996;width:100%;display:flex;flex-wrap:wrap;justify-content:space-between;}
     #weather,#time,#nav a{margin-left:1.2em;}
     footer{text-align:right;}
     /* NAV */
-    #nav{display:inline-flex;}
-    #nav a:first-child{margin-left:0;}
-    #nav a.open{text-decoration:none !important;background:#0f0;color:var(--text);cursor:default;}
+    #header{display:inline-flex;}
+    #header a:first-child{margin-left:0;}
+    #header a.open{text-decoration:none !important;background:#0f0;color:var(--text);cursor:default;}
     /* VIDEO */
     .video{overflow:hidden;position:relative;max-width:800px;}
     .video img,.video video{width:100%;max-width:100%;cursor:pointer;}
@@ -82,10 +82,8 @@
     <div class="marquee"><span lang="zh-Hant">歡迎</span><span lang="es">Bienvenidos</span><span lang="en">Welcome</span><span lang="hi">स्वागत हे</span><span lang="ar">اهلا وسهلا</span><span lang="bn">স্বাগত</span><span lang="pt">Bem-vindo</span><span lang="ru">добро пожаловать</span><span lang="ur">خوش آمدید</span><span lang="ja">ようこそ</span><span lang="id">Selamat datang</span><span lang="de">Willkommen</span><span lang="tr">Hoşgeldiniz</span><span lang="ta">வரவேற்பு</span><span lang="fr">Bienvenue</span><span lang="ko">어서 오십시오</span><span lang="vi">Hoan nghênh</span><span lang="jv">Sugeng Rawuh</span><span lang="sw">Karibu</span><span lang="sa">Svāgatam</span><span lang="it">Benvenuto</span><span lang="pa">ਸਵਾਗਤ ਹੈ</span></div>
     <div id="header">
         <h1 class="loading">Joey Schweickhardt</h1>
-        <div id="nav">
-            <a href="#/works">Works</a><a href="#/places">Places</a><a href="#/contact">Contact</a>
-        </div>
-        <div>Stuttgart<span id="weather"></span><span id="time"></span></div>
+        <a href="#/works">Works</a><a href="#/places">Places</a><a href="#/contact">Contact</a>
+        <span>Stuttgart<span id="weather"></span><span id="time"></span></span>
     </div>
 </header>
 <hr>
@@ -224,9 +222,9 @@ $(document).ready(function(){
     // NAV
     function refreshHash() {
         var hash = window.location.hash;
-        if ($("a[href='"+hash+"']").length == 0) {hash = $("#nav a:first").attr("href");}
-        $("#nav a").removeClass("open");
-        $("#nav a[href='"+hash+"']").addClass("open");
+        if ($("a[href='"+hash+"']").length == 0) {hash = $("#header a:first").attr("href");}
+        $("#header a").removeClass("open");
+        $("#header a[href='"+hash+"']").addClass("open");
         $("#" + hash.slice(2)).show().siblings(".content").hide();
         return false;
     }
