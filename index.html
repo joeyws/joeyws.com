@@ -201,12 +201,11 @@
 $(document).ready(function(){
 
     // LOADING
-    function showLoading() {$(".loading").addClass("loading");}
-	function hideLoading() {$(".loading").removeClass("loading");}
+    const toggleLoading = show => $(".loading").toggleClass("loading", show);
 
     // INIT
 	$(window).on("load",function(){
-        hideLoading();
+        toggleLoading(false);
         refreshHash();
         // MARQUEE
         $('.marquee').marquee({
@@ -221,32 +220,28 @@ $(document).ready(function(){
 
     // NAV
     function refreshHash() {
-        var hash = window.location.hash;
-        if ($("a[href='"+hash+"']").length == 0) {hash = $("#header a:first").attr("href");}
-        $("#header a").removeClass("open");
-        $("#header a[href='"+hash+"']").addClass("open");
+        let hash = window.location.hash || $("#header a:first").attr("href");
+        let $links = $("#header a");
+        if (!$links.filter(`[href='${hash}']`).length) {hash = $links.first().attr("href");}
+        $links.removeClass("open");
+        $links.filter(`[href='${hash}']`).addClass("open");
         $("#" + hash.slice(2)).show().siblings(".content").hide();
-        return false;
     }
-    $(window).bind("hashchange",function(e){refreshHash();});
+    $(window).on("hashchange", refreshHash);
 
     // WEATHER
     const getWeather = async () => {
-        const request = await fetch("https://api.open-meteo.com/v1/forecast?latitude=48.7823&longitude=9.177&current_weather=true");
-        const response = await request.json();
-        $("#weather").html("" + Math.round(response.current_weather.temperature) + "&deg;C");
-    }
+    const { current_weather } = await fetch("https://api.open-meteo.com/v1/forecast?latitude=48.7823&longitude=9.177&current_weather=true").then(res => res.json());
+        $("#weather").html(`${Math.round(current_weather.temperature)}&deg;C`);
+    };
     getWeather();
-    setInterval(getWeather,60000);
+    setInterval(getWeather, 60000);
 
     // TIME
     function getTime() {
         function addZero(i) {if (i < 10) {i = "0" + i;} return i;}
         var time = new Date();
         var h = time.getHours();
-        // var h = addZero(time.getHours());
-        // ampm = h >= 12 ? "pm" : "am";
-        // h = h % 12;
         h = h ? h : 12;
         var min = addZero(time.getMinutes());
         var s = addZero(time.getSeconds());
@@ -256,20 +251,14 @@ $(document).ready(function(){
     setInterval(getTime,2000);
 
     // LAST MODIFIED
-    /* $.getJSON("https://api.github.com/repos/"+"joeyws/joeyws.com/commits",function(json){
-        $("#website").append( "<br>Last modified: " + json[0].commit.author.date.slice(0,-10).split("-").reverse().join("/"));
-    }); */
-    $.getJSON("https://api.github.com/repos/"+"joeyws/joeyws.com/commits",function(json){
-        const date = new Date(json[0].commit.author.date.slice(0,-10));
-        const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-        const monthName = months[date.getMonth()];
-        const day = date.getDate();
-        const year = date.getFullYear();
-        $("#contact").append(`<hr><footer>Last modified ${monthName} ${day}, ${year}.</footer>`);
+    $.getJSON("https://api.github.com/repos/joeyws/joeyws.com/commits", function(json) {
+        const date = new Date(json[0].commit.author.date);
+        const formatted = date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+        $("#contact").append(`<hr><footer>Last modified ${formatted}.</footer>`);
     });
     
     // CONTACT
-    var address1 = 'K'+'o'+'l'+'p'+'i'+'n'+'g'+'s'+'t'+'r'+'a'+'ß'+'e'+' '+'5'+'6'; // 'P'+'f'+'l'+'a'+'u'+'m'+'w'+'e'+'g'+' '+'1'+'4';
+    var address1 = 'K'+'o'+'l'+'p'+'i'+'n'+'g'+'s'+'t'+'r'+'a'+'ß'+'e'+' '+'5'+'6';
     var address2 = '7'+'0'+'3'+'7'+'8'+' '+'S'+'t'+'u'+'t'+'t'+'g'+'a'+'r'+'t';
     var mail = 'm'+'a'+'i'+'l'+ String.fromCharCode(64) +'j'+'o'+'e'+'y'+'w'+'s'+'.'+'c'+'o'+'m';
     var phone = '+'+'4'+'9'+'1'+'5'+'7'+'7'+'8'+'8'+'5'+'0'+'5'+'0'+'2';
@@ -291,50 +280,37 @@ $(document).ready(function(){
         });
     });
 
-    // GALLERY / LIGHTBOX
+    // GALLERY
     $(".gallery img").each(function(){
         var caption = $(this).attr("alt");
         var date = "20" + $(this).attr("src").slice(4,6);
         $(this).wrap("<div></div>").after("<span><span>"+caption+"</span></span>");
     });
     $("body").append("<div id='lightbox'><img src=''></div>");
-    function lightboxLoad() {
-        var [fileName, fileExtension] = $(".gallery div.show img").attr("src").split('.');
-        var imgURL = fileName + '_l.' + fileExtension;
-        $("#lightbox").show().children("img").attr("src",imgURL);
-    };
-    function lightboxPrev() {
-        if ($("#lightbox").is(":visible")) {
-            if (!$(".gallery div:first-child").is(".show")) {
-                $(".gallery div.show").removeClass("show").prev("div").addClass("show");
-                lightboxLoad();
+
+    // LIGHTBOX
+    const Lightbox = {
+        $box: $("#lightbox"),
+        load(img) {
+            this.$box.show().children("img").attr("src", img.replace(/(\.\w+)$/, "_l$1"));
+        },
+        prev() { this.navigate(-1); },
+        next() { this.navigate(1); },
+        close() { this.$box.hide().children("img").attr("src", "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"); $(".gallery div.show").removeClass("show"); },
+        navigate(dir) {
+            const $current = $(".gallery div.show");
+            if ($current.length) {
+                const $target = dir === -1 ? $current.prev("div") : $current.next("div");
+                if ($target.length) {
+                    $current.removeClass("show");
+                    $target.addClass("show");
+                    this.load($target.find("img").attr("src"));
+                } else if (dir === 1) this.close();
             }
         }
     };
-    function lightboxNext() {
-        if ($("#lightbox").is(":visible")) {
-            if (!$(".gallery div:last-child").is(".show")) {
-                $(".gallery div.show").removeClass("show").next("div").addClass("show");
-                lightboxLoad();
-            } else {
-                lightboxClose();
-            }
-        }
-    };
-    function lightboxClose() {
-        $("#lightbox").hide().children("img").attr("src","data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");
-        $(".gallery div.show").removeClass("show");
-    };
-    $(".gallery>div").on("click",function(){
-        $(this).addClass("show");
-        lightboxLoad();
-    });
-    $("#lightbox").on("click",function(e){
-        lightboxClose();
-    }).on("click","img",function(e){
-        e.stopPropagation();
-        lightboxNext();
-    });
+    $(".gallery>div").click(function() { $(this).addClass("show"); Lightbox.load($(this).find("img").attr("src")); });
+    $("#lightbox").click(() => Lightbox.close()).on("click", "img", e => { e.stopPropagation(); Lightbox.next(); });
 
     // VIDEO
     $(".video img").on("click",function(){
@@ -346,18 +322,13 @@ $(document).ready(function(){
     });
 
     // KEYBOARD CONTROL
-	$(document).keydown(function(e){
-		if(!($("input,textarea").is(":focus"))) {
-            //event.preventDefault();
-			switch(e.which) {
-			    case 27: lightboxClose(); break; // esc
-				case 32: break; // space
-				case 37: lightboxPrev(); break; // left
-				case 39: lightboxNext(); break; // right
-				default: return;
-			}
-		}
-	});
+	$(document).keydown(e => {
+        if (!$("input,textarea").is(":focus")) {
+            if (e.which === 27) Lightbox.close();
+            if (e.which === 37) Lightbox.prev();
+            if (e.which === 39) Lightbox.next();
+        }
+    });
 
 });
 </script>
@@ -369,6 +340,7 @@ $(document).ready(function(){
   "alternateName": "Joey W. Schweickhardt",
   "url": "https://joeyws.com/",
   // "jobTitle": "Architekt",
+  "memberOf": "Architektenkammer Baden-Württemberg",
   "sameAs": [
     "https://ioeb-sammlung.de/node/210",
     "https://www.linkedin.com/in/joeyschweickhardt",
