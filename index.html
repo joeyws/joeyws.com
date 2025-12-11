@@ -31,8 +31,8 @@
     body{padding:var(--spacer);overflow-y:scroll;color:var(--text);background:var(--background);font:normal normal 1rem/1.2em webfont,monospace;}
     h1{display:inline-block;}
     i{font-style:italic;}
-    a,.gallery div span span{text-decoration:underline;}
-    a:hover,.gallery div:hover span span,.gallery div.show span span{text-decoration:none;background:var(--text);color:var(--background);}
+    a,.gallery div span span{text-decoration:none;box-shadow:inset 0 -.05em var(--text);transition:.1s all;}
+    a:hover,.gallery div:hover span span,.gallery div.show span span{text-decoration:none;/* background:var(--text); */box-shadow:inset 0 -1.3em var(--text);color:var(--background);}
     h2,h3,p,pre,table,#map{margin-top:.8rem;}
     hr+*,img+p,.content *:first-child{margin-top:0;}
     p{max-width:800px;}
@@ -52,7 +52,7 @@
     /* NAV */
     #header{display:inline-flex;}
     #header a:first-child{margin-left:0;}
-    #header a.open{text-decoration:none !important;background:#0f0;color:var(--text);cursor:default;}
+    #header a.open{text-decoration:none !important;background:var(--text);color:var(--background);cursor:default;}
     /* VIDEO */
     .video{overflow:hidden;position:relative;max-width:800px;}
     .video img,.video video{width:100%;max-width:100%;cursor:pointer;}
@@ -343,7 +343,8 @@ $(document).ready(function(){
     "https://www.linkedin.com/in/joeyschweickhardt",
     "https://www.akbw.de/kammer/datenbanken/architektenliste/detail/eintrag/joey-schweickhardt-54395",
     "https://www.k1.live/ausstellung-22/igma-institut-fuer-grundlagen-moderner-architektur-und-entwerfen/",
-    "https://www.ibbte.uni-stuttgart.de/en/department-ig/Design-Studios/"
+    "https://www.ibbte.uni-stuttgart.de/en/department-ig/Design-Studios/",
+    "https://www.schmelzle.de/team"
   ]
 }
 </script>
