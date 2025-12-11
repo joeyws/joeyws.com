@@ -33,6 +33,7 @@
     i{font-style:italic;}
     a,.gallery div span span{text-decoration:none;box-shadow:inset 0 -.05em var(--text);transition:.1s all;}
     a:hover,#header a.open,.gallery div:hover span span,.gallery div.show span span{text-decoration:none;/* background:var(--text); */box-shadow:inset 0 -1.3em var(--text);color:var(--background);}
+    a[href^="http"]::after{content:" \2197";}
     h2,h3,p,pre,table,#map{margin-top:.8rem;}
     hr+*,img+p,.content *:first-child{margin-top:0;}
     p{max-width:800px;}
