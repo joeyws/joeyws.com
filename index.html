@@ -32,7 +32,7 @@
     h1{display:inline-block;}
     i{font-style:italic;}
     a,.gallery div span span{text-decoration:none;box-shadow:inset 0 -.05em var(--text);transition:.1s all;}
-    a:hover,.gallery div:hover span span,.gallery div.show span span{text-decoration:none;/* background:var(--text); */box-shadow:inset 0 -1.3em var(--text);color:var(--background);}
+    a:hover,#header a.open,.gallery div:hover span span,.gallery div.show span span{text-decoration:none;/* background:var(--text); */box-shadow:inset 0 -1.3em var(--text);color:var(--background);}
     h2,h3,p,pre,table,#map{margin-top:.8rem;}
     hr+*,img+p,.content *:first-child{margin-top:0;}
     p{max-width:800px;}
@@ -52,7 +52,7 @@
     /* NAV */
     #header{display:inline-flex;}
     #header a:first-child{margin-left:0;}
-    #header a.open{text-decoration:none !important;background:var(--text);color:var(--background);cursor:default;}
+    #header a.open{text-decoration:none !important;cursor:default;}
     /* VIDEO */
     .video{overflow:hidden;position:relative;max-width:800px;}
     .video img,.video video{width:100%;max-width:100%;cursor:pointer;}
@@ -61,8 +61,9 @@
     /* GALLERY */
     .gallery{padding:0 calc(2*var(--spacer));justify-content:stretch;grid-template-columns:repeat(auto-fit,minmax(220px, 1fr));display:grid;line-height:0;font-size:0;}
     .gallery div{padding:calc(3*var(--spacer));padding-top:0;row-gap:var(--spacer);cursor:zoom-in;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;}
-    .gallery div img{height:auto;width:auto;max-height:180px;max-width:100%;}
-    .gallery div>span{font-size:1rem;line-height:1.2em;height:calc(3* 1.2em);}
+    .gallery div img{height:auto;width:auto;max-height:180px;max-width:100%;transition:.1s all;}
+    .gallery div>span{font-size:1rem;line-height:1.2em;height:calc(4* 1.2em);}
+    .gallery div:hover img,.gallery div.show img{transform:translateY(-5px);/* box-shadow:0 5px 20px #bbb; */}
     /* LIGHTBOX */
     #lightbox{user-select:none;z-index:999997;cursor:zoom-out;position:fixed;inset:0;display:none;}
     #lightbox img{cursor:pointer;max-height:90vh;max-width:calc(100vw - 2*var(--spacer));box-sizing:border-box;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);}
