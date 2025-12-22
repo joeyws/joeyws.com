@@ -47,9 +47,8 @@
     .marquee{margin:calc(-1 * var(--spacer));margin-bottom:var(--spacer);line-height:1.4em;background:var(--text);color:var(--background);user-select:none;overflow:hidden;white-space:nowrap;/* mask-mode:alpha;mask-image:linear-gradient(to right, transparent, #000 20px, #000 calc(100% - 20px), transparent); */}
     .marquee span{margin-right:2.2em;}
     /* LAYOUT */
-    #header{font-size:1.4rem;line-height:1.2em;gap:0 3em;user-select:none;z-index:999996;width:100%;display:flex;flex-wrap:wrap;justify-content:space-between;}
+    #header{font-size:1.5rem;line-height:1.2em;gap:0 3em;user-select:none;z-index:999996;width:100%;display:flex;flex-wrap:wrap;justify-content:space-between;}
     #weather,#time{margin-left:1.2em;}
-    footer{text-align:right;}
     /* NAV */
     #header{display:inline-flex;}
     #header a:first-child{margin-left:0;}
@@ -63,7 +62,7 @@
     .gallery{padding:0 calc(2*var(--spacer));justify-content:stretch;grid-template-columns:repeat(auto-fit,minmax(220px, 1fr));display:grid;line-height:0;font-size:0;}
     .gallery div{padding:calc(3*var(--spacer));padding-top:0;row-gap:var(--spacer);cursor:zoom-in;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;}
     .gallery div img{height:auto;width:auto;max-height:180px;max-width:100%;transition:.1s all;}
-    .gallery div>span{font-size:1rem;line-height:1.2em;height:calc(4* 1.2em);}
+    .gallery div>span{font-size:1rem;line-height:1.2em;height:calc(5 * 1.2em);}
     .gallery div:hover img,.gallery div.show img{transform:translateY(-5px);/* box-shadow:0 5px 20px #bbb; */}
     /* LIGHTBOX */
     #lightbox{user-select:none;z-index:999997;cursor:zoom-out;position:fixed;inset:0;display:none;}
@@ -177,18 +176,21 @@
     <div id="map"></div>
     <p>Image: NASA/Blue Marble</p>
     <hr>
-    <!-- <h2>Legal Notice</h2>
-    <h3>Professional Title</h3>
+    <!-- <h2>Legal Notice</h2> -->
+    <!-- <h3>Professional Title</h3>
     <p>
         <i>Architekt im Praktikum</i>, conferred in Germany<br>
         Registration number: 171294<br>
-        Member of the Chamber of Architects Baden-Württemberg, Danneckerstraße 54, 70182 Stuttgart
+        Member of the Chamber of Architects Baden-Württemberg<br>
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Danneckerstraße 54<br>
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 70182 Stuttgart
     </p>
     <p>
         Applicable regulations:<br>
         &bull; Architektengesetz Baden-Württemberg (ArchG BW)<br>
         &bull; Berufsordnung der Architektenkammer Baden-Württemberg
-    </p> -->
+    </p>
+    <hr> -->
     <h3>Privacy</h3>
     <p>This website does not collect or store any personal data. Certain data may be processed by the hosting provider, GitHub, solely to deliver the site. For details, see <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="nofollow">GitHub’s Privacy Statement</a>.</p>
 </div>
@@ -253,7 +255,7 @@ $(document).ready(function(){
     $.getJSON("https://api.github.com/repos/joeyws/joeyws.com/commits", function(json) {
         const date = new Date(json[0].commit.author.date);
         const formatted = date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
-        $("#contact").append(`<hr><footer>Last modified ${formatted}.</footer>`);
+        $("#contact").append(`<hr><p>Last modified ${formatted}.</p>`);
     });
     
     // CONTACT
