@@ -32,7 +32,7 @@
     h1{display:inline-block;}
     i{font-style:italic;}
     a,.gallery div span span{color:#00f;text-decoration:none;box-shadow:inset 0 -.05em #00f;transition:.1s all;}
-    a:hover,.gallery div:hover span span,.gallery div.show span span{text-decoration:none;/* background:var(--text); */box-shadow:inset 0 -1.3em #00f;color:var(--background);}
+    a:hover,#header a.open,.gallery div:hover span span,.gallery div.show span span{text-decoration:none;/* background:var(--text); */box-shadow:inset 0 -1.3em var(--text);color:var(--background);}
     a[href^="http"]::after{content:" \2197";}
     h2,h3,p,pre,table,#map{margin-top:.8rem;}
     hr+*,img+p,.content *:first-child{margin-top:0;}
@@ -44,7 +44,7 @@
     td:nth-child(1){width:8em;padding-right:var(--spacer);}
     td:nth-child(2){width:auto;}
     /* MARQUEE */
-    .marquee{margin:calc(-1 * var(--spacer));margin-bottom:var(--spacer);line-height:1.4em;background:var(--text);color:var(--background);user-select:none;overflow:hidden;white-space:nowrap;/* mask-mode:alpha;mask-image:linear-gradient(to right, transparent, #000 20px, #000 calc(100% - 20px), transparent); */}
+    .marquee{margin:calc(-1 * var(--spacer));margin-bottom:var(--spacer);line-height:1.4em;background:#0f0;/* color:var(--background); */user-select:none;overflow:hidden;white-space:nowrap;/* mask-mode:alpha;mask-image:linear-gradient(to right, transparent, #000 20px, #000 calc(100% - 20px), transparent); */}
     .marquee span{margin-right:2.2em;}
     /* LAYOUT */
     #header{font-size:1.7rem;line-height:1.2em;gap:0 3em;user-select:none;z-index:999996;width:100%;display:flex;flex-wrap:wrap;justify-content:space-between;}
@@ -52,7 +52,7 @@
     /* NAV */
     #header{display:inline-flex;}
     #header a:first-child{margin-left:0;}
-    #header a.open,#header a.open:hover{background:#ff0 !important;box-shadow:inset 0 0 #ff0;color:var(--text) !important;text-decoration:none !important;cursor:default;}
+    #header a.open,#header a.open:hover{/* text-decoration:none !important; */cursor:default;}
     /* VIDEO */
     .video{overflow:hidden;position:relative;max-width:800px;}
     .video img,.video video{width:100%;max-width:100%;cursor:pointer;}
