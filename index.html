@@ -30,7 +30,7 @@
     body{padding:var(--spacer);overflow-y:scroll;color:var(--text);background:var(--background);font:normal normal 1rem/1.2em webfont,monospace;}
     h1{display:inline-block;}
     i{font-style:italic;}
-    a,.gallery div span span{color:#00f;text-decoration:none;box-shadow:inset 0 -.05em #66f;transition:.1s all;}
+    a,.gallery div span span{color:#00f;box-shadow:inset 0 -.05em #66f;/* box-shadow:inset 0 -.05em var(--text); */text-decoration:none;transition:.1s all;}
     a:hover,#header a.open,.gallery div:hover span span,.gallery div.show span span{text-decoration:none;/* background:var(--text); */box-shadow:inset 0 -1.3em var(--text);color:var(--background);}
     a[href^="http"]::after{content:" \2197";}
     h2,h3,p,pre,table,#map{margin-top:.8rem;}
@@ -46,10 +46,9 @@
     .marquee{margin:calc(-1 * var(--spacer));margin-bottom:var(--spacer);line-height:1.4em;background:#bfb;/* color:#ff0; */user-select:none;overflow:hidden;white-space:nowrap;/* mask-mode:alpha;mask-image:linear-gradient(to right, transparent, #000 20px, #000 calc(100% - 20px), transparent); */}
     .marquee span{margin-right:2.2em;}
     /* LAYOUT */
-    #header{font-size:1.7rem;line-height:1.2em;gap:0 3em;user-select:none;z-index:999996;width:100%;display:flex;flex-wrap:wrap;justify-content:space-between;}
+    #header{font-size:1.7rem;line-height:1.2em;gap:0 3em;user-select:none;z-index:999996;width:100%;display:inline-flex;flex-wrap:wrap;justify-content:space-between;}
     #weather,#time{margin-left:1.2em;}
     /* NAV */
-    #header{display:inline-flex;}
     #header a:first-child{margin-left:0;}
     #header a.open{cursor:default;}
     /* VIDEO */
@@ -64,7 +63,7 @@
     .gallery div>span{font-size:1rem;line-height:1.2em;height:calc(5 * 1.2em);}
     .gallery div:hover img,.gallery div.show img{transform:translateY(-5px);/* box-shadow:0 5px 20px #bbb; */}
     /* LIGHTBOX */
-    #lightbox{user-select:none;z-index:999997;cursor:zoom-out;position:fixed;inset:0;display:none;}
+    #lightbox{user-select:none;z-index:999997;/* background:#fff8;backdrop-filter:blur(1px); */cursor:zoom-out;position:fixed;inset:0;display:none;}
     #lightbox img{cursor:pointer;max-height:90vh;max-width:calc(100vw - 2*var(--spacer));box-sizing:border-box;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);}
     /* EFFECTS */
     @keyframes blink{0%{opacity:0;}50%{opacity:1;}}
@@ -73,6 +72,7 @@
     @keyframes position{100%{outline-color:transparent;outline-offset:20px;}}
     #map{width:760px;max-width:100%;aspect-ratio:150/75;background:center center url(img/other/world.gif) no-repeat scroll;position:relative;background-size:contain;}
     #map:after{top:23%;left:52.5%;outline:1px solid #0f0;background:#0f0;border:1px solid var(--text);animation:position 1.2s infinite ease-out;width:7px;height:7px;border-radius:100vmax;pointer-events:none;position:absolute;transform:translate(-50%,-50%);display:block;content:"";}
+    *{cursor:none !important;}#cursor{width:16px;height:16px;background:#fff1;backdrop-filter:blur(20px) invert(100%) saturate(10);-webkit-backdrop-filter:blur(20px) invert(100%) saturate(10);border-radius:100vmax;position:fixed;top:-50px;left:50%;transform:translate(-50%,-50%);font-size:0;line-height:0;z-index:99999999;pointer-events:none;}
 </style>
 </head>
 <body>
@@ -132,13 +132,13 @@
 <div class="content" id="places">
     <div class="gallery">
         <img loading="lazy" src="img/251217.jpg" alt="423 Îlot A3, Herzog&nbsp;&&nbsp;de&nbsp;Meuron">
-        <img loading="lazy" src="img/251215.jpg" alt="L’Arbre Blanc, Sou&nbsp;Fujimoto">
+        <img loading="lazy" src="img/251215.jpg" alt="L&rsquo;Arbre Blanc, Sou&nbsp;Fujimoto">
         <img loading="lazy" src="img/250610-2.jpg" alt="Stuttgart Market Square">
         <img loading="lazy" src="img/241229.jpg" alt="San Pietro Tuscania">
         <img loading="lazy" src="img/241215.jpg" alt="PR16">
         <img loading="lazy" src="img/230820.jpg" alt="Railway Engine Depot, Herzog&nbsp;&&nbsp;de&nbsp;Meuron">
         <img loading="lazy" src="img/230114.jpg" alt="Sant&rsquo; Ireneo, Mauro&nbsp;Galantino">
-        <img loading="lazy" src="img/230109.jpg" alt="Via Albricci, Asnago Vender">
+        <img loading="lazy" src="img/230109.jpg" alt="Via Albricci, Asnago&nbsp;Vender">
         <img loading="lazy" src="img/230104.jpg" alt="Nilufar Gallery">
         <img loading="lazy" src="img/221104.jpg" alt="Monte Amiata, Carlo&nbsp;Aymonino">
         <img loading="lazy" src="img/221104-2.jpg" alt="Monte Amiata, Carlo&nbsp;Aymonino">
@@ -233,6 +233,18 @@ $(document).ready(function(){
             duplicated: true,
             startVisible: true,
             gap: 0
+        });
+    });
+
+    // CURSOR
+    if (!("ontouchstart" in window) && !(navigator.maxTouchPoints > 0) && !(navigator.msMaxTouchPoints > 0)) { 
+        $("body").append("<div id='cursor'>&nbsp;</div>");
+    }
+    const $cursor = $('#cursor');
+    $(document).on('mousemove pointermove',function(e){
+        $cursor.css({
+            top: e.clientY + 'px',
+            left: e.clientX + 'px'
         });
     });
 
