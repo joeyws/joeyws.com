@@ -30,8 +30,8 @@
     a:hover,#nav a.open,.gallery div:hover span span{box-shadow:none;text-decoration:none;background:var(--text);color:var(--background);}
     /* LAYOUT */
     /* #header,.marquee3k,p,.video:after,.gallery div span span{mix-blend-mode:exclusion;} */
-    #header{padding:var(--spacer);padding-bottom:0;gap:var(--spacer) calc(var(--spacer)*4);white-space:nowrap;z-index:999996;display:flex;flex-wrap:wrap;justify-content:space-between;}
-    #header>*{display:inline-block;}
+    #header{padding:var(--spacer);padding-bottom:0;gap:var(--spacer) calc(var(--spacer)*4);z-index:999996;display:flex;flex-wrap:wrap;justify-content:space-between;}
+    #header>*{display:inline-block;white-space:nowrap;}
     .marquee3k{background:var(--text);color:var(--background);/* mask-mode:alpha;mask-image:linear-gradient(to right, transparent, #000 25%, #000 calc(100% - 25%), transparent);position:relative; *//* width:200px;flex-grow:1; */white-space:nowrap;overflow:hidden;}
     .marquee3k .marquee span:after{margin:0 .7em;content:"";}
     .loading{animation:.3s blink steps(1) infinite;}
