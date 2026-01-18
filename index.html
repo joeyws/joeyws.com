@@ -44,7 +44,7 @@
     td:nth-child(1){width:8em;padding-right:var(--spacer);}
     td:nth-child(2){width:auto;} */
     /* BACKGROUND */
-    #header h1,#header a,#header>span,.video:not(.playing)::after{background:#222b;backdrop-filter:blur(3px);border-radius:5px;transition:.1s all;display:inline-block;}
+    #header h1,#header a,#header>span,.video:not(.playing)::after{background:#222a;backdrop-filter:blur(3px);border-radius:5px;transition:.1s all;display:inline-block;}
     .marquee,#header h1,#header a,#header>span,.video:not(.playing)::after{line-height:2em;padding:0 .8em;}
     #header a:hover,#header a.open,.video:not(.playing):hover::after{background:#8888;}
     /* HEADER */
@@ -59,12 +59,12 @@
     /* VIDEO */
     .video{overflow:hidden;position:relative;max-width:800px;font-size:0;line-height:0;}
     .video img{transition:all .75s;}
-    .video:hover img{transform:scale(1.05);filter:brightness(.9);}
+    .video:hover img{transform:scale(1.05);}
     .video img,.video video{width:100%;max-width:100%;}
     .video:not(.playing)::after{font-size:1rem;content:"Play";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:inline-block;pointer-events:none;}
     .video video,.video .controls{display:none;}
     .controls{position:absolute;bottom:0;left:0;right:0;}
-    .progress{width:100%;max-width:100%;display:inline-block;height:3px;overflow:hidden;padding-top:var(--spacer);}
+    .progress{width:100%;max-width:100%;display:inline-block;height:3px;overflow:hidden;padding-top:30px;}
     .progress-filled{width:0%;height:100%;background:#0f0;}
     /* GALLERY */
     .gallery{padding:0 calc(2*var(--spacer));justify-content:stretch;grid-template-columns:repeat(auto-fit,minmax(220px, 1fr));display:grid;line-height:0;font-size:0;}
@@ -199,15 +199,17 @@
     <h3>Professional Title</h3>
     <p>
         <i>Architekt im Praktikum</i>, conferred in Germany<br>
-        Registration number: 171294<br>
-        Member of the Chamber of Architects Baden-Württemberg<br>
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Danneckerstraße 54<br>
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 70182 Stuttgart
+        Registration number: 171294
     </p>
     <p>
         Applicable regulations:<br>
-        &bull; Architektengesetz Baden-Württemberg (ArchG BW)<br>
-        &bull; Berufsordnung der Architektenkammer Baden-Württemberg
+        &nbsp; &bull; Architektengesetz Baden-Württemberg (ArchG BW)<br>
+        &nbsp; &bull; Berufsordnung der Architektenkammer Baden-Württemberg
+    </p>
+    <p>
+        Member of the Chamber of Architects Baden-Württemberg<br>
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Danneckerstraße 54<br>
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 70182 Stuttgart
     </p>
     <h3>Privacy</h3>
     <p>This website uses neither cookies nor collects any personal data. Certain data may be processed by the hosting provider, GitHub, solely to deliver the site. For details, see <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="nofollow">GitHub’s Privacy Statement</a>.</p>
