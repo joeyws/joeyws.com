@@ -30,9 +30,9 @@
     body{padding:var(--spacer);color:var(--text);background:var(--background);font:normal normal 1rem/1.3em webfont,monospace;}
     h1{display:inline-block;}
     i{font-style:italic;}
-    a,.gallery div span span{/* color:#00f;box-shadow:inset 0 -.05em #66f; */box-shadow:inset 0 -.05em #666;text-decoration:none;transition:.1s all;-webkit-box-decoration-break:clone;-o-box-decoration-break:clone;box-decoration-break:clone;}
+    a,.gallery div span span{box-shadow:inset 0 -.05em #666;text-decoration:none;transition:.1s all;-webkit-box-decoration-break:clone;-o-box-decoration-break:clone;box-decoration-break:clone;}
     a{white-space:nowrap;}
-    a:hover,.gallery div:hover span span,.gallery div.show span span{box-shadow:inset 0 -1.3em var(--text);color:var(--background);/* box-shadow:inset 0 -.05em #080; */}
+    a:hover,.gallery div:hover span span,.gallery div.show span span{box-shadow:inset 0 -1.3em var(--text);color:var(--background);}
     /* a[href^="http"]::after{content:" \2197";} */
     h2,h3,p,pre,table,#map{margin-top:.8rem;}
     hr+*,img+p,.content *:first-child{margin-top:0;}
@@ -44,7 +44,7 @@
     td:nth-child(1){width:8em;padding-right:var(--spacer);}
     td:nth-child(2){width:auto;} */
     /* BACKGROUND */
-    #header h1,#header a,#header>span,.video:not(.playing)::after{background:#5556;/* box-shadow:0 .2em 1em #0002; */backdrop-filter:blur(2px);border-radius:5px;transition:.1s all;display:inline-block;}
+    #header h1,#header a,#header>span,.video:not(.playing)::after{background:#222b;backdrop-filter:blur(3px);border-radius:5px;transition:.1s all;display:inline-block;}
     .marquee,#header h1,#header a,#header>span,.video:not(.playing)::after{line-height:2em;padding:0 .8em;}
     #header a:hover,#header a.open,.video:not(.playing):hover::after{background:#8888;}
     /* HEADER */
@@ -60,7 +60,7 @@
     .video{overflow:hidden;position:relative;max-width:800px;font-size:0;line-height:0;}
     .video img{transition:all .75s;}
     .video:hover img{transform:scale(1.05);filter:brightness(.9);}
-    .video img,.video video{width:100%;max-width:100%;cursor:pointer;}
+    .video img,.video video{width:100%;max-width:100%;}
     .video:not(.playing)::after{font-size:1rem;content:"Play";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:inline-block;pointer-events:none;}
     .video video,.video .controls{display:none;}
     .controls{position:absolute;bottom:0;left:0;right:0;}
@@ -68,16 +68,16 @@
     .progress-filled{width:0%;height:100%;background:#0f0;}
     /* GALLERY */
     .gallery{padding:0 calc(2*var(--spacer));justify-content:stretch;grid-template-columns:repeat(auto-fit,minmax(220px, 1fr));display:grid;line-height:0;font-size:0;}
-    .gallery div{padding:calc(3*var(--spacer));padding-top:0;row-gap:var(--spacer);cursor:zoom-in;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;}
-    .gallery div img{height:auto;width:auto;max-height:180px;max-width:100%;transition:.1s all;border-radius:3px;}
+    .gallery div{padding:calc(3*var(--spacer));padding-top:0;row-gap:var(--spacer);/* cursor:zoom-in; */display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;}
+    .gallery div img{height:auto;width:auto;max-height:180px;max-width:100%;transition:.1s all;}
     .gallery div>span{font-size:1rem;line-height:1.2em;height:calc(5 * 1.2em);}
     .gallery div:hover img,.gallery div.show img{transform:translateY(-5px);}
-    #lightbox{user-select:none;z-index:999997;background:#0006;cursor:zoom-out;position:fixed;inset:0;display:none;}
-    #lightbox img{cursor:pointer;max-height:90vh;max-width:calc(100vw - 2*var(--spacer));box-sizing:border-box;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);}
+    #lightbox{user-select:none;z-index:999997;background:#0006;/* cursor:zoom-out; */position:fixed;inset:0;display:none;}
+    #lightbox img{/* cursor:pointer; */max-height:90vh;max-width:calc(100vw - 2*var(--spacer));box-sizing:border-box;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);}
     /* EFFECTS */
     @keyframes blink{0%{opacity:0;}50%{opacity:1;}}.loading{animation:.3s blink steps(1) infinite;}#time-blink{animation:2s blink steps(1) infinite;}
     @keyframes position{100%{outline-color:transparent;outline-offset:20px;}}#map{width:760px;max-width:100%;aspect-ratio:150/75;background:center center url(img/other/world.gif) no-repeat scroll;position:relative;background-size:contain;}#map:after{top:23%;left:52.5%;outline:1px solid #0f0;background:#0f0;border:1px solid #000;animation:position 1.2s infinite ease-out;width:7px;height:7px;border-radius:100vmax;pointer-events:none;position:absolute;transform:translate(-50%,-50%);display:block;content:"";}
-    *{cursor:none !important;}#cursor{width:12px;height:12px;background:#fff1;backdrop-filter:blur(20px) invert(100%) saturate(10);-webkit-backdrop-filter:blur(20px) invert(100%) saturate(10);border-radius:100vmax;position:fixed;top:-50px;left:50%;transform:translate(-50%,-50%);font-size:0;line-height:0;z-index:99999999;pointer-events:none;}
+    #cursor{width:12px;height:12px;background:#fff1;backdrop-filter:blur(20px) invert(100%) saturate(10);-webkit-backdrop-filter:blur(20px) invert(100%) saturate(10);border-radius:100vmax;position:fixed;top:-50px;left:50%;transform:translate(-50%,-50%);font-size:0;line-height:0;z-index:99999999;pointer-events:none;}
 </style>
 </head>
 <body>
@@ -195,7 +195,7 @@
     <hr> -->
     <!--Phil Collins (2019), Raye (2025), Jon Batiste (2023), Supertramp (2010), Roger Hodgson (2013), Lenny Kravitz (2008)
     <hr>-->
-    <!-- <h2>Legal Notice</h2>
+    <h2>Legal Notice</h2>
     <h3>Professional Title</h3>
     <p>
         <i>Architekt im Praktikum</i>, conferred in Germany<br>
@@ -208,7 +208,7 @@
         Applicable regulations:<br>
         &bull; Architektengesetz Baden-Württemberg (ArchG BW)<br>
         &bull; Berufsordnung der Architektenkammer Baden-Württemberg
-    </p> -->
+    </p>
     <h3>Privacy</h3>
     <p>This website uses neither cookies nor collects any personal data. Certain data may be processed by the hosting provider, GitHub, solely to deliver the site. For details, see <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="nofollow">GitHub’s Privacy Statement</a>.</p>
 </div>
@@ -255,6 +255,7 @@ $(document).ready(function(){
     // CURSOR
     if (window.matchMedia('(pointer: fine)').matches) {
         $("body").append("<div id='cursor'></div>");
+        $("*").css("cursor","none");
         const $c = $('#cursor');
         $(document).on('mousemove', e => $c.css({top: e.clientY+'px', left: e.clientX+'px', opacity: 1}));
         $(document).on('mouseenter mouseleave', e => $c.css('opacity', e.type==='mouseenter'?1:0));
