@@ -44,7 +44,7 @@
     td:nth-child(1){width:8em;padding-right:var(--spacer);}
     td:nth-child(2){width:auto;} */
     /* BACKGROUND */
-    #header h1,#header a,#header>span,.video:not(.playing)::after{background:#5556;box-shadow:0 .2em 1em #0002;backdrop-filter:blur(2px);border-radius:5px;transition:.1s all;display:inline-block;}
+    #header h1,#header a,#header>span,.video:not(.playing)::after{background:#5556;/* box-shadow:0 .2em 1em #0002; */backdrop-filter:blur(2px);border-radius:5px;transition:.1s all;display:inline-block;}
     .marquee,#header h1,#header a,#header>span,.video:not(.playing)::after{line-height:2em;padding:0 .8em;}
     #header a:hover,#header a.open,.video:not(.playing):hover::after{background:#8888;}
     /* HEADER */
@@ -59,20 +59,20 @@
     /* VIDEO */
     .video{overflow:hidden;position:relative;max-width:800px;font-size:0;line-height:0;}
     .video img{transition:all .5s;}
-    .video:hover img{transform:scale(1.05);}
+    .video:hover img{transform:scale(1.05);filter:brightness(.9);}
     .video img,.video video{width:100%;max-width:100%;cursor:pointer;}
     .video:not(.playing)::after{font-size:1rem;content:"Play";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:inline-block;pointer-events:none;}
     .video video,.video .controls{display:none;}
-    .controls{position:absolute;bottom:0;left:0;right:0;/* display:flex;align-items:center;justify-content:center;gap:var(--spacer); */}
-    .progress{width:100%;max-width:100%;display:inline-block;height:3px;/* border-radius:100vmax; */overflow:hidden;padding-top:var(--spacer);}
-    .progress-filled{width:0%;height:100%;background:#0f0;/* border-radius:100vmax; */}
+    .controls{position:absolute;bottom:0;left:0;right:0;}
+    .progress{width:100%;max-width:100%;display:inline-block;height:3px;overflow:hidden;padding-top:var(--spacer);}
+    .progress-filled{width:0%;height:100%;background:#0f0;}
     /* GALLERY */
     .gallery{padding:0 calc(2*var(--spacer));justify-content:stretch;grid-template-columns:repeat(auto-fit,minmax(220px, 1fr));display:grid;line-height:0;font-size:0;}
     .gallery div{padding:calc(3*var(--spacer));padding-top:0;row-gap:var(--spacer);cursor:zoom-in;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;}
     .gallery div img{height:auto;width:auto;max-height:180px;max-width:100%;transition:.1s all;}
     .gallery div>span{font-size:1rem;line-height:1.2em;height:calc(5 * 1.2em);}
     .gallery div:hover img,.gallery div.show img{transform:translateY(-5px);}
-    #lightbox{user-select:none;z-index:999997;background:#0006;/* backdrop-filter:blur(5px); */cursor:zoom-out;position:fixed;inset:0;display:none;}
+    #lightbox{user-select:none;z-index:999997;background:#0006;cursor:zoom-out;position:fixed;inset:0;display:none;}
     #lightbox img{cursor:pointer;max-height:90vh;max-width:calc(100vw - 2*var(--spacer));box-sizing:border-box;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);}
     /* EFFECTS */
     @keyframes blink{0%{opacity:0;}50%{opacity:1;}}.loading{animation:.3s blink steps(1) infinite;}#time-blink{animation:2s blink steps(1) infinite;}
@@ -382,6 +382,53 @@ $(document).ready(function(){
         const $controls = $wrapper.find(".controls");
         const $preview = $wrapper.find("img");
         let hideControlsTimeout;
+        function hideControlsImmediately() {
+            clearTimeout(hideControlsTimeout);
+        }
+        $preview.on("click", function(){
+            $(this).hide();
+            $wrapper.addClass("playing");
+            $video.show();
+            $video[0].setAttribute("controlsList", "nodownload noplaybackrate");
+            video.play();
+            $controls.show();
+        });
+        $video.on("click", function(){
+            if(video.paused){
+                video.play();
+                $wrapper.addClass("playing");
+            } else {
+                video.pause();
+                $wrapper.removeClass("playing");
+            }
+        });
+        function updateProgress(){
+            if(video.duration){
+                const percent = (video.currentTime / video.duration) * 100;
+                $progressFilled.css("width", percent + "%");
+            }
+            requestAnimationFrame(updateProgress);
+        }
+        updateProgress();
+        $progress.on("click", function(e){
+            const offsetX = e.offsetX;
+            const totalWidth = $(this).width();
+            const clickPercent = offsetX / totalWidth;
+            video.currentTime = clickPercent * video.duration;
+        });
+        $video.on("ended", function(){
+            $wrapper.removeClass("playing");
+        });
+    });
+    /* $(".video").each(function(){
+        const $wrapper = $(this);
+        const $video = $wrapper.find("video");
+        const video = $video[0];
+        const $progress = $wrapper.find(".progress");
+        const $progressFilled = $wrapper.find(".progress-filled");
+        const $controls = $wrapper.find(".controls");
+        const $preview = $wrapper.find("img");
+        let hideControlsTimeout;
         function showControls() {
             $controls.show();
             if (!video.paused && !video.ended) {
@@ -401,7 +448,7 @@ $(document).ready(function(){
             $video.show();
             $video[0].setAttribute("controlsList", "nodownload noplaybackrate");
             video.play();
-            showControls();
+            $controls.show(); showControls();
         });
         $video.on("click", function(){
             if(video.paused){
@@ -421,7 +468,7 @@ $(document).ready(function(){
             requestAnimationFrame(updateProgress);
         }
         updateProgress();
-        $controls.on("click", function(e){
+        $progress.on("click", function(e){
             const offsetX = e.offsetX;
             const totalWidth = $(this).width();
             const clickPercent = offsetX / totalWidth;
@@ -442,7 +489,7 @@ $(document).ready(function(){
             $controls.show();
             $wrapper.removeClass("playing");
         });
-    });
+    }); */
 
 });
 </script>
