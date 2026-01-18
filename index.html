@@ -44,8 +44,7 @@
     td:nth-child(1){width:8em;padding-right:var(--spacer);}
     td:nth-child(2){width:auto;} */
     /* BACKGROUND */
-    #header h1,#header a,#header>span,.video:not(.playing)::after,.video .progress{background:#5556;box-shadow:0 .2em 1em #0002;backdrop-filter:blur(2px);}
-    #header h1,#header a,#header>span,.video:not(.playing)::after{border-radius:5px;transition:.1s all;display:inline-block;}
+    #header h1,#header a,#header>span,.video:not(.playing)::after{background:#5556;box-shadow:0 .2em 1em #0002;backdrop-filter:blur(2px);border-radius:5px;transition:.1s all;display:inline-block;}
     .marquee,#header h1,#header a,#header>span,.video:not(.playing)::after{line-height:2em;padding:0 .8em;}
     #header a:hover,#header a.open,.video:not(.playing):hover::after{background:#8888;}
     /* HEADER */
@@ -64,9 +63,9 @@
     .video img,.video video{width:100%;max-width:100%;cursor:pointer;}
     .video:not(.playing)::after{font-size:1rem;content:"Play";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:inline-block;pointer-events:none;}
     .video video,.video .controls{display:none;}
-    .controls{position:absolute;bottom:0;left:0;right:0;display:flex;align-items:center;justify-content:center;gap:var(--spacer);padding:var(--spacer);}
-    .progress{width:100%;max-width:100%;display:inline-block;height:4px;border-radius:100vmax;overflow:hidden;}
-    .progress-filled{width:0%;height:100%;background:#0f0;border-radius:100vmax;}
+    .controls{position:absolute;bottom:0;left:0;right:0;/* display:flex;align-items:center;justify-content:center;gap:var(--spacer); */}
+    .progress{width:100%;max-width:100%;display:inline-block;height:3px;/* border-radius:100vmax; */overflow:hidden;padding-top:var(--spacer);}
+    .progress-filled{width:0%;height:100%;background:#0f0;/* border-radius:100vmax; */}
     /* GALLERY */
     .gallery{padding:0 calc(2*var(--spacer));justify-content:stretch;grid-template-columns:repeat(auto-fit,minmax(220px, 1fr));display:grid;line-height:0;font-size:0;}
     .gallery div{padding:calc(3*var(--spacer));padding-top:0;row-gap:var(--spacer);cursor:zoom-in;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;}
@@ -99,7 +98,7 @@
             <source src="video/LandDerEchsen720.webm" type="video/webm">
             <!-- <source src="https://www.dropbox.com/s/mmcykw5nus3m39u/LandDerEchsen1080.ogv?raw=1" type="video/ogg"> -->
         </video>
-        <div class="controls"><span id="play"></span><div class="progress"><div class="progress-filled"></div></div></div>
+        <div class="controls"><div class="progress"><div class="progress-filled"></div></div></div>
     </div>
     <p>Land der Echsen (Germany, 2021). On the forgotten grounds of a derelict freight yard, a new urban quarter is in the making. For years, non-profit collectives have occupied the old loading halls &mdash; breathing life into the decaying space. But now, as redevelopment plans advance and demolition looms, they are forced to leave. Just then, an unexpected presence appears: lizards. Silent, enigmatic, and strangely defiant, they threaten to derail the entire project.</p>
     <p>Born from <i>Anti-Stuttgart &mdash; A Determinate Negation</i>, a critical design studio at <a href="https://www.igma.uni-stuttgart.de/en/">IGmA</a>, the film reimagines urban development as a stage for ecological and political tension. Premiered at the University of Stuttgart&#8217;s architecture <a href="https://www.k1.live/">graduate exhibition</a> and featured at the <a href="https://www.current-stuttgart.de/">CURRENT Festival</a> for Art and Urban Space.</p>
@@ -389,7 +388,7 @@ $(document).ready(function(){
                 clearTimeout(hideControlsTimeout);
                 hideControlsTimeout = setTimeout(() => {
                     $controls.fadeOut();
-                }, 2000);
+                }, 3000);
             }
         }
         function hideControlsImmediately() {
@@ -407,8 +406,10 @@ $(document).ready(function(){
         $video.on("click", function(){
             if(video.paused){
                 video.play();
+                $wrapper.addClass("playing");
             } else {
                 video.pause();
+                $wrapper.removeClass("playing");
             }
             showControls();
         });
@@ -439,6 +440,7 @@ $(document).ready(function(){
         });
         $video.on("ended", function(){
             $controls.show();
+            $wrapper.removeClass("playing");
         });
     });
 
