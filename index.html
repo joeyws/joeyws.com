@@ -18,6 +18,7 @@
 <meta name="geo.placename" content="Stuttgart">
 <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes,shrink-to-fit=no">
 <meta name="format-detection" content="telephone=no">
+<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAADUlEQVR4nGNgGAWjYBSMAAABjAABb6k9VQAAAABJRU5ErkJggg==">
 <link rel="canonical" href="https://joeyws.com/">
 <link rel="preconnect" href="https://api.open-meteo.com" crossorigin>
 <link rel="preconnect" href="https://api.github.com" crossorigin>
@@ -75,7 +76,7 @@
     #lightbox{user-select:none;z-index:999997;background:#0006;/* cursor:zoom-out; */position:fixed;inset:0;display:none;}
     #lightbox img{/* cursor:pointer; */max-height:90vh;max-width:calc(100vw - 2*var(--spacer));box-sizing:border-box;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);}
     /* EFFECTS */
-    @keyframes blink{0%{opacity:0;}50%{opacity:1;}}.loading{animation:.3s blink steps(1) infinite;}#time-blink{animation:2s blink steps(1) infinite;}
+    @keyframes blink{0%{opacity:0;}50%{opacity:1;}}.loading{animation:.3s blink steps(1) infinite;}/* #time-blink{animation:1s blink steps(1) infinite;} */
     @keyframes position{100%{outline-color:transparent;outline-offset:20px;}}#map{width:760px;max-width:100%;aspect-ratio:150/75;background:center center url(img/other/world.gif) no-repeat scroll;position:relative;background-size:contain;}#map:after{top:23%;left:52.5%;outline:1px solid #0f0;background:#0f0;border:1px solid #000;animation:position 1.2s infinite ease-out;width:7px;height:7px;border-radius:100vmax;pointer-events:none;position:absolute;transform:translate(-50%,-50%);display:block;content:"";}
     #cursor{width:12px;height:12px;background:#fff1;backdrop-filter:blur(20px) invert(100%) saturate(10);-webkit-backdrop-filter:blur(20px) invert(100%) saturate(10);border-radius:100vmax;position:fixed;top:-50px;left:50%;transform:translate(-50%,-50%);font-size:0;line-height:0;z-index:99999999;pointer-events:none;}
 </style>
@@ -221,6 +222,23 @@
 <script>
 $(document).ready(function(){
 
+    // PRELOADER
+    var $preloader = $('.marquee');
+    var width = 0;
+    var interval = setInterval(function() {
+        if(width < 90) {
+            width += Math.random() * 5;
+            $preloader.css('width', width + '%');
+        }
+    }, 100);
+    $(window).on('load', function() {
+        clearInterval(interval);
+        $preloader.css('width', '100%');
+        setTimeout(function() {
+            $('body').removeClass('loading');
+        }, 300);
+    });
+
     // LOADING
     const toggleLoading = show => $(".loading").toggleClass("loading", show);
 
@@ -277,7 +295,7 @@ $(document).ready(function(){
     // WEATHER
     const getWeather = async () => {
     const { current_weather } = await fetch("https://api.open-meteo.com/v1/forecast?latitude=48.7823&longitude=9.177&current_weather=true").then(res => res.json());
-        $("#weather").html(`${Math.round(current_weather.temperature)}&deg;C`);
+        $("#weather").html(`&#9728; ${Math.round(current_weather.temperature)}&deg;C`);
     };
     getWeather();
     setInterval(getWeather, 60000);
@@ -290,10 +308,10 @@ $(document).ready(function(){
         h = h ? h : 12;
         var min = addZero(time.getMinutes());
         var s = addZero(time.getSeconds());
-        $("#time").html("" + h + "<span id='time-blink'>:</span>" + min);
+        $("#time").html("" + h + "<span id='time-blink'>:</span>" + min + "<span id='time-blink'>:</span>" + s);
     }
     getTime();
-    setInterval(getTime,2000);
+    setInterval(getTime,1000);
 
     // LAST MODIFIED
     $.getJSON("https://api.github.com/repos/joeyws/joeyws.com/commits", function(json) {
@@ -356,15 +374,6 @@ $(document).ready(function(){
     };
     $(".gallery>div").click(function() { $(this).addClass("show"); Lightbox.load($(this).find("img").attr("src")); });
     $("#lightbox").click(() => Lightbox.close()).on("click", "img", e => { e.stopPropagation(); Lightbox.next(); });
-
-    // VIDEO
-    /* $(".video img").on("click",function(){
-        $(this).hide();
-        const $video = $(this).parent().addClass("playing").find("video");
-        $video.show();
-        $video[0].setAttribute('controlsList','nodownload noplaybackrate');
-        $video[0].play();
-    }); */
 
     // KEYBOARD CONTROL
 	$(document).keydown(e => {
