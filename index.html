@@ -31,9 +31,6 @@
     body{padding:var(--spacer);overflow-y:scroll;color:var(--text);background:var(--background);font:normal normal 1rem/1.3em webfont,monospace;}
     h1{display:inline-block;}
     i{font-style:italic;}
-    a,.gallery div span span{box-shadow:inset 0 -.05em #555;text-decoration:none;transition:.1s all;-webkit-box-decoration-break:clone;-o-box-decoration-break:clone;box-decoration-break:clone;}
-    a{white-space:nowrap;}
-    a:hover,.gallery div:hover span span,.gallery div.show span span{box-shadow:inset 0 -1.3em var(--text);color:var(--background);}
     /* a[href^="http"]::after{content:" \2197";} */
     h2,h3,p,pre,table,#map{margin-top:.8rem;}
     hr+*,img+p,.content *:first-child{margin-top:0;}
@@ -44,6 +41,9 @@
     td{vertical-align:top;}
     td:nth-child(1){width:8em;padding-right:var(--spacer);}
     td:nth-child(2){width:auto;}
+    a{white-space:nowrap;}
+    a,.gallery div span span{box-shadow:inset 0 -.05em #555;text-decoration:none;transition:.1s all;/* border-radius:3px;-webkit-box-decoration-break:clone;-o-box-decoration-break:clone;box-decoration-break:clone; */}
+    a:hover,.gallery div:hover span span,.gallery div.show span span{box-shadow:inset 0 -1.3em #00f;color:#f0f;/* color:var(--background); */}
     /* BACKGROUND */
     /* #header h1,#header>span, */#header a,.video:not(.playing)::after{background:#222a;backdrop-filter:blur(3px);border-radius:5px;transition:.1s all;display:inline-block;line-height:2em;padding:0 .8em;}
     #header a:hover,#header a.open,.video:not(.playing):hover::after{background:#8888;}
@@ -186,7 +186,7 @@
     <table>
         <tr><td data-title="01.04.2023-31.03.2024">2023&ndash;2024</td><td>Deutschlandstipendium Scholarship, Federal Republic of Germany/Ed. Züblin AG</td></tr>
         <tr><td data-title="01.03.2023-29.02.2024">2023&ndash;2024</td><td>Swiss-European Mobility Programme</td></tr>
-        <tr><td data-title="05.09.2022-26.01.2023,01.03.2023-02.10.2023">2022&ndash;2023</td><td>Erasmus+ schoolarship, European Union</td></tr>
+        <tr><td data-title="05.09.2022-26.01.2023,01.03.2023-02.10.2023">2022&ndash;2023</td><td>2&times; Erasmus+ schoolarship, European Union</td></tr>
         <tr><td data-title="24.06.2022-04.07.2022">2022</td><td>Graduate Design Projects Selection, Department of Architecture, University of Stuttgart</td></tr>
         <tr><td data-title="16.09.2021-17.09.2021">2021</td><td>Film screening, CURRENT Festival for Art and Urban Space</td></tr>
         <tr><td data-title="13.01.2020-25.01.2020">2020</td><td>Annual Design Projects Selection, IRGE, University of Stuttgart</td></tr>
