@@ -51,7 +51,7 @@
     #header{white-space:nowrap;gap:var(--spacer);user-select:none;/* position:fixed;top:var(--spacer); */z-index:999996;width:100%;display:flex;flex-wrap:wrap;justify-content:space-between;}
     #header>div{display:flex;gap:var(--spacer);}
     #header>*{display:inline-block;}
-    .marquee{width:1px;transition:.1s width;background:#0f0;color:#000;white-space:nowrap;overflow:hidden;margin:calc(-1 * var(--spacer));margin-bottom:var(--spacer);line-height:1.4em;user-select:none;/* mask-mode:alpha;mask-image:linear-gradient(to right, transparent, #000 33%, #000 calc(100% - 33%), transparent); */}.marquee span{margin-right:2.8em;}
+    .marquee{width:1px;transition:.2s width ease-out;background:#0f0;color:#000;white-space:nowrap;overflow:hidden;margin:calc(-1 * var(--spacer));margin-bottom:var(--spacer);line-height:1.4em;user-select:none;/* mask-mode:alpha;mask-image:linear-gradient(to right, transparent, #000 33%, #000 calc(100% - 33%), transparent); */}.marquee span{margin-right:2.8em;}
     #header a{box-shadow:none;color:var(--text) !important;}
     #header a:hover,#header a.open{padding:0 1.4em;}
     #header a.open{cursor:default;}
@@ -162,36 +162,6 @@
         <img loading="lazy" src="img/160808.jpg" alt="N&yacute;idalur">
     </div>
 </div>
-<div class="content" id="about">
-    <h2>Professional</h2>
-    <table>
-        <tr><td data-title="01.10.2025-">2025-Present</td><td>Schmelzle+Partner</td></tr>
-        <tr><td data-title="01.03.2024-31.07.2025">2025</td><td>Institute for Computational Design and Construction, University of Stuttgart</td></tr>
-        <tr><td data-title="01.05.2024-31.05.2025">2024-2025</td><td>IntCDC Cluster of Excellence, University of Stuttgart</td></tr>
-        <tr><td data-title="01.03.2023-29.02.2024">2023&ndash;2024</td><td>Herzog & de Meuron</td></tr>
-        <tr><td data-title="14.03.2023-09.09.2023">2022</td><td>Behnisch Architekten</td></tr>
-        <tr><td data-title="25.10.2022-28.02.2023">2021&ndash;2022</td><td>REM ASSETS</td></tr>
-        <tr><td data-title="01.10.2021-30.09.2022">2020&ndash;2021</td><td>Werner Sobek</td></tr>
-    </table>
-    <hr>
-    <h2>Academic</h2>
-    <table>
-        <tr><td data-title="01.10.2021-16.06.2025">2021&ndash;2025</td><td>University of Stuttgart, MSc Architecture and Urban Planning</td></tr>
-        <tr><td data-title="05.09.2022-26.01.2023">2022&ndash;2023</td><td>Politecnico di Milano, Study Abroad, Architecture and Urban Design</td></tr>
-        <tr><td data-title="15.07.2022-22.07.2022">2022</td><td>Architectural Association School of Architecture/State Academy of Fine Arts Stuttgart, Visiting School</td></tr>
-        <tr><td data-title="01.10.2018-30.09.2021">2018&ndash;2021</td><td>University of Stuttgart, BSc Architecture and Urban Planning</td></tr>
-    </table>
-    <hr>
-    <h2>Honors</h2>
-    <table>
-        <tr><td data-title="01.04.2023-31.03.2024">2023&ndash;2024</td><td>Deutschlandstipendium Scholarship, Federal Republic of Germany/Ed. Züblin AG</td></tr>
-        <tr><td data-title="01.03.2023-29.02.2024">2023&ndash;2024</td><td>Swiss-European Mobility Programme</td></tr>
-        <tr><td data-title="05.09.2022-26.01.2023,01.03.2023-02.10.2023">2022&ndash;2023</td><td>2&times; Erasmus+ schoolarship, European Union</td></tr>
-        <tr><td data-title="24.06.2022-04.07.2022">2022</td><td>Graduate Design Projects Selection, Department of Architecture, University of Stuttgart</td></tr>
-        <tr><td data-title="16.09.2021-17.09.2021">2021</td><td>Film screening, CURRENT Festival for Art and Urban Space</td></tr>
-        <tr><td data-title="13.01.2020-25.01.2020">2020</td><td>Annual Design Projects Selection, IRGE, University of Stuttgart</td></tr>
-    </table>
-</div>
 <div class="content" id="contact">
     <p>
         Joey Schweickhardt<br>
@@ -239,7 +209,7 @@ $(document).ready(function(){
     var width = 1;
     var interval = setInterval(function() {
         if(width < 90) {
-            width += Math.random() * 5;
+            width += Math.random() * 10;
             $preloader.css('width', width + 'vw');
         }
     }, 100);
