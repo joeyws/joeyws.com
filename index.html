@@ -54,7 +54,7 @@
     #weather,#time{margin-left:1.2em;}
     /* MARQUEE */
     .marquee{background:#0f0;color:var(--background);transition:.2s width ease-out;line-height:1.4em;box-sizing: border-box;margin:calc(-1 * var(--spacer));margin-bottom:var(--spacer);width:1px;overflow:hidden;white-space:nowrap;position:relative;display:block;user-select:none;}
-    .marquee-track{display:inline-flex;white-space:nowrap;will-change:transform;animation:marquee 20s linear infinite;}
+    .marquee-track{display:inline-flex;white-space:nowrap;will-change:transform;animation:marquee 30s linear infinite;}
     .marquee-track span{padding-right:2.2rem;}
     @keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-100%);}}
     /* VIDEO */
@@ -244,7 +244,7 @@ function scroll() {
     clone.style.transform = `translateX(${pos + trackWidth}px)`;
     requestAnimationFrame(scroll);
 }
-setTimeout(scroll, 1000);
+window.addEventListener('load', () => {scroll();});
 
 // GALLERY
 document.querySelectorAll(".gallery img").forEach(img => {
