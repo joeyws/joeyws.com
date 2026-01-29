@@ -29,7 +29,6 @@
     body{padding:var(--spacer);overflow-y:scroll;color:var(--text);background:var(--background);font:normal normal 1rem/1.3em webfont,monospace;}
     h1{display:inline-block;}
     i{font-style:italic;}
-    a[href^="http"]::after{content:" \2197";}
     h2,h3,p,pre,table,#map{margin-top:.8rem;}
     hr+*,img+p,.content *:first-child{margin-top:0;}
     p{max-width:800px;}
@@ -40,6 +39,7 @@
     td:nth-child(1){width:8em;padding-right:var(--spacer);}
     td:nth-child(2){width:auto;}
     a{white-space:nowrap;}
+    /* a[href^="http"]::after{content:" \2197";} */
     a,.gallery div span span{box-shadow:inset 0 -.05em #666;text-decoration:none;transition:.1s all;/* border-radius:3px;-webkit-box-decoration-break:clone;-o-box-decoration-break:clone;box-decoration-break:clone; */}
     a:hover,.gallery div:hover span span,.gallery div.show span span{box-shadow:inset 0 -1.3em #00f;}
     /* BACKGROUND */
@@ -357,10 +357,9 @@ requestIdleCallback(() => {
         } catch (err) {
             console.error("Failed to fetch commits:", err);
         }
+        lenis.update();
     }
-    window.addEventListener('load', () => {
-        updateLastModified();
-    });
+    updateLastModified();
 });
     
 // CONTACT
