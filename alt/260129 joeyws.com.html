@@ -196,7 +196,7 @@
     <p>
         No cookies. No tracking.<br>
         Your IP address is used solely to deliver the site.<br>
-        Weather data fetched from <a href="https://open-meteo.com/" rel="nofollow">Open‑Meteo</a>.
+        Weather data provided by <a href="https://open-meteo.com/" rel="nofollow">Open‑Meteo</a>
     </p>
     <!-- <hr>
     <h3>Attributions</h3>
@@ -334,21 +334,15 @@ $(document).ready(function(){
         }
     }).catch(err => console.error("Failed to fetch commits:", err));
     
-    // CONTACT
+    // CONTACT JQUERY
     var address1 = 'K'+'o'+'l'+'p'+'i'+'n'+'g'+'s'+'t'+'r'+'a'+'ß'+'e'+' '+'5'+'6';
     var address2 = '7'+'0'+'3'+'7'+'8'+' '+'S'+'t'+'u'+'t'+'t'+'g'+'a'+'r'+'t';
     var mail = 'm'+'a'+'i'+'l'+ String.fromCharCode(64) +'j'+'o'+'e'+'y'+'w'+'s'+'.'+'c'+'o'+'m';
     var phone = '+'+'4'+'9'+'1'+'5'+'7'+'7'+'8'+'8'+'5'+'0'+'5'+'0'+'2';
-    document.querySelectorAll(".address1").forEach(el => el.textContent = address1);
-    document.querySelectorAll(".address2").forEach(el => el.textContent = address2);
-    document.querySelectorAll(".email").forEach(el => {
-        el.textContent = mail;
-        el.setAttribute("href", `mailto:Joey%20Schweickhardt%20<${mail}>`);
-    });
-    document.querySelectorAll(".phone").forEach(el => {
-        el.textContent = phone;
-        el.setAttribute("href", `tel:${phone}`);
-    });
+    $('.address1').html(address1);
+    $('.address2').html(address2);
+    $('.email').append(mail).attr('href',String.fromCharCode(109)+'a'+'i'+'l'+'t'+'o'+':'+'Joey'+'%20'+'Schweickhardt'+'%20'+'%3C'+mail+'%3E');
+    $('.phone').append(phone).attr('href','t'+'e'+'l'+':'+phone);
 
     // COPY EMAIL
     document.querySelectorAll(".email").forEach(emailEl => {
