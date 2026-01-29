@@ -29,7 +29,7 @@
     body{padding:var(--spacer);overflow-y:scroll;color:var(--text);background:var(--background);font:normal normal 1rem/1.3em webfont,monospace;}
     h1{display:inline-block;}
     i{font-style:italic;}
-    /* a[href^="http"]::after{content:" \2197";} */
+    a[href^="http"]::after{content:" \2197";}
     h2,h3,p,pre,table,#map{margin-top:.8rem;}
     hr+*,img+p,.content *:first-child{margin-top:0;}
     p{max-width:800px;}
@@ -46,14 +46,14 @@
     #header a,.video:not(.playing)::after{background:#222a;backdrop-filter:blur(3px);border-radius:5px;transition:.1s all;display:inline-block;line-height:2em;padding:0 .8em;}
     #header a:hover,#header a.open,.video:not(.playing):hover::after{background:#8888;}
     /* HEADER */
-    #header{white-space:nowrap;gap:var(--spacer);user-select:none;/* position:fixed;top:var(--spacer); */z-index:999996;width:100%;display:flex;flex-wrap:wrap;justify-content:space-between;}
+    #header{white-space:nowrap;gap:var(--spacer);user-select:none;z-index:999996;width:100%;display:flex;flex-wrap:wrap;justify-content:space-between;}
     #header>div{display:flex;gap:var(--spacer);}
     #header>*{display:inline-block;}
     #header a{box-shadow:none;color:var(--text) !important;}
     #header a:hover,#header a.open{padding:0 1.4em;}
     #weather,#time{margin-left:1.2em;}
     /* MARQUEE */
-    .marquee{background:#0f0;color:var(--background);transition:.2s width ease-out;line-height:1.4em;box-sizing: border-box;margin:calc(-1 * var(--spacer));margin-bottom:var(--spacer);width:1px;overflow:hidden;white-space:nowrap;position:relative;display:block;user-select:none;}
+    .marquee{background:#0f0;color:var(--background);/*transition:.2s width ease-out;*/line-height:1.4em;box-sizing: border-box;margin:calc(-1 * var(--spacer));margin-bottom:var(--spacer);width:1px;overflow:hidden;white-space:nowrap;position:relative;display:block;user-select:none;}
     .marquee-track{display:inline-flex;white-space:nowrap;will-change:transform;animation:marquee 30s linear infinite;}
     .marquee-track span{padding-right:2.2rem;}
     @keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-100%);}}
