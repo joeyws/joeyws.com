@@ -20,8 +20,10 @@
 <meta name="format-detection" content="telephone=no">
 <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAADUlEQVR4nGNgGAWjYBSMAAABjAABb6k9VQAAAABJRU5ErkJggg==">
 <link rel="canonical" href="https://joeyws.com/">
-<link rel="preconnect" href="https://api.open-meteo.com" crossorigin>
-<link rel="preconnect" href="https://api.github.com" crossorigin>
+<link rel="preload" href="font/SourceCodePro-Regular.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="preload" href="scripts.js" as="script">
+<!-- <link rel="preconnect" href="https://api.open-meteo.com" crossorigin>
+<link rel="preconnect" href="https://api.github.com" crossorigin> -->
 <style>
     @font-face{font-family:webfont;src:url("font/SourceCodePro-Regular.ttf");font-display:swap;}
     :root{--background:#000;--text:#bbb;--spacer:8px;}
@@ -247,6 +249,26 @@ function scroll() {
 }
 setTimeout(scroll, 1000);
 
+// GALLERY
+document.querySelectorAll(".gallery img").forEach(img => {
+    const caption = img.getAttribute("alt") || "";
+    const date = "20" + img.getAttribute("src").slice(4, 6);
+    const wrapper = document.createElement("div");
+    img.parentNode.insertBefore(wrapper, img);
+    wrapper.appendChild(img);
+    const captionOuter = document.createElement("span");
+    const captionInner = document.createElement("span");
+    captionInner.textContent = caption;
+    captionOuter.appendChild(captionInner);
+    wrapper.appendChild(captionOuter);
+});
+const lightbox = document.createElement("div");
+lightbox.id = "lightbox";
+const lightboxImg = document.createElement("img");
+lightboxImg.src = "";
+lightbox.appendChild(lightboxImg);
+document.body.appendChild(lightbox);
+
 // HASH NAV
 function refreshHash() {
     const links = document.querySelectorAll("#header a");
@@ -294,25 +316,6 @@ if (window.matchMedia('(pointer: fine)').matches) {
     document.addEventListener('mouseover', e => {if (!e.relatedTarget) {cursor.style.opacity = '1';}});
 }
 
-// WEATHER
-const getWeather = async () => {
-    try {
-        const response = await fetch("https://api.open-meteo.com/v1/forecast?latitude=48.7823&longitude=9.177&current_weather=true");
-        const data = await response.json();
-        const current_weather = data.current_weather;
-        const weatherEl = document.getElementById("weather");
-        if (weatherEl) {
-            weatherEl.innerHTML = `<span style="color:#fb0;">&#9728;</span> ${Math.round(current_weather.temperature)}&deg;C`;
-        }
-    } catch (err) {
-        console.error("Weather fetch failed:", err);
-    }
-};
-window.addEventListener('load', () => {
-    getWeather();
-});
-setInterval(getWeather, (10 * 60 * 1000));
-
 // TIME
 function getTime() {
     function addZero(i) {return i < 10 ? "0" + i : i;}
@@ -327,22 +330,38 @@ function getTime() {
 getTime();
 setInterval(getTime, 1000);
 
-// LAST MODIFIED
-async function updateLastModified() {
-    try {
-        const response = await fetch("https://api.github.com/repos/joeyws/joeyws.com/commits");
-        if (!response.ok) throw new Error("GitHub API request failed");
-        const json = await response.json();
-        const date = new Date(json[0].commit.author.date);
-        const formatted = date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
-        const contactEl = document.getElementById("contact");
-        if (contactEl) {contactEl.innerHTML += `<hr><p>Last modified ${formatted}.</p>`;}
-    } catch (err) {
-        console.error("Failed to fetch commits:", err);
+window.addEventListener('load', async () => {
+    // WEATHER
+    const getWeather = async () => {
+        try {
+            const response = await fetch("https://api.open-meteo.com/v1/forecast?latitude=48.7823&longitude=9.177&current_weather=true");
+            const data = await response.json();
+            const current_weather = data.current_weather;
+            const weatherEl = document.getElementById("weather");
+            if (weatherEl) {
+                weatherEl.innerHTML = `<span style="color:#fb0;">&#9728;</span> ${Math.round(current_weather.temperature)}&deg;C`;
+            }
+        } catch (err) {
+            console.error("Weather fetch failed:", err);
+        }
+    };
+    // LAST MODIFIED
+    async function updateLastModified() {
+        try {
+            const response = await fetch("https://api.github.com/repos/joeyws/joeyws.com/commits");
+            if (!response.ok) throw new Error("GitHub API request failed");
+            const json = await response.json();
+            const date = new Date(json[0].commit.author.date);
+            const formatted = date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+            const contactEl = document.getElementById("contact");
+            if (contactEl) {contactEl.innerHTML += `<hr><p>Last modified ${formatted}.</p>`;}
+        } catch (err) {
+            console.error("Failed to fetch commits:", err);
+        }
     }
-}
-window.addEventListener('load', () => {
-    updateLastModified();
+    window.addEventListener('load', () => {
+        updateLastModified();
+    });
 });
     
 // CONTACT
@@ -380,26 +399,6 @@ document.querySelectorAll(".email").forEach(emailEl => {
         });
     });
 });
-
-// GALLERY
-document.querySelectorAll(".gallery img").forEach(img => {
-    const caption = img.getAttribute("alt") || "";
-    const date = "20" + img.getAttribute("src").slice(4, 6);
-    const wrapper = document.createElement("div");
-    img.parentNode.insertBefore(wrapper, img);
-    wrapper.appendChild(img);
-    const captionOuter = document.createElement("span");
-    const captionInner = document.createElement("span");
-    captionInner.textContent = caption;
-    captionOuter.appendChild(captionInner);
-    wrapper.appendChild(captionOuter);
-});
-const lightbox = document.createElement("div");
-lightbox.id = "lightbox";
-const lightboxImg = document.createElement("img");
-lightboxImg.src = "";
-lightbox.appendChild(lightboxImg);
-document.body.appendChild(lightbox);
 
 // LIGHTBOX
 const Lightbox = {
