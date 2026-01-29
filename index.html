@@ -308,7 +308,9 @@ const getWeather = async () => {
         console.error("Weather fetch failed:", err);
     }
 };
-getWeather();
+window.addEventListener('load', () => {
+    getWeather();
+});
 setInterval(getWeather, (10 * 60 * 1000));
 
 // TIME
@@ -339,7 +341,9 @@ async function updateLastModified() {
         console.error("Failed to fetch commits:", err);
     }
 }
-updateLastModified();
+window.addEventListener('load', () => {
+    updateLastModified();
+});
     
 // CONTACT
 var address1 = 'K'+'o'+'l'+'p'+'i'+'n'+'g'+'s'+'t'+'r'+'a'+'ß'+'e'+' '+'5'+'6';
