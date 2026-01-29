@@ -327,7 +327,7 @@ function getTime() {
 getTime();
 setInterval(getTime, 1000);
 
-document.addEventListener('DOMContentLoaded', () => {
+requestIdleCallback(() => {
     // WEATHER
     const getWeather = async () => {
         try {
