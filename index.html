@@ -51,11 +51,15 @@
     #header{white-space:nowrap;gap:var(--spacer);user-select:none;/* position:fixed;top:var(--spacer); */z-index:999996;width:100%;display:flex;flex-wrap:wrap;justify-content:space-between;}
     #header>div{display:flex;gap:var(--spacer);}
     #header>*{display:inline-block;}
-    .marquee{width:1px;transition:.2s width ease-out;background:#0f0;color:#000;white-space:nowrap;overflow:hidden;margin:calc(-1 * var(--spacer));margin-bottom:var(--spacer);line-height:1.4em;user-select:none;/* mask-mode:alpha;mask-image:linear-gradient(to right, transparent, #000 33%, #000 calc(100% - 33%), transparent); */}.marquee span{margin-right:2.8em;}
     #header a{box-shadow:none;color:var(--text) !important;}
     #header a:hover,#header a.open{padding:0 1.4em;}
     #header a.open{cursor:default;}
     #weather,#time{margin-left:1.2em;}
+    /* MARQUEE */
+    .marquee{background:#0f0;color:var(--background);transition:.2s width ease-out;line-height:1.4em;box-sizing: border-box;margin:calc(-1 * var(--spacer));margin-bottom:var(--spacer);width:1px;overflow:hidden;white-space:nowrap;position:relative;display:block;user-select:none;}
+    .marquee-track{display:inline-flex;white-space:nowrap;will-change:transform;animation:marquee 20s linear infinite;}
+    .marquee-track span{padding-right:2.2rem;}
+    @keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
     /* VIDEO */
     .video{overflow:hidden;position:relative;max-width:800px;font-size:0;line-height:0;}
     .video img{transition:all .75s;}
@@ -77,15 +81,15 @@
     /* SPECIAL */
     .mitgliedakbw{width:240px;max-width:100%;fill:var(--text);}
     @keyframes blink-loading{0%{opacity:0;}50%{opacity:1;}}.loading{animation:.3s blink-loading steps(1) infinite;}
-    @keyframes blink-time{0%{opacity:1;}50%{opacity:0;}}#time-blink{animation:1s blink-time steps(1) infinite;}
-    @keyframes position{100%{outline-color:transparent;outline-offset:20px;}}#map{width:760px;max-width:100%;aspect-ratio:150/75;background:center center url(img/other/world.gif) no-repeat scroll;position:relative;background-size:contain;}#map:after{top:23%;left:52.5%;outline:1px solid #0f0;background:#0f0;border:1px solid #000;animation:position 1.2s infinite ease-out;width:7px;height:7px;border-radius:100vmax;pointer-events:none;position:absolute;transform:translate(-50%,-50%);display:block;content:"";}
-    #cursor{width:12px;height:12px;background:#fff1;backdrop-filter:blur(20px) invert(100%) saturate(10);-webkit-backdrop-filter:blur(20px) invert(100%) saturate(10);border-radius:100vmax;position:fixed;top:-50px;left:50%;transform:translate(-50%,-50%);font-size:0;line-height:0;z-index:99999999;pointer-events:none;}
+    @keyframes blink-time{0%{opacity:1;}50%{opacity:0;}}.time-blink{animation:1s blink-time steps(1) infinite;}
+    @keyframes map{100%{outline-color:transparent;outline-offset:20px;}}#map{width:760px;max-width:100%;aspect-ratio:150/75;background:center center url(img/other/world.gif) no-repeat scroll;position:relative;background-size:contain;}#map:after{top:23%;left:52.5%;outline:1px solid #0f0;background:#0f0;border:1px solid #000;animation:map 1.2s infinite ease-out;width:7px;height:7px;border-radius:100vmax;pointer-events:none;position:absolute;transform:translate(-50%,-50%);display:block;content:"";}
+    #cursor{width:12px;height:12px;background:#fff1;backdrop-filter:blur(20px) invert(100%) saturate(10);-webkit-backdrop-filter:blur(20px) invert(100%) saturate(10);border-radius:100vmax;position:fixed;top:-50px;left:50%;transform:translate(-50%,-50%);font-size:0;line-height:0;z-index:99999999;pointer-events:none;}*{cursor:none;}
 </style>
 </head>
 <body>
 
 <header>
-    <div class="marquee"><span lang="zh-Hant">歡迎</span><span lang="es">Bienvenidos</span><span lang="en">Welcome</span><span lang="hi">स्वागत हे</span><span lang="ar">اهلا وسهلا</span><span lang="bn">স্বাগত</span><span lang="pt">Bem-vindo</span><span lang="ru">добро пожаловать</span><span lang="ur">خوش آمدید</span><span lang="ja">ようこそ</span><span lang="id">Selamat datang</span><span lang="de">Willkommen</span><span lang="tr">Hoşgeldiniz</span><span lang="ta">வரவேற்பு</span><span lang="fr">Bienvenue</span><span lang="ko">어서 오십시오</span><span lang="vi">Hoan nghênh</span><span lang="jv">Sugeng Rawuh</span><span lang="sw">Karibu</span><span lang="sa">Svāgatam</span><span lang="it">Benvenuto</span><span lang="pa">ਸਵਾਗਤ ਹੈ</span></div>
+    <div class="marquee"><div class="marquee-track"><span lang="zh-Hant">歡迎</span><span lang="es">Bienvenidos</span><span lang="en">Welcome</span><span lang="hi">स्वागत हे</span><span lang="ar">اهلا وسهلا</span><span lang="bn">স্বাগত</span><span lang="pt">Bem-vindo</span><span lang="ru">добро пожаловать</span><span lang="ur">خوش آمدید</span><span lang="ja">ようこそ</span><span lang="id">Selamat datang</span><span lang="de">Willkommen</span><span lang="tr">Hoşgeldiniz</span><span lang="ta">வரவேற்பு</span><span lang="fr">Bienvenue</span><span lang="ko">어서 오십시오</span><span lang="vi">Hoan nghênh</span><span lang="jv">Sugeng Rawuh</span><span lang="sw">Karibu</span><span lang="sa">Svāgatam</span><span lang="it">Benvenuto</span><span lang="pa">ਸਵਾਗਤ ਹੈ</span></div></div>
     <div id="header"><h1 class="loading">Joey Schweickhardt</h1><div><a href="#/works">Works</a><a href="#/places">Places</a><!-- <a href="#/about">About</a> --><a href="#/contact">Contact</a></div><span>Stuttgart<span id="weather"></span><span id="time"></span></span></div>
 </header>
 <hr>
@@ -95,7 +99,7 @@
 <div class="content" id="works">
     <div class="video">
         <img fetchpriority="high" src="img/other/landderechsen.jpg" alt="Land der Echsen" />
-        <video oncontextmenu="return false;" tabindex="0">
+        <video oncontextmenu="return false;" preload="none" tabindex="0">
             <source src="video/LandDerEchsen1080.mp4" type="video/mp4">
             <source src="video/LandDerEchsen720.webm" type="video/webm">
             <!-- <source src="https://www.dropbox.com/s/mmcykw5nus3m39u/LandDerEchsen1080.ogv?raw=1" type="video/ogg"> -->
@@ -198,267 +202,292 @@
         Your IP address is used solely to deliver the site.<br>
         Weather data fetched from <a href="https://open-meteo.com/" rel="nofollow">Open‑Meteo</a>.
     </p>
-    <!-- <hr>
-    <h3>Attributions</h3>
-    <p>
-        &nbsp;&mdash; Hosting: <a href="https://github.com/" rel="nofollow">GitHub</a><br>
-        &nbsp;&mdash; Font: <a href="https://en.wikipedia.org/wiki/Source_Code_Pro" rel="nofollow">Source Code Pro</a><br>
-        &nbsp;&mdash; Weather data: <a href="https://open-meteo.com/" rel="nofollow">Open‑Meteo</a>
-    </p> -->
 </div>
 </main>
 
 
 <script src="scripts.js"></script>
 <script>
-$(document).ready(function(){
-
-    // PRELOADER
-    const preloader = document.querySelector('.marquee');
-    let width = 1;
-        const interval = setInterval(() => {
-        if (width < 80) {
-            width += Math.random() * 10;
-            preloader.style.width = width + 'vw';
-        }
-    }, 100);
-    window.addEventListener('load', () => {
-        clearInterval(interval);
-        preloader.style.width = '100vw';
-    });
-
-    // LOADING
-    const toggleLoading = (show) => {
-        document.querySelectorAll('.loading').forEach(el => {
-            if (show) el.classList.add('loading');
-            else el.classList.remove('loading');
-        });
-    };
-
-    // INIT
-	$(window).on("load",function(){
-        toggleLoading(false);
-        refreshHash();
-        // MARQUEE JQUERY
-        $('.marquee').marquee({
-            speed: 50,
-            delayBeforeStart: 0,
-            direction: 'left',
-            duplicated: true,
-            startVisible: true,
-            gap: 0
-        });
-    });
-
-    // HASH NAV JQUERY
-    function refreshHash() {
-        let hash = window.location.hash || $("#header a:first").attr("href");
-        let $links = $("#header a");
-        if (!$links.filter(`[href='${hash}']`).length) {hash = $links.first().attr("href");}
-        $links.removeClass("open");
-        $links.filter(`[href='${hash}']`).addClass("open");
-        $("#" + hash.slice(2)).show().siblings(".content").hide();
+// PRELOADER
+const preloader = document.querySelector('.marquee');
+let width = 1;
+const interval = setInterval(() => {
+    if (width < 80) {
+        width += Math.random() * 10;
+        preloader.style.width = width + 'vw';
     }
-    $(window).on("hashchange", refreshHash);
+}, 100);
+window.addEventListener('load', () => {
+    clearInterval(interval);
+    preloader.style.width = '100vw';
+});
 
-    // MOMENTUM SCROLL
-    const lenis = new Lenis({
-        duration: .8,
-        easing: (t) => 1 - Math.pow(1 - t, 3),
-        smooth: true,
-        smoothTouch: false
+// LOADING
+const toggleLoading = (show) => {
+    document.querySelectorAll('.loading').forEach(el => {
+        if (show) el.classList.add('loading');
+        else el.classList.remove('loading');
     });
-    function raf(time) {
-        lenis.raf(time);
-        requestAnimationFrame(raf);
-    }
+};
+window.addEventListener('load', () => {toggleLoading(false);});
+
+// MARQUEE
+const marquee = document.querySelector('.marquee');
+const track = marquee.querySelector('.marquee-track');
+const clone = track.cloneNode(true);
+marquee.appendChild(clone);
+let trackWidth = track.offsetWidth;
+let pos = 0;
+const speed = 1;
+function scroll() {
+    pos -= speed;
+    if (pos <= -trackWidth) pos = 0;
+    track.style.transform = `translateX(${pos}px)`;
+    clone.style.transform = `translateX(${pos + trackWidth}px)`;
+    requestAnimationFrame(scroll);
+}
+setTimeout(scroll, 1000);
+
+// HASH NAV
+function refreshHash() {
+    const links = document.querySelectorAll("#header a");
+    let hash = window.location.hash || (links[0] ? links[0].getAttribute("href") : "");
+    const valid = Array.from(links).some(link => link.getAttribute("href") === hash);
+    if (!valid && links[0]) {hash = links[0].getAttribute("href");}
+    links.forEach(link => link.classList.remove("open"));
+    const activeLink = Array.from(links).find(link => link.getAttribute("href") === hash);
+    if (activeLink) {activeLink.classList.add("open");}
+    const targetId = hash.slice(2);
+    document.querySelectorAll(".content").forEach(el => {el.style.display = "none";});
+    const target = document.getElementById(targetId);
+    if (target) {target.style.display = "";}
+}
+window.addEventListener("hashchange", refreshHash);
+window.addEventListener('load', () => {refreshHash();});
+refreshHash();
+
+// MOMENTUM SCROLL
+const lenis = new Lenis({
+    duration: .8,
+    easing: (t) => 1 - Math.pow(1 - t, 3),
+    smooth: true,
+    smoothTouch: false
+});
+function raf(time) {
+    lenis.raf(time);
     requestAnimationFrame(raf);
-    window.addEventListener('resize', () => {lenis.update();});
-    window.addEventListener('hashchange', () => {setTimeout(() => {lenis.resize();}, 50);});
+}
+requestAnimationFrame(raf);
+window.addEventListener('resize', () => {lenis.update();});
+window.addEventListener('hashchange', () => {setTimeout(() => {lenis.resize();}, 50);});
 
-    // CURSOR
-    if (window.matchMedia('(pointer: fine)').matches) {
-        $("body").append("<div id='cursor'></div>");
-        $("*").css("cursor","none");
-        const $c = $('#cursor');
-        $(document).on('mousemove', e => $c.css({top: e.clientY+'px', left: e.clientX+'px', opacity: 1}));
-        $(document).on('mouseenter mouseleave', e => $c.css('opacity', e.type==='mouseenter'?1:0));
-    }
+// CURSOR
+if (window.matchMedia('(pointer: fine)').matches) {
+    const cursor = document.createElement('div');
+    cursor.id = 'cursor';
+    document.body.appendChild(cursor);
+    document.addEventListener('mousemove', e => {
+        cursor.style.top = e.clientY + 'px';
+        cursor.style.left = e.clientX + 'px';
+        cursor.style.opacity = '1';
+    });
+    document.addEventListener('mouseout', e => {if (!e.relatedTarget && !e.toElement) {cursor.style.opacity = '0';}});
+    document.addEventListener('mouseover', e => {if (!e.relatedTarget) {cursor.style.opacity = '1';}});
+}
 
-    // WEATHER
-    const getWeather = async () => {
-        try {
-            const response = await fetch("https://api.open-meteo.com/v1/forecast?latitude=48.7823&longitude=9.177&current_weather=true");
-            const data = await response.json();
-            const current_weather = data.current_weather;
-            const weatherEl = document.getElementById("weather");
-            if (weatherEl) {
-                weatherEl.innerHTML = `<span style="color:#fb0;">&#9728;</span> ${Math.round(current_weather.temperature)}&deg;C`;
-            }
-        } catch (err) {
-            console.error("Weather fetch failed:", err);
+// WEATHER
+const getWeather = async () => {
+    try {
+        const response = await fetch("https://api.open-meteo.com/v1/forecast?latitude=48.7823&longitude=9.177&current_weather=true");
+        const data = await response.json();
+        const current_weather = data.current_weather;
+        const weatherEl = document.getElementById("weather");
+        if (weatherEl) {
+            weatherEl.innerHTML = `<span style="color:#fb0;">&#9728;</span> ${Math.round(current_weather.temperature)}&deg;C`;
         }
-    };
-    getWeather();
-    setInterval(getWeather, 60000);
-
-    // TIME
-    function getTime() {
-    function addZero(i) {
-        return i < 10 ? "0" + i : i;
+    } catch (err) {
+        console.error("Weather fetch failed:", err);
     }
+};
+getWeather();
+setInterval(getWeather, (10 * 60 * 1000));
+
+// TIME
+function getTime() {
+    function addZero(i) {return i < 10 ? "0" + i : i;}
     const time = new Date();
     let h = time.getHours();
     h = h ? h : 12;
     const min = addZero(time.getMinutes());
     const s = addZero(time.getSeconds());
     const timeEl = document.getElementById("time");
-    if (timeEl) {
-        timeEl.innerHTML = `${h}<span id="time-blink">:</span>${min}<span id="time-blink">:</span>${s}`;
-    }
-    }
-    getTime();
-    setInterval(getTime, 1000);
+    if (timeEl) {timeEl.innerHTML = `${h}<span class="time-blink">:</span>${min}<span class="time-blink">:</span>${s}`;}
+}
+getTime();
+setInterval(getTime, 1000);
 
-    // LAST MODIFIED
-    fetch("https://api.github.com/repos/joeyws/joeyws.com/commits").then(response => response.json()).then(json => {
+// LAST MODIFIED
+async function updateLastModified() {
+    try {
+        const response = await fetch("https://api.github.com/repos/joeyws/joeyws.com/commits");
+        if (!response.ok) throw new Error("GitHub API request failed");
+        const json = await response.json();
         const date = new Date(json[0].commit.author.date);
         const formatted = date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
         const contactEl = document.getElementById("contact");
-        if (contactEl) {
-            const hr = document.createElement("hr");
-            const p = document.createElement("p");
-            p.textContent = `Last modified ${formatted}.`;
-            contactEl.appendChild(hr);
-            contactEl.appendChild(p);
-        }
-    }).catch(err => console.error("Failed to fetch commits:", err));
+        if (contactEl) {contactEl.innerHTML += `<hr><p>Last modified ${formatted}.</p>`;}
+    } catch (err) {
+        console.error("Failed to fetch commits:", err);
+    }
+}
+updateLastModified();
     
-    // CONTACT
-    var address1 = 'K'+'o'+'l'+'p'+'i'+'n'+'g'+'s'+'t'+'r'+'a'+'ß'+'e'+' '+'5'+'6';
-    var address2 = '7'+'0'+'3'+'7'+'8'+' '+'S'+'t'+'u'+'t'+'t'+'g'+'a'+'r'+'t';
-    var mail = 'm'+'a'+'i'+'l'+ String.fromCharCode(64) +'j'+'o'+'e'+'y'+'w'+'s'+'.'+'c'+'o'+'m';
-    var phone = '+'+'4'+'9'+'1'+'5'+'7'+'7'+'8'+'8'+'5'+'0'+'5'+'0'+'2';
-    document.querySelectorAll(".address1").forEach(el => el.textContent = address1);
-    document.querySelectorAll(".address2").forEach(el => el.textContent = address2);
-    document.querySelectorAll(".email").forEach(el => {
-        el.textContent = mail;
-        el.setAttribute("href", `mailto:Joey%20Schweickhardt%20<${mail}>`);
-    });
-    document.querySelectorAll(".phone").forEach(el => {
-        el.textContent = phone;
-        el.setAttribute("href", `tel:${phone}`);
-    });
+// CONTACT
+var address1 = 'K'+'o'+'l'+'p'+'i'+'n'+'g'+'s'+'t'+'r'+'a'+'ß'+'e'+' '+'5'+'6';
+var address2 = '7'+'0'+'3'+'7'+'8'+' '+'S'+'t'+'u'+'t'+'t'+'g'+'a'+'r'+'t';
+var mail = 'm'+'a'+'i'+'l'+ String.fromCharCode(64) +'j'+'o'+'e'+'y'+'w'+'s'+'.'+'c'+'o'+'m';
+var phone = '+'+'4'+'9'+'1'+'5'+'7'+'7'+'8'+'8'+'5'+'0'+'5'+'0'+'2';
+document.querySelectorAll(".address1").forEach(el => el.textContent = address1);
+document.querySelectorAll(".address2").forEach(el => el.textContent = address2);
+document.querySelectorAll(".email").forEach(el => {
+    el.textContent = mail;
+    el.setAttribute("href", `mailto:Joey%20Schweickhardt%20<${mail}>`);
+});
+document.querySelectorAll(".phone").forEach(el => {
+    el.textContent = phone;
+    el.setAttribute("href", `tel:${phone}`);
+});
 
-    // COPY EMAIL
-    document.querySelectorAll(".email").forEach(emailEl => {
-        const hintSpan = document.createElement("span");
-        emailEl.insertAdjacentElement("afterend", hintSpan);
-        emailEl.addEventListener("mouseenter", () => {
-            hintSpan.textContent = " copy";
-        });
-        emailEl.addEventListener("mouseleave", () => {
-            hintSpan.textContent = "";
-        });
-        emailEl.addEventListener("click", (event) => {
-            event.preventDefault();
-            navigator.clipboard.writeText(mail).then(() => {
-                hintSpan.textContent = " copied";
-            }).catch(() => {
-                hintSpan.textContent = " copying failed";
-            });
+// COPY EMAIL
+document.querySelectorAll(".email").forEach(emailEl => {
+    const hintSpan = document.createElement("span");
+    emailEl.insertAdjacentElement("afterend", hintSpan);
+    emailEl.addEventListener("mouseenter", () => {
+        hintSpan.textContent = " copy";
+    });
+    emailEl.addEventListener("mouseleave", () => {
+        hintSpan.textContent = "";
+    });
+    emailEl.addEventListener("click", (event) => {
+        event.preventDefault();
+        navigator.clipboard.writeText(mail).then(() => {
+            hintSpan.textContent = " copied";
+        }).catch(() => {
+            hintSpan.textContent = " copying failed";
         });
     });
+});
 
-    // GALLERY JQUERY
-    $(".gallery img").each(function(){
-        var caption = $(this).attr("alt");
-        var date = "20" + $(this).attr("src").slice(4,6);
-        $(this).wrap("<div></div>").after("<span><span>"+caption+"</span></span>");
-    });
-    $("body").append("<div id='lightbox'><img src=''></div>");
+// GALLERY
+document.querySelectorAll(".gallery img").forEach(img => {
+    const caption = img.getAttribute("alt") || "";
+    const date = "20" + img.getAttribute("src").slice(4, 6);
+    const wrapper = document.createElement("div");
+    img.parentNode.insertBefore(wrapper, img);
+    wrapper.appendChild(img);
+    const captionOuter = document.createElement("span");
+    const captionInner = document.createElement("span");
+    captionInner.textContent = caption;
+    captionOuter.appendChild(captionInner);
+    wrapper.appendChild(captionOuter);
+});
+const lightbox = document.createElement("div");
+lightbox.id = "lightbox";
+const lightboxImg = document.createElement("img");
+lightboxImg.src = "";
+lightbox.appendChild(lightboxImg);
+document.body.appendChild(lightbox);
 
-    // LIGHTBOX JQUERY
-    const Lightbox = {
-        $box: $("#lightbox"),
-        load(img) {
-            this.$box.show().children("img").attr("src", img.replace(/(\.\w+)$/, "_l$1"));
-        },
-        prev() { this.navigate(-1); },
-        next() { this.navigate(1); },
-        close() { this.$box.hide().children("img").attr("src", "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"); $(".gallery div.show").removeClass("show"); },
-        navigate(dir) {
-            const $current = $(".gallery div.show");
-            if ($current.length) {
-                const $target = dir === -1 ? $current.prev("div") : $current.next("div");
-                if ($target.length) {
-                    $current.removeClass("show");
-                    $target.addClass("show");
-                    this.load($target.find("img").attr("src"));
-                } else if (dir === 1) this.close();
-            }
+// LIGHTBOX
+const Lightbox = {
+    box: document.getElementById("lightbox"),
+    img: document.querySelector("#lightbox img"),
+    load(src) {
+        this.box.style.display = "block";
+        this.img.src = src.replace(/(\.\w+)$/, "_l$1");
+    },
+    prev() {this.navigate(-1);},
+    next() {this.navigate(1);},
+    close() {
+        this.box.style.display = "none";
+        this.img.src = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7";
+        document.querySelectorAll(".gallery div.show").forEach(el => el.classList.remove("show"));
+    },
+    navigate(dir) {
+        const current = document.querySelector(".gallery div.show");
+        if (!current) return;
+        const target =
+            dir === -1 ? current.previousElementSibling : current.nextElementSibling;
+        if (target && target.tagName === "DIV") {
+            current.classList.remove("show");
+            target.classList.add("show");
+            const img = target.querySelector("img");
+            if (img) this.load(img.getAttribute("src"));
+        } else if (dir === 1) {
+            this.close();
         }
-    };
-    $(".gallery>div").click(function() { $(this).addClass("show"); Lightbox.load($(this).find("img").attr("src")); });
-    $("#lightbox").click(() => Lightbox.close()).on("click", "img", e => { e.stopPropagation(); Lightbox.next(); });
-
-    // KEYBOARD CONTROL
-    document.addEventListener("keydown", e => {
-        const activeElement = document.activeElement;
-        if (activeElement.tagName !== "INPUT" && activeElement.tagName !== "TEXTAREA") {
-            if (e.key === "Escape") Lightbox.close();
-            if (e.key === "ArrowLeft") Lightbox.prev();
-            if (e.key === "ArrowRight") Lightbox.next();
-        }
+    }
+};
+document.querySelectorAll(".gallery > div").forEach(item => {
+    item.addEventListener("click", () => {
+        item.classList.add("show");
+        const img = item.querySelector("img");
+        if (img) Lightbox.load(img.getAttribute("src"));
     });
+});
+document.getElementById("lightbox").addEventListener("click", () => {Lightbox.close();});
+document.querySelector("#lightbox img").addEventListener("click", e => {e.stopPropagation();Lightbox.next();});
 
-    // VIDEO JQUERY
-    $(".video").each(function(){
-        const $wrapper = $(this);
-        const $video = $wrapper.find("video");
-        const video = $video[0];
-        const $progress = $wrapper.find(".progress");
-        const $progressFilled = $wrapper.find(".progress-filled");
-        const $controls = $wrapper.find(".controls");
-        const $preview = $wrapper.find("img");
-        let hideControlsTimeout;
-        function hideControlsImmediately() {
-            clearTimeout(hideControlsTimeout);
-        }
-        $preview.on("click", function(){
-            $(this).hide();
-            $wrapper.addClass("playing");
-            $video.show();
-            $video[0].setAttribute("controlsList", "nodownload noplaybackrate");
-            video.play();
-            $controls.show();
-        });
-        $video.on("click", function(){
-            if(video.paused){
-                video.play(); $wrapper.addClass("playing");
-            } else {
-                video.pause(); $wrapper.removeClass("playing");
-            }
-        });
-        function updateProgress(){
-            if(video.duration){
-                const percent = (video.currentTime / video.duration) * 100;
-                $progressFilled.css("width", percent + "%");
-            }
-            requestAnimationFrame(updateProgress);
-        }
-        updateProgress();
-        $progress.on("click", function(e){
-            const offsetX = e.offsetX;
-            const totalWidth = $(this).width();
-            const clickPercent = offsetX / totalWidth;
-            video.currentTime = clickPercent * video.duration;
-        });
-        $video.on("ended", function(){
-            $wrapper.removeClass("playing");
-        });
+// KEYBOARD CONTROL
+document.addEventListener("keydown", e => {
+    const activeElement = document.activeElement;
+    if (activeElement.tagName !== "INPUT" && activeElement.tagName !== "TEXTAREA") {
+        if (e.key === "Escape") Lightbox.close();
+        if (e.key === "ArrowLeft") Lightbox.prev();
+        if (e.key === "ArrowRight") Lightbox.next();
+    }
+});
+
+// VIDEO
+document.querySelectorAll(".video").forEach(wrapper => {
+    const video = wrapper.querySelector("video");
+    const progress = wrapper.querySelector(".progress");
+    const progressFilled = wrapper.querySelector(".progress-filled");
+    const controls = wrapper.querySelector(".controls");
+    const preview = wrapper.querySelector("img");
+    let hideControlsTimeout;
+    function hideControlsImmediately() {
+        clearTimeout(hideControlsTimeout);
+    }
+    preview.addEventListener("click", () => {
+        preview.style.display = "none";
+        wrapper.classList.add("playing");
+        video.style.display = "block";
+        video.setAttribute("controlsList", "nodownload noplaybackrate");
+        video.play();
+        controls.style.display = "block";
     });
-
+    video.addEventListener("click", () => {
+        if (video.paused) {video.play();wrapper.classList.add("playing");
+        } else {video.pause();wrapper.classList.remove("playing");}
+    });
+    function updateProgress() {
+        if (video.duration) {
+            const percent = (video.currentTime / video.duration) * 100;
+            progressFilled.style.width = percent + "%";
+        }
+        requestAnimationFrame(updateProgress);
+    }
+    updateProgress();
+    progress.addEventListener("click", e => {
+        const rect = progress.getBoundingClientRect();
+        const offsetX = e.clientX - rect.left;
+        const clickPercent = offsetX / rect.width;
+        video.currentTime = clickPercent * video.duration;
+    });
+    video.addEventListener("ended", () => {
+        wrapper.classList.remove("playing");
+    });
 });
 </script>
 <script type="application/ld+json">
