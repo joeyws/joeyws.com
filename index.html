@@ -53,15 +53,15 @@
     .marquee-track span{padding-right:2.2rem;}
     @keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-100%);}}
     /* VIDEO */
-    .video{overflow:hidden;position:relative;max-width:800px;aspect-ratio: 2.2 / 1;font-size:0;line-height:0;}
+    .video{overflow:hidden;position:relative;width:800px;max-width:100%;aspect-ratio: 2.2 / 1;font-size:0;line-height:0;}
+    .video img,.video video,.video .controls .progress{width:100%;}
     .video img{transition:all .75s;}
     .video:hover img{transform:scale(1.05);}
-    .video img,.video video{width:100%;max-width:100%;}
     .video:not(.playing)::after{font-size:1rem;content:"Play";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:inline-block;pointer-events:none;}
     .video video,.video .controls{display:none;}
     .video video{object-fit:cover;}
     .video .controls{position:absolute;bottom:0;left:0;right:0;}
-    .video .controls .progress{width:100%;max-width:100%;display:inline-block;height:3px;overflow:hidden;padding-top:30px;}
+    .video .controls .progress{display:inline-block;height:3px;overflow:hidden;padding-top:30px;}
     .video .controls .progress .progress-filled{width:0%;height:100%;background:#0f0;}
     /* GALLERY */
     .gallery{padding:0 calc(2*var(--spacer));justify-content:stretch;grid-template-columns:repeat(auto-fit,minmax(220px, 1fr));display:grid;line-height:0;font-size:0;}
@@ -84,7 +84,7 @@
 
 <header>
     <div class="marquee"><div class="marquee-track"><span lang="zh-Hant">歡迎</span><span lang="es">Bienvenidos</span><span lang="en">Welcome</span><span lang="hi">स्वागत हे</span><span lang="ar">اهلا وسهلا</span><span lang="bn">স্বাগত</span><span lang="pt">Bem-vindo</span><span lang="ru">добро пожаловать</span><span lang="ur">خوش آمدید</span><span lang="ja">ようこそ</span><span lang="id">Selamat datang</span><span lang="de">Willkommen</span><span lang="tr">Hoşgeldiniz</span><span lang="ta">வரவேற்பு</span><span lang="fr">Bienvenue</span><span lang="ko">어서 오십시오</span><span lang="vi">Hoan nghênh</span><span lang="jv">Sugeng Rawuh</span><span lang="sw">Karibu</span><span lang="sa">Svāgatam</span><span lang="it">Benvenuto</span><span lang="pa">ਸਵਾਗਤ ਹੈ</span></div></div>
-    <div id="header"><h1 class="loading">Joey Schweickhardt</h1><div><a href="#/works">Works</a><a href="#/places">Places</a><!-- <a href="#/about">About</a> --><a href="#/contact">Contact</a></div><span>Stuttgart<span id="weather"></span><span id="time"></span></span></div>
+    <div id="header"><h1 class="loading">Joey Schweickhardt</h1><div><a href="#/works">Works</a><a href="#/places">Places</a><a href="#/contact">Contact</a></div><span>Stuttgart<span id="weather"></span><span id="time"></span></span></div>
 </header>
 <hr>
 
@@ -96,7 +96,6 @@
         <video oncontextmenu="return false;" preload="none" tabindex="0">
             <source src="video/LandDerEchsen1080.mp4" type="video/mp4">
             <source src="video/LandDerEchsen720.webm" type="video/webm">
-            <!-- <source src="https://www.dropbox.com/s/mmcykw5nus3m39u/LandDerEchsen1080.ogv?raw=1" type="video/ogg"> -->
         </video>
         <div class="controls"><div class="progress"><div class="progress-filled"></div></div></div>
     </div>
