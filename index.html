@@ -461,43 +461,32 @@ document.querySelectorAll(".video").forEach(wrapper => {
             controls.style.display = "block";
             preview.style.display = "none";
             video.play();
-        } else {
-            video.pause();
-        }
+        } else {video.pause();}
     };
-    const updateProgress = () => {
-        if (video.duration) {
-            progressFilled.style.width =
-                (video.currentTime / video.duration) * 100 + "%";
-        }
+    const updateProgress = () => {if (video.duration) {progressFilled.style.width = (video.currentTime / video.duration) * 100 + "%";}
         rafId = requestAnimationFrame(updateProgress);
     };
-    preview.addEventListener("click", () => {
-        video.controlsList = "nodownload noplaybackrate";
-        setPlaying(true);
-    });
-    video.addEventListener("click", () => {
-        setPlaying(video.paused);
-    });
-    video.addEventListener("play", () => {
-        cancelAnimationFrame(rafId);
-        updateProgress();
-    });
-    video.addEventListener("pause", () => {
-        cancelAnimationFrame(rafId);
-    });
-    video.addEventListener("ended", () => {
-        cancelAnimationFrame(rafId);
-        wrapper.classList.remove("playing");
-    });
+    preview.addEventListener("click", () => {video.controlsList = "nodownload noplaybackrate"; setPlaying(true);});
+    video.addEventListener("click", () => {setPlaying(video.paused);});
+    video.addEventListener("play", () => {cancelAnimationFrame(rafId); updateProgress();});
+    video.addEventListener("pause", () => {cancelAnimationFrame(rafId);});
+    video.addEventListener("ended", () => {cancelAnimationFrame(rafId);  wrapper.classList.remove("playing");});
     progress.addEventListener("click", e => {
         const { left, width } = progress.getBoundingClientRect();
         video.currentTime =
             ((e.clientX - left) / width) * video.duration;
+        if (video.duration) {
+            progressFilled.style.width =
+                (video.currentTime / video.duration) * 100 + "%";
+        }
+    });
+    document.addEventListener("keydown", e => {
+        if (e.code === "Space") {
+            e.preventDefault();
+            if (wrapper.classList.contains("playing") || video.currentTime > 0) {setPlaying(video.paused);}
+        }
     });
 });
-
-
 
 </script>
 <script type="application/ld+json">
