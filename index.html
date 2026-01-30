@@ -29,16 +29,11 @@
     body{padding:var(--spacer);overflow-y:scroll;color:var(--text);background:var(--background);font:normal normal 1rem/1.3em webfont,monospace;}
     h1{display:inline-block;}
     i{font-style:italic;}
-    /* a[href^="http"]::after{content:" \2197";} */
     h2,h3,p,pre,table,#map{margin-top:.8rem;}
     hr+*,img+p,.content *:first-child{margin-top:0;}
     p{max-width:800px;}
     hr{margin:4rem 0;}
-    table{width:100%;}
-    tr{border-top:1px solid #222;}
-    td{vertical-align:top;}
-    td:nth-child(1){width:8em;padding-right:var(--spacer);}
-    td:nth-child(2){width:auto;}
+    table{width:100%;}tr{border-top:1px solid #222;}td{vertical-align:top;}td:nth-child(1){width:8em;padding-right:var(--spacer);}td:nth-child(2){width:auto;}
     a{white-space:nowrap;}
     a,.gallery div span span{box-shadow:inset 0 -.05em #666;text-decoration:none;transition:.1s all;/* border-radius:3px;-webkit-box-decoration-break:clone;-o-box-decoration-break:clone;box-decoration-break:clone; */}
     a:hover,.gallery div:hover span span,.gallery div.show span span{box-shadow:inset 0 -1.3em #00f;}
@@ -46,24 +41,25 @@
     #header a,.video:not(.playing)::after{background:#222a;backdrop-filter:blur(3px);border-radius:5px;transition:.1s all;display:inline-block;line-height:2em;padding:0 .8em;}
     #header a:hover,#header a.open,.video:not(.playing):hover::after{background:#8888;}
     /* HEADER */
-    #header{white-space:nowrap;gap:var(--spacer);user-select:none;/* position:fixed;top:var(--spacer); */z-index:999996;width:100%;display:flex;flex-wrap:wrap;justify-content:space-between;}
+    #header{white-space:nowrap;gap:var(--spacer);user-select:none;/* position:fixed;top:var(--spacer);z-index:999996; */width:100%;display:flex;flex-wrap:wrap;justify-content:space-between;}
     #header>div{display:flex;gap:var(--spacer);}
     #header>*{display:inline-block;}
     #header a{box-shadow:none;color:var(--text) !important;}
     #header a:hover,#header a.open{padding:0 1.4em;}
     #weather,#time{margin-left:1.2em;}
     /* MARQUEE */
-    .marquee{background:#0f0;color:var(--background);/* transition:.2s width ease-out; */line-height:1.4em;box-sizing: border-box;margin:calc(-1 * var(--spacer));margin-bottom:var(--spacer);width:1px;overflow:hidden;white-space:nowrap;position:relative;display:block;user-select:none;}
+    .marquee{background:#0f0;color:var(--background);/* transition:.2s width ease-out; */line-height:1.4em;box-sizing:border-box;margin:calc(-1 * var(--spacer));margin-bottom:var(--spacer);width:1px;overflow:hidden;white-space:nowrap;position:relative;display:block;user-select:none;}
     .marquee-track{display:inline-flex;white-space:nowrap;will-change:transform;animation:marquee 30s linear infinite;}
     .marquee-track span{padding-right:2.2rem;}
     @keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-100%);}}
     /* VIDEO */
-    .video{overflow:hidden;position:relative;max-width:800px;font-size:0;line-height:0;}
+    .video{overflow:hidden;position:relative;max-width:800px;aspect-ratio: 2.2 / 1;font-size:0;line-height:0;}
     .video img{transition:all .75s;}
     .video:hover img{transform:scale(1.05);}
     .video img,.video video{width:100%;max-width:100%;}
     .video:not(.playing)::after{font-size:1rem;content:"Play";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:inline-block;pointer-events:none;}
     .video video,.video .controls{display:none;}
+    .video video{object-fit:cover;}
     .video .controls{position:absolute;bottom:0;left:0;right:0;}
     .video .controls .progress{width:100%;max-width:100%;display:inline-block;height:3px;overflow:hidden;padding-top:30px;}
     .video .controls .progress .progress-filled{width:0%;height:100%;background:#0f0;}
@@ -457,40 +453,52 @@ document.querySelectorAll(".video").forEach(wrapper => {
     const progressFilled = wrapper.querySelector(".progress-filled");
     const controls = wrapper.querySelector(".controls");
     const preview = wrapper.querySelector("img");
-    let hideControlsTimeout;
-    function hideControlsImmediately() {
-        clearTimeout(hideControlsTimeout);
-    }
+    let rafId;
+    const setPlaying = playing => {
+        wrapper.classList.toggle("playing", playing);
+        if (playing) {
+            video.style.display = "block";
+            controls.style.display = "block";
+            preview.style.display = "none";
+            video.play();
+        } else {
+            video.pause();
+        }
+    };
+    const updateProgress = () => {
+        if (video.duration) {
+            progressFilled.style.width =
+                (video.currentTime / video.duration) * 100 + "%";
+        }
+        rafId = requestAnimationFrame(updateProgress);
+    };
     preview.addEventListener("click", () => {
-        preview.style.display = "none";
-        wrapper.classList.add("playing");
-        video.style.display = "block";
-        video.setAttribute("controlsList", "nodownload noplaybackrate");
-        video.play();
-        controls.style.display = "block";
+        video.controlsList = "nodownload noplaybackrate";
+        setPlaying(true);
     });
     video.addEventListener("click", () => {
-        if (video.paused) {video.play();wrapper.classList.add("playing");
-        } else {video.pause();wrapper.classList.remove("playing");}
+        setPlaying(video.paused);
     });
-    function updateProgress() {
-        if (video.duration) {
-            const percent = (video.currentTime / video.duration) * 100;
-            progressFilled.style.width = percent + "%";
-        }
-        requestAnimationFrame(updateProgress);
-    }
-    updateProgress();
-    progress.addEventListener("click", e => {
-        const rect = progress.getBoundingClientRect();
-        const offsetX = e.clientX - rect.left;
-        const clickPercent = offsetX / rect.width;
-        video.currentTime = clickPercent * video.duration;
+    video.addEventListener("play", () => {
+        cancelAnimationFrame(rafId);
+        updateProgress();
+    });
+    video.addEventListener("pause", () => {
+        cancelAnimationFrame(rafId);
     });
     video.addEventListener("ended", () => {
+        cancelAnimationFrame(rafId);
         wrapper.classList.remove("playing");
     });
+    progress.addEventListener("click", e => {
+        const { left, width } = progress.getBoundingClientRect();
+        video.currentTime =
+            ((e.clientX - left) / width) * video.duration;
+    });
 });
+
+
+
 </script>
 <script type="application/ld+json">
 {
