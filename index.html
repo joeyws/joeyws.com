@@ -73,7 +73,7 @@
     /* SPECIAL */
     .mitgliedakbw{width:240px;max-width:100%;fill:var(--text);}
     @keyframes blink-loading{0%{opacity:0;}50%{opacity:1;}}.loading{animation:.3s blink-loading steps(1) infinite;}
-    @keyframes blink-time{0%{opacity:1;}50%{opacity:0;}}.time-blink{animation:1s blink-time steps(1) infinite;}
+    @keyframes blink-time{0%{opacity:1;}50%{opacity:0;}}.time-blink{animation:2s blink-time steps(1) infinite;}
     @keyframes map{100%{outline-color:transparent;outline-offset:20px;}}#map{width:760px;max-width:100%;aspect-ratio:150/75;background:center center url(img/other/world.gif) no-repeat scroll;position:relative;background-size:contain;}#map:after{top:23%;left:52.5%;outline:1px solid #0f0;background:#0f0;border:1px solid #000;animation:map 1.2s infinite ease-out;width:7px;height:7px;border-radius:100vmax;pointer-events:none;position:absolute;transform:translate(-50%,-50%);display:block;content:"";}
     #cursor{width:12px;height:12px;background:#fff1;backdrop-filter:blur(20px) invert(100%) saturate(10);-webkit-backdrop-filter:blur(20px) invert(100%) saturate(10);border-radius:100vmax;position:fixed;top:-50px;left:50%;transform:translate(-50%,-50%);font-size:0;line-height:0;z-index:99999999;pointer-events:none;}*{cursor:none !important;}
 </style>
@@ -310,10 +310,10 @@ function getTime() {
     const min = addZero(time.getMinutes());
     const s = addZero(time.getSeconds());
     const timeEl = document.getElementById("time");
-    if (timeEl) {timeEl.innerHTML = `${h}<span class="time-blink">:</span>${min}<span class="time-blink">:</span>${s}`;}
+    if (timeEl) {timeEl.innerHTML = `${h}<span class="time-blink">:</span>${min}`;}
 }
 getTime();
-setInterval(getTime, 1000);
+setInterval(getTime, 2000);
 
 requestIdleCallback(() => {
     // WEATHER
@@ -497,7 +497,9 @@ document.querySelectorAll(".video").forEach(wrapper => {
     "https://www.k1.live/ausstellung-22/igma-institut-fuer-grundlagen-moderner-architektur-und-entwerfen/",
     "https://www.ibbte.uni-stuttgart.de/en/department-ig/Design-Studios/",
     "https://www.schmelzle.de/team",
-    "https://www.sciencedirect.com/science/article/pii/S1474034625011541"
+    "https://www.sciencedirect.com/science/article/pii/S1474034625011541",
+    "https://www.linkedin.com/posts/icdstuttgart_icd-icdca-intcdc-activity-7417885069765197824-3gIg/",
+    "https://www.instagram.com/p/DTiEwS0DMX-/?hl=de"
   ]
 }
 </script>
