@@ -419,29 +419,15 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("keydown", function(e) {
     if (["INPUT", "TEXTAREA", "SELECT"].includes(document.activeElement.tagName)) return;
     if (e.key === "ArrowRight" || e.key === "ArrowLeft") {
-        const visibleGallery = Array.from(document.querySelectorAll(".gallery"))
-            .find(g => {
-                const rect = g.getBoundingClientRect();
-                return rect.bottom > 0 && rect.top < window.innerHeight;
-            });
+        const visibleGallery = Array.from(document.querySelectorAll(".gallery")).find(g => {const rect = g.getBoundingClientRect(); return rect.bottom > 0 && rect.top < window.innerHeight;});
         if (!visibleGallery) return;
-        const imgContainer = visibleGallery.querySelector(".gallery-img");
-        const images = Array.from(imgContainer.querySelectorAll("img"));
         const nav = visibleGallery.querySelector(".gallery-nav");
-        const caption = visibleGallery.querySelector(".gallery-caption");
-        let current = images.findIndex(img => img.style.display === "block");
-        if (current === -1) current = 0;
-        let next;
-        if (e.key === "ArrowRight") {
-            next = (current + 1) % images.length;
-        } else if (e.key === "ArrowLeft") {
-            next = (current - 1 + images.length) % images.length;
-        }
-        images[current].style.display = "none";
-        nav.children[current].classList.remove("active");
-        images[next].style.display = "block";
-        nav.children[next].classList.add("active");
-        caption.textContent = images[next].alt;
+        const navItems = Array.from(nav.children);
+        const currentIndex = navItems.findIndex(span => span.classList.contains("active"));
+        let targetIndex;
+        if (e.key === "ArrowRight") {targetIndex = (currentIndex + 1) % navItems.length;
+        } else if (e.key === "ArrowLeft") {targetIndex = (currentIndex - 1 + navItems.length) % navItems.length;}
+        navItems[targetIndex].click();
     }
 });
 
