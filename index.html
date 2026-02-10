@@ -27,7 +27,7 @@
     hr{margin:4rem 0;}
     a{white-space:nowrap;}
     a,.gallery div span span{box-shadow:inset 0 -.05em var(--text);text-decoration:none;transition:.1s all;/* border-radius:3px;-webkit-box-decoration-break:clone;-o-box-decoration-break:clone;box-decoration-break:clone; */}
-    a:hover,.gallery div:hover span span,.gallery div.show span span{box-shadow:inset 0 -1.3em var(--text);color:var(--background);}
+    a:hover,.gallery div:hover span span,.gallery div.show span span,.gallery-nav span:hover,.gallery-nav .active{box-shadow:inset 0 -1.3em var(--text);color:var(--background);}
     /* BUTTONS NAV/PLAY */
     #header a,.video:not(.playing)::after{background:#3339;backdrop-filter:blur(3px);border-radius:5px;transition:.1s all;line-height:2em;padding:0 .8em;box-shadow:none;display:inline-block;}
     #header a:hover,#header a.open,.video:not(.playing):hover::after{background:#8888;}
@@ -53,13 +53,12 @@
     .video .progress{display:inline-block;height:3px;overflow:hidden;padding-top:30px;}
     .video .progress-filled{width:0%;height:100%;background:#0f0;}
     /* GALLERY */
-    .gallery{padding:0 calc(2*var(--spacer));justify-content:stretch;grid-template-columns:repeat(auto-fit,minmax(220px, 1fr));display:grid;line-height:0;font-size:0;}
-    .gallery div{padding:calc(3*var(--spacer));padding-top:0;row-gap:var(--spacer);display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;}
-    .gallery div img{height:auto;width:auto;max-height:180px;max-width:100%;transition:.1s all;}
-    .gallery div>span{font-size:1rem;line-height:1.2em;height:calc(5 * 1.2em);}
-    .gallery div:hover img,.gallery div.show img{transform:translateY(-5px);/* box-shadow:0 -10px 50px #00f8; */}
-    #lightbox{user-select:none;z-index:999997;background:#0007;position:fixed;inset:0;display:none;}
-    #lightbox img{max-height:90vh;max-width:calc(100vw - 2*var(--spacer));box-sizing:border-box;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);}
+    .gallery-nav{margin-bottom:var(--spacer);display:flex;gap:10px;flex-wrap:wrap;user-select:none;}
+    .gallery-nav span:hover,.gallery-nav span.active{}
+    .gallery-img{height:660px;user-select:none;}
+    .gallery-img img{display:block;max-height:100%;max-width:100%;object-fit:contain;}
+    .gallery-caption{margin-top:var(--spacer);}
+    /* .gallery-nav span.active{outline:1px solid var(--text);border-radius:100vmax;} */
     /* SPECIAL */
     .mitgliedakbw{width:240px;max-width:100%;fill:var(--text);}
     @keyframes blink-loading{0%{opacity:0;}50%{opacity:1;}}.loading{animation:.3s blink-loading steps(1) infinite;}
@@ -106,7 +105,7 @@
         <img loading="lazy" src="img/220311-2.jpg" alt="Pneu Concept">
         <img loading="lazy" src="img/210211.jpg" alt="Vasikkasaari Climate Institute Helsinki">
         <img loading="lazy" src="img/201018.jpg" alt="Wardrobe with Hand-sewn Curtain">
-        <img loading="lazy" src="img/200728.gif" alt="Droneport">
+        <!-- <img loading="lazy" src="img/200728.gif" alt="Droneport"> -->
         <img loading="lazy" src="img/200125.jpg" alt="Light Studies Models">
         <img loading="lazy" src="img/191115.jpg" alt="Wooden Structure with Traction Cables">
         <img loading="lazy" src="img/190722.jpg" alt="Sint Aneke Club Antwerp">
@@ -123,8 +122,8 @@
 </div>
 <div class="content" id="places">
     <div class="gallery">
-        <img loading="lazy" src="img/251217.jpg" alt="423 Îlot A3, Herzog&nbsp;& de&nbsp;Meuron">
         <img loading="lazy" src="img/251215.jpg" alt="L&rsquo;Arbre Blanc, Sou&nbsp;Fujimoto">
+        <img loading="lazy" src="img/251217.jpg" alt="423 Îlot A3, Herzog&nbsp;& de&nbsp;Meuron">
         <img loading="lazy" src="img/250610-2.jpg" alt="Stuttgart Market Square">
         <img loading="lazy" src="img/241229.jpg" alt="San Pietro Tuscania">
         <img loading="lazy" src="img/241215.jpg" alt="PR16">
@@ -180,6 +179,7 @@
     </p>
 </div>
 </main>
+<hr><hr>
 
 
 <script src="scripts.js"></script>
@@ -206,26 +206,6 @@ const toggleLoading = (show) => {
     });
 };
 window.addEventListener('load', () => {toggleLoading(false);});
-
-// GALLERY
-document.querySelectorAll(".gallery img").forEach(img => {
-    const caption = img.getAttribute("alt") || "";
-    const date = "20" + img.getAttribute("src").slice(4, 6);
-    const wrapper = document.createElement("div");
-    img.parentNode.insertBefore(wrapper, img);
-    wrapper.appendChild(img);
-    const captionOuter = document.createElement("span");
-    const captionInner = document.createElement("span");
-    captionInner.textContent = caption;
-    captionOuter.appendChild(captionInner);
-    wrapper.appendChild(captionOuter);
-});
-const lightbox = document.createElement("div");
-lightbox.id = "lightbox";
-const lightboxImg = document.createElement("img");
-lightboxImg.src = "";
-lightbox.appendChild(lightboxImg);
-document.body.appendChild(lightbox);
 
 // HASH NAV
 function refreshHash() {
@@ -394,45 +374,49 @@ document.querySelectorAll(".email").forEach(emailEl => {
     });
 });
 
-// LIGHTBOX
-const Lightbox = {
-    box: document.getElementById("lightbox"),
-    img: document.querySelector("#lightbox img"),
-    load(src) {
-        this.box.style.display = "block";
-        this.img.src = src.replace(/(\.\w+)$/, "_l$1");
-    },
-    prev() {this.navigate(-1);},
-    next() {this.navigate(1);},
-    close() {
-        this.box.style.display = "none";
-        this.img.src = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7";
-        document.querySelectorAll(".gallery div.show").forEach(el => el.classList.remove("show"));
-    },
-    navigate(dir) {
-        const current = document.querySelector(".gallery div.show");
-        if (!current) return;
-        const target =
-            dir === -1 ? current.previousElementSibling : current.nextElementSibling;
-        if (target && target.tagName === "DIV") {
-            current.classList.remove("show");
-            target.classList.add("show");
-            const img = target.querySelector("img");
-            if (img) this.load(img.getAttribute("src"));
-        } else if (dir === 1) {
-            this.close();
+// GALLERY
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".gallery").forEach(function(gallery) {
+        const images = Array.from(gallery.querySelectorAll("img"));
+        let current = 0;
+        const nav = document.createElement("div");
+        nav.classList.add("gallery-nav");
+        const caption = document.createElement("div");
+        caption.classList.add("gallery-caption");
+        const imgContainer = document.createElement("div");
+        imgContainer.classList.add("gallery-img");
+        images.forEach(img => imgContainer.appendChild(img));
+        gallery.append(nav);
+        gallery.append(imgContainer);
+        gallery.append(caption);
+        images.forEach((img, index) => {
+            img.style.display = index === 0 ? "block" : "none";
+            const number = document.createElement("span");
+            number.textContent = index + 1;
+            number.style.cursor = "pointer";
+            if (index === 0) number.classList.add("active");
+            number.addEventListener("click", function(e) {
+                e.stopPropagation();
+                showImage(index);
+            });
+            nav.appendChild(number);
+        });
+        caption.textContent = images[0].alt;
+        function showImage(index) {
+            images[current].style.display = "none";
+            nav.children[current].classList.remove("active");
+            current = index;
+            images[current].style.display = "block";
+            nav.children[current].classList.add("active");
+            caption.textContent = images[current].alt;
         }
-    }
-};
-document.querySelectorAll(".gallery > div").forEach(item => {
-    item.addEventListener("click", () => {
-        item.classList.add("show");
-        const img = item.querySelector("img");
-        if (img) Lightbox.load(img.getAttribute("src"));
+        imgContainer.addEventListener("click", function() {
+            let next = (current + 1) % images.length;
+            showImage(next);
+        });
     });
 });
-document.getElementById("lightbox").addEventListener("click", () => {Lightbox.close();});
-document.querySelector("#lightbox img").addEventListener("click", e => {e.stopPropagation();Lightbox.next();});
+
 
 // KEYBOARD CONTROL
 document.addEventListener("keydown", e => {
