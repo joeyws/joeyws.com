@@ -372,7 +372,7 @@ document.querySelectorAll(".email").forEach(emailEl => {
     });
 });
 
-// GALLERY
+/* // GALLERY
 document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll(".gallery").forEach(function(gallery) {
         const images = Array.from(gallery.querySelectorAll("img"));
@@ -429,7 +429,60 @@ document.addEventListener("keydown", function(e) {
         } else if (e.key === "ArrowLeft") {targetIndex = (currentIndex - 1 + navItems.length) % navItems.length;}
         navItems[targetIndex].click();
     }
+}); */
+
+// GALLERY
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".gallery").forEach(function(gallery) {
+    const images = Array.from(gallery.querySelectorAll("img"));
+    let current = 0;
+    const nav = document.createElement("div");
+    nav.classList.add("gallery-nav");
+    const caption = document.createElement("div");
+    caption.classList.add("gallery-caption");
+    const imgContainer = document.createElement("div");
+    imgContainer.classList.add("gallery-img");
+    images.forEach(img => imgContainer.appendChild(img));
+    gallery.append(nav);
+    gallery.append(imgContainer);
+    gallery.append(caption);
+    images.forEach((img, index) => {
+        img.style.display = index === 0 ? "block" : "none";
+        const number = document.createElement("span");
+        number.textContent = index + 1;
+        if (index === 0) number.classList.add("active");
+        number.addEventListener("click", function(e) {
+            e.stopPropagation();
+            showImage(index);
+        });
+        nav.appendChild(number);
+    });
+    caption.textContent = images[0].alt;
+    function showImage(index) {
+        images[current].style.display = "none";
+        nav.children[current].classList.remove("active");
+        current = index;
+        images[current].style.display = "block";
+        nav.children[current].classList.add("active");
+        caption.textContent = images[current].alt;
+    }
+    function goToNext() {showImage((current + 1) % images.length);}
+    function goToPrev() {showImage((current - 1 + images.length) % images.length);}
+    imgContainer.addEventListener("click", goToNext);
+    document.addEventListener("keydown", function(e) {
+        if (["INPUT", "TEXTAREA", "SELECT"].includes(document.activeElement.tagName)) return;
+        if (e.key !== "ArrowRight" && e.key !== "ArrowLeft") return;
+        const visibleGallery = Array.from(document.querySelectorAll(".gallery")).find(g => {
+            const rect = g.getBoundingClientRect();
+            return rect.bottom > 0 && rect.top < window.innerHeight;
+        });
+        if (visibleGallery !== gallery) return;
+        if (e.key === "ArrowRight") goToNext();
+        if (e.key === "ArrowLeft") goToPrev();
+    });
+  });
 });
+
 
 // VIDEO
 document.querySelectorAll(".video").forEach(wrapper => {
