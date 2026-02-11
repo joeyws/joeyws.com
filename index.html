@@ -53,8 +53,8 @@
     .video .progress{display:inline-block;height:3px;overflow:hidden;padding-top:30px;}
     .video .progress-filled{width:0%;height:100%;background:#0f0;}
     /* GALLERY */
-    .gallery-nav{margin-bottom:var(--spacer);display:flex;column-gap:10px;flex-wrap:wrap;user-select:none;}
-    .gallery-nav span:hover,.gallery-nav span.active{}
+    .gallery-nav{margin-bottom:var(--spacer);/* display:flex;column-gap:10px;flex-wrap:wrap; */user-select:none;}
+    .gallery-nav span{padding:0 .35em;}
     .gallery-img{height:620px;user-select:none;}
     .gallery-img img{display:block;max-height:100%;max-width:100%;object-fit:contain;}
     .gallery-caption{margin-top:var(--spacer);}
@@ -308,7 +308,7 @@ requestIdleCallback(() => {
             const current_weather = data.current_weather;
             const weatherEl = document.getElementById("weather");
             if (weatherEl) {
-                weatherEl.innerHTML = `<span style="color:#fb0;">&#9728;</span> ${Math.round(current_weather.temperature)}&deg;C`;
+                weatherEl.innerHTML = `<span style="color:#fc0;">⬤</span> ${Math.round(current_weather.temperature)}&deg;C`; // ⬤ ☼ ☀ ◯
             }
         } catch (err) {
             console.error("Weather fetch failed:", err);
