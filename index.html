@@ -425,7 +425,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-
 // VIDEO
 document.querySelectorAll(".video").forEach(wrapper => {
     const video = wrapper.querySelector("video");
@@ -450,7 +449,7 @@ document.querySelectorAll(".video").forEach(wrapper => {
     video.addEventListener("click", () => {setPlaying(video.paused);});
     video.addEventListener("play", () => {cancelAnimationFrame(rafId); updateProgress();});
     video.addEventListener("pause", () => {cancelAnimationFrame(rafId);});
-    video.addEventListener("ended", () => {cancelAnimationFrame(rafId);  wrapper.classList.remove("playing");});
+    video.addEventListener("ended", () => {cancelAnimationFrame(rafId); wrapper.classList.remove("playing");});
     progress.addEventListener("click", e => {
         const { left, width } = progress.getBoundingClientRect();
         video.currentTime =
@@ -470,24 +469,33 @@ document.querySelectorAll(".video").forEach(wrapper => {
 </script>
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Joey Schweickhardt",
-  "alternateName": "Joey W. Schweickhardt",
-  "url": "https://joeyws.com/",
-  // "jobTitle": "Architekt",
-  "memberOf": "Architektenkammer Baden-Württemberg",
-  "sameAs": [
-    "https://ioeb-sammlung.de/node/210",
-    "https://www.linkedin.com/in/joeyschweickhardt",
-    "https://www.akbw.de/kammer/datenbanken/architektenliste/detail/eintrag/joey-schweickhardt-54395",
-    "https://www.k1.live/ausstellung-22/igma-institut-fuer-grundlagen-moderner-architektur-und-entwerfen/",
-    "https://www.ibbte.uni-stuttgart.de/en/department-ig/Design-Studios/",
-    "https://www.schmelzle.de/team",
-    "https://www.sciencedirect.com/science/article/pii/S1474034625011541",
-    "https://www.linkedin.com/posts/icdstuttgart_icd-icdca-intcdc-activity-7417885069765197824-3gIg/",
-    "https://www.instagram.com/p/DTiEwS0DMX-/?hl=de"
-  ]
+    "@context":         "https://schema.org",
+    "@type":            "Person",
+    "name":             "Joey Schweickhardt",
+    "alternateName":    "Joey William Schweickhardt",
+    "url":              "https://joeyws.com/",
+    "jobTitle":         "Architekt im Praktikum",
+    "worksFor":         {"@type":"Organization", "name":"SCHMELZLE+PARTNER mbB Architekten BDA"},
+    "hasCredential":    {"@type":"EducationalOccupationalCredential", "credentialCategory":"Master of Science", "educationalLevel":"Postgraduate", "recognizedBy":{"@type":"CollegeOrUniversity", "name":"Universität Stuttgart"}},
+    "memberOf":         "Architektenkammer Baden-Württemberg",
+    "address":          {"@type":"PostalAddress", "addressLocality":"Stuttgart", "addressCountry":"DE"},
+    "alumniOf": [
+                        {"@type":"CollegeOrUniversity", "name":"Universität Stuttgart", "url":"https://www.uni-stuttgart.de/"},
+                        {"@type":"CollegeOrUniversity", "name":"Politecnico di Milano", "url":"https://www.polimi.it/"}
+    ],
+    "sameAs": [
+                        "https://www.linkedin.com/in/joeyschweickhardt",
+                        "https://www.akbw.de/kammer/datenbanken/architektenliste/detail/eintrag/joey-schweickhardt-54395"
+    ],
+    "subjectOf": [
+                        {"@type":"ExhibitionEvent", "name":"Jahreausstellung der Fakultät Architektur und Stadtplanung, Universität Stuttgart", "url":"https://www.k1.live/ausstellung-22/igma-institut-fuer-grundlagen-moderner-architektur-und-entwerfen/"},
+                        {"@type":"ScholarlyArticle", "name":"geof3D: SPARQL geometric functions for co-designing buildings", "url":"https://www.sciencedirect.com/science/article/pii/S1474034625011541"},
+                        {"@type":"Article", "name":"Institut für öffentliche Bauten und Entwerfen, Universität Stuttgart", "url":"https://ioeb-sammlung.de/node/210"},
+                        {"@type":"Article", "name":"Institut für Baustofflehre, Bauphysik, Gebäudetechnik und Entwerfen, Universität Stuttgart", "url":"https://www.ibbte.uni-stuttgart.de/en/department-ig/Design-Studios/"},
+                        {"@type":"Article", "name":"Institute for Computational Design and Construction, Universität Stuttgart", "url":"https://www.linkedin.com/posts/icdstuttgart_icd-icdca-intcdc-activity-7417885069765197824-3gIg/"},
+                        {"@type":"Article", "name":"Institute for Computational Design and Construction, Universität Stuttgart", "url":"https://www.instagram.com/p/DTiEwS0DMX-/"},
+                        {"@type":"Article", "name":"SCHMELZLE+PARTNER mbB Architekten BDA", "url":"https://www.schmelzle.de/team"}
+    ]
 }
 </script>
 </body>
