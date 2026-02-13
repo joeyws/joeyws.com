@@ -2,15 +2,17 @@
 <html lang="en" translate="no">
 <head>
 <meta charset="utf-8">
-<link rel="preload" href="font/SourceCodePro-Regular.woff2" as="font" type="font/ttf" crossorigin>
+<link rel="preload" href="font/SourceCodePro-Regular.woff2" as="font" type="font/woff2">
 <link rel="preload" href="scripts.js" as="script">
 <title>Joey Schweickhardt</title>
-<meta name="robots" content="index,nofollow,notranslate,noimageindex">
 <meta name="description" content="The personal website of Joey Schweickhardt from Stuttgart, Germany.">
-<meta name="geo.placename" content="Stuttgart">
-<meta property="og:image" content="https://joeyws.com/img/joey.jpg">
+<meta name="robots" content="index,nofollow,notranslate,noimageindex">
 <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes,shrink-to-fit=no">
 <meta name="format-detection" content="telephone=no">
+<meta property="og:title" content="Joey Schweickhardt">
+<meta property="og:description" content="The personal website of Joey Schweickhardt from Stuttgart, Germany.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://joeyws.com/">
 <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAADUlEQVR4nGNgGAWjYBSMAAABjAABb6k9VQAAAABJRU5ErkJggg==">
 <link rel="canonical" href="https://joeyws.com/">
 <style>
@@ -69,6 +71,8 @@
 <body>
 
 
+
+
 <header>
     <div class="marquee"><div class="marquee-track"><span lang="zh-Hant">歡迎</span><span lang="es">Bienvenidos</span><span lang="en">Welcome</span><span lang="hi">स्वागत हे</span><span lang="ar">اهلا وسهلا</span><span lang="bn">স্বাগত</span><span lang="pt">Bem-vindo</span><span lang="ru">добро пожаловать</span><span lang="ur">خوش آمدید</span><span lang="ja">ようこそ</span><span lang="id">Selamat datang</span><span lang="de">Willkommen</span><span lang="tr">Hoşgeldiniz</span><span lang="ta">வரவேற்பு</span><span lang="fr">Bienvenue</span><span lang="ko">어서 오십시오</span><span lang="vi">Hoan nghênh</span><span lang="jv">Sugeng Rawuh</span><span lang="sw">Karibu</span><span lang="sa">Svāgatam</span><span lang="it">Benvenuto</span><span lang="pa">ਸਵਾਗਤ ਹੈ</span></div></div>
     <div id="header">
@@ -78,8 +82,6 @@
     </div>
 </header>
 <hr>
-
-
 <main>
 <div class="content" id="works">
     <div class="video">
@@ -180,6 +182,8 @@
     </p>
 </div>
 </main>
+
+
 
 
 <script src="scripts.js"></script>
@@ -466,11 +470,11 @@ document.querySelectorAll(".video").forEach(wrapper => {
             if (wrapper.classList.contains("playing") || video.currentTime > 0) {setPlaying(video.paused);}
         }
     });
+
 });
 </script>
 <script type="application/ld+json">
-{
-    "@context":         "https://schema.org",
+{   "@context":         "https://schema.org",
     "@type":            "Person",
     "name":             "Joey Schweickhardt",
     "alternateName":    "Joey William Schweickhardt",
@@ -481,24 +485,18 @@ document.querySelectorAll(".video").forEach(wrapper => {
     "hasCredential":    {"@type":"EducationalOccupationalCredential", "credentialCategory":"Master of Science", "educationalLevel":"Postgraduate", "recognizedBy":{"@type":"CollegeOrUniversity", "name":"Universität Stuttgart"}},
     "memberOf":         "Architektenkammer Baden-Württemberg",
     "address":          {"@type":"PostalAddress", "addressLocality":"Stuttgart", "addressCountry":"DE"},
-    "alumniOf": [
-                        {"@type":"CollegeOrUniversity", "name":"Universität Stuttgart", "url":"https://www.uni-stuttgart.de/"},
-                        {"@type":"CollegeOrUniversity", "name":"Politecnico di Milano", "url":"https://www.polimi.it/"}
-    ],
-    "sameAs": [
-                        "https://www.linkedin.com/in/joeyschweickhardt",
-                        "https://www.akbw.de/kammer/datenbanken/architektenliste/detail/eintrag/joey-schweickhardt-54395"
-    ],
-    "subjectOf": [
-                        {"@type":"ExhibitionEvent", "name":"Jahreausstellung der Fakultät Architektur und Stadtplanung, Universität Stuttgart", "url":"https://www.k1.live/ausstellung-22/igma-institut-fuer-grundlagen-moderner-architektur-und-entwerfen/"},
+    "alumniOf": [       {"@type":"CollegeOrUniversity", "name":"Universität Stuttgart", "url":"https://www.uni-stuttgart.de/"},
+                        {"@type":"CollegeOrUniversity", "name":"Politecnico di Milano", "url":"https://www.polimi.it/"}],
+    "sameAs": [         "https://www.linkedin.com/in/joeyschweickhardt",
+                        "https://www.akbw.de/kammer/datenbanken/architektenliste/detail/eintrag/joey-schweickhardt-54395"],
+    "subjectOf": [      {"@type":"ExhibitionEvent", "name":"Jahreausstellung der Fakultät Architektur und Stadtplanung, Universität Stuttgart", "url":"https://www.k1.live/ausstellung-22/igma-institut-fuer-grundlagen-moderner-architektur-und-entwerfen/"},
                         {"@type":"ScholarlyArticle", "name":"geof3D: SPARQL geometric functions for co-designing buildings", "url":"https://www.sciencedirect.com/science/article/pii/S1474034625011541"},
                         {"@type":"Article", "name":"Institut für öffentliche Bauten und Entwerfen, Universität Stuttgart", "url":"https://ioeb-sammlung.de/node/210"},
                         {"@type":"Article", "name":"Institut für Baustofflehre, Bauphysik, Gebäudetechnik und Entwerfen, Universität Stuttgart", "url":"https://www.ibbte.uni-stuttgart.de/en/department-ig/Design-Studios/"},
                         {"@type":"Article", "name":"Institute for Computational Design and Construction, Universität Stuttgart", "url":"https://www.linkedin.com/posts/icdstuttgart_icd-icdca-intcdc-activity-7417885069765197824-3gIg/"},
                         {"@type":"Article", "name":"Institute for Computational Design and Construction, Universität Stuttgart", "url":"https://www.instagram.com/p/DTiEwS0DMX-/"},
                         {"@type":"Article", "name":"SCHMELZLE+PARTNER mbB Architekten BDA", "url":"https://www.schmelzle.de/team"}
-    ]
-}
+]}
 </script>
 </body>
 </html>
