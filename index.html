@@ -313,7 +313,7 @@ requestIdleCallback(() => {
             const current_weather = data.current_weather;
             const weatherEl = document.getElementById("weather");
             if (weatherEl) {
-                weatherEl.innerHTML = `<span style="color:#fc0;">☀ ${Math.round(current_weather.temperature)}&deg;C</span>`; // ⬤ ☼ ☀ ◯ <span style="color:#fc0;">☀</span> 
+                weatherEl.innerHTML = `${Math.round(current_weather.temperature)}℃`; // ⬤ ☼ ☀ ◯ <span style="color:#fc0;">☀</span> 
             }
         } catch (err) {}
     };
