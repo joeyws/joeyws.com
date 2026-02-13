@@ -59,7 +59,7 @@
     .gallery-img,.gallery-caption{margin-top:var(--spacer);}
     .gallery-nav span{padding:0 .35em;}
     .gallery-nav .active{outline:1px solid var(--text);border-radius:100vmax;}
-    .gallery-img{height:620px;user-select:none;}
+    .gallery-img{height:586px;user-select:none;}
     .gallery-img img{display:block;max-height:100%;max-width:100%;object-fit:contain;}
     /* SPECIAL */
     #mitgliedakbw{width:240px;max-width:100%;fill:var(--text);display:block;}
@@ -176,7 +176,7 @@
     <h2>Privacy</h2>
     <p>
         No cookies. No tracking.<br>
-        Some personal data may be processed by external providers:<br>
+        Personal information may be processed by external providers:<br>
         <a href="https://open-meteo.com/" rel="nofollow">Open‑Meteo</a> (weather data), AllOrigins (online status), GitHub (hosting)
     </p>
 </div>
@@ -313,7 +313,7 @@ requestIdleCallback(() => {
             const current_weather = data.current_weather;
             const weatherEl = document.getElementById("weather");
             if (weatherEl) {
-                weatherEl.innerHTML = `${Math.round(current_weather.temperature)}&deg;C`; // ⬤ ☼ ☀ ◯ <span style="color:#fc0;">☀</span> 
+                weatherEl.innerHTML = `<span style="color:#fc0;">☀ ${Math.round(current_weather.temperature)}&deg;C</span>`; // ⬤ ☼ ☀ ◯ <span style="color:#fc0;">☀</span> 
             }
         } catch (err) {}
     };
@@ -348,8 +348,8 @@ requestIdleCallback(() => {
             const xmlDoc = parser.parseFromString(data.contents, "text/xml");
             const onlineState = xmlDoc.getElementsByTagName("onlineState")[0].textContent;
             const statusDot = (onlineState === "online" || onlineState === "in-game" || onlineState === "away" || onlineState === "busy")
-                ? '<span style="color:#0f0;">⬤</span>'
-                : '<span style="color:#f00;">⬤</span>';
+                ? '<span style="color:#0f0;">⬤ Online</span>'
+                : '<span style="color:#f00;">⬤ Offline</span>'; 
             document.getElementById("time").insertAdjacentHTML('afterend', statusDot);
         } catch(err) {}
     }
