@@ -35,7 +35,7 @@
     #header a:hover,#header a.open,.video:not(.playing):hover::after{background:#8888;}
     #header a:hover,#header a.open{padding:0 1.4em;color:var(--text);}
     /* HEADER */
-    #header,#header>span{display:flex;gap:1.3em;}
+    #header,#header>span{display:flex;gap:.3em 1.2em;}
     #header{white-space:nowrap;user-select:none;width:100%;flex-wrap:wrap;justify-content:space-between;}
     #header nav{display:flex;gap:2px;}
     /* MARQUEE */
@@ -55,7 +55,7 @@
     .video .progress{display:inline-block;height:3px;overflow:hidden;padding-top:30px;}
     .video .progress-filled{width:0%;height:100%;background:#0f0;}
     /* GALLERY */
-    .gallery-nav{user-select:none;display:flex;flex-wrap:wrap;/* column-gap:var(--spacer); */}
+    .gallery-nav{user-select:none;display:flex;flex-wrap:wrap;}
     .gallery-img,.gallery-caption{margin-top:var(--spacer);}
     .gallery-nav span{padding:0 .35em;}
     .gallery-nav .active{outline:1px solid var(--text);border-radius:100vmax;}
@@ -65,7 +65,7 @@
     #mitgliedakbw{width:240px;max-width:100%;fill:var(--text);display:block;}
     @keyframes blink-loading{0%{opacity:0;}50%{opacity:1;}}.loading{animation:.3s blink-loading steps(1) infinite;}
     @keyframes map{100%{outline-color:transparent;outline-offset:20px;}}#map{width:760px;max-width:100%;aspect-ratio:150/75;background:center center url(img/other/world.gif) no-repeat scroll;position:relative;background-size:contain;}#map:after{top:23%;left:52.5%;outline:1px solid #0f0;background:#0f0;border:1px solid #000;animation:map 1.2s infinite ease-out;width:7px;height:7px;border-radius:100vmax;pointer-events:none;position:absolute;transform:translate(-50%,-50%);display:block;content:"";}
-    #cursor{width:12px;height:12px;background:#fff1;backdrop-filter:blur(20px) invert(100%) saturate(10);-webkit-backdrop-filter:blur(20px) invert(100%) saturate(10);border-radius:100vmax;position:fixed;top:-50px;left:50%;transform:translate(-50%,-50%);font-size:0;line-height:0;z-index:99999999;pointer-events:none;}*{cursor:none !important;}
+    #cursor{width:12px;height:12px;background:#fff1;backdrop-filter:blur(20px) invert(100%) saturate(10);-webkit-backdrop-filter:blur(20px) invert(100%) saturate(10);border-radius:100vmax;*/position:fixed;top:-50px;left:50%;transform:translate(-50%,-50%);font-size:0;line-height:0;z-index:99999999;pointer-events:none;}*{cursor:none !important;}
 </style>
 </head>
 <body>
@@ -176,9 +176,8 @@
     <h2>Privacy</h2>
     <p>
         No cookies. No tracking.<br>
-        Your IP address is used solely to deliver the site.<br>
-        Weather data fetched from <a href="https://open-meteo.com/" rel="nofollow">Open‑Meteo</a>.
-        Hosting by <a href="https://github.com/" rel="nofollow">GitHub</a>.
+        Some personal data may be processed by external providers:<br>
+        <a href="https://open-meteo.com/" rel="nofollow">Open‑Meteo</a> (weather data), AllOrigins (online status), GitHub (hosting)
     </p>
 </div>
 </main>
@@ -333,13 +332,28 @@ requestIdleCallback(() => {
             const formatted = date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
             const p = document.createElement('p');
             p.innerHTML = `Last modified ${formatted}.`;
-            const hr = document.createElement('hr');
-            contact.appendChild(hr);
+            /* const hr = document.createElement('hr');
+            contact.appendChild(hr); */
             contact.appendChild(p);
             setTimeout(() => { lenis.resize(); }, 50);
         } catch {}
     }
     updateLastModified();
+    // STEAM STATUS
+    async function fetchSteamStatus() {
+        try {
+            const response = await fetch(`https://api.allorigins.win/get?url=https://steamcommunity.com/id/joeyws2?xml=1`);
+            const data = await response.json();
+            const parser = new DOMParser();
+            const xmlDoc = parser.parseFromString(data.contents, "text/xml");
+            const onlineState = xmlDoc.getElementsByTagName("onlineState")[0].textContent;
+            const statusDot = (onlineState === "online" || onlineState === "in-game" || onlineState === "away" || onlineState === "busy")
+                ? '<span style="color:#0f0;">⬤</span>'
+                : '<span style="color:#f00;">⬤</span>';
+            document.getElementById("time").insertAdjacentHTML('afterend', statusDot);
+        } catch(err) {}
+    }
+    fetchSteamStatus();
 });
     
 // CONTACT
