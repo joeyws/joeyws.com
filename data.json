@@ -5,15 +5,18 @@
         "type": "player",
         "id": "account.0d696dc5b3f54d41827d7efe10135b88",
         "attributes": {
+          "clanId": "clan.af13c7970a85462a8308ee324dd11fe8",
           "name": "joeyws2",
           "stats": null,
           "titleId": "pubg",
           "shardId": "steam",
           "patchVersion": "",
-          "banType": "Innocent",
-          "clanId": "clan.af13c7970a85462a8308ee324dd11fe8"
+          "banType": "Innocent"
         },
         "relationships": {
+          "assets": {
+            "data": []
+          },
           "matches": {
             "data": [
               {
@@ -317,14 +320,11 @@
                 "id": "c1282367-bb34-468c-882f-c93c30859152"
               }
             ]
-          },
-          "assets": {
-            "data": []
           }
         },
         "links": {
-          "schema": "",
-          "self": "https://api.pubg.com/shards/steam/players/account.0d696dc5b3f54d41827d7efe10135b88"
+          "self": "https://api.pubg.com/shards/steam/players/account.0d696dc5b3f54d41827d7efe10135b88",
+          "schema": ""
         }
       }
     ],
@@ -336,7 +336,7 @@
   "weather": {
     "latitude": 48.78,
     "longitude": 9.18,
-    "generationtime_ms": 0.07975101470947266,
+    "generationtime_ms": 0.4044771194458008,
     "utc_offset_seconds": 0,
     "timezone": "GMT",
     "timezone_abbreviation": "GMT",
@@ -351,81 +351,17 @@
       "weathercode": "wmo code"
     },
     "current_weather": {
-      "time": "2026-02-14T07:15",
+      "time": "2026-02-14T07:30",
       "interval": 900,
-      "temperature": 5.3,
-      "windspeed": 6.2,
-      "winddirection": 21,
+      "temperature": 5.6,
+      "windspeed": 6.5,
+      "winddirection": 360,
       "is_day": 1,
       "weathercode": 61
     }
   },
-  "lastModified": "2026-02-14T07:16:26Z",
+  "lastModified": "2026-02-14T07:25:39Z",
   "steam": {
-    "status": "online",
-    "name": "フロモヒ",
-    "avatar": "https://avatars.akamai.steamstatic.com/3341074bb1e58768e56cb27659bce0471bedb1d0_full.jpg",
-    "raw": {
-      "steamID64": [
-        "76561199698498228"
-      ],
-      "steamID": [
-        "フロモヒ"
-      ],
-      "onlineState": [
-        "online"
-      ],
-      "stateMessage": [
-        "Online"
-      ],
-      "privacyState": [
-        "public"
-      ],
-      "visibilityState": [
-        "3"
-      ],
-      "avatarIcon": [
-        "https://avatars.akamai.steamstatic.com/3341074bb1e58768e56cb27659bce0471bedb1d0.jpg"
-      ],
-      "avatarMedium": [
-        "https://avatars.akamai.steamstatic.com/3341074bb1e58768e56cb27659bce0471bedb1d0_medium.jpg"
-      ],
-      "avatarFull": [
-        "https://avatars.akamai.steamstatic.com/3341074bb1e58768e56cb27659bce0471bedb1d0_full.jpg"
-      ],
-      "vacBanned": [
-        "0"
-      ],
-      "tradeBanState": [
-        "None"
-      ],
-      "isLimitedAccount": [
-        "0"
-      ],
-      "customURL": [
-        "joeyws2"
-      ],
-      "memberSince": [
-        "May 30, 2024"
-      ],
-      "steamRating": [
-        ""
-      ],
-      "hoursPlayed2Wk": [
-        "0.0"
-      ],
-      "headline": [
-        ""
-      ],
-      "location": [
-        ""
-      ],
-      "realname": [
-        ""
-      ],
-      "summary": [
-        "⁧⁧󠀡󠀡"
-      ]
-    }
+    "status": "online"
   }
 }
