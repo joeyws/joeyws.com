@@ -34,10 +34,11 @@ async function updateData() {
 
   // XML parsen
   const parser = new xml2js.Parser();
-  const steamData = await parser.parseStringPromise(steamXmlRes.data.contents);
+  const parsedSteam = await parser.parseStringPromise(steamXmlRes.data.contents);
 
-  // Beispiel: steamData.profile.onlineState enthält Status
-  const steamStatus = steamData.profile.onlineState[0];
+  const steamStatus = parsedSteam.profile.onlineState[0];
+  const steamName = parsedSteam.profile.steamID[0];
+  const steamAvatar = parsedSteam.profile.avatarFull[0];
 
   // Alles zusammenführen
   const combinedData = {
@@ -46,7 +47,9 @@ async function updateData() {
     lastModified: lastCommitDate,
     steam: {
       status: steamStatus,
-      raw: steamData.profile
+      name: steamName,
+      avatar: steamAvatar,
+      raw: parsedSteam.profile
     }
   };
 
