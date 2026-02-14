@@ -77,95 +77,105 @@ async function updateData() {
       }
     );
     const player = pubgRes.data.data[0];
-    // clan name
-    const clanId = player.attributes.clanId || null;
-    let clanName = null;
-    if (clanId && clanId !== "null") {
-      try {
-        const clanRes = await axios.get(
-          `https://api.pubg.com/shards/steam/clans/${clanId}`,
-          {
-            headers: {
-              Authorization: `Bearer ${PUBG_API_KEY}`,
-              Accept: "application/vnd.api+json"
-            }
-          }
-        );
-        clanName = clanRes.data.data.attributes.name || null;
-        console.log("PUBG clan name: ok (" + clanName + ")");
-      } catch (err) {
-        console.error("PUBG clan name:", err.message);
-      }
+    if (!player) {
+      console.error("PUBG: no player data returned");
+      pubgData = { name: null, clan: null, lastMatches: [] };
     } else {
-      console.log("PUBG clan name: error", clanName);
-    }
-    // match start time
-    function formatMatchStart(matchStartIso) {
-      const matchDate = new Date(matchStartIso);
-      const now = new Date();
-      const isToday =
-        matchDate.getFullYear() === now.getFullYear() &&
-        matchDate.getMonth() === now.getMonth() &&
-        matchDate.getDate() === now.getDate();
-      const hours = matchDate.getHours().toString().padStart(2, "0");
-      const minutes = matchDate.getMinutes().toString().padStart(2, "0");
-      if (isToday) {
-        return `${hours}:${minutes}`;
-      } else {
-        const day = matchDate.getDate().toString().padStart(2, "0");
-        const month = (matchDate.getMonth() + 1).toString().padStart(2, "0");
-        return `${day}.${month}. ${hours}:${minutes}`;
-      }
-    }
-    // prepare data structure
-    pubgData = {
-      name: player.attributes.name,
-      clan: clanName,
-      lastMatches: []
-    };
-    // last 5 matches
-    const lastMatchIds = player.relationships.matches.data.slice(0, 5).map(m => m.id);
-    for (const matchId of lastMatchIds) {
-      try {
-        const matchRes = await axios.get(
-          `https://api.pubg.com/shards/steam/matches/${matchId}`,
-          {
-            headers: {
-              Authorization: `Bearer ${PUBG_API_KEY}`,
-              Accept: "application/vnd.api+json"
+      console.log("PUBG: player data fetched");
+      // Clan
+      const clanId = player.attributes.clanId;
+      let clanName = null;
+      if (clanId && clanId !== "null") {
+        try {
+          const clanRes = await axios.get(
+            `https://api.pubg.com/shards/steam/clans/${clanId}`,
+            {
+              headers: {
+                Authorization: `Bearer ${PUBG_API_KEY}`,
+                Accept: "application/vnd.api+json"
+              }
             }
+          );
+          clanName = clanRes.data.data?.attributes?.name || null;
+          console.log("PUBG: clan name fetched:", clanName);
+        } catch (err) {
+          console.error("PUBG: clan fetch error:", err.message);
+        }
+      } else {
+        console.log("PUBG: no clan ID");
+      }
+      // Match start formatting
+      function formatMatchStart(matchStartIso) {
+        const matchDate = new Date(matchStartIso);
+        const now = new Date();
+        const isToday =
+          matchDate.getFullYear() === now.getFullYear() &&
+          matchDate.getMonth() === now.getMonth() &&
+          matchDate.getDate() === now.getDate();
+        const hours = matchDate.getHours().toString().padStart(2, "0");
+        const minutes = matchDate.getMinutes().toString().padStart(2, "0");
+        if (isToday) {
+          return `${hours}:${minutes}`;
+        } else {
+          const day = matchDate.getDate().toString().padStart(2, "0");
+          const month = (matchDate.getMonth() + 1).toString().padStart(2, "0");
+          return `${day}.${month}. ${hours}:${minutes}`;
+        }
+      }
+      // Prepare PUBG data object
+      pubgData = {
+        name: player.attributes.name,
+        clan: clanName,
+        lastMatches: []
+      };
+      const lastMatchIds = player.relationships.matches.data.slice(0, 5).map(m => m.id);
+      console.log("PUBG: last match IDs:", lastMatchIds);
+      for (const matchId of lastMatchIds) {
+        try {
+          const matchRes = await axios.get(
+            `https://api.pubg.com/shards/steam/matches/${matchId}`,
+            {
+              headers: {
+                Authorization: `Bearer ${PUBG_API_KEY}`,
+                Accept: "application/vnd.api+json"
+              }
+            }
+          );
+          const participant = matchRes.data.included.find(
+            p => p.type === "participant" && p.attributes.stats.name === player.attributes.name
+          );
+          if (!participant) {
+            console.log("PUBG: participant not found for match", matchId);
+            continue;
           }
-        );
-        // match player stats
-        const participant = matchRes.data.included.find(
-          p => p.type === "participant" && p.attributes.stats.name === player.attributes.name
-        );
-        if (participant) {
           const matchStartIso = matchRes.data.data.attributes.createdAt;
           const matchStart = formatMatchStart(matchStartIso);
           let rawMatchType = matchRes.data.data.attributes.gameMode;
           let [teamSize, perspective] = rawMatchType.split("-");
           if (!perspective || perspective === "") perspective = "TPP";
+          // Formatting
           teamSize = teamSize.charAt(0).toUpperCase() + teamSize.slice(1).toLowerCase();
           perspective = perspective.toUpperCase();
           pubgData.lastMatches.push({
-            matchStart: matchStart,
-            teamSize: teamSize,
-            perspective: perspective,
+            matchStart,
+            teamSize,
+            perspective,
             placement: participant.attributes.stats.winPlace,
             kills: participant.attributes.stats.kills,
             damage: Math.round(participant.attributes.stats.damageDealt)
           });
+          console.log("PUBG: match processed:", matchId);
+        } catch (err) {
+          console.error("PUBG: match fetch error", matchId, err.message);
         }
-        console.error("PUBG match data: ok");
-      } catch (err) {
-        console.error("PUBG match data:", matchId, err.message);
       }
+      console.log("PUBG: all matches processed");
     }
-    console.log("PUBG general: ok");
   } catch (err) {
-    console.error("PUBG general:", err.message);
+    console.error("PUBG: player fetch error:", err.message);
+    pubgData = { name: null, clan: null, lastMatches: [] };
   }
+
 
   // combine data
   const combinedData = {
