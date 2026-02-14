@@ -22,7 +22,6 @@ async function updateData() {
       }
     );
     const player = pubgRes.data.data[0];
-    // Spielername und Plattform
     const pubgData = {
       name: player.attributes.name,
       shard: player.attributes.shardId,
@@ -44,7 +43,6 @@ async function updateData() {
             }
           }
         );
-        // Nur relevante Infos extrahieren (Beispiel: Kills, Platzierung, Schaden)
         const participant = matchRes.data.included.find(
           p => p.type === "participant" && p.attributes.stats.name === player.attributes.name
         );
@@ -58,38 +56,39 @@ async function updateData() {
           });
         }
       } catch (err) {
-        console.error("Error fetching match", matchId, err.message);
+        console.error("PUBG match data", matchId, err.message);
       }
     }
-    console.log("PUBG Data fetched");
+    console.log("PUBG: ok");
   } catch (err) {
-    console.error("Error fetching PUBG player data:", err.message);
+    console.error("PUBG: ", err.message);
   }
 
+  // weather temperatur
   try {
-    // Wetter
     const weatherRes = await axios.get(
       "https://api.open-meteo.com/v1/forecast?latitude=48.7823&longitude=9.177&current_weather=true"
     );
-    weatherData = weatherRes.data;
-    console.log("Weather Data fetched");
+    var weather = Math.round(weatherRes.data.current_weather.temperature);
+    console.log("Weather: ok");
   } catch (err) {
-    console.error("Error fetching weather data:", err.message);
+    console.error("Weather: ", err.message);
+    var weather = null;
   }
 
   try {
-    // GitHub letzte Änderung
+    // github last commit
     const githubRes = await axios.get(
       "https://api.github.com/repos/joeyws/joeyws.com/commits"
     );
     githubLastModified = githubRes.data[0].commit.committer.date;
-    console.log("GitHub last commit fetched");
+    console.log("GitHub: ok");
   } catch (err) {
-    console.error("Error fetching GitHub commits:", err.message);
+    console.error("GitHub: ", err.message);
   }
 
   try {
-    // Steam Status
+    // steam status
     const steamXmlRes = await axios.get(
       "https://api.allorigins.win/get?url=" +
         encodeURIComponent("https://steamcommunity.com/id/joeyws2?xml=1")
@@ -99,7 +98,7 @@ async function updateData() {
     var steamStatus = parsedSteam.profile.onlineState[0];
     console.log("Steam Status fetched:", steamStatus);
   } catch (err) {
-    console.error("Error fetching Steam status:", err.message);
+    console.error("Steam: ", err.message);
     var steamStatus = "unknown";
   }
 
