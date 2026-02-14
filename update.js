@@ -142,7 +142,9 @@ async function updateData() {
           const matchStart = formatMatchStart(matchStartIso);
           let rawMatchType = matchRes.data.data.attributes.gameMode;
           let [teamSize, perspective] = rawMatchType.split("-");
-          if (!perspective || perspective === "") perspective = "tpp";
+          if (!perspective || perspective === "") perspective = "TPP";
+          teamSize = teamSize.charAt(0).toUpperCase() + teamSize.slice(1).toLowerCase();
+          perspective = perspective.toUpperCase();
           pubgData.lastMatches.push({
             matchStart: matchStart,
             teamSize: teamSize,
