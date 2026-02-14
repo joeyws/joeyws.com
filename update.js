@@ -5,10 +5,10 @@ const xml2js = require("xml2js");
 const PUBG_API_KEY = process.env.PUBG_API_KEY;
 
 async function updateData() {
-  let pubgData = {};
-  let weather = null;
-  let githubLastModified = null;
+  let weatherTempCelsius = null;
+  let githubLastCommit = null;
   let steamStatus = "unknown";
+  let pubgData = {};
 
   // timestamp
   function getTimestamp() {
@@ -44,7 +44,7 @@ async function updateData() {
       month: "long",
       day: "numeric"
     });
-    console.log("GitHub: ok");
+    console.log("GitHub: ok (" + githubLastCommit + ")");
   } catch (err) {
     console.error("GitHub:", err.message);
   }
@@ -60,7 +60,7 @@ async function updateData() {
     const rawStatus = parsedSteam.profile.onlineState[0];
     const onlineStates = ["online", "in-game", "away", "busy"];
     steamStatus = onlineStates.includes(rawStatus.toLowerCase()) ? "online" : "offline";
-    console.log("Steam: ok");
+    console.log("Steam: ok (" + steamStatus + ")");
   } catch (err) {
     console.log("Steam:", err.message);
   }
@@ -77,7 +77,26 @@ async function updateData() {
       }
     );
     const player = pubgRes.data.data[0];
+    // clan name
     const clanId = player.attributes.clanId || null;
+    let clanName = null;
+    if (clanId) {
+      try {
+        const clanRes = await axios.get(
+          `https://api.pubg.com/shards/steam/clans/${clanId}`,
+          {
+            headers: {
+              Authorization: `Bearer ${PUBG_API_KEY}`,
+              Accept: "application/vnd.api+json"
+            }
+          }
+        );
+        clanName = clanRes.data.data.attributes.name || null;
+        console.log("PUBG clan name: ok (" + clanName + ")");
+      } catch (err) {
+        console.error("PUBG clan name:", err.message);
+      }
+    }
     // match start time
     function formatMatchStart(matchStartIso) {
       const matchDate = new Date(matchStartIso);
@@ -99,7 +118,6 @@ async function updateData() {
     // prepare data structure
     pubgData = {
       name: player.attributes.name,
-      clan: clanName,
       lastMatches: []
     };
     // last 5 matches
@@ -123,11 +141,11 @@ async function updateData() {
           const matchStartIso = matchRes.data.data.attributes.createdAt;
           const matchStart = formatMatchStart(matchStartIso);
           let rawMatchType = matchRes.data.data.attributes.gameMode;
-          let [type, perspective] = rawMatchType.split("-");
+          let [teamSize, perspective] = rawMatchType.split("-");
           if (!perspective || perspective === "") perspective = "tpp";
           pubgData.lastMatches.push({
             matchStart: matchStart,
-            type: type,
+            teamSize: teamSize,
             perspective: perspective,
             placement: participant.attributes.stats.winPlace,
             kills: participant.attributes.stats.kills,
