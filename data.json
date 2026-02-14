@@ -1,5 +1,5 @@
 {
-  "timestamp": "14.02.2026 11:23",
+  "timestamp": "14.02.2026 11:43",
   "weatherTempCelsius": 5,
   "githubLastCommit": "February 14, 2026",
   "steamStatus": "online",
@@ -11,8 +11,8 @@
         "matchStart": "13.02. 21:58",
         "teamSize": "Squad",
         "teamMates": [
-          "lastbek12",
           "SuuuS_",
+          "lastbek12",
           "FATURALI"
         ],
         "perspective": "FPP",
@@ -27,9 +27,9 @@
         "matchStart": "13.02. 21:46",
         "teamSize": "Squad",
         "teamMates": [
-          "rezisthebest",
           "anoboloikyusuf",
-          "SuuuS_"
+          "SuuuS_",
+          "rezisthebest"
         ],
         "perspective": "FPP",
         "placement": 20,
@@ -55,9 +55,9 @@
         "matchStart": "13.02. 20:57",
         "teamSize": "Squad",
         "teamMates": [
-          "Jeffersen26",
+          "El_Molcho",
           "ger_just",
-          "El_Molcho"
+          "Jeffersen26"
         ],
         "perspective": "TPP",
         "placement": 1,
