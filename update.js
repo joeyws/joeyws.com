@@ -10,7 +10,7 @@ async function updateData() {
   let githubLastModified = null;
   let steamStatus = "unknown";
 
-  // weather
+  // weather: temp in celsius
   try {
     const weatherRes = await axios.get(
       "https://api.open-meteo.com/v1/forecast?latitude=48.7823&longitude=9.177&current_weather=true"
@@ -21,7 +21,7 @@ async function updateData() {
     console.error("Weather:", err.message);
   }
 
-  // github last commit
+  // github: last commit
   try {
     const githubRes = await axios.get(
       "https://api.github.com/repos/joeyws/joeyws.com/commits"
@@ -38,7 +38,7 @@ async function updateData() {
     console.error("GitHub:", err.message);
   }
 
-  // steam status
+  // steam: status
   try {
     const steamXmlRes = await axios.get(
       "https://api.allorigins.win/get?url=" +
