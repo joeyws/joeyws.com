@@ -27,7 +27,7 @@ async function updateData() {
       "https://api.open-meteo.com/v1/forecast?latitude=48.7823&longitude=9.177&current_weather=true"
     );
     weatherTempCelsius = Math.round(weatherRes.data.current_weather.temperature);
-    console.log("Weather: ok" + weatherTempCelsius + ")");
+    console.log("Weather: ok (" + weatherTempCelsius + ")");
   } catch (err) {
     console.error("Weather:", err.message);
   }
