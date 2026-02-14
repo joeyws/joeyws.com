@@ -47,7 +47,6 @@ async function updateData() {
     const parser = new xml2js.Parser();
     const parsedSteam = await parser.parseStringPromise(steamXmlRes.data.contents);
     const rawStatus = parsedSteam.profile.onlineState[0];
-    // Online-Status vereinfachen
     const onlineStates = ["online", "in-game", "away", "busy"];
     steamStatus = onlineStates.includes(rawStatus.toLowerCase()) ? "online" : "offline";
     console.log("Steam: ok");
@@ -81,9 +80,26 @@ async function updateData() {
           }
         );
         clanName = clanRes.data.data.attributes.name;
-        console.error("PUBG clan:", clanName);
       } catch (err) {
-        console.error("PUBG clan:", err.message);
+        console.error("PUBG clan fetch error:", err.message);
+      }
+    }
+    // match start time
+    function formatMatchStart(matchStartIso) {
+      const matchDate = new Date(matchStartIso);
+      const now = new Date();
+      const isToday =
+        matchDate.getFullYear() === now.getFullYear() &&
+        matchDate.getMonth() === now.getMonth() &&
+        matchDate.getDate() === now.getDate();
+      const hours = matchDate.getHours().toString().padStart(2, "0");
+      const minutes = matchDate.getMinutes().toString().padStart(2, "0");
+      if (isToday) {
+        return `${hours}:${minutes}`;
+      } else {
+        const day = matchDate.getDate().toString().padStart(2, "0");
+        const month = (matchDate.getMonth() + 1).toString().padStart(2, "0");
+        return `${day}.${month}. ${hours}:${minutes}`;
       }
     }
     // Grunddaten vorbereiten
@@ -105,23 +121,20 @@ async function updateData() {
             }
           }
         );
+        // match stats
         const participant = matchRes.data.included.find(
           p => p.type === "participant" && p.attributes.stats.name === player.attributes.name
         );
         if (participant) {
-          let matchEndIso = "ongoing";
-          if (matchRes.data.data.attributes.duration) {
-            const matchStart = new Date(matchRes.data.data.attributes.createdAt);
-            const matchDurationSec = matchRes.data.data.attributes.duration; // Sekunden
-            const matchEnd = new Date(matchStart.getTime() + matchDurationSec * 1000);
-            matchEndIso = matchEnd.toISOString();
-          }
+          const matchStartIso = matchRes.data.data.attributes.createdAt;
+          const matchStart = formatMatchStart(matchStartIso);
+          let matchType = matchRes.data.data.attributes.gameMode.replace(/-/g, " ");
           pubgData.lastMatches.push({
-            matchEnd: matchEndIso,
-            matchType: matchRes.data.data.attributes.gameMode,
+            matchStart: matchStart,
+            matchType: matchType,
             placement: participant.attributes.stats.winPlace,
             kills: participant.attributes.stats.kills,
-            damage: participant.attributes.stats.damageDealt
+            damage: Math.round(participant.attributes.stats.damageDealt)
           });
         }
         console.error("PUBG match data: ok");
@@ -129,9 +142,9 @@ async function updateData() {
         console.error("PUBG match data:", matchId, err.message);
       }
     }
-    console.log("PUBG player data: ok");
+    console.log("PUBG player: ok");
   } catch (err) {
-    console.error("PUBG player data:", err.message);
+    console.error("PUBG player:", err.message);
   }
 
   // combine data
