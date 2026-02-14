@@ -1,6 +1,6 @@
 const axios = require("axios");
 const fs = require("fs");
-const xml2js = require("xml2js"); // XML Parser
+const xml2js = require("xml2js");
 
 const PUBG_API_KEY = process.env.PUBG_API_KEY;
 
