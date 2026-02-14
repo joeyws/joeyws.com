@@ -124,7 +124,7 @@ async function updateData() {
           const matchStart = formatMatchStart(matchStartIso);
           let rawMatchType = matchRes.data.data.attributes.gameMode;
           let [type, perspective] = rawMatchType.split("-");
-          if (!perspective) perspective = "";
+          if (!perspective || perspective === "") perspective = "tpp";
           pubgData.lastMatches.push({
             matchStart: matchStart,
             type: type,
