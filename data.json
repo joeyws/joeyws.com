@@ -5,13 +5,13 @@
         "type": "player",
         "id": "account.0d696dc5b3f54d41827d7efe10135b88",
         "attributes": {
+          "banType": "Innocent",
+          "clanId": "clan.af13c7970a85462a8308ee324dd11fe8",
+          "name": "joeyws2",
           "stats": null,
           "titleId": "pubg",
           "shardId": "steam",
-          "patchVersion": "",
-          "banType": "Innocent",
-          "clanId": "clan.af13c7970a85462a8308ee324dd11fe8",
-          "name": "joeyws2"
+          "patchVersion": ""
         },
         "relationships": {
           "assets": {
@@ -336,7 +336,7 @@
   "weather": {
     "latitude": 48.78,
     "longitude": 9.18,
-    "generationtime_ms": 0.08666515350341797,
+    "generationtime_ms": 0.06079673767089844,
     "utc_offset_seconds": 0,
     "timezone": "GMT",
     "timezone_abbreviation": "GMT",
