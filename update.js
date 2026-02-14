@@ -97,7 +97,7 @@ async function updateData() {
         console.error("PUBG clan name:", err.message);
       }
     } else {
-      console.error("PUBG clan name:", clanName);
+      console.log("PUBG clan name: error", clanName);
     }
     // match start time
     function formatMatchStart(matchStartIso) {
