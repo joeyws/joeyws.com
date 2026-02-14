@@ -21,10 +21,49 @@ async function updateData() {
         }
       }
     );
-    pubgData = pubgRes.data;
+    const player = pubgRes.data.data[0];
+    // Spielername und Plattform
+    const pubgData = {
+      name: player.attributes.name,
+      shard: player.attributes.shardId,
+      lastMatches: [] // wird mit Details gefüllt
+    };
+    // IDs der letzten 5 Matches
+    const lastMatchIds = player.relationships.matches.data
+      .slice(0, 5)
+      .map(m => m.id);
+    // Details der letzten 5 Matches abrufen
+    for (const matchId of lastMatchIds) {
+      try {
+        const matchRes = await axios.get(
+          `https://api.pubg.com/shards/steam/matches/${matchId}`,
+          {
+            headers: {
+              Authorization: `Bearer ${PUBG_API_KEY}`,
+              Accept: "application/vnd.api+json"
+            }
+          }
+        );
+        // Nur relevante Infos extrahieren (Beispiel: Kills, Platzierung, Schaden)
+        const participant = matchRes.data.included.find(
+          p => p.type === "participant" && p.attributes.stats.name === player.attributes.name
+        );
+        if (participant) {
+          pubgData.lastMatches.push({
+            matchId: matchId,
+            kills: participant.attributes.stats.kills,
+            placement: participant.attributes.stats.winPlace,
+            damage: participant.attributes.stats.damageDealt,
+            matchType: matchRes.data.data.attributes.gameMode
+          });
+        }
+      } catch (err) {
+        console.error("Error fetching match", matchId, err.message);
+      }
+    }
     console.log("PUBG Data fetched");
   } catch (err) {
-    console.error("Error fetching PUBG data:", err.message);
+    console.error("Error fetching PUBG player data:", err.message);
   }
 
   try {
@@ -52,14 +91,16 @@ async function updateData() {
   try {
     // Steam Status
     const steamXmlRes = await axios.get(
-      "https://api.allorigins.win/get?url=" + encodeURIComponent("https://steamcommunity.com/id/joeyws2?xml=1")
+      "https://api.allorigins.win/get?url=" +
+        encodeURIComponent("https://steamcommunity.com/id/joeyws2?xml=1")
     );
     const parser = new xml2js.Parser();
     const parsedSteam = await parser.parseStringPromise(steamXmlRes.data.contents);
-    steamStatus = parsedSteam.profile.onlineState[0];
+    var steamStatus = parsedSteam.profile.onlineState[0];
     console.log("Steam Status fetched:", steamStatus);
   } catch (err) {
     console.error("Error fetching Steam status:", err.message);
+    var steamStatus = "unknown";
   }
 
   // Alles zusammenführen
