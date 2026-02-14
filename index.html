@@ -30,6 +30,7 @@
     hr{margin:4rem 0;}
     a{white-space:nowrap;/* box-shadow:inset 0 -.03em var(--text); */text-decoration:underline;/* transition:.1s all;border-radius:3px;-webkit-box-decoration-break:clone;-o-box-decoration-break:clone;box-decoration-break:clone; */}
     a:hover{/* box-shadow:inset 0 -1.3em #f0f; */background:#f0f;color:var(--background);text-decoration:none;}
+    a[href^="http"]:after{content:" \2197";}
     /* BUTTONS NAV/PLAY */
     #header a,.video:not(.playing)::after{background:#3339;backdrop-filter:blur(3px);box-shadow:none !important;border-radius:5px;transition:.1s all;line-height:2em;padding:0 .8em;text-decoration:none;display:inline-block;}
     #header a:hover,#header a.open,.video:not(.playing):hover::after{background:#8888;}
@@ -62,7 +63,7 @@
     .gallery-img{height:586px;user-select:none;}
     .gallery-img img{display:block;max-height:100%;max-width:100%;object-fit:contain;}
     /* SPECIAL */
-    #mitgliedakbw{width:200px;max-width:100%;fill:var(--text);display:block;}
+    #mitgliedakbw{width:200px;max-width:100%;fill:var(--text);display:block;opacity:.85;}
     @keyframes blink-loading{0%{opacity:0;}50%{opacity:1;}}.loading{animation:.3s blink-loading steps(1) infinite;}
     @keyframes map{100%{outline-color:transparent;outline-offset:20px;}}#map{width:760px;max-width:100%;aspect-ratio:150/75;background:center center url(img/other/world.gif) no-repeat scroll;position:relative;background-size:contain;}#map:after{top:23%;left:52.5%;outline:1px solid #0f0;background:#0f0;box-shadow:0 3px 8px #000;animation:map 1.2s infinite ease-out;width:7px;height:7px;border-radius:100vmax;pointer-events:none;position:absolute;transform:translate(-50%,-50%);display:block;content:"";}
     #cursor{width:12px;height:12px;background:#fff1;backdrop-filter:blur(20px) invert(100%) saturate(10);-webkit-backdrop-filter:blur(20px) invert(100%) saturate(10);border-radius:100vmax;position:fixed;top:-50px;left:50%;transform:translate(-50%,-50%);font-size:0;line-height:0;z-index:99999999;pointer-events:none;}*{cursor:none !important;}
@@ -176,8 +177,8 @@
     <h2>Privacy</h2>
     <p>
         No cookies. No tracking.<br>
-        Personal information may be processed by external providers:<br>
-        <a href="https://open-meteo.com/" rel="nofollow">Open‑Meteo</a> (weather data), AllOrigins (online status), <a href="https://github.com/" rel="nofollow">GitHub</a> (hosting)
+        Personal information may be processed by external providers, including:<br>
+        <a href="https://open-meteo.com/" rel="nofollow">Open‑Meteo</a> for weather data, <a href="https://allorigins.win/" rel="nofollow">AllOrigins</a> for online status, <a href="https://github.com/" rel="nofollow">GitHub</a> for hosting
     </p>
 </div>
 </main>
