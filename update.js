@@ -78,17 +78,17 @@ async function updateData() {
           }
         );
         clanName = clanRes.data.data.attributes.name;
-        console.log("PUBG clan:", player.attributes.clanId);
       } catch (err) {
-        console.error("PUBG clan:", err.message);
+        console.error("PUBG clan fetch error:", err.message);
       }
     }
+    // Grunddaten vorbereiten
     pubgData = {
       name: player.attributes.name,
       clan: clanName,
       lastMatches: []
     };
-    //  last 5 matches
+    // last 5 matches
     const lastMatchIds = player.relationships.matches.data.slice(0, 5).map(m => m.id);
     for (const matchId of lastMatchIds) {
       try {
@@ -105,27 +105,35 @@ async function updateData() {
           p => p.type === "participant" && p.attributes.stats.name === player.attributes.name
         );
         if (participant) {
+          let matchEndIso = "ongoing";
+          if (matchRes.data.data.attributes.duration) {
+            const matchStart = new Date(matchRes.data.data.attributes.createdAt);
+            const matchDurationSec = matchRes.data.data.attributes.duration; // Sekunden
+            const matchEnd = new Date(matchStart.getTime() + matchDurationSec * 1000);
+            matchEndIso = matchEnd.toISOString();
+          }
           pubgData.lastMatches.push({
-            matchId: matchId,
-            kills: participant.attributes.stats.kills,
+            matchEnd: matchEndIso,
+            matchType: matchRes.data.data.attributes.gameMode,
             placement: participant.attributes.stats.winPlace,
-            damage: participant.attributes.stats.damageDealt,
-            matchType: matchRes.data.data.attributes.gameMode
+            kills: participant.attributes.stats.kills,
+            damage: participant.attributes.stats.damageDealt
           });
         }
       } catch (err) {
-        console.error("PUBG matches:", matchId, err.message);
+        console.error("PUBG match data:", matchId, err.message);
       }
     }
-    console.log("PUBG: ok");
+    console.log("PUBG player data: ok");
   } catch (err) {
-    console.error("PUBG:", err.message);
+    console.error("PUBG player data:", err.message);
   }
 
   // combine data
   const combinedData = {
-    weatherTempCelsius: weatherTempCelsius,
-    githubLastCommit: githubLastModified,
+    timestamp: new Date().toISOString(),
+    weather: weather,
+    githubLastModified: githubLastModified,
     steamStatus: steamStatus,
     pubg: pubgData
   };
