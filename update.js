@@ -78,8 +78,9 @@ async function updateData() {
           }
         );
         clanName = clanRes.data.data.attributes.name;
+        console.error("PUBG clan:", clanName);
       } catch (err) {
-        console.error("PUBG clan fetch error:", err.message);
+        console.error("PUBG clan:", err.message);
       }
     }
     // Grunddaten vorbereiten
@@ -120,6 +121,7 @@ async function updateData() {
             damage: participant.attributes.stats.damageDealt
           });
         }
+        console.error("PUBG match data: ok");
       } catch (err) {
         console.error("PUBG match data:", matchId, err.message);
       }
