@@ -1,42 +1,48 @@
 {
-  "timestamp": "2026-02-14T09:15:35.511Z",
-  "weather": null,
+  "timestamp": "2026-02-14T09:37:16.467Z",
+  "weatherTempCelsius": 5,
   "githubLastModified": "February 14, 2026",
   "steamStatus": "online",
   "pubg": {
     "name": "joeyws2",
+    "clan": null,
     "lastMatches": [
       {
         "matchStart": "13.02. 21:58",
-        "matchType": "squad fpp",
+        "type": "squad",
+        "perspective": "fpp",
         "placement": 13,
         "kills": 0,
         "damage": 0
       },
       {
         "matchStart": "13.02. 21:46",
-        "matchType": "squad fpp",
+        "type": "squad",
+        "perspective": "fpp",
         "placement": 20,
         "kills": 0,
         "damage": 110
       },
       {
         "matchStart": "13.02. 21:25",
-        "matchType": "squad",
+        "type": "squad",
+        "perspective": "",
         "placement": 15,
         "kills": 4,
         "damage": 444
       },
       {
         "matchStart": "13.02. 20:57",
-        "matchType": "squad",
+        "type": "squad",
+        "perspective": "",
         "placement": 1,
         "kills": 11,
         "damage": 1070
       },
       {
         "matchStart": "13.02. 20:32",
-        "matchType": "squad",
+        "type": "squad",
+        "perspective": "",
         "placement": 12,
         "kills": 5,
         "damage": 333
