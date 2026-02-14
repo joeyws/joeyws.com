@@ -15,7 +15,7 @@ async function updateData() {
     const weatherRes = await axios.get(
       "https://api.open-meteo.com/v1/forecast?latitude=48.7823&longitude=9.177&current_weather=true"
     );
-    weather = Math.round(weatherRes.data.current_weather.temperature);
+    weatherTemperature = Math.round(weatherRes.data.current_weather.temperature);
     console.log("Weather: ok");
   } catch (err) {
     console.error("Weather:", err.message);
@@ -117,7 +117,7 @@ async function updateData() {
 
   // combine data
   const combinedData = {
-    weather: weather,
+    weatherTemperature: weatherTemperature,
     githubLastModified: githubLastModified,
     steamStatus: steamStatus,
     pubg: pubgData
