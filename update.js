@@ -164,14 +164,14 @@ async function updateData() {
           // replay link
           const playerIndex = participants.findIndex(p => p.attributes.stats.name === player.attributes.name);
           const replayIndex = playerIndex + 1;
-          const shard = "steam";
-          const gameMode = rawMatchType.replace("-", ".");
-          const region = "eu"; // ggf. anpassen
+          const gameMode = rawMatchType;
+          const region = "eu";
           const dateObj = new Date(matchStartIso);
           const year = dateObj.getFullYear();
           const month = (dateObj.getMonth() + 1).toString().padStart(2, "0");
           const day = dateObj.getDate().toString().padStart(2, "0");
-          const url = `https://bridge.pubg.com/de/2d-replay/match.bro.official.${shard}.${gameMode}.${region}.${year}.${month}.${day}.${matchId}?index=${replayIndex}`;
+          const hour = dateObj.getHours().toString().padStart(2, "0");
+          const url = `https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.${gameMode}.${region}.${year}.${month}.${day}.${hour}.${matchId}?index=${replayIndex}`;
 
           pubgData.lastMatches.push({
             matchStart,
