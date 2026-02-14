@@ -26,7 +26,13 @@ async function updateData() {
     const githubRes = await axios.get(
       "https://api.github.com/repos/joeyws/joeyws.com/commits"
     );
-    githubLastModified = githubRes.data[0].commit.committer.date;
+    const rawDate = githubRes.data[0].commit.author.date;
+    const date = new Date(rawDate);
+    githubLastModified = date.toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "long",
+      day: "numeric"
+    });
     console.log("GitHub: ok");
   } catch (err) {
     console.error("GitHub:", err.message);
@@ -118,7 +124,7 @@ async function updateData() {
   // combine data
   const combinedData = {
     weatherTemperature: weatherTemperature,
-    githubLastModified: githubLastModified,
+    githubLastCommit: githubLastModified,
     steamStatus: steamStatus,
     pubg: pubgData
   };
