@@ -177,10 +177,10 @@ async function updateData() {
           const survivalTime = `${minutes}:${seconds.toString().padStart(2, "0")}`;
 
           // replay link
-          const playerIndex = participants.findIndex(
-            (p) => p.attributes.stats.name === player.attributes.name
+          const participantIndexInIncluded = matchRes.data.included.findIndex(
+            (p) => p.type === "participant" && p.attributes.stats.name === player.attributes.name
           );
-          const replayIndex = playerIndex + 1;
+          const replayIndex = participantIndexInIncluded + 1;
           const gameMode = rawMatchType;
           const region = "eu";
           const dateObj = new Date(matchStartIso);
