@@ -15,7 +15,7 @@ async function updateData() {
     const weatherRes = await axios.get(
       "https://api.open-meteo.com/v1/forecast?latitude=48.7823&longitude=9.177&current_weather=true"
     );
-    weatherTemperature = Math.round(weatherRes.data.current_weather.temperature);
+    weatherTempCelsius = Math.round(weatherRes.data.current_weather.temperature);
     console.log("Weather: ok");
   } catch (err) {
     console.error("Weather:", err.message);
@@ -79,7 +79,7 @@ async function updateData() {
         );
         clanName = clanRes.data.data.attributes.name;
       } catch (err) {
-        console.error("PUBG clan fetch error:", err.message);
+        console.error("PUBG clan:", err.message);
       }
     }
     pubgData = {
@@ -113,7 +113,7 @@ async function updateData() {
           });
         }
       } catch (err) {
-        console.error("PUBG match data", matchId, err.message);
+        console.error("PUBG matches:", matchId, err.message);
       }
     }
     console.log("PUBG: ok");
@@ -123,7 +123,7 @@ async function updateData() {
 
   // combine data
   const combinedData = {
-    weatherTemperature: weatherTemperature,
+    weatherTempCelsius: weatherTempCelsius,
     githubLastCommit: githubLastModified,
     steamStatus: steamStatus,
     pubg: pubgData
