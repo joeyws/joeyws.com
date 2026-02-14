@@ -6,7 +6,7 @@ const PUBG_API_KEY = process.env.PUBG_API_KEY;
 
 async function updateData() {
   let pubgData = {};
-  let weatherTemperature = null;
+  let weather = null;
   let githubLastModified = null;
   let steamStatus = "unknown";
 
@@ -15,7 +15,7 @@ async function updateData() {
     const weatherRes = await axios.get(
       "https://api.open-meteo.com/v1/forecast?latitude=48.7823&longitude=9.177&current_weather=true"
     );
-    weatherTemperature = Math.round(weatherRes.data.current_weather.temperature);
+    weather = Math.round(weatherRes.data.current_weather.temperature);
     console.log("Weather: ok");
   } catch (err) {
     console.error("Weather:", err.message);
@@ -58,11 +58,30 @@ async function updateData() {
       }
     );
     const player = pubgRes.data.data[0];
+    // clan name
+    let clanName = null;
+    if (player.attributes.clanId) {
+      try {
+        const clanRes = await axios.get(
+          `https://api.pubg.com/shards/steam/clans/${player.attributes.clanId}`,
+          {
+            headers: {
+              Authorization: `Bearer ${PUBG_API_KEY}`,
+              Accept: "application/vnd.api+json"
+            }
+          }
+        );
+        clanName = clanRes.data.data.attributes.name;
+      } catch (err) {
+        console.error("PUBG clan fetch error:", err.message);
+      }
+    }
     pubgData = {
       name: player.attributes.name,
-      shard: player.attributes.shardId,
+      clan: clanName,
       lastMatches: []
     };
+    //  last 5 matches
     const lastMatchIds = player.relationships.matches.data.slice(0, 5).map(m => m.id);
     for (const matchId of lastMatchIds) {
       try {
@@ -98,7 +117,7 @@ async function updateData() {
 
   // combine data
   const combinedData = {
-    weather: weatherTemperature,
+    weather: weather,
     githubLastModified: githubLastModified,
     steamStatus: steamStatus,
     pubg: pubgData
