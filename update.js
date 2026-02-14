@@ -7,7 +7,7 @@ const PUBG_API_KEY = process.env.PUBG_API_KEY;
 async function updateData() {
   let weatherTempCelsius = null;
   let githubLastCommit = null;
-  let steamStatus = "unknown";
+  let steamStatus = null;
   let pubgData = {};
 
   // Timestamp
