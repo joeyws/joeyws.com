@@ -80,9 +80,9 @@ async function updateData() {
           }
         );
         clanName = clanRes.data?.data?.attributes?.name || null;
-        console.error("PUBG clan:", clanName);
+        console.error("PUBG clan name:", clanName);
       } catch (err) {
-        console.error("PUBG clan:", err.message);
+        console.error("PUBG clan name:", err.message);
         clanName = null;
       }
     }
@@ -104,7 +104,7 @@ async function updateData() {
         return `${day}.${month}. ${hours}:${minutes}`;
       }
     }
-    // prepare data
+    // prepare data structure
     pubgData = {
       name: player.attributes.name,
       clan: clanName,
@@ -123,17 +123,20 @@ async function updateData() {
             }
           }
         );
-        // match stats
+        // match player stats
         const participant = matchRes.data.included.find(
           p => p.type === "participant" && p.attributes.stats.name === player.attributes.name
         );
         if (participant) {
           const matchStartIso = matchRes.data.data.attributes.createdAt;
           const matchStart = formatMatchStart(matchStartIso);
-          let matchType = matchRes.data.data.attributes.gameMode.replace(/-/g, " ");
+          let rawMatchType = matchRes.data.data.attributes.gameMode;
+          let [type, perspective] = rawMatchType.split("-");
+          if (!perspective) perspective = "";
           pubgData.lastMatches.push({
             matchStart: matchStart,
-            matchType: matchType,
+            type: type,
+            perspective: perspective,
             placement: participant.attributes.stats.winPlace,
             kills: participant.attributes.stats.kills,
             damage: Math.round(participant.attributes.stats.damageDealt)
@@ -144,9 +147,9 @@ async function updateData() {
         console.error("PUBG match data:", matchId, err.message);
       }
     }
-    console.log("PUBG player data: ok");
+    console.log("PUBG general: ok");
   } catch (err) {
-    console.error("PUBG player data:", err.message);
+    console.error("PUBG general:", err.message);
   }
 
   // combine data
@@ -157,7 +160,6 @@ async function updateData() {
     steamStatus: steamStatus,
     pubg: pubgData
   };
-
   fs.writeFileSync("data.json", JSON.stringify(combinedData, null, 2));
   console.log("data.json updated");
 }
