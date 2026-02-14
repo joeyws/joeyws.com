@@ -76,12 +76,10 @@ async function updateData() {
         }
       }
     );
-
     const player = pubgRes.data.data[0];
-
-    // Clan name
     const clanId = player.attributes.clanId || null;
     let clanName = null;
+
     if (clanId && clanId !== "null") {
       try {
         const clanRes = await axios.get(
@@ -100,7 +98,6 @@ async function updateData() {
       }
     }
 
-    // Format match start time
     function formatMatchStart(matchStartIso) {
       const matchDate = new Date(matchStartIso);
       const now = new Date();
@@ -110,24 +107,20 @@ async function updateData() {
         matchDate.getDate() === now.getDate();
       const hours = matchDate.getHours().toString().padStart(2, "0");
       const minutes = matchDate.getMinutes().toString().padStart(2, "0");
-      if (isToday) {
-        return `${hours}:${minutes}`;
-      } else {
-        const day = matchDate.getDate().toString().padStart(2, "0");
-        const month = (matchDate.getMonth() + 1).toString().padStart(2, "0");
-        return `${day}.${month}. ${hours}:${minutes}`;
-      }
+      if (isToday) return `${hours}:${minutes}`;
+      const day = matchDate.getDate().toString().padStart(2, "0");
+      const month = (matchDate.getMonth() + 1).toString().padStart(2, "0");
+      return `${day}.${month}. ${hours}:${minutes}`;
     }
 
-    // Prepare data structure
     pubgData = {
       name: player.attributes.name,
       clan: clanName,
       lastMatches: []
     };
 
-    // Last 5 matches
     const lastMatchIds = player.relationships.matches.data.slice(0, 5).map(m => m.id);
+
     for (const matchId of lastMatchIds) {
       try {
         const matchRes = await axios.get(
@@ -140,84 +133,69 @@ async function updateData() {
           }
         );
 
-        // Player participant
-        const participant = matchRes.data.included.find(
-          p => p.type === "participant" && p.attributes.stats.name === player.attributes.name
-        );
+        const participants = matchRes.data.included.filter(p => p.type === "participant");
+        const participant = participants.find(p => p.attributes.stats.name === player.attributes.name);
 
         if (participant) {
           const matchStartIso = matchRes.data.data.attributes.createdAt;
           const matchStart = formatMatchStart(matchStartIso);
 
-          // Match type
           let rawMatchType = matchRes.data.data.attributes.gameMode;
           let [teamSize, perspective] = rawMatchType.split("-");
           if (!perspective || perspective === "") perspective = "TPP";
           teamSize = teamSize.charAt(0).toUpperCase() + teamSize.slice(1).toLowerCase();
           perspective = perspective.toUpperCase();
 
-          // Survival time
-          const stats = participant.attributes.stats;
-          const survivalSeconds = stats.timeSurvived || 0;
-          const survivalMinutes = Math.floor(survivalSeconds / 60)
-            .toString()
-            .padStart(2, "0");
-          const survivalRemainSeconds = Math.floor(survivalSeconds % 60)
-            .toString()
-            .padStart(2, "0");
-          const survivalTime = `${survivalMinutes}:${survivalRemainSeconds}`;
+          // teammates
+          const teamMates = participants
+            .filter(p => p.attributes.stats.teamId === participant.attributes.stats.teamId && p.attributes.stats.name !== player.attributes.name)
+            .map(p => p.attributes.stats.name);
 
-          // Distance in km
-          const totalDistanceMeters =
-            (stats.walkDistance || 0) +
-            (stats.rideDistance || 0) +
-            (stats.swimDistance || 0);
-          const distanceKm = parseFloat((totalDistanceMeters / 1000).toFixed(2));
+          // distance in km
+          const distanceKm = participant.attributes.stats.walkDistance + participant.attributes.stats.rideDistance + participant.attributes.stats.swimDistance;
+          const distance = Math.round(distanceKm / 100) / 10;
 
-          // TeamMates
-          const roster = matchRes.data.included.find(
-            r =>
-              r.type === "roster" &&
-              r.relationships.participants.data.some(p => p.id === participant.id)
-          );
+          // survival time in minutes:seconds
+          const survivalSeconds = participant.attributes.stats.timeSurvived;
+          const minutes = Math.floor(survivalSeconds / 60);
+          const seconds = Math.floor(survivalSeconds % 60);
+          const survivalTime = `${minutes}:${seconds.toString().padStart(2, "0")}`;
 
-          let teamMates = [];
-          if (roster) {
-            const teammateIds = roster.relationships.participants.data.map(p => p.id);
-            teamMates = matchRes.data.included
-              .filter(
-                p =>
-                  p.type === "participant" &&
-                  teammateIds.includes(p.id) &&
-                  p.id !== participant.id
-              )
-              .map(p => p.attributes.stats.name);
-          }
+          // replay link
+          const playerIndex = participants.findIndex(p => p.attributes.stats.name === player.attributes.name);
+          const replayIndex = playerIndex + 1;
+          const shard = "steam";
+          const gameMode = rawMatchType.replace("-", ".");
+          const region = "eu"; // ggf. anpassen
+          const dateObj = new Date(matchStartIso);
+          const year = dateObj.getFullYear();
+          const month = (dateObj.getMonth() + 1).toString().padStart(2, "0");
+          const day = dateObj.getDate().toString().padStart(2, "0");
+          const url = `https://bridge.pubg.com/de/2d-replay/match.bro.official.${shard}.${gameMode}.${region}.${year}.${month}.${day}.${matchId}?index=${replayIndex}`;
 
-          // Push match data
           pubgData.lastMatches.push({
-            matchStart: matchStart,
-            teamSize: teamSize,
-            teamMates: teamMates,
-            perspective: perspective,
-            placement: stats.winPlace,
-            survivalTime: survivalTime,
-            distance: distanceKm,
-            kills: stats.kills,
-            assists: stats.assists,
-            damage: Math.round(stats.damageDealt)
+            matchStart,
+            teamSize,
+            teamMates,
+            perspective,
+            placement: participant.attributes.stats.winPlace,
+            survivalTime,
+            distance,
+            kills: participant.attributes.stats.kills,
+            assists: participant.attributes.stats.assists,
+            damage: Math.round(participant.attributes.stats.damageDealt),
+            url
           });
         }
 
-        console.log("PUBG match data ok");
+        console.log("PUBG match data: ok");
       } catch (err) {
-        console.error("PUBG match data error:", matchId, err.message);
+        console.error("PUBG match data:", matchId, err.message);
       }
     }
-
-    console.log("PUBG general ok");
+    console.log("PUBG general: ok");
   } catch (err) {
-    console.error("PUBG general error:", err.message);
+    console.error("PUBG general:", err.message);
   }
 
   // combine data
