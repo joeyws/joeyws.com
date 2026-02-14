@@ -43,7 +43,7 @@ async function updateData() {
     const githubRes = await axios.get(
       "https://api.github.com/repos/joeyws/joeyws.com/commits"
     );
-    lastCommitDate = githubRes.data[0].commit.committer.date;
+    githubLastModified = githubRes.data[0].commit.committer.date;
     console.log("GitHub last commit fetched");
   } catch (err) {
     console.error("Error fetching GitHub commits:", err.message);
