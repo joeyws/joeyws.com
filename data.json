@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-02-14T08:58:16.147Z",
+  "timestamp": "2026-02-14T09:15:35.511Z",
   "weather": null,
   "githubLastModified": "February 14, 2026",
   "steamStatus": "online",
@@ -7,39 +7,39 @@
     "name": "joeyws2",
     "lastMatches": [
       {
-        "matchEnd": "2026-02-13T22:23:27.000Z",
-        "matchType": "squad-fpp",
+        "matchStart": "13.02. 21:58",
+        "matchType": "squad fpp",
         "placement": 13,
         "kills": 0,
         "damage": 0
       },
       {
-        "matchEnd": "2026-02-13T22:10:45.000Z",
-        "matchType": "squad-fpp",
+        "matchStart": "13.02. 21:46",
+        "matchType": "squad fpp",
         "placement": 20,
         "kills": 0,
-        "damage": 110.171425
+        "damage": 110
       },
       {
-        "matchEnd": "2026-02-13T21:50:04.000Z",
+        "matchStart": "13.02. 21:25",
         "matchType": "squad",
         "placement": 15,
         "kills": 4,
-        "damage": 444.334
+        "damage": 444
       },
       {
-        "matchEnd": "2026-02-13T21:19:27.000Z",
+        "matchStart": "13.02. 20:57",
         "matchType": "squad",
         "placement": 1,
         "kills": 11,
-        "damage": 1069.9999
+        "damage": 1070
       },
       {
-        "matchEnd": "2026-02-13T20:56:24.000Z",
+        "matchStart": "13.02. 20:32",
         "matchType": "squad",
         "placement": 12,
         "kills": 5,
-        "damage": 332.6801
+        "damage": 333
       }
     ]
   }
