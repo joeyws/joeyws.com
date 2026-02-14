@@ -78,26 +78,6 @@ async function updateData() {
     );
 
     const player = pubgRes.data.data[0];
-    const clanId = player.attributes.clanId || null;
-    let clanName = null;
-
-    if (clanId !== null && clanId !== "null") {
-      try {
-        const clanRes = await axios.get(
-          `https://api.pubg.com/shards/steam/clans/${clanId}`,
-          {
-            headers: {
-              Authorization: `Bearer ${PUBG_API_KEY}`,
-              Accept: "application/vnd.api+json"
-            }
-          }
-        );
-        clanName = clanRes.data.data.attributes.name || null;
-        console.log("PUBG clan name: ok (" + clanName + ")");
-      } catch (err) {
-        console.error("PUBG clan fetch error:", err.message);
-      }
-    }
 
     function formatMatchStart(matchStartIso) {
       const matchDate = new Date(matchStartIso);
@@ -116,7 +96,6 @@ async function updateData() {
 
     pubgData = {
       name: player.attributes.name,
-      clan: clanName,
       lastMatches: []
     };
 
