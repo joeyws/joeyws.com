@@ -119,7 +119,7 @@ async function updateData() {
       lastMatches: []
     };
 
-    const lastMatchIds = player.relationships.matches.data.slice(0, 5).map(m => m.id);
+    const lastMatchIds = player.relationships.matches.data.slice(0, 10).map(m => m.id);
 
     for (const matchId of lastMatchIds) {
       try {
