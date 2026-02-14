@@ -47,7 +47,7 @@ async function updateData() {
     const parser = new xml2js.Parser();
     const parsedSteam = await parser.parseStringPromise(steamXmlRes.data.contents);
     steamStatus = parsedSteam.profile.onlineState[0];
-    console.log("Steam Status fetched:", steamStatus);
+    console.log("Steam: ok");
   } catch (err) {
     console.error("Steam:", err.message);
   }
