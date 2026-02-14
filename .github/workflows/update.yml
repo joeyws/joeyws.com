@@ -2,30 +2,54 @@ name: Update data.json
 
 on:
   schedule:
-    - cron: "*/30 * * * *"
-  workflow_dispatch:
+    - cron: "*/5 * * * *"  # alle 30 Minuten, UTC
+  workflow_dispatch:          # erlaubt manuelles Triggern
 
 jobs:
   update:
     runs-on: ubuntu-latest
 
     steps:
+      # Repository auschecken
       - uses: actions/checkout@v3
 
+      # Node.js Setup
       - uses: actions/setup-node@v3
         with:
           node-version: 18
 
+      # Dependencies installieren
       - run: npm install
-      - run: |
-          echo "Run started at UTC: $(date -u)"
-          node update.js
-        env:
-          PUBG_API_KEY: ${{ secrets.PUBG_API_KEY }}
 
+      # Version von update.js anzeigen (erste 5 Zeilen)
+      - run: |
+          echo "=== update.js Version Check ==="
+          head -n 5 update.js
+
+      # UTC-Zeit loggen und update.js ausführen
+      - run: |
+          echo "=== Run started at UTC ==="
+          date -u
+          node update.js
+      env:
+        PUBG_API_KEY: ${{ secrets.PUBG_API_KEY }}
+
+      # data.json Inhalt nach Update anzeigen
+      - run: |
+          echo "=== data.json nach Update ==="
+          cat data.json
+
+      # Commit & Push nur, wenn Änderungen vorhanden
       - run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
+          echo "=== Git Status vor add ==="
+          git status
           git add data.json
-          git diff --cached --quiet || git commit -m "Update data.json [ci skip]"
-          git push
+          if git diff --cached --quiet; then
+            echo "Keine Änderungen in data.json – Commit übersprungen"
+          else
+            echo "Änderungen vorhanden – Commit wird erstellt"
+            git commit -m "Update data.json [ci skip]"
+            git push
+          fi
