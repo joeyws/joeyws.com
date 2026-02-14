@@ -21,7 +21,7 @@ async function updateData() {
     return `${day}.${month}.${year} ${hours}:${minutes}`;
   }
 
-  // weather: temp in celsius
+  // weather: temp in deg celsius
   try {
     const weatherRes = await axios.get(
       "https://api.open-meteo.com/v1/forecast?latitude=48.7823&longitude=9.177&current_weather=true"
