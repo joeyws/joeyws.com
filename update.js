@@ -80,8 +80,9 @@ async function updateData() {
           }
         );
         clanName = clanRes.data.data.attributes.name;
+        console.error("PUBG clan:", clanName);
       } catch (err) {
-        console.error("PUBG clan fetch error:", err.message);
+        console.error("PUBG clan:", err.message);
       }
     }
     // match start time
