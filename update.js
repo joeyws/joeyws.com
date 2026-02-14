@@ -10,6 +10,17 @@ async function updateData() {
   let githubLastModified = null;
   let steamStatus = "unknown";
 
+  // timestamp
+  function getTimestamp() {
+    const now = new Date();
+    const day = now.getDate().toString().padStart(2, "0");
+    const month = (now.getMonth() + 1).toString().padStart(2, "0");
+    const year = now.getFullYear();
+    const hours = now.getHours().toString().padStart(2, "0");
+    const minutes = now.getMinutes().toString().padStart(2, "0");
+    return `${day}.${month}.${year} ${hours}:${minutes}`;
+  }
+
   // weather: temp in celsius
   try {
     const weatherRes = await axios.get(
@@ -28,7 +39,7 @@ async function updateData() {
     );
     const rawDate = githubRes.data[0].commit.author.date;
     const date = new Date(rawDate);
-    githubLastModified = date.toLocaleDateString("en-US", {
+    githubLastCommit = date.toLocaleDateString("en-US", {
       year: "numeric",
       month: "long",
       day: "numeric"
@@ -66,26 +77,7 @@ async function updateData() {
       }
     );
     const player = pubgRes.data.data[0];
-    // clan name
-    let clanName = null;
-    if (player.attributes.clanId) {
-      try {
-        const clanRes = await axios.get(
-          `https://api.pubg.com/shards/steam/clans/${player.attributes.clanId}`,
-          {
-            headers: {
-              Authorization: `Bearer ${PUBG_API_KEY}`,
-              Accept: "application/vnd.api+json"
-            }
-          }
-        );
-        clanName = clanRes.data?.data?.attributes?.name || null;
-        console.error("PUBG clan name:", clanName);
-      } catch (err) {
-        console.error("PUBG clan name:", err.message);
-        clanName = null;
-      }
-    }
+    const clanId = player.attributes.clanId || null;
     // match start time
     function formatMatchStart(matchStartIso) {
       const matchDate = new Date(matchStartIso);
@@ -154,9 +146,9 @@ async function updateData() {
 
   // combine data
   const combinedData = {
-    timestamp: new Date().toISOString(),
+    timestamp: getTimestamp(),
     weatherTempCelsius: weatherTempCelsius,
-    githubLastModified: githubLastModified,
+    githubLastCommit: githubLastCommit,
     steamStatus: steamStatus,
     pubg: pubgData
   };
