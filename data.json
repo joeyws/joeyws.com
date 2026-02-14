@@ -1,5 +1,5 @@
 {
-  "timestamp": "14.02.2026 10:56",
+  "timestamp": "14.02.2026 11:43",
   "weatherTempCelsius": 5,
   "githubLastCommit": "February 14, 2026",
   "steamStatus": "online",
@@ -10,41 +10,73 @@
       {
         "matchStart": "13.02. 21:58",
         "teamSize": "Squad",
+        "teamMates": [
+          "SuuuS_",
+          "lastbek12",
+          "FATURALI"
+        ],
         "perspective": "FPP",
         "placement": 13,
+        "survivalTime": "16:23",
+        "distance": 7.27,
         "kills": 0,
+        "assists": 0,
         "damage": 0
       },
       {
         "matchStart": "13.02. 21:46",
         "teamSize": "Squad",
+        "teamMates": [
+          "anoboloikyusuf",
+          "SuuuS_",
+          "rezisthebest"
+        ],
         "perspective": "FPP",
         "placement": 20,
+        "survivalTime": "09:28",
+        "distance": 1.36,
         "kills": 0,
+        "assists": 1,
         "damage": 110
       },
       {
         "matchStart": "13.02. 21:25",
         "teamSize": "Squad",
+        "teamMates": [],
         "perspective": "TPP",
         "placement": 15,
+        "survivalTime": "08:52",
+        "distance": 0.81,
         "kills": 4,
+        "assists": 0,
         "damage": 444
       },
       {
         "matchStart": "13.02. 20:57",
         "teamSize": "Squad",
+        "teamMates": [
+          "El_Molcho",
+          "ger_just",
+          "Jeffersen26"
+        ],
         "perspective": "TPP",
         "placement": 1,
+        "survivalTime": "19:48",
+        "distance": 5.66,
         "kills": 11,
+        "assists": 0,
         "damage": 1070
       },
       {
         "matchStart": "13.02. 20:32",
         "teamSize": "Squad",
+        "teamMates": [],
         "perspective": "TPP",
         "placement": 12,
+        "survivalTime": "14:27",
+        "distance": 0.34,
         "kills": 5,
+        "assists": 0,
         "damage": 333
       }
     ]
