@@ -104,7 +104,7 @@ async function updateData() {
         return `${day}.${month}. ${hours}:${minutes}`;
       }
     }
-    // Grunddaten vorbereiten
+    // prepare data
     pubgData = {
       name: player.attributes.name,
       clan: clanName,
@@ -144,15 +144,15 @@ async function updateData() {
         console.error("PUBG match data:", matchId, err.message);
       }
     }
-    console.log("PUBG player: ok");
+    console.log("PUBG player data: ok");
   } catch (err) {
-    console.error("PUBG player:", err.message);
+    console.error("PUBG player data:", err.message);
   }
 
   // combine data
   const combinedData = {
     timestamp: new Date().toISOString(),
-    weather: weather,
+    weatherTempCelsius: weatherTempCelsius,
     githubLastModified: githubLastModified,
     steamStatus: steamStatus,
     pubg: pubgData
