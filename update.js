@@ -76,11 +76,12 @@ async function updateData() {
         }
       }
     );
+
     const player = pubgRes.data.data[0];
     const clanId = player.attributes.clanId || null;
     let clanName = null;
 
-    if (clanId && clanId !== "null") {
+    if (clanId !== null && clanId !== "null") {
       try {
         const clanRes = await axios.get(
           `https://api.pubg.com/shards/steam/clans/${clanId}`,
@@ -119,7 +120,9 @@ async function updateData() {
       lastMatches: []
     };
 
-    const lastMatchIds = player.relationships.matches.data.slice(0, 10).map(m => m.id);
+    const lastMatchIds = player.relationships.matches.data
+      .slice(0, 10)
+      .map((m) => m.id);
 
     for (const matchId of lastMatchIds) {
       try {
@@ -133,8 +136,12 @@ async function updateData() {
           }
         );
 
-        const participants = matchRes.data.included.filter(p => p.type === "participant");
-        const participant = participants.find(p => p.attributes.stats.name === player.attributes.name);
+        const participants = matchRes.data.included.filter(
+          (p) => p.type === "participant"
+        );
+        const participant = participants.find(
+          (p) => p.attributes.stats.name === player.attributes.name
+        );
 
         if (participant) {
           const matchStartIso = matchRes.data.data.attributes.createdAt;
@@ -143,16 +150,24 @@ async function updateData() {
           let rawMatchType = matchRes.data.data.attributes.gameMode;
           let [teamSize, perspective] = rawMatchType.split("-");
           if (!perspective || perspective === "") perspective = "TPP";
-          teamSize = teamSize.charAt(0).toUpperCase() + teamSize.slice(1).toLowerCase();
+          teamSize =
+            teamSize.charAt(0).toUpperCase() + teamSize.slice(1).toLowerCase();
           perspective = perspective.toUpperCase();
 
           // teammates
           const teamMates = participants
-            .filter(p => p.attributes.stats.teamId === participant.attributes.stats.teamId && p.attributes.stats.name !== player.attributes.name)
-            .map(p => p.attributes.stats.name);
+            .filter(
+              (p) =>
+                p.attributes.stats.teamId === participant.attributes.stats.teamId &&
+                p.attributes.stats.name !== player.attributes.name
+            )
+            .map((p) => p.attributes.stats.name);
 
           // distance in km
-          const distanceKm = participant.attributes.stats.walkDistance + participant.attributes.stats.rideDistance + participant.attributes.stats.swimDistance;
+          const distanceKm =
+            participant.attributes.stats.walkDistance +
+            participant.attributes.stats.rideDistance +
+            participant.attributes.stats.swimDistance;
           const distance = Math.round(distanceKm / 100) / 10;
 
           // survival time in minutes:seconds
@@ -162,7 +177,9 @@ async function updateData() {
           const survivalTime = `${minutes}:${seconds.toString().padStart(2, "0")}`;
 
           // replay link
-          const playerIndex = participants.findIndex(p => p.attributes.stats.name === player.attributes.name);
+          const playerIndex = participants.findIndex(
+            (p) => p.attributes.stats.name === player.attributes.name
+          );
           const replayIndex = playerIndex + 1;
           const gameMode = rawMatchType;
           const region = "eu";
@@ -197,6 +214,7 @@ async function updateData() {
   } catch (err) {
     console.error("PUBG general:", err.message);
   }
+
 
   // combine data
   const combinedData = {
