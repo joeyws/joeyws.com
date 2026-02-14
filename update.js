@@ -78,6 +78,7 @@ async function updateData() {
           }
         );
         clanName = clanRes.data.data.attributes.name;
+        console.log("PUBG clan:", player.attributes.clanId);
       } catch (err) {
         console.error("PUBG clan:", err.message);
       }
