@@ -156,10 +156,11 @@ async function updateData() {
           const survivalTime = `${minutes}:${seconds.toString().padStart(2, "0")}`;
 
           // replay link
-          const participantIndexInIncluded = matchRes.data.included.findIndex(
+          /* const participantIndexInIncluded = matchRes.data.included.findIndex(
             (p) => p.type === "participant" && p.attributes.stats.name === player.attributes.name
           );
           const replayIndex = participantIndexInIncluded + 1;
+          const mode = ; // casual:airoyale normal:official
           const gameMode = rawMatchType;
           const region = "eu";
           const dateObj = new Date(matchStartIso);
@@ -167,7 +168,7 @@ async function updateData() {
           const month = (dateObj.getMonth() + 1).toString().padStart(2, "0");
           const day = dateObj.getDate().toString().padStart(2, "0");
           const hour = dateObj.getHours().toString().padStart(2, "0");
-          const url = `https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.${gameMode}.${region}.${year}.${month}.${day}.${hour}.${matchId}?index=${replayIndex}`;
+          const url = `https://bridge.pubg.com/de/2d-replay/match.bro.${mode}.pc-2018-40.steam.${gameMode}.${region}.${year}.${month}.${day}.${hour}.${matchId}?index=${replayIndex}`; */
 
           pubgData.lastMatches.push({
             matchStart,
@@ -179,8 +180,7 @@ async function updateData() {
             distance,
             kills: participant.attributes.stats.kills,
             assists: participant.attributes.stats.assists,
-            damage: Math.round(participant.attributes.stats.damageDealt),
-            url
+            damage: Math.round(participant.attributes.stats.damageDealt)
           });
         }
 
