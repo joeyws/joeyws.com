@@ -46,7 +46,7 @@
     .marquee-track span{padding-right:2.2rem;}
     @keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-100%);}}
     /* VIDEO */
-    .video{overflow:hidden;position:relative;width:800px;max-width:100%;aspect-ratio: 2.2 / 1;font-size:0;line-height:0;}
+    .video{overflow:hidden;position:relative;width:800px;max-width:100%;aspect-ratio: 2.2 / 1;font-size:0;line-height:0;user-select:none;}
     .video img,.video video,.video .controls .progress{width:100%;}
     .video img{transition:all .75s;}
     .video:hover img{transform:scale(1.05);}
@@ -74,17 +74,20 @@
 
 
 
-
 <header>
     <div class="marquee"><div class="marquee-track"><span lang="zh-Hant">歡迎</span><span lang="es">Bienvenidos</span><span lang="en">Welcome</span><span lang="hi">स्वागत हे</span><span lang="ar">اهلا وسهلا</span><span lang="bn">স্বাগত</span><span lang="pt">Bem-vindo</span><span lang="ru">добро пожаловать</span><span lang="ur">خوش آمدید</span><span lang="ja">ようこそ</span><span lang="id">Selamat datang</span><span lang="de">Willkommen</span><span lang="tr">Hoşgeldiniz</span><span lang="ta">வரவேற்பு</span><span lang="fr">Bienvenue</span><span lang="ko">어서 오십시오</span><span lang="vi">Hoan nghênh</span><span lang="jv">Sugeng Rawuh</span><span lang="sw">Karibu</span><span lang="sa">Svāgatam</span><span lang="it">Benvenuto</span><span lang="pa">ਸਵਾਗਤ ਹੈ</span></div></div>
     <div id="header">
         <h1 class="loading">Joey Schweickhardt</h1>
-        <nav><a href="#/works">Works</a><a href="#/places">Places</a><a href="#/contact">Contact</a></nav>
+        <nav><a href="#/index">Index</a><a href="#/works">Works</a><a href="#/places">Places</a><a href="#/contact">Contact</a></nav>
         <span>Stuttgart<span id="weather"></span><span id="time"></span></span>
     </div>
 </header>
 <hr>
+
 <main>
+<div class="content" id="index">
+    <img src="img/joeyws.png" alt="joeyws" style="position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);width:1200px;max-width:70%;display:block;z-index:-1;pointer-events:none;user-select:none;">
+</div>
 <div class="content" id="works">
     <div class="video">
         <img fetchpriority="high" src="img/other/landderechsen.jpg" alt="Land der Echsen">
@@ -181,6 +184,7 @@
         Personal information may be processed by external providers, including:<br>
         <a href="https://open-meteo.com/" rel="nofollow">Open‑Meteo</a> for weather data, <a href="https://allorigins.win/" rel="nofollow">AllOrigins</a> for online status, <a href="https://github.com/" rel="nofollow">GitHub</a> for hosting
     </p>
+    <hr>
 </div>
 </main>
 
