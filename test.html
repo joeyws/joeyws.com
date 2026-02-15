@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <title>GLTF Loader Test</title>
 <style>
-    body { margin: 0; overflow: hidden; }
-    canvas { position: fixed; inset: 0; z-index: -2; display: block; }
+    body { margin:0; overflow:hidden; }
+    canvas { display:block; position:fixed; inset:0; }
 </style>
 </head>
 <body>
@@ -13,59 +13,41 @@
 import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.162.0/build/three.module.js';
 import { GLTFLoader } from 'https://cdn.jsdelivr.net/npm/three@0.162.0/examples/jsm/loaders/GLTFLoader.js';
 
-// Szene, Kamera, Renderer
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
-const renderer = new THREE.WebGLRenderer({ antialias: true });
+camera.position.set(0,10,50);
+
+const renderer = new THREE.WebGLRenderer({antialias:true});
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
 // Licht
-const ambientLight = new THREE.AmbientLight(0xffffff, 1);
-scene.add(ambientLight);
+const ambient = new THREE.AmbientLight(0xffffff, 1);
+scene.add(ambient);
+const directional = new THREE.DirectionalLight(0xffffff, 1.2);
+directional.position.set(10,10,10);
+scene.add(directional);
 
-const directionalLight = new THREE.DirectionalLight(0xffffff, 0.5);
-directionalLight.position.set(10, 10, 10);
-scene.add(directionalLight);
-
-// GLTF Loader
+// GLTF Loader mit Online-Modell
 const loader = new GLTFLoader();
-loader.load('https://cdn.jsdelivr.net/gh/KhronosGroup/glTF-Sample-Models@master/2.0/DamagedHelmet/glTF/DamagedHelmet.gltf', function(gltf){
-    const model = gltf.scene;
-    model.scale.set(2, 2, 2); // Größe anpassen
-    model.position.set(0, 0, 0); // Position
-    scene.add(model);
-}, undefined, function(error){
-    console.error('Fehler beim Laden des Modells:', error);
-});
+loader.load(
+  'https://cdn.jsdelivr.net/gh/KhronosGroup/glTF-Sample-Models@master/2.0/DamagedHelmet/glTF/DamagedHelmet.gltf',
+  gltf => { scene.add(gltf.scene); },
+  undefined,
+  e => console.error(e)
+);
 
-// Optional: TorusKnoten als Platzhalter
-const geometry = new THREE.TorusKnotGeometry(20, 1, 100, 8);
-const material = new THREE.MeshBasicMaterial({ color: 0x222222, wireframe: true });
-const knot = new THREE.Mesh(geometry, material);
-scene.add(knot);
-
-// Kamera-Rotation
-let angle = 0;
-const radius = 50;
-const height = 10;
-
-function animate() {
-    requestAnimationFrame(animate);
-    angle += 0.002;
-    camera.position.x = Math.cos(angle) * radius;
-    camera.position.z = Math.sin(angle) * radius;
-    camera.position.y = height;
-    camera.lookAt(0, 0, 0);
-    renderer.render(scene, camera);
+function animate(){
+  requestAnimationFrame(animate);
+  camera.lookAt(0,0,0);
+  renderer.render(scene,camera);
 }
 animate();
 
-// Fenster-Resize
-window.addEventListener('resize', () => {
-    camera.aspect = window.innerWidth / window.innerHeight;
-    camera.updateProjectionMatrix();
-    renderer.setSize(window.innerWidth, window.innerHeight);
+window.addEventListener('resize', ()=>{
+  camera.aspect = window.innerWidth/window.innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(window.innerWidth, window.innerHeight);
 });
 </script>
 </body>
