@@ -59,7 +59,7 @@
     /* GALLERY */
     .gallery-nav{user-select:none;display:flex;flex-wrap:wrap;}
     .gallery-img,.gallery-caption{margin-top:var(--spacer);}
-    .gallery-nav span{padding:0 .35em;}
+    .gallery-nav span{padding:0 .32em;}
     .gallery-nav .active{/* outline:1px solid var(--text);border-radius:100vmax; *//* background:#f0f;color:var(--background); */}
     .gallery-img{height:586px;user-select:none;}
     .gallery-img img{display:block;max-height:100%;max-width:100%;object-fit:contain;}
@@ -74,6 +74,43 @@
 
 
 
+
+<script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.152.2/examples/js/loaders/OBJLoader.js"></script>
+<script>
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
+    camera.position.z = 50;
+    const renderer = new THREE.WebGLRenderer({ antialias:true, alpha:true });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    document.body.appendChild(renderer.domElement);
+    const ambientLight = new THREE.AmbientLight(0xffffff,0.6);
+    scene.add(ambientLight);
+    const pointLight = new THREE.PointLight(0xffffff,1);
+    pointLight.position.set(50,50,50);
+    scene.add(pointLight);
+    let model;
+    const loader = new THREE.OBJLoader();
+    loader.load('model.obj', function(object){
+        model = object;
+        model.scale.set(1,1,1);
+        scene.add(model);
+    });
+    function animate(){
+        requestAnimationFrame(animate);
+        if(model) model.rotation.y += 0.01;
+        renderer.render(scene,camera);
+    }
+    animate();
+    window.addEventListener('resize',()=>{
+        camera.aspect = window.innerWidth/window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth,window.innerHeight);
+    });
+</script>
+<style>
+    canvas{position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;display:block;}
+</style>
 <header>
     <div class="marquee"><div class="marquee-track"><span lang="zh-Hant">歡迎</span><span lang="es">Bienvenidos</span><span lang="en">Welcome</span><span lang="hi">स्वागत हे</span><span lang="ar">اهلا وسهلا</span><span lang="bn">স্বাগত</span><span lang="pt">Bem-vindo</span><span lang="ru">добро пожаловать</span><span lang="ur">خوش آمدید</span><span lang="ja">ようこそ</span><span lang="id">Selamat datang</span><span lang="de">Willkommen</span><span lang="tr">Hoşgeldiniz</span><span lang="ta">வரவேற்பு</span><span lang="fr">Bienvenue</span><span lang="ko">어서 오십시오</span><span lang="vi">Hoan nghênh</span><span lang="jv">Sugeng Rawuh</span><span lang="sw">Karibu</span><span lang="sa">Svāgatam</span><span lang="it">Benvenuto</span><span lang="pa">ਸਵਾਗਤ ਹੈ</span></div></div>
     <div id="header">
@@ -83,10 +120,9 @@
     </div>
 </header>
 <hr>
-
 <main>
 <div class="content" id="index">
-    <img src="img/joeyws.png" alt="joeyws" style="position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);width:1200px;max-width:70%;display:block;z-index:-1;pointer-events:none;user-select:none;">
+    <!-- <img src="img/joeyws.png" alt="joeyws" style="position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);width:1200px;max-width:70%;display:block;z-index:-1;pointer-events:none;user-select:none;"> -->
 </div>
 <div class="content" id="works">
     <div class="video">
@@ -184,7 +220,6 @@
         Personal information may be processed by external providers, including:<br>
         <a href="https://open-meteo.com/" rel="nofollow">Open‑Meteo</a> for weather data, <a href="https://allorigins.win/" rel="nofollow">AllOrigins</a> for online status, <a href="https://github.com/" rel="nofollow">GitHub</a> for hosting
     </p>
-    <hr>
 </div>
 </main>
 
