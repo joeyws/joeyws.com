@@ -160,7 +160,7 @@ async function updateData() {
             (p) => p.type === "participant" && p.attributes.stats.name === player.attributes.name
           );
           const replayIndex = participantIndexInIncluded + 1;
-          const mode = ; // casual:airoyale normal:official
+          const mode = ; // casual:airoyale normal:official ???
           const gameMode = rawMatchType;
           const region = "eu";
           const dateObj = new Date(matchStartIso);
@@ -169,7 +169,7 @@ async function updateData() {
           const day = dateObj.getDate().toString().padStart(2, "0");
           const hour = dateObj.getHours().toString().padStart(2, "0");
           const url = `https://bridge.pubg.com/de/2d-replay/match.bro.${mode}.pc-2018-40.steam.${gameMode}.${region}.${year}.${month}.${day}.${hour}.${matchId}?index=${replayIndex}`; */
-
+          
           pubgData.lastMatches.push({
             matchStart,
             teamSize,
@@ -183,7 +183,7 @@ async function updateData() {
             damage: Math.round(participant.attributes.stats.damageDealt)
           });
         }
-
+        
         console.log("PUBG match data: ok");
       } catch (err) {
         console.error("PUBG match data:", matchId, err.message);
