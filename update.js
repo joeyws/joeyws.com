@@ -163,7 +163,7 @@ async function updateData() {
           const seconds = Math.floor(survivalSeconds % 60);
           const survivalTime = `${minutes}:${seconds.toString().padStart(2, "0")}`;
 
-          // replay link
+          // url
           /*
           normal: https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.squad-fpp.eu.2026.02.13.21.46773907-8dfd-48a6-99af-091b300189a1?index=71
           casual: https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.15.12.d2830b8e-8ae2-496b-abf2-296fc270903b
@@ -186,6 +186,14 @@ async function updateData() {
           const day = dateObj.getDate().toString().padStart(2, "0");
           const hour = dateObj.getHours().toString().padStart(2, "0");
           const url = `https://bridge.pubg.com/de/2d-replay/match.bro.${mode}.pc-2018-40.steam.${gameMode}.${region}.${year}.${month}.${day}.${hour}.${matchId}?index=${replayIndex}`;
+          */
+          const mode = matchRes.data.data.attributes.matchType === "airoyale" ? "airoyale" : "official";
+          const dateObj = new Date(matchStartIso);
+          const year = dateObj.getUTCFullYear();
+          const month = (dateObj.getUTCMonth() + 1).toString().padStart(2, "0");
+          const day = dateObj.getUTCDate().toString().padStart(2, "0");
+          const hour = dateObj.getUTCHours().toString().padStart(2, "0");
+          const url = `https://bridge.pubg.com/de/2d-replay/match.bro.${mode}.pc-2018-40.steam.${rawMatchType}.eu.${year}.${month}.${day}.${hour}.${matchId}`;
           pubgData.lastMatches.push({
             matchStart,
             teamSize,
@@ -198,15 +206,7 @@ async function updateData() {
             assists: participant.attributes.stats.assists,
             damage: Math.round(participant.attributes.stats.damageDealt),
             url
-          });*/
-          const mode = matchRes.data.data.attributes.matchType === "airoyale" ? "airoyale" : "official";
-          const dateObj = new Date(matchStartIso);
-          const year = dateObj.getUTCFullYear();
-          const month = (dateObj.getUTCMonth() + 1).toString().padStart(2, "0");
-          const day = dateObj.getUTCDate().toString().padStart(2, "0");
-          const hour = dateObj.getUTCHours().toString().padStart(2, "0");
-          const url = `https://bridge.pubg.com/de/2d-replay/match.bro.${mode}.pc-2018-40.steam.${rawMatchType}.eu.${year}.${month}.${day}.${hour}.${matchId}`;
-
+          });
         }
         console.log("PUBG match data: ok");
       } catch (err) {
