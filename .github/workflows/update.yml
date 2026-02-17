@@ -22,7 +22,7 @@ jobs:
         with:
           node-version: 18
   
-      - run: npm ci
+      - run: npm install
       - run: node update.js
         env:
           PUBG_API_KEY: ${{ secrets.PUBG_API_KEY }}
