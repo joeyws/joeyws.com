@@ -1,11 +1,55 @@
 {
-  "timestamp": "17.02.2026 19:59",
-  "weatherTempCelsius": 4,
+  "timestamp": "17.02.2026 20:36",
+  "weatherTempCelsius": 3,
   "githubLastCommit": "February 17, 2026",
   "steamStatus": "online",
   "pubg": {
     "name": "joeyws2",
     "lastMatches": [
+      {
+        "matchStart": "20:05",
+        "teamSize": "Squad",
+        "teamMates": [
+          "SpedyHUN",
+          "Rondyba"
+        ],
+        "perspective": "TPP",
+        "placement": 1,
+        "survivalTime": "21:58",
+        "distance": 6.7,
+        "kills": 4,
+        "assists": 0,
+        "damage": 478,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.17.20.4472fa13-4bbd-48c0-aca3-bd740db55c8c"
+      },
+      {
+        "matchStart": "19:49",
+        "teamSize": "Squad",
+        "teamMates": [
+          "kpolt"
+        ],
+        "perspective": "TPP",
+        "placement": 13,
+        "survivalTime": "14:15",
+        "distance": 4,
+        "kills": 8,
+        "assists": 1,
+        "damage": 878,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.17.19.b43cfe1d-bf8d-4a10-99e4-73bf84973a51"
+      },
+      {
+        "matchStart": "19:35",
+        "teamSize": "Squad",
+        "teamMates": [],
+        "perspective": "TPP",
+        "placement": 15,
+        "survivalTime": "10:52",
+        "distance": 4.8,
+        "kills": 2,
+        "assists": 0,
+        "damage": 251,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.17.19.dafce89f-ab59-4660-90d2-bb10005aa303"
+      },
       {
         "matchStart": "16.02. 22:31",
         "teamSize": "Squad",
@@ -116,53 +160,6 @@
         "assists": 1,
         "damage": 446,
         "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.14.18.489f409b-69ca-48ff-90e6-2f9674bc80cb"
-      },
-      {
-        "matchStart": "13.02. 21:58",
-        "teamSize": "Squad",
-        "teamMates": [
-          "SuuuS_",
-          "FATURALI",
-          "lastbek12"
-        ],
-        "perspective": "FPP",
-        "placement": 13,
-        "survivalTime": "16:23",
-        "distance": 7.3,
-        "kills": 0,
-        "assists": 0,
-        "damage": 0,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.squad-fpp.eu.2026.02.13.21.46773907-8dfd-48a6-99af-091b300189a1"
-      },
-      {
-        "matchStart": "13.02. 21:46",
-        "teamSize": "Squad",
-        "teamMates": [
-          "SuuuS_",
-          "anoboloikyusuf",
-          "rezisthebest"
-        ],
-        "perspective": "FPP",
-        "placement": 20,
-        "survivalTime": "9:28",
-        "distance": 1.4,
-        "kills": 0,
-        "assists": 1,
-        "damage": 110,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.squad-fpp.eu.2026.02.13.21.26a4dd6e-46fc-4102-b67f-7d55124ec410"
-      },
-      {
-        "matchStart": "13.02. 21:25",
-        "teamSize": "Squad",
-        "teamMates": [],
-        "perspective": "TPP",
-        "placement": 15,
-        "survivalTime": "8:52",
-        "distance": 0.8,
-        "kills": 4,
-        "assists": 0,
-        "damage": 444,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.13.21.eac74875-61d4-4348-8be0-284cd64f638b"
       }
     ]
   }
