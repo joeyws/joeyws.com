@@ -3,6 +3,7 @@ const fs = require("fs");
 const xml2js = require("xml2js");
 
 const PUBG_API_KEY = process.env.PUBG_API_KEY;
+const STEAM_API_KEY = process.env.STEAM_API_KEY;
 
 async function updateData() {
   let weatherTempCelsius = null;
@@ -35,7 +36,8 @@ async function updateData() {
   // GitHub: Last Commit
   try {
     const githubRes = await axios.get(
-      "https://api.github.com/repos/joeyws/joeyws.com/commits"
+      "https://api.github.com/repos/joeyws/joeyws.com/commits",
+      {headers: { "User-Agent": "joeyws-app" }}
     );
     const rawDate = githubRes.data[0].commit.author.date;
     const date = new Date(rawDate);
@@ -51,7 +53,7 @@ async function updateData() {
 
   // Steam Status
   try {
-    const steamXmlRes = await axios.get(
+    /* const steamXmlRes = await axios.get(
       "https://api.allorigins.win/get?url=" +
         encodeURIComponent("https://steamcommunity.com/id/joeyws2?xml=1")
     );
@@ -60,9 +62,28 @@ async function updateData() {
     const rawStatus = parsedSteam.profile.onlineState[0];
     const onlineStates = ["online", "in-game", "away", "busy"];
     steamStatus = onlineStates.includes(rawStatus.toLowerCase()) ? "online" : "offline";
-    console.log("Steam: ok (" + steamStatus + ")");
+    console.log("Steam: ok (" + steamStatus + ")"); */
+    const res = await axios.get(
+      "https://api.steampowered.com/ISteamUser/GetPlayerSummaries/v2/",
+      {
+        params: {
+          key: STEAM_API_KEY,
+          steamids: "76561199698498228"
+        }
+      }
+    );
+    const player = res.data.response.players[0];
+    const personaState = player.personastate;
+    let steamStatus = "offline";
+    if (personaState === 1) steamStatus = "online";
+    if (personaState === 2) steamStatus = "busy";
+    if (personaState === 3) steamStatus = "away";
+    if (personaState === 4) steamStatus = "snooze";
+    if (personaState === 5) steamStatus = "looking to trade";
+    if (personaState === 6) steamStatus = "looking to play";
+    console.log("Steam: ok (" + steamStatus +")");
   } catch (err) {
-    console.log("Steam:", err.message);
+    console.error("Steam:", err.message);
   }
 
   // PUBG Stats
