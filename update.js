@@ -87,7 +87,7 @@ async function updateData() {
   }
 
   // PUBG Stats
-  try {
+  /* try {
     const pubgRes = await axios.get(
       `https://api.pubg.com/shards/steam/players?filter[playerNames]=joeyws2`,
       {
@@ -97,9 +97,7 @@ async function updateData() {
         }
       }
     );
-
     const player = pubgRes.data.data[0];
-
     function formatMatchStart(matchStartIso) {
       const matchDate = new Date(matchStartIso);
       const now = new Date();
@@ -114,16 +112,13 @@ async function updateData() {
       const month = (matchDate.getMonth() + 1).toString().padStart(2, "0");
       return `${day}.${month}. ${hours}:${minutes}`;
     }
-
     pubgData = {
       name: player.attributes.name,
       lastMatches: []
     };
-
     const lastMatchIds = player.relationships.matches.data
       .slice(0, 10)
       .map((m) => m.id);
-
     for (const matchId of lastMatchIds) {
       try {
         const matchRes = await axios.get(
@@ -135,25 +130,21 @@ async function updateData() {
             }
           }
         );
-
         const participants = matchRes.data.included.filter(
           (p) => p.type === "participant"
         );
         const participant = participants.find(
           (p) => p.attributes.stats.name === player.attributes.name
         );
-
         if (participant) {
           const matchStartIso = matchRes.data.data.attributes.createdAt;
           const matchStart = formatMatchStart(matchStartIso);
-
           let rawMatchType = matchRes.data.data.attributes.gameMode;
           let [teamSize, perspective] = rawMatchType.split("-");
           if (!perspective || perspective === "") perspective = "TPP";
           teamSize =
             teamSize.charAt(0).toUpperCase() + teamSize.slice(1).toLowerCase();
           perspective = perspective.toUpperCase();
-
           // teammates
           const rosters = matchRes.data.included.filter(r => r.type === "roster");
           const myRoster = rosters.find(roster =>
@@ -170,20 +161,17 @@ async function updateData() {
               .filter(p => teammateIds.includes(p.id))
               .map(p => p.attributes.stats.name);
           }
-
           // distance in km
           const distanceKm =
             participant.attributes.stats.walkDistance +
             participant.attributes.stats.rideDistance +
             participant.attributes.stats.swimDistance;
           const distance = Math.round(distanceKm / 100) / 10;
-
           // survival time in minutes:seconds
           const survivalSeconds = participant.attributes.stats.timeSurvived;
           const minutes = Math.floor(survivalSeconds / 60);
           const seconds = Math.floor(survivalSeconds % 60);
           const survivalTime = `${minutes}:${seconds.toString().padStart(2, "0")}`;
-
           // url
           /*
           normal: https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.squad-fpp.eu.2026.02.13.21.46773907-8dfd-48a6-99af-091b300189a1?index=71
@@ -192,22 +180,7 @@ async function updateData() {
           https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.16.21.f6a0646c-3ee2-45fc-b50a-7527c339fbf2
           https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.squad-fpp.eu.2026.02.13.21.26a4dd6e-46fc-4102-b67f-7d55124ec410
           https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.squad-fpp.eu.2026.02.13.21.46773907-8dfd-48a6-99af-091b300189a1
-          https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.14.18.489f409b-69ca-48ff-90e6-2f9674bc80cb
-
-          const participantIndexInIncluded = matchRes.data.included.findIndex(
-            (p) => p.type === "participant" && p.attributes.stats.name === player.attributes.name
-          );
-          const replayIndex = participantIndexInIncluded + 1;
-          const mode = matchRes.data.data.attributes.matchType === "airoyale" ? "airoyale" : "official";
-          const gameMode = rawMatchType;
-          const region = "eu";
-          const dateObj = new Date(matchStartIso);
-          const year = dateObj.getFullYear();
-          const month = (dateObj.getMonth() + 1).toString().padStart(2, "0");
-          const day = dateObj.getDate().toString().padStart(2, "0");
-          const hour = dateObj.getHours().toString().padStart(2, "0");
-          const url = `https://bridge.pubg.com/de/2d-replay/match.bro.${mode}.pc-2018-40.steam.${gameMode}.${region}.${year}.${month}.${day}.${hour}.${matchId}?index=${replayIndex}`;
-          */
+          https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.14.18.489f409b-69ca-48ff-90e6-2f9674bc80cb *//*
           const mode = matchRes.data.data.attributes.matchType === "airoyale" ? "airoyale" : "official";
           const dateObj = new Date(matchStartIso);
           const year = dateObj.getUTCFullYear();
@@ -238,10 +211,85 @@ async function updateData() {
     console.log("PUBG general: ok");
   } catch (err) {
     console.error("PUBG general:", err.message);
-  }
+  } */
+  await Promise.all(lastMatchIds.map(async (matchId) => {
+    try {
+      const matchRes = await axios.get(
+        `https://api.pubg.com/shards/steam/matches/${matchId}`,
+        {
+          headers: {
+            Authorization: `Bearer ${PUBG_API_KEY}`,
+            Accept: "application/vnd.api+json"
+          }
+        }
+      );
+      const participants = matchRes.data.included.filter(p => p.type === "participant");
+      const participant = participants.find(
+        p => p.attributes.stats.name === player.attributes.name
+      );
+      if (!participant) return;
+      const matchStartIso = matchRes.data.data.attributes.createdAt;
+      const matchStart = formatMatchStart(matchStartIso);
+      // Team Size / Perspective
+      let rawMatchType = matchRes.data.data.attributes.gameMode;
+      let [teamSize, perspective] = rawMatchType.split("-");
+      if (!perspective || perspective === "") perspective = "TPP";
+      teamSize = teamSize.charAt(0).toUpperCase() + teamSize.slice(1).toLowerCase();
+      perspective = perspective.toUpperCase();
+      // Team Mates
+      const rosters = matchRes.data.included.filter(r => r.type === "roster");
+      const myRoster = rosters.find(roster =>
+        roster.relationships.participants.data.some(rel => rel.id === participant.id)
+      );
+      let teamMates = [];
+      if (myRoster) {
+        const teammateIds = myRoster.relationships.participants.data
+          .map(p => p.id)
+          .filter(id => id !== participant.id);
+        teamMates = participants
+          .filter(p => teammateIds.includes(p.id))
+          .map(p => p.attributes.stats.name);
+      }
+      // Distance
+      const distanceKm =
+        participant.attributes.stats.walkDistance +
+        participant.attributes.stats.rideDistance +
+        participant.attributes.stats.swimDistance;
+      const distance = Math.round(distanceKm / 100) / 10;
+      // Survival Time
+      const survivalSeconds = participant.attributes.stats.timeSurvived;
+      const minutes = Math.floor(survivalSeconds / 60);
+      const seconds = Math.floor(survivalSeconds % 60);
+      const survivalTime = `${minutes}:${seconds.toString().padStart(2, "0")}`;
+      // URL
+      const mode = matchRes.data.data.attributes.matchType === "airoyale" ? "airoyale" : "official";
+      const dateObj = new Date(matchStartIso);
+      const year = dateObj.getUTCFullYear();
+      const month = (dateObj.getUTCMonth() + 1).toString().padStart(2, "0");
+      const day = dateObj.getUTCDate().toString().padStart(2, "0");
+      const hour = dateObj.getUTCHours().toString().padStart(2, "0");
+      const url = `https://bridge.pubg.com/de/2d-replay/match.bro.${mode}.pc-2018-40.steam.${rawMatchType}.eu.${year}.${month}.${day}.${hour}.${matchId}`;
+      // Push pubgData Array
+      pubgData.lastMatches.push({
+        matchStart,
+        teamSize,
+        teamMates,
+        perspective,
+        placement: participant.attributes.stats.winPlace,
+        survivalTime,
+        distance,
+        kills: participant.attributes.stats.kills,
+        assists: participant.attributes.stats.assists,
+        damage: Math.round(participant.attributes.stats.damageDealt),
+        url
+      });
+      console.log("PUBG match data: ok", matchId);
+    } catch (err) {
+      console.error("PUBG match data:", matchId, err.message);
+    }
+  }));
 
-
-  // combine data
+  // Combine Data
   const combinedData = {
     timestamp: getTimestamp(),
     weatherTempCelsius: weatherTempCelsius,
