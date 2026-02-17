@@ -62,7 +62,12 @@ async function updateData() {
     const rawStatus = parsedSteam.profile.onlineState[0];
     const onlineStates = ["online", "in-game", "away", "busy"];
     steamStatus = onlineStates.includes(rawStatus.toLowerCase()) ? "online" : "offline";
-    console.log("Steam: ok (" + steamStatus + ")"); */
+    console.log(`Steam: ok (${steamStatus})`);
+  } catch (err) {
+    console.error("Steam:", err.message);
+  }
+  */
+  try {
     const res = await axios.get(
       "https://api.steampowered.com/ISteamUser/GetPlayerSummaries/v2/",
       {
@@ -72,16 +77,14 @@ async function updateData() {
         }
       }
     );
-    const player = res.data.response.players[0];
-    const personaState = player.personastate;
-    let steamStatus = "offline";
-    if (personaState === 1) steamStatus = "online";
-    if (personaState === 2) steamStatus = "busy";
-    if (personaState === 3) steamStatus = "away";
-    if (personaState === 4) steamStatus = "snooze";
-    if (personaState === 5) steamStatus = "looking to trade";
-    if (personaState === 6) steamStatus = "looking to play";
-    console.log("Steam: ok (" + steamStatus +")");
+    const players = res.data?.response?.players;
+    if (players && players.length) {
+      const personaState = players[0].personastate;
+      if (personaState >= 1 && personaState <= 6) {
+        steamStatus = "online";
+      } else {steamStatus = "offline";}
+    }
+    console.log(`Steam: ok (${steamStatus})`);
   } catch (err) {
     console.error("Steam:", err.message);
   }
