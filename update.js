@@ -114,13 +114,23 @@ async function updateData() {
       const month = (matchDate.getMonth() + 1).toString().padStart(2, "0");
       return `${day}.${month}. ${hours}:${minutes}`;
     }
+    // Clan Name
+    const rosters = pubgRes.data.included.filter(r => r.type === "roster");
+    const myRoster = rosters.find(roster =>
+      roster.relationships.participants.data.some(p => p.id === player.id)
+    );
+    let clan = "";
+    if (myRoster && myRoster.attributes?.name) {
+      clan = myRoster.attributes.name;
+    }
+    // Data
     pubgData = {
       name: player.attributes.name,
+      clan: clan,
       lastMatches: []
     };
-    const lastMatchIds = player.relationships.matches.data
-      .slice(0, 10)
-      .map((m) => m.id);
+    // Last Matches
+    const lastMatchIds = player.relationships.matches.data.slice(0, 10).map((m) => m.id);
     for (const matchId of lastMatchIds) {
       try {
         const matchRes = await axios.get(
