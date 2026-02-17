@@ -194,6 +194,7 @@ async function updateData() {
           const day = dateObj.getUTCDate().toString().padStart(2, "0");
           const hour = dateObj.getUTCHours().toString().padStart(2, "0");
           const url = `https://bridge.pubg.com/de/2d-replay/match.bro.${mode}.pc-2018-40.steam.${rawMatchType}.eu.${year}.${month}.${day}.${hour}.${matchId}`;
+          // push
           pubgData.lastMatches.push({
             matchStart,
             teamSize,
