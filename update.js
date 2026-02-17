@@ -212,6 +212,12 @@ async function updateData() {
   } catch (err) {
     console.error("PUBG general:", err.message);
   } */
+  const player = pubgRes.data.data[0];
+  if (!player.relationships.matches.data || !player.relationships.matches.data.length) {
+    console.log("Keine Matches für den Spieler gefunden.");
+    return;
+  }
+  const lastMatchIds = player.relationships.matches.data.slice(0, 10).map(m => m.id);
   await Promise.all(lastMatchIds.map(async (matchId) => {
     try {
       const matchRes = await axios.get(
@@ -223,6 +229,9 @@ async function updateData() {
           }
         }
       );
+      if (!pubgRes.data.data || !pubgRes.data.data.length) {
+        throw new Error("No PUBG player found");
+      }
       const participants = matchRes.data.included.filter(p => p.type === "participant");
       const participant = participants.find(
         p => p.attributes.stats.name === player.attributes.name
