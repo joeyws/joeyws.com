@@ -134,13 +134,21 @@ async function updateData() {
           perspective = perspective.toUpperCase();
 
           // teammates
-          const teamMates = participants
-            .filter(
-              (p) =>
-                p.attributes.stats.teamId === participant.attributes.stats.teamId &&
-                p.attributes.stats.name !== player.attributes.name
+          const rosters = matchRes.data.included.filter(r => r.type === "roster");
+          const myRoster = rosters.find(roster =>
+            roster.relationships.participants.data.some(
+              rel => rel.id === participant.id
             )
-            .map((p) => p.attributes.stats.name);
+          );
+          let teamMates = [];
+          if (myRoster) {
+            const teammateIds = myRoster.relationships.participants.data
+              .map(p => p.id)
+              .filter(id => id !== participant.id);
+            teamMates = participants
+              .filter(p => teammateIds.includes(p.id))
+              .map(p => p.attributes.stats.name);
+          }
 
           // distance in km
           const distanceKm =
