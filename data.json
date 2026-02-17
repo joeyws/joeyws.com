@@ -1,6 +1,6 @@
 {
-  "timestamp": "17.02.2026 13:44",
-  "weatherTempCelsius": 5,
+  "timestamp": "17.02.2026 14:33",
+  "weatherTempCelsius": 6,
   "githubLastCommit": "February 17, 2026",
   "steamStatus": "online",
   "pubg": {
@@ -10,8 +10,8 @@
         "matchStart": "16.02. 22:31",
         "teamSize": "Squad",
         "teamMates": [
-          "1337_HADES",
-          "Bxzyz"
+          "Bxzyz",
+          "1337_HADES"
         ],
         "perspective": "TPP",
         "placement": 2,
@@ -41,9 +41,9 @@
         "matchStart": "16.02. 21:31",
         "teamSize": "Squad",
         "teamMates": [
-          "ggx09",
           "Tommy_LG",
-          "JackDaniels_007"
+          "JackDaniels_007",
+          "ggx09"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -74,9 +74,9 @@
         "matchStart": "14.02. 19:51",
         "teamSize": "Squad",
         "teamMates": [
-          "SAMETTUNCHD",
           "badboys0067",
-          "Djole92"
+          "Djole92",
+          "SAMETTUNCHD"
         ],
         "perspective": "TPP",
         "placement": 2,
@@ -104,8 +104,8 @@
         "matchStart": "14.02. 18:48",
         "teamSize": "Squad",
         "teamMates": [
-          "zbivatel_12315",
           "zMercimekk_",
+          "zbivatel_12315",
           "BestRomanov"
         ],
         "perspective": "TPP",
@@ -122,8 +122,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "SuuuS_",
-          "lastbek12",
-          "FATURALI"
+          "FATURALI",
+          "lastbek12"
         ],
         "perspective": "FPP",
         "placement": 13,
@@ -138,8 +138,8 @@
         "matchStart": "13.02. 21:46",
         "teamSize": "Squad",
         "teamMates": [
-          "anoboloikyusuf",
           "SuuuS_",
+          "anoboloikyusuf",
           "rezisthebest"
         ],
         "perspective": "FPP",
