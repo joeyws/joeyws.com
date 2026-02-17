@@ -164,8 +164,15 @@ async function updateData() {
           const survivalTime = `${minutes}:${seconds.toString().padStart(2, "0")}`;
 
           // replay link
-          // normal: https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.squad-fpp.eu.2026.02.13.21.46773907-8dfd-48a6-99af-091b300189a1?index=71
-          // casual: https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.15.12.d2830b8e-8ae2-496b-abf2-296fc270903b
+          /*
+          normal: https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.squad-fpp.eu.2026.02.13.21.46773907-8dfd-48a6-99af-091b300189a1?index=71
+          casual: https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.15.12.d2830b8e-8ae2-496b-abf2-296fc270903b
+          https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.16.22.43bfcdbf-438f-47c3-a627-ce4013390b7e
+          https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.16.21.f6a0646c-3ee2-45fc-b50a-7527c339fbf2
+          https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.squad-fpp.eu.2026.02.13.21.26a4dd6e-46fc-4102-b67f-7d55124ec410
+          https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.squad-fpp.eu.2026.02.13.21.46773907-8dfd-48a6-99af-091b300189a1
+          https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.14.18.489f409b-69ca-48ff-90e6-2f9674bc80cb
+
           const participantIndexInIncluded = matchRes.data.included.findIndex(
             (p) => p.type === "participant" && p.attributes.stats.name === player.attributes.name
           );
@@ -179,7 +186,6 @@ async function updateData() {
           const day = dateObj.getDate().toString().padStart(2, "0");
           const hour = dateObj.getHours().toString().padStart(2, "0");
           const url = `https://bridge.pubg.com/de/2d-replay/match.bro.${mode}.pc-2018-40.steam.${gameMode}.${region}.${year}.${month}.${day}.${hour}.${matchId}?index=${replayIndex}`;
-          
           pubgData.lastMatches.push({
             matchStart,
             teamSize,
@@ -192,9 +198,16 @@ async function updateData() {
             assists: participant.attributes.stats.assists,
             damage: Math.round(participant.attributes.stats.damageDealt),
             url
-          });
+          });*/
+          const mode = matchRes.data.data.attributes.matchType === "airoyale" ? "airoyale" : "official";
+          const dateObj = new Date(matchStartIso);
+          const year = dateObj.getUTCFullYear();
+          const month = (dateObj.getUTCMonth() + 1).toString().padStart(2, "0");
+          const day = dateObj.getUTCDate().toString().padStart(2, "0");
+          const hour = dateObj.getUTCHours().toString().padStart(2, "0");
+          const url = `https://bridge.pubg.com/de/2d-replay/match.bro.${mode}.pc-2018-40.steam.${rawMatchType}.eu.${year}.${month}.${day}.${hour}.${matchId}`;
+
         }
-        
         console.log("PUBG match data: ok");
       } catch (err) {
         console.error("PUBG match data:", matchId, err.message);
