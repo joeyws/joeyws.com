@@ -52,8 +52,8 @@ async function updateData() {
   }
 
   // Steam Status
-  try {
-    /* const steamXmlRes = await axios.get(
+  /* try {
+    const steamXmlRes = await axios.get(
       "https://api.allorigins.win/get?url=" +
         encodeURIComponent("https://steamcommunity.com/id/joeyws2?xml=1")
     );
@@ -65,8 +65,7 @@ async function updateData() {
     console.log(`Steam: ok (${steamStatus})`);
   } catch (err) {
     console.error("Steam:", err.message);
-  }
-  */
+  } */
   try {
     const res = await axios.get(
       "https://api.steampowered.com/ISteamUser/GetPlayerSummaries/v2/",
