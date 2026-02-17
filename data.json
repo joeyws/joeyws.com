@@ -1,8 +1,8 @@
 {
-  "timestamp": "17.02.2026 20:36",
+  "timestamp": "17.02.2026 21:17",
   "weatherTempCelsius": 3,
   "githubLastCommit": "February 17, 2026",
-  "steamStatus": "online",
+  "steamStatus": null,
   "pubg": {
     "name": "joeyws2",
     "lastMatches": [
@@ -10,8 +10,8 @@
         "matchStart": "20:05",
         "teamSize": "Squad",
         "teamMates": [
-          "SpedyHUN",
-          "Rondyba"
+          "Rondyba",
+          "SpedyHUN"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -86,8 +86,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "Tommy_LG",
-          "JackDaniels_007",
-          "ggx09"
+          "ggx09",
+          "JackDaniels_007"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -102,8 +102,8 @@
         "matchStart": "15.02. 12:30",
         "teamSize": "Squad",
         "teamMates": [
-          "Ositto",
-          "EvRiK11"
+          "EvRiK11",
+          "Ositto"
         ],
         "perspective": "TPP",
         "placement": 2,
@@ -118,9 +118,9 @@
         "matchStart": "14.02. 19:51",
         "teamSize": "Squad",
         "teamMates": [
-          "badboys0067",
           "Djole92",
-          "SAMETTUNCHD"
+          "SAMETTUNCHD",
+          "badboys0067"
         ],
         "perspective": "TPP",
         "placement": 2,
