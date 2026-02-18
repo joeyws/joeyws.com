@@ -174,11 +174,7 @@ async function updateData() {
               .map(p => p.attributes.stats.name);
           }
           // Distance in km
-          const distanceKm =
-            participant.attributes.stats.walkDistance +
-            participant.attributes.stats.rideDistance +
-            participant.attributes.stats.swimDistance;
-          const distance = Math.round(distanceKm / 100) / 10;
+          const distance = Math.round((participant.attributes.stats.walkDistance + participant.attributes.stats.rideDistance + participant.attributes.stats.swimDistance) / 100) / 10;
           // Survival Time
           const survivalSeconds = participant.attributes.stats.timeSurvived;
           const minutes = Math.floor(survivalSeconds / 60);
