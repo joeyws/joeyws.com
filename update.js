@@ -188,7 +188,8 @@ async function updateData() {
           /*
           normal: https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.squad-fpp.eu.2026.02.13.21.46773907-8dfd-48a6-99af-091b300189a1?index=71
           casual: https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.15.12.d2830b8e-8ae2-496b-abf2-296fc270903b
-          https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.16.22.43bfcdbf-438f-47c3-a627-ce4013390b7e
+          https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.squad.eu.2026.02.12.20.f6cafe09-5008-4f00-953e-8eb072371eac?index=59
+          https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.16.21.91ef47a2-8882-440b-8b82-26244b13ca2d?index=6
           https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.16.21.f6a0646c-3ee2-45fc-b50a-7527c339fbf2
           https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.squad-fpp.eu.2026.02.13.21.26a4dd6e-46fc-4102-b67f-7d55124ec410
           https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.squad-fpp.eu.2026.02.13.21.46773907-8dfd-48a6-99af-091b300189a1
@@ -199,7 +200,10 @@ async function updateData() {
           const month = (dateObj.getUTCMonth() + 1).toString().padStart(2, "0");
           const day = dateObj.getUTCDate().toString().padStart(2, "0");
           const hour = dateObj.getUTCHours().toString().padStart(2, "0");
-          const url = `https://bridge.pubg.com/de/2d-replay/match.bro.${mode}.pc-2018-40.steam.${rawMatchType}.eu.${year}.${month}.${day}.${hour}.${matchId}`;
+          const index = participants.findIndex(
+            (p) => p.id === participant.id
+          );
+          const url = `https://bridge.pubg.com/de/2d-replay/match.bro.${mode}.pc-2018-40.steam.${rawMatchType}.eu.${year}.${month}.${day}.${hour}.${matchId}?index=${index}`;
           // Push
           pubgData.lastMatches.push({
             matchStart,
