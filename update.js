@@ -168,6 +168,13 @@ async function updateData() {
           teamSize =
             teamSize.charAt(0).toUpperCase() + teamSize.slice(1).toLowerCase();
           perspective = perspective.toUpperCase();
+          // Map
+          const mapNameRaw = matchRes.data.data.attributes.mapName;
+          function formatMapName(map) {
+            const maps = { Erangel_Main:"Erangel", Desert_Main:"Miramar", Savage_Main:"Sanhok", DihorOtok_Main:"Vikendi", Baltic_Main:"Erangel (Remaster)", Range_Main:"Camp Jackal", Chimera_Main:"Paramo", Heaven_Main:"Haven", Tiger_Main:"Taego", Kiki_Main:"Deston", Neon_Main:"Rondo" };
+            return maps[map] || map;
+          }
+          const map = formatMapName(mapNameRaw);
           // Team Mates
           const rosters = matchRes.data.included.filter(r => r.type === "roster");
           const myRoster = rosters.find(roster =>
@@ -219,7 +226,7 @@ async function updateData() {
             teamMates,
             perspective,
             placement: participant.attributes.stats.winPlace,
-            map: matchRes.data.data.attributes.mapName,
+            map,
             survivalTime,
             distance,
             kills: participant.attributes.stats.kills,
