@@ -100,7 +100,7 @@ async function updateData() {
       }
     );
     const player = pubgRes.data.data[0];
-    function formatMatchStart(matchStartIso) {
+    /* function formatMatchStart(matchStartIso) {
       const matchDate = new Date(matchStartIso);
       const now = new Date();
       const isToday =
@@ -110,6 +110,27 @@ async function updateData() {
       const hours = matchDate.getHours().toString().padStart(2, "0");
       const minutes = matchDate.getMinutes().toString().padStart(2, "0");
       if (isToday) return `${hours}:${minutes}`;
+      const day = matchDate.getDate().toString().padStart(2, "0");
+      const month = (matchDate.getMonth() + 1).toString().padStart(2, "0");
+      return `${day}.${month}. ${hours}:${minutes}`;
+    } */
+    function formatMatchStart(matchStartIso) {
+      const matchDate = new Date(matchStartIso);
+      const now = new Date();
+      const hours = matchDate.getHours().toString().padStart(2, "0");
+      const minutes = matchDate.getMinutes().toString().padStart(2, "0");
+      const isToday =
+        matchDate.getFullYear() === now.getFullYear() &&
+        matchDate.getMonth() === now.getMonth() &&
+        matchDate.getDate() === now.getDate();
+      if (isToday) return `today ${hours}:${minutes}`;
+      const yesterday = new Date();
+      yesterday.setDate(now.getDate() - 1);
+      const isYesterday =
+        matchDate.getFullYear() === yesterday.getFullYear() &&
+        matchDate.getMonth() === yesterday.getMonth() &&
+        matchDate.getDate() === yesterday.getDate();
+      if (isYesterday) return `yesterday ${hours}:${minutes}`;
       const day = matchDate.getDate().toString().padStart(2, "0");
       const month = (matchDate.getMonth() + 1).toString().padStart(2, "0");
       return `${day}.${month}. ${hours}:${minutes}`;

@@ -68,6 +68,12 @@
     @keyframes blink-loading{0%{opacity:0;}50%{opacity:1;}}.loading{animation:.3s blink-loading steps(1) infinite;}
     @keyframes map{100%{outline-color:transparent;outline-offset:20px;}}#map{width:760px;max-width:100%;aspect-ratio:150/75;background:center center url(img/other/world.gif) no-repeat scroll;position:relative;background-size:contain;}#map:after{top:23%;left:52.5%;outline:1px solid #0f0;background:#0f0;box-shadow:0 3px 8px #000;animation:map 1.2s infinite ease-out;width:7px;height:7px;border-radius:100vmax;pointer-events:none;position:absolute;transform:translate(-50%,-50%);display:block;content:"";}
     #cursor{width:12px;height:12px;background:#fff1;backdrop-filter:blur(20px) invert(100%) saturate(10);-webkit-backdrop-filter:blur(20px) invert(100%) saturate(10);border-radius:100vmax;position:fixed;top:-50px;left:50%;transform:translate(-50%,-50%);font-size:0;line-height:0;z-index:99999999;pointer-events:none;}*{cursor:none !important;}
+    /* GAMING */
+    #pubg {}
+    .pubg-header{margin-bottom:20px;}
+    .pubg-card{border-top:1px solid var(--text);margin-bottom:var(--spacer);padding:var(--spacer) 0;}
+    .pubg-card-header{}
+    .pubg-card-body{}
 </style>
 </head>
 <body>
@@ -186,6 +192,10 @@
         Personal information may be processed by external providers, including:<br>
         <a href="https://open-meteo.com/" rel="nofollow">Open‑Meteo</a> for weather data, <a href="https://allorigins.win/" rel="nofollow">AllOrigins</a> for online status, <a href="https://github.com/" rel="nofollow">GitHub</a> for hosting
     </p>
+</div>
+<div class="content" id="gaming">
+    <h2>Last 10 PUBG Matches</h2>
+    <div id="pubg"></div>
 </div>
 </main>
 
@@ -493,6 +503,40 @@ document.querySelectorAll(".video").forEach(wrapper => {
     });
 
 });
+
+// pubg
+fetch('https://joeyws.com/data.json')
+    .then(response => response.json())
+    .then(data => {
+        const pubgData = data.pubg;
+        const matches = pubgData.lastMatches;
+        const container = document.getElementById('pubg');
+        if (!container) return;
+        // Match Cards
+        matches.forEach(match => {
+            const card = document.createElement('div');
+            card.className = 'pubg-card';
+            const placementClass =
+                match.placement === 1 ? 'first' :
+                match.placement <= 3 ? 'top3' :
+                match.placement <= 10 ? 'top10' : '';
+            const mates = match.teamMates.length ? ', ' + match.teamMates.join(', ') : '';
+            card.innerHTML = `
+                <div class="pubg-card-header ${placementClass}">
+                    <h3>#${match.placement} (${match.matchStart}, ${match.teamSize} ${match.perspective})</h3>
+                    <p>
+                        ${match.kills} kills, ${match.assists} assists, ${match.damage} damage<br>
+                        ${match.survivalTime} survived, ${match.distance} km travelled<br>
+                        Team: ${pubgData.name}${mates}<br>
+                        <a href="${match.url}" target="_blank">Watch 2D Replay</a>
+                    </p>
+                </div>
+            `;
+            container.appendChild(card);
+        });
+    })
+    .catch(error => {}
+);
 </script>
 <script type="application/ld+json">
 {   "@context":         "https://schema.org",
