@@ -1,6 +1,6 @@
 {
-  "timestamp": "18.02.2026 21:28",
-  "weatherTempCelsius": 4,
+  "timestamp": "18.02.2026 22:17",
+  "weatherTempCelsius": 3,
   "githubLastCommit": "February 18, 2026",
   "steamStatus": "online",
   "pubg": {
@@ -11,8 +11,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "Schnippa999",
-          "Titko",
-          "A-L-D-I"
+          "A-L-D-I",
+          "Titko"
         ],
         "perspective": "TPP",
         "placement": 2,
@@ -43,8 +43,8 @@
         "matchStart": "today 18:53",
         "teamSize": "Squad",
         "teamMates": [
-          "Si-Ruzic-The-3Rd",
-          "GYBYM"
+          "GYBYM",
+          "Si-Ruzic-The-3Rd"
         ],
         "perspective": "TPP",
         "placement": 19,
@@ -74,8 +74,8 @@
         "matchStart": "yesterday 20:05",
         "teamSize": "Squad",
         "teamMates": [
-          "SpedyHUN",
-          "Rondyba"
+          "Rondyba",
+          "SpedyHUN"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -149,9 +149,9 @@
         "matchStart": "16.02. 21:31",
         "teamSize": "Squad",
         "teamMates": [
+          "JackDaniels_007",
           "ggx09",
-          "Tommy_LG",
-          "JackDaniels_007"
+          "Tommy_LG"
         ],
         "perspective": "TPP",
         "placement": 1,
