@@ -165,7 +165,7 @@ async function updateData() {
             teamMates = participants.filter(p => teammateIds.includes(p.id)).map(p => p.attributes.stats.name);
           }
           // Distance in km
-          const distance = Math.round((participant.attributes.stats.walkDistance + participant.attributes.stats.rideDistance + participant.attributes.stats.swimDistance) / 100) / 10;
+          const distance = (Math.round((participant.attributes.stats.walkDistance + participant.attributes.stats.rideDistance + participant.attributes.stats.swimDistance) / 100) / 10).toFixed(1);
           // Survival Time
           const survivalSeconds = participant.attributes.stats.timeSurvived;
           const minutes = Math.floor(survivalSeconds / 60);
