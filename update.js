@@ -199,10 +199,10 @@ async function updateData() {
           const month = (dateObj.getUTCMonth() + 1).toString().padStart(2, "0");
           const day = dateObj.getUTCDate().toString().padStart(2, "0");
           const hour = dateObj.getUTCHours().toString().padStart(2, "0");
-          const index = participants.findIndex(
-            (p) => p.id === participant.id
-          );
-          const url = `https://bridge.pubg.com/de/2d-replay/match.bro.${mode}.pc-2018-40.steam.${rawMatchType}.eu.${year}.${month}.${day}.${hour}.${matchId}`; // ?index=${index}
+          const matchParticipantsOrder =
+          matchRes.data.data.relationships.participants.data;
+          const index = matchParticipantsOrder.findIndex( (p) => p.id === participant.id );
+          const url = `https://bridge.pubg.com/de/2d-replay/match.bro.${mode}.pc-2018-40.steam.${rawMatchType}.eu.${year}.${month}.${day}.${hour}.${matchId}?index=${index}`; 
           // Push
           pubgData.lastMatches.push({
             matchStart,
