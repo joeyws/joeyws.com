@@ -219,6 +219,7 @@ async function updateData() {
             teamMates,
             perspective,
             placement: participant.attributes.stats.winPlace,
+            map: matchRes.data.data.attributes.mapName,
             survivalTime,
             distance,
             kills: participant.attributes.stats.kills,

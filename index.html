@@ -70,7 +70,7 @@
     #cursor{width:12px;height:12px;background:#fff1;backdrop-filter:blur(20px) invert(100%) saturate(10);-webkit-backdrop-filter:blur(20px) invert(100%) saturate(10);border-radius:100vmax;position:fixed;top:-50px;left:50%;transform:translate(-50%,-50%);font-size:0;line-height:0;z-index:99999999;pointer-events:none;}*{cursor:none !important;}
     /* GAMING */
     #pubg {margin-top:var(--spacer);}
-    .pubg-card{width:400px;border-top:1px solid var(--text);margin-bottom:var(--spacer);padding:var(--spacer) 0;}
+    .pubg-card{max-width:500px;margin:0 auto;/* margin-bottom:var(--spacer);border-top:1px solid var(--text);padding:var(--spacer) 0; */}
 </style>
 </head>
 <body>
@@ -193,7 +193,8 @@
 <div class="content" id="gaming">
     Add <a href="https://steamcommunity.com/id/joeyws2/">joeyws2</a> on Steam
     <hr>
-    <h2>joeyws2, last 10 PUBG Matches</h2>
+    <h2 style="text-align:center;">My last PUBG Matches</h2>
+    <hr>
     <div id="pubg"></div>
 </div>
 </main>
@@ -532,7 +533,7 @@ fetch('https://joeyws.com/data.json')
                 </p>
                 <p>
                     <a href="${match.url}" target="_blank">Watch 2D Replay</a>
-                </p>
+                </p><hr>
             `;
             container.appendChild(card);
         });
