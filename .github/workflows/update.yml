@@ -13,7 +13,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
@@ -27,16 +26,12 @@ jobs:
         env:
           PUBG_API_KEY: ${{ secrets.PUBG_API_KEY }}
           STEAM_API_KEY: ${{ secrets.STEAM_API_KEY }}
-      - run: |
-          git config user.name "github-actions"
-          git config user.email "actions@github.com"
 
-          # Remote holen und HEAD auf Remote setzen, Änderungen bleiben staged
-          git fetch origin main
-          git reset --soft origin/main
-
-          git add data.json
-          git diff --cached --quiet || git commit -m "Update data.json [ci skip]"
-
-          # Push sicher durchführen
-          git push origin main --force-with-lease
+      # Deploy auf gh-pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./          # hier liegt deine data.json
+          publish_branch: gh-pages
+          force_orphan: true       # optional, überschreibt Branch komplett
