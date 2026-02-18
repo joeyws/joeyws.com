@@ -504,7 +504,7 @@ document.querySelectorAll(".video").forEach(wrapper => {
 
 });
 
-// pubg
+// PUBG
 fetch('https://joeyws.com/data.json')
     .then(response => response.json())
     .then(data => {
@@ -512,7 +512,6 @@ fetch('https://joeyws.com/data.json')
         const matches = pubgData.lastMatches;
         const container = document.getElementById('pubg');
         if (!container) return;
-        // Match Cards
         matches.forEach(match => {
             const card = document.createElement('div');
             card.className = 'pubg-card';
