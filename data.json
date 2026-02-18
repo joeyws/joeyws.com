@@ -1,5 +1,5 @@
 {
-  "timestamp": "18.02.2026 11:01",
+  "timestamp": "18.02.2026 11:43",
   "weatherTempCelsius": 4,
   "githubLastCommit": "February 18, 2026",
   "steamStatus": "offline",
@@ -11,8 +11,8 @@
         "matchStart": "17.02. 20:05",
         "teamSize": "Squad",
         "teamMates": [
-          "Rondyba",
-          "SpedyHUN"
+          "SpedyHUN",
+          "Rondyba"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -21,7 +21,7 @@
         "kills": 4,
         "assists": 0,
         "damage": 478,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.17.20.4472fa13-4bbd-48c0-aca3-bd740db55c8c?index=18"
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.17.20.4472fa13-4bbd-48c0-aca3-bd740db55c8c?index=76"
       },
       {
         "matchStart": "17.02. 19:49",
@@ -36,7 +36,7 @@
         "kills": 8,
         "assists": 1,
         "damage": 878,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.17.19.b43cfe1d-bf8d-4a10-99e4-73bf84973a51?index=19"
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.17.19.b43cfe1d-bf8d-4a10-99e4-73bf84973a51?index=68"
       },
       {
         "matchStart": "17.02. 19:35",
@@ -49,7 +49,7 @@
         "kills": 2,
         "assists": 0,
         "damage": 251,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.17.19.dafce89f-ab59-4660-90d2-bb10005aa303?index=9"
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.17.19.dafce89f-ab59-4660-90d2-bb10005aa303?index=82"
       },
       {
         "matchStart": "16.02. 22:31",
@@ -65,7 +65,7 @@
         "kills": 9,
         "assists": 2,
         "damage": 886,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.16.22.43bfcdbf-438f-47c3-a627-ce4013390b7e?index=94"
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.16.22.43bfcdbf-438f-47c3-a627-ce4013390b7e?index=15"
       },
       {
         "matchStart": "16.02. 22:01",
@@ -80,15 +80,15 @@
         "kills": 4,
         "assists": 1,
         "damage": 394,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.16.22.f6a0646c-3ee2-45fc-b50a-7527c339fbf2?index=12"
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.16.22.f6a0646c-3ee2-45fc-b50a-7527c339fbf2?index=92"
       },
       {
         "matchStart": "16.02. 21:31",
         "teamSize": "Squad",
         "teamMates": [
-          "JackDaniels_007",
           "ggx09",
-          "Tommy_LG"
+          "Tommy_LG",
+          "JackDaniels_007"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -97,14 +97,14 @@
         "kills": 7,
         "assists": 0,
         "damage": 679,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.16.21.91ef47a2-8882-440b-8b82-26244b13ca2d?index=79"
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.16.21.91ef47a2-8882-440b-8b82-26244b13ca2d?index=3"
       },
       {
         "matchStart": "15.02. 12:30",
         "teamSize": "Squad",
         "teamMates": [
-          "Ositto",
-          "EvRiK11"
+          "EvRiK11",
+          "Ositto"
         ],
         "perspective": "TPP",
         "placement": 2,
@@ -113,15 +113,15 @@
         "kills": 8,
         "assists": 0,
         "damage": 635,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.15.12.d2830b8e-8ae2-496b-abf2-296fc270903b?index=56"
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.15.12.d2830b8e-8ae2-496b-abf2-296fc270903b?index=35"
       },
       {
         "matchStart": "14.02. 19:51",
         "teamSize": "Squad",
         "teamMates": [
+          "badboys0067",
           "Djole92",
-          "SAMETTUNCHD",
-          "badboys0067"
+          "SAMETTUNCHD"
         ],
         "perspective": "TPP",
         "placement": 2,
@@ -130,7 +130,7 @@
         "kills": 6,
         "assists": 2,
         "damage": 609,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.14.19.1fadb71f-fcd5-4629-a3ba-d3ff4dbabbce?index=56"
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.14.19.1fadb71f-fcd5-4629-a3ba-d3ff4dbabbce?index=8"
       },
       {
         "matchStart": "14.02. 19:29",
@@ -143,15 +143,15 @@
         "kills": 3,
         "assists": 0,
         "damage": 300,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.14.19.ff95aa86-613b-4bfd-93d3-e99326d12302?index=30"
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.14.19.ff95aa86-613b-4bfd-93d3-e99326d12302?index=61"
       },
       {
         "matchStart": "14.02. 18:48",
         "teamSize": "Squad",
         "teamMates": [
           "zbivatel_12315",
-          "zMercimekk_",
-          "BestRomanov"
+          "BestRomanov",
+          "zMercimekk_"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -160,7 +160,7 @@
         "kills": 5,
         "assists": 1,
         "damage": 446,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.14.18.489f409b-69ca-48ff-90e6-2f9674bc80cb?index=89"
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.14.18.489f409b-69ca-48ff-90e6-2f9674bc80cb?index=55"
       }
     ]
   }
