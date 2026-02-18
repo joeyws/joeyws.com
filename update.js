@@ -115,18 +115,18 @@ async function updateData() {
       return `${day}.${month}. ${hours}:${minutes}`;
     }
     // Clan Name
-    const rosters = pubgRes.data.included.filter(r => r.type === "roster");
+    /* const rosters = pubgRes.data.included.filter(r => r.type === "roster");
     const myRoster = rosters.find(roster =>
       roster.relationships.participants.data.some(p => p.id === player.id)
     );
     let clan = "";
     if (myRoster && myRoster.attributes?.name) {
       clan = myRoster.attributes.name;
-    }
+    } */
     // Data
     pubgData = {
       name: player.attributes.name,
-      clan: clan,
+      clan: "AUR",
       lastMatches: []
     };
     // Last Matches
