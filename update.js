@@ -52,20 +52,6 @@ async function updateData() {
   }
 
   // Steam Status
-  /* try {
-    const steamXmlRes = await axios.get(
-      "https://api.allorigins.win/get?url=" +
-        encodeURIComponent("https://steamcommunity.com/id/joeyws2?xml=1")
-    );
-    const parser = new xml2js.Parser();
-    const parsedSteam = await parser.parseStringPromise(steamXmlRes.data.contents);
-    const rawStatus = parsedSteam.profile.onlineState[0];
-    const onlineStates = ["online", "in-game", "away", "busy"];
-    steamStatus = onlineStates.includes(rawStatus.toLowerCase()) ? "online" : "offline";
-    console.log(`Steam: ok (${steamStatus})`);
-  } catch (err) {
-    console.error("Steam:", err.message);
-  } */
   try {
     const res = await axios.get(
       "https://api.steampowered.com/ISteamUser/GetPlayerSummaries/v2/",
@@ -153,20 +139,15 @@ async function updateData() {
             }
           }
         );
-        const participants = matchRes.data.included.filter(
-          (p) => p.type === "participant"
-        );
-        const participant = participants.find(
-          (p) => p.attributes.stats.name === player.attributes.name
-        );
+        const participants = matchRes.data.included.filter( (p) => p.type === "participant" );
+        const participant = participants.find( (p) => p.attributes.stats.name === player.attributes.name );
         if (participant) {
           const matchStartIso = matchRes.data.data.attributes.createdAt;
           const matchStart = formatMatchStart(matchStartIso);
           let rawMatchType = matchRes.data.data.attributes.gameMode;
           let [teamSize, perspective] = rawMatchType.split("-");
           if (!perspective || perspective === "") perspective = "TPP";
-          teamSize =
-            teamSize.charAt(0).toUpperCase() + teamSize.slice(1).toLowerCase();
+          teamSize = teamSize.charAt(0).toUpperCase() + teamSize.slice(1).toLowerCase();
           perspective = perspective.toUpperCase();
           // Map
           const mapNameRaw = matchRes.data.data.attributes.mapName;
@@ -177,19 +158,11 @@ async function updateData() {
           const map = formatMapName(mapNameRaw);
           // Team Mates
           const rosters = matchRes.data.included.filter(r => r.type === "roster");
-          const myRoster = rosters.find(roster =>
-            roster.relationships.participants.data.some(
-              rel => rel.id === participant.id
-            )
-          );
+          const myRoster = rosters.find(roster => roster.relationships.participants.data.some( rel => rel.id === participant.id ));
           let teamMates = [];
           if (myRoster) {
-            const teammateIds = myRoster.relationships.participants.data
-              .map(p => p.id)
-              .filter(id => id !== participant.id);
-            teamMates = participants
-              .filter(p => teammateIds.includes(p.id))
-              .map(p => p.attributes.stats.name);
+            const teammateIds = myRoster.relationships.participants.data.map(p => p.id).filter(id => id !== participant.id);
+            teamMates = participants.filter(p => teammateIds.includes(p.id)).map(p => p.attributes.stats.name);
           }
           // Distance in km
           const distance = Math.round((participant.attributes.stats.walkDistance + participant.attributes.stats.rideDistance + participant.attributes.stats.swimDistance) / 100) / 10;
