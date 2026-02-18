@@ -1,12 +1,43 @@
 {
-  "timestamp": "18.02.2026 18:08",
+  "timestamp": "18.02.2026 19:30",
   "weatherTempCelsius": 4,
   "githubLastCommit": "February 18, 2026",
-  "steamStatus": "offline",
+  "steamStatus": "online",
   "pubg": {
     "name": "joeyws2",
     "clan": "AUR",
     "lastMatches": [
+      {
+        "matchStart": "18:53",
+        "teamSize": "Squad",
+        "teamMates": [
+          "Si-Ruzic-The-3Rd",
+          "GYBYM"
+        ],
+        "perspective": "TPP",
+        "placement": 19,
+        "survivalTime": "4:40",
+        "distance": 0.4,
+        "kills": 0,
+        "assists": 1,
+        "damage": 100,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.18.18.8404bd92-870c-49bc-93da-22ea3253d5d4"
+      },
+      {
+        "matchStart": "18:35",
+        "teamSize": "Squad",
+        "teamMates": [
+          "Qrda12"
+        ],
+        "perspective": "TPP",
+        "placement": 5,
+        "survivalTime": "15:32",
+        "distance": 5,
+        "kills": 4,
+        "assists": 2,
+        "damage": 455,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.18.18.392ca675-ea00-47f0-a475-586236cd6a2f"
+      },
       {
         "matchStart": "17.02. 20:05",
         "teamSize": "Squad",
@@ -131,36 +162,6 @@
         "assists": 2,
         "damage": 609,
         "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.14.19.1fadb71f-fcd5-4629-a3ba-d3ff4dbabbce"
-      },
-      {
-        "matchStart": "14.02. 19:29",
-        "teamSize": "Squad",
-        "teamMates": [],
-        "perspective": "TPP",
-        "placement": 7,
-        "survivalTime": "18:14",
-        "distance": 9.3,
-        "kills": 3,
-        "assists": 0,
-        "damage": 300,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.14.19.ff95aa86-613b-4bfd-93d3-e99326d12302"
-      },
-      {
-        "matchStart": "14.02. 18:48",
-        "teamSize": "Squad",
-        "teamMates": [
-          "zMercimekk_",
-          "zbivatel_12315",
-          "BestRomanov"
-        ],
-        "perspective": "TPP",
-        "placement": 1,
-        "survivalTime": "23:24",
-        "distance": 6.1,
-        "kills": 5,
-        "assists": 1,
-        "damage": 446,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.14.18.489f409b-69ca-48ff-90e6-2f9674bc80cb"
       }
     ]
   }
