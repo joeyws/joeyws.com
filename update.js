@@ -135,19 +135,9 @@ async function updateData() {
       const month = (matchDate.getMonth() + 1).toString().padStart(2, "0");
       return `${day}.${month}. ${hours}:${minutes}`;
     }
-    // Clan Name
-    /* const rosters = pubgRes.data.included.filter(r => r.type === "roster");
-    const myRoster = rosters.find(roster =>
-      roster.relationships.participants.data.some(p => p.id === player.id)
-    );
-    let clan = "";
-    if (myRoster && myRoster.attributes?.name) {
-      clan = myRoster.attributes.name;
-    } */
     // Data
     pubgData = {
       name: player.attributes.name,
-      clan: "AUR",
       lastMatches: []
     };
     // Last Matches
@@ -220,10 +210,9 @@ async function updateData() {
           const month = (dateObj.getUTCMonth() + 1).toString().padStart(2, "0");
           const day = dateObj.getUTCDate().toString().padStart(2, "0");
           const hour = dateObj.getUTCHours().toString().padStart(2, "0");
-          const matchParticipantsOrder =
-          matchRes.data.data.relationships.participants.data;
-          const index = matchParticipantsOrder.findIndex( (p) => p.id === participant.id );
-          const url = `https://bridge.pubg.com/de/2d-replay/match.bro.${mode}.pc-2018-40.steam.${rawMatchType}.eu.${year}.${month}.${day}.${hour}.${matchId}?index=${index}`; 
+          /* const matchParticipantsOrder = matchRes.data.data.relationships.participants.data;
+          const index = matchParticipantsOrder.findIndex( (p) => p.id === participant.id ); */
+          const url = `https://bridge.pubg.com/de/2d-replay/match.bro.${mode}.pc-2018-40.steam.${rawMatchType}.eu.${year}.${month}.${day}.${hour}.${matchId}`; // ?index=${index}
           // Push
           pubgData.lastMatches.push({
             matchStart,
