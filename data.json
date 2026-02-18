@@ -1,5 +1,5 @@
 {
-  "timestamp": "18.02.2026 11:43",
+  "timestamp": "18.02.2026 12:02",
   "weatherTempCelsius": 4,
   "githubLastCommit": "February 18, 2026",
   "steamStatus": "offline",
@@ -103,8 +103,8 @@
         "matchStart": "15.02. 12:30",
         "teamSize": "Squad",
         "teamMates": [
-          "EvRiK11",
-          "Ositto"
+          "Ositto",
+          "EvRiK11"
         ],
         "perspective": "TPP",
         "placement": 2,
@@ -113,15 +113,15 @@
         "kills": 8,
         "assists": 0,
         "damage": 635,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.15.12.d2830b8e-8ae2-496b-abf2-296fc270903b?index=35"
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.15.12.d2830b8e-8ae2-496b-abf2-296fc270903b?index=47"
       },
       {
         "matchStart": "14.02. 19:51",
         "teamSize": "Squad",
         "teamMates": [
+          "SAMETTUNCHD",
           "badboys0067",
-          "Djole92",
-          "SAMETTUNCHD"
+          "Djole92"
         ],
         "perspective": "TPP",
         "placement": 2,
@@ -130,7 +130,7 @@
         "kills": 6,
         "assists": 2,
         "damage": 609,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.14.19.1fadb71f-fcd5-4629-a3ba-d3ff4dbabbce?index=8"
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.14.19.1fadb71f-fcd5-4629-a3ba-d3ff4dbabbce?index=49"
       },
       {
         "matchStart": "14.02. 19:29",
@@ -143,15 +143,15 @@
         "kills": 3,
         "assists": 0,
         "damage": 300,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.14.19.ff95aa86-613b-4bfd-93d3-e99326d12302?index=61"
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.14.19.ff95aa86-613b-4bfd-93d3-e99326d12302?index=20"
       },
       {
         "matchStart": "14.02. 18:48",
         "teamSize": "Squad",
         "teamMates": [
           "zbivatel_12315",
-          "BestRomanov",
-          "zMercimekk_"
+          "zMercimekk_",
+          "BestRomanov"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -160,7 +160,7 @@
         "kills": 5,
         "assists": 1,
         "damage": 446,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.14.18.489f409b-69ca-48ff-90e6-2f9674bc80cb?index=55"
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.14.18.489f409b-69ca-48ff-90e6-2f9674bc80cb?index=86"
       }
     ]
   }
