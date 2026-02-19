@@ -1,30 +1,31 @@
 {
-  "timestamp": "18.02.2026 22:17",
-  "weatherTempCelsius": 3,
-  "githubLastCommit": "February 18, 2026",
+  "timestamp": "19.02.2026 18:30",
+  "weatherTempCelsius": 4,
+  "githubLastCommit": null,
   "steamStatus": "online",
   "pubg": {
     "name": "joeyws2",
     "lastMatches": [
       {
-        "matchStart": "today 19:33",
+        "matchStart": "yesterday 19:33",
         "teamSize": "Squad",
         "teamMates": [
           "Schnippa999",
-          "A-L-D-I",
-          "Titko"
+          "Titko",
+          "A-L-D-I"
         ],
         "perspective": "TPP",
         "placement": 2,
+        "map": "Erangel (Remaster)",
         "survivalTime": "15:52",
-        "distance": 4.6,
+        "distance": "4.6",
         "kills": 3,
         "assists": 0,
         "damage": 396,
         "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.18.19.f4473611-741a-4a59-9206-c1626ce6fdbb"
       },
       {
-        "matchStart": "today 19:06",
+        "matchStart": "yesterday 19:06",
         "teamSize": "Squad",
         "teamMates": [
           "Pikachu07-",
@@ -32,83 +33,89 @@
         ],
         "perspective": "TPP",
         "placement": 2,
+        "map": "Erangel (Remaster)",
         "survivalTime": "23:50",
-        "distance": 9,
+        "distance": "9.0",
         "kills": 11,
         "assists": 1,
         "damage": 641,
         "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.18.19.af02650c-4401-4752-a0d4-84290596eb33"
       },
       {
-        "matchStart": "today 18:53",
+        "matchStart": "yesterday 18:53",
         "teamSize": "Squad",
         "teamMates": [
-          "GYBYM",
-          "Si-Ruzic-The-3Rd"
+          "Si-Ruzic-The-3Rd",
+          "GYBYM"
         ],
         "perspective": "TPP",
         "placement": 19,
+        "map": "Erangel (Remaster)",
         "survivalTime": "4:40",
-        "distance": 0.4,
+        "distance": "0.4",
         "kills": 0,
         "assists": 1,
         "damage": 100,
         "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.18.18.8404bd92-870c-49bc-93da-22ea3253d5d4"
       },
       {
-        "matchStart": "today 18:35",
+        "matchStart": "yesterday 18:35",
         "teamSize": "Squad",
         "teamMates": [
           "Qrda12"
         ],
         "perspective": "TPP",
         "placement": 5,
+        "map": "Erangel (Remaster)",
         "survivalTime": "15:32",
-        "distance": 5,
+        "distance": "5.0",
         "kills": 4,
         "assists": 2,
         "damage": 455,
         "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.18.18.392ca675-ea00-47f0-a475-586236cd6a2f"
       },
       {
-        "matchStart": "yesterday 20:05",
+        "matchStart": "17.02. 20:05",
         "teamSize": "Squad",
         "teamMates": [
-          "Rondyba",
-          "SpedyHUN"
+          "SpedyHUN",
+          "Rondyba"
         ],
         "perspective": "TPP",
         "placement": 1,
+        "map": "Erangel (Remaster)",
         "survivalTime": "21:58",
-        "distance": 6.7,
+        "distance": "6.7",
         "kills": 4,
         "assists": 0,
         "damage": 478,
         "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.17.20.4472fa13-4bbd-48c0-aca3-bd740db55c8c"
       },
       {
-        "matchStart": "yesterday 19:49",
+        "matchStart": "17.02. 19:49",
         "teamSize": "Squad",
         "teamMates": [
           "kpolt"
         ],
         "perspective": "TPP",
         "placement": 13,
+        "map": "Erangel (Remaster)",
         "survivalTime": "14:15",
-        "distance": 4,
+        "distance": "4.0",
         "kills": 8,
         "assists": 1,
         "damage": 878,
         "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.17.19.b43cfe1d-bf8d-4a10-99e4-73bf84973a51"
       },
       {
-        "matchStart": "yesterday 19:35",
+        "matchStart": "17.02. 19:35",
         "teamSize": "Squad",
         "teamMates": [],
         "perspective": "TPP",
         "placement": 15,
+        "map": "Erangel (Remaster)",
         "survivalTime": "10:52",
-        "distance": 4.8,
+        "distance": "4.8",
         "kills": 2,
         "assists": 0,
         "damage": 251,
@@ -123,8 +130,9 @@
         ],
         "perspective": "TPP",
         "placement": 2,
+        "map": "Erangel (Remaster)",
         "survivalTime": "21:49",
-        "distance": 12.5,
+        "distance": "12.5",
         "kills": 9,
         "assists": 2,
         "damage": 886,
@@ -138,8 +146,9 @@
         ],
         "perspective": "TPP",
         "placement": 2,
+        "map": "Erangel (Remaster)",
         "survivalTime": "27:15",
-        "distance": 11.2,
+        "distance": "11.2",
         "kills": 4,
         "assists": 1,
         "damage": 394,
@@ -149,14 +158,15 @@
         "matchStart": "16.02. 21:31",
         "teamSize": "Squad",
         "teamMates": [
-          "JackDaniels_007",
           "ggx09",
-          "Tommy_LG"
+          "Tommy_LG",
+          "JackDaniels_007"
         ],
         "perspective": "TPP",
         "placement": 1,
+        "map": "Erangel (Remaster)",
         "survivalTime": "24:09",
-        "distance": 7.8,
+        "distance": "7.8",
         "kills": 7,
         "assists": 0,
         "damage": 679,
