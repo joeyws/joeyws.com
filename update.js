@@ -128,6 +128,11 @@ async function updateData() {
     };
     // Last Matches
     const lastMatchIds = player.relationships.matches.data.slice(0, 10).map((m) => m.id);
+    function formatMapName(map) {
+      const maps = { Erangel_Main:"Erangel", Desert_Main:"Miramar", Savage_Main:"Sanhok", DihorOtok_Main:"Vikendi", Baltic_Main:"Erangel (Remaster)", Range_Main:"Camp Jackal", Chimera_Main:"Paramo", Heaven_Main:"Haven", Tiger_Main:"Taego", Kiki_Main:"Deston", Neon_Main:"Rondo" };
+      return maps[map] || map;
+    }
+    // Matches
     for (const matchId of lastMatchIds) {
       try {
         const matchRes = await axios.get(
@@ -151,10 +156,6 @@ async function updateData() {
           perspective = perspective.toUpperCase();
           // Map
           const mapNameRaw = matchRes.data.data.attributes.mapName;
-          function formatMapName(map) {
-            const maps = { Erangel_Main:"Erangel", Desert_Main:"Miramar", Savage_Main:"Sanhok", DihorOtok_Main:"Vikendi", Baltic_Main:"Erangel (Remaster)", Range_Main:"Camp Jackal", Chimera_Main:"Paramo", Heaven_Main:"Haven", Tiger_Main:"Taego", Kiki_Main:"Deston", Neon_Main:"Rondo" };
-            return maps[map] || map;
-          }
           const map = formatMapName(mapNameRaw);
           // Team Mates
           const rosters = matchRes.data.included.filter(r => r.type === "roster");
