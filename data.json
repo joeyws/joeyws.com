@@ -1,11 +1,29 @@
 {
-  "timestamp": "19.02.2026 18:30",
+  "timestamp": "19.02.2026 19:26",
   "weatherTempCelsius": 4,
-  "githubLastCommit": null,
+  "githubLastCommit": "February 19, 2026",
   "steamStatus": "online",
   "pubg": {
     "name": "joeyws2",
     "lastMatches": [
+      {
+        "matchStart": "today 18:21",
+        "teamSize": "Squad",
+        "teamMates": [
+          "goRRan_PL",
+          "Impsak",
+          "Hayka_u_Ckyka"
+        ],
+        "perspective": "TPP",
+        "placement": 1,
+        "map": "Erangel (Remaster)",
+        "survivalTime": "24:11",
+        "distance": "8.8",
+        "kills": 8,
+        "assists": 4,
+        "damage": 665,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.19.18.606ca77a-57ef-495c-af77-2f44830e7618"
+      },
       {
         "matchStart": "yesterday 19:33",
         "teamSize": "Squad",
@@ -153,24 +171,6 @@
         "assists": 1,
         "damage": 394,
         "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.16.22.f6a0646c-3ee2-45fc-b50a-7527c339fbf2"
-      },
-      {
-        "matchStart": "16.02. 21:31",
-        "teamSize": "Squad",
-        "teamMates": [
-          "ggx09",
-          "Tommy_LG",
-          "JackDaniels_007"
-        ],
-        "perspective": "TPP",
-        "placement": 1,
-        "map": "Erangel (Remaster)",
-        "survivalTime": "24:09",
-        "distance": "7.8",
-        "kills": 7,
-        "assists": 0,
-        "damage": 679,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.16.21.91ef47a2-8882-440b-8b82-26244b13ca2d"
       }
     ]
   }
