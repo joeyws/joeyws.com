@@ -69,8 +69,8 @@
     @keyframes map{100%{outline-color:transparent;outline-offset:20px;}}#map{width:760px;max-width:100%;aspect-ratio:150/75;background:center center url(img/other/world.gif) no-repeat scroll;position:relative;background-size:contain;}#map:after{top:23%;left:52.5%;outline:1px solid #0f0;background:#0f0;box-shadow:0 3px 8px #000;animation:map 1.2s infinite ease-out;width:7px;height:7px;border-radius:100vmax;pointer-events:none;position:absolute;transform:translate(-50%,-50%);display:block;content:"";}
     #cursor{width:12px;height:12px;background:#fff1;backdrop-filter:blur(20px) invert(100%) saturate(10);-webkit-backdrop-filter:blur(20px) invert(100%) saturate(10);border-radius:100vmax;position:fixed;top:-50px;left:50%;transform:translate(-50%,-50%);font-size:0;line-height:0;z-index:99999999;pointer-events:none;}*{cursor:none !important;}
     /* GAMING */
-    #pubg {margin-top:var(--spacer);}
-    .pubg-card{max-width:500px;margin:0 auto;/* margin-bottom:var(--spacer);border-top:1px solid var(--text);padding:var(--spacer) 0; */}
+    #pubg{}
+    .pubg-card{width:500px;margin:0 auto;/* margin-bottom:var(--spacer);border-top:1px solid var(--text);padding:var(--spacer) 0; */}
 </style>
 </head>
 <body>
@@ -193,9 +193,10 @@
 <div class="content" id="gaming">
     Add <a href="https://steamcommunity.com/id/joeyws2/">joeyws2</a> on Steam
     <hr>
-    <h2 style="text-align:center;">My last PUBG Matches</h2>
+    <h2 style="text-align:center;">joeyws2’s last PUBG Matches</h2>
     <hr>
     <div id="pubg"></div>
+    <hr>
 </div>
 </main>
 
@@ -519,7 +520,7 @@ fetch('https://joeyws.com/data.json')
             card.innerHTML = `
                 <p>
                     <span style="float:right;">${match.matchStart}</span><span style="font-size:36px;line-height:1em;">#${match.placement}</span><br>
-                    ${match.teamSize} ${match.perspective}
+                    ${match.teamSize} ${match.perspective}, ${map}
                 </p>
                 <p>
                     K: ${match.kills} &nbsp; &nbsp;
@@ -527,13 +528,11 @@ fetch('https://joeyws.com/data.json')
                     D: ${match.damage}
                 </p>
                 <p>
-                    Team Mates:&nbsp; &nbsp; &nbsp;${mates}<br>
+                    Team mates:&nbsp; &nbsp; &nbsp;${mates}<br>
                     Time survived: &nbsp;${match.survivalTime}<br>
-                    Travelled: &nbsp; &nbsp; &nbsp;${match.distance} km
+                    <a style="float:right;" href="${match.url}" target="_blank">Watch 2D Replay</a>Travelled: &nbsp; &nbsp; &nbsp;${match.distance} km
                 </p>
-                <p>
-                    <a href="${match.url}" target="_blank">Watch 2D Replay</a>
-                </p><hr>
+                <hr>
             `;
             container.appendChild(card);
         });
