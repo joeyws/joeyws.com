@@ -1,5 +1,5 @@
 {
-  "timestamp": "20.02.2026 20:42",
+  "timestamp": "20.02.2026 21:01",
   "weatherTempCelsius": 6,
   "githubLastCommit": "February 20, 2026",
   "steamStatus": "online",
@@ -10,9 +10,9 @@
         "matchStart": "today 20:01",
         "teamSize": "Squad",
         "teamMates": [
-          "K_O_S_I_K",
           "CapiToha",
-          "Krokodillu"
+          "Krokodillu",
+          "K_O_S_I_K"
         ],
         "perspective": "TPP",
         "placement": 3,
@@ -58,9 +58,9 @@
         "matchStart": "yesterday 20:28",
         "teamSize": "Squad",
         "teamMates": [
-          "DeCoY_UA",
           "Zeth_RayAway",
-          "Stoneeey-"
+          "Stoneeey-",
+          "DeCoY_UA"
         ],
         "perspective": "TPP",
         "placement": 2,
@@ -76,9 +76,9 @@
         "matchStart": "yesterday 20:17",
         "teamSize": "Squad",
         "teamMates": [
-          "Traqueurrr",
+          "Tomtoche",
           "Voqqee",
-          "Tomtoche"
+          "Traqueurrr"
         ],
         "perspective": "TPP",
         "placement": 18,
@@ -94,8 +94,8 @@
         "matchStart": "yesterday 19:30",
         "teamSize": "Squad",
         "teamMates": [
-          "Sahov1ch",
-          "BraneSoldier"
+          "BraneSoldier",
+          "Sahov1ch"
         ],
         "perspective": "TPP",
         "placement": 2,
@@ -129,9 +129,9 @@
         "matchStart": "18.02. 19:33",
         "teamSize": "Squad",
         "teamMates": [
-          "Schnippa999",
           "A-L-D-I",
-          "Titko"
+          "Titko",
+          "Schnippa999"
         ],
         "perspective": "TPP",
         "placement": 2,
@@ -147,8 +147,8 @@
         "matchStart": "18.02. 19:06",
         "teamSize": "Squad",
         "teamMates": [
-          "Pikachu07-",
-          "Tommy_LG"
+          "Tommy_LG",
+          "Pikachu07-"
         ],
         "perspective": "TPP",
         "placement": 2,
@@ -164,8 +164,8 @@
         "matchStart": "18.02. 18:53",
         "teamSize": "Squad",
         "teamMates": [
-          "GYBYM",
-          "Si-Ruzic-The-3Rd"
+          "Si-Ruzic-The-3Rd",
+          "GYBYM"
         ],
         "perspective": "TPP",
         "placement": 19,
