@@ -1,5 +1,5 @@
 {
-  "timestamp": "20.02.2026 12:27",
+  "timestamp": "20.02.2026 13:39",
   "weatherTempCelsius": 6,
   "githubLastCommit": "February 20, 2026",
   "steamStatus": "offline",
@@ -26,9 +26,9 @@
         "matchStart": "yesterday 20:28",
         "teamSize": "Squad",
         "teamMates": [
-          "DeCoY_UA",
           "Stoneeey-",
-          "Zeth_RayAway"
+          "Zeth_RayAway",
+          "DeCoY_UA"
         ],
         "perspective": "TPP",
         "placement": 2,
@@ -45,8 +45,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "Voqqee",
-          "Tomtoche",
-          "Traqueurrr"
+          "Traqueurrr",
+          "Tomtoche"
         ],
         "perspective": "TPP",
         "placement": 18,
@@ -79,9 +79,9 @@
         "matchStart": "yesterday 18:21",
         "teamSize": "Squad",
         "teamMates": [
-          "Hayka_u_Ckyka",
+          "goRRan_PL",
           "Impsak",
-          "goRRan_PL"
+          "Hayka_u_Ckyka"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -115,8 +115,8 @@
         "matchStart": "18.02. 19:06",
         "teamSize": "Squad",
         "teamMates": [
-          "Tommy_LG",
-          "Pikachu07-"
+          "Pikachu07-",
+          "Tommy_LG"
         ],
         "perspective": "TPP",
         "placement": 2,
@@ -132,8 +132,8 @@
         "matchStart": "18.02. 18:53",
         "teamSize": "Squad",
         "teamMates": [
-          "GYBYM",
-          "Si-Ruzic-The-3Rd"
+          "Si-Ruzic-The-3Rd",
+          "GYBYM"
         ],
         "perspective": "TPP",
         "placement": 19,
@@ -165,8 +165,8 @@
         "matchStart": "17.02. 20:05",
         "teamSize": "Squad",
         "teamMates": [
-          "Rondyba",
-          "SpedyHUN"
+          "SpedyHUN",
+          "Rondyba"
         ],
         "perspective": "TPP",
         "placement": 1,
