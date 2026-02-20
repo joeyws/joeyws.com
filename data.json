@@ -1,11 +1,43 @@
 {
-  "timestamp": "20.02.2026 19:58",
+  "timestamp": "20.02.2026 20:42",
   "weatherTempCelsius": 6,
   "githubLastCommit": "February 20, 2026",
   "steamStatus": "online",
   "pubg": {
     "name": "joeyws2",
     "lastMatches": [
+      {
+        "matchStart": "today 20:01",
+        "teamSize": "Squad",
+        "teamMates": [
+          "K_O_S_I_K",
+          "CapiToha",
+          "Krokodillu"
+        ],
+        "perspective": "TPP",
+        "placement": 3,
+        "map": "Erangel (Remaster)",
+        "survivalTime": "23:30",
+        "distance": "6.8",
+        "kills": 9,
+        "assists": 1,
+        "damage": 735,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.20.20.5320caa7-638a-4c46-ad65-44a6c8408783"
+      },
+      {
+        "matchStart": "today 19:50",
+        "teamSize": "Squad",
+        "teamMates": [],
+        "perspective": "TPP",
+        "placement": 15,
+        "map": "Erangel (Remaster)",
+        "survivalTime": "8:32",
+        "distance": "1.9",
+        "kills": 7,
+        "assists": 0,
+        "damage": 850,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.20.19.e6adba29-f445-40da-bd53-ebe99ada5f20"
+      },
       {
         "matchStart": "yesterday 20:55",
         "teamSize": "Squad",
@@ -144,39 +176,6 @@
         "assists": 1,
         "damage": 100,
         "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.18.18.8404bd92-870c-49bc-93da-22ea3253d5d4"
-      },
-      {
-        "matchStart": "18.02. 18:35",
-        "teamSize": "Squad",
-        "teamMates": [
-          "Qrda12"
-        ],
-        "perspective": "TPP",
-        "placement": 5,
-        "map": "Erangel (Remaster)",
-        "survivalTime": "15:32",
-        "distance": "5.0",
-        "kills": 4,
-        "assists": 2,
-        "damage": 455,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.18.18.392ca675-ea00-47f0-a475-586236cd6a2f"
-      },
-      {
-        "matchStart": "17.02. 20:05",
-        "teamSize": "Squad",
-        "teamMates": [
-          "Rondyba",
-          "SpedyHUN"
-        ],
-        "perspective": "TPP",
-        "placement": 1,
-        "map": "Erangel (Remaster)",
-        "survivalTime": "21:58",
-        "distance": "6.7",
-        "kills": 4,
-        "assists": 0,
-        "damage": 478,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.17.20.4472fa13-4bbd-48c0-aca3-bd740db55c8c"
       }
     ]
   }
