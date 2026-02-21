@@ -1,5 +1,5 @@
 {
-  "timestamp": "21.02.2026 19:05",
+  "timestamp": "21.02.2026 19:35",
   "weatherTempCelsius": 10,
   "githubLastCommit": "February 21, 2026",
   "steamStatus": "online",
@@ -11,8 +11,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "ViVago_7",
-          "Amo_Jani",
-          "GroundzZzero"
+          "GroundzZzero",
+          "Amo_Jani"
         ],
         "perspective": "TPP",
         "placement": 20,
@@ -28,8 +28,8 @@
         "matchStart": "today 14:57",
         "teamSize": "Squad",
         "teamMates": [
-          "Kunt_Tonyukuk",
           "GuuhRibeiro",
+          "Kunt_Tonyukuk",
           "Cannibale59"
         ],
         "perspective": "TPP",
@@ -46,9 +46,9 @@
         "matchStart": "today 14:24",
         "teamSize": "Squad",
         "teamMates": [
-          "sparksk87",
           "AFKwarriorz",
-          "Ydreams-DZ"
+          "Ydreams-DZ",
+          "sparksk87"
         ],
         "perspective": "TPP",
         "placement": 6,
@@ -64,8 +64,8 @@
         "matchStart": "today 13:45",
         "teamSize": "Squad",
         "teamMates": [
-          "Goldhopigen",
-          "CsaboTheKing"
+          "CsaboTheKing",
+          "Goldhopigen"
         ],
         "perspective": "TPP",
         "placement": 11,
@@ -81,9 +81,9 @@
         "matchStart": "today 09:04",
         "teamSize": "Squad",
         "teamMates": [
-          "xALPES",
           "bulletreverse",
-          "NathanLiertian"
+          "NathanLiertian",
+          "xALPES"
         ],
         "perspective": "TPP",
         "placement": 18,
@@ -115,9 +115,9 @@
         "matchStart": "today 07:41",
         "teamSize": "Squad",
         "teamMates": [
+          "eV_cz",
           "mefistofelis",
-          "AppleLemon32",
-          "eV_cz"
+          "AppleLemon32"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -133,8 +133,8 @@
         "matchStart": "today 06:53",
         "teamSize": "Squad",
         "teamMates": [
-          "AntraXRiPhantom",
-          "claymoooo"
+          "claymoooo",
+          "AntraXRiPhantom"
         ],
         "perspective": "TPP",
         "placement": 2,
@@ -150,9 +150,9 @@
         "matchStart": "yesterday 20:01",
         "teamSize": "Squad",
         "teamMates": [
+          "CapiToha",
           "K_O_S_I_K",
-          "Krokodillu",
-          "CapiToha"
+          "Krokodillu"
         ],
         "perspective": "TPP",
         "placement": 3,
