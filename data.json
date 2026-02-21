@@ -1,5 +1,5 @@
 {
-  "timestamp": "20.02.2026 23:56",
+  "timestamp": "21.02.2026 02:26",
   "weatherTempCelsius": 6,
   "githubLastCommit": "February 20, 2026",
   "steamStatus": "online",
@@ -7,12 +7,12 @@
     "name": "joeyws2",
     "lastMatches": [
       {
-        "matchStart": "today 20:01",
+        "matchStart": "yesterday 20:01",
         "teamSize": "Squad",
         "teamMates": [
+          "CapiToha",
           "K_O_S_I_K",
-          "Krokodillu",
-          "CapiToha"
+          "Krokodillu"
         ],
         "perspective": "TPP",
         "placement": 3,
@@ -25,7 +25,7 @@
         "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.20.20.5320caa7-638a-4c46-ad65-44a6c8408783"
       },
       {
-        "matchStart": "today 19:50",
+        "matchStart": "yesterday 19:50",
         "teamSize": "Squad",
         "teamMates": [],
         "perspective": "TPP",
@@ -39,7 +39,7 @@
         "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.20.19.e6adba29-f445-40da-bd53-ebe99ada5f20"
       },
       {
-        "matchStart": "yesterday 20:55",
+        "matchStart": "19.02. 20:55",
         "teamSize": "Squad",
         "teamMates": [
           "PROMQLASS"
@@ -55,12 +55,12 @@
         "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.squad.eu.2026.02.19.20.6c4d0554-b8d4-4001-a7a0-41b8d5ceee47"
       },
       {
-        "matchStart": "yesterday 20:28",
+        "matchStart": "19.02. 20:28",
         "teamSize": "Squad",
         "teamMates": [
+          "DeCoY_UA",
           "Stoneeey-",
-          "Zeth_RayAway",
-          "DeCoY_UA"
+          "Zeth_RayAway"
         ],
         "perspective": "TPP",
         "placement": 2,
@@ -73,12 +73,12 @@
         "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.19.20.17e945f9-4da6-4a37-941c-1a836261e70a"
       },
       {
-        "matchStart": "yesterday 20:17",
+        "matchStart": "19.02. 20:17",
         "teamSize": "Squad",
         "teamMates": [
           "Voqqee",
-          "Traqueurrr",
-          "Tomtoche"
+          "Tomtoche",
+          "Traqueurrr"
         ],
         "perspective": "TPP",
         "placement": 18,
@@ -91,7 +91,7 @@
         "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.19.20.822fc6c6-d24f-4cbf-aea0-1f57223faef4"
       },
       {
-        "matchStart": "yesterday 19:30",
+        "matchStart": "19.02. 19:30",
         "teamSize": "Squad",
         "teamMates": [
           "Sahov1ch",
@@ -108,12 +108,12 @@
         "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.19.19.8819f8b5-623f-460b-bdde-3a4023a448c9"
       },
       {
-        "matchStart": "yesterday 18:21",
+        "matchStart": "19.02. 18:21",
         "teamSize": "Squad",
         "teamMates": [
-          "goRRan_PL",
+          "Hayka_u_Ckyka",
           "Impsak",
-          "Hayka_u_Ckyka"
+          "goRRan_PL"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -147,8 +147,8 @@
         "matchStart": "18.02. 19:06",
         "teamSize": "Squad",
         "teamMates": [
-          "Pikachu07-",
-          "Tommy_LG"
+          "Tommy_LG",
+          "Pikachu07-"
         ],
         "perspective": "TPP",
         "placement": 2,
@@ -164,8 +164,8 @@
         "matchStart": "18.02. 18:53",
         "teamSize": "Squad",
         "teamMates": [
-          "Si-Ruzic-The-3Rd",
-          "GYBYM"
+          "GYBYM",
+          "Si-Ruzic-The-3Rd"
         ],
         "perspective": "TPP",
         "placement": 19,
