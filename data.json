@@ -1,5 +1,5 @@
 {
-  "timestamp": "21.02.2026 21:48",
+  "timestamp": "21.02.2026 22:31",
   "weatherTempCelsius": 9,
   "githubLastCommit": "February 21, 2026",
   "steamStatus": "online",
@@ -10,9 +10,9 @@
         "matchStart": "today 19:34",
         "teamSize": "Squad",
         "teamMates": [
+          "IMMaizyMan",
           "ghost_397",
-          "Tibicsoki1978",
-          "IMMaizyMan"
+          "Tibicsoki1978"
         ],
         "perspective": "TPP",
         "placement": 11,
@@ -63,8 +63,8 @@
         "matchStart": "today 14:57",
         "teamSize": "Squad",
         "teamMates": [
-          "Kunt_Tonyukuk",
           "GuuhRibeiro",
+          "Kunt_Tonyukuk",
           "Cannibale59"
         ],
         "perspective": "TPP",
@@ -116,9 +116,9 @@
         "matchStart": "today 09:04",
         "teamSize": "Squad",
         "teamMates": [
-          "xALPES",
           "bulletreverse",
-          "NathanLiertian"
+          "NathanLiertian",
+          "xALPES"
         ],
         "perspective": "TPP",
         "placement": 18,
@@ -150,9 +150,9 @@
         "matchStart": "today 07:41",
         "teamSize": "Squad",
         "teamMates": [
-          "mefistofelis",
           "AppleLemon32",
-          "eV_cz"
+          "eV_cz",
+          "mefistofelis"
         ],
         "perspective": "TPP",
         "placement": 1,
