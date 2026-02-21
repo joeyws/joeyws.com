@@ -1,17 +1,35 @@
 {
-  "timestamp": "21.02.2026 15:42",
+  "timestamp": "21.02.2026 15:59",
   "weatherTempCelsius": 10,
   "githubLastCommit": "February 21, 2026",
-  "steamStatus": "online",
+  "steamStatus": "offline",
   "pubg": {
     "name": "joeyws2",
     "lastMatches": [
       {
+        "matchStart": "today 15:25",
+        "teamSize": "Squad",
+        "teamMates": [
+          "ViVago_7",
+          "Amo_Jani",
+          "GroundzZzero"
+        ],
+        "perspective": "TPP",
+        "placement": 20,
+        "map": "Erangel (Remaster)",
+        "survivalTime": "6:23",
+        "distance": "0.9",
+        "kills": 0,
+        "assists": 0,
+        "damage": 42,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.squad.eu.2026.02.21.15.ef68ddcf-8ea0-42a0-9b18-6d9f993f7aad"
+      },
+      {
         "matchStart": "today 14:57",
         "teamSize": "Squad",
         "teamMates": [
-          "GuuhRibeiro",
           "Kunt_Tonyukuk",
+          "GuuhRibeiro",
           "Cannibale59"
         ],
         "perspective": "TPP",
@@ -63,9 +81,9 @@
         "matchStart": "today 09:04",
         "teamSize": "Squad",
         "teamMates": [
+          "xALPES",
           "bulletreverse",
-          "NathanLiertian",
-          "xALPES"
+          "NathanLiertian"
         ],
         "perspective": "TPP",
         "placement": 18,
@@ -97,9 +115,9 @@
         "matchStart": "today 07:41",
         "teamSize": "Squad",
         "teamMates": [
+          "mefistofelis",
           "AppleLemon32",
-          "eV_cz",
-          "mefistofelis"
+          "eV_cz"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -132,9 +150,9 @@
         "matchStart": "yesterday 20:01",
         "teamSize": "Squad",
         "teamMates": [
-          "CapiToha",
+          "K_O_S_I_K",
           "Krokodillu",
-          "K_O_S_I_K"
+          "CapiToha"
         ],
         "perspective": "TPP",
         "placement": 3,
@@ -159,22 +177,6 @@
         "assists": 0,
         "damage": 850,
         "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.20.19.e6adba29-f445-40da-bd53-ebe99ada5f20"
-      },
-      {
-        "matchStart": "19.02. 20:55",
-        "teamSize": "Squad",
-        "teamMates": [
-          "PROMQLASS"
-        ],
-        "perspective": "TPP",
-        "placement": 16,
-        "map": "Miramar",
-        "survivalTime": "11:14",
-        "distance": "2.4",
-        "kills": 1,
-        "assists": 0,
-        "damage": 209,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.squad.eu.2026.02.19.20.6c4d0554-b8d4-4001-a7a0-41b8d5ceee47"
       }
     ]
   }
