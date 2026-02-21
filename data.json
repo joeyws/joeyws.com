@@ -1,7 +1,7 @@
 {
-  "timestamp": "21.02.2026 04:18",
-  "weatherTempCelsius": 6,
-  "githubLastCommit": null,
+  "timestamp": "21.02.2026 05:14",
+  "weatherTempCelsius": 7,
+  "githubLastCommit": "February 21, 2026",
   "steamStatus": "online",
   "pubg": {
     "name": "joeyws2",
@@ -10,8 +10,8 @@
         "matchStart": "yesterday 20:01",
         "teamSize": "Squad",
         "teamMates": [
-          "CapiToha",
           "K_O_S_I_K",
+          "CapiToha",
           "Krokodillu"
         ],
         "perspective": "TPP",
@@ -59,8 +59,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "DeCoY_UA",
-          "Stoneeey-",
-          "Zeth_RayAway"
+          "Zeth_RayAway",
+          "Stoneeey-"
         ],
         "perspective": "TPP",
         "placement": 2,
@@ -76,9 +76,9 @@
         "matchStart": "19.02. 20:17",
         "teamSize": "Squad",
         "teamMates": [
+          "Traqueurrr",
           "Voqqee",
-          "Tomtoche",
-          "Traqueurrr"
+          "Tomtoche"
         ],
         "perspective": "TPP",
         "placement": 18,
@@ -130,8 +130,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "Schnippa999",
-          "Titko",
-          "A-L-D-I"
+          "A-L-D-I",
+          "Titko"
         ],
         "perspective": "TPP",
         "placement": 2,
@@ -147,8 +147,8 @@
         "matchStart": "18.02. 19:06",
         "teamSize": "Squad",
         "teamMates": [
-          "Tommy_LG",
-          "Pikachu07-"
+          "Pikachu07-",
+          "Tommy_LG"
         ],
         "perspective": "TPP",
         "placement": 2,
