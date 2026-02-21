@@ -1,5 +1,5 @@
 {
-  "timestamp": "21.02.2026 19:35",
+  "timestamp": "21.02.2026 19:52",
   "weatherTempCelsius": 10,
   "githubLastCommit": "February 21, 2026",
   "steamStatus": "online",
@@ -7,12 +7,29 @@
     "name": "joeyws2",
     "lastMatches": [
       {
+        "matchStart": "today 19:17",
+        "teamSize": "Squad",
+        "teamMates": [
+          "umut6767686675",
+          "TESTERE01"
+        ],
+        "perspective": "TPP",
+        "placement": 6,
+        "map": "Summerland_Main",
+        "survivalTime": "13:08",
+        "distance": "2.4",
+        "kills": 0,
+        "assists": 0,
+        "damage": 0,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.squad.eu.2026.02.21.19.7d234a8c-8423-44ce-925b-1da27dd5ef37"
+      },
+      {
         "matchStart": "today 15:25",
         "teamSize": "Squad",
         "teamMates": [
-          "ViVago_7",
+          "Amo_Jani",
           "GroundzZzero",
-          "Amo_Jani"
+          "ViVago_7"
         ],
         "perspective": "TPP",
         "placement": 20,
@@ -28,8 +45,8 @@
         "matchStart": "today 14:57",
         "teamSize": "Squad",
         "teamMates": [
-          "GuuhRibeiro",
           "Kunt_Tonyukuk",
+          "GuuhRibeiro",
           "Cannibale59"
         ],
         "perspective": "TPP",
@@ -82,8 +99,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "bulletreverse",
-          "NathanLiertian",
-          "xALPES"
+          "xALPES",
+          "NathanLiertian"
         ],
         "perspective": "TPP",
         "placement": 18,
@@ -115,9 +132,9 @@
         "matchStart": "today 07:41",
         "teamSize": "Squad",
         "teamMates": [
-          "eV_cz",
           "mefistofelis",
-          "AppleLemon32"
+          "AppleLemon32",
+          "eV_cz"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -150,8 +167,8 @@
         "matchStart": "yesterday 20:01",
         "teamSize": "Squad",
         "teamMates": [
-          "CapiToha",
           "K_O_S_I_K",
+          "CapiToha",
           "Krokodillu"
         ],
         "perspective": "TPP",
@@ -163,20 +180,6 @@
         "assists": 1,
         "damage": 735,
         "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.20.20.5320caa7-638a-4c46-ad65-44a6c8408783"
-      },
-      {
-        "matchStart": "yesterday 19:50",
-        "teamSize": "Squad",
-        "teamMates": [],
-        "perspective": "TPP",
-        "placement": 15,
-        "map": "Erangel (Remaster)",
-        "survivalTime": "8:32",
-        "distance": "1.9",
-        "kills": 7,
-        "assists": 0,
-        "damage": 850,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.20.19.e6adba29-f445-40da-bd53-ebe99ada5f20"
       }
     ]
   }
