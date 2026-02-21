@@ -1,5 +1,5 @@
 {
-  "timestamp": "21.02.2026 13:51",
+  "timestamp": "21.02.2026 14:18",
   "weatherTempCelsius": 9,
   "githubLastCommit": "February 21, 2026",
   "steamStatus": "online",
@@ -7,11 +7,28 @@
     "name": "joeyws2",
     "lastMatches": [
       {
+        "matchStart": "today 13:45",
+        "teamSize": "Squad",
+        "teamMates": [
+          "Goldhopigen",
+          "CsaboTheKing"
+        ],
+        "perspective": "TPP",
+        "placement": 11,
+        "map": "Miramar",
+        "survivalTime": "19:11",
+        "distance": "6.3",
+        "kills": 0,
+        "assists": 0,
+        "damage": 62,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.squad.eu.2026.02.21.13.8690f8ba-98ed-4a4e-a42c-7e61760ee52a"
+      },
+      {
         "matchStart": "today 09:04",
         "teamSize": "Squad",
         "teamMates": [
-          "bulletreverse",
           "xALPES",
+          "bulletreverse",
           "NathanLiertian"
         ],
         "perspective": "TPP",
@@ -62,8 +79,8 @@
         "matchStart": "today 06:53",
         "teamSize": "Squad",
         "teamMates": [
-          "claymoooo",
-          "AntraXRiPhantom"
+          "AntraXRiPhantom",
+          "claymoooo"
         ],
         "perspective": "TPP",
         "placement": 2,
@@ -80,8 +97,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "K_O_S_I_K",
-          "CapiToha",
-          "Krokodillu"
+          "Krokodillu",
+          "CapiToha"
         ],
         "perspective": "TPP",
         "placement": 3,
@@ -127,9 +144,9 @@
         "matchStart": "19.02. 20:28",
         "teamSize": "Squad",
         "teamMates": [
-          "DeCoY_UA",
+          "Stoneeey-",
           "Zeth_RayAway",
-          "Stoneeey-"
+          "DeCoY_UA"
         ],
         "perspective": "TPP",
         "placement": 2,
@@ -145,8 +162,8 @@
         "matchStart": "19.02. 20:17",
         "teamSize": "Squad",
         "teamMates": [
-          "Traqueurrr",
           "Voqqee",
+          "Traqueurrr",
           "Tomtoche"
         ],
         "perspective": "TPP",
@@ -158,23 +175,6 @@
         "assists": 0,
         "damage": 0,
         "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.19.20.822fc6c6-d24f-4cbf-aea0-1f57223faef4"
-      },
-      {
-        "matchStart": "19.02. 19:30",
-        "teamSize": "Squad",
-        "teamMates": [
-          "Sahov1ch",
-          "BraneSoldier"
-        ],
-        "perspective": "TPP",
-        "placement": 2,
-        "map": "Erangel (Remaster)",
-        "survivalTime": "22:48",
-        "distance": "6.5",
-        "kills": 8,
-        "assists": 1,
-        "damage": 746,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.19.19.8819f8b5-623f-460b-bdde-3a4023a448c9"
       }
     ]
   }
