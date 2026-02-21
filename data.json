@@ -1,5 +1,5 @@
 {
-  "timestamp": "21.02.2026 13:08",
+  "timestamp": "21.02.2026 13:51",
   "weatherTempCelsius": 9,
   "githubLastCommit": "February 21, 2026",
   "steamStatus": "online",
@@ -10,8 +10,8 @@
         "matchStart": "today 09:04",
         "teamSize": "Squad",
         "teamMates": [
-          "xALPES",
           "bulletreverse",
+          "xALPES",
           "NathanLiertian"
         ],
         "perspective": "TPP",
@@ -62,8 +62,8 @@
         "matchStart": "today 06:53",
         "teamSize": "Squad",
         "teamMates": [
-          "AntraXRiPhantom",
-          "claymoooo"
+          "claymoooo",
+          "AntraXRiPhantom"
         ],
         "perspective": "TPP",
         "placement": 2,
@@ -80,8 +80,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "K_O_S_I_K",
-          "Krokodillu",
-          "CapiToha"
+          "CapiToha",
+          "Krokodillu"
         ],
         "perspective": "TPP",
         "placement": 3,
@@ -127,9 +127,9 @@
         "matchStart": "19.02. 20:28",
         "teamSize": "Squad",
         "teamMates": [
-          "Stoneeey-",
+          "DeCoY_UA",
           "Zeth_RayAway",
-          "DeCoY_UA"
+          "Stoneeey-"
         ],
         "perspective": "TPP",
         "placement": 2,
@@ -145,8 +145,8 @@
         "matchStart": "19.02. 20:17",
         "teamSize": "Squad",
         "teamMates": [
-          "Voqqee",
           "Traqueurrr",
+          "Voqqee",
           "Tomtoche"
         ],
         "perspective": "TPP",
