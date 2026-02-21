@@ -129,7 +129,7 @@ async function updateData() {
     // Last Matches
     const lastMatchIds = player.relationships.matches.data.slice(0, 10).map((m) => m.id);
     function formatMapName(map) {
-      const maps = { Erangel_Main:"Erangel", Desert_Main:"Miramar", Savage_Main:"Sanhok", DihorOtok_Main:"Vikendi", Baltic_Main:"Erangel (Remaster)", Range_Main:"Camp Jackal", Chimera_Main:"Paramo", Heaven_Main:"Haven", Tiger_Main:"Taego", Kiki_Main:"Deston", Neon_Main:"Rondo" };
+      const maps = { Erangel_Main:"Erangel", Desert_Main:"Miramar", Savage_Main:"Sanhok", DihorOtok_Main:"Vikendi", Baltic_Main:"Erangel", Range_Main:"Camp Jackal", Chimera_Main:"Paramo", Heaven_Main:"Haven", Tiger_Main:"Taego", Kiki_Main:"Deston", Neon_Main:"Rondo" };
       return maps[map] || map;
     }
     // Matches
