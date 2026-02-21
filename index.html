@@ -17,7 +17,7 @@
 <link rel="canonical" href="https://joeyws.com/">
 <style>
     @font-face{font-family:webfont;src:url("font/SourceCodePro-Regular.woff2");font-display:swap;}
-    :root{--background:#000;--text:#ccc;--highlight:#1f6;--spacer:8px;}
+    :root{--background:#000;--text:#ccc;--highlight:#0f0;--spacer:8px;}
     ::selection{background:var(--text);color:var(--background);}
     /* RESET */ *{text-decoration-thickness:.01em;text-underline-offset:3px;text-decoration-skip-ink:none;font-kerning:normal;outline:none;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{box-sizing:content-box;border-radius:0;/* -webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-border-radius:0;-webkit-text-size-adjust:none;-webkit-appearance:none;font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased; */}
 	html{font-size:13px;}
@@ -65,8 +65,11 @@
     .gallery-img img{display:block;max-height:100%;max-width:100%;object-fit:contain;}
     /* SPECIAL */
     #mitgliedakbw{width:200px;max-width:100%;fill:var(--text);display:block;}
-    @keyframes blink-loading{0%{opacity:0;}50%{opacity:1;}}.loading{animation:.3s blink-loading steps(1) infinite;}
-    @keyframes map{100%{outline-color:transparent;outline-offset:20px;}}#map{width:760px;max-width:100%;aspect-ratio:150/75;background:center center url(img/other/world.gif) no-repeat scroll;position:relative;background-size:contain;}#map:after{top:23%;left:52.5%;outline:1px solid var(--highlight);background:var(--highlight);box-shadow:0 3px 8px #000;animation:map 1.2s infinite ease-out;width:7px;height:7px;border-radius:100vmax;pointer-events:none;position:absolute;transform:translate(-50%,-50%);display:block;content:"";}
+    @keyframes blink-loading{0%{opacity:0;}50%{opacity:1;}}
+    .loading{animation:.3s blink-loading steps(1) infinite;}
+    @keyframes map{100%{outline-color:transparent;outline-offset:20px;}}
+    #map{width:760px;max-width:100%;aspect-ratio:150/75;background:center center url(img/other/world.gif) no-repeat scroll;position:relative;background-size:contain;}
+    #map:after{top:23%;left:52.5%;outline:1px solid var(--highlight);background:var(--highlight);box-shadow:0 3px 8px #000;animation:map 1.2s infinite ease-out;width:7px;height:7px;border-radius:100vmax;pointer-events:none;position:absolute;transform:translate(-50%,-50%);display:block;content:"";}
     #cursor{width:12px;height:12px;background:#fff1;backdrop-filter:blur(20px) invert(100%) saturate(10);-webkit-backdrop-filter:blur(20px) invert(100%) saturate(10);border-radius:100vmax;position:fixed;top:-50px;left:50%;transform:translate(-50%,-50%);font-size:0;line-height:0;z-index:99999999;pointer-events:none;}*{cursor:none !important;}
     /* GAMING */
     #pubg{}
@@ -519,7 +522,7 @@ fetch('https://joeyws.com/data.json')
             const mates = match.teamMates.length ? match.teamMates.join(', ') : '-';
             card.innerHTML = `
                 <p>
-                    <span style="float:right;">${match.matchStart}</span><span style="font-size:36px;/* line-height:1.3em; */background:var(--text);color:var(--background);">#${match.placement}</span><br>
+                    <span style="float:right;">${match.matchStart}</span><span style="font-size:36px;line-height:1.3em;background:var(--highlight);color:var(--background);">#${match.placement}</span><br>
                     ${match.teamSize} ${match.perspective}, ${map}
                 </p>
                 <p>
@@ -529,8 +532,11 @@ fetch('https://joeyws.com/data.json')
                 </p>
                 <p>
                     Team mates:&nbsp; &nbsp; &nbsp;${mates}<br>
-                    Time survived: &nbsp;${match.survivalTime}<br>
-                    <a style="float:right;" href="${match.url}" target="_blank">Watch 2D Replay</a>Travelled: &nbsp; &nbsp; &nbsp;${match.distance} km
+                    Survived: &nbsp; &nbsp; &nbsp; ${match.survivalTime}<br>
+                    Travelled: &nbsp; &nbsp; &nbsp;${match.distance} km
+                </p>
+                <p>
+                    <a href="${match.url}" target="_blank">Watch 2D Replay</a>
                 </p>
                 <hr>
             `;
