@@ -1,5 +1,5 @@
 {
-  "timestamp": "21.02.2026 20:17",
+  "timestamp": "21.02.2026 20:44",
   "weatherTempCelsius": 9,
   "githubLastCommit": "February 21, 2026",
   "steamStatus": "online",
@@ -10,9 +10,9 @@
         "matchStart": "today 19:34",
         "teamSize": "Squad",
         "teamMates": [
-          "IMMaizyMan",
           "ghost_397",
-          "Tibicsoki1978"
+          "Tibicsoki1978",
+          "IMMaizyMan"
         ],
         "perspective": "TPP",
         "placement": 11,
@@ -46,8 +46,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "ViVago_7",
-          "Amo_Jani",
-          "GroundzZzero"
+          "GroundzZzero",
+          "Amo_Jani"
         ],
         "perspective": "TPP",
         "placement": 20,
@@ -81,9 +81,9 @@
         "matchStart": "today 14:24",
         "teamSize": "Squad",
         "teamMates": [
-          "sparksk87",
           "AFKwarriorz",
-          "Ydreams-DZ"
+          "Ydreams-DZ",
+          "sparksk87"
         ],
         "perspective": "TPP",
         "placement": 6,
@@ -99,8 +99,8 @@
         "matchStart": "today 13:45",
         "teamSize": "Squad",
         "teamMates": [
-          "Goldhopigen",
-          "CsaboTheKing"
+          "CsaboTheKing",
+          "Goldhopigen"
         ],
         "perspective": "TPP",
         "placement": 11,
@@ -150,9 +150,9 @@
         "matchStart": "today 07:41",
         "teamSize": "Squad",
         "teamMates": [
-          "AppleLemon32",
           "eV_cz",
-          "mefistofelis"
+          "mefistofelis",
+          "AppleLemon32"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -168,8 +168,8 @@
         "matchStart": "today 06:53",
         "teamSize": "Squad",
         "teamMates": [
-          "AntraXRiPhantom",
-          "claymoooo"
+          "claymoooo",
+          "AntraXRiPhantom"
         ],
         "perspective": "TPP",
         "placement": 2,
