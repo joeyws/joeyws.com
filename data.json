@@ -1,5 +1,5 @@
 {
-  "timestamp": "22.02. 13:03",
+  "timestamp": "22.02. 13:59",
   "weatherTempCelsius": 12,
   "githubLastCommit": "February 22, 2026",
   "steamStatus": "online",
@@ -28,9 +28,9 @@
         "matchStart": "22.02. 12:06",
         "teamSize": "Squad",
         "teamMates": [
-          "Flopsibert",
+          "SlumShaudy",
           "crovv86",
-          "SlumShaudy"
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 7,
@@ -46,9 +46,9 @@
         "matchStart": "22.02. 11:58",
         "teamSize": "Squad",
         "teamMates": [
-          "SlumShaudy",
+          "Flopsibert",
           "feyyyyys",
-          "Flopsibert"
+          "SlumShaudy"
         ],
         "perspective": "FPP",
         "placement": 17,
@@ -83,8 +83,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "Flopsibert",
-          "KingZurenson",
-          "Dark-Slayer7"
+          "Dark-Slayer7",
+          "KingZurenson"
         ],
         "perspective": "FPP",
         "placement": 6,
@@ -100,9 +100,9 @@
         "matchStart": "22.02. 11:07",
         "teamSize": "Squad",
         "teamMates": [
+          "Flopsibert",
           "KingZurenson",
-          "YourLastBreath01",
-          "Flopsibert"
+          "YourLastBreath01"
         ],
         "perspective": "FPP",
         "placement": 11,
@@ -118,9 +118,9 @@
         "matchStart": "22.02. 10:27",
         "teamSize": "Squad",
         "teamMates": [
+          "BazukaYaso",
           "TrippleX_Vali",
-          "scoothme_whoyou",
-          "BazukaYaso"
+          "scoothme_whoyou"
         ],
         "perspective": "TPP",
         "placement": 7,
@@ -136,9 +136,9 @@
         "matchStart": "22.02. 10:07",
         "teamSize": "Squad",
         "teamMates": [
+          "H-zion",
           "PerikoCastro",
-          "Czeczen6699",
-          "H-zion"
+          "Czeczen6699"
         ],
         "perspective": "TPP",
         "placement": 9,
@@ -154,9 +154,9 @@
         "matchStart": "22.02. 9:54",
         "teamSize": "Squad",
         "teamMates": [
-          "Slothstop",
+          "PAREXS",
           "H-zion",
-          "PAREXS"
+          "Slothstop"
         ],
         "perspective": "TPP",
         "placement": 16,
@@ -172,9 +172,9 @@
         "matchStart": "22.02. 9:10",
         "teamSize": "Squad",
         "teamMates": [
-          "JONESTONE",
+          "SuperBurschie",
           "ZOLALDEL1",
-          "SuperBurschie"
+          "JONESTONE"
         ],
         "perspective": "TPP",
         "placement": 5,
