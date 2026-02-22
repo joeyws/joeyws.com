@@ -1,13 +1,13 @@
 {
-  "timestamp": "21.02.2026 21:00",
-  "weatherTempCelsius": 9,
-  "githubLastCommit": "February 21, 2026",
-  "steamStatus": "online",
+  "timestamp": "22.02.2026 06:59",
+  "weatherTempCelsius": 10,
+  "githubLastCommit": "February 22, 2026",
+  "steamStatus": "offline",
   "pubg": {
     "name": "joeyws2",
     "lastMatches": [
       {
-        "matchStart": "today 19:34",
+        "matchStart": "yesterday 19:34",
         "teamSize": "Squad",
         "teamMates": [
           "ghost_397",
@@ -25,7 +25,7 @@
         "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.squad.eu.2026.02.21.19.c5778ad9-4065-455e-a1c0-7cc08ade2993"
       },
       {
-        "matchStart": "today 19:17",
+        "matchStart": "yesterday 19:17",
         "teamSize": "Squad",
         "teamMates": [
           "umut6767686675",
@@ -42,7 +42,7 @@
         "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.squad.eu.2026.02.21.19.7d234a8c-8423-44ce-925b-1da27dd5ef37"
       },
       {
-        "matchStart": "today 15:25",
+        "matchStart": "yesterday 15:25",
         "teamSize": "Squad",
         "teamMates": [
           "ViVago_7",
@@ -51,7 +51,7 @@
         ],
         "perspective": "TPP",
         "placement": 20,
-        "map": "Erangel (Remaster)",
+        "map": "Erangel",
         "survivalTime": "6:23",
         "distance": "0.9",
         "kills": 0,
@@ -60,7 +60,7 @@
         "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.squad.eu.2026.02.21.15.ef68ddcf-8ea0-42a0-9b18-6d9f993f7aad"
       },
       {
-        "matchStart": "today 14:57",
+        "matchStart": "yesterday 14:57",
         "teamSize": "Squad",
         "teamMates": [
           "Kunt_Tonyukuk",
@@ -78,7 +78,7 @@
         "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.squad.eu.2026.02.21.14.f371675b-9eb3-46ac-9f67-c0a761a58e60"
       },
       {
-        "matchStart": "today 14:24",
+        "matchStart": "yesterday 14:24",
         "teamSize": "Squad",
         "teamMates": [
           "sparksk87",
@@ -96,7 +96,7 @@
         "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.squad.eu.2026.02.21.14.dde99f6a-99d2-4ca6-8f70-5fb6f0ededf7"
       },
       {
-        "matchStart": "today 13:45",
+        "matchStart": "yesterday 13:45",
         "teamSize": "Squad",
         "teamMates": [
           "Goldhopigen",
@@ -113,7 +113,7 @@
         "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.squad.eu.2026.02.21.13.8690f8ba-98ed-4a4e-a42c-7e61760ee52a"
       },
       {
-        "matchStart": "today 09:04",
+        "matchStart": "yesterday 09:04",
         "teamSize": "Squad",
         "teamMates": [
           "xALPES",
@@ -122,7 +122,7 @@
         ],
         "perspective": "TPP",
         "placement": 18,
-        "map": "Erangel (Remaster)",
+        "map": "Erangel",
         "survivalTime": "7:25",
         "distance": "0.8",
         "kills": 0,
@@ -131,14 +131,14 @@
         "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.squad.eu.2026.02.21.09.cd64d21c-6342-4d69-a62c-678a960d5c6b"
       },
       {
-        "matchStart": "today 08:31",
+        "matchStart": "yesterday 08:31",
         "teamSize": "Squad",
         "teamMates": [
           "43-Wolf"
         ],
         "perspective": "TPP",
         "placement": 9,
-        "map": "Erangel (Remaster)",
+        "map": "Erangel",
         "survivalTime": "15:36",
         "distance": "4.4",
         "kills": 1,
@@ -147,7 +147,7 @@
         "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.21.08.15acbe6d-32d1-4c13-82b5-23f2047b898d"
       },
       {
-        "matchStart": "today 07:41",
+        "matchStart": "yesterday 07:41",
         "teamSize": "Squad",
         "teamMates": [
           "mefistofelis",
@@ -156,7 +156,7 @@
         ],
         "perspective": "TPP",
         "placement": 1,
-        "map": "Erangel (Remaster)",
+        "map": "Erangel",
         "survivalTime": "20:30",
         "distance": "9.6",
         "kills": 3,
@@ -165,7 +165,7 @@
         "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.21.07.654d7e1d-ba7a-4604-b26c-cbc1d3e4bff6"
       },
       {
-        "matchStart": "today 06:53",
+        "matchStart": "yesterday 06:53",
         "teamSize": "Squad",
         "teamMates": [
           "AntraXRiPhantom",
@@ -173,7 +173,7 @@
         ],
         "perspective": "TPP",
         "placement": 2,
-        "map": "Erangel (Remaster)",
+        "map": "Erangel",
         "survivalTime": "22:48",
         "distance": "5.9",
         "kills": 5,
