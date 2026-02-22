@@ -1,5 +1,5 @@
 {
-  "timestamp": "22.02.2026 06:59",
+  "timestamp": "22.02.2026 07:37",
   "weatherTempCelsius": 10,
   "githubLastCommit": "February 22, 2026",
   "steamStatus": "offline",
@@ -10,9 +10,9 @@
         "matchStart": "yesterday 19:34",
         "teamSize": "Squad",
         "teamMates": [
+          "IMMaizyMan",
           "ghost_397",
-          "Tibicsoki1978",
-          "IMMaizyMan"
+          "Tibicsoki1978"
         ],
         "perspective": "TPP",
         "placement": 11,
@@ -33,7 +33,7 @@
         ],
         "perspective": "TPP",
         "placement": 6,
-        "map": "Summerland_Main",
+        "map": "Karakin",
         "survivalTime": "13:08",
         "distance": "2.4",
         "kills": 0,
@@ -63,8 +63,8 @@
         "matchStart": "yesterday 14:57",
         "teamSize": "Squad",
         "teamMates": [
-          "Kunt_Tonyukuk",
           "GuuhRibeiro",
+          "Kunt_Tonyukuk",
           "Cannibale59"
         ],
         "perspective": "TPP",
@@ -116,9 +116,9 @@
         "matchStart": "yesterday 09:04",
         "teamSize": "Squad",
         "teamMates": [
-          "xALPES",
           "bulletreverse",
-          "NathanLiertian"
+          "NathanLiertian",
+          "xALPES"
         ],
         "perspective": "TPP",
         "placement": 18,
@@ -150,9 +150,9 @@
         "matchStart": "yesterday 07:41",
         "teamSize": "Squad",
         "teamMates": [
-          "mefistofelis",
           "AppleLemon32",
-          "eV_cz"
+          "eV_cz",
+          "mefistofelis"
         ],
         "perspective": "TPP",
         "placement": 1,
