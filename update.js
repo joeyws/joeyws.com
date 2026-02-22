@@ -11,15 +11,19 @@ async function updateData() {
   let steamStatus = null;
   let pubgData = {};
 
+  // Format Date
+  function formatDateTime(date) {
+    const day = date.getDate().toString().padStart(2, "0");
+    const month = (date.getMonth() + 1).toString().padStart(2, "0");
+    const year = date.getFullYear();
+    const hours = date.getHours().toString().padStart(2, "0");
+    const minutes = date.getMinutes().toString().padStart(2, "0");
+    return `${day}.${month}.${year} ${hours}:${minutes}`;
+  }
+
   // Timestamp
   function getTimestamp() {
-    const now = new Date();
-    const day = now.getDate().toString().padStart(2, "0");
-    const month = (now.getMonth() + 1).toString().padStart(2, "0");
-    const year = now.getFullYear();
-    const hours = now.getHours().toString().padStart(2, "0");
-    const minutes = now.getMinutes().toString().padStart(2, "0");
-    return `${day}.${month}.${year} ${hours}:${minutes}`;
+    return formatDateTime(new Date());
   }
 
   // Weather: Temp in degree celsius
@@ -86,41 +90,6 @@ async function updateData() {
       }
     );
     const player = pubgRes.data.data[0];
-    /* function formatMatchStart(matchStartIso) {
-      const matchDate = new Date(matchStartIso);
-      const now = new Date();
-      const isToday =
-        matchDate.getFullYear() === now.getFullYear() &&
-        matchDate.getMonth() === now.getMonth() &&
-        matchDate.getDate() === now.getDate();
-      const hours = matchDate.getHours().toString().padStart(2, "0");
-      const minutes = matchDate.getMinutes().toString().padStart(2, "0");
-      if (isToday) return `${hours}:${minutes}`;
-      const day = matchDate.getDate().toString().padStart(2, "0");
-      const month = (matchDate.getMonth() + 1).toString().padStart(2, "0");
-      return `${day}.${month}. ${hours}:${minutes}`;
-    } */
-    function formatMatchStart(matchStartIso) {
-      const matchDate = new Date(matchStartIso);
-      const now = new Date();
-      const hours = matchDate.getHours().toString().padStart(2, "0");
-      const minutes = matchDate.getMinutes().toString().padStart(2, "0");
-      const isToday =
-        matchDate.getFullYear() === now.getFullYear() &&
-        matchDate.getMonth() === now.getMonth() &&
-        matchDate.getDate() === now.getDate();
-      if (isToday) return `today ${hours}:${minutes}`;
-      const yesterday = new Date();
-      yesterday.setDate(now.getDate() - 1);
-      const isYesterday =
-        matchDate.getFullYear() === yesterday.getFullYear() &&
-        matchDate.getMonth() === yesterday.getMonth() &&
-        matchDate.getDate() === yesterday.getDate();
-      if (isYesterday) return `yesterday ${hours}:${minutes}`;
-      const day = matchDate.getDate().toString().padStart(2, "0");
-      const month = (matchDate.getMonth() + 1).toString().padStart(2, "0");
-      return `${day}.${month}. ${hours}:${minutes}`;
-    }
     // Data
     pubgData = {
       name: player.attributes.name,
@@ -128,6 +97,7 @@ async function updateData() {
     };
     // Last Matches
     const lastMatchIds = player.relationships.matches.data.slice(0, 10).map((m) => m.id);
+    // Map Names
     function formatMapName(map) {
       const maps = { Baltic_Main:"Erangel", Desert_Main:"Miramar", Tiger_Main:"Taego", Kiki_Main:"Deston", Neon_Main:"Rondo", DihorOtok_Main:"Vikendi", Savage_Main:"Sanhok", Chimera_Main:"Paramo", Summerland_Main:"Karakin", Range_Main:"Camp Jackal", Heaven_Main:"Haven" };
       return maps[map] || map;
@@ -147,8 +117,10 @@ async function updateData() {
         const participants = matchRes.data.included.filter( (p) => p.type === "participant" );
         const participant = participants.find( (p) => p.attributes.stats.name === player.attributes.name );
         if (participant) {
+          // Match Start
           const matchStartIso = matchRes.data.data.attributes.createdAt;
-          const matchStart = formatMatchStart(matchStartIso);
+          const matchStart = formatDateTime(new Date(matchStartIso));
+          // Team Size / Perspective
           let rawMatchType = matchRes.data.data.attributes.gameMode;
           let [teamSize, perspective] = rawMatchType.split("-");
           if (!perspective || perspective === "") perspective = "TPP";
@@ -166,7 +138,8 @@ async function updateData() {
             teamMates = participants.filter(p => teammateIds.includes(p.id)).map(p => p.attributes.stats.name);
           }
           // Distance in km
-          const distance = (Math.round((participant.attributes.stats.walkDistance + participant.attributes.stats.rideDistance + participant.attributes.stats.swimDistance) / 100) / 10).toFixed(1);
+          // const distance = (Math.round((participant.attributes.stats.walkDistance + participant.attributes.stats.rideDistance + participant.attributes.stats.swimDistance) / 100) / 10).toFixed(1);
+          const distance = ((participant.attributes.stats.walkDistance + participant.attributes.stats.rideDistance + participant.attributes.stats.swimDistance) / 1000).toFixed(1);
           // Survival Time
           const survivalSeconds = participant.attributes.stats.timeSurvived;
           const minutes = Math.floor(survivalSeconds / 60);
