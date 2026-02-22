@@ -1,11 +1,28 @@
 {
-  "timestamp": "22.02.2026 07:44",
+  "timestamp": "22.02.2026 08:33",
   "weatherTempCelsius": 10,
-  "githubLastCommit": "February 22, 2026",
-  "steamStatus": "offline",
+  "githubLastCommit": null,
+  "steamStatus": "online",
   "pubg": {
     "name": "joeyws2",
     "lastMatches": [
+      {
+        "matchStart": "today 07:50",
+        "teamSize": "Squad",
+        "teamMates": [
+          "BALAMYT_UA",
+          "Enkargus"
+        ],
+        "perspective": "TPP",
+        "placement": 1,
+        "map": "Erangel",
+        "survivalTime": "21:39",
+        "distance": "7.0",
+        "kills": 5,
+        "assists": 0,
+        "damage": 336,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.22.07.24d5c612-1fcd-4f15-a960-a6b4d6b6dfb1"
+      },
       {
         "matchStart": "yesterday 19:34",
         "teamSize": "Squad",
@@ -163,23 +180,6 @@
         "assists": 2,
         "damage": 285,
         "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.21.07.654d7e1d-ba7a-4604-b26c-cbc1d3e4bff6"
-      },
-      {
-        "matchStart": "yesterday 06:53",
-        "teamSize": "Squad",
-        "teamMates": [
-          "AntraXRiPhantom",
-          "claymoooo"
-        ],
-        "perspective": "TPP",
-        "placement": 2,
-        "map": "Erangel",
-        "survivalTime": "22:48",
-        "distance": "5.9",
-        "kills": 5,
-        "assists": 0,
-        "damage": 453,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.21.06.06df91a8-c87d-4444-9c9b-6af5497b5576"
       }
     ]
   }
