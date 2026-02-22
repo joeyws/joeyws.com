@@ -1,5 +1,5 @@
 {
-  "timestamp": "22.02. 10:32",
+  "timestamp": "22.02. 11:27",
   "weatherTempCelsius": 12,
   "githubLastCommit": "February 22, 2026",
   "steamStatus": "online",
@@ -7,12 +7,30 @@
     "name": "joeyws2",
     "lastMatches": [
       {
+        "matchStart": "22.02. 10:27",
+        "teamSize": "Squad",
+        "teamMates": [
+          "TrippleX_Vali",
+          "scoothme_whoyou",
+          "BazukaYaso"
+        ],
+        "perspective": "TPP",
+        "placement": 7,
+        "map": "Taego",
+        "survivalTime": "21:55",
+        "distance": "8.5",
+        "kills": 2,
+        "assists": 3,
+        "damage": 281,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.squad.eu.2026.02.22.10.503a05ea-2513-4216-a61a-526b1b81f932"
+      },
+      {
         "matchStart": "22.02. 10:07",
         "teamSize": "Squad",
         "teamMates": [
-          "H-zion",
           "PerikoCastro",
-          "Czeczen6699"
+          "Czeczen6699",
+          "H-zion"
         ],
         "perspective": "TPP",
         "placement": 9,
@@ -25,12 +43,12 @@
         "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.22.10.1f9f7270-3806-47ba-b085-401da09e7882"
       },
       {
-        "matchStart": "22.02. 09:54",
+        "matchStart": "22.02. 9:54",
         "teamSize": "Squad",
         "teamMates": [
-          "PAREXS",
           "H-zion",
-          "Slothstop"
+          "Slothstop",
+          "PAREXS"
         ],
         "perspective": "TPP",
         "placement": 16,
@@ -43,12 +61,12 @@
         "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.22.09.6ff3e811-5e0a-432a-abce-7fbf5f4af371"
       },
       {
-        "matchStart": "22.02. 09:10",
+        "matchStart": "22.02. 9:10",
         "teamSize": "Squad",
         "teamMates": [
-          "SuperBurschie",
+          "JONESTONE",
           "ZOLALDEL1",
-          "JONESTONE"
+          "SuperBurschie"
         ],
         "perspective": "TPP",
         "placement": 5,
@@ -61,11 +79,11 @@
         "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.22.09.33f7740c-62e0-4104-b7ca-5b4446176613"
       },
       {
-        "matchStart": "22.02. 07:50",
+        "matchStart": "22.02. 7:50",
         "teamSize": "Squad",
         "teamMates": [
-          "BALAMYT_UA",
-          "Enkargus"
+          "Enkargus",
+          "BALAMYT_UA"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -81,9 +99,9 @@
         "matchStart": "21.02. 19:34",
         "teamSize": "Squad",
         "teamMates": [
+          "Tibicsoki1978",
           "IMMaizyMan",
-          "ghost_397",
-          "Tibicsoki1978"
+          "ghost_397"
         ],
         "perspective": "TPP",
         "placement": 11,
@@ -116,9 +134,9 @@
         "matchStart": "21.02. 15:25",
         "teamSize": "Squad",
         "teamMates": [
-          "ViVago_7",
           "Amo_Jani",
-          "GroundzZzero"
+          "GroundzZzero",
+          "ViVago_7"
         ],
         "perspective": "TPP",
         "placement": 20,
@@ -134,8 +152,8 @@
         "matchStart": "21.02. 14:57",
         "teamSize": "Squad",
         "teamMates": [
-          "GuuhRibeiro",
           "Kunt_Tonyukuk",
+          "GuuhRibeiro",
           "Cannibale59"
         ],
         "perspective": "TPP",
@@ -152,9 +170,9 @@
         "matchStart": "21.02. 14:24",
         "teamSize": "Squad",
         "teamMates": [
-          "sparksk87",
           "AFKwarriorz",
-          "Ydreams-DZ"
+          "Ydreams-DZ",
+          "sparksk87"
         ],
         "perspective": "TPP",
         "placement": 6,
@@ -165,23 +183,6 @@
         "assists": 0,
         "damage": 161,
         "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.squad.eu.2026.02.21.14.dde99f6a-99d2-4ca6-8f70-5fb6f0ededf7"
-      },
-      {
-        "matchStart": "21.02. 13:45",
-        "teamSize": "Squad",
-        "teamMates": [
-          "Goldhopigen",
-          "CsaboTheKing"
-        ],
-        "perspective": "TPP",
-        "placement": 11,
-        "map": "Miramar",
-        "survivalTime": "19:11",
-        "distance": "6.3",
-        "kills": 0,
-        "assists": 0,
-        "damage": 62,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.squad.eu.2026.02.21.13.8690f8ba-98ed-4a4e-a42c-7e61760ee52a"
       }
     ]
   }
