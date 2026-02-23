@@ -1,6 +1,6 @@
 {
-  "timestamp": "23.02. 5:04",
-  "weatherTempCelsius": 10,
+  "timestamp": "23.02. 6:42",
+  "weatherTempCelsius": 9,
   "githubLastCommit": "February 23, 2026",
   "steamStatus": "offline",
   "pubg": {
@@ -11,8 +11,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "Flopsibert",
-          "KingZurenson",
-          "Battlemann"
+          "Battlemann",
+          "KingZurenson"
         ],
         "perspective": "FPP",
         "placement": 4,
@@ -28,9 +28,9 @@
         "matchStart": "22.02. 16:57",
         "teamSize": "Squad",
         "teamMates": [
-          "KingZurenson",
           "Battlemann",
-          "Flopsibert"
+          "Flopsibert",
+          "KingZurenson"
         ],
         "perspective": "FPP",
         "placement": 19,
@@ -46,8 +46,8 @@
         "matchStart": "22.02. 16:29",
         "teamSize": "Squad",
         "teamMates": [
-          "KingZurenson",
           "Battlemann",
+          "KingZurenson",
           "Flopsibert"
         ],
         "perspective": "FPP",
@@ -82,9 +82,9 @@
         "matchStart": "22.02. 12:06",
         "teamSize": "Squad",
         "teamMates": [
-          "Flopsibert",
+          "SlumShaudy",
           "crovv86",
-          "SlumShaudy"
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 7,
@@ -100,9 +100,9 @@
         "matchStart": "22.02. 11:58",
         "teamSize": "Squad",
         "teamMates": [
-          "SlumShaudy",
+          "Flopsibert",
           "feyyyyys",
-          "Flopsibert"
+          "SlumShaudy"
         ],
         "perspective": "FPP",
         "placement": 17,
@@ -137,8 +137,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "Flopsibert",
-          "KingZurenson",
-          "Dark-Slayer7"
+          "Dark-Slayer7",
+          "KingZurenson"
         ],
         "perspective": "FPP",
         "placement": 6,
@@ -154,9 +154,9 @@
         "matchStart": "22.02. 11:07",
         "teamSize": "Squad",
         "teamMates": [
+          "Flopsibert",
           "KingZurenson",
-          "YourLastBreath01",
-          "Flopsibert"
+          "YourLastBreath01"
         ],
         "perspective": "FPP",
         "placement": 11,
@@ -172,9 +172,9 @@
         "matchStart": "22.02. 10:27",
         "teamSize": "Squad",
         "teamMates": [
+          "BazukaYaso",
           "TrippleX_Vali",
-          "scoothme_whoyou",
-          "BazukaYaso"
+          "scoothme_whoyou"
         ],
         "perspective": "TPP",
         "placement": 7,
