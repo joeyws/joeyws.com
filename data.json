@@ -1,5 +1,5 @@
 {
-  "timestamp": "24.02. 22:40",
+  "timestamp": "24.02. 23:38",
   "weatherTempCelsius": 10,
   "githubLastCommit": "February 24, 2026",
   "steamStatus": "offline",
@@ -11,8 +11,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "georgepapas",
-          "Mr-DeKo",
-          "Kirito_RID"
+          "Kirito_RID",
+          "Mr-DeKo"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -28,9 +28,9 @@
         "matchStart": "23.02. 21:21",
         "teamSize": "Squad",
         "teamMates": [
-          "NightGu4rd",
+          "F1tte",
           "Said-MR",
-          "F1tte"
+          "NightGu4rd"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -46,8 +46,8 @@
         "matchStart": "23.02. 20:57",
         "teamSize": "Squad",
         "teamMates": [
-          "Gkhn34",
           "Axhasheq69",
+          "Gkhn34",
           "strzoola2"
         ],
         "perspective": "TPP",
@@ -80,8 +80,8 @@
         "matchStart": "22.02. 17:06",
         "teamSize": "Squad",
         "teamMates": [
-          "KingZurenson",
           "Flopsibert",
+          "KingZurenson",
           "Battlemann"
         ],
         "perspective": "FPP",
@@ -98,8 +98,8 @@
         "matchStart": "22.02. 16:57",
         "teamSize": "Squad",
         "teamMates": [
-          "Flopsibert",
           "Battlemann",
+          "Flopsibert",
           "KingZurenson"
         ],
         "perspective": "FPP",
@@ -134,9 +134,9 @@
         "matchStart": "22.02. 12:34",
         "teamSize": "Squad",
         "teamMates": [
-          "WeCoyote",
+          "Flopsibert",
           "Battlemann",
-          "Flopsibert"
+          "WeCoyote"
         ],
         "perspective": "FPP",
         "placement": 16,
@@ -171,8 +171,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "SlumShaudy",
-          "feyyyyys",
-          "Flopsibert"
+          "Flopsibert",
+          "feyyyyys"
         ],
         "perspective": "FPP",
         "placement": 17,
