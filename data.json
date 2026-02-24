@@ -1,11 +1,29 @@
 {
-  "timestamp": "24.02. 19:58",
+  "timestamp": "24.02. 20:50",
   "weatherTempCelsius": 10,
   "githubLastCommit": "February 24, 2026",
   "steamStatus": "online",
   "pubg": {
     "name": "joeyws2",
     "lastMatches": [
+      {
+        "matchStart": "24.02. 20:18",
+        "teamSize": "Squad",
+        "teamMates": [
+          "Kirito_RID",
+          "georgepapas",
+          "Mr-DeKo"
+        ],
+        "perspective": "TPP",
+        "placement": 1,
+        "map": "Erangel",
+        "survivalTime": "22:12",
+        "distance": "7.6",
+        "kills": 9,
+        "assists": 0,
+        "damage": 585,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.24.20.9994279a-d965-49cf-960d-f0cf375f29f3"
+      },
       {
         "matchStart": "23.02. 21:21",
         "teamSize": "Squad",
@@ -165,24 +183,6 @@
         "assists": 0,
         "damage": 0,
         "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.squad-fpp.eu.2026.02.22.11.81d4b9d1-11e1-4c24-b764-267e8d6f7e9e"
-      },
-      {
-        "matchStart": "22.02. 11:53",
-        "teamSize": "Squad",
-        "teamMates": [
-          "Flopsibert",
-          "S1sYph3",
-          "Antbushman"
-        ],
-        "perspective": "FPP",
-        "placement": 25,
-        "map": "Miramar",
-        "survivalTime": "2:29",
-        "distance": "0.5",
-        "kills": 0,
-        "assists": 0,
-        "damage": 0,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.squad-fpp.eu.2026.02.22.11.c337e031-2b6d-4e9f-95f3-fb167546ef6c"
       }
     ]
   }
