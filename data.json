@@ -1,6 +1,6 @@
 {
-  "timestamp": "24.02. 7:34",
-  "weatherTempCelsius": 11,
+  "timestamp": "24.02. 8:57",
+  "weatherTempCelsius": 10,
   "githubLastCommit": "February 24, 2026",
   "steamStatus": "offline",
   "pubg": {
@@ -10,9 +10,9 @@
         "matchStart": "23.02. 21:21",
         "teamSize": "Squad",
         "teamMates": [
-          "F1tte",
           "Said-MR",
-          "NightGu4rd"
+          "NightGu4rd",
+          "F1tte"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -28,9 +28,9 @@
         "matchStart": "23.02. 20:57",
         "teamSize": "Squad",
         "teamMates": [
-          "Axhasheq69",
           "Gkhn34",
-          "strzoola2"
+          "strzoola2",
+          "Axhasheq69"
         ],
         "perspective": "TPP",
         "placement": 3,
@@ -63,8 +63,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "Flopsibert",
-          "KingZurenson",
-          "Battlemann"
+          "Battlemann",
+          "KingZurenson"
         ],
         "perspective": "FPP",
         "placement": 4,
@@ -98,9 +98,9 @@
         "matchStart": "22.02. 16:29",
         "teamSize": "Squad",
         "teamMates": [
-          "Flopsibert",
+          "Battlemann",
           "KingZurenson",
-          "Battlemann"
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 3,
@@ -117,8 +117,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "Flopsibert",
-          "Battlemann",
-          "WeCoyote"
+          "WeCoyote",
+          "Battlemann"
         ],
         "perspective": "FPP",
         "placement": 16,
@@ -135,8 +135,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "SlumShaudy",
-          "Flopsibert",
-          "crovv86"
+          "crovv86",
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 7,
@@ -152,9 +152,9 @@
         "matchStart": "22.02. 11:58",
         "teamSize": "Squad",
         "teamMates": [
-          "SlumShaudy",
           "Flopsibert",
-          "feyyyyys"
+          "feyyyyys",
+          "SlumShaudy"
         ],
         "perspective": "FPP",
         "placement": 17,
@@ -170,8 +170,8 @@
         "matchStart": "22.02. 11:53",
         "teamSize": "Squad",
         "teamMates": [
-          "S1sYph3",
           "Flopsibert",
+          "S1sYph3",
           "Antbushman"
         ],
         "perspective": "FPP",
