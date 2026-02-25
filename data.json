@@ -1,8 +1,8 @@
 {
-  "timestamp": "25.02. 21:40",
-  "weatherTempCelsius": 10,
+  "timestamp": "25.02. 22:40",
+  "weatherTempCelsius": 9,
   "githubLastCommit": "February 25, 2026",
-  "steamStatus": "online",
+  "steamStatus": "offline",
   "pubg": {
     "name": "joeyws2",
     "lastMatches": [
@@ -10,9 +10,9 @@
         "matchStart": "25.02. 20:13",
         "teamSize": "Squad",
         "teamMates": [
-          "SNik_BRO",
+          "Predator9111",
           "Th3_Big_Lebowski",
-          "Predator9111"
+          "SNik_BRO"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -28,8 +28,8 @@
         "matchStart": "25.02. 19:51",
         "teamSize": "Squad",
         "teamMates": [
-          "SK_22__Scorpion_",
-          "AyeMacHunt"
+          "AyeMacHunt",
+          "SK_22__Scorpion_"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -45,9 +45,9 @@
         "matchStart": "24.02. 20:18",
         "teamSize": "Squad",
         "teamMates": [
-          "georgepapas",
+          "Mr-DeKo",
           "Kirito_RID",
-          "Mr-DeKo"
+          "georgepapas"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -63,9 +63,9 @@
         "matchStart": "23.02. 21:21",
         "teamSize": "Squad",
         "teamMates": [
-          "F1tte",
+          "NightGu4rd",
           "Said-MR",
-          "NightGu4rd"
+          "F1tte"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -81,9 +81,9 @@
         "matchStart": "23.02. 20:57",
         "teamSize": "Squad",
         "teamMates": [
-          "Axhasheq69",
           "Gkhn34",
-          "strzoola2"
+          "strzoola2",
+          "Axhasheq69"
         ],
         "perspective": "TPP",
         "placement": 3,
@@ -133,9 +133,9 @@
         "matchStart": "22.02. 16:57",
         "teamSize": "Squad",
         "teamMates": [
+          "KingZurenson",
           "Battlemann",
-          "Flopsibert",
-          "KingZurenson"
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 19,
