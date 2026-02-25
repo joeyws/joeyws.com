@@ -375,7 +375,7 @@ requestIdleCallback(() => {
             const xmlDoc = parser.parseFromString(data.contents, "text/xml");
             const onlineState = xmlDoc.getElementsByTagName("onlineState")[0].textContent;
             const statusDot = (onlineState === "online" || onlineState === "in-game" || onlineState === "away" || onlineState === "busy")
-                ? '<span style="color:var(--highlight);">⬤ Online</span>'
+                ? '<span style="color:#0f0;">⬤ Online</span>'
                 : ''; 
             document.getElementById("time").insertAdjacentHTML('afterend', statusDot);
         } catch(err) {}
