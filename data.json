@@ -1,5 +1,5 @@
 {
-  "timestamp": "27.02. 14:10",
+  "timestamp": "27.02. 15:08",
   "weatherTempCelsius": 22,
   "githubLastCommit": "February 27, 2026",
   "steamStatus": "offline",
@@ -27,9 +27,9 @@
         "matchStart": "26.02. 20:29",
         "teamSize": "Squad",
         "teamMates": [
+          "KingZurenson",
           "WeCoyote",
-          "Flopsibert",
-          "KingZurenson"
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 6,
@@ -45,9 +45,9 @@
         "matchStart": "26.02. 20:10",
         "teamSize": "Squad",
         "teamMates": [
-          "WeCoyote",
           "Flopsibert",
-          "KingZurenson"
+          "KingZurenson",
+          "WeCoyote"
         ],
         "perspective": "FPP",
         "placement": 17,
@@ -63,9 +63,9 @@
         "matchStart": "26.02. 19:42",
         "teamSize": "Squad",
         "teamMates": [
+          "KingZurenson",
           "WeCoyote",
-          "Flopsibert",
-          "KingZurenson"
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 1,
@@ -81,9 +81,9 @@
         "matchStart": "26.02. 19:20",
         "teamSize": "Squad",
         "teamMates": [
-          "KingZurenson",
+          "WeCoyote",
           "Flopsibert",
-          "WeCoyote"
+          "KingZurenson"
         ],
         "perspective": "FPP",
         "placement": 9,
@@ -133,8 +133,8 @@
         "matchStart": "26.02. 18:21",
         "teamSize": "Squad",
         "teamMates": [
-          "Markos_992",
-          "buboscandiacus"
+          "buboscandiacus",
+          "Markos_992"
         ],
         "perspective": "TPP",
         "placement": 24,
@@ -150,9 +150,9 @@
         "matchStart": "26.02. 17:54",
         "teamSize": "Squad",
         "teamMates": [
-          "danch_HR",
+          "SuperBurschie",
           "Black-borty",
-          "SuperBurschie"
+          "danch_HR"
         ],
         "perspective": "TPP",
         "placement": 1,
