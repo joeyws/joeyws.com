@@ -1,8 +1,8 @@
 {
-  "timestamp": "27.02. 11:55",
-  "weatherTempCelsius": 20,
+  "timestamp": "27.02. 13:12",
+  "weatherTempCelsius": 21,
   "githubLastCommit": "February 27, 2026",
-  "steamStatus": "online",
+  "steamStatus": "offline",
   "pubg": {
     "name": "joeyws2",
     "lastMatches": [
@@ -10,8 +10,8 @@
         "matchStart": "26.02. 20:50",
         "teamSize": "Squad",
         "teamMates": [
-          "WeCoyote",
-          "Flopsibert"
+          "Flopsibert",
+          "WeCoyote"
         ],
         "perspective": "FPP",
         "placement": 7,
@@ -64,8 +64,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "WeCoyote",
-          "KingZurenson",
-          "Flopsibert"
+          "Flopsibert",
+          "KingZurenson"
         ],
         "perspective": "FPP",
         "placement": 1,
@@ -81,9 +81,9 @@
         "matchStart": "26.02. 19:20",
         "teamSize": "Squad",
         "teamMates": [
-          "WeCoyote",
           "KingZurenson",
-          "Flopsibert"
+          "Flopsibert",
+          "WeCoyote"
         ],
         "perspective": "FPP",
         "placement": 9,
@@ -99,9 +99,9 @@
         "matchStart": "26.02. 18:49",
         "teamSize": "Squad",
         "teamMates": [
-          "WeCoyote",
           "Flopsibert",
-          "KingZurenson"
+          "KingZurenson",
+          "WeCoyote"
         ],
         "perspective": "FPP",
         "placement": 2,
@@ -133,8 +133,8 @@
         "matchStart": "26.02. 18:21",
         "teamSize": "Squad",
         "teamMates": [
-          "buboscandiacus",
-          "Markos_992"
+          "Markos_992",
+          "buboscandiacus"
         ],
         "perspective": "TPP",
         "placement": 24,
@@ -150,9 +150,9 @@
         "matchStart": "26.02. 17:54",
         "teamSize": "Squad",
         "teamMates": [
+          "danch_HR",
           "Black-borty",
-          "SuperBurschie",
-          "danch_HR"
+          "SuperBurschie"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -168,9 +168,9 @@
         "matchStart": "25.02. 20:13",
         "teamSize": "Squad",
         "teamMates": [
-          "Predator9111",
+          "SNik_BRO",
           "Th3_Big_Lebowski",
-          "SNik_BRO"
+          "Predator9111"
         ],
         "perspective": "TPP",
         "placement": 1,
