@@ -1,5 +1,5 @@
 {
-  "timestamp": "27.02. 4:50",
+  "timestamp": "27.02. 5:57",
   "weatherTempCelsius": 8,
   "githubLastCommit": "February 27, 2026",
   "steamStatus": "offline",
@@ -10,8 +10,8 @@
         "matchStart": "26.02. 20:50",
         "teamSize": "Squad",
         "teamMates": [
-          "Flopsibert",
-          "WeCoyote"
+          "WeCoyote",
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 7,
@@ -27,9 +27,9 @@
         "matchStart": "26.02. 20:29",
         "teamSize": "Squad",
         "teamMates": [
-          "KingZurenson",
           "WeCoyote",
-          "Flopsibert"
+          "Flopsibert",
+          "KingZurenson"
         ],
         "perspective": "FPP",
         "placement": 6,
@@ -45,9 +45,9 @@
         "matchStart": "26.02. 20:10",
         "teamSize": "Squad",
         "teamMates": [
+          "WeCoyote",
           "Flopsibert",
-          "KingZurenson",
-          "WeCoyote"
+          "KingZurenson"
         ],
         "perspective": "FPP",
         "placement": 17,
@@ -63,8 +63,8 @@
         "matchStart": "26.02. 19:42",
         "teamSize": "Squad",
         "teamMates": [
-          "KingZurenson",
           "WeCoyote",
+          "KingZurenson",
           "Flopsibert"
         ],
         "perspective": "FPP",
@@ -82,8 +82,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "WeCoyote",
-          "Flopsibert",
-          "KingZurenson"
+          "KingZurenson",
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 9,
@@ -99,9 +99,9 @@
         "matchStart": "26.02. 18:49",
         "teamSize": "Squad",
         "teamMates": [
+          "WeCoyote",
           "Flopsibert",
-          "KingZurenson",
-          "WeCoyote"
+          "KingZurenson"
         ],
         "perspective": "FPP",
         "placement": 2,
@@ -150,8 +150,8 @@
         "matchStart": "26.02. 17:54",
         "teamSize": "Squad",
         "teamMates": [
-          "SuperBurschie",
           "Black-borty",
+          "SuperBurschie",
           "danch_HR"
         ],
         "perspective": "TPP",
@@ -168,9 +168,9 @@
         "matchStart": "25.02. 20:13",
         "teamSize": "Squad",
         "teamMates": [
-          "SNik_BRO",
+          "Predator9111",
           "Th3_Big_Lebowski",
-          "Predator9111"
+          "SNik_BRO"
         ],
         "perspective": "TPP",
         "placement": 1,
