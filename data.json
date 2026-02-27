@@ -1,5 +1,5 @@
 {
-  "timestamp": "27.02. 22:30",
+  "timestamp": "27.02. 23:31",
   "weatherTempCelsius": 13,
   "githubLastCommit": "February 27, 2026",
   "steamStatus": "online",
@@ -10,8 +10,8 @@
         "matchStart": "27.02. 16:40",
         "teamSize": "Squad",
         "teamMates": [
-          "380-220v",
-          "BustersScruggs"
+          "BustersScruggs",
+          "380-220v"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -28,8 +28,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "runner07",
-          "MissPinkViper",
-          "TRkanlar"
+          "TRkanlar",
+          "MissPinkViper"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -80,9 +80,9 @@
         "matchStart": "26.02. 20:29",
         "teamSize": "Squad",
         "teamMates": [
+          "KingZurenson",
           "WeCoyote",
-          "Flopsibert",
-          "KingZurenson"
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 6,
@@ -98,9 +98,9 @@
         "matchStart": "26.02. 20:10",
         "teamSize": "Squad",
         "teamMates": [
-          "WeCoyote",
           "Flopsibert",
-          "KingZurenson"
+          "KingZurenson",
+          "WeCoyote"
         ],
         "perspective": "FPP",
         "placement": 17,
@@ -116,9 +116,9 @@
         "matchStart": "26.02. 19:42",
         "teamSize": "Squad",
         "teamMates": [
+          "KingZurenson",
           "WeCoyote",
-          "Flopsibert",
-          "KingZurenson"
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 1,
@@ -134,9 +134,9 @@
         "matchStart": "26.02. 19:20",
         "teamSize": "Squad",
         "teamMates": [
-          "KingZurenson",
+          "WeCoyote",
           "Flopsibert",
-          "WeCoyote"
+          "KingZurenson"
         ],
         "perspective": "FPP",
         "placement": 9,
