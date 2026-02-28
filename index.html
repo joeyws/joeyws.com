@@ -55,8 +55,8 @@
     .video video,.video .controls{display:none;}
     .video video{object-fit:cover;}
     .video .controls{position:absolute;bottom:0;left:0;right:0;}
-    .video .progress{display:inline-block;height:3px;overflow:hidden;padding-top:30px;}
-    .video .progress-filled{width:0%;height:100%;background:#0f0;}
+    .video .progress{display:inline-block;height:2px;overflow:hidden;padding-top:30px;}
+    .video .progress-filled{width:0%;height:100%;background:var(--text);}
     /* GALLERY */
     .gallery-nav{user-select:none;display:flex;flex-wrap:wrap;}
     .gallery-img,.gallery-caption{margin-top:var(--spacer);}
@@ -311,14 +311,18 @@ if (window.matchMedia('(pointer: fine)').matches) {
 
 // TIME
 function getTime() {
-    function addZero(i) {return i < 10 ? "0" + i : i;}
-    const time = new Date();
-    let h = time.getHours();
-    h = h ? h : 12;
-    const min = addZero(time.getMinutes());
-    const s = addZero(time.getSeconds());
+    const options = {
+        timeZone: "Europe/Berlin",
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+        hour12: false
+    };
+    const timeString = new Intl.DateTimeFormat("de-DE", options).format(new Date());
     const timeEl = document.getElementById("time");
-    if (timeEl) {timeEl.innerHTML = `${h}:${min}:${s}`;}
+    if (timeEl) {
+        timeEl.innerHTML = timeString + " CET";
+    }
 }
 getTime();
 setInterval(getTime, 1000);
