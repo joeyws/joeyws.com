@@ -1,5 +1,5 @@
 {
-  "timestamp": "28.02. 10:30",
+  "timestamp": "28.02. 10:53",
   "weatherTempCelsius": 15,
   "githubLastCommit": "February 28, 2026",
   "steamStatus": "online",
@@ -11,8 +11,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "Petertje666",
-          "LooT_TooL",
-          "ContractkillerDE"
+          "ContractkillerDE",
+          "LooT_TooL"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -46,8 +46,8 @@
         "matchStart": "27.02. 16:40",
         "teamSize": "Squad",
         "teamMates": [
-          "380-220v",
-          "BustersScruggs"
+          "BustersScruggs",
+          "380-220v"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -99,8 +99,8 @@
         "matchStart": "26.02. 20:50",
         "teamSize": "Squad",
         "teamMates": [
-          "Flopsibert",
-          "WeCoyote"
+          "WeCoyote",
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 7,
@@ -153,8 +153,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "WeCoyote",
-          "Flopsibert",
-          "KingZurenson"
+          "KingZurenson",
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 1,
@@ -170,9 +170,9 @@
         "matchStart": "26.02. 19:20",
         "teamSize": "Squad",
         "teamMates": [
+          "WeCoyote",
           "KingZurenson",
-          "Flopsibert",
-          "WeCoyote"
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 9,
