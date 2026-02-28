@@ -93,7 +93,7 @@
 <hr>
 <main>
 <div class="content" id="index">
-    <img src="img/joeyws.png" alt="joeyws" style="position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);width:1200px;max-width:70%;display:block;z-index:-1;pointer-events:none;user-select:none;">
+    <img src="img/joeyws2.png" alt="joeyws" style="position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);width:1200px;max-width:70%;display:block;z-index:-1;pointer-events:none;user-select:none;">
 </div>
 <div class="content" id="works">
     <div class="video">
@@ -313,7 +313,7 @@ if (window.matchMedia('(pointer: fine)').matches) {
 function getTime() {
     const options = {
         timeZone: "Europe/Berlin",
-        hour: "2-digit",
+        hour: "numeric",
         minute: "2-digit",
         second: "2-digit",
         hour12: false
@@ -321,7 +321,7 @@ function getTime() {
     const timeString = new Intl.DateTimeFormat("de-DE", options).format(new Date());
     const timeEl = document.getElementById("time");
     if (timeEl) {
-        timeEl.innerHTML = timeString + " CET";
+        timeEl.innerHTML = timeString;
     }
 }
 getTime();
