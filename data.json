@@ -1,17 +1,152 @@
 {
-  "timestamp": "27.02. 11:07",
-  "weatherTempCelsius": 18,
-  "githubLastCommit": "February 27, 2026",
-  "steamStatus": "offline",
+  "timestamp": "28.02. 19:26",
+  "weatherTempCelsius": 11,
+  "githubLastCommit": "February 28, 2026",
+  "steamStatus": "online",
   "pubg": {
     "name": "joeyws2",
     "lastMatches": [
       {
+        "matchStart": "28.02. 15:41",
+        "teamSize": "Solo",
+        "teamMates": [],
+        "perspective": "TPP",
+        "placement": 20,
+        "map": "Vikendi",
+        "survivalTime": "16:39",
+        "distance": "5.5",
+        "kills": 0,
+        "assists": 0,
+        "damage": 0,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.solo.eu.2026.02.28.15.08191ba2-9034-4d28-b58d-c2307c7b7534"
+      },
+      {
+        "matchStart": "28.02. 15:32",
+        "teamSize": "Squad",
+        "teamMates": [
+          "Klaudis",
+          "itsmiley",
+          "Karolyzz"
+        ],
+        "perspective": "TPP",
+        "placement": 23,
+        "map": "Vikendi",
+        "survivalTime": "4:56",
+        "distance": "0.2",
+        "kills": 0,
+        "assists": 0,
+        "damage": 0,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.squad.eu.2026.02.28.15.c5ee158a-971d-49af-a81b-7f961aeac617"
+      },
+      {
+        "matchStart": "28.02. 13:19",
+        "teamSize": "Squad",
+        "teamMates": [],
+        "perspective": "TPP",
+        "placement": 9,
+        "map": "Erangel",
+        "survivalTime": "14:33",
+        "distance": "3.4",
+        "kills": 6,
+        "assists": 0,
+        "damage": 536,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.28.13.97bb97b4-1964-4165-a4ba-8fe408c26df6"
+      },
+      {
+        "matchStart": "28.02. 9:02",
+        "teamSize": "Squad",
+        "teamMates": [
+          "Petertje666",
+          "ContractkillerDE",
+          "LooT_TooL"
+        ],
+        "perspective": "TPP",
+        "placement": 1,
+        "map": "Erangel",
+        "survivalTime": "22:50",
+        "distance": "8.5",
+        "kills": 4,
+        "assists": 0,
+        "damage": 451,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.28.09.7b4e9ac0-7cc3-444f-a765-9f75bdff2301"
+      },
+      {
+        "matchStart": "28.02. 8:34",
+        "teamSize": "Squad",
+        "teamMates": [
+          "Sokaris64",
+          "Nick_TI",
+          "Koval_S"
+        ],
+        "perspective": "TPP",
+        "placement": 2,
+        "map": "Erangel",
+        "survivalTime": "19:05",
+        "distance": "4.4",
+        "kills": 8,
+        "assists": 0,
+        "damage": 586,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.28.08.274348db-2d6e-412c-9c6c-d3f918e01b5c"
+      },
+      {
+        "matchStart": "27.02. 16:40",
+        "teamSize": "Squad",
+        "teamMates": [
+          "BustersScruggs",
+          "380-220v"
+        ],
+        "perspective": "TPP",
+        "placement": 1,
+        "map": "Erangel",
+        "survivalTime": "6:49",
+        "distance": "1.3",
+        "kills": 0,
+        "assists": 0,
+        "damage": 73,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.27.16.99fe3106-4b52-4a94-a73f-3523bca5707f"
+      },
+      {
+        "matchStart": "27.02. 16:18",
+        "teamSize": "Squad",
+        "teamMates": [
+          "runner07",
+          "TRkanlar",
+          "MissPinkViper"
+        ],
+        "perspective": "TPP",
+        "placement": 1,
+        "map": "Erangel",
+        "survivalTime": "19:51",
+        "distance": "5.5",
+        "kills": 8,
+        "assists": 0,
+        "damage": 649,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.27.16.a8646f5a-58c8-4228-9661-6420a25bc576"
+      },
+      {
+        "matchStart": "27.02. 15:42",
+        "teamSize": "Squad",
+        "teamMates": [
+          "PoluDrakonchik",
+          "0_A_M_P_H_Y_0",
+          "signiori"
+        ],
+        "perspective": "TPP",
+        "placement": 1,
+        "map": "Erangel",
+        "survivalTime": "20:52",
+        "distance": "3.8",
+        "kills": 4,
+        "assists": 1,
+        "damage": 483,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.27.15.b99a177d-a188-4bea-8795-5e33d333d9ad"
+      },
+      {
         "matchStart": "26.02. 20:50",
         "teamSize": "Squad",
         "teamMates": [
-          "WeCoyote",
-          "Flopsibert"
+          "Flopsibert",
+          "WeCoyote"
         ],
         "perspective": "FPP",
         "placement": 7,
@@ -27,9 +162,9 @@
         "matchStart": "26.02. 20:29",
         "teamSize": "Squad",
         "teamMates": [
+          "KingZurenson",
           "WeCoyote",
-          "Flopsibert",
-          "KingZurenson"
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 6,
@@ -40,147 +175,6 @@
         "assists": 0,
         "damage": 0,
         "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.squad-fpp.eu.2026.02.26.20.3bf7f556-8646-423e-add5-565f078439cd"
-      },
-      {
-        "matchStart": "26.02. 20:10",
-        "teamSize": "Squad",
-        "teamMates": [
-          "WeCoyote",
-          "Flopsibert",
-          "KingZurenson"
-        ],
-        "perspective": "FPP",
-        "placement": 17,
-        "map": "Erangel",
-        "survivalTime": "15:55",
-        "distance": "4.2",
-        "kills": 1,
-        "assists": 0,
-        "damage": 75,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.squad-fpp.eu.2026.02.26.20.6394f210-d8e4-462e-b788-d05dc5ec993a"
-      },
-      {
-        "matchStart": "26.02. 19:42",
-        "teamSize": "Squad",
-        "teamMates": [
-          "WeCoyote",
-          "KingZurenson",
-          "Flopsibert"
-        ],
-        "perspective": "FPP",
-        "placement": 1,
-        "map": "Erangel",
-        "survivalTime": "24:13",
-        "distance": "8.1",
-        "kills": 0,
-        "assists": 0,
-        "damage": 43,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.squad-fpp.eu.2026.02.26.19.2b1206fd-d1ad-4757-8a9e-f7636ebaaa7e"
-      },
-      {
-        "matchStart": "26.02. 19:20",
-        "teamSize": "Squad",
-        "teamMates": [
-          "WeCoyote",
-          "KingZurenson",
-          "Flopsibert"
-        ],
-        "perspective": "FPP",
-        "placement": 9,
-        "map": "Erangel",
-        "survivalTime": "19:38",
-        "distance": "5.8",
-        "kills": 0,
-        "assists": 1,
-        "damage": 75,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.squad-fpp.eu.2026.02.26.19.5ecf9085-9024-404f-ba9f-6234139e80a1"
-      },
-      {
-        "matchStart": "26.02. 18:49",
-        "teamSize": "Squad",
-        "teamMates": [
-          "WeCoyote",
-          "Flopsibert",
-          "KingZurenson"
-        ],
-        "perspective": "FPP",
-        "placement": 2,
-        "map": "Erangel",
-        "survivalTime": "24:13",
-        "distance": "8.8",
-        "kills": 2,
-        "assists": 1,
-        "damage": 387,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.squad-fpp.eu.2026.02.26.18.67b9629a-6ba6-40b5-999b-a3762e558203"
-      },
-      {
-        "matchStart": "26.02. 18:29",
-        "teamSize": "Squad",
-        "teamMates": [
-          "crisis81"
-        ],
-        "perspective": "TPP",
-        "placement": 6,
-        "map": "Erangel",
-        "survivalTime": "14:18",
-        "distance": "8.0",
-        "kills": 15,
-        "assists": 0,
-        "damage": 1592,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.26.18.a232a015-c583-4d58-904b-c96495f60e14"
-      },
-      {
-        "matchStart": "26.02. 18:21",
-        "teamSize": "Squad",
-        "teamMates": [
-          "buboscandiacus",
-          "Markos_992"
-        ],
-        "perspective": "TPP",
-        "placement": 24,
-        "map": "Erangel",
-        "survivalTime": "5:49",
-        "distance": "0.7",
-        "kills": 1,
-        "assists": 0,
-        "damage": 52,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.26.18.f6ad39b3-9b48-4e16-9c62-b666521e0146"
-      },
-      {
-        "matchStart": "26.02. 17:54",
-        "teamSize": "Squad",
-        "teamMates": [
-          "Black-borty",
-          "SuperBurschie",
-          "danch_HR"
-        ],
-        "perspective": "TPP",
-        "placement": 1,
-        "map": "Erangel",
-        "survivalTime": "22:23",
-        "distance": "11.3",
-        "kills": 5,
-        "assists": 0,
-        "damage": 402,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.26.17.9b562281-ef27-4aed-9652-0d7bfd3f8d51"
-      },
-      {
-        "matchStart": "25.02. 20:13",
-        "teamSize": "Squad",
-        "teamMates": [
-          "Predator9111",
-          "Th3_Big_Lebowski",
-          "SNik_BRO"
-        ],
-        "perspective": "TPP",
-        "placement": 1,
-        "map": "Erangel",
-        "survivalTime": "21:14",
-        "distance": "7.0",
-        "kills": 2,
-        "assists": 0,
-        "damage": 256,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.02.25.20.cfb162b7-0df0-4a6b-a909-20e5eac17a2f"
       }
     ]
   }
