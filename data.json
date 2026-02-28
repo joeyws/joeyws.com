@@ -1,6 +1,6 @@
 {
-  "timestamp": "28.02. 19:44",
-  "weatherTempCelsius": 11,
+  "timestamp": "28.02. 21:24",
+  "weatherTempCelsius": 10,
   "githubLastCommit": "February 28, 2026",
   "steamStatus": "online",
   "pubg": {
@@ -24,8 +24,8 @@
         "matchStart": "28.02. 15:32",
         "teamSize": "Squad",
         "teamMates": [
-          "Klaudis",
           "Karolyzz",
+          "Klaudis",
           "itsmiley"
         ],
         "perspective": "TPP",
@@ -57,8 +57,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "Petertje666",
-          "LooT_TooL",
-          "ContractkillerDE"
+          "ContractkillerDE",
+          "LooT_TooL"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -92,8 +92,8 @@
         "matchStart": "27.02. 16:40",
         "teamSize": "Squad",
         "teamMates": [
-          "380-220v",
-          "BustersScruggs"
+          "BustersScruggs",
+          "380-220v"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -145,8 +145,8 @@
         "matchStart": "26.02. 20:50",
         "teamSize": "Squad",
         "teamMates": [
-          "Flopsibert",
-          "WeCoyote"
+          "WeCoyote",
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 7,
