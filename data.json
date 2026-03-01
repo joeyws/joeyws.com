@@ -1,8 +1,8 @@
 {
-  "timestamp": "01.03. 5:56",
+  "timestamp": "01.03. 6:55",
   "weatherTempCelsius": 8,
   "githubLastCommit": "March 1, 2026",
-  "steamStatus": "offline",
+  "steamStatus": "online",
   "pubg": {
     "name": "joeyws2",
     "lastMatches": [
@@ -24,8 +24,8 @@
         "matchStart": "28.02. 15:32",
         "teamSize": "Squad",
         "teamMates": [
-          "Klaudis",
           "Karolyzz",
+          "Klaudis",
           "itsmiley"
         ],
         "perspective": "TPP",
@@ -56,9 +56,9 @@
         "matchStart": "28.02. 9:02",
         "teamSize": "Squad",
         "teamMates": [
-          "LooT_TooL",
+          "Petertje666",
           "ContractkillerDE",
-          "Petertje666"
+          "LooT_TooL"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -74,9 +74,9 @@
         "matchStart": "28.02. 8:34",
         "teamSize": "Squad",
         "teamMates": [
-          "Sokaris64",
           "Koval_S",
-          "Nick_TI"
+          "Nick_TI",
+          "Sokaris64"
         ],
         "perspective": "TPP",
         "placement": 2,
@@ -109,9 +109,9 @@
         "matchStart": "27.02. 16:18",
         "teamSize": "Squad",
         "teamMates": [
+          "runner07",
           "MissPinkViper",
-          "TRkanlar",
-          "runner07"
+          "TRkanlar"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -127,9 +127,9 @@
         "matchStart": "27.02. 15:42",
         "teamSize": "Squad",
         "teamMates": [
-          "signiori",
+          "PoluDrakonchik",
           "0_A_M_P_H_Y_0",
-          "PoluDrakonchik"
+          "signiori"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -162,9 +162,9 @@
         "matchStart": "26.02. 20:29",
         "teamSize": "Squad",
         "teamMates": [
-          "KingZurenson",
           "WeCoyote",
-          "Flopsibert"
+          "Flopsibert",
+          "KingZurenson"
         ],
         "perspective": "FPP",
         "placement": 6,
