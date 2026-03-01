@@ -259,3 +259,71 @@ VANTA.FOG({
         renderer.setSize(window.innerWidth, window.innerHeight);
     });
 </script> -->
+
+
+
+<style>
+    canvas{position:fixed;inset:0;z-index:-2;display:block;}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+<script>
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer({ antialias: true });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    document.body.appendChild(renderer.domElement);
+    const material = new THREE.LineBasicMaterial({ color: 0x222222 });
+    const globeRadius = 20;
+    const latLines = 8;
+    const lonLines = 12;
+    const globe = new THREE.Group();
+    for (let i = 1; i < latLines; i++) {
+        const lat = (i / latLines - 0.5) * Math.PI;
+        const points = [];
+        const segments = 64;
+        for (let j = 0; j <= segments; j++) {
+            const theta = (j / segments) * 2 * Math.PI;
+            const x = globeRadius * Math.cos(lat) * Math.cos(theta);
+            const y = globeRadius * Math.sin(lat);
+            const z = globeRadius * Math.cos(lat) * Math.sin(theta);
+            points.push(new THREE.Vector3(x, y, z));
+        }
+        const lineGeom = new THREE.BufferGeometry().setFromPoints(points);
+        const line = new THREE.Line(lineGeom, material);
+        globe.add(line);
+    }
+    for (let i = 0; i < lonLines; i++) {
+        const lon = (i / lonLines) * 2 * Math.PI;
+        const points = [];
+        const segments = 64;
+        for (let j = 0; j <= segments; j++) {
+            const theta = (j / segments) * Math.PI; // 0 .. π
+            const x = globeRadius * Math.sin(theta) * Math.cos(lon);
+            const y = globeRadius * Math.cos(theta);
+            const z = globeRadius * Math.sin(theta) * Math.sin(lon);
+            points.push(new THREE.Vector3(x, y, z));
+        }
+        const lineGeom = new THREE.BufferGeometry().setFromPoints(points);
+        const line = new THREE.Line(lineGeom, material);
+        globe.add(line);
+    }
+    scene.add(globe);
+    let angle = 0;
+    const camRadius = 50;
+    const camHeight = 0;
+    function animate() {
+        requestAnimationFrame(animate);
+        angle += 0.002;
+        camera.position.x = Math.cos(angle) * camRadius;
+        camera.position.z = Math.sin(angle) * camRadius;
+        camera.position.y = camHeight;
+        camera.lookAt(0, 0, 0);
+        renderer.render(scene, camera);
+    }
+    animate();
+    window.addEventListener("resize", () => {
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+    });
+</script>

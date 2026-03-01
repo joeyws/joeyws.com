@@ -22,7 +22,7 @@
     /* RESET */ *{text-decoration-thickness:.01em;text-underline-offset:3px;text-decoration-skip-ink:none;font-kerning:normal;outline:none;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{box-sizing:content-box;border-radius:0;/* -webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-border-radius:0;-webkit-text-size-adjust:none;-webkit-appearance:none;font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased; */}
 	html{font-size:13px;}
     body{padding:var(--spacer);overflow-y:scroll;color:var(--text);background:var(--background);font:normal normal 1rem/1.3em webfont,monospace;}
-    h1{display:inline-block;}
+    h1,h2{display:inline-block;}
     i{font-style:italic;}
     h2,p,pre,table,#map{margin-top:.8rem;}
     hr+*,img+p,.content *:first-child{margin-top:0;}
@@ -42,9 +42,9 @@
     nav a{display:inline-block;border-right:1px solid var(--background);background-clip:padding-box;} nav a:last-child{border:0;}
     @media (max-width:500px) {#header{flex-direction:column;}}
     /* MARQUEE */
-    .marquee{background:#0f0;color:var(--background);transition:.2s width ease-out;line-height:1.4em;box-sizing:border-box;margin:calc(-1 * var(--spacer));margin-bottom:var(--spacer);width:1px;overflow:hidden;white-space:nowrap;position:relative;display:block;user-select:none;}
+    .marquee{background:#0f0;color:var(--background);transition:.2s width ease-out;line-height:1.4em;box-sizing:border-box;margin:calc(-1 * var(--spacer));margin-bottom:var(--spacer);width:1px;overflow:hidden;white-space:nowrap;display:block;user-select:none;}
     .marquee-track{display:inline-flex;white-space:nowrap;will-change:transform;animation:marquee 50s linear infinite;}
-    .marquee-track span{padding-right:2.2rem;}
+    .marquee-track span{padding-right:2.4rem;}
     @keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-100%);}}
     /* VIDEO */
     .video{overflow:hidden;position:relative;width:800px;max-width:100%;aspect-ratio: 2.2 / 1;font-size:0;line-height:0;user-select:none;}
@@ -73,7 +73,6 @@
     #map:after{top:23%;left:52.5%;outline:1px solid #0f0;background:#0f0;box-shadow:0 3px 8px #000;animation:map 1.2s infinite ease-out;width:7px;height:7px;border-radius:100vmax;pointer-events:none;position:absolute;transform:translate(-50%,-50%);display:block;content:"";}
     #cursor{width:12px;height:12px;background:#fff1;backdrop-filter:blur(20px) invert(100%) saturate(10);-webkit-backdrop-filter:blur(20px) invert(100%) saturate(10);border-radius:100vmax;position:fixed;top:-50px;left:50%;transform:translate(-50%,-50%);font-size:0;line-height:0;z-index:99999999;pointer-events:none;}*{cursor:none !important;}
     /* GAMING */
-    #pubg{}
     .pubg-card{width:500px;margin:0 auto;/* margin-bottom:var(--spacer);border-top:1px solid var(--text);padding:var(--spacer) 0; */}
 </style>
 </head>
@@ -93,7 +92,7 @@
 <hr>
 <main>
 <div class="content" id="index">
-    <img src="img/joeyws2.png" alt="joeyws" style="position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);width:1200px;max-width:70%;display:block;z-index:-1;pointer-events:none;user-select:none;">
+    <img src="img/joeyws.png" alt="joeyws" style="mix-blend-mode:screen;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);width:1200px;max-width:70%;display:block;z-index:-1;pointer-events:none;user-select:none;">
 </div>
 <div class="content" id="works">
     <div class="video">
@@ -193,6 +192,7 @@
     </p>
 </div>
 <div class="content" id="gaming">
+    <h2>Gaming</h2>
     Add <a href="https://steamcommunity.com/id/joeyws2/">joeyws2</a> on Steam
     <hr>
     <h2 style="text-align:center;">joeyws2’s last PUBG Matches</h2>
