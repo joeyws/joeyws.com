@@ -1,5 +1,5 @@
 {
-  "timestamp": "03.03. 13:05",
+  "timestamp": "03.03. 14:47",
   "weatherTempCelsius": 14,
   "githubLastCommit": "March 3, 2026",
   "steamStatus": "offline",
@@ -10,9 +10,9 @@
         "matchStart": "02.03. 20:16",
         "teamSize": "Squad",
         "teamMates": [
+          "KingZurenson",
           "WeCoyote",
-          "Flopsibert",
-          "KingZurenson"
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 24,
@@ -46,9 +46,9 @@
         "matchStart": "02.03. 19:33",
         "teamSize": "Squad",
         "teamMates": [
-          "Flopsibert",
           "KingZurenson",
-          "WeCoyote"
+          "WeCoyote",
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 9,
@@ -64,8 +64,8 @@
         "matchStart": "02.03. 19:02",
         "teamSize": "Squad",
         "teamMates": [
-          "averagepb1",
-          "kirik2004"
+          "kirik2004",
+          "averagepb1"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -109,9 +109,9 @@
         "matchStart": "28.02. 15:32",
         "teamSize": "Squad",
         "teamMates": [
-          "Karolyzz",
           "Klaudis",
-          "itsmiley"
+          "itsmiley",
+          "Karolyzz"
         ],
         "perspective": "TPP",
         "placement": 23,
@@ -159,9 +159,9 @@
         "matchStart": "28.02. 8:34",
         "teamSize": "Squad",
         "teamMates": [
-          "Koval_S",
+          "Sokaris64",
           "Nick_TI",
-          "Sokaris64"
+          "Koval_S"
         ],
         "perspective": "TPP",
         "placement": 2,
