@@ -1,6 +1,6 @@
 {
-  "timestamp": "04.03. 18:56",
-  "weatherTempCelsius": 11,
+  "timestamp": "04.03. 19:40",
+  "weatherTempCelsius": 10,
   "githubLastCommit": "March 4, 2026",
   "steamStatus": "online",
   "pubg": {
@@ -10,9 +10,9 @@
         "matchStart": "04.03. 18:14",
         "teamSize": "Squad",
         "teamMates": [
+          "cruw",
           "Olmi_McFly",
-          "RaZRuWiTeL",
-          "cruw"
+          "RaZRuWiTeL"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -42,8 +42,8 @@
         "matchStart": "04.03. 17:45",
         "teamSize": "Squad",
         "teamMates": [
-          "Space_Driver",
-          "watcher52"
+          "watcher52",
+          "Space_Driver"
         ],
         "perspective": "TPP",
         "placement": 11,
@@ -59,9 +59,9 @@
         "matchStart": "04.03. 17:19",
         "teamSize": "Squad",
         "teamMates": [
-          "Emil987",
           "milanplayer7",
-          "BigBadBlade"
+          "BigBadBlade",
+          "Emil987"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -77,9 +77,9 @@
         "matchStart": "03.03. 21:00",
         "teamSize": "Squad",
         "teamMates": [
-          "ceryy94",
+          "boraxli",
           "rokasmob",
-          "boraxli"
+          "ceryy94"
         ],
         "perspective": "TPP",
         "placement": 2,
@@ -125,9 +125,9 @@
         "matchStart": "02.03. 20:16",
         "teamSize": "Squad",
         "teamMates": [
-          "WeCoyote",
           "KingZurenson",
-          "Flopsibert"
+          "Flopsibert",
+          "WeCoyote"
         ],
         "perspective": "FPP",
         "placement": 24,
@@ -144,8 +144,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "KingZurenson",
-          "WeCoyote",
-          "Flopsibert"
+          "Flopsibert",
+          "WeCoyote"
         ],
         "perspective": "FPP",
         "placement": 13,
@@ -161,8 +161,8 @@
         "matchStart": "02.03. 19:33",
         "teamSize": "Squad",
         "teamMates": [
-          "Flopsibert",
           "WeCoyote",
+          "Flopsibert",
           "KingZurenson"
         ],
         "perspective": "FPP",
