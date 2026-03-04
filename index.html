@@ -62,7 +62,7 @@
     .loading{animation:.3s blink-loading steps(1) infinite;}
     @keyframes map{100%{outline-color:transparent;outline-offset:20px;}}
     #map{width:760px;max-width:100%;aspect-ratio:150/75;background:center center url(img/other/world.gif) no-repeat scroll;position:relative;background-size:contain;}
-    #map::after{top:23%;left:52.5%;outline:1px solid #fff;background:#fff;animation:map 1.2s infinite ease-out;width:7px;height:7px;border-radius:100vmax;pointer-events:none;position:absolute;transform:translate(-50%,-50%);display:block;content:"";}
+    #map::after{top:23%;left:52.5%;outline:1px solid #fff;border:1px solid var(--background);background:#fff;animation:map 1.2s infinite ease-out;width:7px;height:7px;border-radius:100vmax;pointer-events:none;position:absolute;transform:translate(-50%,-50%);display:block;content:"";}
     #cursor{width:12px;height:12px;background:#fff1;backdrop-filter:blur(20px) invert(100%) saturate(10);-webkit-backdrop-filter:blur(20px) invert(100%) saturate(10);border-radius:100vmax;position:fixed;top:-50px;left:50%;transform:translate(-50%,-50%);font-size:0;line-height:0;z-index:99999999;pointer-events:none;}*{cursor:none !important;}
     /* GAMING */
     .match{width:800px;margin:0 auto;}
@@ -84,7 +84,7 @@
 <main>
 <div class="content" id="index">
     <div class="marquee"><div class="marquee-track"><span lang="zh-Hant">歡迎</span><span lang="es">Bienvenidos</span><span lang="en">Welcome</span><span lang="hi">स्वागत हे</span><span lang="ar">اهلا وسهلا</span><span lang="bn">স্বাগত</span><span lang="pt">Bem-vindo</span><span lang="ru">добро пожаловать</span><span lang="ur">خوش آمدید</span><span lang="ja">ようこそ</span><span lang="id">Selamat datang</span><span lang="de">Willkommen</span><span lang="tr">Hoşgeldiniz</span><span lang="ta">வரவேற்பு</span><span lang="fr">Bienvenue</span><span lang="ko">어서 오십시오</span><span lang="vi">Hoan nghênh</span><span lang="jv">Sugeng Rawuh</span><span lang="sw">Karibu</span><span lang="sa">Svāgatam</span><span lang="it">Benvenuto</span><span lang="pa">ਸਵਾਗਤ ਹੈ</span></div></div>
-    <img src="img/joeyws2.png" alt="joeyws" style="mix-blend-mode:difference;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);width:500px;max-width:70%;display:block;z-index:-1;pointer-events:none;user-select:none;">
+    <img src="img/joeyws.png" alt="joeyws" style="mix-blend-mode:difference;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);width:800px;max-width:70%;display:block;z-index:-1;pointer-events:none;user-select:none;">
 </div>
 <div class="content" id="works">
     <div class="video">
@@ -179,7 +179,7 @@
     <h3>Privacy</h3>
     <p>
         No cookies. No tracking.<br>
-        Personal information may be processed by external providers, such as <a href="https://open-meteo.com/" rel="nofollow">Open‑Meteo</a> (weather data) and <a href="https://github.com/" rel="nofollow">GitHub</a> (hosting).
+        Personal information may be processed by external providers such as <a href="https://open-meteo.com/" rel="nofollow">Open‑Meteo</a> for weather data and <a href="https://github.com/" rel="nofollow">GitHub</a> for hosting.
     </p>
     <p>Nimbus Sans L © URW, <a href="https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html" rel="nofollow">GNU GPL v2</a></p>
 </div>
