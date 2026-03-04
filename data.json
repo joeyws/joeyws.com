@@ -1,8 +1,8 @@
 {
-  "timestamp": "04.03. 6:54",
-  "weatherTempCelsius": 3,
+  "timestamp": "04.03. 10:40",
+  "weatherTempCelsius": 12,
   "githubLastCommit": "March 4, 2026",
-  "steamStatus": "online",
+  "steamStatus": "offline",
   "pubg": {
     "name": "joeyws2",
     "lastMatches": [
@@ -10,9 +10,9 @@
         "matchStart": "03.03. 21:00",
         "teamSize": "Squad",
         "teamMates": [
-          "ceryy94",
+          "boraxli",
           "rokasmob",
-          "boraxli"
+          "ceryy94"
         ],
         "perspective": "TPP",
         "placement": 2,
@@ -59,8 +59,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "WeCoyote",
-          "KingZurenson",
-          "Flopsibert"
+          "Flopsibert",
+          "KingZurenson"
         ],
         "perspective": "FPP",
         "placement": 24,
@@ -76,8 +76,8 @@
         "matchStart": "02.03. 19:54",
         "teamSize": "Squad",
         "teamMates": [
-          "KingZurenson",
           "WeCoyote",
+          "KingZurenson",
           "Flopsibert"
         ],
         "perspective": "FPP",
@@ -95,8 +95,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "Flopsibert",
-          "WeCoyote",
-          "KingZurenson"
+          "KingZurenson",
+          "WeCoyote"
         ],
         "perspective": "FPP",
         "placement": 9,
@@ -157,8 +157,8 @@
         "matchStart": "28.02. 15:32",
         "teamSize": "Squad",
         "teamMates": [
-          "Klaudis",
           "Karolyzz",
+          "Klaudis",
           "itsmiley"
         ],
         "perspective": "TPP",
