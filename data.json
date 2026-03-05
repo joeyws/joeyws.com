@@ -1,11 +1,29 @@
 {
-  "timestamp": "05.03. 15:54",
-  "weatherTempCelsius": 15,
+  "timestamp": "05.03. 18:08",
+  "weatherTempCelsius": 11,
   "githubLastCommit": "March 5, 2026",
-  "steamStatus": "offline",
+  "steamStatus": "online",
   "pubg": {
     "name": "joeyws2",
     "lastMatches": [
+      {
+        "matchStart": "05.03. 16:56",
+        "teamSize": "Squad",
+        "teamMates": [
+          "LANATKACH",
+          "Hug0Hun_",
+          "MIKAELTKACH"
+        ],
+        "perspective": "TPP",
+        "placement": 1,
+        "map": "Erangel",
+        "survivalTime": "23:37",
+        "distance": "11.2",
+        "kills": 10,
+        "assists": 0,
+        "damage": 602,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.03.05.16.32c23ba7-fced-4c56-9efe-c3024e190140"
+      },
       {
         "matchStart": "04.03. 21:00",
         "teamSize": "Squad",
@@ -46,8 +64,8 @@
         "matchStart": "04.03. 18:14",
         "teamSize": "Squad",
         "teamMates": [
-          "RaZRuWiTeL",
           "Olmi_McFly",
+          "RaZRuWiTeL",
           "cruw"
         ],
         "perspective": "TPP",
@@ -95,9 +113,9 @@
         "matchStart": "04.03. 17:19",
         "teamSize": "Squad",
         "teamMates": [
+          "Emil987",
           "milanplayer7",
-          "BigBadBlade",
-          "Emil987"
+          "BigBadBlade"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -156,24 +174,6 @@
         "assists": 3,
         "damage": 733,
         "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.03.03.20.2abb4747-58c1-488b-b6ee-4110b64ced88"
-      },
-      {
-        "matchStart": "02.03. 20:16",
-        "teamSize": "Squad",
-        "teamMates": [
-          "KingZurenson",
-          "WeCoyote",
-          "Flopsibert"
-        ],
-        "perspective": "FPP",
-        "placement": 24,
-        "map": "Vikendi",
-        "survivalTime": "4:40",
-        "distance": "0.6",
-        "kills": 0,
-        "assists": 0,
-        "damage": 57,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.squad-fpp.eu.2026.03.02.20.5ab2c906-d5c8-48f2-bb26-2c55243d76f6"
       }
     ]
   }
