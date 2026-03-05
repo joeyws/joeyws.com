@@ -1,6 +1,6 @@
 {
-  "timestamp": "05.03. 10:43",
-  "weatherTempCelsius": 11,
+  "timestamp": "05.03. 11:36",
+  "weatherTempCelsius": 13,
   "githubLastCommit": "March 5, 2026",
   "steamStatus": "offline",
   "pubg": {
@@ -10,9 +10,9 @@
         "matchStart": "04.03. 21:00",
         "teamSize": "Squad",
         "teamMates": [
-          "salllou",
+          "Wiludad",
           "Vutangas161",
-          "Wiludad"
+          "salllou"
         ],
         "perspective": "TPP",
         "placement": 4,
@@ -29,8 +29,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "TomyTeem",
-          "terminator55455",
-          "Nickneedsreaders"
+          "Nickneedsreaders",
+          "terminator55455"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -46,9 +46,9 @@
         "matchStart": "04.03. 18:14",
         "teamSize": "Squad",
         "teamMates": [
-          "cruw",
           "Olmi_McFly",
-          "RaZRuWiTeL"
+          "RaZRuWiTeL",
+          "cruw"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -78,8 +78,8 @@
         "matchStart": "04.03. 17:45",
         "teamSize": "Squad",
         "teamMates": [
-          "watcher52",
-          "Space_Driver"
+          "Space_Driver",
+          "watcher52"
         ],
         "perspective": "TPP",
         "placement": 11,
@@ -95,9 +95,9 @@
         "matchStart": "04.03. 17:19",
         "teamSize": "Squad",
         "teamMates": [
+          "Emil987",
           "milanplayer7",
-          "BigBadBlade",
-          "Emil987"
+          "BigBadBlade"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -113,9 +113,9 @@
         "matchStart": "03.03. 21:00",
         "teamSize": "Squad",
         "teamMates": [
-          "boraxli",
+          "ceryy94",
           "rokasmob",
-          "ceryy94"
+          "boraxli"
         ],
         "perspective": "TPP",
         "placement": 2,
@@ -161,9 +161,9 @@
         "matchStart": "02.03. 20:16",
         "teamSize": "Squad",
         "teamMates": [
+          "WeCoyote",
           "KingZurenson",
-          "Flopsibert",
-          "WeCoyote"
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 24,
