@@ -2,7 +2,7 @@
 <html lang="en" translate="no">
 <head>
 <meta charset="utf-8">
-<link rel="preload" href="font/NimbusSanL-Reg-webfont.woff" as="font" type="font/woff2">
+<link rel="preload" href="font/SourceCodePro-Regular.woff2" as="font" type="font/woff2">
 <link rel="preload" href="scripts.js" as="script">
 <title>Joey Schweickhardt</title>
 <meta name="description" content="The personal website of Joey Schweickhardt from Stuttgart, Germany.">
@@ -16,40 +16,43 @@
 <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAADUlEQVR4nGNgGAWjYBSMAAABjAABb6k9VQAAAABJRU5ErkJggg==">
 <link rel="canonical" href="https://joeyws.com/">
 <style>
-    @font-face{font-family:webfont;src:url("font/NimbusSanL-Reg-webfont.woff");font-display:swap;}
-    :root{--background:#000;--text:#bbb;--spacer:8px;}
+    @font-face{font-family:webfont;src:url("font/SourceCodePro-Regular.woff2");font-display:swap;}
+    :root{--background:#000;--text:#ccc;--spacer:8px;}
     ::selection{background:var(--text);color:var(--background);}
-    /* RESET */ *{text-underline-offset:3px;text-decoration-skip-ink:none;font-kerning:normal;outline:none;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{box-sizing:content-box;border-radius:0;/* -webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-border-radius:0;-webkit-text-size-adjust:none;-webkit-appearance:none;font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased; */}
-	html{font-size:24px;}
+    /* RESET */ *{text-underline-offset:3px;text-decoration-thickness:1px;text-decoration-skip-ink:none;font-kerning:normal;outline:none;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{box-sizing:content-box;border-radius:0;/* -webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-border-radius:0;-webkit-text-size-adjust:none;-webkit-appearance:none;font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased; */}
+	html{font-size:15px;}
     body{padding:var(--spacer);overflow-y:scroll;color:var(--text);background:var(--background);font:normal normal 1rem/1.3em webfont,monospace;}
     i{font-style:italic;}
     h2,h3,p,pre,table,#map{margin-top:.8rem;}
     hr+*,img+p,.content *:first-child{margin-top:0;}
     table{width:100%;}tr{border-top:1px solid var(--text);}td{vertical-align:top;}td:nth-child(1){width:8em;padding-right:var(--spacer);}td:nth-child(2){width:auto;}
     hr{margin:4rem 0;}
-    a,nav a.open{white-space:nowrap;text-decoration:underline;text-decoration-thickness:1px !important;}
+    a{white-space:nowrap;text-decoration:underline;}
+    a:hover{background:var(--text);color:var(--background);text-decoration:none;}
     /* HEADER */
-    #header,#header>span{display:flex;gap:.3em 1em;}
+    #header,#header>span{display:flex;gap:.5em 1.2em;}
     #header{white-space:nowrap;user-select:none;width:100%;flex-wrap:wrap;justify-content:space-between;}
-    nav a{text-decoration:none;}
-    nav a:last-child{border:0;}
-    nav a.open{filter:none;text-decoration:underline;}
     @media (max-width:500px) {#header{flex-direction:column;}}
     /* MARQUEE */
-    .marquee{position:fixed;bottom:var(--spacer);left:0;right:0;transition:.2s width ease-out;line-height:1.4em;box-sizing:border-box;width:1px;overflow:hidden;white-space:nowrap;display:block;user-select:none;}
+    .marquee{background:#0f0;color:var(--background);margin:calc(-1*var(--spacer)) 0 var(--spacer) calc(-1*var(--spacer));transition:.2s width ease-out;line-height:1.4em;box-sizing:border-box;width:1px;overflow:hidden;white-space:nowrap;display:block;user-select:none;}
     .marquee-track{display:inline-flex;white-space:nowrap;will-change:transform;animation:marquee 50s linear infinite;}
     .marquee-track span{padding-right:2.4rem;}
     @keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-100%);}}
+    /* NAV / BUTTONS */
+    nav a,.video::after{background:#5557;color:var(--text) !important;backdrop-filter:blur(3px);text-decoration:none !important;padding:.25em .6em;border-radius:5px;transition:.15s all;}
+    nav a{border-right:1px solid var(--background);}
+    nav a:hover,nav a.open,.video:hover::after{background:#555d;}
+    nav a.open{padding-right:1.1em;padding-left:1.1em;}
     /* VIDEO */
     .video{overflow:hidden;position:relative;width:1000px;max-width:100%;aspect-ratio: 2.2 / 1;font-size:0;line-height:0;user-select:none;}
     .video img,.video video,.video .controls .progress{width:100%;}
     .video img{transition:all .75s;}
     .video:hover img{transform:scale(1.05);}
-    .video:not(.playing)::after{font-size:1rem;line-height:1.3rem;content:"Play";position:absolute;inset:0;display:flex;justify-content:center;align-items:center;pointer-events:none;}
+    .video:not(.playing)::after{font-size:1rem;line-height:1.3rem;content:"Play";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);color:var(--text);/* inset:0; *//* display:flex;justify-content:center;align-items:center; */pointer-events:none;}
     .video video,.video .controls{display:none;}
     .video video{object-fit:cover;}
     .video .controls{position:absolute;bottom:0;left:0;right:0;}
-    .video .progress{display:inline-block;height:1px;overflow:hidden;padding-top:30px;}
+    .video .progress{display:inline-block;height:2px;overflow:hidden;padding-top:30px;}
     .video .progress-filled{width:0%;height:100%;background:var(--text);}
     /* GALLERY */
     .gallery-nav{user-select:none;display:flex;flex-wrap:wrap;}
@@ -62,7 +65,7 @@
     .loading{animation:.3s blink-loading steps(1) infinite;}
     @keyframes map{100%{outline-color:transparent;outline-offset:20px;}}
     #map{width:760px;max-width:100%;aspect-ratio:150/75;background:center center url(img/other/world.gif) no-repeat scroll;position:relative;background-size:contain;}
-    #map::after{top:23%;left:52.5%;outline:1px solid #fff;border:1px solid var(--background);background:#fff;animation:map 1.2s infinite ease-out;width:7px;height:7px;border-radius:100vmax;pointer-events:none;position:absolute;transform:translate(-50%,-50%);display:block;content:"";}
+    #map::after{top:23%;left:52.5%;outline:1px solid #0f0;border:1px solid var(--background);background:#0f0;animation:map 1.2s infinite ease-out;width:7px;height:7px;border-radius:100vmax;pointer-events:none;position:absolute;transform:translate(-50%,-50%);display:block;content:"";}
     #cursor{width:12px;height:12px;background:#fff1;backdrop-filter:blur(20px) invert(100%) saturate(10);-webkit-backdrop-filter:blur(20px) invert(100%) saturate(10);border-radius:100vmax;position:fixed;top:-50px;left:50%;transform:translate(-50%,-50%);font-size:0;line-height:0;z-index:99999999;pointer-events:none;}*{cursor:none !important;}
     /* GAMING */
     .match{width:800px;margin:0 auto;}
@@ -74,18 +77,18 @@
 
 
 <header>
+    <div class="marquee"><div class="marquee-track"><span lang="zh-Hant">歡迎</span><span lang="es">Bienvenidos</span><span lang="en">Welcome</span><span lang="hi">स्वागत हे</span><span lang="ar">اهلا وسهلا</span><span lang="bn">স্বাগত</span><span lang="pt">Bem-vindo</span><span lang="ru">добро пожаловать</span><span lang="ur">خوش آمدید</span><span lang="ja">ようこそ</span><span lang="id">Selamat datang</span><span lang="de">Willkommen</span><span lang="tr">Hoşgeldiniz</span><span lang="ta">வரவேற்பு</span><span lang="fr">Bienvenue</span><span lang="ko">어서 오십시오</span><span lang="vi">Hoan nghênh</span><span lang="jv">Sugeng Rawuh</span><span lang="sw">Karibu</span><span lang="sa">Svāgatam</span><span lang="it">Benvenuto</span><span lang="pa">ਸਵਾਗਤ ਹੈ</span></div></div>
     <div id="header">
         <h1 class="loading">Joey Schweickhardt</h1>
-        <nav><a href="#/index">Index</a>, <a href="#/works">Works</a>, <a href="#/places">Places</a>, <a href="#/contact">Contact</a></nav>
+        <nav><!-- <a href="#/index">Index</a> --><a href="#/works">Works</a><a href="#/places">Places</a><a href="#/contact">Contact</a></nav>
         <span>Stuttgart<span id="time"></span></span>
     </div>
 </header>
 <hr>
 <main>
-<div class="content" id="index">
-    <div class="marquee"><div class="marquee-track"><span lang="zh-Hant">歡迎</span><span lang="es">Bienvenidos</span><span lang="en">Welcome</span><span lang="hi">स्वागत हे</span><span lang="ar">اهلا وسهلا</span><span lang="bn">স্বাগত</span><span lang="pt">Bem-vindo</span><span lang="ru">добро пожаловать</span><span lang="ur">خوش آمدید</span><span lang="ja">ようこそ</span><span lang="id">Selamat datang</span><span lang="de">Willkommen</span><span lang="tr">Hoşgeldiniz</span><span lang="ta">வரவேற்பு</span><span lang="fr">Bienvenue</span><span lang="ko">어서 오십시오</span><span lang="vi">Hoan nghênh</span><span lang="jv">Sugeng Rawuh</span><span lang="sw">Karibu</span><span lang="sa">Svāgatam</span><span lang="it">Benvenuto</span><span lang="pa">ਸਵਾਗਤ ਹੈ</span></div></div>
-    <img src="img/joeyws.png" alt="joeyws" style="mix-blend-mode:difference;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);width:800px;max-width:70%;display:block;z-index:-1;pointer-events:none;user-select:none;">
-</div>
+<!-- <div class="content" id="index">
+    <img src="img/joeyws.png" alt="joeyws" style="mix-blend-mode:difference;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);width:1200px;max-width:70%;display:block;z-index:-1;pointer-events:none;user-select:none;">
+</div> -->
 <div class="content" id="works">
     <div class="video">
         <img fetchpriority="high" src="img/other/landderechsen.jpg" alt="Land der Echsen">
@@ -95,8 +98,9 @@
         </video>
         <div class="controls"><div class="progress"><div class="progress-filled"></div></div></div>
     </div>
-    <p style="max-width:800px;">Land der Echsen (Germany, 2021). On the forgotten grounds of a derelict freight yard, a new urban quarter is in the making. For years, non-profit collectives have occupied the old loading halls, breathing life into the decaying space. But now, as redevelopment plans advance and demolition looms, they are forced to leave. Just then, an unexpected presence appears: lizards. Silent, enigmatic, and strangely defiant, they threaten to derail the entire project.</p>
-    <p style="max-width:800px;">Born from <i>Anti-Stuttgart &mdash; A Determinate Negation</i>, a critical design studio at <a href="https://www.igma.uni-stuttgart.de/en/">IGmA</a>, the film reimagines urban development as a stage for ecological and political tension. Premiered at the University of Stuttgart&#8217;s architecture <a href="https://www.k1.live/">graduate exhibition</a> and featured at the <a href="https://www.current-stuttgart.de/">CURRENT Festival</a> for Art and Urban Space.</p>
+    <p style="max-width:600px;">Land der Echsen (Germany, 2021). On the forgotten grounds of a derelict freight yard, a new urban quarter is in the making. For years, non-profit collectives have occupied the old loading halls, breathing life into the decaying space. But now, as redevelopment plans advance and demolition looms, they are forced to leave. Just then, an unexpected presence appears: lizards. Silent, enigmatic, and strangely defiant, they threaten to derail the entire project.</p>
+    <p style="max-width:600px;">Born from <i>Anti-Stuttgart &mdash; A Determinate Negation</i>, a critical design studio at <a href="https://www.igma.uni-stuttgart.de/en/">IGmA</a>, the film reimagines urban development as a stage for ecological and political tension.</p>
+    <p style="max-width:600px;">Premiered at the University of Stuttgart&#8217;s architecture <a href="https://www.k1.live/">graduate exhibition</a> and featured at the <a href="https://www.current-stuttgart.de/">CURRENT Festival</a> for Art and Urban Space.</p>
     <hr>
     <div class="gallery">
         <img loading="lazy" src="img/250625-2.jpg" alt="Casa di accoglienza dei pellegrini di San Pietro, Renovation">
@@ -181,6 +185,7 @@
         No cookies. No tracking.<br>
         Personal information may be processed by external providers such as <a href="https://open-meteo.com/" rel="nofollow">Open‑Meteo</a> for weather data and <a href="https://github.com/" rel="nofollow">GitHub</a> for hosting.
     </p>
+    <h3>Attribution</h3>
     <p>Nimbus Sans L © URW, <a href="https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html" rel="nofollow">GNU GPL v2</a></p>
 </div>
 <div class="content" id="gaming">
