@@ -29,6 +29,7 @@
     hr{margin:4rem 0;}
     a{white-space:nowrap;text-decoration:underline;}
     a:hover{background:var(--text);color:var(--background);text-decoration:none;}
+    a[href^="http"]::after{content:"\2197";padding-left:.2em;text-decoration:none;display:inline-block;}
     /* HEADER */
     #header,#header>span{display:flex;gap:.5em 1.2em;}
     #header{white-space:nowrap;user-select:none;width:100%;flex-wrap:wrap;justify-content:space-between;}
@@ -46,7 +47,7 @@
     /* VIDEO */
     .video{overflow:hidden;position:relative;width:1000px;max-width:100%;aspect-ratio: 2.2 / 1;font-size:0;line-height:0;user-select:none;}
     .video img,.video video,.video .controls .progress{width:100%;}
-    .video img{transition:all .75s;}
+    .video img{transition:all 1s;}
     .video:hover img{transform:scale(1.05);}
     .video:not(.playing)::after{font-size:1rem;line-height:1.3rem;content:"Play";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);color:var(--text);/* inset:0; *//* display:flex;justify-content:center;align-items:center; */pointer-events:none;}
     .video video,.video .controls{display:none;}
@@ -185,8 +186,8 @@
         No cookies. No tracking.<br>
         Personal information may be processed by external providers such as <a href="https://open-meteo.com/" rel="nofollow">Open‑Meteo</a> for weather data and <a href="https://github.com/" rel="nofollow">GitHub</a> for hosting.
     </p>
-    <h3>Attribution</h3>
-    <p>Nimbus Sans L © URW, <a href="https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html" rel="nofollow">GNU GPL v2</a></p>
+    <!-- <h3>Attribution</h3>
+    <p>Nimbus Sans L © URW, <a href="https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html" rel="nofollow">GNU GPL v2</a></p> -->
 </div>
 <div class="content" id="gaming">
     <h2 style="text-align:center;"><a href="https://steamcommunity.com/id/joeyws2/">joeyws2</a>’s Last PUBG Matches</h2>
