@@ -1,6 +1,6 @@
 {
-  "timestamp": "05.03. 14:50",
-  "weatherTempCelsius": 16,
+  "timestamp": "05.03. 15:54",
+  "weatherTempCelsius": 15,
   "githubLastCommit": "March 5, 2026",
   "steamStatus": "offline",
   "pubg": {
@@ -46,8 +46,8 @@
         "matchStart": "04.03. 18:14",
         "teamSize": "Squad",
         "teamMates": [
-          "Olmi_McFly",
           "RaZRuWiTeL",
+          "Olmi_McFly",
           "cruw"
         ],
         "perspective": "TPP",
@@ -95,9 +95,9 @@
         "matchStart": "04.03. 17:19",
         "teamSize": "Squad",
         "teamMates": [
-          "Emil987",
           "milanplayer7",
-          "BigBadBlade"
+          "BigBadBlade",
+          "Emil987"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -161,8 +161,8 @@
         "matchStart": "02.03. 20:16",
         "teamSize": "Squad",
         "teamMates": [
-          "WeCoyote",
           "KingZurenson",
+          "WeCoyote",
           "Flopsibert"
         ],
         "perspective": "FPP",
