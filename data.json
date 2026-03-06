@@ -1,5 +1,5 @@
 {
-  "timestamp": "06.03. 14:40",
+  "timestamp": "06.03. 15:41",
   "weatherTempCelsius": 16,
   "githubLastCommit": "March 6, 2026",
   "steamStatus": "online",
@@ -10,9 +10,9 @@
         "matchStart": "05.03. 18:24",
         "teamSize": "Squad",
         "teamMates": [
-          "KingZurenson",
+          "Flopsibert",
           "Palmo28-",
-          "Flopsibert"
+          "KingZurenson"
         ],
         "perspective": "FPP",
         "placement": 14,
@@ -45,8 +45,8 @@
         "matchStart": "05.03. 18:07",
         "teamSize": "Squad",
         "teamMates": [
-          "LeSaspect",
           "Flopsibert",
+          "LeSaspect",
           "KingZurenson"
         ],
         "perspective": "FPP",
@@ -63,9 +63,9 @@
         "matchStart": "05.03. 16:56",
         "teamSize": "Squad",
         "teamMates": [
+          "LANATKACH",
           "Hug0Hun_",
-          "MIKAELTKACH",
-          "LANATKACH"
+          "MIKAELTKACH"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -81,9 +81,9 @@
         "matchStart": "04.03. 21:00",
         "teamSize": "Squad",
         "teamMates": [
-          "Wiludad",
+          "salllou",
           "Vutangas161",
-          "salllou"
+          "Wiludad"
         ],
         "perspective": "TPP",
         "placement": 4,
@@ -100,8 +100,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "TomyTeem",
-          "Nickneedsreaders",
-          "terminator55455"
+          "terminator55455",
+          "Nickneedsreaders"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -117,9 +117,9 @@
         "matchStart": "04.03. 18:14",
         "teamSize": "Squad",
         "teamMates": [
-          "RaZRuWiTeL",
+          "cruw",
           "Olmi_McFly",
-          "cruw"
+          "RaZRuWiTeL"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -149,8 +149,8 @@
         "matchStart": "04.03. 17:45",
         "teamSize": "Squad",
         "teamMates": [
-          "Space_Driver",
-          "watcher52"
+          "watcher52",
+          "Space_Driver"
         ],
         "perspective": "TPP",
         "placement": 11,
