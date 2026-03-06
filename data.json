@@ -1,6 +1,6 @@
 {
-  "timestamp": "06.03. 11:33",
-  "weatherTempCelsius": 14,
+  "timestamp": "06.03. 13:03",
+  "weatherTempCelsius": 16,
   "githubLastCommit": "March 6, 2026",
   "steamStatus": "online",
   "pubg": {
@@ -10,9 +10,9 @@
         "matchStart": "05.03. 18:24",
         "teamSize": "Squad",
         "teamMates": [
+          "Flopsibert",
           "KingZurenson",
-          "Palmo28-",
-          "Flopsibert"
+          "Palmo28-"
         ],
         "perspective": "FPP",
         "placement": 14,
@@ -28,8 +28,8 @@
         "matchStart": "05.03. 18:17",
         "teamSize": "Squad",
         "teamMates": [
-          "Flopsibert",
-          "KingZurenson"
+          "KingZurenson",
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 23,
@@ -63,8 +63,8 @@
         "matchStart": "05.03. 16:56",
         "teamSize": "Squad",
         "teamMates": [
-          "Hug0Hun_",
           "MIKAELTKACH",
+          "Hug0Hun_",
           "LANATKACH"
         ],
         "perspective": "TPP",
@@ -81,9 +81,9 @@
         "matchStart": "04.03. 21:00",
         "teamSize": "Squad",
         "teamMates": [
+          "salllou",
           "Wiludad",
-          "Vutangas161",
-          "salllou"
+          "Vutangas161"
         ],
         "perspective": "TPP",
         "placement": 4,
@@ -100,8 +100,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "TomyTeem",
-          "Nickneedsreaders",
-          "terminator55455"
+          "terminator55455",
+          "Nickneedsreaders"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -149,8 +149,8 @@
         "matchStart": "04.03. 17:45",
         "teamSize": "Squad",
         "teamMates": [
-          "Space_Driver",
-          "watcher52"
+          "watcher52",
+          "Space_Driver"
         ],
         "perspective": "TPP",
         "placement": 11,
@@ -166,9 +166,9 @@
         "matchStart": "04.03. 17:19",
         "teamSize": "Squad",
         "teamMates": [
-          "milanplayer7",
+          "Emil987",
           "BigBadBlade",
-          "Emil987"
+          "milanplayer7"
         ],
         "perspective": "TPP",
         "placement": 1,
