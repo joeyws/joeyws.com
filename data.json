@@ -1,6 +1,6 @@
 {
-  "timestamp": "06.03. 17:38",
-  "weatherTempCelsius": 14,
+  "timestamp": "06.03. 18:53",
+  "weatherTempCelsius": 12,
   "githubLastCommit": "March 6, 2026",
   "steamStatus": "offline",
   "pubg": {
@@ -11,8 +11,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "Flopsibert",
-          "Palmo28-",
-          "KingZurenson"
+          "KingZurenson",
+          "Palmo28-"
         ],
         "perspective": "FPP",
         "placement": 14,
@@ -28,8 +28,8 @@
         "matchStart": "05.03. 18:17",
         "teamSize": "Squad",
         "teamMates": [
-          "Flopsibert",
-          "KingZurenson"
+          "KingZurenson",
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 23,
@@ -45,8 +45,8 @@
         "matchStart": "05.03. 18:07",
         "teamSize": "Squad",
         "teamMates": [
-          "Flopsibert",
           "LeSaspect",
+          "Flopsibert",
           "KingZurenson"
         ],
         "perspective": "FPP",
@@ -63,9 +63,9 @@
         "matchStart": "05.03. 16:56",
         "teamSize": "Squad",
         "teamMates": [
-          "LANATKACH",
+          "MIKAELTKACH",
           "Hug0Hun_",
-          "MIKAELTKACH"
+          "LANATKACH"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -82,8 +82,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "salllou",
-          "Vutangas161",
-          "Wiludad"
+          "Wiludad",
+          "Vutangas161"
         ],
         "perspective": "TPP",
         "placement": 4,
@@ -117,8 +117,8 @@
         "matchStart": "04.03. 18:14",
         "teamSize": "Squad",
         "teamMates": [
-          "cruw",
           "Olmi_McFly",
+          "cruw",
           "RaZRuWiTeL"
         ],
         "perspective": "TPP",
