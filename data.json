@@ -1,6 +1,6 @@
 {
-  "timestamp": "07.03. 15:27",
-  "weatherTempCelsius": 18,
+  "timestamp": "07.03. 16:32",
+  "weatherTempCelsius": 17,
   "githubLastCommit": "March 7, 2026",
   "steamStatus": "offline",
   "pubg": {
@@ -10,9 +10,9 @@
         "matchStart": "07.03. 7:13",
         "teamSize": "Ibr",
         "teamMates": [
-          "Bezosamz",
           "JerZi",
-          "Midknight_Cat"
+          "Midknight_Cat",
+          "Bezosamz"
         ],
         "perspective": "TPP",
         "placement": 5,
@@ -28,9 +28,9 @@
         "matchStart": "07.03. 0:13",
         "teamSize": "Ibr",
         "teamMates": [
-          "iyoncu",
+          "Xxcrtx",
           "UkDz",
-          "Xxcrtx"
+          "iyoncu"
         ],
         "perspective": "TPP",
         "placement": 4,
@@ -63,9 +63,9 @@
         "matchStart": "07.03. 0:04",
         "teamSize": "Ibr",
         "teamMates": [
-          "Norbikaa67",
           "winfarkas1",
-          "zsatii"
+          "zsatii",
+          "Norbikaa67"
         ],
         "perspective": "TPP",
         "placement": 3,
@@ -81,8 +81,8 @@
         "matchStart": "06.03. 23:54",
         "teamSize": "Ibr",
         "teamMates": [
-          "Zakrzz",
           "Conttravolta",
+          "Zakrzz",
           "dark_sider_-"
         ],
         "perspective": "TPP",
@@ -117,9 +117,9 @@
         "matchStart": "06.03. 23:00",
         "teamSize": "Squad",
         "teamMates": [
-          "Ch3sSm4n",
           "Vin-Zizi",
-          "Mor3ko"
+          "Mor3ko",
+          "Ch3sSm4n"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -135,9 +135,9 @@
         "matchStart": "05.03. 18:24",
         "teamSize": "Squad",
         "teamMates": [
+          "Flopsibert",
           "Palmo28-",
-          "KingZurenson",
-          "Flopsibert"
+          "KingZurenson"
         ],
         "perspective": "FPP",
         "placement": 14,
@@ -171,8 +171,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "Flopsibert",
-          "KingZurenson",
-          "LeSaspect"
+          "LeSaspect",
+          "KingZurenson"
         ],
         "perspective": "FPP",
         "placement": 23,
