@@ -26,10 +26,10 @@
     h2,h3,p,pre,table,#map{margin-top:.8rem;}
     hr+*,img+p,.content *:first-child{margin-top:0;}
     table{width:100%;}tr{border-top:1px solid var(--text);}td{vertical-align:top;}td:nth-child(1){width:8em;padding-right:var(--spacer);}td:nth-child(2){width:auto;}
-    hr{margin:4rem 0;}
+    hr{margin:3rem 0;}
     a{white-space:nowrap;text-decoration:underline;}
     a:hover{background:var(--text);color:var(--background);text-decoration:none;}
-    a[href^="http"]::after{content:"\2197";padding-left:.2em;text-decoration:none;display:inline-block;}
+    a[href^="http"]::after{content:"\2197";padding-left:.3em;text-decoration:none;display:inline-block;}
     /* HEADER */
     #header,#header>span{display:flex;gap:.5em 1.2em;}
     #header{white-space:nowrap;user-select:none;width:100%;flex-wrap:wrap;justify-content:space-between;}
@@ -67,7 +67,7 @@
     .loading{animation:.3s blink-loading steps(1) infinite;}
     @keyframes map{100%{outline-color:transparent;outline-offset:20px;}}
     #map{width:760px;max-width:100%;aspect-ratio:150/75;background:center center url(img/other/world.gif) no-repeat scroll;position:relative;background-size:contain;}
-    #map::after{top:23%;left:52.5%;outline:1px solid #0f0;border:1px solid var(--background);background:#0f0;animation:map 1.2s infinite ease-out;width:7px;height:7px;border-radius:100vmax;pointer-events:none;position:absolute;transform:translate(-50%,-50%);display:block;content:"";}
+    #map::after{top:23%;left:52.5%;outline:1px solid #0f5;border:1px solid var(--background);background:#0f5;animation:map 1.2s infinite ease-out;width:7px;height:7px;border-radius:100vmax;pointer-events:none;position:absolute;transform:translate(-50%,-50%);display:block;content:"";}
     #cursor{width:12px;height:12px;background:#fff1;backdrop-filter:blur(20px) invert(100%) saturate(10);-webkit-backdrop-filter:blur(20px) invert(100%) saturate(10);border-radius:100vmax;position:fixed;top:-50px;left:50%;transform:translate(-50%,-50%);font-size:0;line-height:0;z-index:99999999;pointer-events:none;}*{cursor:none !important;}
     /* GAMING */
     .match{width:800px;margin:0 auto;}
