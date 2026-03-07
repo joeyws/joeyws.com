@@ -35,7 +35,7 @@
     #header{white-space:nowrap;user-select:none;width:100%;flex-wrap:wrap;justify-content:space-between;}
     @media (max-width:500px) {#header{flex-direction:column;}}
     /* MARQUEE */
-    .marquee{background:#0f0;color:var(--background);margin:calc(-1*var(--spacer)) 0 var(--spacer) calc(-1*var(--spacer));transition:.2s width ease-out;line-height:1.4em;box-sizing:border-box;width:1px;overflow:hidden;white-space:nowrap;display:block;user-select:none;}
+    .marquee{background:#0f5;color:var(--background);margin:calc(-1*var(--spacer)) 0 var(--spacer) calc(-1*var(--spacer));transition:.2s width ease-out;line-height:1.4em;box-sizing:border-box;width:1px;overflow:hidden;white-space:nowrap;display:block;user-select:none;}
     .marquee-track{display:inline-flex;white-space:nowrap;will-change:transform;animation:marquee 50s linear infinite;}
     .marquee-track span{padding-right:2.4rem;}
     @keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-100%);}}
@@ -56,9 +56,10 @@
     .video .progress{display:inline-block;height:2px;overflow:hidden;padding-top:30px;}
     .video .progress-filled{width:0%;height:100%;background:var(--text);}
     /* GALLERY */
-    .gallery-nav{user-select:none;display:flex;flex-wrap:wrap;}
+    .gallery-nav,.gallery-caption{text-align:center;}
+    .gallery-nav,.gallery-img{user-select:none;}
     .gallery-img,.gallery-caption{margin-top:var(--spacer);}
-    .gallery-img{height:586px;user-select:none;}
+    .gallery-img{height:586px;display:flex;align-items:center;justify-content:center;}
     .gallery-img img{display:block;max-height:100%;max-width:100%;object-fit:contain;}
     /* SPECIAL */
     #mitgliedakbw{width:240px;max-width:100%;fill:var(--text);display:block;}
