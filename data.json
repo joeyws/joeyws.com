@@ -1,6 +1,6 @@
 {
-  "timestamp": "08.03. 22:28",
-  "weatherTempCelsius": 8,
+  "timestamp": "08.03. 23:28",
+  "weatherTempCelsius": 7,
   "githubLastCommit": "March 8, 2026",
   "steamStatus": "online",
   "pubg": {
@@ -63,9 +63,9 @@
         "matchStart": "07.03. 20:07",
         "teamSize": "Ibr",
         "teamMates": [
+          "Bedo2451",
           "Syndixer-",
-          "gaetanlesinge",
-          "Bedo2451"
+          "gaetanlesinge"
         ],
         "perspective": "TPP",
         "placement": 5,
@@ -81,9 +81,9 @@
         "matchStart": "07.03. 19:28",
         "teamSize": "Squad",
         "teamMates": [
-          "Miro5750",
           "Mirca21",
-          "B0belix"
+          "B0belix",
+          "Miro5750"
         ],
         "perspective": "TPP",
         "placement": 2,
@@ -100,8 +100,8 @@
         "teamSize": "Ibr",
         "teamMates": [
           "skspawn-x_x",
-          "AndyKar",
-          "Papachristou_GR"
+          "Papachristou_GR",
+          "AndyKar"
         ],
         "perspective": "TPP",
         "placement": 3,
@@ -117,9 +117,9 @@
         "matchStart": "07.03. 7:13",
         "teamSize": "Ibr",
         "teamMates": [
-          "Midknight_Cat",
           "JerZi",
-          "Bezosamz"
+          "Bezosamz",
+          "Midknight_Cat"
         ],
         "perspective": "TPP",
         "placement": 5,
@@ -136,8 +136,8 @@
         "teamSize": "Ibr",
         "teamMates": [
           "Xxcrtx",
-          "UkDz",
-          "iyoncu"
+          "iyoncu",
+          "UkDz"
         ],
         "perspective": "TPP",
         "placement": 4,
@@ -153,8 +153,8 @@
         "matchStart": "07.03. 0:09",
         "teamSize": "Ibr",
         "teamMates": [
-          "dz-anwar-dz",
-          "SrLugh"
+          "SrLugh",
+          "dz-anwar-dz"
         ],
         "perspective": "TPP",
         "placement": 5,
@@ -170,9 +170,9 @@
         "matchStart": "07.03. 0:04",
         "teamSize": "Ibr",
         "teamMates": [
+          "winfarkas1",
           "zsatii",
-          "Norbikaa67",
-          "winfarkas1"
+          "Norbikaa67"
         ],
         "perspective": "TPP",
         "placement": 3,
