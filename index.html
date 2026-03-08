@@ -307,18 +307,13 @@ if (window.matchMedia('(pointer: fine)').matches) {
 
 // TIME
 function getTime() {
-    const options = {
-        timeZone: "Europe/Berlin",
-        hour: "numeric",
-        minute: "2-digit",
-        second: "2-digit",
-        hour12: false
-    };
-    const timeString = new Intl.DateTimeFormat("de-DE", options).format(new Date());
+    const now = new Date();
+    const hours = now.getHours();
+    const minutes = String(now.getMinutes()).padStart(2, "0");
+    const seconds = String(now.getSeconds()).padStart(2, "0");
+    const timeString = `${hours}:${minutes}:${seconds}`;
     const timeEl = document.getElementById("time");
-    if (timeEl) {
-        timeEl.innerHTML = timeString;
-    }
+    if (timeEl) {timeEl.innerHTML = timeString;}
 }
 getTime();
 setInterval(getTime, 1000);
@@ -432,7 +427,34 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     function goToNext() {showImage((current + 1) % total);}
     function goToPrev() {showImage((current - 1 + total) % total);}
-    imgContainer.addEventListener("click", goToNext);
+    // click container for next/prev 
+    imgContainer.addEventListener("click", function(e) {
+    const rect = imgContainer.getBoundingClientRect();
+    const clickX = e.clientX - rect.left;
+    if (clickX < rect.width / 2) {
+        goToPrev();
+    } else {
+        goToNext();
+        }
+    });
+    // swipe left/right
+    let touchStartX = 0;
+    imgContainer.addEventListener("touchstart", function(e) {
+        touchStartX = e.touches[0].clientX;
+    });
+    imgContainer.addEventListener("touchend", function(e) {
+        const touchEndX = e.changedTouches[0].clientX;
+        const diffX = touchEndX - touchStartX;
+        const swipeThreshold = 50;
+        if (Math.abs(diffX) > swipeThreshold) {
+            if (diffX > 0) {
+                goToPrev();
+            } else {
+                goToNext();
+            }
+        }
+    });
+    // key control
     document.addEventListener("keydown", function(e) {
         if (["INPUT", "TEXTAREA", "SELECT"].includes(document.activeElement.tagName)) return;
         if (e.key !== "ArrowRight" && e.key !== "ArrowLeft") return;
