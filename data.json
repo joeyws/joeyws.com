@@ -1,8 +1,8 @@
 {
-  "timestamp": "08.03. 2:29",
-  "weatherTempCelsius": 6,
-  "githubLastCommit": "March 7, 2026",
-  "steamStatus": "online",
+  "timestamp": "08.03. 4:45",
+  "weatherTempCelsius": 4,
+  "githubLastCommit": "March 8, 2026",
+  "steamStatus": "offline",
   "pubg": {
     "name": "joeyws2",
     "lastMatches": [
@@ -64,8 +64,8 @@
         "matchStart": "07.03. 7:13",
         "teamSize": "Ibr",
         "teamMates": [
-          "Midknight_Cat",
           "JerZi",
+          "Midknight_Cat",
           "Bezosamz"
         ],
         "perspective": "TPP",
@@ -100,8 +100,8 @@
         "matchStart": "07.03. 0:09",
         "teamSize": "Ibr",
         "teamMates": [
-          "dz-anwar-dz",
-          "SrLugh"
+          "SrLugh",
+          "dz-anwar-dz"
         ],
         "perspective": "TPP",
         "placement": 5,
@@ -117,9 +117,9 @@
         "matchStart": "07.03. 0:04",
         "teamSize": "Ibr",
         "teamMates": [
+          "winfarkas1",
           "zsatii",
-          "Norbikaa67",
-          "winfarkas1"
+          "Norbikaa67"
         ],
         "perspective": "TPP",
         "placement": 3,
@@ -136,8 +136,8 @@
         "teamSize": "Ibr",
         "teamMates": [
           "Conttravolta",
-          "dark_sider_-",
-          "Zakrzz"
+          "Zakrzz",
+          "dark_sider_-"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -153,9 +153,9 @@
         "matchStart": "06.03. 23:28",
         "teamSize": "Squad",
         "teamMates": [
+          "d4xtr",
           "nick20720",
-          "Chesteroki",
-          "d4xtr"
+          "Chesteroki"
         ],
         "perspective": "TPP",
         "placement": 1,
