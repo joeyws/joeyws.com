@@ -1,6 +1,6 @@
 {
-  "timestamp": "09.03. 18:58",
-  "weatherTempCelsius": 14,
+  "timestamp": "09.03. 19:44",
+  "weatherTempCelsius": 12,
   "githubLastCommit": "March 9, 2026",
   "steamStatus": "online",
   "pubg": {
@@ -81,8 +81,8 @@
         "matchStart": "07.03. 19:28",
         "teamSize": "Squad",
         "teamMates": [
-          "Miro5750",
           "Mirca21",
+          "Miro5750",
           "B0belix"
         ],
         "perspective": "TPP",
@@ -153,8 +153,8 @@
         "matchStart": "07.03. 0:09",
         "teamSize": "Ibr",
         "teamMates": [
-          "SrLugh",
-          "dz-anwar-dz"
+          "dz-anwar-dz",
+          "SrLugh"
         ],
         "perspective": "TPP",
         "placement": 5,
