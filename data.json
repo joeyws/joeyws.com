@@ -1,8 +1,8 @@
 {
-  "timestamp": "10.03. 6:56",
-  "weatherTempCelsius": 7,
+  "timestamp": "10.03. 7:45",
+  "weatherTempCelsius": 9,
   "githubLastCommit": "March 10, 2026",
-  "steamStatus": "online",
+  "steamStatus": "offline",
   "pubg": {
     "name": "joeyws2",
     "lastMatches": [
@@ -28,8 +28,8 @@
         "matchStart": "08.03. 21:12",
         "teamSize": "Ibr",
         "teamMates": [
-          "MartyzCZ88",
-          "TaHer1221"
+          "TaHer1221",
+          "MartyzCZ88"
         ],
         "perspective": "TPP",
         "placement": 4,
@@ -45,9 +45,9 @@
         "matchStart": "08.03. 21:08",
         "teamSize": "Ibr",
         "teamMates": [
-          "hzesco",
           "LKZB1",
-          "RapkoliKK"
+          "RapkoliKK",
+          "hzesco"
         ],
         "perspective": "TPP",
         "placement": 5,
@@ -117,8 +117,8 @@
         "matchStart": "07.03. 7:13",
         "teamSize": "Ibr",
         "teamMates": [
-          "JerZi",
           "Midknight_Cat",
+          "JerZi",
           "Bezosamz"
         ],
         "perspective": "TPP",
@@ -153,8 +153,8 @@
         "matchStart": "07.03. 0:09",
         "teamSize": "Ibr",
         "teamMates": [
-          "SrLugh",
-          "dz-anwar-dz"
+          "dz-anwar-dz",
+          "SrLugh"
         ],
         "perspective": "TPP",
         "placement": 5,
@@ -170,9 +170,9 @@
         "matchStart": "07.03. 0:04",
         "teamSize": "Ibr",
         "teamMates": [
-          "winfarkas1",
           "zsatii",
-          "Norbikaa67"
+          "Norbikaa67",
+          "winfarkas1"
         ],
         "perspective": "TPP",
         "placement": 3,
