@@ -43,13 +43,13 @@
     nav a,.video::after{background:#5557;color:var(--text) !important;backdrop-filter:blur(3px);text-decoration:none !important;padding:.25em .6em;border-radius:5px;transition:.15s all;}
     nav a{border-right:1px solid var(--background);}
     nav a:hover,nav a.open,.video:hover::after{background:#555d;}
-    nav a.open{padding-right:1.1em;padding-left:1.1em;}
+    nav a.open{padding-right:1.2em;padding-left:1.2em;}
     /* VIDEO */
     .video{overflow:hidden;position:relative;width:1000px;max-width:100%;aspect-ratio: 2.2 / 1;font-size:0;line-height:0;user-select:none;}
     .video img,.video video,.video .controls .progress{width:100%;}
     .video img{transition:all .75s;}
     .video:hover img{transform:scale(1.05);}
-    .video:not(.playing)::after{font-size:1rem;line-height:1.3rem;content:"Play";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);color:var(--text);/* inset:0; *//* display:flex;justify-content:center;align-items:center; */pointer-events:none;}
+    .video:not(.playing)::after{font-size:1rem;line-height:1.3rem;content:"Play";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);color:var(--text);pointer-events:none;}
     .video video,.video .controls{display:none;}
     .video video{object-fit:cover;}
     .video .controls{position:absolute;bottom:0;left:0;right:0;}
@@ -82,15 +82,12 @@
     <div class="marquee"><div class="marquee-track"><span lang="zh-Hant">歡迎</span><span lang="es">Bienvenidos</span><span lang="en">Welcome</span><span lang="hi">स्वागत हे</span><span lang="ar">اهلا وسهلا</span><span lang="bn">স্বাগত</span><span lang="pt">Bem-vindo</span><span lang="ru">добро пожаловать</span><span lang="ur">خوش آمدید</span><span lang="ja">ようこそ</span><span lang="id">Selamat datang</span><span lang="de">Willkommen</span><span lang="tr">Hoşgeldiniz</span><span lang="ta">வரவேற்பு</span><span lang="fr">Bienvenue</span><span lang="ko">어서 오십시오</span><span lang="vi">Hoan nghênh</span><span lang="jv">Sugeng Rawuh</span><span lang="sw">Karibu</span><span lang="sa">Svāgatam</span><span lang="it">Benvenuto</span><span lang="pa">ਸਵਾਗਤ ਹੈ</span></div></div>
     <div id="header">
         <h1 class="loading">Joey Schweickhardt</h1>
-        <nav><!-- <a href="#/index">Index</a> --><a href="#/works">Works</a><a href="#/places">Places</a><a href="#/contact">Contact</a></nav>
+        <nav><a href="#/works">Works</a><a href="#/places">Places</a><a href="#/contact">Contact</a></nav>
         <span>Stuttgart<span id="time"></span></span>
     </div>
 </header>
 <hr>
 <main>
-<!-- <div class="content" id="index">
-    <img src="img/joeyws.png" alt="joeyws" style="mix-blend-mode:difference;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);width:1200px;max-width:70%;display:block;z-index:-1;pointer-events:none;user-select:none;">
-</div> -->
 <div class="content" id="works">
     <div class="video">
         <img fetchpriority="high" src="img/other/landderechsen.jpg" alt="Land der Echsen">
@@ -294,16 +291,8 @@ if (window.matchMedia('(pointer: fine)').matches) {
             });
         }
     });
-    document.addEventListener('mouseout', e => {
-        if (!e.relatedTarget && !e.toElement) {
-            cursor.style.opacity = '0';
-        }
-    });
-    document.addEventListener('mouseover', e => {
-        if (!e.relatedTarget) {
-            cursor.style.opacity = '1';
-        }
-    });
+    document.addEventListener('mouseout', e => { if (!e.relatedTarget && !e.toElement) {cursor.style.opacity = '0';} });
+    document.addEventListener('mouseover', e => { if (!e.relatedTarget) {cursor.style.opacity = '1';} });
 }
 
 // TIME
@@ -323,9 +312,7 @@ requestIdleCallback(() => {
     // WEATHER
     const getWeather = async () => {
         try {
-            const response = await fetch(
-                "https://api.open-meteo.com/v1/forecast?latitude=48.7823&longitude=9.177&current_weather=true"
-            );
+            const response = await fetch("https://api.open-meteo.com/v1/forecast?latitude=48.7823&longitude=9.177&current_weather=true");
             if (!response.ok) return;
             const data = await response.json();
             const current_weather = data.current_weather;
@@ -343,7 +330,6 @@ requestIdleCallback(() => {
         } catch (err) {}
     };
     getWeather();
-    setInterval(getWeather, (10 * 60 * 1000));
     // LAST MODIFIED
     async function updateLastModified() {
         try {
@@ -384,12 +370,8 @@ document.querySelectorAll(".phone").forEach(el => {
 document.querySelectorAll(".email").forEach(emailEl => {
     const hintSpan = document.createElement("span");
     emailEl.insertAdjacentElement("afterend", hintSpan);
-    emailEl.addEventListener("mouseenter", () => {
-        hintSpan.textContent = " copy";
-    });
-    emailEl.addEventListener("mouseleave", () => {
-        hintSpan.textContent = "";
-    });
+    emailEl.addEventListener("mouseenter", () => {hintSpan.textContent = " copy";});
+    emailEl.addEventListener("mouseleave", () => {hintSpan.textContent = "";});
     emailEl.addEventListener("click", (event) => {
         event.preventDefault();
         navigator.clipboard.writeText(mail).then(() => {
@@ -402,72 +384,66 @@ document.querySelectorAll(".email").forEach(emailEl => {
 
 // GALLERY
 document.addEventListener("DOMContentLoaded", function () {
-  document.querySelectorAll(".gallery").forEach(function(gallery) {
-    const images = Array.from(gallery.querySelectorAll("img"));
-    let current = 0;
-    const nav = document.createElement("div");
-    nav.classList.add("gallery-nav");
-    const caption = document.createElement("div");
-    caption.classList.add("gallery-caption");
-    const imgContainer = document.createElement("div");
-    imgContainer.classList.add("gallery-img");
-    images.forEach(img => imgContainer.appendChild(img));
-    gallery.append(nav);
-    gallery.append(imgContainer);
-    gallery.append(caption);
-    images.forEach((img, index) => {img.style.display = index === 0 ? "block" : "none";});
-    const total = images.length;
-    nav.textContent = `${current + 1} / ${total}`;
-    caption.textContent = images[0].alt;
-    function showImage(index) {
-        images[current].style.display = "none";
-        current = index;
-        images[current].style.display = "block";
+    document.querySelectorAll(".gallery").forEach(function(gallery) {
+        const images = Array.from(gallery.querySelectorAll("img"));
+        let current = 0;
+        const nav = document.createElement("div");
+        nav.classList.add("gallery-nav");
+        const caption = document.createElement("div");
+        caption.classList.add("gallery-caption");
+        const imgContainer = document.createElement("div");
+        imgContainer.classList.add("gallery-img");
+        images.forEach(img => imgContainer.appendChild(img));
+        gallery.append(nav);
+        gallery.append(imgContainer);
+        gallery.append(caption);
+        images.forEach((img, index) => {img.style.display = index === 0 ? "block" : "none";});
+        const total = images.length;
         nav.textContent = `${current + 1} / ${total}`;
-        caption.textContent = images[current].alt;
-    }
-    function goToNext() {showImage((current + 1) % total);}
-    function goToPrev() {showImage((current - 1 + total) % total);}
-    // click container for next/prev 
-    imgContainer.addEventListener("click", function(e) {
-    const rect = imgContainer.getBoundingClientRect();
-    const clickX = e.clientX - rect.left;
-    if (clickX < rect.width / 2) {
-        goToPrev();
-    } else {
-        goToNext();
+        caption.textContent = images[0].alt;
+        function showImage(index) {
+            images[current].style.display = "none";
+            current = index;
+            images[current].style.display = "block";
+            nav.textContent = `${current + 1} / ${total}`;
+            caption.textContent = images[current].alt;
         }
-    });
-    // swipe left/right
-    let touchStartX = 0;
-    imgContainer.addEventListener("touchstart", function(e) {
-        touchStartX = e.touches[0].clientX;
-    });
-    imgContainer.addEventListener("touchend", function(e) {
-        const touchEndX = e.changedTouches[0].clientX;
-        const diffX = touchEndX - touchStartX;
-        const swipeThreshold = 50;
-        if (Math.abs(diffX) > swipeThreshold) {
-            if (diffX > 0) {
-                goToPrev();
-            } else {
-                goToNext();
-            }
-        }
-    });
-    // key control
-    document.addEventListener("keydown", function(e) {
-        if (["INPUT", "TEXTAREA", "SELECT"].includes(document.activeElement.tagName)) return;
-        if (e.key !== "ArrowRight" && e.key !== "ArrowLeft") return;
-        const visibleGallery = Array.from(document.querySelectorAll(".gallery")).find(g => {
-            const rect = g.getBoundingClientRect();
-            return rect.bottom > 0 && rect.top < window.innerHeight;
+        function goToNext() {showImage((current + 1) % total);}
+        function goToPrev() {showImage((current - 1 + total) % total);}
+        // click container for next/prev 
+        imgContainer.addEventListener("click", function(e) {
+            const rect = imgContainer.getBoundingClientRect();
+            const clickX = e.clientX - rect.left;
+            if (clickX < rect.width / 2) {goToPrev();} else {goToNext();}
         });
-        if (visibleGallery !== gallery) return;
-        if (e.key === "ArrowRight") goToNext();
-        if (e.key === "ArrowLeft") goToPrev();
+        // swipe left/right
+        let touchStartX = 0;
+        imgContainer.addEventListener("touchstart", function(e) {touchStartX = e.touches[0].clientX;});
+        imgContainer.addEventListener("touchend", function(e) {
+            const touchEndX = e.changedTouches[0].clientX;
+            const diffX = touchEndX - touchStartX;
+            const swipeThreshold = 50;
+            if (Math.abs(diffX) > swipeThreshold) {
+                if (diffX > 0) {
+                    goToPrev();
+                } else {
+                    goToNext();
+                }
+            }
+        });
+        // key control
+        document.addEventListener("keydown", function(e) {
+            if (["INPUT", "TEXTAREA", "SELECT"].includes(document.activeElement.tagName)) return;
+            if (e.key !== "ArrowRight" && e.key !== "ArrowLeft") return;
+            const visibleGallery = Array.from(document.querySelectorAll(".gallery")).find(g => {
+                const rect = g.getBoundingClientRect();
+                return rect.bottom > 0 && rect.top < window.innerHeight;
+            });
+            if (visibleGallery !== gallery) return;
+            if (e.key === "ArrowRight") goToNext();
+            if (e.key === "ArrowLeft") goToPrev();
+        });
     });
-  });
 });
 
 // VIDEO
@@ -497,12 +473,8 @@ document.querySelectorAll(".video").forEach(wrapper => {
     video.addEventListener("ended", () => {cancelAnimationFrame(rafId); wrapper.classList.remove("playing");});
     progress.addEventListener("click", e => {
         const { left, width } = progress.getBoundingClientRect();
-        video.currentTime =
-            ((e.clientX - left) / width) * video.duration;
-        if (video.duration) {
-            progressFilled.style.width =
-                (video.currentTime / video.duration) * 100 + "%";
-        }
+        video.currentTime = ((e.clientX - left) / width) * video.duration;
+        if (video.duration) {progressFilled.style.width = (video.currentTime / video.duration) * 100 + "%";}
     });
     document.addEventListener("keydown", e => {
         if (e.code === "Space") {
@@ -526,27 +498,15 @@ fetch('https://joeyws.com/data.json')
             card.className = 'match';
             const mates = match.teamMates.length ? match.teamMates.join(', ') : '-';
             card.innerHTML = `
-                <p>
-                    <span style="float:right;">${match.matchStart}</span><span style="font-size:48px;line-height:1.3em;">#${match.placement}</span>
-                </p>
-                <p>
-                    ${match.map} (${match.teamSize} ${match.perspective})
-                </p>
-                <p>
-                    K: ${match.kills} &nbsp; &nbsp;
-                    A: ${match.assists} &nbsp; &nbsp;
-                    D: ${match.damage}
-                </p>
-                <p>
-                    Team: ${mates}
-                </p>
+                <p><span style="float:right;">${match.matchStart}</span><span style="font-size:48px;line-height:1.3em;">#${match.placement}</span></p>
+                <p>${match.map} (${match.teamSize} ${match.perspective})</p>
+                <p>K: ${match.kills} &nbsp; &nbsp; A: ${match.assists} &nbsp; &nbsp; D: ${match.damage}</p>
+                <p>Team: ${mates}</p>
                 <p>
                     Travelled: ${match.distance} km<br>
                     Survived: ${match.survivalTime}<br>
                 </p>
-                <p>
-                    <a href="${match.url}" rel="nofollow">Watch 2D Replay</a>
-                </p>
+                <p><a href="${match.url}" rel="nofollow">Watch 2D Replay</a></p>
                 <hr>
             `;
             container.appendChild(card);
