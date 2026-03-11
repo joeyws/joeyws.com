@@ -35,7 +35,7 @@
     #header{white-space:nowrap;user-select:none;width:100%;flex-wrap:wrap;justify-content:space-between;}
     @media (max-width:500px) {#header{flex-direction:column;}}
     /* MARQUEE */
-    .marquee{background:#f0f;color:var(--background);margin:calc(-1*var(--spacer)) 0 var(--spacer) calc(-1*var(--spacer));transition:.2s width ease-out;line-height:1.4em;box-sizing:border-box;width:1px;overflow:hidden;white-space:nowrap;display:block;user-select:none;}
+    .marquee{background:#0f5;color:var(--background);margin:calc(-1*var(--spacer)) 0 var(--spacer) calc(-1*var(--spacer));transition:.2s width ease-out;line-height:1.4em;box-sizing:border-box;width:1px;overflow:hidden;white-space:nowrap;display:block;user-select:none;}
     .marquee-track{display:inline-flex;white-space:nowrap;will-change:transform;animation:marquee 50s linear infinite;}
     .marquee-track span{padding-right:2.4rem;}
     @keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-100%);}}
@@ -67,10 +67,10 @@
     .loading{animation:.3s blink-loading steps(1) infinite;}
     @keyframes map{100%{outline-color:transparent;outline-offset:20px;}}
     #map{width:760px;max-width:100%;aspect-ratio:150/75;background:center center url(img/other/world.gif) no-repeat scroll;position:relative;background-size:contain;}
-    #map::after{top:23%;left:52.5%;outline:1px solid #0f0;border:1px solid #000;background:#0f0;animation:map 1.2s infinite ease-out;width:7px;height:7px;border-radius:100vmax;pointer-events:none;position:absolute;transform:translate(-50%,-50%);display:block;content:"";}
+    #map::after{top:23%;left:52.5%;outline:1px solid #0f5;border:1px solid #000;background:#0f5;animation:map 1.2s infinite ease-out;width:7px;height:7px;border-radius:100vmax;pointer-events:none;position:absolute;transform:translate(-50%,-50%);display:block;content:"";}
     #cursor{width:12px;height:12px;background:#fff1;backdrop-filter:blur(20px) invert(100%) saturate(10);-webkit-backdrop-filter:blur(20px) invert(100%) saturate(10);border-radius:100vmax;position:fixed;top:-50px;left:50%;transform:translate(-50%,-50%);font-size:0;line-height:0;z-index:99999999;pointer-events:none;}*{cursor:none !important;}
     /* GAMING */
-    .match{width:800px;margin:0 auto;}
+    .match{width:600px;margin:0 auto;}
 </style>
 </head>
 <body>
@@ -326,7 +326,7 @@ requestIdleCallback(() => {
                 weatherEl.id = "weather";
                 timeElement.insertAdjacentElement("beforebegin", weatherEl);
             }
-            weatherEl.textContent = `${temperature}°C`; // ℃ ⬤ ☼ ☀ ◯ <span style="color:#fc0;">☀</span> 
+            weatherEl.innerHTML = `${temperature}°C`; // ℃ ⬤ ☼ ☀ ◯ <span style="color:#fc0;">☀</span> 
         } catch (err) {}
     };
     getWeather();
