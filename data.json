@@ -1,5 +1,5 @@
 {
-  "timestamp": "11.03. 21:36",
+  "timestamp": "11.03. 22:30",
   "weatherTempCelsius": 10,
   "githubLastCommit": "March 11, 2026",
   "steamStatus": "online",
@@ -28,9 +28,9 @@
         "matchStart": "11.03. 18:46",
         "teamSize": "Squad",
         "teamMates": [
-          "ZY_12O5",
           "SkazanyNaBluesa",
-          "Hederian"
+          "Hederian",
+          "ZY_12O5"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -47,8 +47,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "CigaraYasak",
-          "Maxim_DP",
-          "a_kadir"
+          "a_kadir",
+          "Maxim_DP"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -82,8 +82,8 @@
         "matchStart": "08.03. 21:12",
         "teamSize": "Ibr",
         "teamMates": [
-          "TaHer1221",
-          "MartyzCZ88"
+          "MartyzCZ88",
+          "TaHer1221"
         ],
         "perspective": "TPP",
         "placement": 4,
@@ -99,9 +99,9 @@
         "matchStart": "08.03. 21:08",
         "teamSize": "Ibr",
         "teamMates": [
+          "hzesco",
           "LKZB1",
-          "RapkoliKK",
-          "hzesco"
+          "RapkoliKK"
         ],
         "perspective": "TPP",
         "placement": 5,
@@ -171,8 +171,8 @@
         "matchStart": "07.03. 7:13",
         "teamSize": "Ibr",
         "teamMates": [
-          "Midknight_Cat",
           "JerZi",
+          "Midknight_Cat",
           "Bezosamz"
         ],
         "perspective": "TPP",
