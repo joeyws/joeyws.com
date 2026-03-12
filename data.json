@@ -1,8 +1,8 @@
 {
-  "timestamp": "12.03. 19:47",
+  "timestamp": "12.03. 20:39",
   "weatherTempCelsius": 8,
   "githubLastCommit": "March 12, 2026",
-  "steamStatus": "offline",
+  "steamStatus": "online",
   "pubg": {
     "name": "joeyws2",
     "lastMatches": [
@@ -29,8 +29,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "ZY_12O5",
-          "SkazanyNaBluesa",
-          "Hederian"
+          "Hederian",
+          "SkazanyNaBluesa"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -117,9 +117,9 @@
         "matchStart": "07.03. 20:07",
         "teamSize": "Ibr",
         "teamMates": [
+          "Bedo2451",
           "Syndixer-",
-          "gaetanlesinge",
-          "Bedo2451"
+          "gaetanlesinge"
         ],
         "perspective": "TPP",
         "placement": 5,
@@ -135,9 +135,9 @@
         "matchStart": "07.03. 19:28",
         "teamSize": "Squad",
         "teamMates": [
-          "Miro5750",
           "Mirca21",
-          "B0belix"
+          "B0belix",
+          "Miro5750"
         ],
         "perspective": "TPP",
         "placement": 2,
@@ -154,8 +154,8 @@
         "teamSize": "Ibr",
         "teamMates": [
           "skspawn-x_x",
-          "AndyKar",
-          "Papachristou_GR"
+          "Papachristou_GR",
+          "AndyKar"
         ],
         "perspective": "TPP",
         "placement": 3,
@@ -171,9 +171,9 @@
         "matchStart": "07.03. 7:13",
         "teamSize": "Ibr",
         "teamMates": [
-          "Midknight_Cat",
           "JerZi",
-          "Bezosamz"
+          "Bezosamz",
+          "Midknight_Cat"
         ],
         "perspective": "TPP",
         "placement": 5,
