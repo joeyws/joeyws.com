@@ -1,6 +1,6 @@
 {
-  "timestamp": "12.03. 17:51",
-  "weatherTempCelsius": 11,
+  "timestamp": "12.03. 19:02",
+  "weatherTempCelsius": 9,
   "githubLastCommit": "March 12, 2026",
   "steamStatus": "offline",
   "pubg": {
@@ -10,8 +10,8 @@
         "matchStart": "11.03. 19:13",
         "teamSize": "Squad",
         "teamMates": [
-          "Andris_Nero",
           "ZY_12O5",
+          "Andris_Nero",
           "Andrew_Z_19"
         ],
         "perspective": "TPP",
@@ -28,9 +28,9 @@
         "matchStart": "11.03. 18:46",
         "teamSize": "Squad",
         "teamMates": [
+          "ZY_12O5",
           "SkazanyNaBluesa",
-          "Hederian",
-          "ZY_12O5"
+          "Hederian"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -46,9 +46,9 @@
         "matchStart": "11.03. 18:13",
         "teamSize": "Squad",
         "teamMates": [
-          "CigaraYasak",
+          "Maxim_DP",
           "a_kadir",
-          "Maxim_DP"
+          "CigaraYasak"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -65,8 +65,8 @@
         "teamSize": "Ibr",
         "teamMates": [
           "Di4kaaa",
-          "MyMotherIs",
-          "Mr_TaHyHaX"
+          "Mr_TaHyHaX",
+          "MyMotherIs"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -100,8 +100,8 @@
         "teamSize": "Ibr",
         "teamMates": [
           "hzesco",
-          "LKZB1",
-          "RapkoliKK"
+          "RapkoliKK",
+          "LKZB1"
         ],
         "perspective": "TPP",
         "placement": 5,
@@ -117,8 +117,8 @@
         "matchStart": "07.03. 20:07",
         "teamSize": "Ibr",
         "teamMates": [
-          "Syndixer-",
           "gaetanlesinge",
+          "Syndixer-",
           "Bedo2451"
         ],
         "perspective": "TPP",
@@ -135,9 +135,9 @@
         "matchStart": "07.03. 19:28",
         "teamSize": "Squad",
         "teamMates": [
+          "B0belix",
           "Miro5750",
-          "Mirca21",
-          "B0belix"
+          "Mirca21"
         ],
         "perspective": "TPP",
         "placement": 2,
@@ -153,9 +153,9 @@
         "matchStart": "07.03. 19:20",
         "teamSize": "Ibr",
         "teamMates": [
-          "skspawn-x_x",
           "AndyKar",
-          "Papachristou_GR"
+          "Papachristou_GR",
+          "skspawn-x_x"
         ],
         "perspective": "TPP",
         "placement": 3,
@@ -171,9 +171,9 @@
         "matchStart": "07.03. 7:13",
         "teamSize": "Ibr",
         "teamMates": [
+          "Bezosamz",
           "JerZi",
-          "Midknight_Cat",
-          "Bezosamz"
+          "Midknight_Cat"
         ],
         "perspective": "TPP",
         "placement": 5,
