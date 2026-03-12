@@ -1,11 +1,29 @@
 {
-  "timestamp": "12.03. 20:39",
-  "weatherTempCelsius": 8,
+  "timestamp": "12.03. 21:37",
+  "weatherTempCelsius": 7,
   "githubLastCommit": "March 12, 2026",
   "steamStatus": "online",
   "pubg": {
     "name": "joeyws2",
     "lastMatches": [
+      {
+        "matchStart": "12.03. 20:58",
+        "teamSize": "Squad",
+        "teamMates": [
+          "Innvicta",
+          "teddy_Dracarys",
+          "Velendris"
+        ],
+        "perspective": "TPP",
+        "placement": 1,
+        "map": "Erangel",
+        "survivalTime": "23:40",
+        "distance": "13.8",
+        "kills": 9,
+        "assists": 4,
+        "damage": 756,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.03.12.20.30f2a07c-d693-4a15-b883-a26f6226ffac"
+      },
       {
         "matchStart": "11.03. 19:13",
         "teamSize": "Squad",
@@ -29,8 +47,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "ZY_12O5",
-          "Hederian",
-          "SkazanyNaBluesa"
+          "SkazanyNaBluesa",
+          "Hederian"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -117,9 +135,9 @@
         "matchStart": "07.03. 20:07",
         "teamSize": "Ibr",
         "teamMates": [
-          "Bedo2451",
           "Syndixer-",
-          "gaetanlesinge"
+          "gaetanlesinge",
+          "Bedo2451"
         ],
         "perspective": "TPP",
         "placement": 5,
@@ -135,9 +153,9 @@
         "matchStart": "07.03. 19:28",
         "teamSize": "Squad",
         "teamMates": [
+          "Miro5750",
           "Mirca21",
-          "B0belix",
-          "Miro5750"
+          "B0belix"
         ],
         "perspective": "TPP",
         "placement": 2,
@@ -154,8 +172,8 @@
         "teamSize": "Ibr",
         "teamMates": [
           "skspawn-x_x",
-          "Papachristou_GR",
-          "AndyKar"
+          "AndyKar",
+          "Papachristou_GR"
         ],
         "perspective": "TPP",
         "placement": 3,
@@ -166,24 +184,6 @@
         "assists": 0,
         "damage": 0,
         "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.ibr.eu.2026.03.07.19.da0b616a-311b-47a8-90e6-138f0253de63"
-      },
-      {
-        "matchStart": "07.03. 7:13",
-        "teamSize": "Ibr",
-        "teamMates": [
-          "JerZi",
-          "Bezosamz",
-          "Midknight_Cat"
-        ],
-        "perspective": "TPP",
-        "placement": 5,
-        "map": "Karakin",
-        "survivalTime": "0:59",
-        "distance": "0.0",
-        "kills": 0,
-        "assists": 0,
-        "damage": 39,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.ibr.eu.2026.03.07.07.7a5cc6cd-2205-4048-a2b2-875136bc76a7"
       }
     ]
   }
