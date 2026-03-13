@@ -1,8 +1,8 @@
 {
-  "timestamp": "13.03. 5:52",
-  "weatherTempCelsius": 5,
+  "timestamp": "13.03. 6:59",
+  "weatherTempCelsius": 6,
   "githubLastCommit": "March 13, 2026",
-  "steamStatus": "offline",
+  "steamStatus": "online",
   "pubg": {
     "name": "joeyws2",
     "lastMatches": [
@@ -46,9 +46,9 @@
         "matchStart": "12.03. 22:03",
         "teamSize": "Squad",
         "teamMates": [
-          "body2329",
           "GROM_ZE",
-          "Secretlemon"
+          "Secretlemon",
+          "body2329"
         ],
         "perspective": "TPP",
         "placement": 25,
