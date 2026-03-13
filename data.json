@@ -1,5 +1,5 @@
 {
-  "timestamp": "13.03. 4:47",
+  "timestamp": "13.03. 5:52",
   "weatherTempCelsius": 5,
   "githubLastCommit": "March 13, 2026",
   "steamStatus": "offline",
@@ -28,9 +28,9 @@
         "matchStart": "12.03. 22:12",
         "teamSize": "Squad",
         "teamMates": [
-          "BULLETPROOFSNUS",
           "MOTHER_CHRISTMAS",
-          "XxfedaiixX"
+          "XxfedaiixX",
+          "BULLETPROOFSNUS"
         ],
         "perspective": "TPP",
         "placement": 9,
@@ -81,8 +81,8 @@
         "matchStart": "12.03. 20:58",
         "teamSize": "Squad",
         "teamMates": [
-          "Velendris",
           "teddy_Dracarys",
+          "Velendris",
           "Innvicta"
         ],
         "perspective": "TPP",
@@ -117,9 +117,9 @@
         "matchStart": "11.03. 18:46",
         "teamSize": "Squad",
         "teamMates": [
-          "ZY_12O5",
+          "SkazanyNaBluesa",
           "Hederian",
-          "SkazanyNaBluesa"
+          "ZY_12O5"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -136,8 +136,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "CigaraYasak",
-          "Maxim_DP",
-          "a_kadir"
+          "a_kadir",
+          "Maxim_DP"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -171,8 +171,8 @@
         "matchStart": "08.03. 21:12",
         "teamSize": "Ibr",
         "teamMates": [
-          "TaHer1221",
-          "MartyzCZ88"
+          "MartyzCZ88",
+          "TaHer1221"
         ],
         "perspective": "TPP",
         "placement": 4,
