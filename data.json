@@ -1,6 +1,6 @@
 {
-  "timestamp": "13.03. 8:46",
-  "weatherTempCelsius": 9,
+  "timestamp": "13.03. 9:43",
+  "weatherTempCelsius": 10,
   "githubLastCommit": "March 13, 2026",
   "steamStatus": "offline",
   "pubg": {
@@ -10,9 +10,9 @@
         "matchStart": "12.03. 22:49",
         "teamSize": "Squad",
         "teamMates": [
-          "Unknwon_Player",
           "Andy-boom",
-          "sveTT321"
+          "sveTT321",
+          "Unknwon_Player"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -64,8 +64,8 @@
         "matchStart": "12.03. 21:34",
         "teamSize": "Squad",
         "teamMates": [
-          "Fliegenfaenger",
-          "NastyBlitz"
+          "NastyBlitz",
+          "Fliegenfaenger"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -81,9 +81,9 @@
         "matchStart": "12.03. 20:58",
         "teamSize": "Squad",
         "teamMates": [
-          "Innvicta",
+          "Velendris",
           "teddy_Dracarys",
-          "Velendris"
+          "Innvicta"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -118,8 +118,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "ZY_12O5",
-          "SkazanyNaBluesa",
-          "Hederian"
+          "Hederian",
+          "SkazanyNaBluesa"
         ],
         "perspective": "TPP",
         "placement": 1,
