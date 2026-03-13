@@ -1,8 +1,8 @@
 {
-  "timestamp": "13.03. 10:41",
-  "weatherTempCelsius": 13,
+  "timestamp": "13.03. 11:34",
+  "weatherTempCelsius": 15,
   "githubLastCommit": "March 13, 2026",
-  "steamStatus": "offline",
+  "steamStatus": "online",
   "pubg": {
     "name": "joeyws2",
     "lastMatches": [
@@ -10,9 +10,9 @@
         "matchStart": "12.03. 22:49",
         "teamSize": "Squad",
         "teamMates": [
+          "Unknwon_Player",
           "Andy-boom",
-          "sveTT321",
-          "Unknwon_Player"
+          "sveTT321"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -28,9 +28,9 @@
         "matchStart": "12.03. 22:12",
         "teamSize": "Squad",
         "teamMates": [
-          "XxfedaiixX",
           "BULLETPROOFSNUS",
-          "MOTHER_CHRISTMAS"
+          "MOTHER_CHRISTMAS",
+          "XxfedaiixX"
         ],
         "perspective": "TPP",
         "placement": 9,
@@ -46,9 +46,9 @@
         "matchStart": "12.03. 22:03",
         "teamSize": "Squad",
         "teamMates": [
-          "Secretlemon",
+          "body2329",
           "GROM_ZE",
-          "body2329"
+          "Secretlemon"
         ],
         "perspective": "TPP",
         "placement": 25,
@@ -99,8 +99,8 @@
         "matchStart": "11.03. 19:13",
         "teamSize": "Squad",
         "teamMates": [
-          "ZY_12O5",
           "Andris_Nero",
+          "ZY_12O5",
           "Andrew_Z_19"
         ],
         "perspective": "TPP",
@@ -135,9 +135,9 @@
         "matchStart": "11.03. 18:13",
         "teamSize": "Squad",
         "teamMates": [
+          "CigaraYasak",
           "Maxim_DP",
-          "a_kadir",
-          "CigaraYasak"
+          "a_kadir"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -154,8 +154,8 @@
         "teamSize": "Ibr",
         "teamMates": [
           "Di4kaaa",
-          "Mr_TaHyHaX",
-          "MyMotherIs"
+          "MyMotherIs",
+          "Mr_TaHyHaX"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -171,8 +171,8 @@
         "matchStart": "08.03. 21:12",
         "teamSize": "Ibr",
         "teamMates": [
-          "MartyzCZ88",
-          "TaHer1221"
+          "TaHer1221",
+          "MartyzCZ88"
         ],
         "perspective": "TPP",
         "placement": 4,
