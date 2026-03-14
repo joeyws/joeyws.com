@@ -1,6 +1,6 @@
 {
-  "timestamp": "14.03. 6:53",
-  "weatherTempCelsius": 8,
+  "timestamp": "14.03. 7:37",
+  "weatherTempCelsius": 7,
   "githubLastCommit": "March 14, 2026",
   "steamStatus": "online",
   "pubg": {
@@ -28,8 +28,8 @@
         "matchStart": "13.03. 21:01",
         "teamSize": "Squad",
         "teamMates": [
-          "Flopsibert",
-          "KingZurenson"
+          "KingZurenson",
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 7,
@@ -62,9 +62,9 @@
         "matchStart": "13.03. 20:32",
         "teamSize": "Squad",
         "teamMates": [
+          "KingZurenson",
           "Flopsibert",
-          "Xatab4ikk",
-          "KingZurenson"
+          "Xatab4ikk"
         ],
         "perspective": "FPP",
         "placement": 22,
@@ -80,8 +80,8 @@
         "matchStart": "13.03. 20:25",
         "teamSize": "Squad",
         "teamMates": [
-          "Flopsibert",
           "Sanyaba_3103",
+          "Flopsibert",
           "KingZurenson"
         ],
         "perspective": "FPP",
@@ -133,8 +133,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "NoClue_DK",
-          "Mazen-Aden",
-          "Elme0707"
+          "Elme0707",
+          "Mazen-Aden"
         ],
         "perspective": "TPP",
         "placement": 12,
