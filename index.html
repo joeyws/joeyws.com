@@ -28,28 +28,26 @@
     table{width:100%;}tr{border-top:1px solid var(--text);}td{vertical-align:top;}td:nth-child(1){width:8em;padding-right:var(--spacer);}td:nth-child(2){width:auto;}
     hr{margin:3rem 0;}
     a{white-space:nowrap;text-decoration:underline;}
-    a:hover{background:var(--text);color:var(--background);text-decoration:none;}
+    a:hover,nav a.open,.video:hover::after{background:var(--text);color:var(--background);text-decoration:none;}
     a[href^="http"]::after{content:"\2197";padding-left:.3em;text-decoration:none;display:inline-block;}
     /* HEADER */
     #header,#header>span{display:flex;gap:.5em 1.4em;}
     #header{white-space:nowrap;user-select:none;width:100%;flex-wrap:wrap;justify-content:space-between;}
     @media (max-width:500px) {#header{flex-direction:column;}}
     /* MARQUEE */
-    .marquee{font-size:2rem;/* color:#0f0;text-shadow:0 0 8px #afa; *//* background:#0f5;color:var(--background); */margin:calc(-1*var(--spacer)) 0 var(--spacer) calc(-1*var(--spacer));transition:.2s width ease-out;line-height:2em;box-sizing:border-box;width:1px;overflow:hidden;white-space:nowrap;display:block;user-select:none;mask-mode:alpha;mask-image:linear-gradient(to right, transparent, #000 25%, #000 calc(100% - 25%), transparent);}
+    .marquee{font-size:2rem;/* color:#0f0;text-shadow:0 0 8px #afa; *//* background:#0f5;color:var(--background); */margin:calc(-1*var(--spacer)) 0 var(--spacer) calc(-1*var(--spacer));transition:.2s width ease-out;line-height:2em;box-sizing:border-box;width:1px;overflow:hidden;white-space:nowrap;display:block;user-select:none;/* mask-mode:alpha;mask-image:linear-gradient(to right, transparent, #000 10%, #000 calc(100% - 10%), transparent); */}
     .marquee-track{display:inline-flex;white-space:nowrap;will-change:transform;animation:marquee 120s linear infinite;}
-    .marquee-track span{padding-right:1em;}
+    .marquee-track span{padding-right:1.3em;}
     @keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-100%);}}
     /* NAV / BUTTONS */
-    nav a,.video::after{background:#5559;color:var(--text) !important;backdrop-filter:blur(3px);text-decoration:none !important;padding:.25em .7em;border-radius:3px;transition:.15s all;}
-    nav a{border-right:1px solid var(--background);}
-    nav a:hover,nav a.open,.video:hover::after{background:#555d;}
-    nav a.open{padding-right:1.2em;padding-left:1.2em;}
+    nav a,.video::after{}
+    nav a.open{text-decoration:none;color:var(--background);background:var(--text);}
     /* VIDEO */
     .video{overflow:hidden;position:relative;width:1000px;max-width:100%;aspect-ratio: 2.2 / 1;font-size:0;line-height:0;user-select:none;}
     .video img,.video video,.video .controls .progress{width:100%;}
     .video img{transition:all .75s;}
     .video:hover img{transform:scale(1.05);}
-    .video:not(.playing)::after{font-size:1rem;line-height:1.3rem;content:"Play";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);color:var(--text);pointer-events:none;}
+    .video:not(.playing)::after{font-size:1rem;line-height:1.3rem;content:"Play";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);pointer-events:none;}
     .video video,.video .controls{display:none;}
     .video video{object-fit:cover;}
     .video .controls{position:absolute;bottom:0;left:0;right:0;}
@@ -67,7 +65,7 @@
     .loading{animation:.3s blink-loading steps(1) infinite;}
     @keyframes map{100%{outline-color:transparent;outline-offset:20px;}}
     #map{width:760px;max-width:100%;aspect-ratio:150/75;background:center center url(img/other/world.gif) no-repeat scroll;position:relative;background-size:contain;}
-    #map::after{top:23%;left:52.5%;outline:1px solid var(--text);border:1px solid var(--background);background:var(--text);animation:map 1.2s infinite ease-out;width:7px;height:7px;border-radius:100vmax;pointer-events:none;position:absolute;transform:translate(-50%,-50%);display:block;content:"";}
+    #map::after{top:23%;left:52.5%;outline:1px solid #0f0;border:1px solid #000;background:#0f0;animation:map 1.2s infinite ease-out;width:7px;height:7px;border-radius:100vmax;pointer-events:none;position:absolute;transform:translate(-50%,-50%);display:block;content:"";}
     #cursor{width:12px;height:12px;background:#fff1;backdrop-filter:blur(20px) invert(100%) saturate(10);-webkit-backdrop-filter:blur(20px) invert(100%) saturate(10);border-radius:100vmax;position:fixed;top:-50px;left:50%;transform:translate(-50%,-50%);font-size:0;line-height:0;z-index:99999999;pointer-events:none;}*{cursor:none !important;}
     /* GAMING */
     .match{width:600px;margin:0 auto;}
@@ -82,7 +80,7 @@
     <div class="marquee"><div class="marquee-track"><span lang="zh-Hant">歡迎</span><span lang="es">Bienvenidos</span><span lang="en">Welcome</span><span lang="hi">स्वागत है</span><span lang="ar">اهلا وسهلا</span><span lang="bn">স্বাগত</span><span lang="pt">Bem-vindo</span><span lang="ru">Добро пожаловать</span><span lang="ur">خوش آمدید</span><span lang="ja">ようこそ</span><span lang="id">Selamat datang</span><span lang="de">Willkommen</span><span lang="tr">Hoş geldiniz</span><span lang="ta">வரவேற்பு</span><span lang="fr">Bienvenue</span><span lang="ko">어서 오십시오</span><span lang="vi">Chào mừng</span><span lang="jv">Sugeng Rawuh</span><span lang="sw">Karibu</span><span lang="sa">Svāgatam</span><span lang="it">Benvenuti</span><span lang="pa">ਸਵਾਗਤ ਹੈ</span></div></div>
     <div id="header">
         <h1 class="loading">Joey Schweickhardt</h1>
-        <nav><a href="#/works">Works</a><a href="#/places">Places</a><a href="#/contact">Contact</a></nav>
+        <nav><a href="#/works">Works</a>, <a href="#/places">Places</a>, <a href="#/contact">Contact</a></nav>
         <span><span>Stuttgart <svg style="height:1em;vertical-align:-16%;" viewBox="0 0 400 262" xmlns="http://www.w3.org/2000/svg"><title>Germany</title><path d="M200.005,5C146.594,5 98.162,18.773 62.813,41.345C27.463,63.917 5,95.616 5,131C5,166.384 27.463,198.083 62.813,220.655C98.162,243.227 146.594,257 200.005,257C253.416,257 301.838,243.227 337.187,220.655C372.537,198.083 395,166.384 395,131C395,95.616 372.537,63.917 337.187,41.345C301.838,18.773 253.416,5 200.005,5Z" fill="none" stroke="#bbb" stroke-width="10"/><g fill="#bbb" transform="matrix(0.83346,0,0,0.83346,37.307976,21.816724)"><path d="M130.576,33.489L130.576,228.511L219.176,228.511C246.794,228.511 269.424,205.881 269.424,178.263L269.424,83.737C269.424,56.119 246.794,33.489 219.176,33.489L130.576,33.489ZM155.622,58.535L219.176,58.535C233.352,58.535 244.378,69.561 244.378,83.737L244.378,178.263C244.378,192.439 233.352,203.465 219.176,203.465L155.622,203.465L155.622,58.535Z"/></g></svg></span><span id="time"></span></span>
     </div>
 </header>
