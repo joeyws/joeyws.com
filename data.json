@@ -1,6 +1,6 @@
 {
-  "timestamp": "13.03. 23:33",
-  "weatherTempCelsius": 12,
+  "timestamp": "14.03. 2:24",
+  "weatherTempCelsius": 11,
   "githubLastCommit": "March 13, 2026",
   "steamStatus": "online",
   "pubg": {
@@ -10,9 +10,9 @@
         "matchStart": "13.03. 21:23",
         "teamSize": "Squad",
         "teamMates": [
+          "KingZurenson",
           "MinglinixELJ0K3R",
-          "Flopsibert",
-          "KingZurenson"
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 1,
@@ -28,8 +28,8 @@
         "matchStart": "13.03. 21:01",
         "teamSize": "Squad",
         "teamMates": [
-          "Flopsibert",
-          "KingZurenson"
+          "KingZurenson",
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 7,
@@ -45,8 +45,8 @@
         "matchStart": "13.03. 20:39",
         "teamSize": "Squad",
         "teamMates": [
-          "Flopsibert",
-          "KingZurenson"
+          "KingZurenson",
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 8,
@@ -80,9 +80,9 @@
         "matchStart": "13.03. 20:25",
         "teamSize": "Squad",
         "teamMates": [
-          "Sanyaba_3103",
           "Flopsibert",
-          "KingZurenson"
+          "KingZurenson",
+          "Sanyaba_3103"
         ],
         "perspective": "FPP",
         "placement": 24,
@@ -115,8 +115,8 @@
         "matchStart": "13.03. 19:41",
         "teamSize": "Squad",
         "teamMates": [
-          "shah9595",
-          "Pepe_Alex"
+          "Pepe_Alex",
+          "shah9595"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -132,9 +132,9 @@
         "matchStart": "13.03. 19:23",
         "teamSize": "Squad",
         "teamMates": [
+          "Mazen-Aden",
           "Elme0707",
-          "NoClue_DK",
-          "Mazen-Aden"
+          "NoClue_DK"
         ],
         "perspective": "TPP",
         "placement": 12,
