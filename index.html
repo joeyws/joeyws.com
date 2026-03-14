@@ -17,31 +17,32 @@
 <link rel="canonical" href="https://joeyws.com/">
 <style>
     @font-face{font-family:webfont;src:url("font/SourceCodePro.woff2");font-display:swap;}
-    :root{--background:#000;--text:#0f0;--spacer:8px;}
+    :root{--background:#000;--text:#bbb;--spacer:8px;}
     ::selection{background:var(--text);color:var(--background);}
     /* RESET */ *{text-underline-offset:2px;text-decoration-thickness:.05em;text-decoration-skip-ink:none;font-kerning:normal;outline:none;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{box-sizing:content-box;border-radius:0;/* -webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-border-radius:0;-webkit-text-size-adjust:none;-webkit-appearance:none;font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased; */}
 	html{font-size:15px;}
-    body{padding:var(--spacer);overflow-y:scroll;color:var(--text);background:var(--background);font:normal normal 1rem/1.3em webfont,monospace;}
+    body{padding:var(--spacer);overflow-y:scroll;color:var(--text);background:var(--background);font:normal normal 1rem/1.2em webfont,monospace;}
     i{font-style:italic;}
     h2,h3,p,pre,table,#map{margin-top:.8rem;}
     hr+*,img+p,.content *:first-child{margin-top:0;}
     table{width:100%;}tr{border-top:1px solid var(--text);}td{vertical-align:top;}td:nth-child(1){width:8em;padding-right:var(--spacer);}td:nth-child(2){width:auto;}
     hr{margin:3rem 0;}
-    a{white-space:nowrap;text-decoration:underline;}
-    a:hover,nav a.open,.video:hover::after{background:var(--text);color:var(--background);text-decoration:none;}
+    a,.video:not(.playing)::after{white-space:nowrap;background:#0f0;color:var(--background);text-decoration:none;}
+    a:hover,nav a.open,.gallery-nav a.hover,.video:hover::after{background:#f0f;}
     a[href^="http"]::after{content:"\2197";padding-left:.3em;text-decoration:none;display:inline-block;}
     /* HEADER */
     #header,#header>span{display:flex;gap:.5em 1.4em;}
     #header{white-space:nowrap;user-select:none;width:100%;flex-wrap:wrap;justify-content:space-between;}
     @media (max-width:500px) {#header{flex-direction:column;}}
     /* MARQUEE */
-    .marquee{font-size:2rem;/* color:#0f0;text-shadow:0 0 8px #afa; *//* background:#0f5;color:var(--background); */margin:calc(-1*var(--spacer)) 0 var(--spacer) calc(-1*var(--spacer));transition:.2s width ease-out;line-height:2em;box-sizing:border-box;width:1px;overflow:hidden;white-space:nowrap;display:block;user-select:none;/* mask-mode:alpha;mask-image:linear-gradient(to right, transparent, #000 10%, #000 calc(100% - 10%), transparent); */}
+    .marquee{font-size:2rem;/* color:#0f0;text-shadow:0 0 8px #afa; *//* background:#0f5;color:var(--background); */margin:calc(-1*var(--spacer)) 0 var(--spacer) calc(-1*var(--spacer));transition:.2s width ease-out;line-height:1.3em;box-sizing:border-box;width:1px;overflow:hidden;white-space:nowrap;display:block;user-select:none;/* mask-mode:alpha;mask-image:linear-gradient(to right, transparent, #000 10%, #000 calc(100% - 10%), transparent); */}
     .marquee-track{display:inline-flex;white-space:nowrap;will-change:transform;animation:marquee 120s linear infinite;}
-    .marquee-track span{padding-right:1.3em;}
+    .marquee-track span{margin-right:1.3em;}
+    /* .marquee-track span:nth-child(odd){background:#0f0;}
+    .marquee-track span:nth-child(even){background:#f0f;} */
     @keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-100%);}}
     /* NAV / BUTTONS */
     nav a,.video::after{}
-    nav a.open{text-decoration:none;color:var(--background);background:var(--text);}
     /* VIDEO */
     .video{overflow:hidden;position:relative;width:1000px;max-width:100%;aspect-ratio: 2.2 / 1;font-size:0;line-height:0;user-select:none;}
     .video img,.video video,.video .controls .progress{width:100%;}
@@ -80,8 +81,8 @@
     <div class="marquee"><div class="marquee-track"><span lang="zh-Hant">歡迎</span><span lang="es">Bienvenidos</span><span lang="en">Welcome</span><span lang="hi">स्वागत है</span><span lang="ar">اهلا وسهلا</span><span lang="bn">স্বাগত</span><span lang="pt">Bem-vindo</span><span lang="ru">Добро пожаловать</span><span lang="ur">خوش آمدید</span><span lang="ja">ようこそ</span><span lang="id">Selamat datang</span><span lang="de">Willkommen</span><span lang="tr">Hoş geldiniz</span><span lang="ta">வரவேற்பு</span><span lang="fr">Bienvenue</span><span lang="ko">어서 오십시오</span><span lang="vi">Chào mừng</span><span lang="jv">Sugeng Rawuh</span><span lang="sw">Karibu</span><span lang="sa">Svāgatam</span><span lang="it">Benvenuti</span><span lang="pa">ਸਵਾਗਤ ਹੈ</span></div></div>
     <div id="header">
         <h1 class="loading">Joey Schweickhardt</h1>
-        <nav><a href="#/works">Works</a>, <a href="#/places">Places</a>, <a href="#/contact">Contact</a></nav>
-        <span><span>Stuttgart <svg style="height:1em;vertical-align:-16%;" viewBox="0 0 400 262" xmlns="http://www.w3.org/2000/svg"><title>Germany</title><path d="M200.005,5C146.594,5 98.162,18.773 62.813,41.345C27.463,63.917 5,95.616 5,131C5,166.384 27.463,198.083 62.813,220.655C98.162,243.227 146.594,257 200.005,257C253.416,257 301.838,243.227 337.187,220.655C372.537,198.083 395,166.384 395,131C395,95.616 372.537,63.917 337.187,41.345C301.838,18.773 253.416,5 200.005,5Z" fill="none" stroke="var(--text)" stroke-width="10"/><g fill="var(--text)" transform="matrix(0.83346,0,0,0.83346,37.307976,21.816724)"><path d="M130.576,33.489L130.576,228.511L219.176,228.511C246.794,228.511 269.424,205.881 269.424,178.263L269.424,83.737C269.424,56.119 246.794,33.489 219.176,33.489L130.576,33.489ZM155.622,58.535L219.176,58.535C233.352,58.535 244.378,69.561 244.378,83.737L244.378,178.263C244.378,192.439 233.352,203.465 219.176,203.465L155.622,203.465L155.622,58.535Z"/></g></svg></span><span id="time"></span></span>
+        <nav><a href="#/works">Works</a> <a href="#/places">Places</a> <a href="#/contact">Contact</a></nav>
+        <span><span>Stuttgart <svg style="height:1em;vertical-align:-18%;" viewBox="0 0 400 262" xmlns="http://www.w3.org/2000/svg"><title>Germany</title><path d="M200.005,5C146.594,5 98.162,18.773 62.813,41.345C27.463,63.917 5,95.616 5,131C5,166.384 27.463,198.083 62.813,220.655C98.162,243.227 146.594,257 200.005,257C253.416,257 301.838,243.227 337.187,220.655C372.537,198.083 395,166.384 395,131C395,95.616 372.537,63.917 337.187,41.345C301.838,18.773 253.416,5 200.005,5Z" fill="none" stroke="var(--text)" stroke-width="10"/><g fill="var(--text)" transform="matrix(0.83346,0,0,0.83346,37.307976,21.816724)"><path d="M130.576,33.489L130.576,228.511L219.176,228.511C246.794,228.511 269.424,205.881 269.424,178.263L269.424,83.737C269.424,56.119 246.794,33.489 219.176,33.489L130.576,33.489ZM155.622,58.535L219.176,58.535C233.352,58.535 244.378,69.561 244.378,83.737L244.378,178.263C244.378,192.439 233.352,203.465 219.176,203.465L155.622,203.465L155.622,58.535Z"/></g></svg></span><span id="time"></span></span>
     </div>
 </header>
 <hr>
@@ -381,61 +382,83 @@ document.querySelectorAll(".email").forEach(emailEl => {
 });
 
 // GALLERY
-document.addEventListener("DOMContentLoaded", function () {
-    document.querySelectorAll(".gallery").forEach(function(gallery) {
-        const images = Array.from(gallery.querySelectorAll("img"));
-        let current = 0;
-        const nav = document.createElement("div");
-        nav.classList.add("gallery-nav");
-        const caption = document.createElement("div");
-        caption.classList.add("gallery-caption");
-        const imgContainer = document.createElement("div");
-        imgContainer.classList.add("gallery-img");
-        images.forEach(img => imgContainer.appendChild(img));
-        gallery.append(nav);
-        gallery.append(imgContainer);
-        gallery.append(caption);
-        images.forEach((img, index) => {img.style.display = index === 0 ? "block" : "none";});
+// GALLERY
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".gallery").forEach(gallery => {
+        const images = [...gallery.querySelectorAll("img")];
         const total = images.length;
-        nav.textContent = `${current + 1} / ${total}`;
-        caption.textContent = images[0].alt;
-        function showImage(index) {
+        let current = 0;
+        // containers
+        const nav = document.createElement("div");
+        nav.className = "gallery-nav";
+        const imgContainer = document.createElement("div");
+        imgContainer.className = "gallery-img";
+        const caption = document.createElement("div");
+        caption.className = "gallery-caption";
+        // nav elements
+        const prev = document.createElement("a");
+        prev.className = "gallery-prev";
+        prev.href = "#";
+        prev.textContent = "prev";
+        const count = document.createElement("span");
+        count.className = "gallery-count";
+        const next = document.createElement("a");
+        next.className = "gallery-next";
+        next.href = "#";
+        next.textContent = "next";
+        nav.append(prev, " ", count, " ", next);
+        // move images into container
+        images.forEach((img,i) => {
+            img.style.display = i === 0 ? "block" : "none";
+            imgContainer.append(img);
+        });
+        gallery.append(nav, imgContainer, caption);
+        // update view
+        const update = index => {
             images[current].style.display = "none";
-            current = index;
+            current = (index + total) % total;
             images[current].style.display = "block";
-            nav.textContent = `${current + 1} / ${total}`;
-            caption.textContent = images[current].alt;
-        }
-        function goToNext() {showImage((current + 1) % total);}
-        function goToPrev() {showImage((current - 1 + total) % total);}
-        // click container for next/prev 
-        imgContainer.addEventListener("click", function(e) {
+            count.textContent = `${current + 1}/${total}`;
+            caption.textContent = images[current].alt || "";
+        };
+        const goToNext = () => update(current + 1);
+        const goToPrev = () => update(current - 1);
+        update(0);
+        // nav buttons
+        prev.onclick = e => { e.preventDefault(); goToPrev(); };
+        next.onclick = e => { e.preventDefault(); goToNext(); };
+        // click left/right
+        imgContainer.onclick = e => {
             const rect = imgContainer.getBoundingClientRect();
-            const clickX = e.clientX - rect.left;
-            if (clickX < rect.width / 2) {goToPrev();} else {goToNext();}
+            (e.clientX - rect.left < rect.width / 2) ? goToPrev() : goToNext();
+        };
+        imgContainer.addEventListener("mousemove", e => {
+            const rect = imgContainer.getBoundingClientRect();
+            const leftSide = (e.clientX - rect.left) < rect.width / 2;
+            prev.classList.toggle("hover", leftSide);
+            next.classList.toggle("hover", !leftSide);
         });
-        // swipe left/right
-        let touchStartX = 0;
-        imgContainer.addEventListener("touchstart", function(e) {touchStartX = e.touches[0].clientX;});
-        imgContainer.addEventListener("touchend", function(e) {
-            const touchEndX = e.changedTouches[0].clientX;
-            const diffX = touchEndX - touchStartX;
-            const swipeThreshold = 50;
-            if (Math.abs(diffX) > swipeThreshold) {
-                if (diffX > 0) { goToPrev(); } else { goToNext(); }
-            }
+        imgContainer.addEventListener("mouseleave", () => {
+            prev.classList.remove("hover");
+            next.classList.remove("hover");
         });
-        // key control
-        document.addEventListener("keydown", function(e) {
-            if (["INPUT", "TEXTAREA", "SELECT"].includes(document.activeElement.tagName)) return;
-            if (e.key !== "ArrowRight" && e.key !== "ArrowLeft") return;
-            const visibleGallery = Array.from(document.querySelectorAll(".gallery")).find(g => {
-                const rect = g.getBoundingClientRect();
-                return rect.bottom > 0 && rect.top < window.innerHeight;
+        // swipe
+        let startX = 0;
+        imgContainer.addEventListener("touchstart", e => {startX = e.touches[0].clientX;});
+        imgContainer.addEventListener("touchend", e => {
+            const diff = e.changedTouches[0].clientX - startX;
+            if (Math.abs(diff) > 50) diff > 0 ? goToPrev() : goToNext();
+        });
+        // keyboard (only when gallery visible)
+        document.addEventListener("keydown", e => {
+            if (!["ArrowLeft","ArrowRight"].includes(e.key)) return;
+            if (["INPUT","TEXTAREA","SELECT"].includes(document.activeElement.tagName)) return;
+            const visible = [...document.querySelectorAll(".gallery")].find(g => {
+                const r = g.getBoundingClientRect();
+                return r.bottom > 0 && r.top < window.innerHeight;
             });
-            if (visibleGallery !== gallery) return;
-            if (e.key === "ArrowRight") goToNext();
-            if (e.key === "ArrowLeft") goToPrev();
+            if (visible !== gallery) return;
+            e.key === "ArrowRight" ? goToNext() : goToPrev();
         });
     });
 });
