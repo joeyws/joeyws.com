@@ -1,5 +1,5 @@
 {
-  "timestamp": "14.03. 7:37",
+  "timestamp": "14.03. 8:40",
   "weatherTempCelsius": 7,
   "githubLastCommit": "March 14, 2026",
   "steamStatus": "online",
@@ -10,8 +10,8 @@
         "matchStart": "13.03. 21:23",
         "teamSize": "Squad",
         "teamMates": [
-          "Flopsibert",
           "MinglinixELJ0K3R",
+          "Flopsibert",
           "KingZurenson"
         ],
         "perspective": "FPP",
@@ -28,8 +28,8 @@
         "matchStart": "13.03. 21:01",
         "teamSize": "Squad",
         "teamMates": [
-          "KingZurenson",
-          "Flopsibert"
+          "Flopsibert",
+          "KingZurenson"
         ],
         "perspective": "FPP",
         "placement": 7,
@@ -45,8 +45,8 @@
         "matchStart": "13.03. 20:39",
         "teamSize": "Squad",
         "teamMates": [
-          "KingZurenson",
-          "Flopsibert"
+          "Flopsibert",
+          "KingZurenson"
         ],
         "perspective": "FPP",
         "placement": 8,
@@ -62,9 +62,9 @@
         "matchStart": "13.03. 20:32",
         "teamSize": "Squad",
         "teamMates": [
+          "Xatab4ikk",
           "KingZurenson",
-          "Flopsibert",
-          "Xatab4ikk"
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 22,
@@ -98,8 +98,8 @@
         "matchStart": "13.03. 20:05",
         "teamSize": "Squad",
         "teamMates": [
-          "Flopsibert",
-          "KingZurenson"
+          "KingZurenson",
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 10,
@@ -115,8 +115,8 @@
         "matchStart": "13.03. 19:41",
         "teamSize": "Squad",
         "teamMates": [
-          "Pepe_Alex",
-          "shah9595"
+          "shah9595",
+          "Pepe_Alex"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -132,8 +132,8 @@
         "matchStart": "13.03. 19:23",
         "teamSize": "Squad",
         "teamMates": [
-          "NoClue_DK",
           "Elme0707",
+          "NoClue_DK",
           "Mazen-Aden"
         ],
         "perspective": "TPP",
