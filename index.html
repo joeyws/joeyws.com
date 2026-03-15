@@ -30,15 +30,16 @@
     a,.video:not(.playing)::after{padding:0 .2em;background:var(--text);color:var(--background);white-space:nowrap;text-decoration:none;text-underline-offset:.2em;}
     a:hover,a.hover,nav a.open,.video:hover::after{background:#f0f !important;color:var(--background);}
     a[href^="http"]::after{content:"\2197";padding-left:.3em;display:inline-block;}
-    /* BUTTONS/NAV */
+    /* TEXT */
     nav a,.video:not(.playing)::after{background:#0f0;color:var(--background);}
+    #header,.video:not(.playing)::after,.gallery-caption{font-size:1.5rem;line-height:1.3em;}
     /* HEADER */
-    #header,#header>span{display:flex;gap:.5em 1.4em;}
+    #header,.marquee,#header>span{display:flex;gap:.5em 1.4em;}
     #header{white-space:nowrap;user-select:none;width:100%;flex-wrap:wrap;justify-content:space-between;}
     @media (max-width:500px) {#header{flex-direction:column;}}
     /* MARQUEE */
-    .marquee{font-size:2rem;margin-bottom:var(--spacer);transition:.2s width ease-out;line-height:1.5em;box-sizing:border-box;width:1px;overflow:hidden;white-space:nowrap;display:block;user-select:none;mask-mode:alpha;mask-image:linear-gradient(to right, transparent, #000 20%, #000 calc(100% - 20%), transparent);}
-    .marquee-track{display:inline-flex;white-space:nowrap;will-change:transform;animation:marquee 120s linear infinite;}
+    .marquee{margin-bottom:var(--spacer);transition:.2s width ease-out;line-height:1.5em;box-sizing:border-box;width:1px;overflow:hidden;white-space:nowrap;display:block;user-select:none;mask-mode:alpha;mask-image:linear-gradient(to right, transparent, #000 20%, #000 calc(100% - 20%), transparent);}
+    .marquee-track{display:inline-flex;white-space:nowrap;will-change:transform;animation:marquee 60s linear infinite;}
     .marquee-track span{margin-right:1.2em;/* margin-right:var(--spacer);outline:1px solid var(--text);outline-offset:-1px;padding:0 .5em;border-radius:100vmax; */}
     @keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-100%);}}
     /* VIDEO */
@@ -46,7 +47,7 @@
     .video img,.video video,.video .controls .progress{width:100%;}
     .video img{transition:all .75s;}
     .video:hover img{transform:scale(1.05);}
-    .video:not(.playing)::after{font-size:1rem;line-height:1.3rem;content:"Play";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);pointer-events:none;}
+    .video:not(.playing)::after{content:"Play";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);pointer-events:none;}
     .video video,.video .controls{display:none;}
     .video video{object-fit:cover;}
     .video .controls{position:absolute;bottom:0;left:0;right:0;}
