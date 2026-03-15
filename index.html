@@ -27,22 +27,20 @@
     hr+*,img+p,.content *:first-child{margin-top:0;}
     table{width:100%;}tr{border-top:1px solid var(--text);}td{vertical-align:top;}td:nth-child(1){width:8em;padding-right:var(--spacer);}td:nth-child(2){width:auto;}
     hr{margin:3rem 0;}
-    a,.video:not(.playing)::after{white-space:nowrap;background:#0f0;color:var(--background);text-decoration:none;}
-    a:hover,nav a.open,.gallery-nav a.hover,.video:hover::after{background:#f0f;}
-    a[href^="http"]::after{content:"\2197";padding-left:.3em;text-decoration:none;display:inline-block;}
+    a,.video:not(.playing)::after{padding:0 .2em;background:var(--text);color:var(--background);white-space:nowrap;text-decoration:none;text-underline-offset:.2em;}
+    a:hover,a.hover,nav a.open,.video:hover::after{background:#f0f !important;color:var(--background);}
+    a[href^="http"]::after{content:"\2197";padding-left:.3em;display:inline-block;}
+    /* BUTTONS/NAV */
+    nav a,.video:not(.playing)::after{background:#0f0;color:var(--background);}
     /* HEADER */
     #header,#header>span{display:flex;gap:.5em 1.4em;}
     #header{white-space:nowrap;user-select:none;width:100%;flex-wrap:wrap;justify-content:space-between;}
     @media (max-width:500px) {#header{flex-direction:column;}}
     /* MARQUEE */
-    .marquee{font-size:2rem;/* color:#0f0;text-shadow:0 0 8px #afa; *//* background:#0f5;color:var(--background); */margin:calc(-1*var(--spacer)) 0 var(--spacer) calc(-1*var(--spacer));transition:.2s width ease-out;line-height:1.3em;box-sizing:border-box;width:1px;overflow:hidden;white-space:nowrap;display:block;user-select:none;/* mask-mode:alpha;mask-image:linear-gradient(to right, transparent, #000 10%, #000 calc(100% - 10%), transparent); */}
+    .marquee{font-size:2rem;margin-bottom:var(--spacer);transition:.2s width ease-out;line-height:1.5em;box-sizing:border-box;width:1px;overflow:hidden;white-space:nowrap;display:block;user-select:none;mask-mode:alpha;mask-image:linear-gradient(to right, transparent, #000 20%, #000 calc(100% - 20%), transparent);}
     .marquee-track{display:inline-flex;white-space:nowrap;will-change:transform;animation:marquee 120s linear infinite;}
-    .marquee-track span{margin-right:1.3em;}
-    /* .marquee-track span:nth-child(odd){background:#0f0;}
-    .marquee-track span:nth-child(even){background:#f0f;} */
+    .marquee-track span{margin-right:1.2em;/* margin-right:var(--spacer);outline:1px solid var(--text);outline-offset:-1px;padding:0 .5em;border-radius:100vmax; */}
     @keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-100%);}}
-    /* NAV / BUTTONS */
-    nav a,.video::after{}
     /* VIDEO */
     .video{overflow:hidden;position:relative;width:1000px;max-width:100%;aspect-ratio: 2.2 / 1;font-size:0;line-height:0;user-select:none;}
     .video img,.video video,.video .controls .progress{width:100%;}
@@ -82,7 +80,10 @@
     <div id="header">
         <h1 class="loading">Joey Schweickhardt</h1>
         <nav><a href="#/works">Works</a> <a href="#/places">Places</a> <a href="#/contact">Contact</a></nav>
-        <span><span>Stuttgart <svg style="height:1em;vertical-align:-18%;" viewBox="0 0 400 262" xmlns="http://www.w3.org/2000/svg"><title>Germany</title><path d="M200.005,5C146.594,5 98.162,18.773 62.813,41.345C27.463,63.917 5,95.616 5,131C5,166.384 27.463,198.083 62.813,220.655C98.162,243.227 146.594,257 200.005,257C253.416,257 301.838,243.227 337.187,220.655C372.537,198.083 395,166.384 395,131C395,95.616 372.537,63.917 337.187,41.345C301.838,18.773 253.416,5 200.005,5Z" fill="none" stroke="var(--text)" stroke-width="10"/><g fill="var(--text)" transform="matrix(0.83346,0,0,0.83346,37.307976,21.816724)"><path d="M130.576,33.489L130.576,228.511L219.176,228.511C246.794,228.511 269.424,205.881 269.424,178.263L269.424,83.737C269.424,56.119 246.794,33.489 219.176,33.489L130.576,33.489ZM155.622,58.535L219.176,58.535C233.352,58.535 244.378,69.561 244.378,83.737L244.378,178.263C244.378,192.439 233.352,203.465 219.176,203.465L155.622,203.465L155.622,58.535Z"/></g></svg></span><span id="time"></span></span>
+        <span>
+            <span>Stuttgart <svg style="height:1em;vertical-align:-18%;" viewBox="0 0 400 262" xmlns="http://www.w3.org/2000/svg"><title>Germany</title><path d="M200.005,5C146.594,5 98.162,18.773 62.813,41.345C27.463,63.917 5,95.616 5,131C5,166.384 27.463,198.083 62.813,220.655C98.162,243.227 146.594,257 200.005,257C253.416,257 301.838,243.227 337.187,220.655C372.537,198.083 395,166.384 395,131C395,95.616 372.537,63.917 337.187,41.345C301.838,18.773 253.416,5 200.005,5Z" fill="none" stroke="var(--text)" stroke-width="10"/><g fill="var(--text)" transform="matrix(0.83346,0,0,0.83346,37.307976,21.816724)"><path d="M130.576,33.489L130.576,228.511L219.176,228.511C246.794,228.511 269.424,205.881 269.424,178.263L269.424,83.737C269.424,56.119 246.794,33.489 219.176,33.489L130.576,33.489ZM155.622,58.535L219.176,58.535C233.352,58.535 244.378,69.561 244.378,83.737L244.378,178.263C244.378,192.439 233.352,203.465 219.176,203.465L155.622,203.465L155.622,58.535Z"/></g></svg></span>
+            <span id="time"></span>
+        </span>
     </div>
 </header>
 <hr>
@@ -206,12 +207,12 @@ let width = 1;
 const interval = setInterval(() => {
     if (width < 80) {
         width += Math.random() * 10;
-        preloader.style.width = width + 'vw';
+        preloader.style.width = width + '%';
     }
 }, 100);
 window.addEventListener('load', () => {
     clearInterval(interval);
-    preloader.style.width = '100vw';
+    preloader.style.width = '100%';
 });
 
 // LOADING
