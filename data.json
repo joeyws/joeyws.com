@@ -1,11 +1,29 @@
 {
-  "timestamp": "15.03. 11:29",
+  "timestamp": "15.03. 13:00",
   "weatherTempCelsius": 7,
   "githubLastCommit": "March 15, 2026",
   "steamStatus": "online",
   "pubg": {
     "name": "joeyws2",
     "lastMatches": [
+      {
+        "matchStart": "15.03. 12:16",
+        "teamSize": "Squad",
+        "teamMates": [
+          "watashot75",
+          "gorski1993",
+          "dij1tal"
+        ],
+        "perspective": "TPP",
+        "placement": 2,
+        "map": "Erangel",
+        "survivalTime": "24:08",
+        "distance": "5.5",
+        "kills": 7,
+        "assists": 5,
+        "damage": 719,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.03.15.12.64f5226e-496a-4879-904e-6b0c1c1f877e"
+      },
       {
         "matchStart": "14.03. 20:27",
         "teamSize": "Squad",
@@ -163,23 +181,6 @@
         "assists": 0,
         "damage": 0,
         "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.ibr.eu.2026.03.14.16.89e1473a-27a4-4fe6-8f6c-3f144d9d86dd"
-      },
-      {
-        "matchStart": "14.03. 16:21",
-        "teamSize": "Ibr",
-        "teamMates": [
-          "NikReamov",
-          "cost88"
-        ],
-        "perspective": "TPP",
-        "placement": 2,
-        "map": "Karakin",
-        "survivalTime": "3:10",
-        "distance": "0.3",
-        "kills": 2,
-        "assists": 0,
-        "damage": 245,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.ibr.eu.2026.03.14.16.b544b512-6bc1-4441-b152-f5d28e4528b3"
       }
     ]
   }
