@@ -1,5 +1,5 @@
 {
-  "timestamp": "15.03. 10:34",
+  "timestamp": "15.03. 11:29",
   "weatherTempCelsius": 7,
   "githubLastCommit": "March 15, 2026",
   "steamStatus": "online",
@@ -28,9 +28,9 @@
         "matchStart": "14.03. 20:01",
         "teamSize": "Squad",
         "teamMates": [
-          "Lakeyb85",
           "nyx4eTO",
-          "RedScars_"
+          "RedScars_",
+          "Lakeyb85"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -46,8 +46,8 @@
         "matchStart": "14.03. 19:48",
         "teamSize": "Squad",
         "teamMates": [
-          "Polio78",
-          "NixImKopf94"
+          "NixImKopf94",
+          "Polio78"
         ],
         "perspective": "TPP",
         "placement": 23,
@@ -79,9 +79,9 @@
         "matchStart": "14.03. 19:27",
         "teamSize": "Ibr",
         "teamMates": [
-          "Adix18204",
           "Deywon",
-          "Jasiu18204"
+          "Jasiu18204",
+          "Adix18204"
         ],
         "perspective": "TPP",
         "placement": 3,
@@ -97,8 +97,8 @@
         "matchStart": "14.03. 19:15",
         "teamSize": "Ibr",
         "teamMates": [
-          "uuuzayyy",
           "AcAdAm15",
+          "uuuzayyy",
           "gambas22"
         ],
         "perspective": "TPP",
@@ -115,8 +115,8 @@
         "matchStart": "14.03. 18:25",
         "teamSize": "Ibr",
         "teamMates": [
-          "JancsiGamer",
           "Zefitj",
+          "JancsiGamer",
           "cCcKillboy"
         ],
         "perspective": "TPP",
@@ -133,8 +133,8 @@
         "matchStart": "14.03. 18:16",
         "teamSize": "Ibr",
         "teamMates": [
-          "WIZZ_EY",
-          "zHakan058"
+          "zHakan058",
+          "WIZZ_EY"
         ],
         "perspective": "TPP",
         "placement": 4,
@@ -150,9 +150,9 @@
         "matchStart": "14.03. 16:25",
         "teamSize": "Ibr",
         "teamMates": [
+          "BENJI80",
           "marmok123454655",
-          "likaloko",
-          "BENJI80"
+          "likaloko"
         ],
         "perspective": "TPP",
         "placement": 3,
@@ -168,8 +168,8 @@
         "matchStart": "14.03. 16:21",
         "teamSize": "Ibr",
         "teamMates": [
-          "cost88",
-          "NikReamov"
+          "NikReamov",
+          "cost88"
         ],
         "perspective": "TPP",
         "placement": 2,
