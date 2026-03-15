@@ -1,5 +1,5 @@
 {
-  "timestamp": "15.03. 15:32",
+  "timestamp": "15.03. 16:37",
   "weatherTempCelsius": 7,
   "githubLastCommit": "March 15, 2026",
   "steamStatus": "online",
@@ -7,12 +7,30 @@
     "name": "joeyws2",
     "lastMatches": [
       {
-        "matchStart": "15.03. 14:46",
+        "matchStart": "15.03. 15:10",
         "teamSize": "Squad",
         "teamMates": [
           "Flopsibert",
           "KingZurenson",
           "Battlemann"
+        ],
+        "perspective": "FPP",
+        "placement": 4,
+        "map": "Rondo",
+        "survivalTime": "20:38",
+        "distance": "6.7",
+        "kills": 1,
+        "assists": 1,
+        "damage": 102,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.squad-fpp.eu.2026.03.15.15.1b5828ff-3bfd-4da9-a36e-b98a1e3493ae"
+      },
+      {
+        "matchStart": "15.03. 14:46",
+        "teamSize": "Squad",
+        "teamMates": [
+          "Flopsibert",
+          "Battlemann",
+          "KingZurenson"
         ],
         "perspective": "FPP",
         "placement": 12,
@@ -28,9 +46,9 @@
         "matchStart": "15.03. 14:20",
         "teamSize": "Squad",
         "teamMates": [
+          "Battlemann",
           "KingZurenson",
-          "Flopsibert",
-          "Battlemann"
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 4,
@@ -46,9 +64,9 @@
         "matchStart": "15.03. 14:16",
         "teamSize": "Squad",
         "teamMates": [
-          "KingZurenson",
           "Battlemann",
-          "Flopsibert"
+          "Flopsibert",
+          "KingZurenson"
         ],
         "perspective": "FPP",
         "placement": 28,
@@ -64,8 +82,8 @@
         "matchStart": "15.03. 13:35",
         "teamSize": "Squad",
         "teamMates": [
-          "HAVRYVIK",
           "Skrrrasty",
+          "HAVRYVIK",
           "Flopsibert"
         ],
         "perspective": "FPP",
@@ -82,8 +100,8 @@
         "matchStart": "15.03. 13:29",
         "teamSize": "Squad",
         "teamMates": [
-          "Flopsibert",
           "Schlittehung",
+          "Flopsibert",
           "StefffY"
         ],
         "perspective": "FPP",
@@ -100,9 +118,9 @@
         "matchStart": "15.03. 12:47",
         "teamSize": "Squad",
         "teamMates": [
-          "TR--LuXoR",
+          "bananatoe",
           "Danila_One",
-          "bananatoe"
+          "TR--LuXoR"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -119,8 +137,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "dij1tal",
-          "gorski1993",
-          "watashot75"
+          "watashot75",
+          "gorski1993"
         ],
         "perspective": "TPP",
         "placement": 2,
@@ -137,8 +155,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "NinJuTZzu",
-          "Dejan92",
-          "STEFAN131194"
+          "STEFAN131194",
+          "Dejan92"
         ],
         "perspective": "TPP",
         "placement": 16,
@@ -154,9 +172,9 @@
         "matchStart": "14.03. 20:01",
         "teamSize": "Squad",
         "teamMates": [
-          "Lakeyb85",
+          "RedScars_",
           "nyx4eTO",
-          "RedScars_"
+          "Lakeyb85"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -167,23 +185,6 @@
         "assists": 4,
         "damage": 154,
         "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.03.14.20.06cc96fe-1908-4157-9a36-303e17012bc1"
-      },
-      {
-        "matchStart": "14.03. 19:48",
-        "teamSize": "Squad",
-        "teamMates": [
-          "Polio78",
-          "NixImKopf94"
-        ],
-        "perspective": "TPP",
-        "placement": 23,
-        "map": "Erangel",
-        "survivalTime": "5:30",
-        "distance": "0.4",
-        "kills": 1,
-        "assists": 1,
-        "damage": 137,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.03.14.19.7e448305-7829-4eee-a476-ce54a1c9c493"
       }
     ]
   }
