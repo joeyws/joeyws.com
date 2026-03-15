@@ -1,5 +1,5 @@
 {
-  "timestamp": "14.03. 23:31",
+  "timestamp": "15.03. 2:43",
   "weatherTempCelsius": 4,
   "githubLastCommit": "March 14, 2026",
   "steamStatus": "online",
@@ -10,8 +10,8 @@
         "matchStart": "14.03. 20:27",
         "teamSize": "Squad",
         "teamMates": [
-          "STEFAN131194",
           "Dejan92",
+          "STEFAN131194",
           "NinJuTZzu"
         ],
         "perspective": "TPP",
@@ -28,9 +28,9 @@
         "matchStart": "14.03. 20:01",
         "teamSize": "Squad",
         "teamMates": [
-          "Lakeyb85",
           "RedScars_",
-          "nyx4eTO"
+          "nyx4eTO",
+          "Lakeyb85"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -79,9 +79,9 @@
         "matchStart": "14.03. 19:27",
         "teamSize": "Ibr",
         "teamMates": [
-          "Deywon",
+          "Adix18204",
           "Jasiu18204",
-          "Adix18204"
+          "Deywon"
         ],
         "perspective": "TPP",
         "placement": 3,
@@ -97,9 +97,9 @@
         "matchStart": "14.03. 19:15",
         "teamSize": "Ibr",
         "teamMates": [
-          "AcAdAm15",
           "uuuzayyy",
-          "gambas22"
+          "gambas22",
+          "AcAdAm15"
         ],
         "perspective": "TPP",
         "placement": 3,
@@ -115,9 +115,9 @@
         "matchStart": "14.03. 18:25",
         "teamSize": "Ibr",
         "teamMates": [
-          "cCcKillboy",
           "Zefitj",
-          "JancsiGamer"
+          "JancsiGamer",
+          "cCcKillboy"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -168,8 +168,8 @@
         "matchStart": "14.03. 16:21",
         "teamSize": "Ibr",
         "teamMates": [
-          "NikReamov",
-          "cost88"
+          "cost88",
+          "NikReamov"
         ],
         "perspective": "TPP",
         "placement": 2,
