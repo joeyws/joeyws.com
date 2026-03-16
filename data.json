@@ -1,11 +1,29 @@
 {
-  "timestamp": "16.03. 17:05",
-  "weatherTempCelsius": 8,
+  "timestamp": "16.03. 19:07",
+  "weatherTempCelsius": 7,
   "githubLastCommit": "March 16, 2026",
   "steamStatus": "online",
   "pubg": {
     "name": "joeyws2",
     "lastMatches": [
+      {
+        "matchStart": "16.03. 18:34",
+        "teamSize": "Squad",
+        "teamMates": [
+          "Mister88_007",
+          "Flopsibert",
+          "KingZurenson"
+        ],
+        "perspective": "FPP",
+        "placement": 12,
+        "map": "Miramar",
+        "survivalTime": "17:32",
+        "distance": "3.6",
+        "kills": 0,
+        "assists": 0,
+        "damage": 39,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.squad-fpp.eu.2026.03.16.18.649f9d95-e439-4bce-89e5-7618324e9464"
+      },
       {
         "matchStart": "15.03. 15:10",
         "teamSize": "Squad",
@@ -167,24 +185,6 @@
         "assists": 0,
         "damage": 0,
         "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.squad.eu.2026.03.14.20.9235bccf-d81e-4f2e-943f-5751e966940e"
-      },
-      {
-        "matchStart": "14.03. 20:01",
-        "teamSize": "Squad",
-        "teamMates": [
-          "Lakeyb85",
-          "nyx4eTO",
-          "RedScars_"
-        ],
-        "perspective": "TPP",
-        "placement": 1,
-        "map": "Erangel",
-        "survivalTime": "19:48",
-        "distance": "7.0",
-        "kills": 2,
-        "assists": 4,
-        "damage": 154,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.03.14.20.06cc96fe-1908-4157-9a36-303e17012bc1"
       }
     ]
   }
