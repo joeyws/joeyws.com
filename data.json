@@ -1,6 +1,6 @@
 {
-  "timestamp": "16.03. 13:20",
-  "weatherTempCelsius": 10,
+  "timestamp": "16.03. 15:04",
+  "weatherTempCelsius": 9,
   "githubLastCommit": "March 16, 2026",
   "steamStatus": "offline",
   "pubg": {
@@ -28,9 +28,9 @@
         "matchStart": "15.03. 14:46",
         "teamSize": "Squad",
         "teamMates": [
+          "KingZurenson",
           "Flopsibert",
-          "Battlemann",
-          "KingZurenson"
+          "Battlemann"
         ],
         "perspective": "FPP",
         "placement": 12,
@@ -46,8 +46,8 @@
         "matchStart": "15.03. 14:20",
         "teamSize": "Squad",
         "teamMates": [
-          "KingZurenson",
           "Flopsibert",
+          "KingZurenson",
           "Battlemann"
         ],
         "perspective": "FPP",
@@ -83,8 +83,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "HAVRYVIK",
-          "Skrrrasty",
-          "Flopsibert"
+          "Flopsibert",
+          "Skrrrasty"
         ],
         "perspective": "FPP",
         "placement": 2,
@@ -100,9 +100,9 @@
         "matchStart": "15.03. 13:29",
         "teamSize": "Squad",
         "teamMates": [
-          "Flopsibert",
           "Schlittehung",
-          "StefffY"
+          "StefffY",
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 25,
@@ -118,9 +118,9 @@
         "matchStart": "15.03. 12:47",
         "teamSize": "Squad",
         "teamMates": [
-          "TR--LuXoR",
           "Danila_One",
-          "bananatoe"
+          "bananatoe",
+          "TR--LuXoR"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -136,9 +136,9 @@
         "matchStart": "15.03. 12:16",
         "teamSize": "Squad",
         "teamMates": [
-          "dij1tal",
+          "watashot75",
           "gorski1993",
-          "watashot75"
+          "dij1tal"
         ],
         "perspective": "TPP",
         "placement": 2,
@@ -172,9 +172,9 @@
         "matchStart": "14.03. 20:01",
         "teamSize": "Squad",
         "teamMates": [
-          "Lakeyb85",
           "nyx4eTO",
-          "RedScars_"
+          "RedScars_",
+          "Lakeyb85"
         ],
         "perspective": "TPP",
         "placement": 1,
