@@ -1,8 +1,8 @@
 {
-  "timestamp": "16.03. 11:52",
+  "timestamp": "16.03. 13:20",
   "weatherTempCelsius": 10,
   "githubLastCommit": "March 16, 2026",
-  "steamStatus": "online",
+  "steamStatus": "offline",
   "pubg": {
     "name": "joeyws2",
     "lastMatches": [
@@ -29,8 +29,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "Flopsibert",
-          "KingZurenson",
-          "Battlemann"
+          "Battlemann",
+          "KingZurenson"
         ],
         "perspective": "FPP",
         "placement": 12,
