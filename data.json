@@ -1,5 +1,5 @@
 {
-  "timestamp": "16.03. 22:38",
+  "timestamp": "16.03. 23:35",
   "weatherTempCelsius": 6,
   "githubLastCommit": "March 16, 2026",
   "steamStatus": "offline",
@@ -11,8 +11,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "Flopsibert",
-          "KingZurenson",
-          "x-Time_out-x"
+          "x-Time_out-x",
+          "KingZurenson"
         ],
         "perspective": "FPP",
         "placement": 4,
@@ -28,9 +28,9 @@
         "matchStart": "16.03. 18:54",
         "teamSize": "Squad",
         "teamMates": [
-          "KingZurenson",
           "Flopsibert",
-          "3inLieb"
+          "3inLieb",
+          "KingZurenson"
         ],
         "perspective": "FPP",
         "placement": 11,
@@ -46,9 +46,9 @@
         "matchStart": "16.03. 18:34",
         "teamSize": "Squad",
         "teamMates": [
-          "Flopsibert",
           "KingZurenson",
-          "Mister88_007"
+          "Mister88_007",
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 12,
@@ -64,9 +64,9 @@
         "matchStart": "15.03. 15:10",
         "teamSize": "Squad",
         "teamMates": [
+          "Flopsibert",
           "Battlemann",
-          "KingZurenson",
-          "Flopsibert"
+          "KingZurenson"
         ],
         "perspective": "FPP",
         "placement": 4,
@@ -82,9 +82,9 @@
         "matchStart": "15.03. 14:46",
         "teamSize": "Squad",
         "teamMates": [
+          "KingZurenson",
           "Flopsibert",
-          "Battlemann",
-          "KingZurenson"
+          "Battlemann"
         ],
         "perspective": "FPP",
         "placement": 12,
@@ -100,9 +100,9 @@
         "matchStart": "15.03. 14:20",
         "teamSize": "Squad",
         "teamMates": [
-          "Battlemann",
+          "Flopsibert",
           "KingZurenson",
-          "Flopsibert"
+          "Battlemann"
         ],
         "perspective": "FPP",
         "placement": 4,
@@ -137,8 +137,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "HAVRYVIK",
-          "Skrrrasty",
-          "Flopsibert"
+          "Flopsibert",
+          "Skrrrasty"
         ],
         "perspective": "FPP",
         "placement": 2,
@@ -173,8 +173,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "Danila_One",
-          "TR--LuXoR",
-          "bananatoe"
+          "bananatoe",
+          "TR--LuXoR"
         ],
         "perspective": "TPP",
         "placement": 1,
