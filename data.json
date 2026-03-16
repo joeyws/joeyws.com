@@ -1,8 +1,8 @@
 {
-  "timestamp": "16.03. 10:56",
-  "weatherTempCelsius": 9,
+  "timestamp": "16.03. 11:52",
+  "weatherTempCelsius": 10,
   "githubLastCommit": "March 16, 2026",
-  "steamStatus": "offline",
+  "steamStatus": "online",
   "pubg": {
     "name": "joeyws2",
     "lastMatches": [
@@ -10,9 +10,9 @@
         "matchStart": "15.03. 15:10",
         "teamSize": "Squad",
         "teamMates": [
+          "Flopsibert",
           "Battlemann",
-          "KingZurenson",
-          "Flopsibert"
+          "KingZurenson"
         ],
         "perspective": "FPP",
         "placement": 4,
@@ -29,8 +29,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "Flopsibert",
-          "Battlemann",
-          "KingZurenson"
+          "KingZurenson",
+          "Battlemann"
         ],
         "perspective": "FPP",
         "placement": 12,
@@ -46,9 +46,9 @@
         "matchStart": "15.03. 14:20",
         "teamSize": "Squad",
         "teamMates": [
-          "Battlemann",
           "KingZurenson",
-          "Flopsibert"
+          "Flopsibert",
+          "Battlemann"
         ],
         "perspective": "FPP",
         "placement": 4,
@@ -100,9 +100,9 @@
         "matchStart": "15.03. 13:29",
         "teamSize": "Squad",
         "teamMates": [
+          "Flopsibert",
           "Schlittehung",
-          "StefffY",
-          "Flopsibert"
+          "StefffY"
         ],
         "perspective": "FPP",
         "placement": 25,
@@ -118,8 +118,8 @@
         "matchStart": "15.03. 12:47",
         "teamSize": "Squad",
         "teamMates": [
-          "Danila_One",
           "TR--LuXoR",
+          "Danila_One",
           "bananatoe"
         ],
         "perspective": "TPP",
@@ -137,8 +137,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "dij1tal",
-          "watashot75",
-          "gorski1993"
+          "gorski1993",
+          "watashot75"
         ],
         "perspective": "TPP",
         "placement": 2,
@@ -154,9 +154,9 @@
         "matchStart": "14.03. 20:27",
         "teamSize": "Squad",
         "teamMates": [
-          "STEFAN131194",
+          "NinJuTZzu",
           "Dejan92",
-          "NinJuTZzu"
+          "STEFAN131194"
         ],
         "perspective": "TPP",
         "placement": 16,
@@ -173,8 +173,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "Lakeyb85",
-          "RedScars_",
-          "nyx4eTO"
+          "nyx4eTO",
+          "RedScars_"
         ],
         "perspective": "TPP",
         "placement": 1,
