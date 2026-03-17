@@ -1,5 +1,5 @@
 {
-  "timestamp": "17.03. 22:37",
+  "timestamp": "17.03. 23:36",
   "weatherTempCelsius": 6,
   "githubLastCommit": "March 17, 2026",
   "steamStatus": "online",
@@ -29,8 +29,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "Hatmehty",
-          "Flopsibert",
-          "KingZurenson"
+          "KingZurenson",
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 23,
@@ -46,8 +46,8 @@
         "matchStart": "17.03. 19:08",
         "teamSize": "Squad",
         "teamMates": [
-          "Flopsibert",
-          "KingZurenson"
+          "KingZurenson",
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 24,
@@ -63,9 +63,9 @@
         "matchStart": "17.03. 18:59",
         "teamSize": "Squad",
         "teamMates": [
-          "Flopsibert",
+          "KingZurenson",
           "Isaac-25",
-          "KingZurenson"
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 17,
@@ -117,9 +117,9 @@
         "matchStart": "16.03. 18:54",
         "teamSize": "Squad",
         "teamMates": [
+          "Flopsibert",
           "3inLieb",
-          "KingZurenson",
-          "Flopsibert"
+          "KingZurenson"
         ],
         "perspective": "FPP",
         "placement": 11,
@@ -135,9 +135,9 @@
         "matchStart": "16.03. 18:34",
         "teamSize": "Squad",
         "teamMates": [
-          "Flopsibert",
           "KingZurenson",
-          "Mister88_007"
+          "Mister88_007",
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 12,
@@ -154,8 +154,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "Flopsibert",
-          "KingZurenson",
-          "Battlemann"
+          "Battlemann",
+          "KingZurenson"
         ],
         "perspective": "FPP",
         "placement": 4,
@@ -171,9 +171,9 @@
         "matchStart": "15.03. 14:46",
         "teamSize": "Squad",
         "teamMates": [
+          "KingZurenson",
           "Flopsibert",
-          "Battlemann",
-          "KingZurenson"
+          "Battlemann"
         ],
         "perspective": "FPP",
         "placement": 12,
