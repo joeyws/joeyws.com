@@ -1,7 +1,7 @@
 {
-  "timestamp": "18.03. 8:56",
-  "weatherTempCelsius": 6,
-  "githubLastCommit": "March 18, 2026",
+  "timestamp": "18.03. 10:01",
+  "weatherTempCelsius": 9,
+  "githubLastCommit": null,
   "steamStatus": "offline",
   "pubg": {
     "name": "joeyws2",
@@ -10,9 +10,9 @@
         "matchStart": "17.03. 19:23",
         "teamSize": "Squad",
         "teamMates": [
-          "Flopsibert",
           "TheReaperSoul",
-          "KingZurenson"
+          "KingZurenson",
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 6,
@@ -64,8 +64,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "Isaac-25",
-          "KingZurenson",
-          "Flopsibert"
+          "Flopsibert",
+          "KingZurenson"
         ],
         "perspective": "FPP",
         "placement": 17,
