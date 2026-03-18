@@ -1,11 +1,65 @@
 {
-  "timestamp": "18.03. 19:05",
-  "weatherTempCelsius": 10,
+  "timestamp": "18.03. 20:41",
+  "weatherTempCelsius": 9,
   "githubLastCommit": "March 18, 2026",
   "steamStatus": "online",
   "pubg": {
     "name": "joeyws2",
     "lastMatches": [
+      {
+        "matchStart": "18.03. 19:25",
+        "teamSize": "Squad",
+        "teamMates": [
+          "Flopsibert",
+          "DeltaForce90",
+          "KingZurenson"
+        ],
+        "perspective": "FPP",
+        "placement": 2,
+        "map": "Erangel",
+        "survivalTime": "25:27",
+        "distance": "7.1",
+        "kills": 0,
+        "assists": 1,
+        "damage": 306,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.squad-fpp.eu.2026.03.18.19.a52f4006-c203-4b5b-b7f1-dfc3f3bd0dee"
+      },
+      {
+        "matchStart": "18.03. 19:01",
+        "teamSize": "Squad",
+        "teamMates": [
+          "KingZurenson",
+          "ReschoAkman",
+          "Flopsibert"
+        ],
+        "perspective": "FPP",
+        "placement": 7,
+        "map": "Erangel",
+        "survivalTime": "22:21",
+        "distance": "9.6",
+        "kills": 3,
+        "assists": 0,
+        "damage": 279,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.squad-fpp.eu.2026.03.18.19.9eff751f-03ff-4e99-857a-715eb0811549"
+      },
+      {
+        "matchStart": "18.03. 18:41",
+        "teamSize": "Squad",
+        "teamMates": [
+          "Flopsibert",
+          "KingZurenson",
+          "Sinthar77"
+        ],
+        "perspective": "FPP",
+        "placement": 15,
+        "map": "Taego",
+        "survivalTime": "8:10",
+        "distance": "2.6",
+        "kills": 0,
+        "assists": 0,
+        "damage": 47,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.squad-fpp.eu.2026.03.18.18.c4f88475-63c3-47f2-9a71-f2b686860677"
+      },
       {
         "matchStart": "18.03. 18:31",
         "teamSize": "Squad",
@@ -29,8 +83,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "TheReaperSoul",
-          "Flopsibert",
-          "KingZurenson"
+          "KingZurenson",
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 6,
@@ -46,8 +100,8 @@
         "matchStart": "17.03. 19:17",
         "teamSize": "Squad",
         "teamMates": [
-          "Flopsibert",
           "KingZurenson",
+          "Flopsibert",
           "Hatmehty"
         ],
         "perspective": "FPP",
@@ -81,9 +135,9 @@
         "matchStart": "17.03. 18:59",
         "teamSize": "Squad",
         "teamMates": [
+          "Isaac-25",
           "Flopsibert",
-          "KingZurenson",
-          "Isaac-25"
+          "KingZurenson"
         ],
         "perspective": "FPP",
         "placement": 17,
@@ -100,8 +154,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "KingZurenson",
-          "Flopsibert",
-          "MitchHunt"
+          "MitchHunt",
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 7,
@@ -117,9 +171,9 @@
         "matchStart": "16.03. 19:15",
         "teamSize": "Squad",
         "teamMates": [
+          "Flopsibert",
           "KingZurenson",
-          "x-Time_out-x",
-          "Flopsibert"
+          "x-Time_out-x"
         ],
         "perspective": "FPP",
         "placement": 4,
@@ -130,60 +184,6 @@
         "assists": 0,
         "damage": 100,
         "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.squad-fpp.eu.2026.03.16.19.deb4e0dd-0192-4a66-810b-30417b545f84"
-      },
-      {
-        "matchStart": "16.03. 18:54",
-        "teamSize": "Squad",
-        "teamMates": [
-          "Flopsibert",
-          "KingZurenson",
-          "3inLieb"
-        ],
-        "perspective": "FPP",
-        "placement": 11,
-        "map": "Rondo",
-        "survivalTime": "15:55",
-        "distance": "2.4",
-        "kills": 1,
-        "assists": 0,
-        "damage": 106,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.squad-fpp.eu.2026.03.16.18.40fbd161-f5fa-4f2e-a190-6885ffe19c69"
-      },
-      {
-        "matchStart": "16.03. 18:34",
-        "teamSize": "Squad",
-        "teamMates": [
-          "Mister88_007",
-          "Flopsibert",
-          "KingZurenson"
-        ],
-        "perspective": "FPP",
-        "placement": 12,
-        "map": "Miramar",
-        "survivalTime": "17:32",
-        "distance": "3.6",
-        "kills": 0,
-        "assists": 0,
-        "damage": 39,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.squad-fpp.eu.2026.03.16.18.649f9d95-e439-4bce-89e5-7618324e9464"
-      },
-      {
-        "matchStart": "15.03. 15:10",
-        "teamSize": "Squad",
-        "teamMates": [
-          "Flopsibert",
-          "Battlemann",
-          "KingZurenson"
-        ],
-        "perspective": "FPP",
-        "placement": 4,
-        "map": "Rondo",
-        "survivalTime": "20:38",
-        "distance": "6.7",
-        "kills": 1,
-        "assists": 1,
-        "damage": 102,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.squad-fpp.eu.2026.03.15.15.1b5828ff-3bfd-4da9-a36e-b98a1e3493ae"
       }
     ]
   }
