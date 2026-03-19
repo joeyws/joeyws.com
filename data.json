@@ -1,5 +1,5 @@
 {
-  "timestamp": "19.03. 14:59",
+  "timestamp": "19.03. 15:58",
   "weatherTempCelsius": 15,
   "githubLastCommit": "March 19, 2026",
   "steamStatus": "offline",
@@ -10,9 +10,9 @@
         "matchStart": "18.03. 19:25",
         "teamSize": "Squad",
         "teamMates": [
-          "Flopsibert",
           "DeltaForce90",
-          "KingZurenson"
+          "KingZurenson",
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 2,
@@ -29,8 +29,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "KingZurenson",
-          "ReschoAkman",
-          "Flopsibert"
+          "Flopsibert",
+          "ReschoAkman"
         ],
         "perspective": "FPP",
         "placement": 7,
@@ -83,8 +83,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "TheReaperSoul",
-          "KingZurenson",
-          "Flopsibert"
+          "Flopsibert",
+          "KingZurenson"
         ],
         "perspective": "FPP",
         "placement": 6,
@@ -100,8 +100,8 @@
         "matchStart": "17.03. 19:17",
         "teamSize": "Squad",
         "teamMates": [
-          "KingZurenson",
           "Flopsibert",
+          "KingZurenson",
           "Hatmehty"
         ],
         "perspective": "FPP",
@@ -135,9 +135,9 @@
         "matchStart": "17.03. 18:59",
         "teamSize": "Squad",
         "teamMates": [
-          "Isaac-25",
           "Flopsibert",
-          "KingZurenson"
+          "KingZurenson",
+          "Isaac-25"
         ],
         "perspective": "FPP",
         "placement": 17,
@@ -154,8 +154,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "KingZurenson",
-          "MitchHunt",
-          "Flopsibert"
+          "Flopsibert",
+          "MitchHunt"
         ],
         "perspective": "FPP",
         "placement": 7,
@@ -171,9 +171,9 @@
         "matchStart": "16.03. 19:15",
         "teamSize": "Squad",
         "teamMates": [
-          "Flopsibert",
           "KingZurenson",
-          "x-Time_out-x"
+          "x-Time_out-x",
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 4,
