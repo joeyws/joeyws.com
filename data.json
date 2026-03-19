@@ -1,8 +1,8 @@
 {
-  "timestamp": "19.03. 2:34",
-  "weatherTempCelsius": 6,
-  "githubLastCommit": "March 18, 2026",
-  "steamStatus": "online",
+  "timestamp": "19.03. 4:56",
+  "weatherTempCelsius": 5,
+  "githubLastCommit": "March 19, 2026",
+  "steamStatus": "offline",
   "pubg": {
     "name": "joeyws2",
     "lastMatches": [
@@ -46,9 +46,9 @@
         "matchStart": "18.03. 18:41",
         "teamSize": "Squad",
         "teamMates": [
+          "Flopsibert",
           "KingZurenson",
-          "Sinthar77",
-          "Flopsibert"
+          "Sinthar77"
         ],
         "perspective": "FPP",
         "placement": 15,
@@ -82,9 +82,9 @@
         "matchStart": "17.03. 19:23",
         "teamSize": "Squad",
         "teamMates": [
-          "Flopsibert",
+          "KingZurenson",
           "TheReaperSoul",
-          "KingZurenson"
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 6,
@@ -101,8 +101,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "Hatmehty",
-          "KingZurenson",
-          "Flopsibert"
+          "Flopsibert",
+          "KingZurenson"
         ],
         "perspective": "FPP",
         "placement": 23,
@@ -118,8 +118,8 @@
         "matchStart": "17.03. 19:08",
         "teamSize": "Squad",
         "teamMates": [
-          "KingZurenson",
-          "Flopsibert"
+          "Flopsibert",
+          "KingZurenson"
         ],
         "perspective": "FPP",
         "placement": 24,
@@ -135,9 +135,9 @@
         "matchStart": "17.03. 18:59",
         "teamSize": "Squad",
         "teamMates": [
-          "KingZurenson",
+          "Flopsibert",
           "Isaac-25",
-          "Flopsibert"
+          "KingZurenson"
         ],
         "perspective": "FPP",
         "placement": 17,
