@@ -1,8 +1,8 @@
 {
-  "timestamp": "19.03. 15:58",
-  "weatherTempCelsius": 15,
+  "timestamp": "19.03. 17:06",
+  "weatherTempCelsius": 14,
   "githubLastCommit": "March 19, 2026",
-  "steamStatus": "offline",
+  "steamStatus": "online",
   "pubg": {
     "name": "joeyws2",
     "lastMatches": [
@@ -28,9 +28,9 @@
         "matchStart": "18.03. 19:01",
         "teamSize": "Squad",
         "teamMates": [
-          "KingZurenson",
+          "ReschoAkman",
           "Flopsibert",
-          "ReschoAkman"
+          "KingZurenson"
         ],
         "perspective": "FPP",
         "placement": 7,
@@ -82,9 +82,9 @@
         "matchStart": "17.03. 19:23",
         "teamSize": "Squad",
         "teamMates": [
+          "KingZurenson",
           "TheReaperSoul",
-          "Flopsibert",
-          "KingZurenson"
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 6,
@@ -100,9 +100,9 @@
         "matchStart": "17.03. 19:17",
         "teamSize": "Squad",
         "teamMates": [
+          "Hatmehty",
           "Flopsibert",
-          "KingZurenson",
-          "Hatmehty"
+          "KingZurenson"
         ],
         "perspective": "FPP",
         "placement": 23,
@@ -136,8 +136,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "Flopsibert",
-          "KingZurenson",
-          "Isaac-25"
+          "Isaac-25",
+          "KingZurenson"
         ],
         "perspective": "FPP",
         "placement": 17,
@@ -153,9 +153,9 @@
         "matchStart": "17.03. 18:35",
         "teamSize": "Squad",
         "teamMates": [
-          "KingZurenson",
+          "MitchHunt",
           "Flopsibert",
-          "MitchHunt"
+          "KingZurenson"
         ],
         "perspective": "FPP",
         "placement": 7,
@@ -171,9 +171,9 @@
         "matchStart": "16.03. 19:15",
         "teamSize": "Squad",
         "teamMates": [
-          "KingZurenson",
+          "Flopsibert",
           "x-Time_out-x",
-          "Flopsibert"
+          "KingZurenson"
         ],
         "perspective": "FPP",
         "placement": 4,
