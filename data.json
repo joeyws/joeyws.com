@@ -1,6 +1,6 @@
 {
-  "timestamp": "20.03. 15:46",
-  "weatherTempCelsius": 15,
+  "timestamp": "20.03. 16:50",
+  "weatherTempCelsius": 14,
   "githubLastCommit": "March 20, 2026",
   "steamStatus": "online",
   "pubg": {
@@ -10,9 +10,9 @@
         "matchStart": "19.03. 19:36",
         "teamSize": "Squad",
         "teamMates": [
+          "Volvo960",
           "Pannemann_",
-          "luupy",
-          "Volvo960"
+          "luupy"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -45,8 +45,8 @@
         "matchStart": "19.03. 18:43",
         "teamSize": "Squad",
         "teamMates": [
-          "Deadly_Steel",
           "Arnulf_Schroeder",
+          "Deadly_Steel",
           "calmlulu"
         ],
         "perspective": "TPP",
@@ -63,9 +63,9 @@
         "matchStart": "18.03. 19:25",
         "teamSize": "Squad",
         "teamMates": [
-          "Flopsibert",
           "DeltaForce90",
-          "KingZurenson"
+          "KingZurenson",
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 2,
@@ -81,9 +81,9 @@
         "matchStart": "18.03. 19:01",
         "teamSize": "Squad",
         "teamMates": [
-          "KingZurenson",
           "ReschoAkman",
-          "Flopsibert"
+          "Flopsibert",
+          "KingZurenson"
         ],
         "perspective": "FPP",
         "placement": 7,
@@ -135,8 +135,8 @@
         "matchStart": "17.03. 19:23",
         "teamSize": "Squad",
         "teamMates": [
-          "TheReaperSoul",
           "KingZurenson",
+          "TheReaperSoul",
           "Flopsibert"
         ],
         "perspective": "FPP",
@@ -153,9 +153,9 @@
         "matchStart": "17.03. 19:17",
         "teamSize": "Squad",
         "teamMates": [
-          "KingZurenson",
+          "Hatmehty",
           "Flopsibert",
-          "Hatmehty"
+          "KingZurenson"
         ],
         "perspective": "FPP",
         "placement": 23,
