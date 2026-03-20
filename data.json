@@ -1,5 +1,5 @@
 {
-  "timestamp": "20.03. 16:50",
+  "timestamp": "20.03. 17:37",
   "weatherTempCelsius": 14,
   "githubLastCommit": "March 20, 2026",
   "steamStatus": "online",
@@ -10,8 +10,8 @@
         "matchStart": "19.03. 19:36",
         "teamSize": "Squad",
         "teamMates": [
-          "Volvo960",
           "Pannemann_",
+          "Volvo960",
           "luupy"
         ],
         "perspective": "TPP",
@@ -46,8 +46,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "Arnulf_Schroeder",
-          "Deadly_Steel",
-          "calmlulu"
+          "calmlulu",
+          "Deadly_Steel"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -81,9 +81,9 @@
         "matchStart": "18.03. 19:01",
         "teamSize": "Squad",
         "teamMates": [
-          "ReschoAkman",
+          "KingZurenson",
           "Flopsibert",
-          "KingZurenson"
+          "ReschoAkman"
         ],
         "perspective": "FPP",
         "placement": 7,
@@ -135,9 +135,9 @@
         "matchStart": "17.03. 19:23",
         "teamSize": "Squad",
         "teamMates": [
-          "KingZurenson",
           "TheReaperSoul",
-          "Flopsibert"
+          "Flopsibert",
+          "KingZurenson"
         ],
         "perspective": "FPP",
         "placement": 6,
@@ -153,9 +153,9 @@
         "matchStart": "17.03. 19:17",
         "teamSize": "Squad",
         "teamMates": [
-          "Hatmehty",
           "Flopsibert",
-          "KingZurenson"
+          "KingZurenson",
+          "Hatmehty"
         ],
         "perspective": "FPP",
         "placement": 23,
