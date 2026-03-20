@@ -1,8 +1,8 @@
 {
-  "timestamp": "20.03. 7:01",
-  "weatherTempCelsius": 4,
+  "timestamp": "20.03. 8:48",
+  "weatherTempCelsius": 7,
   "githubLastCommit": "March 20, 2026",
-  "steamStatus": "online",
+  "steamStatus": "offline",
   "pubg": {
     "name": "joeyws2",
     "lastMatches": [
@@ -99,9 +99,9 @@
         "matchStart": "18.03. 18:41",
         "teamSize": "Squad",
         "teamMates": [
-          "Flopsibert",
           "KingZurenson",
-          "Sinthar77"
+          "Sinthar77",
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 15,
