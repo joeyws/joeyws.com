@@ -1,8 +1,8 @@
 {
-  "timestamp": "20.03. 21:34",
-  "weatherTempCelsius": 10,
+  "timestamp": "20.03. 22:32",
+  "weatherTempCelsius": 9,
   "githubLastCommit": "March 20, 2026",
-  "steamStatus": "online",
+  "steamStatus": "offline",
   "pubg": {
     "name": "joeyws2",
     "lastMatches": [
@@ -28,9 +28,9 @@
         "matchStart": "20.03. 19:51",
         "teamSize": "Squad",
         "teamMates": [
-          "RamziGaming",
+          "stefy007cro",
           "Belmin87",
-          "stefy007cro"
+          "RamziGaming"
         ],
         "perspective": "TPP",
         "placement": 17,
@@ -46,9 +46,9 @@
         "matchStart": "20.03. 19:00",
         "teamSize": "Squad",
         "teamMates": [
+          "ImFreeLOL",
           "0_MoLiteS_0",
-          "tralivaliii",
-          "ImFreeLOL"
+          "tralivaliii"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -64,8 +64,8 @@
         "matchStart": "20.03. 18:43",
         "teamSize": "Squad",
         "teamMates": [
-          "8HANSMEYER8",
-          "Lebkac"
+          "Lebkac",
+          "8HANSMEYER8"
         ],
         "perspective": "TPP",
         "placement": 11,
@@ -97,8 +97,8 @@
         "matchStart": "20.03. 18:11",
         "teamSize": "Squad",
         "teamMates": [
-          "Overlord_Gengar",
-          "LonlyPupInLondon"
+          "LonlyPupInLondon",
+          "Overlord_Gengar"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -114,9 +114,9 @@
         "matchStart": "20.03. 17:58",
         "teamSize": "Squad",
         "teamMates": [
-          "McPasta34",
           "Calvados1989",
-          "nuksoC"
+          "nuksoC",
+          "McPasta34"
         ],
         "perspective": "TPP",
         "placement": 12,
@@ -132,9 +132,9 @@
         "matchStart": "19.03. 19:36",
         "teamSize": "Squad",
         "teamMates": [
+          "luupy",
           "Pannemann_",
-          "Volvo960",
-          "luupy"
+          "Volvo960"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -150,8 +150,8 @@
         "matchStart": "19.03. 19:14",
         "teamSize": "Squad",
         "teamMates": [
-          "Dejw711",
-          "ALEXlazer2013"
+          "ALEXlazer2013",
+          "Dejw711"
         ],
         "perspective": "TPP",
         "placement": 2,
@@ -168,8 +168,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "Arnulf_Schroeder",
-          "calmlulu",
-          "Deadly_Steel"
+          "Deadly_Steel",
+          "calmlulu"
         ],
         "perspective": "TPP",
         "placement": 1,
