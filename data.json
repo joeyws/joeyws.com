@@ -1,8 +1,8 @@
 {
-  "timestamp": "21.03. 16:35",
-  "weatherTempCelsius": 11,
+  "timestamp": "21.03. 17:29",
+  "weatherTempCelsius": 10,
   "githubLastCommit": "March 21, 2026",
-  "steamStatus": "online",
+  "steamStatus": "offline",
   "pubg": {
     "name": "joeyws2",
     "lastMatches": [
@@ -10,9 +10,9 @@
         "matchStart": "21.03. 15:36",
         "teamSize": "Squad",
         "teamMates": [
+          "DALIBOR004",
           "AFreshGun",
-          "ika80",
-          "DALIBOR004"
+          "ika80"
         ],
         "perspective": "TPP",
         "placement": 6,
@@ -47,8 +47,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "MorsikHell",
-          "JesusChrisp89",
-          "D_r_i_v_e_r_96"
+          "D_r_i_v_e_r_96",
+          "JesusChrisp89"
         ],
         "perspective": "TPP",
         "placement": 3,
@@ -65,8 +65,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "wulfshtem",
-          "AVCI6006",
-          "Bernard-Suomi"
+          "Bernard-Suomi",
+          "AVCI6006"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -83,8 +83,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "Harakternik_",
-          "Brutalfred",
-          "blackcobra2026"
+          "blackcobra2026",
+          "Brutalfred"
         ],
         "perspective": "TPP",
         "placement": 2,
@@ -100,9 +100,9 @@
         "matchStart": "20.03. 20:52",
         "teamSize": "Squad",
         "teamMates": [
-          "zender21",
+          "ratko_777",
           "SHadooWnexix",
-          "ratko_777"
+          "zender21"
         ],
         "perspective": "TPP",
         "placement": 8,
@@ -118,8 +118,8 @@
         "matchStart": "20.03. 19:51",
         "teamSize": "Squad",
         "teamMates": [
-          "Belmin87",
           "stefy007cro",
+          "Belmin87",
           "RamziGaming"
         ],
         "perspective": "TPP",
