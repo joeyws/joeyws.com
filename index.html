@@ -69,7 +69,7 @@
     @keyframes map{100%{outline-color:transparent;outline-offset:20px;}}
     #map{width:760px;max-width:100%;aspect-ratio:150/75;background:center center url(img/other/world.gif) no-repeat scroll;position:relative;background-size:contain;}
     #map::after{top:23%;left:52.5%;outline:1px solid #0f0;border:1px solid #000;background:#0f0;animation:map 1.2s infinite ease-out;width:7px;height:7px;border-radius:100vmax;pointer-events:none;position:absolute;transform:translate(-50%,-50%);display:block;content:"";}
-    #cursor{width:12px;height:12px;background:var(--text);/* background:#fff1;backdrop-filter:blur(20px) invert(100%) saturate(10);-webkit-backdrop-filter:blur(20px) invert(100%) saturate(10); */border-radius:100vmax;position:fixed;top:-50px;left:50%;transform:translate(-50%,-50%);font-size:0;line-height:0;z-index:99999999;pointer-events:none;}*{cursor:none !important;}
+    #cursor{width:12px;height:12px;background:#fff1;backdrop-filter:blur(20px) invert(100%) saturate(10);-webkit-backdrop-filter:blur(20px) invert(100%) saturate(10);border-radius:100vmax;position:fixed;top:-50px;left:50%;transform:translate(-50%,-50%);font-size:0;line-height:0;z-index:99999999;pointer-events:none;}*{cursor:none !important;}
     /* GAMING */
     .match{width:600px;margin:0 auto;}
 </style>
@@ -302,12 +302,11 @@ if (window.matchMedia('(pointer: fine)').matches) {
 // TIME
 function getTime() {
     const now = new Date();
-    const hours = now.getHours();
-    const minutes = String(now.getMinutes()).padStart(2, "0");
-    const seconds = String(now.getSeconds()).padStart(2, "0");
-    const timeString = `${hours}:${minutes}:${seconds}`;
+    const timeString = now.toLocaleTimeString("de-DE", { hour12: false });
     const timeEl = document.getElementById("time");
-    if (timeEl) {timeEl.innerHTML = timeString;}
+    if (timeEl) {
+        timeEl.textContent = timeString;
+    }
 }
 getTime();
 setInterval(getTime, 1000);
