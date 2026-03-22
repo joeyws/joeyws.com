@@ -28,12 +28,13 @@
     table{width:100%;}tr{border-top:1px solid var(--text);}td{vertical-align:top;}td:nth-child(1){width:8em;padding-right:var(--spacer);}td:nth-child(2){width:auto;}
     hr{margin:3rem 0;}
     a,.video:not(.playing)::after{white-space:nowrap;text-decoration:underline}
-    a:hover,a.hover,nav a.open,.video:hover::after{background:#f0f !important;color:var(--background);text-decoration:none;}
+    a:hover,a.hover,nav a.open,.video:hover::after{background:#666 !important;color:var(--background);text-decoration:none;}
     a[href^="http"]::after{content:"\2197";padding-left:.2em;display:inline-block;}
-    /* TEXT */
+    /* BUTTONS */
     #header,.video:not(.playing)::after,.gallery-caption{font-size:1.4rem;line-height:1.3em;}
-    nav a,.video:not(.playing)::after{background:var(--text);color:var(--background);border-radius:5px !important;padding:0 .5em;text-decoration:none !important;}
-    nav a{border-right:1px solid var(--background);transition:.15s padding;}
+    nav a,.video:not(.playing)::after{background:#6668;backdrop-filter:blur(3px);border-radius:5px !important;padding:0 .5em;text-decoration:none !important;}
+    nav a{border-right:1px solid var(--background);transition:.2s padding;}
+    nav a:hover{color:var(--background);}
     nav a.open{background:#0f0 !important;padding:0 1em}
     /* HEADER */
     #header,.marquee,#header>span{display:flex;gap:.5em 1.4em;}
@@ -45,7 +46,7 @@
     .marquee-track span{margin-right:1.2em;/* margin-right:var(--spacer);outline:1px solid var(--text);outline-offset:-1px;padding:0 .5em;border-radius:100vmax; */}
     @keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-100%);}}
     /* VIDEO */
-    .video{overflow:hidden;position:relative;width:1000px;max-width:100%;aspect-ratio: 2.2 / 1;font-size:0;line-height:0;user-select:none;}
+    .video{overflow:hidden;position:relative;width:1000px;max-width:100%;aspect-ratio:2.2 / 1;font-size:0;line-height:0;user-select:none;}
     .video img,.video video,.video .controls .progress{width:100%;}
     .video img{transition:all .75s;}
     .video:hover img{transform:scale(1.05);}
