@@ -1,11 +1,29 @@
 {
-  "timestamp": "22.03. 12:59",
-  "weatherTempCelsius": 13,
+  "timestamp": "22.03. 13:50",
+  "weatherTempCelsius": 14,
   "githubLastCommit": "March 22, 2026",
   "steamStatus": "online",
   "pubg": {
     "name": "joeyws2",
     "lastMatches": [
+      {
+        "matchStart": "22.03. 12:45",
+        "teamSize": "Squad",
+        "teamMates": [
+          "Flopsibert",
+          "dogukancelik61",
+          "KingZurenson"
+        ],
+        "perspective": "FPP",
+        "placement": 2,
+        "map": "Vikendi",
+        "survivalTime": "27:06",
+        "distance": "6.6",
+        "kills": 1,
+        "assists": 1,
+        "damage": 423,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.squad-fpp.eu.2026.03.22.12.1cbb9ea1-9f93-4e80-b12e-76204e201c53"
+      },
       {
         "matchStart": "22.03. 12:26",
         "teamSize": "Squad",
@@ -46,9 +64,9 @@
         "matchStart": "22.03. 11:56",
         "teamSize": "Squad",
         "teamMates": [
-          "WeCoyote",
           "KingZurenson",
-          "Flopsibert"
+          "Flopsibert",
+          "WeCoyote"
         ],
         "perspective": "FPP",
         "placement": 10,
@@ -65,8 +83,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "Skorpion-04",
-          "Flopsibert",
-          "WeCoyote"
+          "WeCoyote",
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 12,
@@ -83,8 +101,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "Rooney_2008",
-          "3BEPOOO",
-          "LORD_777_"
+          "LORD_777_",
+          "3BEPOOO"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -100,9 +118,9 @@
         "matchStart": "22.03. 9:49",
         "teamSize": "Squad",
         "teamMates": [
-          "putti8",
           "TheBabayka",
-          "DefyP"
+          "DefyP",
+          "putti8"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -118,8 +136,8 @@
         "matchStart": "22.03. 8:49",
         "teamSize": "Squad",
         "teamMates": [
-          "Prince_Of-hell",
-          "Memfis_S"
+          "Memfis_S",
+          "Prince_Of-hell"
         ],
         "perspective": "TPP",
         "placement": 2,
@@ -135,9 +153,9 @@
         "matchStart": "21.03. 15:36",
         "teamSize": "Squad",
         "teamMates": [
-          "ika80",
+          "DALIBOR004",
           "AFreshGun",
-          "DALIBOR004"
+          "ika80"
         ],
         "perspective": "TPP",
         "placement": 6,
@@ -154,8 +172,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "Patchi711",
-          "gagamdzm",
-          "lazzziya0"
+          "lazzziya0",
+          "gagamdzm"
         ],
         "perspective": "TPP",
         "placement": 2,
@@ -166,24 +184,6 @@
         "assists": 0,
         "damage": 49,
         "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.squad.eu.2026.03.21.14.4de7bf17-9e41-4a78-b484-ef081ac0d857"
-      },
-      {
-        "matchStart": "21.03. 13:53",
-        "teamSize": "Squad",
-        "teamMates": [
-          "MorsikHell",
-          "D_r_i_v_e_r_96",
-          "JesusChrisp89"
-        ],
-        "perspective": "TPP",
-        "placement": 3,
-        "map": "Erangel",
-        "survivalTime": "22:25",
-        "distance": "5.9",
-        "kills": 12,
-        "assists": 4,
-        "damage": 1101,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.03.21.13.b6fbec3e-f8f5-44f4-b2c9-935ed0cc9d65"
       }
     ]
   }
