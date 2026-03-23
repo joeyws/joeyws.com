@@ -1,6 +1,6 @@
 {
-  "timestamp": "23.03. 20:44",
-  "weatherTempCelsius": 8,
+  "timestamp": "23.03. 21:40",
+  "weatherTempCelsius": 7,
   "githubLastCommit": "March 23, 2026",
   "steamStatus": "online",
   "pubg": {
@@ -10,9 +10,9 @@
         "matchStart": "23.03. 19:59",
         "teamSize": "Squad",
         "teamMates": [
+          "WeCoyote",
           "KingZurenson",
-          "Flopsibert",
-          "WeCoyote"
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 4,
@@ -28,9 +28,9 @@
         "matchStart": "23.03. 19:33",
         "teamSize": "Squad",
         "teamMates": [
+          "WeCoyote",
           "Flopsibert",
-          "KingZurenson",
-          "WeCoyote"
+          "KingZurenson"
         ],
         "perspective": "FPP",
         "placement": 5,
@@ -47,8 +47,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "KingZurenson",
-          "Flopsibert",
-          "WeCoyote"
+          "WeCoyote",
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 26,
@@ -82,9 +82,9 @@
         "matchStart": "22.03. 17:31",
         "teamSize": "Squad",
         "teamMates": [
+          "KingZurenson",
           "Flopsibert",
-          "ralba",
-          "KingZurenson"
+          "ralba"
         ],
         "perspective": "FPP",
         "placement": 12,
@@ -101,8 +101,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "KingZurenson",
-          "Flopsibert",
-          "lll_WaKiKi_lll"
+          "lll_WaKiKi_lll",
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 1,
@@ -118,9 +118,9 @@
         "matchStart": "22.03. 16:46",
         "teamSize": "Squad",
         "teamMates": [
-          "Flopsibert",
+          "KingZurenson",
           "Mazzdabator",
-          "KingZurenson"
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 18,
@@ -136,9 +136,9 @@
         "matchStart": "22.03. 14:49",
         "teamSize": "Squad",
         "teamMates": [
-          "Flopsibert",
+          "jt-brako",
           "KingZurenson",
-          "jt-brako"
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 2,
@@ -154,8 +154,8 @@
         "matchStart": "22.03. 14:32",
         "teamSize": "Squad",
         "teamMates": [
-          "KingZurenson",
-          "Flopsibert"
+          "Flopsibert",
+          "KingZurenson"
         ],
         "perspective": "FPP",
         "placement": 11,
