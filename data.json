@@ -1,6 +1,6 @@
 {
-  "timestamp": "24.03. 10:02",
-  "weatherTempCelsius": 12,
+  "timestamp": "24.03. 11:47",
+  "weatherTempCelsius": 15,
   "githubLastCommit": "March 24, 2026",
   "steamStatus": "offline",
   "pubg": {
@@ -10,9 +10,9 @@
         "matchStart": "23.03. 19:59",
         "teamSize": "Squad",
         "teamMates": [
+          "WeCoyote",
           "KingZurenson",
-          "Flopsibert",
-          "WeCoyote"
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 4,
@@ -46,9 +46,9 @@
         "matchStart": "23.03. 19:27",
         "teamSize": "Squad",
         "teamMates": [
+          "KingZurenson",
           "WeCoyote",
-          "Flopsibert",
-          "KingZurenson"
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 26,
@@ -64,8 +64,8 @@
         "matchStart": "23.03. 19:00",
         "teamSize": "Squad",
         "teamMates": [
-          "KingZurenson",
           "Flopsibert",
+          "KingZurenson",
           "WeCoyote"
         ],
         "perspective": "FPP",
@@ -82,9 +82,9 @@
         "matchStart": "22.03. 17:31",
         "teamSize": "Squad",
         "teamMates": [
-          "ralba",
           "KingZurenson",
-          "Flopsibert"
+          "Flopsibert",
+          "ralba"
         ],
         "perspective": "FPP",
         "placement": 12,
@@ -100,8 +100,8 @@
         "matchStart": "22.03. 17:01",
         "teamSize": "Squad",
         "teamMates": [
-          "lll_WaKiKi_lll",
           "KingZurenson",
+          "lll_WaKiKi_lll",
           "Flopsibert"
         ],
         "perspective": "FPP",
@@ -136,9 +136,9 @@
         "matchStart": "22.03. 14:49",
         "teamSize": "Squad",
         "teamMates": [
+          "jt-brako",
           "KingZurenson",
-          "Flopsibert",
-          "jt-brako"
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 2,
@@ -171,9 +171,9 @@
         "matchStart": "22.03. 14:02",
         "teamSize": "Squad",
         "teamMates": [
-          "KingZurenson",
           "Flopsibert",
-          "RickMoreAnus"
+          "RickMoreAnus",
+          "KingZurenson"
         ],
         "perspective": "FPP",
         "placement": 5,
