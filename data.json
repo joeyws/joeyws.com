@@ -1,6 +1,6 @@
 {
-  "timestamp": "24.03. 21:41",
-  "weatherTempCelsius": 11,
+  "timestamp": "24.03. 22:36",
+  "weatherTempCelsius": 10,
   "githubLastCommit": "March 24, 2026",
   "steamStatus": "online",
   "pubg": {
@@ -10,9 +10,9 @@
         "matchStart": "24.03. 20:20",
         "teamSize": "Squad",
         "teamMates": [
+          "WeCoyote",
           "KingZurenson",
-          "Flopsibert",
-          "WeCoyote"
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 2,
@@ -28,9 +28,9 @@
         "matchStart": "24.03. 19:51",
         "teamSize": "Squad",
         "teamMates": [
-          "WeCoyote",
+          "Flopsibert",
           "KingZurenson",
-          "Flopsibert"
+          "WeCoyote"
         ],
         "perspective": "FPP",
         "placement": 2,
@@ -46,9 +46,9 @@
         "matchStart": "24.03. 19:19",
         "teamSize": "Squad",
         "teamMates": [
-          "Flopsibert",
+          "WeCoyote",
           "KingZurenson",
-          "WeCoyote"
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 3,
@@ -82,8 +82,8 @@
         "matchStart": "23.03. 19:59",
         "teamSize": "Squad",
         "teamMates": [
-          "Flopsibert",
           "KingZurenson",
+          "Flopsibert",
           "WeCoyote"
         ],
         "perspective": "FPP",
@@ -100,9 +100,9 @@
         "matchStart": "23.03. 19:33",
         "teamSize": "Squad",
         "teamMates": [
+          "Flopsibert",
           "KingZurenson",
-          "WeCoyote",
-          "Flopsibert"
+          "WeCoyote"
         ],
         "perspective": "FPP",
         "placement": 5,
@@ -118,9 +118,9 @@
         "matchStart": "23.03. 19:27",
         "teamSize": "Squad",
         "teamMates": [
-          "WeCoyote",
+          "KingZurenson",
           "Flopsibert",
-          "KingZurenson"
+          "WeCoyote"
         ],
         "perspective": "FPP",
         "placement": 26,
@@ -137,8 +137,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "Flopsibert",
-          "WeCoyote",
-          "KingZurenson"
+          "KingZurenson",
+          "WeCoyote"
         ],
         "perspective": "FPP",
         "placement": 1,
