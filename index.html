@@ -29,11 +29,11 @@
     hr{margin:3rem 0;}
     a,.video:not(.playing)::after{white-space:nowrap;text-decoration:underline}
     a:hover,a.hover,nav a.open,.video:hover::after{background:var(--text) !important;color:var(--background);text-decoration:none;}
-    a[href^="http"]::after{content:"\2197";padding-left:.2em;display:inline-block;}
+    /* a[href^="http"]::after{content:"\2197";padding-left:.2em;display:inline-block;} */
     /* BUTTONS */
     #header,.video:not(.playing)::after,.gallery-caption{font-size:1.4rem;line-height:1.3em;}
-    nav a,.video:not(.playing)::after{background:#7777;color:var(--background) !important;backdrop-filter:blur(1px);border-radius:100vmax !important;padding:0 .6em;text-decoration:none !important;}
-    nav a{border-right:1px solid var(--background);transition:.2s padding;}
+    nav a,.video:not(.playing)::after{transition:.1s ease-out;background:#7777;color:var(--background) !important;backdrop-filter:blur(1px);border-radius:100vmax !important;padding:0 .6em;text-decoration:none !important;}
+    nav a{border-right:1px solid var(--background);}
     nav a.open{background:var(--text) !important;padding:0 1.2em}
     /* HEADER */
     #header,.marquee,#header>span{display:flex;gap:.2em 1.4em;}
@@ -85,7 +85,7 @@
         <h1 class="loading">Joey Schweickhardt</h1>
         <nav><a href="#/works">Works</a><a href="#/places">Places</a><a href="#/contact">Contact</a></nav>
         <span>
-            <span>Stuttgart <svg style="height:.9em;vertical-align:-12%;" viewBox="0 0 400 262" xmlns="http://www.w3.org/2000/svg"><title>Germany</title><path d="M200.005,5C146.594,5 98.162,18.773 62.813,41.345C27.463,63.917 5,95.616 5,131C5,166.384 27.463,198.083 62.813,220.655C98.162,243.227 146.594,257 200.005,257C253.416,257 301.838,243.227 337.187,220.655C372.537,198.083 395,166.384 395,131C395,95.616 372.537,63.917 337.187,41.345C301.838,18.773 253.416,5 200.005,5Z" fill="none" stroke="var(--text)" stroke-width="10"/><g fill="var(--text)" transform="matrix(0.83346,0,0,0.83346,37.307976,21.816724)"><path d="M130.576,33.489L130.576,228.511L219.176,228.511C246.794,228.511 269.424,205.881 269.424,178.263L269.424,83.737C269.424,56.119 246.794,33.489 219.176,33.489L130.576,33.489ZM155.622,58.535L219.176,58.535C233.352,58.535 244.378,69.561 244.378,83.737L244.378,178.263C244.378,192.439 233.352,203.465 219.176,203.465L155.622,203.465L155.622,58.535Z"/></g></svg></span>
+            <span>Stuttgart<!--  <svg style="height:.9em;vertical-align:-12%;" viewBox="0 0 400 262" xmlns="http://www.w3.org/2000/svg"><title>Germany</title><path d="M200.005,5C146.594,5 98.162,18.773 62.813,41.345C27.463,63.917 5,95.616 5,131C5,166.384 27.463,198.083 62.813,220.655C98.162,243.227 146.594,257 200.005,257C253.416,257 301.838,243.227 337.187,220.655C372.537,198.083 395,166.384 395,131C395,95.616 372.537,63.917 337.187,41.345C301.838,18.773 253.416,5 200.005,5Z" fill="none" stroke="var(--text)" stroke-width="10"/><g fill="var(--text)" transform="matrix(0.83346,0,0,0.83346,37.307976,21.816724)"><path d="M130.576,33.489L130.576,228.511L219.176,228.511C246.794,228.511 269.424,205.881 269.424,178.263L269.424,83.737C269.424,56.119 246.794,33.489 219.176,33.489L130.576,33.489ZM155.622,58.535L219.176,58.535C233.352,58.535 244.378,69.561 244.378,83.737L244.378,178.263C244.378,192.439 233.352,203.465 219.176,203.465L155.622,203.465L155.622,58.535Z"/></g></svg> --></span>
             <span id="time"></span>
         </span>
     </div>
