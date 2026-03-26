@@ -40,7 +40,7 @@
     #header{white-space:nowrap;user-select:none;width:100%;flex-wrap:wrap;justify-content:space-between;}
     @media (max-width:500px) {#header{flex-direction:column;}}
     /* MARQUEE */
-    .marquee{margin-bottom:var(--spacer);transition:.2s width ease-out;line-height:1.5em;box-sizing:border-box;width:1px;overflow:hidden;white-space:nowrap;display:block;user-select:none;/* mask-mode:alpha;mask-image:linear-gradient(to right, transparent, #000 20%, #000 calc(100% - 20%), transparent); */}
+    .marquee{background:#0f0;color:var(--background);/* margin:calc(-1 * var(--spacer)); */margin-bottom:var(--spacer);transition:.2s width ease-out;line-height:1.5em;box-sizing:border-box;width:1px;overflow:hidden;white-space:nowrap;display:block;user-select:none;/* mask-mode:alpha;mask-image:linear-gradient(to right, transparent, #000 20%, #000 calc(100% - 20%), transparent); */}
     .marquee-track{display:inline-flex;white-space:nowrap;will-change:transform;animation:marquee 60s linear infinite;}
     .marquee-track span{margin-right:1.2em;/* margin-right:var(--spacer);outline:1px solid var(--text);outline-offset:-1px;padding:0 .5em;border-radius:100vmax; */}
     @keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-100%);}}
@@ -176,7 +176,11 @@
         <a class="phone" href="javascript:"></a><br>
         <a class="email" href="javascript:"></a>
     </p>
-    <p><a href="https://www.linkedin.com/in/joeyschweickhardt/">LinkedIn</a></p>
+    <p>
+        <a href="https://www.linkedin.com/in/joeyschweickhardt/"><svg style="height:.9em;vertical-align:-12%;" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg"><path fill="var(--text)" d="M8 72h56a8 8 0 0 0 8-8V8a8 8 0 0 0-8-8H8a8 8 0 0 0-8 8v56a8 8 0 0 0 8 8z"/><path fill="var(--background)" d="M62 62H51.3V43.8c0-5-1.9-7.8-5.8-7.8-4.3 0-6.6 2.9-6.6 7.8V62H28.6V27.3h10.3V32s3.1-5.7 10.5-5.7S62 30.8 62 40.1V62zM16.3 22.8A6.4 6.4 0 1 1 16.3 10a6.4 6.4 0 0 1 0 12.8zM11 62h10.8V27.3H11V62z"/></svg></a>
+        <!-- <a href="https://x.com/joeyws"><svg style="height:.9em;vertical-align:-12%;" viewBox="0 0 248 204" xmlns="http://www.w3.org/2000/svg"><path fill="var(--text)" d="M222 51.3c.1 2.2.1 4.3.1 6.5 0 66.7-50.8 143.7-143.7 143.7-27.4 0-54.3-7.8-77.4-22.6 4 .5 8 .7 12 .7 22.7 0 44.8-7.6 62.7-21.7-21.6-.4-40.6-14.5-47.2-35.1 7.6 1.5 15.4 1.2 22.8-.9-23.6-4.8-40.5-25.5-40.5-49.5v-.6c7 3.9 14.9 6.1 22.9 6.3C11.6 63.3 4.7 33.8 18.1 10.7c25.6 31.6 63.5 50.7 104.1 52.8-4.1-17.5 1.5-35.9 14.6-48.3 20.3-19.1 52.3-18.1 71.4 2.2 11.3-2.2 22.2-6.4 32.1-12.3-3.8 11.7-11.7 21.6-22.2 27.9 10-1.2 19.8-3.9 29-8-6.8 10.2-15.3 19-25.2 26.2z"/></svg></a> -->
+        <!-- <a href="https://www.instagram.com/joeyws"><svg style="height:.9em;vertical-align:-12%;" viewBox="0 0 169.063 169.063" xmlns="http://www.w3.org/2000/svg"><g fill="var(--text)"><path d="M122.4 0H46.7C20.9 0 0 20.9 0 46.7v75.7c0 25.7 20.9 46.7 46.7 46.7h75.7c25.7 0 46.7-20.9 46.7-46.7V46.7C169.1 20.9 148.1 0 122.4 0zM154.1 122.4c0 17.5-14.2 31.7-31.7 31.7H46.7c-17.5 0-31.7-14.2-31.7-31.7V46.7C15 29.2 29.2 15 46.7 15h75.7c17.5 0 31.7 14.2 31.7 31.7v75.7z"/><path d="M84.5 41c-24 0-43.6 19.5-43.6 43.6s19.6 43.6 43.6 43.6 43.6-19.6 43.6-43.6S108.6 41 84.5 41zm0 72.1c-15.7 0-28.6-12.8-28.6-28.6S68.8 56 84.5 56s28.6 12.8 28.6 28.6-12.9 28.6-28.6 28.6z"/><path d="M129.9 28.3c-2.9 0-5.7 1.2-7.8 3.2-2 2-3.2 4.9-3.2 7.8s1.2 5.7 3.2 7.8c2 2 4.9 3.2 7.8 3.2s5.7-1.2 7.8-3.2c2.1-2.1 3.2-4.9 3.2-7.8s-1.1-5.7-3.2-7.8c-2-2-4.9-3.2-7.8-3.2z"/></g></svg></a> -->
+    </p>
     <hr>
     <div id="map"></div>
     <p>Image: NASA/Blue Marble</p>
