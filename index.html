@@ -42,7 +42,7 @@
     /* MARQUEE */
     .marquee{background:#0f0;color:var(--background);/* margin:calc(-1 * var(--spacer)); */margin-bottom:var(--spacer);transition:.2s width ease-out;line-height:1.5em;box-sizing:border-box;width:1px;overflow:hidden;white-space:nowrap;display:block;user-select:none;/* mask-mode:alpha;mask-image:linear-gradient(to right, transparent, #000 20%, #000 calc(100% - 20%), transparent); */}
     .marquee-track{display:inline-flex;white-space:nowrap;will-change:transform;animation:marquee 60s linear infinite;}
-    .marquee-track span{margin-right:1.2em;/* margin-right:var(--spacer);outline:1px solid var(--text);outline-offset:-1px;padding:0 .5em;border-radius:100vmax; */}
+    .marquee-track span{;margin-right:1.3em;}
     @keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-100%);}}
     /* VIDEO */
     .video{overflow:hidden;position:relative;width:1000px;max-width:100%;aspect-ratio:2.2 / 1;font-size:0;line-height:0;user-select:none;}
