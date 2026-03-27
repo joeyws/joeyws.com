@@ -1,6 +1,6 @@
 {
-  "timestamp": "27.03. 17:01",
-  "weatherTempCelsius": 7,
+  "timestamp": "27.03. 19:00",
+  "weatherTempCelsius": 5,
   "githubLastCommit": "March 27, 2026",
   "steamStatus": "online",
   "pubg": {
@@ -169,9 +169,9 @@
         "matchStart": "24.03. 20:20",
         "teamSize": "Squad",
         "teamMates": [
+          "Flopsibert",
           "KingZurenson",
-          "WeCoyote",
-          "Flopsibert"
+          "WeCoyote"
         ],
         "perspective": "FPP",
         "placement": 2,
