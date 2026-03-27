@@ -1,5 +1,5 @@
 {
-  "timestamp": "27.03. 19:47",
+  "timestamp": "27.03. 20:42",
   "weatherTempCelsius": 4,
   "githubLastCommit": "March 27, 2026",
   "steamStatus": "online",
@@ -10,8 +10,8 @@
         "matchStart": "26.03. 19:14",
         "teamSize": "Squad",
         "teamMates": [
-          "KingZurenson",
-          "Flopsibert"
+          "Flopsibert",
+          "KingZurenson"
         ],
         "perspective": "FPP",
         "placement": 5,
@@ -27,8 +27,8 @@
         "matchStart": "26.03. 18:46",
         "teamSize": "Squad",
         "teamMates": [
-          "Liv2810",
           "KingZurenson",
+          "Liv2810",
           "Flopsibert"
         ],
         "perspective": "FPP",
@@ -62,9 +62,9 @@
         "matchStart": "26.03. 17:58",
         "teamSize": "Squad",
         "teamMates": [
-          "EYLAX",
+          "Vorby25",
           "KENANACCURACY",
-          "Vorby25"
+          "EYLAX"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -80,8 +80,8 @@
         "matchStart": "26.03. 17:00",
         "teamSize": "Squad",
         "teamMates": [
-          "SONERBEY034",
-          "KOSTAS166GR"
+          "KOSTAS166GR",
+          "SONERBEY034"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -97,9 +97,9 @@
         "matchStart": "25.03. 20:20",
         "teamSize": "Squad",
         "teamMates": [
-          "Watislov",
           "Ignatios2004",
-          "sergey_2024"
+          "sergey_2024",
+          "Watislov"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -116,8 +116,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "Femki_TOp",
-          "abu_hadaev",
-          "Vlad_VORON"
+          "Vlad_VORON",
+          "abu_hadaev"
         ],
         "perspective": "TPP",
         "placement": 2,
@@ -133,9 +133,9 @@
         "matchStart": "25.03. 19:28",
         "teamSize": "Squad",
         "teamMates": [
-          "QWOLEXX",
+          "KingZurenson",
           "Flopsibert",
-          "KingZurenson"
+          "QWOLEXX"
         ],
         "perspective": "FPP",
         "placement": 17,
@@ -151,9 +151,9 @@
         "matchStart": "25.03. 19:00",
         "teamSize": "Squad",
         "teamMates": [
-          "Cannasutra",
+          "KingZurenson",
           "Flopsibert",
-          "KingZurenson"
+          "Cannasutra"
         ],
         "perspective": "FPP",
         "placement": 2,
@@ -169,9 +169,9 @@
         "matchStart": "24.03. 20:20",
         "teamSize": "Squad",
         "teamMates": [
+          "WeCoyote",
           "KingZurenson",
-          "Flopsibert",
-          "WeCoyote"
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 2,
