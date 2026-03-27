@@ -1,6 +1,6 @@
 {
-  "timestamp": "27.03. 21:39",
-  "weatherTempCelsius": 3,
+  "timestamp": "27.03. 22:36",
+  "weatherTempCelsius": 1,
   "githubLastCommit": "March 27, 2026",
   "steamStatus": "online",
   "pubg": {
@@ -59,8 +59,8 @@
         "matchStart": "26.03. 19:14",
         "teamSize": "Squad",
         "teamMates": [
-          "KingZurenson",
-          "Flopsibert"
+          "Flopsibert",
+          "KingZurenson"
         ],
         "perspective": "FPP",
         "placement": 5,
@@ -111,9 +111,9 @@
         "matchStart": "26.03. 17:58",
         "teamSize": "Squad",
         "teamMates": [
-          "EYLAX",
           "Vorby25",
-          "KENANACCURACY"
+          "KENANACCURACY",
+          "EYLAX"
         ],
         "perspective": "TPP",
         "placement": 1,
