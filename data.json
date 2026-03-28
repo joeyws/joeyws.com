@@ -1,5 +1,5 @@
 {
-  "timestamp": "28.03. 18:47",
+  "timestamp": "28.03. 19:32",
   "weatherTempCelsius": 3,
   "githubLastCommit": "March 28, 2026",
   "steamStatus": "online",
@@ -28,8 +28,8 @@
         "matchStart": "28.03. 16:15",
         "teamSize": "Squad",
         "teamMates": [
-          "WeCoyote",
           "KingZurenson",
+          "WeCoyote",
           "Flopsibert"
         ],
         "perspective": "FPP",
@@ -46,9 +46,9 @@
         "matchStart": "28.03. 15:48",
         "teamSize": "Squad",
         "teamMates": [
+          "Flopsibert",
           "WeCoyote",
-          "KingZurenson",
-          "Flopsibert"
+          "KingZurenson"
         ],
         "perspective": "FPP",
         "placement": 2,
@@ -64,9 +64,9 @@
         "matchStart": "28.03. 15:24",
         "teamSize": "Squad",
         "teamMates": [
-          "Flopsibert",
           "KingZurenson",
-          "WeCoyote"
+          "WeCoyote",
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 7,
@@ -82,8 +82,8 @@
         "matchStart": "27.03. 21:13",
         "teamSize": "Squad",
         "teamMates": [
-          "TarerPanda",
-          "Wilhelmskoog"
+          "Wilhelmskoog",
+          "TarerPanda"
         ],
         "perspective": "TPP",
         "placement": 6,
@@ -113,9 +113,9 @@
         "matchStart": "27.03. 20:23",
         "teamSize": "Squad",
         "teamMates": [
-          "Husqvarna2013",
           "h4rdc0d3r",
-          "Tomi5800"
+          "Tomi5800",
+          "Husqvarna2013"
         ],
         "perspective": "TPP",
         "placement": 4,
@@ -148,8 +148,8 @@
         "matchStart": "26.03. 18:46",
         "teamSize": "Squad",
         "teamMates": [
-          "KingZurenson",
           "Liv2810",
+          "KingZurenson",
           "Flopsibert"
         ],
         "perspective": "FPP",
@@ -166,8 +166,8 @@
         "matchStart": "26.03. 18:23",
         "teamSize": "Squad",
         "teamMates": [
-          "Flopsibert",
-          "KingZurenson"
+          "KingZurenson",
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 14,
