@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <title>Joey’s Synth</title>
 <style>
-  :root{--text:#000;--light:#ccc;--spacer:8px;}
-  /* RESET */*{text-underline-offset:2px;text-decoration-thickness:.05em;text-decoration-skip-ink:none;border:0;font-kerning:normal;outline:none;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}
+  :root{--text:#000;--light:#ccc;--dark:#999;--spacer:8px;}
+  /* RESET */*{user-select:none;text-underline-offset:2px;text-decoration-thickness:.05em;text-decoration-skip-ink:none;border:0;font-kerning:normal;outline:none;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}
   html{height:100%;font-size:13px;}
   body{line-height:1;font-family:monospace;line-height:1.3em;padding:2rem;}
   h1{font-size:2em;line-height:1em;/* font-family:sans-serif;font-weight:bold;letter-spacing:.05em;text-transform:uppercase; *//* transform:scaleX(1.2);transform-origin:top left; */}
@@ -14,14 +14,16 @@
   hr{margin:1em 0;}
   hr.line{border-top:1px solid var(--text);}
   /* SYNTH */
-  button,select,input{appearance:none;background:var(--light);line-height:1.5em;cursor:pointer;font-family:inherit;}
-  button,select{padding:0 var(--spacer);}
+  .button,button,select,input{display:inline-block;appearance:none;background:var(--light);line-height:1.5em;cursor:pointer;font-family:inherit;}
+  .button,button,select{padding:0 var(--spacer);}
+  button:active{background:var(--dark);}
   select{padding-right:calc(4*var(--spacer));background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24'%3E%3Cpath d='M7 10l5 5 5-5z' fill='%23000'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right .5em center;background-size:calc(2*var(--spacer));}
-  button#signalMidiIn{cursor:default;}button#signalMidiIn.active{color:#0f0;}
   label{margin-right:.5rem;}
   input[type=range]{width:100px;height:.6em;}
   input[type=range]::-webkit-slider-runnable-track{}
   input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;height:.6em;width:.6em;background:#000;}
+  /* SPECIAL */
+  #signalMidiIn{cursor:default;}#signalMidiIn.active{color:#0f0;}
 </style>
 </head>
 <body>
@@ -34,7 +36,7 @@ Other browsers do not fully support WebMIDI. Press Init button.
 <hr>
 <h1>Joey’s Synth</h1>
 <hr>
-<button id="signalMidiIn">MIDI</button>
+<span class="button" id="signalMidiIn">MIDI</span>
 <button id="startButton">Init</button>
 <select id="waveform">
   <option value="sine">Sine</option>
@@ -56,7 +58,7 @@ Other browsers do not fully support WebMIDI. Press Init button.
 <hr>
 <hr class="line">
 <hr>
-<h2>Add functions:</h2>
+<h2>Implement functions later:</h2>
 <ul>
   <li>Add wave types: triangle, noise</li>
   <li>Change sound while sliding sliders</li>
@@ -64,7 +66,7 @@ Other browsers do not fully support WebMIDI. Press Init button.
   <li>Show CPU utilization</li>
   <li>Show output meter</li>
   <li>Add frequency and resonance sliders to filter</li>
-  <li>Make some sliders logarithmic</li>
+  <li>Make some sliders logarithmic (sustain, ...)</li>
   <li>Laptop keyboard support</li>
   <li>FM synthesis</li>
   <li>Add 808 drum computer</li>
