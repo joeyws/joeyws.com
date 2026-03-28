@@ -25,12 +25,13 @@ input[type=range]:active{cursor:grabbing;}
 input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;height:.6em;width:.6em;background:#000;}
 /* SPECIAL */
 #signalMidiIn{cursor:default;}
-#signalMidiIn.active{background:green;}
+/* #signalMidiIn span{color:var(--dark);} */
+#signalMidiIn.active{background:#0f0;}
 </style>
 </head>
 <body>
 
-<div style="padding:.5em .8em;background:#ff0;width:440px;max-width:100%;box-sizing:border-box;">
+<div style="padding:.5em .8em;background:#0f0;width:33em;max-width:100%;box-sizing:border-box;">
   Connect your USB keyboard and allow access in Chrome. Note: WebMIDI is not fully supported in other browsers.
 </div>
 <hr>
@@ -63,9 +64,11 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;height:.6em;widt
 <hr class="line">
 <h2>To do:</h2>
 <ul>
-  <li>Fix Filter Decay</li>
-  <li>Fix Releases</li>
-  <li>Show output meter</li>
+  <li>Decay/release decay logarithmic?</li>
+  <li>Fix filter decay</li>
+  <li>Fix releases gain</li>
+  <li>Add e-piano sound</li>
+  <li>Output meter</li>
   <li>Effects: chorus, reverb, ...</li>
   <li>Laptop keyboard support</li>
   <li>FM synthesis</li>
