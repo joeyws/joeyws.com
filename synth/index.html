@@ -12,14 +12,14 @@
   h2{margin-bottom:var(--spacer);}
   ul{padding-left:1em;}
   hr{margin:1em 0;}
-  hr.line{border-top:1px solid var(--text);}
+  hr.line{margin:3em 0;border-top:2px solid #bbb;}
   /* SYNTH */
   .button,button,select,input{display:inline-block;appearance:none;background:var(--light);line-height:1.5em;cursor:pointer;font-family:inherit;}
   .button,button,select{padding:0 var(--spacer);}
   button:active{background:var(--dark);}
   select{padding-right:calc(4*var(--spacer));background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24'%3E%3Cpath d='M7 10l5 5 5-5z' fill='%23000'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right .5em center;background-size:calc(2*var(--spacer));}
   label{margin-right:.5rem;}
-  input[type=range]{width:100px;height:.6em;}
+  input[type=range]{width:100px;height:.6em;cursor:grab;}
   input[type=range]::-webkit-slider-runnable-track{}
   input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;height:.6em;width:.6em;background:#000;}
   /* SPECIAL */
@@ -29,28 +29,28 @@
 <body>
 
 
-Please connect your USB keyboard and allow access in Chrome.<br>
-Other browsers do not fully support WebMIDI. Press Init button.
-<hr>
-<hr class="line">
+<div style="padding:.5em .8em;background:#0f6;width:460px;max-width:100%;box-spacing:border-box;">
+  Please connect your USB keyboard and allow access in Chrome.
+  Other browsers do not fully support WebMIDI.
+</div>
 <hr>
 <h1>Joey’s Synth</h1>
 <hr>
-<span class="button" id="signalMidiIn">MIDI</span>
 <button id="startButton">Init</button>
+<span class="button" id="signalMidiIn">MIDI</span>
 <select id="waveform">
   <option value="sine">Sine</option>
   <option value="sawtooth">Saw</option>
   <option value="square">Square</option>
 </select>
 <hr>
-<h2>Volume</h2>
+<h2>Amplitude</h2>
 <div class="slider-container"><label for="attack">A</label><input type="range" id="attack" min="0" max="2" step="0.01" value="0"></div>
 <div class="slider-container"><label for="decay">D</label><input type="range" id="decay" min="0" max="2" step="0.01" value="0"></div>
 <div class="slider-container"><label for="sustain">S</label><input type="range" id="sustain" min="0" max="1" step="0.01" value="1"></div>
 <div class="slider-container"><label for="release">R</label><input type="range" id="release" min="0" max="3" step="0.01" value="0"></div>
 <hr>
-<h2>Filter</h2>
+<h2>Low-Pass Filter</h2>
 <div class="slider-container"><label for="fAttack">A</label><input type="range" id="fAttack" min="0" max="2" step="0.01" value="0"></div>
 <div class="slider-container"><label for="fDecay">D</label><input type="range" id="fDecay" min="0" max="2" step="0.01" value="0"></div>
 <div class="slider-container"><label for="fSustain">S</label><input type="range" id="fSustain" min="0" max="1" step="0.01" value="1"></div>
