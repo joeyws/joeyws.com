@@ -1,5 +1,5 @@
 {
-  "timestamp": "28.03. 20:35",
+  "timestamp": "28.03. 21:33",
   "weatherTempCelsius": 4,
   "githubLastCommit": "March 28, 2026",
   "steamStatus": "online",
@@ -11,8 +11,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "KingZurenson",
-          "WeCoyote",
-          "Flopsibert"
+          "Flopsibert",
+          "WeCoyote"
         ],
         "perspective": "FPP",
         "placement": 1,
@@ -28,9 +28,9 @@
         "matchStart": "28.03. 16:15",
         "teamSize": "Squad",
         "teamMates": [
-          "WeCoyote",
+          "Flopsibert",
           "KingZurenson",
-          "Flopsibert"
+          "WeCoyote"
         ],
         "perspective": "FPP",
         "placement": 12,
@@ -46,8 +46,8 @@
         "matchStart": "28.03. 15:48",
         "teamSize": "Squad",
         "teamMates": [
-          "WeCoyote",
           "KingZurenson",
+          "WeCoyote",
           "Flopsibert"
         ],
         "perspective": "FPP",
@@ -166,8 +166,8 @@
         "matchStart": "26.03. 18:23",
         "teamSize": "Squad",
         "teamMates": [
-          "Flopsibert",
-          "KingZurenson"
+          "KingZurenson",
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 14,
