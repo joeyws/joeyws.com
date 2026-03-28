@@ -1,6 +1,6 @@
 {
-  "timestamp": "27.03. 23:36",
-  "weatherTempCelsius": 1,
+  "timestamp": "28.03. 2:31",
+  "weatherTempCelsius": 0,
   "githubLastCommit": "March 27, 2026",
   "steamStatus": "online",
   "pubg": {
@@ -10,8 +10,8 @@
         "matchStart": "27.03. 21:13",
         "teamSize": "Squad",
         "teamMates": [
-          "Wilhelmskoog",
-          "TarerPanda"
+          "TarerPanda",
+          "Wilhelmskoog"
         ],
         "perspective": "TPP",
         "placement": 6,
@@ -41,9 +41,9 @@
         "matchStart": "27.03. 20:23",
         "teamSize": "Squad",
         "teamMates": [
+          "Husqvarna2013",
           "h4rdc0d3r",
-          "Tomi5800",
-          "Husqvarna2013"
+          "Tomi5800"
         ],
         "perspective": "TPP",
         "placement": 4,
@@ -76,8 +76,8 @@
         "matchStart": "26.03. 18:46",
         "teamSize": "Squad",
         "teamMates": [
-          "Liv2810",
           "KingZurenson",
+          "Liv2810",
           "Flopsibert"
         ],
         "perspective": "FPP",
@@ -94,8 +94,8 @@
         "matchStart": "26.03. 18:23",
         "teamSize": "Squad",
         "teamMates": [
-          "KingZurenson",
-          "Flopsibert"
+          "Flopsibert",
+          "KingZurenson"
         ],
         "perspective": "FPP",
         "placement": 14,
@@ -111,8 +111,8 @@
         "matchStart": "26.03. 17:58",
         "teamSize": "Squad",
         "teamMates": [
-          "EYLAX",
           "KENANACCURACY",
+          "EYLAX",
           "Vorby25"
         ],
         "perspective": "TPP",
@@ -129,8 +129,8 @@
         "matchStart": "26.03. 17:00",
         "teamSize": "Squad",
         "teamMates": [
-          "SONERBEY034",
-          "KOSTAS166GR"
+          "KOSTAS166GR",
+          "SONERBEY034"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -164,9 +164,9 @@
         "matchStart": "25.03. 19:45",
         "teamSize": "Squad",
         "teamMates": [
+          "Vlad_VORON",
           "Femki_TOp",
-          "abu_hadaev",
-          "Vlad_VORON"
+          "abu_hadaev"
         ],
         "perspective": "TPP",
         "placement": 2,
