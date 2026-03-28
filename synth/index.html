@@ -13,6 +13,8 @@ h1{font-size:2em;margin-bottom:0.5em;}
 h2{margin-bottom:8px;}
 ul{padding-left:1em;}
 hr{margin:1em 0;}
+hr.line{border-top:2px solid var(--light);margin:2em 0;}
+/* SYNTH */
 .button,button,select,input{display:inline-block;appearance:none;background:var(--light);line-height:1.5em;cursor:pointer;font-family:inherit;}
 .button,button,select{padding:0 var(--spacer);}
 button:active{background:var(--dark);}
@@ -21,14 +23,15 @@ label{margin-right:.5rem;width:40px;display:inline-block;}
 input[type=range]{width:100px;height:.6em;cursor:grab;}
 input[type=range]:active{cursor:grabbing;}
 input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;height:.6em;width:.6em;background:#000;}
-#signalMidiIn{cursor:default;}#signalMidiIn.active{background:#0f0;}
+/* SPECIAL */
+#signalMidiIn{cursor:default;}
+#signalMidiIn.active{background:green;}
 </style>
 </head>
 <body>
 
-<div style="padding:.5em .8em;background:#0f6;width:460px;max-width:100%;box-sizing:border-box;">
-  Please connect your USB keyboard and allow access in Chrome.
-  Other browsers do not fully support WebMIDI.
+<div style="padding:.5em .8em;background:#ff0;width:440px;max-width:100%;box-sizing:border-box;">
+  Connect your USB keyboard and allow access in Chrome. Note: WebMIDI is not fully supported in other browsers.
 </div>
 <hr>
 <h1>Joey’s Synth</h1>
@@ -57,16 +60,16 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;height:.6em;widt
 <div class="slider-container"><label for="fRelease">R</label><input type="range" id="fRelease" min="0" max="3" step="0.01" value="0"></div>
 <div class="slider-container"><label for="fFreq">Freq</label><input type="range" id="fFreq" min="50" max="15000" step="1" value="15000"></div>
 <div class="slider-container"><label for="fRes">Res</label><input type="range" id="fRes" min="0" max="30" step="0.1" value="0"></div>
-<hr>
 <hr class="line">
 <h2>To do:</h2>
 <ul>
-  <li>Show CPU utilization</li>
+  <li>Fix Filter Decay</li>
+  <li>Fix Releases</li>
   <li>Show output meter</li>
+  <li>Effects: chorus, reverb, ...</li>
   <li>Laptop keyboard support</li>
   <li>FM synthesis</li>
   <li>Add 808 drum computer</li>
-  <li>Effects: chorus, reverb, ...</li>
   <li>CSS sliders <a href="https://codepen.io/ShadowShahriar/pen/zYPPYrQ">https://codepen.io/ShadowShahriar/pen/zYPPYrQ</a></li>
 </ul> 
 
@@ -86,6 +89,7 @@ function getADSR(){ return {
   sustain: parseFloat(document.getElementById("sustain").value)**2,
   release: parseFloat(document.getElementById("release").value)
 };}
+
 function getFilterADSR(){ return {
   attack: parseFloat(document.getElementById("fAttack").value),
   decay: parseFloat(document.getElementById("fDecay").value),
@@ -93,11 +97,11 @@ function getFilterADSR(){ return {
   release: parseFloat(document.getElementById("fRelease").value)
 };}
 
-const activeNotes={};
-const sustainedNotes={};
-const heldNotes={};
-let sustainPedal=false;
-const masterGain=audioCtx.createGain();
+const activeNotes = {};
+const sustainedNotes = {};
+const heldNotes = {};
+let sustainPedal = false;
+const masterGain = audioCtx.createGain();
 masterGain.connect(audioCtx.destination);
 
 function getWaveform(){ return document.getElementById("waveform").value; }
@@ -112,11 +116,16 @@ function handleMIDIMessage(msg){
   const [status,note,vel]=msg.data;
   const cmd=status&0xf0;
 
+  // Alle MIDI-Signale aktivieren das LED-Feedback
+  midiSignal.classList.add("active");
+  if(midiTimer) clearTimeout(midiTimer);
+  midiTimer = setTimeout(()=> midiSignal.classList.remove("active"), 100);
+
   // Sustain pedal
   if(cmd===0xB0 && note===64){
     const wasPedalDown=sustainPedal;
-    sustainPedal=vel>=64;
-    if(wasPedalDown&&!sustainPedal){
+    sustainPedal = vel>=64;
+    if(wasPedalDown && !sustainPedal){
       for(let n in sustainedNotes){
         if(!heldNotes[n]){
           sustainedNotes[n].forEach(obj=>stopNoteImmediately(n,obj));
@@ -128,11 +137,7 @@ function handleMIDIMessage(msg){
     return;
   }
 
-  // MIDI-In Anzeige
-  midiSignal.classList.add("active");
-  if(midiTimer) clearTimeout(midiTimer);
-  midiTimer = setTimeout(()=>midiSignal.classList.remove("active"),100);
-
+  // Note on/off
   if(cmd===0x90 && vel>0){ heldNotes[note]=true; playNote(note, vel); }
   else if(cmd===0x80 || (cmd===0x90 && vel===0)){ delete heldNotes[note]; stopNote(note); }
 }
@@ -140,21 +145,21 @@ function handleMIDIMessage(msg){
 function noteToFreq(note){ return 440*Math.pow(2,(note-69)/12); }
 
 function updateMasterGain(){
-  let numNotes=0;
+  let numNotes = 0;
   for(let arr of Object.values(activeNotes)) numNotes+=arr.length;
   for(let arr of Object.values(sustainedNotes)) numNotes+=arr.length;
   if(numNotes===0) return;
-  let base=1/Math.sqrt(numNotes);
-  const wf=getWaveform();
-  if(wf==="sawtooth"||wf==="square") base*=0.6;
-  masterGain.gain.setValueAtTime(base,audioCtx.currentTime);
+  let base = 1/Math.sqrt(numNotes);
+  const wf = getWaveform();
+  if(wf==="sawtooth"||wf==="square") base *= 0.6;
+  masterGain.gain.setValueAtTime(base, audioCtx.currentTime);
 }
 
 function playNote(note, velocity){
-  const freq=noteToFreq(note);
-  const gainNode=audioCtx.createGain();
-  const filterNode=audioCtx.createBiquadFilter();
-  filterNode.type="lowpass";
+  const freq = noteToFreq(note);
+  const gainNode = audioCtx.createGain();
+  const filterNode = audioCtx.createBiquadFilter();
+  filterNode.type = "lowpass";
   filterNode.frequency.setValueAtTime(parseFloat(document.getElementById("fFreq").value), audioCtx.currentTime);
   filterNode.Q.setValueAtTime(parseFloat(document.getElementById("fRes").value), audioCtx.currentTime);
 
@@ -163,64 +168,86 @@ function playNote(note, velocity){
     const buffer=audioCtx.createBuffer(1,audioCtx.sampleRate*2,audioCtx.sampleRate);
     const data=buffer.getChannelData(0);
     for(let i=0;i<data.length;i++) data[i]=Math.random()*2-1;
-    osc=audioCtx.createBufferSource(); osc.buffer=buffer; osc.loop=true;
-  } else { osc=audioCtx.createOscillator(); osc.type=getWaveform(); osc.frequency.setValueAtTime(freq,audioCtx.currentTime); }
+    osc = audioCtx.createBufferSource(); osc.buffer = buffer; osc.loop = true;
+  } else {
+    osc = audioCtx.createOscillator(); osc.type = getWaveform(); osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+  }
 
   osc.connect(filterNode); filterNode.connect(gainNode); gainNode.connect(masterGain); osc.start();
 
-  const adsr=getADSR(); const fADSR=getFilterADSR();
-  const now=audioCtx.currentTime; const peak=velocity/127;
+  const adsr = getADSR(); 
+  const fADSR = getFilterADSR();
+  const now = audioCtx.currentTime; 
+  const peak = velocity/127;
 
   gainNode.gain.cancelScheduledValues(now);
-  gainNode.gain.setValueAtTime(0,now);
-  gainNode.gain.linearRampToValueAtTime(peak,now+adsr.attack);
-  gainNode.gain.linearRampToValueAtTime(peak*adsr.sustain,now+adsr.attack+adsr.decay);
+  gainNode.gain.setValueAtTime(0, now);
+  gainNode.gain.linearRampToValueAtTime(peak, now + adsr.attack);
+  gainNode.gain.linearRampToValueAtTime(peak * adsr.sustain, now + adsr.attack + adsr.decay);
 
   filterNode.frequency.cancelScheduledValues(now);
   filterNode.frequency.setValueAtTime(filterNode.frequency.value, now);
-  filterNode.frequency.linearRampToValueAtTime(parseFloat(document.getElementById("fFreq").value)*fADSR.sustain, now+fADSR.attack+fADSR.decay);
+  filterNode.frequency.linearRampToValueAtTime(parseFloat(document.getElementById("fFreq").value) * fADSR.sustain, now + fADSR.attack + fADSR.decay);
 
-  if(!activeNotes[note]) activeNotes[note]=[];
-  activeNotes[note].push({oscillator:osc,gainNode,filterNode,adsr,velocity});
+  if(!activeNotes[note]) activeNotes[note] = [];
+  activeNotes[note].push({oscillator: osc, gainNode, filterNode, adsr, velocity});
   updateMasterGain();
 }
 
 function stopNote(note){
-  const objs=activeNotes[note]; if(!objs) return;
-  for(const obj of objs){ if(sustainPedal){ if(!sustainedNotes[note]) sustainedNotes[note]=[]; sustainedNotes[note].push(obj); } else stopNoteImmediately(note,obj);}
-  delete activeNotes[note]; updateMasterGain();
+  const objs = activeNotes[note]; if(!objs) return;
+  for(const obj of objs){ 
+    if(sustainPedal){ 
+      if(!sustainedNotes[note]) sustainedNotes[note] = []; 
+      sustainedNotes[note].push(obj); 
+    } else stopNoteImmediately(note,obj);
+  }
+  delete activeNotes[note]; 
 }
 
 function stopNoteImmediately(note,obj){
-  const now=audioCtx.currentTime;
-  const fADSR=getFilterADSR();
+  const now = audioCtx.currentTime;
+  const gainStart = obj.gainNode.gain.value;
+  const releaseTime = obj.adsr.release;
+  const freqStart = obj.filterNode.frequency.value;
+  const fReleaseTime = getFilterADSR().release;
+
+  // Release Amplitude
   obj.gainNode.gain.cancelScheduledValues(now);
-  obj.gainNode.gain.setValueAtTime(obj.gainNode.gain.value,now);
-  obj.gainNode.gain.linearRampToValueAtTime(0,now+obj.adsr.release);
+  obj.gainNode.gain.setValueAtTime(gainStart, now);
+  obj.gainNode.gain.linearRampToValueAtTime(0, now + releaseTime);
+
+  // Release Filter
   obj.filterNode.frequency.cancelScheduledValues(now);
-  obj.filterNode.frequency.setValueAtTime(obj.filterNode.frequency.value,now);
-  obj.filterNode.frequency.linearRampToValueAtTime(50,now+fADSR.release);
-  obj.oscillator.stop(now+obj.adsr.release+0.01);
+  obj.filterNode.frequency.setValueAtTime(freqStart, now);
+  obj.filterNode.frequency.linearRampToValueAtTime(50, now + fReleaseTime);
+
+  const stopDelay = Math.max(releaseTime, fReleaseTime) + 0.01;
+  obj.oscillator.stop(now + stopDelay);
+
+  setTimeout(()=> updateMasterGain(), stopDelay*1000);
 }
 
 // Live slider updates
 ["attack","decay","sustain","release","fAttack","fDecay","fSustain","fRelease"].forEach(id=>{
-  document.getElementById(id).addEventListener("input",()=>{ const now=audioCtx.currentTime; const allNotes=[...Object.values(activeNotes).flat(),...Object.values(sustainedNotes).flat()];
-    allNotes.forEach(n=>{ 
-      const aSustain=parseFloat(document.getElementById("sustain").value)**2;
+  document.getElementById(id).addEventListener("input", ()=>{
+    const now = audioCtx.currentTime;
+    const allNotes = [...Object.values(activeNotes).flat(), ...Object.values(sustainedNotes).flat()];
+    allNotes.forEach(n=>{
+      const aSustain = parseFloat(document.getElementById("sustain").value)**2;
       n.gainNode.gain.cancelScheduledValues(now);
-      n.gainNode.gain.setValueAtTime(n.velocity/127*aSustain, now); 
-      const fSustain=parseFloat(document.getElementById("fSustain").value)**2;
+      n.gainNode.gain.setValueAtTime(n.velocity/127 * aSustain, now); 
+      const fSustain = parseFloat(document.getElementById("fSustain").value)**2;
       n.filterNode.frequency.cancelScheduledValues(now);
-      n.filterNode.frequency.setValueAtTime(parseFloat(document.getElementById("fFreq").value)*fSustain, now);
+      n.filterNode.frequency.setValueAtTime(parseFloat(document.getElementById("fFreq").value) * fSustain, now);
     });
   });
 });
 
 ["fFreq","fRes"].forEach(id=>{
-  document.getElementById(id).addEventListener("input",()=>{
-    const now=audioCtx.currentTime;
-    const allNotes=[...Object.values(activeNotes).flat(),...Object.values(sustainedNotes).flat()];
+  document.getElementById(id).addEventListener("input", ()=>{
+    const now = audioCtx.currentTime;
+    const allNotes = [...Object.values(activeNotes).flat(), ...Object.values(sustainedNotes).flat()];
     allNotes.forEach(n=>{
       n.filterNode.frequency.setValueAtTime(parseFloat(document.getElementById("fFreq").value), now);
       n.filterNode.Q.setValueAtTime(parseFloat(document.getElementById("fRes").value), now);
