@@ -1,35 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
 <head>
 <meta charset="UTF-8">
 <title>Joey’s Synth</title>
 <style>
-  :root{--text:#000;--light:#ccc;--dark:#999;--spacer:8px;}
-  /* RESET */*{user-select:none;text-underline-offset:2px;text-decoration-thickness:.05em;text-decoration-skip-ink:none;border:0;font-kerning:normal;outline:none;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}
-  html{height:100%;font-size:13px;}
-  body{line-height:1;font-family:monospace;line-height:1.3em;padding:2rem;}
-  h1{font-size:2em;line-height:1em;/* font-family:sans-serif;font-weight:bold;letter-spacing:.05em;text-transform:uppercase; *//* transform:scaleX(1.2);transform-origin:top left; */}
-  h2{margin-bottom:var(--spacer);}
-  ul{padding-left:1em;}
-  hr{margin:1em 0;}
-  hr.line{margin:3em 0;border-top:2px solid #bbb;}
-  /* SYNTH */
-  .button,button,select,input{display:inline-block;appearance:none;background:var(--light);line-height:1.5em;cursor:pointer;font-family:inherit;}
-  .button,button,select{padding:0 var(--spacer);}
-  button:active{background:var(--dark);}
-  select{padding-right:calc(4*var(--spacer));background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24'%3E%3Cpath d='M7 10l5 5 5-5z' fill='%23000'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right .5em center;background-size:calc(2*var(--spacer));}
-  label{margin-right:.5rem;}
-  input[type=range]{width:100px;height:.6em;cursor:grab;}
-  input[type=range]::-webkit-slider-runnable-track{}
-  input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;height:.6em;width:.6em;background:#000;}
-  /* SPECIAL */
-  #signalMidiIn{cursor:default;}#signalMidiIn.active{color:#0f0;}
+:root{--text:#000;--light:#ccc;--dark:#999;--spacer:8px;}
+*{user-select:none;text-underline-offset:2px;text-decoration-thickness:.05em;text-decoration-skip-ink:none;border:0;font-kerning:normal;outline:none;}
+html,body,div,span,h1,h2,ul,li,label,input,select,button{margin:0;padding:0;font:inherit;color:inherit;background:transparent;}
+html{height:100%;font-size:13px;}
+body{line-height:1;font-family:monospace;line-height:1.3em;padding:2rem;}
+h1{font-size:2em;margin-bottom:0.5em;}
+h2{margin-bottom:8px;}
+ul{padding-left:1em;}
+hr{margin:1em 0;}
+.button,button,select,input{display:inline-block;appearance:none;background:var(--light);line-height:1.5em;cursor:pointer;font-family:inherit;}
+.button,button,select{padding:0 var(--spacer);}
+button:active{background:var(--dark);}
+select{padding-right:calc(4*var(--spacer));background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24'%3E%3Cpath d='M7 10l5 5 5-5z' fill='%23000'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right .5em center;background-size:calc(2*var(--spacer));}
+label{margin-right:.5rem;width:40px;display:inline-block;}
+input[type=range]{width:100px;height:.6em;cursor:grab;}
+input[type=range]:active{cursor:grabbing;}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;height:.6em;width:.6em;background:#000;}
+#signalMidiIn{cursor:default;}#signalMidiIn.active{background:#0f0;}
 </style>
 </head>
 <body>
 
-
-<div style="padding:.5em .8em;background:#0f6;width:460px;max-width:100%;box-spacing:border-box;">
+<div style="padding:.5em .8em;background:#0f6;width:460px;max-width:100%;box-sizing:border-box;">
   Please connect your USB keyboard and allow access in Chrome.
   Other browsers do not fully support WebMIDI.
 </div>
@@ -38,10 +35,13 @@
 <hr>
 <button id="startButton">Init</button>
 <span class="button" id="signalMidiIn">MIDI</span>
+<hr>
 <select id="waveform">
   <option value="sine">Sine</option>
   <option value="sawtooth">Saw</option>
   <option value="square">Square</option>
+  <option value="triangle">Triangle</option>
+  <option value="noise">Noise</option>
 </select>
 <hr>
 <h2>Amplitude</h2>
@@ -55,18 +55,14 @@
 <div class="slider-container"><label for="fDecay">D</label><input type="range" id="fDecay" min="0" max="2" step="0.01" value="0"></div>
 <div class="slider-container"><label for="fSustain">S</label><input type="range" id="fSustain" min="0" max="1" step="0.01" value="1"></div>
 <div class="slider-container"><label for="fRelease">R</label><input type="range" id="fRelease" min="0" max="3" step="0.01" value="0"></div>
+<div class="slider-container"><label for="fFreq">Freq</label><input type="range" id="fFreq" min="50" max="15000" step="1" value="15000"></div>
+<div class="slider-container"><label for="fRes">Res</label><input type="range" id="fRes" min="0" max="30" step="0.1" value="0"></div>
 <hr>
 <hr class="line">
-<hr>
-<h2>Implement functions later:</h2>
+<h2>To do:</h2>
 <ul>
-  <li>Add wave types: triangle, noise</li>
-  <li>Change sound while sliding sliders</li>
-  <li>Light for MIDI in signal</li>
   <li>Show CPU utilization</li>
   <li>Show output meter</li>
-  <li>Add frequency and resonance sliders to filter</li>
-  <li>Make some sliders logarithmic (sustain, ...)</li>
   <li>Laptop keyboard support</li>
   <li>FM synthesis</li>
   <li>Add 808 drum computer</li>
@@ -74,43 +70,34 @@
   <li>CSS sliders <a href="https://codepen.io/ShadowShahriar/pen/zYPPYrQ">https://codepen.io/ShadowShahriar/pen/zYPPYrQ</a></li>
 </ul> 
 
-
-
 <script>
 const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 const startButton = document.getElementById("startButton");
-startButton.addEventListener("click", () => { 
-  if(audioCtx.state === "suspended") {
-    audioCtx.resume().then(() => {
-      console.log("AudioContext gestartet oder wieder aktiviert");
-    });
-  }
+const midiSignal = document.getElementById("signalMidiIn");
+let midiTimer;
+
+startButton.addEventListener("click", ()=>{ 
+  if(audioCtx.state==="suspended") audioCtx.resume().then(()=>console.log("AudioContext ready")); 
 });
 
-function getADSR() {
-  return {
-    attack: parseFloat(document.getElementById("attack").value),
-    decay: parseFloat(document.getElementById("decay").value),
-    sustain: parseFloat(document.getElementById("sustain").value),
-    release: parseFloat(document.getElementById("release").value)
-  };
-}
+function getADSR(){ return {
+  attack: parseFloat(document.getElementById("attack").value),
+  decay: parseFloat(document.getElementById("decay").value),
+  sustain: parseFloat(document.getElementById("sustain").value)**2,
+  release: parseFloat(document.getElementById("release").value)
+};}
+function getFilterADSR(){ return {
+  attack: parseFloat(document.getElementById("fAttack").value),
+  decay: parseFloat(document.getElementById("fDecay").value),
+  sustain: parseFloat(document.getElementById("fSustain").value)**2,
+  release: parseFloat(document.getElementById("fRelease").value)
+};}
 
-function getFilterADSR() {
-  return {
-    attack: parseFloat(document.getElementById("fAttack").value),
-    decay: parseFloat(document.getElementById("fDecay").value),
-    sustain: parseFloat(document.getElementById("fSustain").value),
-    release: parseFloat(document.getElementById("fRelease").value)
-  };
-}
-
-const activeNotes = {};      // pro Note Array von Instanzen
-const sustainedNotes = {};   // pro Note Array von Instanzen
-const heldNotes = {};
-let sustainPedal = false;
-
-const masterGain = audioCtx.createGain();
+const activeNotes={};
+const sustainedNotes={};
+const heldNotes={};
+let sustainPedal=false;
+const masterGain=audioCtx.createGain();
 masterGain.connect(audioCtx.destination);
 
 function getWaveform(){ return document.getElementById("waveform").value; }
@@ -119,119 +106,127 @@ if(navigator.requestMIDIAccess){
   navigator.requestMIDIAccess().then(midi=>{
     for(let input of midi.inputs.values()) input.onmidimessage=handleMIDIMessage;
   }, ()=>alert("Keine MIDI-Geräte gefunden"));
-}else alert("WebMIDI nicht unterstützt!");
+}else alert("WebMIDI not supported!");
 
 function handleMIDIMessage(msg){
-  const [status, note, vel] = msg.data;
-  const cmd = status & 0xf0;
+  const [status,note,vel]=msg.data;
+  const cmd=status&0xf0;
 
-  // Sustain-Pedal (CC64)
-  if(cmd === 0xB0 && note === 64) { 
-    const wasPedalDown = sustainPedal;
-    sustainPedal = vel >= 64;
-
-    if(wasPedalDown && !sustainPedal){
-        for(let n in sustainedNotes){
-            if(!heldNotes[n]){
-                sustainedNotes[n].forEach(obj => stopNoteImmediately(n, obj));
-                delete sustainedNotes[n];
-            }
+  // Sustain pedal
+  if(cmd===0xB0 && note===64){
+    const wasPedalDown=sustainPedal;
+    sustainPedal=vel>=64;
+    if(wasPedalDown&&!sustainPedal){
+      for(let n in sustainedNotes){
+        if(!heldNotes[n]){
+          sustainedNotes[n].forEach(obj=>stopNoteImmediately(n,obj));
+          delete sustainedNotes[n];
         }
-        updateMasterGain();
+      }
+      updateMasterGain();
     }
     return;
   }
 
-  if(cmd === 0x90 && vel>0) {
-    heldNotes[note] = true;
-    playNote(note, vel);
-  }
-  else if(cmd === 0x80 || (cmd===0x90 && vel===0)) {
-    delete heldNotes[note];
-    stopNote(note);
-  }
+  // MIDI-In Anzeige
+  midiSignal.classList.add("active");
+  if(midiTimer) clearTimeout(midiTimer);
+  midiTimer = setTimeout(()=>midiSignal.classList.remove("active"),100);
+
+  if(cmd===0x90 && vel>0){ heldNotes[note]=true; playNote(note, vel); }
+  else if(cmd===0x80 || (cmd===0x90 && vel===0)){ delete heldNotes[note]; stopNote(note); }
 }
 
 function noteToFreq(note){ return 440*Math.pow(2,(note-69)/12); }
 
 function updateMasterGain(){
-  let numNotes = 0;
-  for(let arr of Object.values(activeNotes)) numNotes += arr.length;
-  for(let arr of Object.values(sustainedNotes)) numNotes += arr.length;
+  let numNotes=0;
+  for(let arr of Object.values(activeNotes)) numNotes+=arr.length;
+  for(let arr of Object.values(sustainedNotes)) numNotes+=arr.length;
   if(numNotes===0) return;
-  let base = 1/Math.sqrt(numNotes);
-  const wf = getWaveform();
+  let base=1/Math.sqrt(numNotes);
+  const wf=getWaveform();
   if(wf==="sawtooth"||wf==="square") base*=0.6;
   masterGain.gain.setValueAtTime(base,audioCtx.currentTime);
 }
 
 function playNote(note, velocity){
-  const freq = noteToFreq(note);
-  const osc = audioCtx.createOscillator();
-  const gainNode = audioCtx.createGain();
-  const filterNode = audioCtx.createBiquadFilter();
-  filterNode.type = "lowpass";
+  const freq=noteToFreq(note);
+  const gainNode=audioCtx.createGain();
+  const filterNode=audioCtx.createBiquadFilter();
+  filterNode.type="lowpass";
+  filterNode.frequency.setValueAtTime(parseFloat(document.getElementById("fFreq").value), audioCtx.currentTime);
+  filterNode.Q.setValueAtTime(parseFloat(document.getElementById("fRes").value), audioCtx.currentTime);
 
-  osc.connect(filterNode);
-  filterNode.connect(gainNode);
-  gainNode.connect(masterGain);
+  let osc;
+  if(getWaveform()==="noise"){
+    const buffer=audioCtx.createBuffer(1,audioCtx.sampleRate*2,audioCtx.sampleRate);
+    const data=buffer.getChannelData(0);
+    for(let i=0;i<data.length;i++) data[i]=Math.random()*2-1;
+    osc=audioCtx.createBufferSource(); osc.buffer=buffer; osc.loop=true;
+  } else { osc=audioCtx.createOscillator(); osc.type=getWaveform(); osc.frequency.setValueAtTime(freq,audioCtx.currentTime); }
 
-  osc.type = getWaveform();
-  osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
-  osc.start();
+  osc.connect(filterNode); filterNode.connect(gainNode); gainNode.connect(masterGain); osc.start();
 
-  const adsr = getADSR();
-  const fADSR = getFilterADSR();
-  const now = audioCtx.currentTime;
-  const peak = velocity/127;
+  const adsr=getADSR(); const fADSR=getFilterADSR();
+  const now=audioCtx.currentTime; const peak=velocity/127;
 
   gainNode.gain.cancelScheduledValues(now);
-  gainNode.gain.setValueAtTime(0, now);
-  gainNode.gain.linearRampToValueAtTime(peak, now+adsr.attack);
-  gainNode.gain.linearRampToValueAtTime(peak*adsr.sustain, now+adsr.attack+adsr.decay);
+  gainNode.gain.setValueAtTime(0,now);
+  gainNode.gain.linearRampToValueAtTime(peak,now+adsr.attack);
+  gainNode.gain.linearRampToValueAtTime(peak*adsr.sustain,now+adsr.attack+adsr.decay);
 
   filterNode.frequency.cancelScheduledValues(now);
-  filterNode.frequency.setValueAtTime(200, now);
-  filterNode.frequency.linearRampToValueAtTime(12000, now+fADSR.attack);
-  filterNode.frequency.linearRampToValueAtTime(200 + (12000-200)*fADSR.sustain, now+fADSR.attack+fADSR.decay);
+  filterNode.frequency.setValueAtTime(filterNode.frequency.value, now);
+  filterNode.frequency.linearRampToValueAtTime(parseFloat(document.getElementById("fFreq").value)*fADSR.sustain, now+fADSR.attack+fADSR.decay);
 
-  if(!activeNotes[note]) activeNotes[note] = [];
-  activeNotes[note].push({ oscillator: osc, gainNode, filterNode, adsr, velocity });
-
+  if(!activeNotes[note]) activeNotes[note]=[];
+  activeNotes[note].push({oscillator:osc,gainNode,filterNode,adsr,velocity});
   updateMasterGain();
 }
 
 function stopNote(note){
-  const objs = activeNotes[note];
-  if(!objs) return;
-
-  for(const obj of objs){
-    if(sustainPedal){
-      if(!sustainedNotes[note]) sustainedNotes[note] = [];
-      sustainedNotes[note].push(obj);
-    } else {
-      stopNoteImmediately(note, obj);
-    }
-  }
-
-  delete activeNotes[note];
-  updateMasterGain();
+  const objs=activeNotes[note]; if(!objs) return;
+  for(const obj of objs){ if(sustainPedal){ if(!sustainedNotes[note]) sustainedNotes[note]=[]; sustainedNotes[note].push(obj); } else stopNoteImmediately(note,obj);}
+  delete activeNotes[note]; updateMasterGain();
 }
 
-function stopNoteImmediately(note, obj){
-  const now = audioCtx.currentTime;
-  const fADSR = getFilterADSR();
-
+function stopNoteImmediately(note,obj){
+  const now=audioCtx.currentTime;
+  const fADSR=getFilterADSR();
   obj.gainNode.gain.cancelScheduledValues(now);
-  obj.gainNode.gain.setValueAtTime(obj.gainNode.gain.value, now);
-  obj.gainNode.gain.linearRampToValueAtTime(0, now+obj.adsr.release);
-
+  obj.gainNode.gain.setValueAtTime(obj.gainNode.gain.value,now);
+  obj.gainNode.gain.linearRampToValueAtTime(0,now+obj.adsr.release);
   obj.filterNode.frequency.cancelScheduledValues(now);
-  obj.filterNode.frequency.setValueAtTime(obj.filterNode.frequency.value, now);
-  obj.filterNode.frequency.linearRampToValueAtTime(200, now+fADSR.release);
-
+  obj.filterNode.frequency.setValueAtTime(obj.filterNode.frequency.value,now);
+  obj.filterNode.frequency.linearRampToValueAtTime(50,now+fADSR.release);
   obj.oscillator.stop(now+obj.adsr.release+0.01);
 }
+
+// Live slider updates
+["attack","decay","sustain","release","fAttack","fDecay","fSustain","fRelease"].forEach(id=>{
+  document.getElementById(id).addEventListener("input",()=>{ const now=audioCtx.currentTime; const allNotes=[...Object.values(activeNotes).flat(),...Object.values(sustainedNotes).flat()];
+    allNotes.forEach(n=>{ 
+      const aSustain=parseFloat(document.getElementById("sustain").value)**2;
+      n.gainNode.gain.cancelScheduledValues(now);
+      n.gainNode.gain.setValueAtTime(n.velocity/127*aSustain, now); 
+      const fSustain=parseFloat(document.getElementById("fSustain").value)**2;
+      n.filterNode.frequency.cancelScheduledValues(now);
+      n.filterNode.frequency.setValueAtTime(parseFloat(document.getElementById("fFreq").value)*fSustain, now);
+    });
+  });
+});
+
+["fFreq","fRes"].forEach(id=>{
+  document.getElementById(id).addEventListener("input",()=>{
+    const now=audioCtx.currentTime;
+    const allNotes=[...Object.values(activeNotes).flat(),...Object.values(sustainedNotes).flat()];
+    allNotes.forEach(n=>{
+      n.filterNode.frequency.setValueAtTime(parseFloat(document.getElementById("fFreq").value), now);
+      n.filterNode.Q.setValueAtTime(parseFloat(document.getElementById("fRes").value), now);
+    });
+  });
+});
 </script>
 </body>
 </html>
