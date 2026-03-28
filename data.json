@@ -1,11 +1,60 @@
 {
-  "timestamp": "27.03. 20:42",
+  "timestamp": "28.03. 8:44",
   "weatherTempCelsius": 4,
-  "githubLastCommit": "March 27, 2026",
+  "githubLastCommit": "March 28, 2026",
   "steamStatus": "online",
   "pubg": {
     "name": "joeyws2",
     "lastMatches": [
+      {
+        "matchStart": "27.03. 21:13",
+        "teamSize": "Squad",
+        "teamMates": [
+          "TarerPanda",
+          "Wilhelmskoog"
+        ],
+        "perspective": "TPP",
+        "placement": 6,
+        "map": "Erangel",
+        "survivalTime": "19:59",
+        "distance": "7.1",
+        "kills": 2,
+        "assists": 0,
+        "damage": 283,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.03.27.21.f634ac79-3b2e-4c41-87f0-94a7aa36136b"
+      },
+      {
+        "matchStart": "27.03. 20:48",
+        "teamSize": "Squad",
+        "teamMates": [],
+        "perspective": "TPP",
+        "placement": 2,
+        "map": "Erangel",
+        "survivalTime": "23:58",
+        "distance": "6.2",
+        "kills": 2,
+        "assists": 0,
+        "damage": 151,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.03.27.20.22af401f-84a0-4f00-9397-5e3da6395fac"
+      },
+      {
+        "matchStart": "27.03. 20:23",
+        "teamSize": "Squad",
+        "teamMates": [
+          "Husqvarna2013",
+          "h4rdc0d3r",
+          "Tomi5800"
+        ],
+        "perspective": "TPP",
+        "placement": 4,
+        "map": "Erangel",
+        "survivalTime": "18:55",
+        "distance": "6.8",
+        "kills": 4,
+        "assists": 0,
+        "damage": 406,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.03.27.20.49057f51-e789-45a5-b9d8-d777262cdf88"
+      },
       {
         "matchStart": "26.03. 19:14",
         "teamSize": "Squad",
@@ -62,8 +111,8 @@
         "matchStart": "26.03. 17:58",
         "teamSize": "Squad",
         "teamMates": [
-          "Vorby25",
           "KENANACCURACY",
+          "Vorby25",
           "EYLAX"
         ],
         "perspective": "TPP",
@@ -128,60 +177,6 @@
         "assists": 2,
         "damage": 575,
         "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.squad.eu.2026.03.25.19.15924d5d-e3d8-4e9f-8dfc-5df03529cc12"
-      },
-      {
-        "matchStart": "25.03. 19:28",
-        "teamSize": "Squad",
-        "teamMates": [
-          "KingZurenson",
-          "Flopsibert",
-          "QWOLEXX"
-        ],
-        "perspective": "FPP",
-        "placement": 17,
-        "map": "Rondo",
-        "survivalTime": "13:55",
-        "distance": "7.2",
-        "kills": 1,
-        "assists": 1,
-        "damage": 140,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.squad-fpp.eu.2026.03.25.19.4a15d497-c196-4051-ba2d-3ceb76d0fe68"
-      },
-      {
-        "matchStart": "25.03. 19:00",
-        "teamSize": "Squad",
-        "teamMates": [
-          "KingZurenson",
-          "Flopsibert",
-          "Cannasutra"
-        ],
-        "perspective": "FPP",
-        "placement": 2,
-        "map": "Rondo",
-        "survivalTime": "22:33",
-        "distance": "6.8",
-        "kills": 2,
-        "assists": 3,
-        "damage": 450,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.squad-fpp.eu.2026.03.25.19.7bce46ee-792c-44b0-8b67-9fd7c77aa2c3"
-      },
-      {
-        "matchStart": "24.03. 20:20",
-        "teamSize": "Squad",
-        "teamMates": [
-          "WeCoyote",
-          "KingZurenson",
-          "Flopsibert"
-        ],
-        "perspective": "FPP",
-        "placement": 2,
-        "map": "Erangel",
-        "survivalTime": "21:26",
-        "distance": "7.4",
-        "kills": 0,
-        "assists": 0,
-        "damage": 0,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.squad-fpp.eu.2026.03.24.20.4c088132-350a-461e-8acc-c3d2e686a1be"
       }
     ]
   }
