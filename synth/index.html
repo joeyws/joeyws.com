@@ -1,51 +1,78 @@
 <!DOCTYPE html>
-<html lang="de">
+<html>
 <head>
 <meta charset="UTF-8">
-<title>Joey's Synth</title>
+<title>Joey’s Synth</title>
 <style>
-  /* RESET */
-  *{text-underline-offset:2px;text-decoration-thickness:.05em;text-decoration-skip-ink:none;border:0;font-kerning:normal;outline:none;}
-  html{height:100%;}
-  html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}
-  body{line-height:1;font-size:13px;font-family:monospace;line-height:1.3em;padding:2rem;}
-  table{border-collapse:collapse;border-spacing:0;}
-  button,select,input{appearance:none;line-height:1.2em;cursor:pointer;}
-  button,select{background:#ccc;}
-  label{margin-right:.5rem;}
-  input[type=range]{width:300px;height:.8em;background:#ddd;}
-  input[type=range]::-webkit-slider-thumb{/* appearance:none; */border:1px solid red;height:1em;border-radius:0;}
+  :root{--text:#000;--light:#ccc;--spacer:8px;}
+  /* RESET */*{text-underline-offset:2px;text-decoration-thickness:.05em;text-decoration-skip-ink:none;border:0;font-kerning:normal;outline:none;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}
+  html{height:100%;font-size:13px;}
+  body{line-height:1;font-family:monospace;line-height:1.3em;padding:2rem;}
+  h1{font-size:2em;line-height:1em;/* font-family:sans-serif;letter-spacing:.03em;text-transform:uppercase; *//* transform:scaleX(.67); */}
+  h2{margin-bottom:var(--spacer);}
+  ul{padding-left:1em;}
   hr{margin:1em 0;}
+  hr.line{border-top:1px solid var(--text);}
+  /* SYNTH */
+  button,select,input{appearance:none;background:var(--light);line-height:1.5em;cursor:pointer;font-family:inherit;}
+  button,select{padding:0 var(--spacer);}
+  select{padding-right:calc(4*var(--spacer));background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24'%3E%3Cpath d='M7 10l5 5 5-5z' fill='%23000'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right .5em center;background-size:calc(2*var(--spacer));}
+  button#midiInSignal{/* color:green; */cursor:default;}button#midiInSignal.active{color:#0f0;}
+  label{margin-right:.5rem;}
+  input[type=range]{width:100px;height:.6em;}
+  input[type=range]::-webkit-slider-runnable-track{}
+  input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;height:.6em;width:.6em;background:#000;}
 </style>
 </head>
 <body>
 
-<h1>Joey's Synth</h1>
 
+Please connect your USB keyboard and allow access in Chrome. Press Init.<br>
+Use Chrome. Other browsers do not fully support WebMIDI.
 <hr>
-
+<hr class="line">
+<hr>
+<h1>Joey’s Synth</h1>
+<hr>
+<button id="midiInSignal">Signal</button>
 <button id="startButton">Init</button>
 <select id="waveform">
   <option value="sine">Sine</option>
   <option value="sawtooth">Saw</option>
   <option value="square">Square</option>
 </select>
-
 <hr>
-
 <h2>Volume</h2>
 <div class="slider-container"><label for="attack">A</label><input type="range" id="attack" min="0" max="2" step="0.01" value="0"></div>
 <div class="slider-container"><label for="decay">D</label><input type="range" id="decay" min="0" max="2" step="0.01" value="0"></div>
 <div class="slider-container"><label for="sustain">S</label><input type="range" id="sustain" min="0" max="1" step="0.01" value="1"></div>
 <div class="slider-container"><label for="release">R</label><input type="range" id="release" min="0" max="3" step="0.01" value="0"></div>
-
 <hr>
-
 <h2>Filter</h2>
 <div class="slider-container"><label for="fAttack">A</label><input type="range" id="fAttack" min="0" max="2" step="0.01" value="0"></div>
 <div class="slider-container"><label for="fDecay">D</label><input type="range" id="fDecay" min="0" max="2" step="0.01" value="0"></div>
 <div class="slider-container"><label for="fSustain">S</label><input type="range" id="fSustain" min="0" max="1" step="0.01" value="1"></div>
 <div class="slider-container"><label for="fRelease">R</label><input type="range" id="fRelease" min="0" max="3" step="0.01" value="0"></div>
+<hr>
+<hr class="line">
+<hr>
+<h2>Add functions:</h2>
+<ul>
+  <li>Add wave types: triangle, noise</li>
+  <li>Change sound while sliding sliders</li>
+  <li>Light for MIDI in signal</li>
+  <li>Show CPU utilization</li>
+  <li>Show output meter</li>
+  <li>Add frequency and resonance slider to filter</li>
+  <li>Make some sliders logarithmic</li>
+  <li>Laptop keyboard support</li>
+  <li>FM synthesis</li>
+  <li>Add 808 drum computer</li>
+  <li>Effects: chorus, reverb, ...</li>
+  <li>CSS sliders <a href="https://codepen.io/ShadowShahriar/pen/zYPPYrQ">https://codepen.io/ShadowShahriar/pen/zYPPYrQ</a></li>
+</ul> 
+
+
 
 <script>
 const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
