@@ -1,5 +1,5 @@
 {
-  "timestamp": "28.03. 4:56",
+  "timestamp": "28.03. 6:00",
   "weatherTempCelsius": 0,
   "githubLastCommit": "March 28, 2026",
   "steamStatus": "online",
@@ -59,8 +59,8 @@
         "matchStart": "26.03. 19:14",
         "teamSize": "Squad",
         "teamMates": [
-          "KingZurenson",
-          "Flopsibert"
+          "Flopsibert",
+          "KingZurenson"
         ],
         "perspective": "FPP",
         "placement": 5,
@@ -94,8 +94,8 @@
         "matchStart": "26.03. 18:23",
         "teamSize": "Squad",
         "teamMates": [
-          "Flopsibert",
-          "KingZurenson"
+          "KingZurenson",
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 14,
@@ -111,9 +111,9 @@
         "matchStart": "26.03. 17:58",
         "teamSize": "Squad",
         "teamMates": [
+          "Vorby25",
           "KENANACCURACY",
-          "EYLAX",
-          "Vorby25"
+          "EYLAX"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -146,9 +146,9 @@
         "matchStart": "25.03. 20:20",
         "teamSize": "Squad",
         "teamMates": [
-          "Watislov",
           "Ignatios2004",
-          "sergey_2024"
+          "sergey_2024",
+          "Watislov"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -164,8 +164,8 @@
         "matchStart": "25.03. 19:45",
         "teamSize": "Squad",
         "teamMates": [
-          "Vlad_VORON",
           "Femki_TOp",
+          "Vlad_VORON",
           "abu_hadaev"
         ],
         "perspective": "TPP",
