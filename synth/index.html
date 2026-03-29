@@ -31,7 +31,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;height:.6em;widt
 #signalMidiIn{cursor:default;}
 #signalMidiIn.active{background:#0f0;}
 /* PIANO */
-#piano{position:relative;width:100%;height:auto;margin-left:1px;}
+#piano{position:relative;width:calc(100% - 2px);height:auto;margin-left:1px;cursor:pointer;}
 .white-key,.black-key{outline: 1px solid var(--light);}
 .white-key{display:inline-block;position:relative;z-index:1;background:white;box-sizing:border-box;aspect-ratio:1 / 4;vertical-align:bottom;}
 .black-key{position:absolute;z-index:2;top:0;background:black;box-sizing:border-box;aspect-ratio:1 / 4;}
