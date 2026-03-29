@@ -5,19 +5,17 @@
 <title>Joey’s Synth</title>
 <style>
 :root{--text:#000;--light:#ccc;--dark:#999;--background:#fff;--spacer:8px;}
-*{text-underline-offset:2px;text-decoration-thickness:.05em;text-decoration-skip-ink:none;border:0;font-kerning:normal;outline:none;}
+/* RESET */ *{user-select:none;text-underline-offset:2px;text-decoration-thickness:.05em;text-decoration-skip-ink:none;font-kerning:normal;outline:none;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,select,textarea,button,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{box-sizing:content-box;border-radius:0;/* -webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-border-radius:0;-webkit-text-size-adjust:none;-webkit-appearance:none;font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased; */}
 ::selection{background:var(--text);color:var(--background);}
-html,body,div,span,h1,h2,ul,li,label,input,select,button{margin:0;padding:0;font:inherit;color:inherit;background:transparent;}
 html{height:100%;font-size:13px;}
 body{font-family:monospace;color:var(--text);background:var(--background);line-height:1.3em;padding:2rem;}
-h1{font-size:2em;font-family:sans-serif;font-weight:bold;transform:scaleY(.8);text-transform:uppercase;margin-bottom:0.5em;}
-h2{margin-bottom:8px;}
-ul{padding-left:1em;}
+h1{font-size:3em;font-family:sans-serif;font-weight:bold;transform:scaleY(.8);text-transform:uppercase;margin-bottom:0.5em;}
+h2{margin-bottom:8px;}/* h2::after{content:":";display:inline-block;text-decoration:none;} */
+ul{margin-left:1em;}
 hr{margin:1rem 0;}
 hr.line{/* border-top:3px solid var(--light); */margin:3em 0;}
 /* SYNTH */
-#synth,select{user-select:none;}
-#synth{background:#eee;padding:2rem;display:flex;flex-direction:column;gap:2rem;}
+#synth{background:#eee;padding:2rem;display:flex;flex-direction:column;gap:2rem;border:1px solid var(--light);box-sizing:border-box;}
 #synth>div{display:flex;gap:2em;}
 .button,button,select,input{display:inline-block;appearance:none;background:var(--light);line-height:1.5em;cursor:pointer;font-family:inherit;}
 .button,button,select{padding:0 var(--spacer);}
@@ -27,40 +25,32 @@ label{margin-right:.5rem;width:40px;display:inline-block;}
 input[type=range]{width:100px;height:.6em;cursor:grab;}
 input[type=range]:active{cursor:grabbing;}
 input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;height:.6em;width:.6em;background:var(--text);}
+input[type=range]::-moz-range-thumb{border:none;border-radius:0;height:.6em;width:.6em;background:var(--text);}
 /* SPECIAL */
 #signalMidiIn{cursor:default;}
 #signalMidiIn.active{background:#0f0;}
 /* PIANO */
-#piano{position:relative;width:calc(100% - 2px);height:auto;margin-left:1px;cursor:pointer;}
-.white-key,.black-key{outline: 1px solid var(--light);}
+#piano{position:relative;width:calc(100% - 1px);height:auto;margin-left:1px;cursor:pointer;}
+.white-key,.black-key{outline:1px solid var(--light);}
 .white-key{display:inline-block;position:relative;z-index:1;background:white;box-sizing:border-box;aspect-ratio:1 / 4;vertical-align:bottom;}
 .black-key{position:absolute;z-index:2;top:0;background:black;box-sizing:border-box;aspect-ratio:1 / 4;}
-.white-key.active,.black-key.active{background: #faa;}
+.white-key.active,.black-key.active{background: #fbb;}
 </style>
 </head>
-<body>
+<body oncontextmenu="return false;">
 
-<div style="position:absolute;top:0;right:0;padding:.5em .8em;margin-left:auto;background:#0f0;width:28em;max-width:100%;box-sizing:border-box;">
-  1) Connect your USB keyboard.<br>
-  2) Open this website in Chrome<br>
-  &nbsp; &nbsp;WebMIDI is not supported in other browsers.<br>
-  3) Allow MIDI access.<br>
-  4) Press “Init”.<br>
-  5) Start playing!
-</div>
-<hr>
-<div id="synth">
-  <h1>Joey’s Synth</h1>
+<div id="synth" oncontextmenu="">
+  <h1><img src="joeyssynth.png" style="width:300px;max-width:100%;" alt="Joey’s Synth"/></h1>
   <div>
     <div>
       <button id="startButton">Init</button>
       <span class="button" id="signalMidiIn">MIDI</span>
       <select id="waveform">
-        <option value="sine">∿ Sine</option>
-        <option value="sawtooth" selected>⩘ Saw</option>
-        <option value="square">⊓ Square</option>
-        <option value="triangle">∧ Triangle</option>
-        <option value="noise">✷ Noise</option>
+        <option value="sine">Sine</option><!-- ∿ ⩘ ⊓ ∧ ✷ -->
+        <option value="sawtooth" selected>Saw</option>
+        <option value="square">Square</option>
+        <option value="triangle">Triangle</option>
+        <option value="noise">Noise</option>
       </select>
     </div>
   </div>
@@ -85,21 +75,42 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;height:.6em;widt
 </div>
 <div id="piano"></div>
 <hr class="line">
-<h2>To do</h2>
-<ul>
-  <li>Attack/decay/release function logarithmic linear?</li>
-  <li>Fix filter decay</li>
-  <li>Fix releases gain</li>
-  <li>Add pm wave form</li>
-  <li>Double click on slider -> default value</li>
-  <li>Output meter</li>
-  <li>Add e-piano sound</li>
-  <li>Effects: chorus, reverb, ...</li>
-  <li>Laptop keyboard support</li>
-  <li>FM synthesis</li>
-  <li>Add 808 drum computer</li>
-  <li>CSS sliders <a href="https://codepen.io/ShadowShahriar/pen/zYPPYrQ">https://codepen.io/ShadowShahriar/pen/zYPPYrQ</a></li>
-</ul> 
+<div style="display:flex;gap:2rem;align-items:flex-start;">
+  <div style="padding:.5em .8em;background:#0f0;max-width:100%;box-sizing:border-box;">
+    <h2>Instructions</h2>
+    <ul>
+      <li>Connect your USB keyboard.</li>
+      <li>Open this website in Chrome.<br>WebMIDI is only fully supported in Chrome.</li>
+      <li>Allow MIDI access.</li>
+      <li>Press “Init”.</li>
+      <li>Start playing!</li>
+    </ul>
+  </div>
+  <div style="flex-grow:1;max-width:100%;box-sizing:border-box;">
+    <h2>To do</h2>
+    <ul>
+      <li>Attack/decay/release function logarithmic?</li>
+      <li>Fix filter decay</li>
+      <li>Fix filter attack when filter sustain is low</li>
+      <li>Fix releases gain</li>
+      <li>Add pulse modulation wave form with pulse width slider</li>
+      <li>Double click on slider -> default value</li>
+      <li>Output meter</li>
+      <li>Add e-piano sound</li>
+      <li>Effects: chorus, reverb, ...</li>
+      <li>Laptop keyboard support</li>
+      <li>FM synthesis</li>
+      <li>Add 808/Linn drum computer</li>
+      <li><a href="https://codepen.io/ShadowShahriar/pen/zYPPYrQ">CSS sliders</a></li>
+    </ul>
+    <hr>
+    <h2>Inspiration</h2>
+    <ul>
+      <li><a href="https://d29rinwu2hi5i3.cloudfront.net/article_media/6e1e0603-6338-40bf-96b2-f8bf560dfc0a/thackerey.jpg">Sylenth1</a></li>
+      <li><a href="https://www.softwarebox.de/media/image/7a/de/75/ableton-Live_12-Release-1.png">Ableton</a></li>
+    </ul>
+  </div>
+</div>
 
 <script>
 const piano = document.getElementById('piano');
