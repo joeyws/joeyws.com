@@ -9,7 +9,7 @@
 ::selection{background:var(--text);color:var(--background);}
 html{height:100%;font-size:13px;}
 body{font-family:monospace;color:var(--text);background:var(--background);line-height:1.3em;padding:2rem;}
-h1{font-size:3em;line-height:1em;font-family:sans-serif;font-weight:bold;transform:scaleY(.7);text-transform:uppercase;margin-bottom:0.5em;}
+h1{font-size:3em;line-height:1em;font-family:sans-serif;font-weight:bold;transform:scaleY(.7);text-transform:uppercase;}
 h2{margin-bottom:8px;}
 ul{margin-left:1em;}
 hr{margin:1rem 0;}
@@ -21,7 +21,7 @@ hr.line{margin:3em 0;}
 .button,button,select{padding:0 var(--spacer);}
 button:active{background:var(--dark);}
 select{padding-right:calc(4*var(--spacer));background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24'%3E%3Cpath d='M7 10l5 5 5-5z' fill='currentColor'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right .5em center;background-size:calc(2*var(--spacer));}
-label{margin-right:.5rem;width:40px;display:inline-block;}
+label{margin-right:.5rem;display:inline-block;}
 input[type=range]{width:100px;height:.6em;cursor:grab;}
 input[type=range]:active{cursor:grabbing;}
 input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;height:.6em;width:.6em;background:var(--text);}
@@ -56,20 +56,23 @@ input[type=range]::-moz-range-thumb{border:none;border-radius:0;height:.6em;widt
   </div>
   <div>
     <div>
-      <h2>Amplitude</h2>
+      <h2>Amplitude Env</h2>
       <div class="slider-container"><label for="attack">A</label><input type="range" id="attack" min="0" max="3" step="0.01" value="0"></div>
       <div class="slider-container"><label for="decay">D</label><input type="range" id="decay" min="0" max="3" step="0.01" value="0"></div>
       <div class="slider-container"><label for="sustain">S</label><input type="range" id="sustain" min="0" max="1" step="0.01" value="1"></div>
       <div class="slider-container"><label for="release">R</label><input type="range" id="release" min="0" max="3" step="0.01" value="0"></div>
     </div>
     <div>
-      <h2>Filter</h2>
+      <h2>Filter Env</h2>
       <div class="slider-container"><label for="fAttack">A</label><input type="range" id="fAttack" min="0" max="3" step="0.01" value=".2"></div>
       <div class="slider-container"><label for="fDecay">D</label><input type="range" id="fDecay" min="0" max="3" step="0.01" value="0"></div>
       <div class="slider-container"><label for="fSustain">S</label><input type="range" id="fSustain" min="0" max="1" step="0.01" value="1"></div>
       <div class="slider-container"><label for="fRelease">R</label><input type="range" id="fRelease" min="0" max="3" step="0.01" value="3"></div>
-      <div class="slider-container"><label for="fFreq">Freq</label><input type="range" id="fFreq" min="50" max="15000" step="1" value="15000"></div>
-      <div class="slider-container"><label for="fRes">Res</label><input type="range" id="fRes" min="0" max="30" step="0.1" value="15"></div>
+    </div>
+    <div>
+      <h2>Filter</h2>
+      <div class="slider-container"><label for="fFreq">F</label><input type="range" id="fFreq" min="50" max="15000" step="1" value="15000"></div>
+      <div class="slider-container"><label for="fRes">R</label><input type="range" id="fRes" min="0" max="30" step="0.1" value="15"></div>
     </div>
   </div>
 </div>
@@ -86,7 +89,7 @@ input[type=range]::-moz-range-thumb{border:none;border-radius:0;height:.6em;widt
       <li>Start playing!</li>
     </ul>
   </div>
-  <div style="flex-grow:1;max-width:100%;box-sizing:border-box;">
+  <div style="padding:.5em .8em;background:#ffd;flex-grow:1;max-width:100%;box-sizing:border-box;">
     <h2>To do</h2>
     <ul>
       <li>Attack/decay/release function logarithmic?</li>
