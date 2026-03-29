@@ -4,75 +4,100 @@
 <meta charset="UTF-8">
 <title>Joey’s Synth</title>
 <style>
-:root{--text:#000;--light:#ccc;--dark:#999;--spacer:8px;}
-*{user-select:none;text-underline-offset:2px;text-decoration-thickness:.05em;text-decoration-skip-ink:none;border:0;font-kerning:normal;outline:none;}
+:root{--text:#000;--light:#ccc;--dark:#999;--background:#fff;--spacer:8px;}
+*{text-underline-offset:2px;text-decoration-thickness:.05em;text-decoration-skip-ink:none;border:0;font-kerning:normal;outline:none;}
+::selection{background:var(--text);color:var(--background);}
 html,body,div,span,h1,h2,ul,li,label,input,select,button{margin:0;padding:0;font:inherit;color:inherit;background:transparent;}
 html{height:100%;font-size:13px;}
-body{line-height:1;font-family:monospace;line-height:1.3em;padding:2rem;}
-h1{font-size:2em;margin-bottom:0.5em;}
+body{font-family:monospace;color:var(--text);background:var(--background);line-height:1.3em;padding:2rem;}
+h1{font-size:2em;font-family:sans-serif;font-weight:bold;transform:scaleY(.8);text-transform:uppercase;margin-bottom:0.5em;}
 h2{margin-bottom:8px;}
 ul{padding-left:1em;}
-hr{margin:1em 0;}
-hr.line{border-top:2px solid var(--light);margin:2em 0;}
+hr{margin:1rem 0;}
+hr.line{/* border-top:3px solid var(--light); */margin:3em 0;}
 /* SYNTH */
+#synth,select{user-select:none;}
+#synth{background:#eee;padding:2rem;display:flex;flex-direction:column;gap:2rem;}
+#synth>div{display:flex;gap:2em;}
 .button,button,select,input{display:inline-block;appearance:none;background:var(--light);line-height:1.5em;cursor:pointer;font-family:inherit;}
 .button,button,select{padding:0 var(--spacer);}
 button:active{background:var(--dark);}
-select{padding-right:calc(4*var(--spacer));background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24'%3E%3Cpath d='M7 10l5 5 5-5z' fill='%23000'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right .5em center;background-size:calc(2*var(--spacer));}
+select{padding-right:calc(4*var(--spacer));background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24'%3E%3Cpath d='M7 10l5 5 5-5z' fill='currentColor'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right .5em center;background-size:calc(2*var(--spacer));}
 label{margin-right:.5rem;width:40px;display:inline-block;}
 input[type=range]{width:100px;height:.6em;cursor:grab;}
 input[type=range]:active{cursor:grabbing;}
-input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;height:.6em;width:.6em;background:#000;}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;height:.6em;width:.6em;background:var(--text);}
 /* SPECIAL */
 #signalMidiIn{cursor:default;}
 /* #signalMidiIn span{color:var(--dark);} */
 #signalMidiIn.active{background:#0f0;}
+/* PIANO */
+#piano{position:relative;width:90%;max-width:1200px;height:auto;}
+.white-key,.black-key{outline: 1px solid black;}
+.white-key{display:inline-block;position:relative;z-index:1;background:white;box-sizing:border-box;aspect-ratio:1 / 4;vertical-align:bottom;}
+.black-key{position:absolute;z-index:2;top:0;background:black;box-sizing:border-box;aspect-ratio:1 / 4;}
+.white-key:hover,.black-key:hover{background: #fcc;}
 </style>
 </head>
 <body>
 
-<div style="padding:.5em .8em;margin-left:auto;background:#0f0;width:30em;max-width:100%;box-sizing:border-box;">
-  1. Connect your USB keyboard<br>
-  2. Open this website in Chrome<br>
-  &nbsp;&nbsp; WebMIDI is not supported in other browsers<br>
-  3. Allow MIDI access<br>
-  4. Press “Init”<br>
-  5. Start playing
+<div style="position:absolute;top:0;right:0;padding:.5em .8em;margin-left:auto;background:#0f0;width:28em;max-width:100%;box-sizing:border-box;">
+  1) Connect your USB keyboard.<br>
+  2) Open this website in Chrome<br>
+  &nbsp; &nbsp;WebMIDI is not supported in other browsers.<br>
+  3) Allow MIDI access.<br>
+  4) Press “Init”.<br>
+  5) Start playing!
 </div>
 <hr>
-<h1>Joey’s Synth</h1>
-<hr>
-<button id="startButton">Init</button>
-<span class="button" id="signalMidiIn">MIDI</span>
-<select id="waveform">
-  <option value="sine">Sine</option>
-  <option value="sawtooth">Saw</option>
-  <option value="square">Square</option>
-  <option value="triangle">Triangle</option>
-  <option value="noise">Noise</option>
-</select>
-<hr>
-<h2>Amplitude</h2>
-<div class="slider-container"><label for="attack">A</label><input type="range" id="attack" min="0" max="2" step="0.01" value="0"></div>
-<div class="slider-container"><label for="decay">D</label><input type="range" id="decay" min="0" max="2" step="0.01" value="0"></div>
-<div class="slider-container"><label for="sustain">S</label><input type="range" id="sustain" min="0" max="1" step="0.01" value="1"></div>
-<div class="slider-container"><label for="release">R</label><input type="range" id="release" min="0" max="3" step="0.01" value="0"></div>
-<hr>
-<h2>Low-Pass Filter</h2>
-<div class="slider-container"><label for="fAttack">A</label><input type="range" id="fAttack" min="0" max="2" step="0.01" value="0"></div>
-<div class="slider-container"><label for="fDecay">D</label><input type="range" id="fDecay" min="0" max="2" step="0.01" value="0"></div>
-<div class="slider-container"><label for="fSustain">S</label><input type="range" id="fSustain" min="0" max="1" step="0.01" value="1"></div>
-<div class="slider-container"><label for="fRelease">R</label><input type="range" id="fRelease" min="0" max="3" step="0.01" value="0"></div>
-<div class="slider-container"><label for="fFreq">Freq</label><input type="range" id="fFreq" min="50" max="15000" step="1" value="15000"></div>
-<div class="slider-container"><label for="fRes">Res</label><input type="range" id="fRes" min="0" max="30" step="0.1" value="0"></div>
+<div id="synth">
+  <h1>Joey’s Synth</h1>
+  <div>
+    <div>
+      <button id="startButton">Init</button>
+      <span class="button" id="signalMidiIn">MIDI</span>
+      <select id="waveform">
+        <option value="sine">∿ Sine</option>
+        <option value="sawtooth">⩘ Saw</option>
+        <option value="square">⊓ Square</option>
+        <option value="triangle">∧ Triangle</option>
+        <option value="noise">✷ Noise</option>
+      </select>
+    </div>
+  </div>
+  <div>
+    <div>
+      <h2>Amplitude</h2>
+      <div class="slider-container"><label for="attack">A</label><input type="range" id="attack" min="0" max="3" step="0.01" value="0"></div>
+      <div class="slider-container"><label for="decay">D</label><input type="range" id="decay" min="0" max="3" step="0.01" value="0"></div>
+      <div class="slider-container"><label for="sustain">S</label><input type="range" id="sustain" min="0" max="1" step="0.01" value="1"></div>
+      <div class="slider-container"><label for="release">R</label><input type="range" id="release" min="0" max="3" step="0.01" value="0"></div>
+    </div>
+    <div>
+      <h2>Filter</h2>
+      <div class="slider-container"><label for="fAttack">A</label><input type="range" id="fAttack" min="0" max="3" step="0.01" value="0"></div>
+      <div class="slider-container"><label for="fDecay">D</label><input type="range" id="fDecay" min="0" max="3" step="0.01" value="0"></div>
+      <div class="slider-container"><label for="fSustain">S</label><input type="range" id="fSustain" min="0" max="1" step="0.01" value="1"></div>
+      <div class="slider-container"><label for="fRelease">R</label><input type="range" id="fRelease" min="0" max="3" step="0.01" value="0"></div>
+      <div class="slider-container"><label for="fFreq">Freq</label><input type="range" id="fFreq" min="50" max="15000" step="1" value="15000"></div>
+      <div class="slider-container"><label for="fRes">Res</label><input type="range" id="fRes" min="0" max="30" step="0.1" value="0"></div>
+    </div>
+  </div>
+  <div>
+    <div id="piano"></div>
+  </div>
+</div>
 <hr class="line">
-<h2>To do:</h2>
+<h2>To do</h2>
 <ul>
-  <li>Decay/release decay logarithmic?</li>
+  <li>Attack/decay/release function logarithmic linear?</li>
   <li>Fix filter decay</li>
   <li>Fix releases gain</li>
-  <li>Add e-piano sound</li>
+  <li>Add pm wave form</li>
+  <li>Double click on slider -> default value</li>
+  <li>Add keyboard</li>
   <li>Output meter</li>
+  <li>Add e-piano sound</li>
   <li>Effects: chorus, reverb, ...</li>
   <li>Laptop keyboard support</li>
   <li>FM synthesis</li>
@@ -81,6 +106,62 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;height:.6em;widt
 </ul> 
 
 <script>
+const piano = document.getElementById('piano');
+
+const octaves = 5;
+const whitesPerOctave = 7;
+const totalWhiteKeys = octaves * whitesPerOctave;
+const blackPattern = [1, 1, 0, 1, 1, 1, 0]; // Schwarze Tasten Muster
+
+const whiteKeyWidthPercent = 100 / totalWhiteKeys;
+const blackKeyFactor = 0.625; // Schwarze Tasten Breite
+
+// Notennamen für weiße Tasten in einer Oktave
+const whiteNames = ["C", "D", "E", "F", "G", "A", "B"];
+// Notennamen für schwarze Tasten in einer Oktave
+const blackNames = ["C#", "D#", null, "F#", "G#", "A#", null];
+
+// Weiße Tasten erzeugen
+for (let o = 1; o <= octaves; o++) {
+  for (let i = 0; i < whitesPerOctave; i++) {
+    const whiteKey = document.createElement('div');
+    whiteKey.classList.add('white-key');
+    whiteKey.style.width = `${whiteKeyWidthPercent}%`;
+    const noteName = whiteNames[i] + o;
+    whiteKey.dataset.note = noteName;
+    whiteKey.id = noteName;
+    piano.appendChild(whiteKey);
+  }
+}
+
+// Schwarze Tasten erzeugen
+for (let o = 1; o <= octaves; o++) {
+  for (let i = 0; i < whitesPerOctave; i++) {
+    if (blackPattern[i]) {
+      const blackKey = document.createElement('div');
+      blackKey.classList.add('black-key');
+
+      const blackKeyWidthPercent = whiteKeyWidthPercent * blackKeyFactor;
+
+      const leftPercent = ((o - 1) * whitesPerOctave + i) * whiteKeyWidthPercent 
+                          + 0.5 * whiteKeyWidthPercent 
+                          - 0.5 * blackKeyWidthPercent 
+                          + 0.5 * whiteKeyWidthPercent;
+
+      blackKey.style.left = `${leftPercent}%`;
+      blackKey.style.width = `${blackKeyWidthPercent}%`;
+
+      const noteName = blackNames[i] + o;
+      blackKey.dataset.note = noteName;
+      blackKey.id = noteName;
+
+      piano.appendChild(blackKey);
+    }
+  }
+}
+
+
+
 const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 const startButton = document.getElementById("startButton");
 const midiSignal = document.getElementById("signalMidiIn");

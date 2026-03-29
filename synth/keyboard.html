@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skalierbares Klavier mit Noten</title>
+<style>
+  #piano{position:relative;width:90%;max-width:1200px;height:auto;}
+  .white-key,.black-key{outline: 1px solid black;}
+  .white-key{display:inline-block;position:relative;z-index:1;background:white;box-sizing:border-box;aspect-ratio:1 / 4;vertical-align:bottom;}
+  .black-key{position:absolute;z-index:2;top:0;background:black;box-sizing:border-box;aspect-ratio:1 / 4;}
+  .white-key:hover{ background: #fcc; }
+  .black-key:hover{ background: #fcc; }
+</style>
+</head>
+<body>
+
+<div id="piano"></div>
+
+<script>
+const piano = document.getElementById('piano');
+
+const octaves = 5;
+const whitesPerOctave = 7;
+const totalWhiteKeys = octaves * whitesPerOctave;
+const blackPattern = [1, 1, 0, 1, 1, 1, 0]; // Schwarze Tasten Muster
+
+const whiteKeyWidthPercent = 100 / totalWhiteKeys;
+const blackKeyFactor = 0.625; // Schwarze Tasten Breite
+
+// Notennamen für weiße Tasten in einer Oktave
+const whiteNames = ["C", "D", "E", "F", "G", "A", "B"];
+// Notennamen für schwarze Tasten in einer Oktave
+const blackNames = ["C#", "D#", null, "F#", "G#", "A#", null];
+
+// Weiße Tasten erzeugen
+for (let o = 1; o <= octaves; o++) {
+  for (let i = 0; i < whitesPerOctave; i++) {
+    const whiteKey = document.createElement('div');
+    whiteKey.classList.add('white-key');
+    whiteKey.style.width = `${whiteKeyWidthPercent}%`;
+    const noteName = whiteNames[i] + o;
+    whiteKey.dataset.note = noteName;
+    whiteKey.id = noteName;
+    piano.appendChild(whiteKey);
+  }
+}
+
+// Schwarze Tasten erzeugen
+for (let o = 1; o <= octaves; o++) {
+  for (let i = 0; i < whitesPerOctave; i++) {
+    if (blackPattern[i]) {
+      const blackKey = document.createElement('div');
+      blackKey.classList.add('black-key');
+
+      const blackKeyWidthPercent = whiteKeyWidthPercent * blackKeyFactor;
+
+      const leftPercent = ((o - 1) * whitesPerOctave + i) * whiteKeyWidthPercent 
+                          + 0.5 * whiteKeyWidthPercent 
+                          - 0.5 * blackKeyWidthPercent 
+                          + 0.5 * whiteKeyWidthPercent;
+
+      blackKey.style.left = `${leftPercent}%`;
+      blackKey.style.width = `${blackKeyWidthPercent}%`;
+
+      const noteName = blackNames[i] + o;
+      blackKey.dataset.note = noteName;
+      blackKey.id = noteName;
+
+      piano.appendChild(blackKey);
+    }
+  }
+}
+</script>
+
+</body>
+</html>
