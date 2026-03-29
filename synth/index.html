@@ -9,7 +9,7 @@
 ::selection{background:var(--text);color:var(--background);}
 html{height:100%;font-size:13px;}
 body{font-family:monospace;color:var(--text);background:var(--background);line-height:1.3em;padding:2rem;}
-h1{font-size:2.4em;line-height:.8em;font-family:sans-serif;font-weight:bold;transform:scaleY(.8);text-transform:uppercase;}
+h1{font-size:2.4em;line-height:.8em;/* font-family:sans-serif;font-weight:bold;transform:scaleY(.8);text-transform:uppercase; */}
 h2{margin-bottom:8px;}
 ul{margin-left:1em;}
 hr{margin:1rem 0;}
@@ -72,7 +72,7 @@ input[type=range]::-moz-range-thumb{border:none;border-radius:0;height:.6em;widt
       </div>
       <div>
         <h2>Filter Env</h2>
-        <div class="slider-container"><label for="fAttack">A</label><input type="range" id="fAttack" min="0" max="3" step="0.01" value=".2"></div>
+        <div class="slider-container"><label for="fAttack">A</label><input type="range" id="fAttack" min="0" max="3" step="0.01" value="0"></div>
         <div class="slider-container"><label for="fDecay">D</label><input type="range" id="fDecay" min="0" max="3" step="0.01" value="0"></div>
         <div class="slider-container"><label for="fSustain">S</label><input type="range" id="fSustain" min="0" max="1" step="0.01" value="1"></div>
         <div class="slider-container"><label for="fRelease">R</label><input type="range" id="fRelease" min="0" max="3" step="0.01" value="3"></div>
@@ -89,18 +89,17 @@ input[type=range]::-moz-range-thumb{border:none;border-radius:0;height:.6em;widt
 <hr class="line">
 <div style="padding:.5em .8em;display:table;background:#0f0;">
   <h2>Use your USB keyboard</h2>
-  <ul>
-    <li>Connect your USB keyboard.</li>
-    <li>Open this website in Chrome.<br>WebMIDI is only fully supported in Chrome.</li>
-    <li>Press "Init".</li>
-    <li>Allow MIDI access.</li>
-    <li>Start playing!</li>
-  </ul>
+  1. Connect your USB keyboard.<br>
+  2. Open this website in Chrome.<br>&nbsp; &nbsp; WebMIDI is only fully supported in Chrome.<br>
+  3. Press "Init".<br>
+  4. Allow MIDI access.<br>
+  5. Start playing!
 </div>
 <hr class="line">
 <h2>To do</h2>
 <ul>
-  <li>MOD/Pitch wheel support</li>
+  <li>MOD and Pitch wheel support</li>
+  <li>Click and hold hover keys</li>
   <li>Add pulse modulation wave form with pulse width slider</li>
   <li>Double click on slider -> default value</li>
   <li>Output meter</li>
