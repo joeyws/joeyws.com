@@ -48,7 +48,7 @@ input[type=range]::-moz-range-thumb{border:none;border-radius:0;height:.6em;widt
   <div id="knobs" oncontextmenu="">
     <div>
       <div>
-        <button id="startButton">Init</button>
+        <button id="startButton">Connect Keyboard</button>
         <span class="button" id="signalMidiIn">MIDI</span>
       </div>
     </div>
@@ -86,15 +86,15 @@ input[type=range]::-moz-range-thumb{border:none;border-radius:0;height:.6em;widt
   </div>
   <div id="piano"></div>
 </div>
-<hr class="line">
+<!-- <hr class="line">
 <div style="padding:.5em .8em;display:table;background:#0f0;">
   <h2>Use your USB keyboard</h2>
   1. Connect your USB keyboard.<br>
-  2. Open this website in Chrome.<br>&nbsp; &nbsp; WebMIDI is only fully supported in Chrome.<br>
+  2. Open this website in Chrome.<br>&nbsp; &nbsp;WebMIDI is only fully supported in Chrome.<br>
   3. Press "Init".<br>
   4. Allow MIDI access.<br>
   5. Start playing!
-</div>
+</div> -->
 <hr class="line">
 <h2>To do</h2>
 <ul>
@@ -198,7 +198,7 @@ startButton.addEventListener("click", () => {
       console.log("MIDI ready, inputs:", midi.inputs.size);
     }, () => alert("Keine MIDI-Geräte gefunden"));
   } else {
-    alert("WebMIDI not supported! Please use Chrome.");
+    alert("WebMIDI not supported. Please use Chrome.");
   }
 });
 
