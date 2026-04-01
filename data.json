@@ -1,6 +1,6 @@
 {
-  "timestamp": "01.04. 7:26",
-  "weatherTempCelsius": 4,
+  "timestamp": "01.04. 9:10",
+  "weatherTempCelsius": 5,
   "githubLastCommit": "April 1, 2026",
   "steamStatus": "offline",
   "pubg": {
@@ -10,8 +10,8 @@
         "matchStart": "30.03. 18:53",
         "teamSize": "Squad",
         "teamMates": [
-          "KingZurenson",
           "Flopsibert",
+          "KingZurenson",
           "mad_ULTRAS_"
         ],
         "perspective": "FPP",
@@ -28,9 +28,9 @@
         "matchStart": "30.03. 18:31",
         "teamSize": "Squad",
         "teamMates": [
-          "dolaptakisonbira",
+          "Flopsibert",
           "KingZurenson",
-          "Flopsibert"
+          "dolaptakisonbira"
         ],
         "perspective": "FPP",
         "placement": 7,
@@ -47,8 +47,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "KingZurenson",
-          "Flopsibert",
-          "Zer0ist"
+          "Zer0ist",
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 4,
@@ -82,9 +82,9 @@
         "matchStart": "29.03. 16:13",
         "teamSize": "Squad",
         "teamMates": [
-          "Flopsibert",
           "KingZurenson",
-          "WeCoyote"
+          "WeCoyote",
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 19,
@@ -118,9 +118,9 @@
         "matchStart": "29.03. 15:24",
         "teamSize": "Squad",
         "teamMates": [
-          "Flopsibert",
           "WeCoyote",
-          "KingZurenson"
+          "KingZurenson",
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 6,
@@ -136,8 +136,8 @@
         "matchStart": "29.03. 15:03",
         "teamSize": "Squad",
         "teamMates": [
-          "WeCoyote",
           "Flopsibert",
+          "WeCoyote",
           "KingZurenson"
         ],
         "perspective": "FPP",
@@ -154,9 +154,9 @@
         "matchStart": "29.03. 14:42",
         "teamSize": "Squad",
         "teamMates": [
+          "WeCoyote",
           "Flopsibert",
-          "KingZurenson",
-          "WeCoyote"
+          "KingZurenson"
         ],
         "perspective": "FPP",
         "placement": 9,
