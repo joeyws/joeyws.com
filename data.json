@@ -1,5 +1,5 @@
 {
-  "timestamp": "01.04. 21:45",
+  "timestamp": "01.04. 22:41",
   "weatherTempCelsius": 5,
   "githubLastCommit": "April 1, 2026",
   "steamStatus": "offline",
@@ -41,8 +41,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "Aggro-Uschi-3000",
-          "KingZurenson",
-          "Flopsibert"
+          "Flopsibert",
+          "KingZurenson"
         ],
         "perspective": "FPP",
         "placement": 4,
@@ -58,9 +58,9 @@
         "matchStart": "01.04. 16:04",
         "teamSize": "Squad",
         "teamMates": [
+          "KingZurenson",
           "Skillway",
-          "Flopsibert",
-          "KingZurenson"
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 28,
@@ -76,9 +76,9 @@
         "matchStart": "01.04. 15:51",
         "teamSize": "Squad",
         "teamMates": [
+          "giftos13",
           "Flopsibert",
-          "KingZurenson",
-          "giftos13"
+          "KingZurenson"
         ],
         "perspective": "FPP",
         "placement": 16,
@@ -94,8 +94,8 @@
         "matchStart": "01.04. 15:44",
         "teamSize": "Squad",
         "teamMates": [
-          "Flopsibert",
-          "KingZurenson"
+          "KingZurenson",
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 25,
@@ -111,8 +111,8 @@
         "matchStart": "01.04. 15:29",
         "teamSize": "Squad",
         "teamMates": [
-          "road-man69",
           "KingZurenson",
+          "road-man69",
           "Flopsibert"
         ],
         "perspective": "FPP",
@@ -147,9 +147,9 @@
         "matchStart": "30.03. 18:31",
         "teamSize": "Squad",
         "teamMates": [
+          "Flopsibert",
           "KingZurenson",
-          "dolaptakisonbira",
-          "Flopsibert"
+          "dolaptakisonbira"
         ],
         "perspective": "FPP",
         "placement": 7,
@@ -166,8 +166,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "KingZurenson",
-          "Flopsibert",
-          "Zer0ist"
+          "Zer0ist",
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 4,
