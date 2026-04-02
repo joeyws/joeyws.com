@@ -1,6 +1,6 @@
 {
-  "timestamp": "02.04. 21:41",
-  "weatherTempCelsius": 8,
+  "timestamp": "02.04. 22:36",
+  "weatherTempCelsius": 7,
   "githubLastCommit": "April 2, 2026",
   "steamStatus": "online",
   "pubg": {
@@ -10,8 +10,8 @@
         "matchStart": "02.04. 21:07",
         "teamSize": "Squad",
         "teamMates": [
-          "Luobo-002",
-          "pilatus600"
+          "pilatus600",
+          "Luobo-002"
         ],
         "perspective": "TPP",
         "placement": 2,
@@ -43,8 +43,8 @@
         "matchStart": "02.04. 18:53",
         "teamSize": "Squad",
         "teamMates": [
-          "pau_mov",
-          "Marsouin34666"
+          "Marsouin34666",
+          "pau_mov"
         ],
         "perspective": "TPP",
         "placement": 4,
@@ -90,9 +90,9 @@
         "matchStart": "01.04. 16:10",
         "teamSize": "Squad",
         "teamMates": [
-          "Aggro-Uschi-3000",
+          "KingZurenson",
           "Flopsibert",
-          "KingZurenson"
+          "Aggro-Uschi-3000"
         ],
         "perspective": "FPP",
         "placement": 4,
@@ -108,9 +108,9 @@
         "matchStart": "01.04. 16:04",
         "teamSize": "Squad",
         "teamMates": [
-          "KingZurenson",
           "Skillway",
-          "Flopsibert"
+          "Flopsibert",
+          "KingZurenson"
         ],
         "perspective": "FPP",
         "placement": 28,
@@ -126,9 +126,9 @@
         "matchStart": "01.04. 15:51",
         "teamSize": "Squad",
         "teamMates": [
-          "giftos13",
+          "KingZurenson",
           "Flopsibert",
-          "KingZurenson"
+          "giftos13"
         ],
         "perspective": "FPP",
         "placement": 16,
@@ -144,8 +144,8 @@
         "matchStart": "01.04. 15:44",
         "teamSize": "Squad",
         "teamMates": [
-          "KingZurenson",
-          "Flopsibert"
+          "Flopsibert",
+          "KingZurenson"
         ],
         "perspective": "FPP",
         "placement": 25,
