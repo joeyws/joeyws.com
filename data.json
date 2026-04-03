@@ -1,11 +1,27 @@
 {
-  "timestamp": "03.04. 21:37",
+  "timestamp": "03.04. 22:37",
   "weatherTempCelsius": 11,
   "githubLastCommit": "April 3, 2026",
   "steamStatus": "online",
   "pubg": {
     "name": "joeyws2",
     "lastMatches": [
+      {
+        "matchStart": "03.04. 21:53",
+        "teamSize": "Prophunt",
+        "teamMates": [
+          "rodav2"
+        ],
+        "perspective": "TPP",
+        "placement": 2,
+        "map": "Rondo",
+        "survivalTime": "4:11",
+        "distance": "0.8",
+        "kills": 0,
+        "assists": 0,
+        "damage": 0,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.prophunt.eu.2026.04.03.21.338c7063-b67d-48b5-aca2-81714fcee1ab"
+      },
       {
         "matchStart": "03.04. 8:13",
         "teamSize": "Squad",
@@ -155,24 +171,6 @@
         "assists": 1,
         "damage": 69,
         "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.squad-fpp.eu.2026.04.01.16.04d86827-9f9d-4602-b95b-60555bfb76b3"
-      },
-      {
-        "matchStart": "01.04. 16:04",
-        "teamSize": "Squad",
-        "teamMates": [
-          "KingZurenson",
-          "Skillway",
-          "Flopsibert"
-        ],
-        "perspective": "FPP",
-        "placement": 28,
-        "map": "Erangel",
-        "survivalTime": "4:01",
-        "distance": "0.5",
-        "kills": 0,
-        "assists": 0,
-        "damage": 0,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.squad-fpp.eu.2026.04.01.16.02bec5a3-bff7-411f-a0b4-ac6a3e31b0e8"
       }
     ]
   }
