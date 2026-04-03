@@ -1,5 +1,5 @@
 {
-  "timestamp": "03.04. 18:53",
+  "timestamp": "03.04. 19:40",
   "weatherTempCelsius": 12,
   "githubLastCommit": "April 3, 2026",
   "steamStatus": "offline",
@@ -27,8 +27,8 @@
         "matchStart": "03.04. 7:18",
         "teamSize": "Squad",
         "teamMates": [
-          "Akra_Leuka",
-          "Raiden_CRO"
+          "Raiden_CRO",
+          "Akra_Leuka"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -45,8 +45,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "Raiden_CRO",
-          "zTMnp666",
-          "YAROSLAV4444"
+          "YAROSLAV4444",
+          "zTMnp666"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -142,9 +142,9 @@
         "matchStart": "01.04. 16:10",
         "teamSize": "Squad",
         "teamMates": [
-          "KingZurenson",
+          "Aggro-Uschi-3000",
           "Flopsibert",
-          "Aggro-Uschi-3000"
+          "KingZurenson"
         ],
         "perspective": "FPP",
         "placement": 4,
@@ -160,9 +160,9 @@
         "matchStart": "01.04. 16:04",
         "teamSize": "Squad",
         "teamMates": [
-          "Skillway",
+          "KingZurenson",
           "Flopsibert",
-          "KingZurenson"
+          "Skillway"
         ],
         "perspective": "FPP",
         "placement": 28,
