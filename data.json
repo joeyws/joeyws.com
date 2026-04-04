@@ -1,7 +1,7 @@
 {
-  "timestamp": "04.04. 2:31",
+  "timestamp": "04.04. 4:53",
   "weatherTempCelsius": 11,
-  "githubLastCommit": "April 3, 2026",
+  "githubLastCommit": "April 4, 2026",
   "steamStatus": "online",
   "pubg": {
     "name": "joeyws2",
@@ -133,8 +133,8 @@
         "matchStart": "03.04. 6:54",
         "teamSize": "Squad",
         "teamMates": [
-          "Raiden_CRO",
           "YAROSLAV4444",
+          "Raiden_CRO",
           "zTMnp666"
         ],
         "perspective": "TPP",
@@ -151,8 +151,8 @@
         "matchStart": "02.04. 21:07",
         "teamSize": "Squad",
         "teamMates": [
-          "pilatus600",
-          "Luobo-002"
+          "Luobo-002",
+          "pilatus600"
         ],
         "perspective": "TPP",
         "placement": 2,
