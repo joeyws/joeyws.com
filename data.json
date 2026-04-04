@@ -1,11 +1,29 @@
 {
-  "timestamp": "04.04. 5:59",
+  "timestamp": "04.04. 7:13",
   "weatherTempCelsius": 11,
   "githubLastCommit": "April 4, 2026",
-  "steamStatus": "online",
+  "steamStatus": "offline",
   "pubg": {
     "name": "joeyws2",
     "lastMatches": [
+      {
+        "matchStart": "04.04. 6:23",
+        "teamSize": "Squad",
+        "teamMates": [
+          "maksim34467",
+          "Kyiv_Troja",
+          "0071GOR007"
+        ],
+        "perspective": "TPP",
+        "placement": 1,
+        "map": "Erangel",
+        "survivalTime": "20:19",
+        "distance": "6.8",
+        "kills": 8,
+        "assists": 0,
+        "damage": 631,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.04.04.06.028b330e-0f22-4c0d-97ec-4a999be9cfad"
+      },
       {
         "matchStart": "03.04. 23:32",
         "teamSize": "Prophunt",
@@ -24,8 +42,8 @@
         "matchStart": "03.04. 23:18",
         "teamSize": "Prophunt",
         "teamMates": [
-          "AranPharazon",
-          "papa_tolyaa"
+          "papa_tolyaa",
+          "AranPharazon"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -116,8 +134,8 @@
         "matchStart": "03.04. 7:18",
         "teamSize": "Squad",
         "teamMates": [
-          "Akra_Leuka",
-          "Raiden_CRO"
+          "Raiden_CRO",
+          "Akra_Leuka"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -133,9 +151,9 @@
         "matchStart": "03.04. 6:54",
         "teamSize": "Squad",
         "teamMates": [
+          "YAROSLAV4444",
           "Raiden_CRO",
-          "zTMnp666",
-          "YAROSLAV4444"
+          "zTMnp666"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -146,23 +164,6 @@
         "assists": 3,
         "damage": 656,
         "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.04.03.06.63feb843-6d4c-48ca-a605-4eb7086c6efb"
-      },
-      {
-        "matchStart": "02.04. 21:07",
-        "teamSize": "Squad",
-        "teamMates": [
-          "pilatus600",
-          "Luobo-002"
-        ],
-        "perspective": "TPP",
-        "placement": 2,
-        "map": "Erangel",
-        "survivalTime": "22:37",
-        "distance": "9.9",
-        "kills": 3,
-        "assists": 0,
-        "damage": 353,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.04.02.21.88c37a78-b05e-4548-9d2d-69dee8990ff3"
       }
     ]
   }
