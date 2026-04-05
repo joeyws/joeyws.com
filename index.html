@@ -27,13 +27,13 @@
     hr+*,img+p,.content *:first-child{margin-top:0;}
     table{width:100%;}tr{border-top:1px solid var(--text);}td{vertical-align:top;}td:nth-child(1){width:8em;padding-right:var(--spacer);}td:nth-child(2){width:auto;}
     hr{margin:3rem 0;}
-    a,.video:not(.playing)::after{white-space:nowrap;text-decoration:underline}
+    a,.video:not(.playing)::after{background:#0008;white-space:nowrap;text-decoration:underline;}
     a:hover,.video:not(.playing):hover::after{background:#f0f;color:var(--background);text-decoration:none;}
     /* HEADER */
     #header,.video:not(.playing)::after{font-size:1.4rem;line-height:1em;}
     #header,#header span,nav{display:flex;gap:1em;}
-    #header{white-space:nowrap;user-select:none;width:100%;flex-wrap:wrap;justify-content:space-between;}
-    nav a,nav a:hover{text-decoration:none;background:transparent;color:var(--text);}
+    #header{/* background:var(--text);color:var(--background);padding:var(--spacer); */white-space:nowrap;user-select:none;width:100%;flex-wrap:wrap;justify-content:space-between;box-sizing:border-box;}
+    nav a,nav a:hover{text-decoration:none;background:transparent;color:inherit;}
     nav a.open{background:#f0f;color:var(--background);}
     @media (max-width:500px) {#header{flex-direction:column;}}
     /* MARQUEE */
@@ -46,7 +46,7 @@
     .video img,.video video,.video .controls .progress{width:100%;}
     .video img{transition:all .75s;}
     .video:hover img{transform:scale(1.05);}
-    .video:not(.playing)::after{content:"Play";text-decoration:none;background:var(--background);/* font-size:1rem;line-height:1.2em; */position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);pointer-events:none;}
+    .video:not(.playing)::after{content:"Play";text-decoration:none;/* font-size:1rem;line-height:1.2em; */position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);pointer-events:none;}
     .video video,.video .controls{display:none;}
     .video video{object-fit:cover;}
     .video .controls{position:absolute;bottom:0;left:0;right:0;}
