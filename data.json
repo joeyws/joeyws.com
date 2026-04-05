@@ -1,5 +1,5 @@
 {
-  "timestamp": "04.04. 23:35",
+  "timestamp": "05.04. 2:48",
   "weatherTempCelsius": 11,
   "githubLastCommit": "April 4, 2026",
   "steamStatus": "offline",
@@ -10,8 +10,8 @@
         "matchStart": "04.04. 6:23",
         "teamSize": "Squad",
         "teamMates": [
-          "maksim34467",
           "Kyiv_Troja",
+          "maksim34467",
           "0071GOR007"
         ],
         "perspective": "TPP",
@@ -42,8 +42,8 @@
         "matchStart": "03.04. 23:18",
         "teamSize": "Prophunt",
         "teamMates": [
-          "papa_tolyaa",
-          "AranPharazon"
+          "AranPharazon",
+          "papa_tolyaa"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -134,8 +134,8 @@
         "matchStart": "03.04. 7:18",
         "teamSize": "Squad",
         "teamMates": [
-          "Raiden_CRO",
-          "Akra_Leuka"
+          "Akra_Leuka",
+          "Raiden_CRO"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -151,9 +151,9 @@
         "matchStart": "03.04. 6:54",
         "teamSize": "Squad",
         "teamMates": [
-          "YAROSLAV4444",
           "Raiden_CRO",
-          "zTMnp666"
+          "zTMnp666",
+          "YAROSLAV4444"
         ],
         "perspective": "TPP",
         "placement": 1,
