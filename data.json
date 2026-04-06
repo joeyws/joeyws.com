@@ -1,8 +1,8 @@
 {
-  "timestamp": "06.04. 21:41",
-  "weatherTempCelsius": 12,
+  "timestamp": "06.04. 22:40",
+  "weatherTempCelsius": 11,
   "githubLastCommit": "April 6, 2026",
-  "steamStatus": "online",
+  "steamStatus": "offline",
   "pubg": {
     "name": "joeyws2",
     "lastMatches": [
@@ -24,8 +24,8 @@
         "matchStart": "04.04. 6:23",
         "teamSize": "Squad",
         "teamMates": [
-          "maksim34467",
           "Kyiv_Troja",
+          "maksim34467",
           "0071GOR007"
         ],
         "perspective": "TPP",
@@ -56,8 +56,8 @@
         "matchStart": "03.04. 23:18",
         "teamSize": "Prophunt",
         "teamMates": [
-          "papa_tolyaa",
-          "AranPharazon"
+          "AranPharazon",
+          "papa_tolyaa"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -148,8 +148,8 @@
         "matchStart": "03.04. 7:18",
         "teamSize": "Squad",
         "teamMates": [
-          "Raiden_CRO",
-          "Akra_Leuka"
+          "Akra_Leuka",
+          "Raiden_CRO"
         ],
         "perspective": "TPP",
         "placement": 1,
