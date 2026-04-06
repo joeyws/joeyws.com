@@ -1,7 +1,7 @@
 {
-  "timestamp": "06.04. 13:18",
-  "weatherTempCelsius": 16,
-  "githubLastCommit": "April 6, 2026",
+  "timestamp": "06.04. 14:52",
+  "weatherTempCelsius": 17,
+  "githubLastCommit": null,
   "steamStatus": "online",
   "pubg": {
     "name": "joeyws2",
@@ -24,9 +24,9 @@
         "matchStart": "04.04. 6:23",
         "teamSize": "Squad",
         "teamMates": [
-          "Kyiv_Troja",
           "maksim34467",
-          "0071GOR007"
+          "0071GOR007",
+          "Kyiv_Troja"
         ],
         "perspective": "TPP",
         "placement": 1,
