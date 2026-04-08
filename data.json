@@ -1,11 +1,29 @@
 {
-  "timestamp": "08.04. 15:13",
-  "weatherTempCelsius": 20,
+  "timestamp": "08.04. 17:07",
+  "weatherTempCelsius": 19,
   "githubLastCommit": "April 8, 2026",
-  "steamStatus": "offline",
+  "steamStatus": "online",
   "pubg": {
     "name": "joeyws2",
     "lastMatches": [
+      {
+        "matchStart": "08.04. 15:33",
+        "teamSize": "Binaryspot",
+        "teamMates": [
+          "Ardknfe98",
+          "NektNikto",
+          "TIMOLLIKA"
+        ],
+        "perspective": "TPP",
+        "placement": 1,
+        "map": "Desert_Main_BinarySpot",
+        "survivalTime": "21:19",
+        "distance": "8.1",
+        "kills": 0,
+        "assists": 0,
+        "damage": 0,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.binaryspot.eu.2026.04.08.15.43200ae8-bc91-4c38-b4e5-af9d806e0e8a"
+      },
       {
         "matchStart": "06.04. 8:32",
         "teamSize": "Prophunt",
@@ -24,8 +42,8 @@
         "matchStart": "04.04. 6:23",
         "teamSize": "Squad",
         "teamMates": [
-          "maksim34467",
           "Kyiv_Troja",
+          "maksim34467",
           "0071GOR007"
         ],
         "perspective": "TPP",
@@ -56,8 +74,8 @@
         "matchStart": "03.04. 23:18",
         "teamSize": "Prophunt",
         "teamMates": [
-          "papa_tolyaa",
-          "AranPharazon"
+          "AranPharazon",
+          "papa_tolyaa"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -143,23 +161,6 @@
         "assists": 1,
         "damage": 379,
         "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.04.03.08.f74516af-8d99-4e68-9c37-ff82b8a81f96"
-      },
-      {
-        "matchStart": "03.04. 7:18",
-        "teamSize": "Squad",
-        "teamMates": [
-          "Raiden_CRO",
-          "Akra_Leuka"
-        ],
-        "perspective": "TPP",
-        "placement": 1,
-        "map": "Erangel",
-        "survivalTime": "21:49",
-        "distance": "6.9",
-        "kills": 11,
-        "assists": 1,
-        "damage": 1311,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.04.03.07.d5d4d7e2-08b5-4fa5-b082-5a3735c93a8d"
       }
     ]
   }
