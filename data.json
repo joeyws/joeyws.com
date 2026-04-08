@@ -1,6 +1,6 @@
 {
-  "timestamp": "08.04. 20:49",
-  "weatherTempCelsius": 14,
+  "timestamp": "08.04. 21:44",
+  "weatherTempCelsius": 13,
   "githubLastCommit": "April 8, 2026",
   "steamStatus": "online",
   "pubg": {
@@ -10,9 +10,9 @@
         "matchStart": "08.04. 20:01",
         "teamSize": "Squad",
         "teamMates": [
-          "BirDy_FLy87",
+          "mark2584",
           "Nevesyolyy",
-          "mark2584"
+          "BirDy_FLy87"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -28,9 +28,9 @@
         "matchStart": "08.04. 18:18",
         "teamSize": "Squad",
         "teamMates": [
-          "BOG-GPOMA",
           "Sadarar",
-          "Kooka278"
+          "Kooka278",
+          "BOG-GPOMA"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -46,8 +46,8 @@
         "matchStart": "08.04. 17:46",
         "teamSize": "Squad",
         "teamMates": [
-          "Batroys",
-          "tolgaeler"
+          "tolgaeler",
+          "Batroys"
         ],
         "perspective": "TPP",
         "placement": 1,
