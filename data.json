@@ -1,11 +1,46 @@
 {
-  "timestamp": "08.04. 17:07",
-  "weatherTempCelsius": 19,
+  "timestamp": "08.04. 19:22",
+  "weatherTempCelsius": 15,
   "githubLastCommit": "April 8, 2026",
   "steamStatus": "online",
   "pubg": {
     "name": "joeyws2",
     "lastMatches": [
+      {
+        "matchStart": "08.04. 18:18",
+        "teamSize": "Squad",
+        "teamMates": [
+          "BOG-GPOMA",
+          "Sadarar",
+          "Kooka278"
+        ],
+        "perspective": "TPP",
+        "placement": 1,
+        "map": "Erangel",
+        "survivalTime": "20:25",
+        "distance": "4.5",
+        "kills": 6,
+        "assists": 0,
+        "damage": 824,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.04.08.18.29f95db7-85ac-44be-9fe6-c04faabac04c"
+      },
+      {
+        "matchStart": "08.04. 17:46",
+        "teamSize": "Squad",
+        "teamMates": [
+          "Batroys",
+          "tolgaeler"
+        ],
+        "perspective": "TPP",
+        "placement": 1,
+        "map": "Erangel",
+        "survivalTime": "24:19",
+        "distance": "10.0",
+        "kills": 15,
+        "assists": 1,
+        "damage": 1722,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.04.08.17.07492651-58a1-4053-b314-4e526d8bde3e"
+      },
       {
         "matchStart": "08.04. 15:33",
         "teamSize": "Binaryspot",
@@ -128,39 +163,6 @@
         "assists": 0,
         "damage": 0,
         "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.prophunt.eu.2026.04.03.22.00366cfb-09d7-447a-a942-7e3ea3bd6148"
-      },
-      {
-        "matchStart": "03.04. 21:53",
-        "teamSize": "Prophunt",
-        "teamMates": [
-          "rodav2"
-        ],
-        "perspective": "TPP",
-        "placement": 2,
-        "map": "Rondo",
-        "survivalTime": "4:11",
-        "distance": "0.8",
-        "kills": 0,
-        "assists": 0,
-        "damage": 0,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.prophunt.eu.2026.04.03.21.338c7063-b67d-48b5-aca2-81714fcee1ab"
-      },
-      {
-        "matchStart": "03.04. 8:13",
-        "teamSize": "Squad",
-        "teamMates": [
-          "cv_mortal",
-          "BETEPAH21"
-        ],
-        "perspective": "TPP",
-        "placement": 3,
-        "map": "Erangel",
-        "survivalTime": "18:13",
-        "distance": "5.0",
-        "kills": 5,
-        "assists": 1,
-        "damage": 379,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.04.03.08.f74516af-8d99-4e68-9c37-ff82b8a81f96"
       }
     ]
   }
