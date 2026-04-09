@@ -1,6 +1,6 @@
 {
-  "timestamp": "09.04. 7:42",
-  "weatherTempCelsius": 10,
+  "timestamp": "09.04. 9:12",
+  "weatherTempCelsius": 13,
   "githubLastCommit": "April 9, 2026",
   "steamStatus": "offline",
   "pubg": {
@@ -46,8 +46,8 @@
         "matchStart": "08.04. 17:46",
         "teamSize": "Squad",
         "teamMates": [
-          "Batroys",
-          "tolgaeler"
+          "tolgaeler",
+          "Batroys"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -63,9 +63,9 @@
         "matchStart": "08.04. 15:33",
         "teamSize": "Binaryspot",
         "teamMates": [
+          "TIMOLLIKA",
           "Ardknfe98",
-          "NektNikto",
-          "TIMOLLIKA"
+          "NektNikto"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -95,8 +95,8 @@
         "matchStart": "04.04. 6:23",
         "teamSize": "Squad",
         "teamMates": [
-          "Kyiv_Troja",
           "maksim34467",
+          "Kyiv_Troja",
           "0071GOR007"
         ],
         "perspective": "TPP",
@@ -127,8 +127,8 @@
         "matchStart": "03.04. 23:18",
         "teamSize": "Prophunt",
         "teamMates": [
-          "AranPharazon",
-          "papa_tolyaa"
+          "papa_tolyaa",
+          "AranPharazon"
         ],
         "perspective": "TPP",
         "placement": 1,
