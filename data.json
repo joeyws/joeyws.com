@@ -1,11 +1,43 @@
 {
-  "timestamp": "09.04. 17:11",
-  "weatherTempCelsius": 19,
+  "timestamp": "09.04. 19:12",
+  "weatherTempCelsius": 17,
   "githubLastCommit": "April 9, 2026",
   "steamStatus": "online",
   "pubg": {
     "name": "joeyws2",
     "lastMatches": [
+      {
+        "matchStart": "09.04. 17:48",
+        "teamSize": "Squad",
+        "teamMates": [],
+        "perspective": "TPP",
+        "placement": 4,
+        "map": "Taego",
+        "survivalTime": "24:25",
+        "distance": "3.8",
+        "kills": 3,
+        "assists": 0,
+        "damage": 571,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.squad.eu.2026.04.09.17.9a74f334-b8c1-4204-ba0c-ebe33f39c04f"
+      },
+      {
+        "matchStart": "09.04. 17:01",
+        "teamSize": "Binaryspot",
+        "teamMates": [
+          "BVS1C__",
+          "32jumpsrteet",
+          "Kopuchh"
+        ],
+        "perspective": "TPP",
+        "placement": 1,
+        "map": "Desert_Main_BinarySpot",
+        "survivalTime": "37:22",
+        "distance": "5.3",
+        "kills": 0,
+        "assists": 0,
+        "damage": 0,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.binaryspot.eu.2026.04.09.17.259c47a0-9706-4d78-8194-af2d4805a6ba"
+      },
       {
         "matchStart": "09.04. 16:28",
         "teamSize": "Squad",
@@ -144,37 +176,6 @@
         "assists": 0,
         "damage": 631,
         "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.04.04.06.028b330e-0f22-4c0d-97ec-4a999be9cfad"
-      },
-      {
-        "matchStart": "03.04. 23:32",
-        "teamSize": "Prophunt",
-        "teamMates": [],
-        "perspective": "TPP",
-        "placement": 2,
-        "map": "Vikendi",
-        "survivalTime": "5:17",
-        "distance": "0.3",
-        "kills": 0,
-        "assists": 0,
-        "damage": 0,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.prophunt.eu.2026.04.03.23.1b0b47fd-0cd9-40cf-b32e-1843c623e6d2"
-      },
-      {
-        "matchStart": "03.04. 23:18",
-        "teamSize": "Prophunt",
-        "teamMates": [
-          "papa_tolyaa",
-          "AranPharazon"
-        ],
-        "perspective": "TPP",
-        "placement": 1,
-        "map": "Vikendi",
-        "survivalTime": "8:46",
-        "distance": "0.2",
-        "kills": 0,
-        "assists": 0,
-        "damage": 141,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.prophunt.eu.2026.04.03.23.4f88905c-746d-4ae4-abdb-35bad743353f"
       }
     ]
   }
