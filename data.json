@@ -1,5 +1,5 @@
 {
-  "timestamp": "10.04. 18:59",
+  "timestamp": "10.04. 19:50",
   "weatherTempCelsius": 11,
   "githubLastCommit": "April 10, 2026",
   "steamStatus": "online",
@@ -7,12 +7,48 @@
     "name": "joeyws2",
     "lastMatches": [
       {
-        "matchStart": "10.04. 18:24",
-        "teamSize": "Squad",
+        "matchStart": "10.04. 19:20",
+        "teamSize": "Ibr",
         "teamMates": [
           "Flopsibert",
           "KingZurenson",
-          "WeCoyote"
+          "TheCurlyTwin"
+        ],
+        "perspective": "TPP",
+        "placement": 3,
+        "map": "Vikendi",
+        "survivalTime": "8:11",
+        "distance": "1.1",
+        "kills": 2,
+        "assists": 0,
+        "damage": 108,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.ibr.eu.2026.04.10.19.9ef7617d-6214-4cf0-b390-67864d8b4ea3"
+      },
+      {
+        "matchStart": "10.04. 18:50",
+        "teamSize": "Squad",
+        "teamMates": [
+          "KingZurenson",
+          "WeCoyote",
+          "Flopsibert"
+        ],
+        "perspective": "FPP",
+        "placement": 5,
+        "map": "Miramar",
+        "survivalTime": "19:13",
+        "distance": "5.4",
+        "kills": 1,
+        "assists": 1,
+        "damage": 373,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.squad-fpp.eu.2026.04.10.18.19685d2e-0c32-4622-95e8-8dd22d6d1b51"
+      },
+      {
+        "matchStart": "10.04. 18:24",
+        "teamSize": "Squad",
+        "teamMates": [
+          "WeCoyote",
+          "KingZurenson",
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 3,
@@ -28,9 +64,9 @@
         "matchStart": "10.04. 18:17",
         "teamSize": "Squad",
         "teamMates": [
-          "Flopsibert",
           "WeCoyote",
-          "KingZurenson"
+          "KingZurenson",
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 23,
@@ -46,8 +82,8 @@
         "matchStart": "10.04. 18:04",
         "teamSize": "Squad",
         "teamMates": [
-          "WeCoyote",
-          "Flopsibert"
+          "Flopsibert",
+          "WeCoyote"
         ],
         "perspective": "FPP",
         "placement": 6,
@@ -63,8 +99,8 @@
         "matchStart": "10.04. 17:52",
         "teamSize": "Squad",
         "teamMates": [
-          "Flopsibert",
           "Skief-O",
+          "Flopsibert",
           "WeCoyote"
         ],
         "perspective": "FPP",
@@ -81,9 +117,9 @@
         "matchStart": "10.04. 17:25",
         "teamSize": "Binaryspot",
         "teamMates": [
+          "JohnySpice",
           "MentaStrike",
-          "WoodkeRaj",
-          "JohnySpice"
+          "WoodkeRaj"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -99,8 +135,8 @@
         "matchStart": "10.04. 16:58",
         "teamSize": "Binaryspot",
         "teamMates": [
-          "Petrzlen",
-          "A7-Corsair"
+          "A7-Corsair",
+          "Petrzlen"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -116,9 +152,9 @@
         "matchStart": "10.04. 16:32",
         "teamSize": "Binaryspot",
         "teamMates": [
+          "Acid1ty",
           "echezh",
-          "ONEloveJuly",
-          "Acid1ty"
+          "ONEloveJuly"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -134,9 +170,9 @@
         "matchStart": "10.04. 16:16",
         "teamSize": "Squad",
         "teamMates": [
-          "WeCoyote",
+          "Flopsibert",
           "rentnerradierer",
-          "Flopsibert"
+          "WeCoyote"
         ],
         "perspective": "FPP",
         "placement": 12,
@@ -147,42 +183,6 @@
         "assists": 0,
         "damage": 162,
         "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.squad-fpp.eu.2026.04.10.16.a014e039-4bae-42ca-a2b6-eb81e70152e2"
-      },
-      {
-        "matchStart": "10.04. 15:50",
-        "teamSize": "Squad",
-        "teamMates": [
-          "Flopsibert",
-          "7_vAsA_7",
-          "WeCoyote"
-        ],
-        "perspective": "FPP",
-        "placement": 8,
-        "map": "Rondo",
-        "survivalTime": "22:07",
-        "distance": "8.9",
-        "kills": 0,
-        "assists": 0,
-        "damage": 0,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.squad-fpp.eu.2026.04.10.15.2cac93a9-cc81-43c9-8815-960e0f0f632d"
-      },
-      {
-        "matchStart": "10.04. 15:29",
-        "teamSize": "Squad",
-        "teamMates": [
-          "Imsiic",
-          "Flopsibert",
-          "WeCoyote"
-        ],
-        "perspective": "FPP",
-        "placement": 9,
-        "map": "Miramar",
-        "survivalTime": "10:58",
-        "distance": "1.2",
-        "kills": 3,
-        "assists": 0,
-        "damage": 468,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.squad-fpp.eu.2026.04.10.15.4a314af6-328c-4462-a339-6068fc0ae7ca"
       }
     ]
   }
