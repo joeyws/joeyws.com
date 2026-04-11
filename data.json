@@ -1,8 +1,8 @@
 {
-  "timestamp": "11.04. 13:05",
-  "weatherTempCelsius": 20,
+  "timestamp": "11.04. 14:38",
+  "weatherTempCelsius": 21,
   "githubLastCommit": "April 11, 2026",
-  "steamStatus": "offline",
+  "steamStatus": "online",
   "pubg": {
     "name": "joeyws2",
     "lastMatches": [
@@ -46,9 +46,9 @@
         "matchStart": "10.04. 18:50",
         "teamSize": "Squad",
         "teamMates": [
-          "WeCoyote",
+          "Flopsibert",
           "KingZurenson",
-          "Flopsibert"
+          "WeCoyote"
         ],
         "perspective": "FPP",
         "placement": 5,
@@ -65,8 +65,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "Flopsibert",
-          "WeCoyote",
-          "KingZurenson"
+          "KingZurenson",
+          "WeCoyote"
         ],
         "perspective": "FPP",
         "placement": 3,
@@ -83,8 +83,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "Flopsibert",
-          "KingZurenson",
-          "WeCoyote"
+          "WeCoyote",
+          "KingZurenson"
         ],
         "perspective": "FPP",
         "placement": 23,
@@ -100,8 +100,8 @@
         "matchStart": "10.04. 18:04",
         "teamSize": "Squad",
         "teamMates": [
-          "Flopsibert",
-          "WeCoyote"
+          "WeCoyote",
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 6,
@@ -118,8 +118,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "Flopsibert",
-          "WeCoyote",
-          "Skief-O"
+          "Skief-O",
+          "WeCoyote"
         ],
         "perspective": "FPP",
         "placement": 17,
@@ -153,8 +153,8 @@
         "matchStart": "10.04. 16:58",
         "teamSize": "Binaryspot",
         "teamMates": [
-          "A7-Corsair",
-          "Petrzlen"
+          "Petrzlen",
+          "A7-Corsair"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -170,9 +170,9 @@
         "matchStart": "10.04. 16:32",
         "teamSize": "Binaryspot",
         "teamMates": [
-          "Acid1ty",
           "echezh",
-          "ONEloveJuly"
+          "ONEloveJuly",
+          "Acid1ty"
         ],
         "perspective": "TPP",
         "placement": 1,
