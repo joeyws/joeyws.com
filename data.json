@@ -1,6 +1,6 @@
 {
-  "timestamp": "11.04. 4:58",
-  "weatherTempCelsius": 8,
+  "timestamp": "11.04. 6:06",
+  "weatherTempCelsius": 9,
   "githubLastCommit": "April 11, 2026",
   "steamStatus": "online",
   "pubg": {
@@ -28,9 +28,9 @@
         "matchStart": "10.04. 19:20",
         "teamSize": "Ibr",
         "teamMates": [
-          "Flopsibert",
+          "TheCurlyTwin",
           "KingZurenson",
-          "TheCurlyTwin"
+          "Flopsibert"
         ],
         "perspective": "TPP",
         "placement": 3,
@@ -46,9 +46,9 @@
         "matchStart": "10.04. 18:50",
         "teamSize": "Squad",
         "teamMates": [
+          "Flopsibert",
           "KingZurenson",
-          "WeCoyote",
-          "Flopsibert"
+          "WeCoyote"
         ],
         "perspective": "FPP",
         "placement": 5,
@@ -64,9 +64,9 @@
         "matchStart": "10.04. 18:24",
         "teamSize": "Squad",
         "teamMates": [
-          "WeCoyote",
+          "Flopsibert",
           "KingZurenson",
-          "Flopsibert"
+          "WeCoyote"
         ],
         "perspective": "FPP",
         "placement": 3,
@@ -82,9 +82,9 @@
         "matchStart": "10.04. 18:17",
         "teamSize": "Squad",
         "teamMates": [
+          "Flopsibert",
           "WeCoyote",
-          "KingZurenson",
-          "Flopsibert"
+          "KingZurenson"
         ],
         "perspective": "FPP",
         "placement": 23,
@@ -100,8 +100,8 @@
         "matchStart": "10.04. 18:04",
         "teamSize": "Squad",
         "teamMates": [
-          "Flopsibert",
-          "WeCoyote"
+          "WeCoyote",
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 6,
@@ -117,8 +117,8 @@
         "matchStart": "10.04. 17:52",
         "teamSize": "Squad",
         "teamMates": [
-          "Skief-O",
           "Flopsibert",
+          "Skief-O",
           "WeCoyote"
         ],
         "perspective": "FPP",
@@ -135,9 +135,9 @@
         "matchStart": "10.04. 17:25",
         "teamSize": "Binaryspot",
         "teamMates": [
-          "JohnySpice",
           "MentaStrike",
-          "WoodkeRaj"
+          "WoodkeRaj",
+          "JohnySpice"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -153,8 +153,8 @@
         "matchStart": "10.04. 16:58",
         "teamSize": "Binaryspot",
         "teamMates": [
-          "A7-Corsair",
-          "Petrzlen"
+          "Petrzlen",
+          "A7-Corsair"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -170,9 +170,9 @@
         "matchStart": "10.04. 16:32",
         "teamSize": "Binaryspot",
         "teamMates": [
-          "Acid1ty",
           "echezh",
-          "ONEloveJuly"
+          "ONEloveJuly",
+          "Acid1ty"
         ],
         "perspective": "TPP",
         "placement": 1,
