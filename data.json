@@ -1,11 +1,29 @@
 {
-  "timestamp": "11.04. 16:40",
+  "timestamp": "11.04. 17:35",
   "weatherTempCelsius": 21,
   "githubLastCommit": "April 11, 2026",
   "steamStatus": "online",
   "pubg": {
     "name": "joeyws2",
     "lastMatches": [
+      {
+        "matchStart": "11.04. 17:02",
+        "teamSize": "Binaryspot",
+        "teamMates": [
+          "CHEllBORZ",
+          "MartinKing645",
+          "Ghost-__-LegendX"
+        ],
+        "perspective": "TPP",
+        "placement": 1,
+        "map": "Desert_Main_BinarySpot",
+        "survivalTime": "24:41",
+        "distance": "3.4",
+        "kills": 0,
+        "assists": 0,
+        "damage": 0,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.binaryspot.eu.2026.04.11.17.d043b68a-4bf7-42fd-ac9c-a624c220e02a"
+      },
       {
         "matchStart": "10.04. 21:12",
         "teamSize": "Binaryspot",
@@ -28,9 +46,9 @@
         "matchStart": "10.04. 19:20",
         "teamSize": "Ibr",
         "teamMates": [
-          "Flopsibert",
           "TheCurlyTwin",
-          "KingZurenson"
+          "KingZurenson",
+          "Flopsibert"
         ],
         "perspective": "TPP",
         "placement": 3,
@@ -46,9 +64,9 @@
         "matchStart": "10.04. 18:50",
         "teamSize": "Squad",
         "teamMates": [
-          "WeCoyote",
+          "Flopsibert",
           "KingZurenson",
-          "Flopsibert"
+          "WeCoyote"
         ],
         "perspective": "FPP",
         "placement": 5,
@@ -64,9 +82,9 @@
         "matchStart": "10.04. 18:24",
         "teamSize": "Squad",
         "teamMates": [
-          "WeCoyote",
+          "Flopsibert",
           "KingZurenson",
-          "Flopsibert"
+          "WeCoyote"
         ],
         "perspective": "FPP",
         "placement": 3,
@@ -82,9 +100,9 @@
         "matchStart": "10.04. 18:17",
         "teamSize": "Squad",
         "teamMates": [
-          "KingZurenson",
           "Flopsibert",
-          "WeCoyote"
+          "WeCoyote",
+          "KingZurenson"
         ],
         "perspective": "FPP",
         "placement": 23,
@@ -100,8 +118,8 @@
         "matchStart": "10.04. 18:04",
         "teamSize": "Squad",
         "teamMates": [
-          "Flopsibert",
-          "WeCoyote"
+          "WeCoyote",
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 6,
@@ -117,9 +135,9 @@
         "matchStart": "10.04. 17:52",
         "teamSize": "Squad",
         "teamMates": [
-          "WeCoyote",
+          "Flopsibert",
           "Skief-O",
-          "Flopsibert"
+          "WeCoyote"
         ],
         "perspective": "FPP",
         "placement": 17,
@@ -165,24 +183,6 @@
         "assists": 0,
         "damage": 0,
         "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.binaryspot.eu.2026.04.10.16.e7ab205a-9cab-4ba3-904b-5448c5028537"
-      },
-      {
-        "matchStart": "10.04. 16:32",
-        "teamSize": "Binaryspot",
-        "teamMates": [
-          "Acid1ty",
-          "echezh",
-          "ONEloveJuly"
-        ],
-        "perspective": "TPP",
-        "placement": 1,
-        "map": "Desert_Main_BinarySpot",
-        "survivalTime": "22:48",
-        "distance": "2.4",
-        "kills": 0,
-        "assists": 0,
-        "damage": 0,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.binaryspot.eu.2026.04.10.16.1eac1587-ce2a-4ce0-9fc5-55e44ad61f26"
       }
     ]
   }
