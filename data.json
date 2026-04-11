@@ -1,5 +1,5 @@
 {
-  "timestamp": "11.04. 14:38",
+  "timestamp": "11.04. 15:37",
   "weatherTempCelsius": 21,
   "githubLastCommit": "April 11, 2026",
   "steamStatus": "online",
@@ -28,9 +28,9 @@
         "matchStart": "10.04. 19:20",
         "teamSize": "Ibr",
         "teamMates": [
+          "Flopsibert",
           "TheCurlyTwin",
-          "KingZurenson",
-          "Flopsibert"
+          "KingZurenson"
         ],
         "perspective": "TPP",
         "placement": 3,
@@ -46,9 +46,9 @@
         "matchStart": "10.04. 18:50",
         "teamSize": "Squad",
         "teamMates": [
-          "Flopsibert",
+          "WeCoyote",
           "KingZurenson",
-          "WeCoyote"
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 5,
@@ -64,9 +64,9 @@
         "matchStart": "10.04. 18:24",
         "teamSize": "Squad",
         "teamMates": [
-          "Flopsibert",
+          "WeCoyote",
           "KingZurenson",
-          "WeCoyote"
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 3,
@@ -82,9 +82,9 @@
         "matchStart": "10.04. 18:17",
         "teamSize": "Squad",
         "teamMates": [
+          "KingZurenson",
           "Flopsibert",
-          "WeCoyote",
-          "KingZurenson"
+          "WeCoyote"
         ],
         "perspective": "FPP",
         "placement": 23,
@@ -100,8 +100,8 @@
         "matchStart": "10.04. 18:04",
         "teamSize": "Squad",
         "teamMates": [
-          "WeCoyote",
-          "Flopsibert"
+          "Flopsibert",
+          "WeCoyote"
         ],
         "perspective": "FPP",
         "placement": 6,
@@ -117,9 +117,9 @@
         "matchStart": "10.04. 17:52",
         "teamSize": "Squad",
         "teamMates": [
-          "Flopsibert",
+          "WeCoyote",
           "Skief-O",
-          "WeCoyote"
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 17,
@@ -170,9 +170,9 @@
         "matchStart": "10.04. 16:32",
         "teamSize": "Binaryspot",
         "teamMates": [
+          "Acid1ty",
           "echezh",
-          "ONEloveJuly",
-          "Acid1ty"
+          "ONEloveJuly"
         ],
         "perspective": "TPP",
         "placement": 1,
