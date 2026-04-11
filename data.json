@@ -1,5 +1,5 @@
 {
-  "timestamp": "11.04. 21:36",
+  "timestamp": "11.04. 22:36",
   "weatherTempCelsius": 16,
   "githubLastCommit": "April 11, 2026",
   "steamStatus": "online",
@@ -10,9 +10,9 @@
         "matchStart": "11.04. 17:02",
         "teamSize": "Binaryspot",
         "teamMates": [
+          "Ghost-__-LegendX",
           "CHEllBORZ",
-          "MartinKing645",
-          "Ghost-__-LegendX"
+          "MartinKing645"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -46,9 +46,9 @@
         "matchStart": "10.04. 19:20",
         "teamSize": "Ibr",
         "teamMates": [
-          "TheCurlyTwin",
+          "Flopsibert",
           "KingZurenson",
-          "Flopsibert"
+          "TheCurlyTwin"
         ],
         "perspective": "TPP",
         "placement": 3,
@@ -64,8 +64,8 @@
         "matchStart": "10.04. 18:50",
         "teamSize": "Squad",
         "teamMates": [
-          "WeCoyote",
           "KingZurenson",
+          "WeCoyote",
           "Flopsibert"
         ],
         "perspective": "FPP",
@@ -82,9 +82,9 @@
         "matchStart": "10.04. 18:24",
         "teamSize": "Squad",
         "teamMates": [
-          "Flopsibert",
           "WeCoyote",
-          "KingZurenson"
+          "KingZurenson",
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 3,
@@ -100,9 +100,9 @@
         "matchStart": "10.04. 18:17",
         "teamSize": "Squad",
         "teamMates": [
-          "Flopsibert",
+          "WeCoyote",
           "KingZurenson",
-          "WeCoyote"
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 23,
@@ -135,9 +135,9 @@
         "matchStart": "10.04. 17:52",
         "teamSize": "Squad",
         "teamMates": [
+          "Skief-O",
           "Flopsibert",
-          "WeCoyote",
-          "Skief-O"
+          "WeCoyote"
         ],
         "perspective": "FPP",
         "placement": 17,
@@ -153,9 +153,9 @@
         "matchStart": "10.04. 17:25",
         "teamSize": "Binaryspot",
         "teamMates": [
+          "JohnySpice",
           "MentaStrike",
-          "WoodkeRaj",
-          "JohnySpice"
+          "WoodkeRaj"
         ],
         "perspective": "TPP",
         "placement": 1,
