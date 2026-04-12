@@ -1,5 +1,5 @@
 {
-  "timestamp": "12.04. 7:19",
+  "timestamp": "12.04. 8:54",
   "weatherTempCelsius": 8,
   "githubLastCommit": "April 12, 2026",
   "steamStatus": "online",
@@ -10,9 +10,9 @@
         "matchStart": "11.04. 17:02",
         "teamSize": "Binaryspot",
         "teamMates": [
+          "Ghost-__-LegendX",
           "CHEllBORZ",
-          "MartinKing645",
-          "Ghost-__-LegendX"
+          "MartinKing645"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -46,9 +46,9 @@
         "matchStart": "10.04. 19:20",
         "teamSize": "Ibr",
         "teamMates": [
+          "Flopsibert",
           "TheCurlyTwin",
-          "KingZurenson",
-          "Flopsibert"
+          "KingZurenson"
         ],
         "perspective": "TPP",
         "placement": 3,
@@ -82,9 +82,9 @@
         "matchStart": "10.04. 18:24",
         "teamSize": "Squad",
         "teamMates": [
-          "Flopsibert",
           "WeCoyote",
-          "KingZurenson"
+          "KingZurenson",
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 3,
@@ -100,8 +100,8 @@
         "matchStart": "10.04. 18:17",
         "teamSize": "Squad",
         "teamMates": [
-          "Flopsibert",
           "KingZurenson",
+          "Flopsibert",
           "WeCoyote"
         ],
         "perspective": "FPP",
@@ -135,9 +135,9 @@
         "matchStart": "10.04. 17:52",
         "teamSize": "Squad",
         "teamMates": [
-          "Flopsibert",
           "WeCoyote",
-          "Skief-O"
+          "Skief-O",
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 17,
@@ -171,8 +171,8 @@
         "matchStart": "10.04. 16:58",
         "teamSize": "Binaryspot",
         "teamMates": [
-          "A7-Corsair",
-          "Petrzlen"
+          "Petrzlen",
+          "A7-Corsair"
         ],
         "perspective": "TPP",
         "placement": 1,
