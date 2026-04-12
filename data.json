@@ -1,5 +1,5 @@
 {
-  "timestamp": "12.04. 22:38",
+  "timestamp": "12.04. 23:39",
   "weatherTempCelsius": 8,
   "githubLastCommit": "April 12, 2026",
   "steamStatus": "offline",
@@ -10,9 +10,9 @@
         "matchStart": "12.04. 18:55",
         "teamSize": "Binaryspot",
         "teamMates": [
-          "atonee",
           "OlaiSR",
-          "mtlhd"
+          "mtlhd",
+          "atonee"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -45,8 +45,8 @@
         "matchStart": "12.04. 13:17",
         "teamSize": "Squad",
         "teamMates": [
-          "Femida66",
           "Pantadeus",
+          "Femida66",
           "DaggaKoeKie"
         ],
         "perspective": "TPP",
@@ -63,9 +63,9 @@
         "matchStart": "12.04. 11:19",
         "teamSize": "Squad",
         "teamMates": [
-          "GhuChee",
           "WeCoyote",
-          "Flopsibert"
+          "Flopsibert",
+          "GhuChee"
         ],
         "perspective": "FPP",
         "placement": 8,
@@ -81,9 +81,9 @@
         "matchStart": "12.04. 10:56",
         "teamSize": "Squad",
         "teamMates": [
-          "WeCoyote",
           "Flopsibert",
-          "Battlemann"
+          "Battlemann",
+          "WeCoyote"
         ],
         "perspective": "FPP",
         "placement": 8,
@@ -99,9 +99,9 @@
         "matchStart": "12.04. 10:36",
         "teamSize": "Squad",
         "teamMates": [
+          "Flopsibert",
           "Battlemann",
-          "WeCoyote",
-          "Flopsibert"
+          "WeCoyote"
         ],
         "perspective": "FPP",
         "placement": 11,
@@ -117,9 +117,9 @@
         "matchStart": "12.04. 10:28",
         "teamSize": "Squad",
         "teamMates": [
-          "Battlemann",
+          "Flopsibert",
           "WeCoyote",
-          "Flopsibert"
+          "Battlemann"
         ],
         "perspective": "FPP",
         "placement": 21,
