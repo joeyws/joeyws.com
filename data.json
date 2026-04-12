@@ -1,11 +1,29 @@
 {
-  "timestamp": "12.04. 9:50",
+  "timestamp": "12.04. 10:41",
   "weatherTempCelsius": 8,
   "githubLastCommit": "April 12, 2026",
   "steamStatus": "online",
   "pubg": {
     "name": "joeyws2",
     "lastMatches": [
+      {
+        "matchStart": "12.04. 10:01",
+        "teamSize": "Squad",
+        "teamMates": [
+          "Flopsibert",
+          "WeCoyote",
+          "1KUNTEPER"
+        ],
+        "perspective": "FPP",
+        "placement": 5,
+        "map": "Erangel",
+        "survivalTime": "18:25",
+        "distance": "7.9",
+        "kills": 0,
+        "assists": 0,
+        "damage": 0,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.squad-fpp.eu.2026.04.12.10.fcac21cd-5e5e-4cef-a66a-e691edbe2150"
+      },
       {
         "matchStart": "11.04. 17:02",
         "teamSize": "Binaryspot",
@@ -100,9 +118,9 @@
         "matchStart": "10.04. 18:17",
         "teamSize": "Squad",
         "teamMates": [
+          "KingZurenson",
           "Flopsibert",
-          "WeCoyote",
-          "KingZurenson"
+          "WeCoyote"
         ],
         "perspective": "FPP",
         "placement": 23,
@@ -136,8 +154,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "Flopsibert",
-          "Skief-O",
-          "WeCoyote"
+          "WeCoyote",
+          "Skief-O"
         ],
         "perspective": "FPP",
         "placement": 17,
@@ -166,23 +184,6 @@
         "assists": 0,
         "damage": 0,
         "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.binaryspot.eu.2026.04.10.17.c7e2cbd9-de5d-43e6-bff9-6ff2802ba1e8"
-      },
-      {
-        "matchStart": "10.04. 16:58",
-        "teamSize": "Binaryspot",
-        "teamMates": [
-          "Petrzlen",
-          "A7-Corsair"
-        ],
-        "perspective": "TPP",
-        "placement": 1,
-        "map": "Desert_Main_BinarySpot",
-        "survivalTime": "21:12",
-        "distance": "9.1",
-        "kills": 0,
-        "assists": 0,
-        "damage": 0,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.binaryspot.eu.2026.04.10.16.e7ab205a-9cab-4ba3-904b-5448c5028537"
       }
     ]
   }
