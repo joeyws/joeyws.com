@@ -1,8 +1,8 @@
 {
-  "timestamp": "12.04. 5:27",
-  "weatherTempCelsius": 10,
+  "timestamp": "12.04. 7:19",
+  "weatherTempCelsius": 8,
   "githubLastCommit": "April 12, 2026",
-  "steamStatus": "offline",
+  "steamStatus": "online",
   "pubg": {
     "name": "joeyws2",
     "lastMatches": [
@@ -10,9 +10,9 @@
         "matchStart": "11.04. 17:02",
         "teamSize": "Binaryspot",
         "teamMates": [
-          "Ghost-__-LegendX",
           "CHEllBORZ",
-          "MartinKing645"
+          "MartinKing645",
+          "Ghost-__-LegendX"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -46,9 +46,9 @@
         "matchStart": "10.04. 19:20",
         "teamSize": "Ibr",
         "teamMates": [
-          "Flopsibert",
           "TheCurlyTwin",
-          "KingZurenson"
+          "KingZurenson",
+          "Flopsibert"
         ],
         "perspective": "TPP",
         "placement": 3,
@@ -82,9 +82,9 @@
         "matchStart": "10.04. 18:24",
         "teamSize": "Squad",
         "teamMates": [
+          "Flopsibert",
           "WeCoyote",
-          "KingZurenson",
-          "Flopsibert"
+          "KingZurenson"
         ],
         "perspective": "FPP",
         "placement": 3,
@@ -100,8 +100,8 @@
         "matchStart": "10.04. 18:17",
         "teamSize": "Squad",
         "teamMates": [
-          "KingZurenson",
           "Flopsibert",
+          "KingZurenson",
           "WeCoyote"
         ],
         "perspective": "FPP",
@@ -135,9 +135,9 @@
         "matchStart": "10.04. 17:52",
         "teamSize": "Squad",
         "teamMates": [
+          "Flopsibert",
           "WeCoyote",
-          "Skief-O",
-          "Flopsibert"
+          "Skief-O"
         ],
         "perspective": "FPP",
         "placement": 17,
@@ -171,8 +171,8 @@
         "matchStart": "10.04. 16:58",
         "teamSize": "Binaryspot",
         "teamMates": [
-          "Petrzlen",
-          "A7-Corsair"
+          "A7-Corsair",
+          "Petrzlen"
         ],
         "perspective": "TPP",
         "placement": 1,
