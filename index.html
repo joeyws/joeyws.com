@@ -24,9 +24,10 @@
     body{padding:var(--spacer);overflow-y:scroll;color:var(--text);background:var(--background);font:normal normal 1rem/1.2em webfont,monospace;}
     i{font-style:italic;}
     h2,h3,p,pre,table,#map{margin-top:.8rem;}
+    p{margin-left:auto;margin-right:auto;}
     hr+*,img+p,.content *:first-child{margin-top:0;}
     table{width:100%;}tr{border-top:1px solid var(--text);}td{vertical-align:top;}td:nth-child(1){width:8em;padding-right:var(--spacer);}td:nth-child(2){width:auto;}
-    hr{margin:3rem 0;}
+    hr{margin:3.2rem 0;}
     a,.video:not(.playing)::after{background:#0008;white-space:nowrap;text-decoration:underline;}
     a:hover,.video:not(.playing):hover::after{background:#f0f;color:var(--background);text-decoration:none;}
     /* HEADER */
@@ -36,6 +37,9 @@
     nav a,nav a:hover{text-decoration:none;background:transparent;color:inherit;}
     nav a.open{background:#f0f;color:var(--background);}
     @media (max-width:500px) {#header{flex-direction:column;}}
+    /* CENTER */
+    .content *{margin-left:auto;margin-right:auto;}
+    .center{text-align:center;}
     /* MARQUEE */
     .marquee{background:#0f0;color:var(--background);/* margin:calc(-1 * var(--spacer)); */margin-bottom:var(--spacer);transition:.2s width ease-out;line-height:1.5em;box-sizing:border-box;width:1px;overflow:hidden;white-space:nowrap;display:block;user-select:none;/* mask-mode:alpha;mask-image:linear-gradient(to right, transparent, #000 20%, #000 calc(100% - 20%), transparent); */}
     .marquee-track{display:inline-flex;white-space:nowrap;will-change:transform;animation:marquee 60s linear infinite;}
@@ -56,7 +60,7 @@
     .gallery-nav,.gallery-caption{text-align:center;}
     .gallery-nav,.gallery-img{user-select:none;}
     .gallery-img,.gallery-caption{margin-top:calc(var(--spacer)*1);}
-    .gallery-img{height:600px;display:flex;align-items:center;justify-content:center;}
+    .gallery-img{margin:var(--spacer) 0;height:600px;display:flex;align-items:center;justify-content:center;}
     .gallery-img img{display:block;max-height:100%;max-width:100%;object-fit:contain;}
     /* SVG */
     svg *{fill:var(--text);}
@@ -68,7 +72,7 @@
     @keyframes color{0%{background:#0f0;}20%{background:#f0f;}40%{background:#ff0;}60%{background:#00f;}80%{background:#f00;}}
     .loading{animation:.3s blink-loading steps(1) infinite;}
     @keyframes map{100%{outline-color:transparent;outline-offset:20px;}}
-    #map{width:760px;max-width:100%;aspect-ratio:150/75;background:center center url(img/other/world.gif) no-repeat scroll;position:relative;background-size:contain;}
+    #map{width:640px;max-width:100%;aspect-ratio:150/75;background:center center url(img/other/world.gif) no-repeat scroll;position:relative;background-size:contain;}
     #map::after{top:23%;left:52.5%;outline:1px solid #0f0;border:1px solid #000;background:#0f0;animation:map 1.2s infinite ease-out;width:7px;height:7px;border-radius:100vmax;pointer-events:none;position:absolute;transform:translate(-50%,-50%);display:block;content:"";}
     #cursor{width:12px;height:12px;background:#fff1;backdrop-filter:blur(20px) invert(100%) saturate(10);-webkit-backdrop-filter:blur(20px) invert(100%) saturate(10);border-radius:100vmax;position:fixed;top:-50px;left:50%;transform:translate(-50%,-50%);font-size:0;line-height:0;z-index:99999999;pointer-events:none;}*{cursor:none !important;}
     /* GAMING */
@@ -102,9 +106,9 @@
         </video>
         <div class="controls"><div class="progress"><div class="progress-filled"></div></div></div>
     </div>
-    <p style="max-width:540px;">Land der Echsen (Germany, 2021). On the forgotten grounds of a derelict freight yard, a new urban quarter is in the making. For years, non-profit collectives have occupied the old loading halls, breathing life into the decaying space. But now, as redevelopment plans advance and demolition looms, they are forced to leave. Just then, an unexpected presence appears: lizards. Silent, enigmatic, and strangely defiant, they threaten to derail the entire project.</p>
-    <p style="max-width:540px;">Born from <i>Anti-Stuttgart &mdash; A Determinate Negation</i>, a critical design studio at <a href="https://www.igma.uni-stuttgart.de/en/">IGmA</a>, the film reimagines urban development as a stage for ecological and political tension.</p>
-    <p style="max-width:540px;">Premiered at the University of Stuttgart&#8217;s architecture <a href="https://www.k1.live/">graduate exhibition</a> and featured at the <a href="https://www.current-stuttgart.de/">CURRENT Festival</a> for Art and Urban Space.</p>
+    <p style="max-width:640px;text-indent:3em;">Land der Echsen (Germany, 2021). On the forgotten grounds of a derelict freight yard, a new urban quarter is in the making. For years, non-profit collectives have occupied the old loading halls, breathing life into the decaying space. But now, as redevelopment plans advance and demolition looms, they are forced to leave. Just then, an unexpected presence appears: lizards. Silent, enigmatic, and strangely defiant, they threaten to derail the entire project.</p>
+    <p style="max-width:640px;text-indent:3em;">Born from <i>Anti-Stuttgart &mdash; A Determinate Negation</i>, a critical design studio at <a href="https://www.igma.uni-stuttgart.de/en/">IGmA</a>, the film reimagines urban development as a stage for ecological and political tension.</p>
+    <p style="max-width:640px;text-indent:3em;">Premiered at the University of Stuttgart&#8217;s architecture <a href="https://www.k1.live/">graduate exhibition</a> and featured at the <a href="https://www.current-stuttgart.de/">CURRENT Festival</a> for Art and Urban Space.</p>
     <hr>
     <div class="gallery">
         <img loading="lazy" src="img/250625-2.jpg" alt="Casa di accoglienza dei pellegrini di San Pietro, Renovation">
@@ -168,34 +172,36 @@
     <hr>
 </div>
 <div class="content" id="contact">
-    <p>
+    <p class="center">
         Joey Schweickhardt<br>
         <span class="address1"></span><br>
         <span class="address2"></span><br>
         Germany
     </p>
-    <p>
+    <p class="center">
         <a class="phone" href="javascript:"></a><br>
         <a class="email" href="javascript:"></a>
     </p>
-    <p>
+    <p class="center">
         <a href="https://www.linkedin.com/in/joeyschweickhardt/"><svg viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg"><title>LinkedIn</title><path fill="var(--text)" fill-rule="evenodd" d="M8 72h56a8 8 0 0 0 8-8V8a8 8 0 0 0-8-8H8a8 8 0 0 0-8 8v56a8 8 0 0 0 8 8z M62 62H51.3V43.8c0-5-1.9-7.8-5.8-7.8-4.3 0-6.6 2.9-6.6 7.8V62H28.6V27.3h10.3V32s3.1-5.7 10.5-5.7S62 30.8 62 40.1V62z M16.3 22.8A6.4 6.4 0 1 1 16.3 10a6.4 6.4 0 0 1 0 12.8z M11 62h10.8V27.3H11V62z"/></svg></a>
         <!-- <a href="https://twitter.com/joeyws"><svg viewBox="0 0 248 204" xmlns="http://www.w3.org/2000/svg"><title>Twitter</title><path fill="var(--text)" d="M222 51.3c.1 2.2.1 4.3.1 6.5 0 66.7-50.8 143.7-143.7 143.7-27.4 0-54.3-7.8-77.4-22.6 4 .5 8 .7 12 .7 22.7 0 44.8-7.6 62.7-21.7-21.6-.4-40.6-14.5-47.2-35.1 7.6 1.5 15.4 1.2 22.8-.9-23.6-4.8-40.5-25.5-40.5-49.5v-.6c7 3.9 14.9 6.1 22.9 6.3C11.6 63.3 4.7 33.8 18.1 10.7c25.6 31.6 63.5 50.7 104.1 52.8-4.1-17.5 1.5-35.9 14.6-48.3 20.3-19.1 52.3-18.1 71.4 2.2 11.3-2.2 22.2-6.4 32.1-12.3-3.8 11.7-11.7 21.6-22.2 27.9 10-1.2 19.8-3.9 29-8-6.8 10.2-15.3 19-25.2 26.2z"/></svg></a> -->
         <a href="https://www.instagram.com/joeyws"><svg viewBox="0 0 169.063 169.063" xmlns="http://www.w3.org/2000/svg"><title>Instagram</title><path fill="var(--text)" fill-rule="evenodd" d="M122.4 0H46.7C20.9 0 0 20.9 0 46.7v75.7c0 25.7 20.9 46.7 46.7 46.7h75.7c25.7 0 46.7-20.9 46.7-46.7V46.7 C169.1 20.9 148.1 0 122.4 0z M154.1 122.4c0 17.5-14.2 31.7-31.7 31.7H46.7c-17.5 0-31.7-14.2-31.7-31.7V46.7 C15 29.2 29.2 15 46.7 15h75.7c17.5 0 31.7 14.2 31.7 31.7v75.7z M84.5 41c-24 0-43.6 19.5-43.6 43.6s19.6 43.6 43.6 43.6 43.6-19.6 43.6-43.6 S108.6 41 84.5 41zm0 72.1c-15.7 0-28.6-12.8-28.6-28.6S68.8 56 84.5 56s28.6 12.8 28.6 28.6 -12.9 28.6-28.6 28.6z M129.9 28.3c-2.9 0-5.7 1.2-7.8 3.2-2 2-3.2 4.9-3.2 7.8s1.2 5.7 3.2 7.8 c2 2 4.9 3.2 7.8 3.2s5.7-1.2 7.8-3.2c2.1-2.1 3.2-4.9 3.2-7.8s-1.1-5.7-3.2-7.8 c-2-2-4.9-3.2-7.8-3.2z"/></svg></a>
     </p>
     <hr>
     <div id="map"></div>
-    <p>Image: NASA/Blue Marble</p>
+    <p class="center">Image: NASA/Blue Marble</p>
     <hr>
     <svg id="mitgliedakbw" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 388.3 99.2" style="enable-background:new 0 0 388.3 99.2;"><title>Member Chamber of Architecture Baden-Württemberg</title><path d="M75.6,61.8V44.9h5.7l2.6,11.5h0l2.8-11.5h5.5v16.9h-3.4v-13h0l-3.3,13h-3.4l-3.1-13h0v13H75.6z"/><path d="M98.5,44.9v2.6h-3.3v-2.6H98.5z M98.5,61.8h-3.3V50h3.3V61.8z"/><path d="M100.1,50h1.3v-1.9l3.3-1.5V50h1.7v2h-1.7v6.3c0,0.9,0,1.5,1.1,1.5c0.2,0,0.4,0,0.6,0v2c-0.4,0-0.9,0.1-1.7,0.1c-2.9,0-3.2-1.9-3.2-2.6v-7.3h-1.3V50z"/><path d="M117,50v12.3c0,0.8,0,4-4.5,4c-2.5,0-4.6-0.6-4.6-3.5h3.2c0,0.5,0.1,0.9,0.3,1.2c0.2,0.3,0.6,0.5,1.1,0.5c0.8,0,1.2-0.8,1.2-2v-2.3h0c-0.5,0.9-1.4,1.4-2.5,1.4c-3.6,0-3.5-3.3-3.5-6c0-2.6,0-5.9,3.5-5.9c1.2,0,2.2,0.5,2.6,1.6h0V50H117z M112.3,59.6c1.2,0,1.4-1.2,1.4-3.7c0-2.6-0.1-4.1-1.3-4.1c-1.2,0-1.5,0.9-1.5,4.5C110.9,57.4,110.8,59.6,112.3,59.6z"/><path d="M123.3,44.9v16.9H120V44.9H123.3z"/><path d="M129.8,44.9v2.6h-3.3v-2.6H129.8z M129.8,61.8h-3.3V50h3.3V61.8z"/><path d="M135.7,56.5c0,1.4,0,3.5,1.5,3.5c1.2,0,1.4-1.1,1.4-2.1h3.3c0,1.3-0.5,2.3-1.3,3.1c-0.8,0.7-1.9,1.1-3.5,1.1c-4.3,0-4.8-2.6-4.8-6.3c0-3.2,0.5-6,4.8-6c4.4,0,4.9,2.9,4.8,6.7H135.7z M138.7,54.6c0-1.1,0-2.8-1.5-2.8c-1.5,0-1.5,1.8-1.5,2.8H138.7z"/><path d="M150.3,61.8v-1.3h0c-0.6,1.1-1.5,1.5-2.8,1.5c-3.4,0-3.3-3.8-3.3-6.2c0-2.4-0.1-6.1,3.2-6.1c1.2,0,2,0.4,2.7,1.4h0v-6.2h3.3v16.9H150.3z M150.1,55.8c0-2.4,0-4-1.3-4c-1.4,0-1.4,1.6-1.4,4c0,3,0.2,4.2,1.4,4.2C149.9,60,150.1,58.8,150.1,55.8z"/><path d="M167.2,61.8v-1.3h0c-0.6,1.1-1.5,1.5-2.8,1.5c-3.4,0-3.3-3.8-3.3-6.2c0-2.4-0.1-6.1,3.2-6.1c1.2,0,2,0.4,2.7,1.4h0v-6.2h3.3v16.9H167.2z M167,55.8c0-2.4,0-4-1.3-4c-1.4,0-1.4,1.6-1.4,4c0,3,0.2,4.2,1.4,4.2C166.8,60,167,58.8,167,55.8z"/><path d="M176,56.5c0,1.4,0,3.5,1.5,3.5c1.2,0,1.4-1.1,1.4-2.1h3.3c0,1.3-0.5,2.3-1.3,3.1c-0.8,0.7-1.9,1.1-3.5,1.1c-4.3,0-4.8-2.6-4.8-6.3c0-3.2,0.5-6,4.8-6c4.4,0,4.9,2.9,4.8,6.7H176z M179,54.6c0-1.1,0-2.8-1.5-2.8c-1.5,0-1.5,1.8-1.5,2.8H179z"/><path d="M187.8,50v1.5h0c0.6-1.4,1.7-1.8,3.1-1.8v2.9c-2.9-0.2-2.9,1.5-2.9,2.7v6.4h-3.3V50H187.8z"/><path d="M196.5,61.8l4.7-16.9h4.7l4.6,16.9h-3.7l-0.9-3.7H201l-1,3.7H196.5z M203.3,48.2L203.3,48.2l-1.7,7.3h3.4L203.3,48.2z"/><path d="M215.1,50v1.5h0c0.6-1.4,1.7-1.8,3.1-1.8v2.9c-2.9-0.2-2.9,1.5-2.9,2.7v6.4h-3.3V50H215.1z"/><path d="M225.8,54.2c0-1.8-0.4-2.3-1.5-2.3c-1.4,0-1.5,1.2-1.5,3.7c0,3.6,0.3,4.4,1.5,4.4c1,0,1.5-0.9,1.5-2.5h3.3c0,3.2-1.7,4.6-4.8,4.6c-4.3,0-4.8-2.6-4.8-6.3c0-3.2,0.5-6,4.8-6c3,0,4.8,1.4,4.8,4.4H225.8z"/><path d="M237.2,61.8v-8.1c0-1.1-0.2-1.9-1.2-1.9s-1.2,0.8-1.2,1.9v8.1h-3.3V44.9h3.3v6.3h0c0.3-0.5,0.7-0.9,1.2-1.1c0.5-0.2,1-0.3,1.6-0.3c1.6,0,2.9,0.9,2.9,2.6v9.5H237.2z"/><path d="M246.7,44.9v2.6h-3.3v-2.6H246.7z M246.7,61.8h-3.3V50h3.3V61.8z"/><path d="M248.3,50h1.3v-1.9l3.3-1.5V50h1.7v2h-1.7v6.3c0,0.9,0,1.5,1.1,1.5c0.2,0,0.4,0,0.6,0v2c-0.4,0-0.9,0.1-1.7,0.1c-2.9,0-3.2-1.9-3.2-2.6v-7.3h-1.3V50z"/><path d="M259.2,56.5c0,1.4,0,3.5,1.5,3.5c1.2,0,1.4-1.1,1.4-2.1h3.3c0,1.3-0.5,2.3-1.3,3.1c-0.8,0.7-1.9,1.1-3.5,1.1c-4.3,0-4.8-2.6-4.8-6.3c0-3.2,0.5-6,4.8-6c4.4,0,4.9,2.9,4.8,6.7H259.2z M262.2,54.6c0-1.1,0-2.8-1.5-2.8c-1.5,0-1.5,1.8-1.5,2.8H262.2z"/><path d="M267.8,61.8V44.9h3.3V55h0l3-5h3.4l-3.3,5.3l3.7,6.6h-3.7l-3.1-6.4h0v6.4H267.8z"/><path d="M278.2,50h1.3v-1.9l3.3-1.5V50h1.7v2h-1.7v6.3c0,0.9,0,1.5,1.1,1.5c0.2,0,0.4,0,0.6,0v2c-0.4,0-0.9,0.1-1.7,0.1c-2.9,0-3.2-1.9-3.2-2.6v-7.3h-1.3V50z"/><path d="M289.1,56.5c0,1.4,0,3.5,1.5,3.5c1.2,0,1.4-1.1,1.4-2.1h3.3c0,1.3-0.5,2.3-1.3,3.1c-0.8,0.7-1.9,1.1-3.5,1.1c-4.3,0-4.8-2.6-4.8-6.3c0-3.2,0.5-6,4.8-6c4.4,0,4.9,2.9,4.8,6.7H289.1z M292.1,54.6c0-1.1,0-2.8-1.5-2.8c-1.5,0-1.5,1.8-1.5,2.8H292.1z"/><path d="M301,51.2L301,51.2c0.4-0.5,0.8-0.9,1.2-1.1c0.5-0.2,1-0.3,1.6-0.3c1.6,0,2.9,0.9,2.9,2.6v9.5h-3.3v-8.1c0-1.1-0.2-1.9-1.2-1.9c-1.1,0-1.2,0.8-1.2,1.9v8.1h-3.3V50h3.3V51.2z"/><path d="M309.4,61.8V44.9h3.3V55h0l3-5h3.4l-3.3,5.3l3.7,6.6h-3.7l-3.1-6.4h0v6.4H309.4z"/><path d="M330.1,59.6c0,0.7,0.1,1.5,0.2,2.2h-3.1l-0.1-1.6h0c-0.7,1.2-1.7,1.8-3.1,1.8c-2.3,0-3.1-1.7-3.1-3.8c0-3.9,3-4.1,6.1-4v-0.9c0-1-0.1-1.7-1.3-1.7c-1.1,0-1.2,0.9-1.2,1.8h-3.2c0-1.4,0.4-2.3,1.2-2.9c0.7-0.6,1.8-0.8,3.1-0.8c4.2,0,4.7,1.8,4.7,4V59.6z M324,58.2c0,0.8,0.1,1.9,1.2,1.9c1.9,0,1.6-2.6,1.6-3.9C325.2,56.2,324,56.1,324,58.2z"/><path d="M335.9,51.2L335.9,51.2c0.7-1.1,1.6-1.4,2.8-1.4c1.2,0,2.1,0.6,2.6,1.5c0.8-1,1.7-1.5,3.1-1.5c1.6,0,2.9,0.9,2.9,2.6v9.5h-3.3v-8.1c0-1.1-0.2-1.9-1.2-1.9c-1.1,0-1.2,0.8-1.2,1.9v8.1h-3.2v-8.1c0-1.1-0.2-1.9-1.2-1.9c-1.1,0-1.2,0.8-1.2,1.9v8.1h-3.3V50h3.3V51.2z"/><path d="M352.8,51.2L352.8,51.2c0.7-1.1,1.6-1.4,2.8-1.4c1.2,0,2.1,0.6,2.6,1.5c0.8-1,1.7-1.5,3.1-1.5c1.6,0,2.9,0.9,2.9,2.6v9.5H361v-8.1c0-1.1-0.2-1.9-1.2-1.9c-1.1,0-1.2,0.8-1.2,1.9v8.1h-3.2v-8.1c0-1.1-0.2-1.9-1.2-1.9c-1.1,0-1.2,0.8-1.2,1.9v8.1h-3.3V50h3.3V51.2z"/><path d="M369.7,56.5c0,1.4,0,3.5,1.5,3.5c1.2,0,1.4-1.1,1.4-2.1h3.3c0,1.3-0.5,2.3-1.3,3.1c-0.8,0.7-1.9,1.1-3.5,1.1c-4.3,0-4.8-2.6-4.8-6.3c0-3.2,0.5-6,4.8-6c4.4,0,4.9,2.9,4.8,6.7H369.7z M372.7,54.6c0-1.1,0-2.8-1.5-2.8c-1.5,0-1.5,1.8-1.5,2.8H372.7z"/><path d="M381.5,50v1.5h0c0.6-1.4,1.7-1.8,3.1-1.8v2.9c-2.9-0.2-2.9,1.5-2.9,2.7v6.4h-3.3V50H381.5z"/><path d="M75.7,89.9V73H82c2.7,0,4.9,0.8,4.9,4.4c0,1.9-1,3.3-2.9,3.7v0c2.5,0.4,3.2,2,3.2,4.3c0,4.3-3.7,4.5-5.2,4.5H75.7z M79.2,79.9h2.4c0.8,0,1.8-0.5,1.8-2.2c0-1.2-0.8-2.2-2-2.2h-2.2V79.9z M79.2,87.3h2c0.7,0,2.4,0,2.4-2.4c0-1.5-0.6-2.4-2.3-2.4h-2.1V87.3z"/><path d="M98.7,87.7c0,0.7,0.1,1.5,0.2,2.2h-3.1l-0.1-1.6h0c-0.7,1.2-1.7,1.8-3.1,1.8c-2.3,0-3.1-1.7-3.1-3.8c0-3.9,3-4.1,6.1-4v-0.9c0-1-0.1-1.7-1.3-1.7c-1.1,0-1.2,0.9-1.2,1.8h-3.2c0-1.4,0.4-2.3,1.2-2.9c0.7-0.6,1.8-0.8,3.1-0.8c4.2,0,4.7,1.8,4.7,4V87.7z M92.6,86.2c0,0.8,0.1,1.9,1.2,1.9c1.9,0,1.6-2.6,1.6-3.9C93.9,84.3,92.6,84.1,92.6,86.2z"/><path d="M107.4,89.9v-1.3h0c-0.6,1.1-1.5,1.5-2.8,1.5c-3.4,0-3.3-3.8-3.3-6.2c0-2.4-0.1-6.1,3.2-6.1c1.2,0,2,0.4,2.7,1.4h0V73h3.3v16.9H107.4z M107.2,83.9c0-2.4,0-4-1.3-4c-1.4,0-1.4,1.6-1.4,4c0,3,0.2,4.2,1.4,4.2C107,88.1,107.2,86.9,107.2,83.9z"/><path d="M116.2,84.5c0,1.4,0,3.5,1.5,3.5c1.2,0,1.4-1.1,1.4-2.1h3.3c0,1.3-0.5,2.3-1.3,3.1c-0.8,0.7-1.9,1.1-3.5,1.1c-4.3,0-4.8-2.6-4.8-6.3c0-3.2,0.5-6,4.8-6c4.4,0,4.9,2.9,4.8,6.7H116.2z M119.2,82.7c0-1.1,0-2.8-1.5-2.8c-1.5,0-1.5,1.8-1.5,2.8H119.2z"/><path d="M128.2,79.3L128.2,79.3c0.4-0.5,0.8-0.9,1.2-1.1c0.5-0.2,1-0.3,1.6-0.3c1.6,0,2.9,0.9,2.9,2.6v9.5h-3.3v-8.1c0-1.1-0.2-1.9-1.2-1.9s-1.2,0.8-1.2,1.9v8.1h-3.3V78.1h3.3V79.3z"/><path d="M142,82.4v2.4h-5.7v-2.4H142z"/><path d="M143,73h3.6l2.2,11.9h0l2.7-11.9h4.2l2.5,11.9h0l2.1-11.9h3.5l-3.7,16.9h-3.9l-2.6-12.4h0l-2.9,12.4h-3.8L143,73z"/><path d="M170.9,88.7L170.9,88.7c-0.4,0.5-0.7,0.9-1.2,1.1c-0.5,0.2-1,0.3-1.6,0.3c-1.6,0-2.9-0.9-2.9-2.6v-9.5h3.3v8.2c0,1.1,0.2,1.8,1.2,1.8s1.2-0.8,1.2-1.8v-8.2h3.3v9.5c0,0.8,0,1.6,0.1,2.3h-3.4V88.7z M168.9,73.6v2.5h-2.6v-2.5H168.9z M173.1,73.6v2.5h-2.6v-2.5H173.1z"/><path d="M180,78.1v1.5h0c0.6-1.4,1.7-1.8,3.1-1.8v2.9c-2.9-0.2-2.9,1.5-2.9,2.7v6.4h-3.3V78.1H180z"/><path d="M183.3,78.1h1.3v-1.9l3.3-1.5v3.3h1.7v2h-1.7v6.3c0,0.9,0,1.5,1.1,1.5c0.2,0,0.4,0,0.6,0v2c-0.4,0-0.9,0.1-1.7,0.1c-2.9,0-3.2-1.9-3.2-2.6v-7.3h-1.3V78.1z"/><path d="M189.8,78.1h1.3v-1.9l3.3-1.5v3.3h1.7v2h-1.7v6.3c0,0.9,0,1.5,1.1,1.5c0.2,0,0.4,0,0.6,0v2c-0.4,0-0.9,0.1-1.7,0.1c-2.9,0-3.2-1.9-3.2-2.6v-7.3h-1.3V78.1z"/><path d="M200.7,84.5c0,1.4,0,3.5,1.5,3.5c1.2,0,1.4-1.1,1.4-2.1h3.3c0,1.3-0.5,2.3-1.3,3.1c-0.8,0.7-1.9,1.1-3.5,1.1c-4.3,0-4.8-2.6-4.8-6.3c0-3.2,0.5-6,4.8-6c4.4,0,4.9,2.9,4.8,6.7H200.7z M203.7,82.7c0-1.1,0-2.8-1.5-2.8c-1.5,0-1.5,1.8-1.5,2.8H203.7z"/><path d="M212.4,79.3L212.4,79.3c0.7-1.1,1.6-1.4,2.8-1.4c1.2,0,2.1,0.6,2.6,1.5c0.8-1,1.7-1.5,3.1-1.5c1.6,0,2.9,0.9,2.9,2.6v9.5h-3.3v-8.1c0-1.1-0.2-1.9-1.2-1.9s-1.2,0.8-1.2,1.9v8.1h-3.2v-8.1c0-1.1-0.2-1.9-1.2-1.9s-1.2,0.8-1.2,1.9v8.1h-3.3V78.1h3.3V79.3z"/><path d="M226.2,73h3.3v6.2h0c0.7-1,1.5-1.4,2.7-1.4c3.3,0,3.2,3.7,3.2,6.1c0,2.4,0.1,6.2-3.3,6.2c-1.3,0-2.2-0.4-2.8-1.5h0v1.3h-3.1V73z M232.3,83.9c0-2.4,0-4-1.4-4c-1.4,0-1.3,1.6-1.3,4c0,3,0.2,4.2,1.3,4.2C232.1,88.1,232.3,86.9,232.3,83.9z"/><path d="M241,84.5c0,1.4,0,3.5,1.5,3.5c1.2,0,1.4-1.1,1.4-2.1h3.3c0,1.3-0.5,2.3-1.3,3.1c-0.8,0.7-1.9,1.1-3.5,1.1c-4.3,0-4.8-2.6-4.8-6.3c0-3.2,0.5-6,4.8-6c4.4,0,4.9,2.9,4.8,6.7H241z M244,82.7c0-1.1,0-2.8-1.5-2.8c-1.5,0-1.5,1.8-1.5,2.8H244z"/><path d="M252.8,78.1v1.5h0c0.6-1.4,1.7-1.8,3.1-1.8v2.9c-2.9-0.2-2.9,1.5-2.9,2.7v6.4h-3.3V78.1H252.8z"/><path d="M266.5,78.1v12.3c0,0.8,0,4-4.5,4c-2.5,0-4.6-0.6-4.6-3.5h3.2c0,0.5,0.1,0.9,0.3,1.2c0.2,0.3,0.6,0.5,1.1,0.5c0.8,0,1.2-0.8,1.2-2v-2.3h0c-0.5,0.9-1.4,1.4-2.5,1.4c-3.6,0-3.5-3.3-3.5-6c0-2.6,0-5.9,3.5-5.9c1.2,0,2.2,0.5,2.6,1.6h0v-1.4H266.5z M261.8,87.7c1.2,0,1.4-1.2,1.4-3.7c0-2.6-0.1-4.1-1.3-4.1c-1.2,0-1.5,0.9-1.5,4.5C260.4,85.5,260.2,87.7,261.8,87.7z"/><polygon points="34.6,15 34.6,8.2 61.9,6.1 59.8,33.4 53.1,33.4 54.7,13.3 "/><polygon points="39.6,33.4 42.1,26 34.6,28.4 34.6,21.3 51.7,16.3 46.7,33.4 "/><polygon points="10.2,6.1 12.7,13.6 5.2,11.1 5.2,18.2 22.3,23.2 17.3,6.1 "/><polygon points="57,62.8 49.9,62.8 44.9,45.8 61.9,50.7 61.9,57.8 54.5,55.4 "/><polygon points="61.9,44.4 41.9,42.7 43.5,62.8 36.8,62.8 34.6,35.5 61.9,37.6 "/><polygon points="23.7,6.1 25.3,26.3 5.2,24.6 5.2,31.3 32.5,33.4 30.4,6.1 "/><polygon points="7.4,35.5 5.2,62.8 32.5,60.7 32.5,54 12.5,55.7 14.1,35.5 "/><polygon points="27.6,35.5 25.1,43 32.5,40.5 32.5,47.6 15.5,52.6 20.5,35.5 "/></svg>
     <hr>
-    <h3>Privacy</h3>
-    <p>
+    <h3 class="center">Privacy</h3>
+    <p class="center">
         No cookies. No tracking.<br>
-        Personal information may be processed by external providers such as <a href="https://open-meteo.com/" rel="nofollow">Open‑Meteo</a> for weather data and <a href="https://github.com/" rel="nofollow">GitHub</a> for hosting.
+        Personal information may be processed by external providers such as<br>
+        <a href="https://open-meteo.com/" rel="nofollow">Open‑Meteo</a> for weather data and <a href="https://github.com/" rel="nofollow">GitHub</a> for hosting.
     </p>
     <!-- <h3>Attribution</h3>
     <p>Nimbus Sans L © URW, <a href="https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html" rel="nofollow">GNU GPL v2</a></p> -->
+    <hr>
 </div>
 <div class="content" id="gaming">
     <h2 style="text-align:center;">Last PUBG Matches</h2>
@@ -351,8 +357,11 @@ requestIdleCallback(() => {
             const date = new Date(json[0].commit.author.date);
             const formatted = date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
             const p = document.createElement('p');
+            p.classList.add('center');
             p.innerHTML = `Last modified ${formatted}.`;
             contact.appendChild(p);
+            const hr = document.createElement('hr');
+            contact.appendChild(hr);
             setTimeout(() => { lenis.resize(); }, 50);
         } catch {}
     }
