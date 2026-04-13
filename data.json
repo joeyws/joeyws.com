@@ -1,5 +1,5 @@
 {
-  "timestamp": "13.04. 20:09",
+  "timestamp": "13.04. 21:54",
   "weatherTempCelsius": 9,
   "githubLastCommit": "April 13, 2026",
   "steamStatus": "online",
@@ -40,9 +40,9 @@
         "matchStart": "13.04. 16:29",
         "teamSize": "Squad",
         "teamMates": [
-          "brank1ca_Z",
           "xamosrrt",
-          "djeelsss"
+          "djeelsss",
+          "brank1ca_Z"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -94,8 +94,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "Pantadeus",
-          "DaggaKoeKie",
-          "Femida66"
+          "Femida66",
+          "DaggaKoeKie"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -129,9 +129,9 @@
         "matchStart": "12.04. 10:56",
         "teamSize": "Squad",
         "teamMates": [
+          "Flopsibert",
           "Battlemann",
-          "WeCoyote",
-          "Flopsibert"
+          "WeCoyote"
         ],
         "perspective": "FPP",
         "placement": 8,
@@ -147,9 +147,9 @@
         "matchStart": "12.04. 10:36",
         "teamSize": "Squad",
         "teamMates": [
-          "WeCoyote",
+          "Flopsibert",
           "Battlemann",
-          "Flopsibert"
+          "WeCoyote"
         ],
         "perspective": "FPP",
         "placement": 11,
@@ -166,8 +166,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "Flopsibert",
-          "Battlemann",
-          "WeCoyote"
+          "WeCoyote",
+          "Battlemann"
         ],
         "perspective": "FPP",
         "placement": 21,
