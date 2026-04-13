@@ -1,6 +1,6 @@
 {
-  "timestamp": "13.04. 5:48",
-  "weatherTempCelsius": 8,
+  "timestamp": "13.04. 8:10",
+  "weatherTempCelsius": 9,
   "githubLastCommit": "April 13, 2026",
   "steamStatus": "offline",
   "pubg": {
@@ -10,9 +10,9 @@
         "matchStart": "12.04. 18:55",
         "teamSize": "Binaryspot",
         "teamMates": [
+          "atonee",
           "OlaiSR",
-          "mtlhd",
-          "atonee"
+          "mtlhd"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -45,9 +45,9 @@
         "matchStart": "12.04. 13:17",
         "teamSize": "Squad",
         "teamMates": [
+          "DaggaKoeKie",
           "Pantadeus",
-          "Femida66",
-          "DaggaKoeKie"
+          "Femida66"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -64,8 +64,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "WeCoyote",
-          "Flopsibert",
-          "GhuChee"
+          "GhuChee",
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 8,
@@ -81,8 +81,8 @@
         "matchStart": "12.04. 10:56",
         "teamSize": "Squad",
         "teamMates": [
-          "Flopsibert",
           "Battlemann",
+          "Flopsibert",
           "WeCoyote"
         ],
         "perspective": "FPP",
@@ -99,9 +99,9 @@
         "matchStart": "12.04. 10:36",
         "teamSize": "Squad",
         "teamMates": [
-          "Flopsibert",
           "Battlemann",
-          "WeCoyote"
+          "WeCoyote",
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 11,
@@ -117,8 +117,8 @@
         "matchStart": "12.04. 10:28",
         "teamSize": "Squad",
         "teamMates": [
-          "Flopsibert",
           "WeCoyote",
+          "Flopsibert",
           "Battlemann"
         ],
         "perspective": "FPP",
@@ -153,9 +153,9 @@
         "matchStart": "11.04. 17:02",
         "teamSize": "Binaryspot",
         "teamMates": [
+          "Ghost-__-LegendX",
           "CHEllBORZ",
-          "MartinKing645",
-          "Ghost-__-LegendX"
+          "MartinKing645"
         ],
         "perspective": "TPP",
         "placement": 1,
