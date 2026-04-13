@@ -1,17 +1,52 @@
 {
-  "timestamp": "12.04. 16:43",
-  "weatherTempCelsius": 8,
-  "githubLastCommit": "April 12, 2026",
+  "timestamp": "13.04. 8:10",
+  "weatherTempCelsius": 9,
+  "githubLastCommit": "April 13, 2026",
   "steamStatus": "offline",
   "pubg": {
     "name": "joeyws2",
     "lastMatches": [
       {
+        "matchStart": "12.04. 18:55",
+        "teamSize": "Binaryspot",
+        "teamMates": [
+          "atonee",
+          "OlaiSR",
+          "mtlhd"
+        ],
+        "perspective": "TPP",
+        "placement": 1,
+        "map": "Desert_Main_BinarySpot",
+        "survivalTime": "20:01",
+        "distance": "2.7",
+        "kills": 0,
+        "assists": 0,
+        "damage": 0,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.binaryspot.eu.2026.04.12.18.a2f962f5-9949-430a-af6c-46d93dba02b6"
+      },
+      {
+        "matchStart": "12.04. 18:52",
+        "teamSize": "Binaryspot",
+        "teamMates": [
+          "MevzuBAYRAK",
+          "TxClumsy"
+        ],
+        "perspective": "TPP",
+        "placement": 1,
+        "map": "Desert_Main_BinarySpot",
+        "survivalTime": "0:00",
+        "distance": "0.0",
+        "kills": 0,
+        "assists": 0,
+        "damage": 0,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.binaryspot.eu.2026.04.12.18.3a386c6b-e1d7-440d-8c81-91ba653b9e6b"
+      },
+      {
         "matchStart": "12.04. 13:17",
         "teamSize": "Squad",
         "teamMates": [
-          "Pantadeus",
           "DaggaKoeKie",
+          "Pantadeus",
           "Femida66"
         ],
         "perspective": "TPP",
@@ -29,8 +64,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "WeCoyote",
-          "Flopsibert",
-          "GhuChee"
+          "GhuChee",
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 8,
@@ -47,8 +82,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "Battlemann",
-          "WeCoyote",
-          "Flopsibert"
+          "Flopsibert",
+          "WeCoyote"
         ],
         "perspective": "FPP",
         "placement": 8,
@@ -64,8 +99,8 @@
         "matchStart": "12.04. 10:36",
         "teamSize": "Squad",
         "teamMates": [
-          "WeCoyote",
           "Battlemann",
+          "WeCoyote",
           "Flopsibert"
         ],
         "perspective": "FPP",
@@ -82,9 +117,9 @@
         "matchStart": "12.04. 10:28",
         "teamSize": "Squad",
         "teamMates": [
+          "WeCoyote",
           "Flopsibert",
-          "Battlemann",
-          "WeCoyote"
+          "Battlemann"
         ],
         "perspective": "FPP",
         "placement": 21,
@@ -100,9 +135,9 @@
         "matchStart": "12.04. 10:01",
         "teamSize": "Squad",
         "teamMates": [
+          "Flopsibert",
           "WeCoyote",
-          "1KUNTEPER",
-          "Flopsibert"
+          "1KUNTEPER"
         ],
         "perspective": "FPP",
         "placement": 5,
@@ -149,42 +184,6 @@
         "assists": 0,
         "damage": 0,
         "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.binaryspot.eu.2026.04.10.21.794ee684-44b4-4b4a-af7c-f35f88c410af"
-      },
-      {
-        "matchStart": "10.04. 19:20",
-        "teamSize": "Ibr",
-        "teamMates": [
-          "Flopsibert",
-          "TheCurlyTwin",
-          "KingZurenson"
-        ],
-        "perspective": "TPP",
-        "placement": 3,
-        "map": "Vikendi",
-        "survivalTime": "8:11",
-        "distance": "1.1",
-        "kills": 2,
-        "assists": 0,
-        "damage": 108,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.ibr.eu.2026.04.10.19.9ef7617d-6214-4cf0-b390-67864d8b4ea3"
-      },
-      {
-        "matchStart": "10.04. 18:50",
-        "teamSize": "Squad",
-        "teamMates": [
-          "WeCoyote",
-          "KingZurenson",
-          "Flopsibert"
-        ],
-        "perspective": "FPP",
-        "placement": 5,
-        "map": "Miramar",
-        "survivalTime": "19:13",
-        "distance": "5.4",
-        "kills": 1,
-        "assists": 1,
-        "damage": 373,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.squad-fpp.eu.2026.04.10.18.19685d2e-0c32-4622-95e8-8dd22d6d1b51"
       }
     ]
   }
