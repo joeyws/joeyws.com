@@ -1,8 +1,8 @@
 {
-  "timestamp": "14.04. 13:50",
+  "timestamp": "14.04. 15:16",
   "weatherTempCelsius": 11,
   "githubLastCommit": "April 14, 2026",
-  "steamStatus": "offline",
+  "steamStatus": "online",
   "pubg": {
     "name": "joeyws2",
     "lastMatches": [
@@ -40,8 +40,8 @@
         "matchStart": "13.04. 16:29",
         "teamSize": "Squad",
         "teamMates": [
-          "djeelsss",
           "xamosrrt",
+          "djeelsss",
           "brank1ca_Z"
         ],
         "perspective": "TPP",
@@ -93,9 +93,9 @@
         "matchStart": "12.04. 13:17",
         "teamSize": "Squad",
         "teamMates": [
-          "Femida66",
+          "DaggaKoeKie",
           "Pantadeus",
-          "DaggaKoeKie"
+          "Femida66"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -111,8 +111,8 @@
         "matchStart": "12.04. 11:19",
         "teamSize": "Squad",
         "teamMates": [
-          "GhuChee",
           "WeCoyote",
+          "GhuChee",
           "Flopsibert"
         ],
         "perspective": "FPP",
@@ -129,9 +129,9 @@
         "matchStart": "12.04. 10:56",
         "teamSize": "Squad",
         "teamMates": [
-          "WeCoyote",
+          "Battlemann",
           "Flopsibert",
-          "Battlemann"
+          "WeCoyote"
         ],
         "perspective": "FPP",
         "placement": 8,
@@ -165,9 +165,9 @@
         "matchStart": "12.04. 10:28",
         "teamSize": "Squad",
         "teamMates": [
-          "Battlemann",
           "WeCoyote",
-          "Flopsibert"
+          "Flopsibert",
+          "Battlemann"
         ],
         "perspective": "FPP",
         "placement": 21,
