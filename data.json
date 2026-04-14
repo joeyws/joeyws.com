@@ -1,5 +1,5 @@
 {
-  "timestamp": "14.04. 7:52",
+  "timestamp": "14.04. 9:22",
   "weatherTempCelsius": 9,
   "githubLastCommit": "April 14, 2026",
   "steamStatus": "offline",
@@ -40,8 +40,8 @@
         "matchStart": "13.04. 16:29",
         "teamSize": "Squad",
         "teamMates": [
-          "xamosrrt",
           "djeelsss",
+          "xamosrrt",
           "brank1ca_Z"
         ],
         "perspective": "TPP",
@@ -58,9 +58,9 @@
         "matchStart": "12.04. 18:55",
         "teamSize": "Binaryspot",
         "teamMates": [
+          "atonee",
           "OlaiSR",
-          "mtlhd",
-          "atonee"
+          "mtlhd"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -93,8 +93,8 @@
         "matchStart": "12.04. 13:17",
         "teamSize": "Squad",
         "teamMates": [
-          "Pantadeus",
           "Femida66",
+          "Pantadeus",
           "DaggaKoeKie"
         ],
         "perspective": "TPP",
@@ -111,9 +111,9 @@
         "matchStart": "12.04. 11:19",
         "teamSize": "Squad",
         "teamMates": [
+          "GhuChee",
           "WeCoyote",
-          "Flopsibert",
-          "GhuChee"
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 8,
@@ -129,9 +129,9 @@
         "matchStart": "12.04. 10:56",
         "teamSize": "Squad",
         "teamMates": [
+          "WeCoyote",
           "Flopsibert",
-          "Battlemann",
-          "WeCoyote"
+          "Battlemann"
         ],
         "perspective": "FPP",
         "placement": 8,
@@ -147,9 +147,9 @@
         "matchStart": "12.04. 10:36",
         "teamSize": "Squad",
         "teamMates": [
-          "Flopsibert",
           "Battlemann",
-          "WeCoyote"
+          "WeCoyote",
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 11,
@@ -165,9 +165,9 @@
         "matchStart": "12.04. 10:28",
         "teamSize": "Squad",
         "teamMates": [
-          "Flopsibert",
+          "Battlemann",
           "WeCoyote",
-          "Battlemann"
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 21,
