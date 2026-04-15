@@ -1,17 +1,53 @@
 {
-  "timestamp": "15.04. 19:22",
-  "weatherTempCelsius": 13,
+  "timestamp": "15.04. 20:55",
+  "weatherTempCelsius": 12,
   "githubLastCommit": "April 15, 2026",
   "steamStatus": "online",
   "pubg": {
     "name": "joeyws2",
     "lastMatches": [
       {
+        "matchStart": "15.04. 19:40",
+        "teamSize": "Binaryspot",
+        "teamMates": [
+          "mr-L_1_0_N-",
+          "Matxetukop",
+          "Paragoryan"
+        ],
+        "perspective": "TPP",
+        "placement": 1,
+        "map": "Desert_Main_BinarySpot",
+        "survivalTime": "12:05",
+        "distance": "1.4",
+        "kills": 0,
+        "assists": 0,
+        "damage": 0,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.binaryspot.eu.2026.04.15.19.24eee7ba-a65f-41d3-bf25-4a879bedf964"
+      },
+      {
+        "matchStart": "15.04. 19:22",
+        "teamSize": "Binaryspot",
+        "teamMates": [
+          "Airb4g",
+          "zxcynitaz",
+          "abozeedo"
+        ],
+        "perspective": "TPP",
+        "placement": 1,
+        "map": "Desert_Main_BinarySpot",
+        "survivalTime": "13:29",
+        "distance": "1.4",
+        "kills": 0,
+        "assists": 0,
+        "damage": 0,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.binaryspot.eu.2026.04.15.19.df87316c-1481-48eb-b1d8-e5b02500ca84"
+      },
+      {
         "matchStart": "15.04. 18:55",
         "teamSize": "Squad",
         "teamMates": [
-          "one_procent",
           "MadJack16",
+          "one_procent",
           "LAdy_GAGA_228"
         ],
         "perspective": "TPP",
@@ -28,9 +64,9 @@
         "matchStart": "15.04. 18:50",
         "teamSize": "Squad",
         "teamMates": [
+          "mahdiabbas1984",
           "Bouncy_gamer",
-          "ll_Junnu_ll",
-          "mahdiabbas1984"
+          "ll_Junnu_ll"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -46,9 +82,9 @@
         "matchStart": "14.04. 16:25",
         "teamSize": "Squad",
         "teamMates": [
-          "Evantur",
+          "one_procent",
           "DiD_Makaron",
-          "one_procent"
+          "Evantur"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -94,9 +130,9 @@
         "matchStart": "13.04. 16:29",
         "teamSize": "Squad",
         "teamMates": [
+          "brank1ca_Z",
           "xamosrrt",
-          "djeelsss",
-          "brank1ca_Z"
+          "djeelsss"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -112,9 +148,9 @@
         "matchStart": "12.04. 18:55",
         "teamSize": "Binaryspot",
         "teamMates": [
-          "atonee",
           "OlaiSR",
-          "mtlhd"
+          "mtlhd",
+          "atonee"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -142,42 +178,6 @@
         "assists": 0,
         "damage": 0,
         "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.binaryspot.eu.2026.04.12.18.3a386c6b-e1d7-440d-8c81-91ba653b9e6b"
-      },
-      {
-        "matchStart": "12.04. 13:17",
-        "teamSize": "Squad",
-        "teamMates": [
-          "DaggaKoeKie",
-          "Pantadeus",
-          "Femida66"
-        ],
-        "perspective": "TPP",
-        "placement": 1,
-        "map": "Erangel",
-        "survivalTime": "22:22",
-        "distance": "9.9",
-        "kills": 13,
-        "assists": 2,
-        "damage": 1302,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.04.12.13.9fbe6f1b-95cd-48af-8a5a-42ac9f5bdc08"
-      },
-      {
-        "matchStart": "12.04. 11:19",
-        "teamSize": "Squad",
-        "teamMates": [
-          "WeCoyote",
-          "GhuChee",
-          "Flopsibert"
-        ],
-        "perspective": "FPP",
-        "placement": 8,
-        "map": "Taego",
-        "survivalTime": "19:51",
-        "distance": "3.3",
-        "kills": 0,
-        "assists": 0,
-        "damage": 33,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.squad-fpp.eu.2026.04.12.11.d3d33ef5-93f2-4c3b-87cb-ffae2076a3d4"
       }
     ]
   }
