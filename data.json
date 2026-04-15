@@ -1,18 +1,54 @@
 {
-  "timestamp": "15.04. 17:08",
-  "weatherTempCelsius": 14,
+  "timestamp": "15.04. 19:22",
+  "weatherTempCelsius": 13,
   "githubLastCommit": "April 15, 2026",
   "steamStatus": "online",
   "pubg": {
     "name": "joeyws2",
     "lastMatches": [
       {
-        "matchStart": "14.04. 16:25",
+        "matchStart": "15.04. 18:55",
         "teamSize": "Squad",
         "teamMates": [
           "one_procent",
+          "MadJack16",
+          "LAdy_GAGA_228"
+        ],
+        "perspective": "TPP",
+        "placement": 1,
+        "map": "Erangel",
+        "survivalTime": "23:32",
+        "distance": "10.8",
+        "kills": 11,
+        "assists": 1,
+        "damage": 855,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.04.15.18.21f684e5-c9a9-401d-94d1-ced36b7b08cd"
+      },
+      {
+        "matchStart": "15.04. 18:50",
+        "teamSize": "Squad",
+        "teamMates": [
+          "Bouncy_gamer",
+          "ll_Junnu_ll",
+          "mahdiabbas1984"
+        ],
+        "perspective": "TPP",
+        "placement": 1,
+        "map": "Erangel",
+        "survivalTime": "2:35",
+        "distance": "0.1",
+        "kills": 0,
+        "assists": 0,
+        "damage": 0,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.04.15.18.c9bc7de5-f147-43a0-bc01-d8c8dc7f41f9"
+      },
+      {
+        "matchStart": "14.04. 16:25",
+        "teamSize": "Squad",
+        "teamMates": [
+          "Evantur",
           "DiD_Makaron",
-          "Evantur"
+          "one_procent"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -58,9 +94,9 @@
         "matchStart": "13.04. 16:29",
         "teamSize": "Squad",
         "teamMates": [
-          "brank1ca_Z",
           "xamosrrt",
-          "djeelsss"
+          "djeelsss",
+          "brank1ca_Z"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -76,9 +112,9 @@
         "matchStart": "12.04. 18:55",
         "teamSize": "Binaryspot",
         "teamMates": [
+          "atonee",
           "OlaiSR",
-          "mtlhd",
-          "atonee"
+          "mtlhd"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -111,8 +147,8 @@
         "matchStart": "12.04. 13:17",
         "teamSize": "Squad",
         "teamMates": [
-          "Pantadeus",
           "DaggaKoeKie",
+          "Pantadeus",
           "Femida66"
         ],
         "perspective": "TPP",
@@ -130,8 +166,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "WeCoyote",
-          "Flopsibert",
-          "GhuChee"
+          "GhuChee",
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 8,
@@ -142,42 +178,6 @@
         "assists": 0,
         "damage": 33,
         "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.squad-fpp.eu.2026.04.12.11.d3d33ef5-93f2-4c3b-87cb-ffae2076a3d4"
-      },
-      {
-        "matchStart": "12.04. 10:56",
-        "teamSize": "Squad",
-        "teamMates": [
-          "Battlemann",
-          "WeCoyote",
-          "Flopsibert"
-        ],
-        "perspective": "FPP",
-        "placement": 8,
-        "map": "Erangel",
-        "survivalTime": "20:15",
-        "distance": "6.9",
-        "kills": 1,
-        "assists": 1,
-        "damage": 152,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.squad-fpp.eu.2026.04.12.10.7095df92-006b-4508-97d3-597a0acb0fd7"
-      },
-      {
-        "matchStart": "12.04. 10:36",
-        "teamSize": "Squad",
-        "teamMates": [
-          "WeCoyote",
-          "Battlemann",
-          "Flopsibert"
-        ],
-        "perspective": "FPP",
-        "placement": 11,
-        "map": "Erangel",
-        "survivalTime": "11:30",
-        "distance": "2.2",
-        "kills": 0,
-        "assists": 0,
-        "damage": 89,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.squad-fpp.eu.2026.04.12.10.4a33b10f-1cb1-4eb0-964b-391cf03ed1ff"
       }
     ]
   }
