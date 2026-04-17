@@ -1,11 +1,28 @@
 {
-  "timestamp": "17.04. 12:00",
-  "weatherTempCelsius": 21,
+  "timestamp": "17.04. 14:21",
+  "weatherTempCelsius": 22,
   "githubLastCommit": "April 17, 2026",
-  "steamStatus": "offline",
+  "steamStatus": "online",
   "pubg": {
     "name": "joeyws2",
     "lastMatches": [
+      {
+        "matchStart": "17.04. 13:53",
+        "teamSize": "Squad",
+        "teamMates": [
+          "Arturito_84",
+          "PH_INZY"
+        ],
+        "perspective": "TPP",
+        "placement": 14,
+        "map": "Erangel",
+        "survivalTime": "14:30",
+        "distance": "2.2",
+        "kills": 9,
+        "assists": 1,
+        "damage": 788,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.04.17.13.ae76a2a2-aae8-4394-a7c6-9f03785abb5b"
+      },
       {
         "matchStart": "15.04. 19:40",
         "teamSize": "Binaryspot",
@@ -46,8 +63,8 @@
         "matchStart": "15.04. 18:55",
         "teamSize": "Squad",
         "teamMates": [
-          "MadJack16",
           "one_procent",
+          "MadJack16",
           "LAdy_GAGA_228"
         ],
         "perspective": "TPP",
@@ -64,8 +81,8 @@
         "matchStart": "15.04. 18:50",
         "teamSize": "Squad",
         "teamMates": [
-          "mahdiabbas1984",
           "Bouncy_gamer",
+          "mahdiabbas1984",
           "ll_Junnu_ll"
         ],
         "perspective": "TPP",
@@ -82,9 +99,9 @@
         "matchStart": "14.04. 16:25",
         "teamSize": "Squad",
         "teamMates": [
+          "Evantur",
           "one_procent",
-          "DiD_Makaron",
-          "Evantur"
+          "DiD_Makaron"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -130,9 +147,9 @@
         "matchStart": "13.04. 16:29",
         "teamSize": "Squad",
         "teamMates": [
-          "brank1ca_Z",
           "xamosrrt",
-          "djeelsss"
+          "djeelsss",
+          "brank1ca_Z"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -161,23 +178,6 @@
         "assists": 0,
         "damage": 0,
         "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.binaryspot.eu.2026.04.12.18.a2f962f5-9949-430a-af6c-46d93dba02b6"
-      },
-      {
-        "matchStart": "12.04. 18:52",
-        "teamSize": "Binaryspot",
-        "teamMates": [
-          "MevzuBAYRAK",
-          "TxClumsy"
-        ],
-        "perspective": "TPP",
-        "placement": 1,
-        "map": "Desert_Main_BinarySpot",
-        "survivalTime": "0:00",
-        "distance": "0.0",
-        "kills": 0,
-        "assists": 0,
-        "damage": 0,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.binaryspot.eu.2026.04.12.18.3a386c6b-e1d7-440d-8c81-91ba653b9e6b"
       }
     ]
   }
