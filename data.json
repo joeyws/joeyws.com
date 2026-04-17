@@ -1,11 +1,29 @@
 {
-  "timestamp": "17.04. 14:21",
+  "timestamp": "17.04. 16:03",
   "weatherTempCelsius": 22,
   "githubLastCommit": "April 17, 2026",
-  "steamStatus": "online",
+  "steamStatus": "offline",
   "pubg": {
     "name": "joeyws2",
     "lastMatches": [
+      {
+        "matchStart": "17.04. 14:15",
+        "teamSize": "Squad",
+        "teamMates": [
+          "MAJOR_84",
+          "ABREK9550",
+          "FireBurnLra"
+        ],
+        "perspective": "TPP",
+        "placement": 10,
+        "map": "Erangel",
+        "survivalTime": "13:13",
+        "distance": "3.3",
+        "kills": 7,
+        "assists": 0,
+        "damage": 793,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.04.17.14.6579bb07-4807-4d19-acac-266f0bde49ea"
+      },
       {
         "matchStart": "17.04. 13:53",
         "teamSize": "Squad",
@@ -160,24 +178,6 @@
         "assists": 5,
         "damage": 425,
         "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.04.13.16.73dd59ed-9892-437d-b8cf-05a2591bdb30"
-      },
-      {
-        "matchStart": "12.04. 18:55",
-        "teamSize": "Binaryspot",
-        "teamMates": [
-          "OlaiSR",
-          "mtlhd",
-          "atonee"
-        ],
-        "perspective": "TPP",
-        "placement": 1,
-        "map": "Desert_Main_BinarySpot",
-        "survivalTime": "20:01",
-        "distance": "2.7",
-        "kills": 0,
-        "assists": 0,
-        "damage": 0,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.binaryspot.eu.2026.04.12.18.a2f962f5-9949-430a-af6c-46d93dba02b6"
       }
     ]
   }
