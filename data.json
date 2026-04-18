@@ -1,6 +1,6 @@
 {
-  "timestamp": "18.04. 18:56",
-  "weatherTempCelsius": 20,
+  "timestamp": "18.04. 19:43",
+  "weatherTempCelsius": 19,
   "githubLastCommit": "April 18, 2026",
   "steamStatus": "offline",
   "pubg": {
@@ -10,8 +10,8 @@
         "matchStart": "17.04. 14:15",
         "teamSize": "Squad",
         "teamMates": [
-          "ABREK9550",
           "MAJOR_84",
+          "ABREK9550",
           "FireBurnLra"
         ],
         "perspective": "TPP",
@@ -28,8 +28,8 @@
         "matchStart": "17.04. 13:53",
         "teamSize": "Squad",
         "teamMates": [
-          "PH_INZY",
-          "Arturito_84"
+          "Arturito_84",
+          "PH_INZY"
         ],
         "perspective": "TPP",
         "placement": 14,
@@ -100,8 +100,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "Bouncy_gamer",
-          "ll_Junnu_ll",
-          "mahdiabbas1984"
+          "mahdiabbas1984",
+          "ll_Junnu_ll"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -118,8 +118,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "Evantur",
-          "DiD_Makaron",
-          "one_procent"
+          "one_procent",
+          "DiD_Makaron"
         ],
         "perspective": "TPP",
         "placement": 1,
