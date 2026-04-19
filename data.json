@@ -1,5 +1,5 @@
 {
-  "timestamp": "19.04. 9:56",
+  "timestamp": "19.04. 10:49",
   "weatherTempCelsius": 13,
   "githubLastCommit": "April 19, 2026",
   "steamStatus": "offline",
@@ -10,9 +10,9 @@
         "matchStart": "17.04. 14:15",
         "teamSize": "Squad",
         "teamMates": [
-          "MAJOR_84",
           "ABREK9550",
-          "FireBurnLra"
+          "FireBurnLra",
+          "MAJOR_84"
         ],
         "perspective": "TPP",
         "placement": 10,
@@ -81,8 +81,8 @@
         "matchStart": "15.04. 18:55",
         "teamSize": "Squad",
         "teamMates": [
-          "one_procent",
           "MadJack16",
+          "one_procent",
           "LAdy_GAGA_228"
         ],
         "perspective": "TPP",
@@ -99,8 +99,8 @@
         "matchStart": "15.04. 18:50",
         "teamSize": "Squad",
         "teamMates": [
-          "Bouncy_gamer",
           "mahdiabbas1984",
+          "Bouncy_gamer",
           "ll_Junnu_ll"
         ],
         "perspective": "TPP",
@@ -117,9 +117,9 @@
         "matchStart": "14.04. 16:25",
         "teamSize": "Squad",
         "teamMates": [
-          "Evantur",
           "one_procent",
-          "DiD_Makaron"
+          "DiD_Makaron",
+          "Evantur"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -165,9 +165,9 @@
         "matchStart": "13.04. 16:29",
         "teamSize": "Squad",
         "teamMates": [
+          "brank1ca_Z",
           "xamosrrt",
-          "djeelsss",
-          "brank1ca_Z"
+          "djeelsss"
         ],
         "perspective": "TPP",
         "placement": 1,
