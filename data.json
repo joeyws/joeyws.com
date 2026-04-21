@@ -1,5 +1,5 @@
 {
-  "timestamp": "21.04. 9:47",
+  "timestamp": "21.04. 11:11",
   "weatherTempCelsius": 10,
   "githubLastCommit": "April 21, 2026",
   "steamStatus": "offline",
@@ -11,8 +11,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "RogerRabbit_Gz",
-          "Flopsibert",
-          "KingZurenson"
+          "KingZurenson",
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 4,
@@ -28,9 +28,9 @@
         "matchStart": "20.04. 18:53",
         "teamSize": "Squad",
         "teamMates": [
-          "KingZurenson",
           "Flopsibert",
-          "RogerRabbit_Gz"
+          "RogerRabbit_Gz",
+          "KingZurenson"
         ],
         "perspective": "FPP",
         "placement": 27,
@@ -46,9 +46,9 @@
         "matchStart": "20.04. 18:21",
         "teamSize": "Squad",
         "teamMates": [
-          "KingZurenson",
+          "Flopsibert",
           "RogerRabbit_Gz",
-          "Flopsibert"
+          "KingZurenson"
         ],
         "perspective": "FPP",
         "placement": 1,
@@ -64,9 +64,9 @@
         "matchStart": "20.04. 17:57",
         "teamSize": "Squad",
         "teamMates": [
-          "KingZurenson",
+          "Shootii",
           "Flopsibert",
-          "Shootii"
+          "KingZurenson"
         ],
         "perspective": "FPP",
         "placement": 5,
@@ -83,8 +83,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "UrFuqinD4D_GER_",
-          "Flopsibert",
-          "KingZurenson"
+          "KingZurenson",
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 12,
@@ -100,8 +100,8 @@
         "matchStart": "20.04. 17:29",
         "teamSize": "Squad",
         "teamMates": [
-          "Flopsibert",
-          "KingZurenson"
+          "KingZurenson",
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 13,
@@ -117,9 +117,9 @@
         "matchStart": "17.04. 14:15",
         "teamSize": "Squad",
         "teamMates": [
-          "MAJOR_84",
           "ABREK9550",
-          "FireBurnLra"
+          "FireBurnLra",
+          "MAJOR_84"
         ],
         "perspective": "TPP",
         "placement": 10,
