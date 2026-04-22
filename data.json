@@ -1,8 +1,8 @@
 {
-  "timestamp": "22.04. 17:05",
-  "weatherTempCelsius": 16,
+  "timestamp": "22.04. 19:19",
+  "weatherTempCelsius": 13,
   "githubLastCommit": "April 22, 2026",
-  "steamStatus": "offline",
+  "steamStatus": "online",
   "pubg": {
     "name": "joeyws2",
     "lastMatches": [
@@ -94,9 +94,9 @@
         "matchStart": "20.04. 18:59",
         "teamSize": "Squad",
         "teamMates": [
-          "RogerRabbit_Gz",
           "KingZurenson",
-          "Flopsibert"
+          "Flopsibert",
+          "RogerRabbit_Gz"
         ],
         "perspective": "FPP",
         "placement": 4,
@@ -112,9 +112,9 @@
         "matchStart": "20.04. 18:53",
         "teamSize": "Squad",
         "teamMates": [
-          "Flopsibert",
+          "KingZurenson",
           "RogerRabbit_Gz",
-          "KingZurenson"
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 27,
@@ -167,8 +167,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "KingZurenson",
-          "Flopsibert",
-          "UrFuqinD4D_GER_"
+          "UrFuqinD4D_GER_",
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 12,
