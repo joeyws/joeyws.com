@@ -1,6 +1,6 @@
 {
-  "timestamp": "23.04. 11:59",
-  "weatherTempCelsius": 18,
+  "timestamp": "23.04. 14:05",
+  "weatherTempCelsius": 19,
   "githubLastCommit": "April 23, 2026",
   "steamStatus": "offline",
   "pubg": {
@@ -112,9 +112,9 @@
         "matchStart": "20.04. 18:59",
         "teamSize": "Squad",
         "teamMates": [
+          "RogerRabbit_Gz",
           "Flopsibert",
-          "KingZurenson",
-          "RogerRabbit_Gz"
+          "KingZurenson"
         ],
         "perspective": "FPP",
         "placement": 4,
