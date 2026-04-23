@@ -1,6 +1,6 @@
 {
-  "timestamp": "23.04. 10:22",
-  "weatherTempCelsius": 15,
+  "timestamp": "23.04. 11:59",
+  "weatherTempCelsius": 18,
   "githubLastCommit": "April 23, 2026",
   "steamStatus": "offline",
   "pubg": {
@@ -46,9 +46,9 @@
         "matchStart": "21.04. 16:56",
         "teamSize": "Binaryspot",
         "teamMates": [
+          "askurbtw",
           "Sn0upiGoD",
-          "0RhNegative",
-          "askurbtw"
+          "0RhNegative"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -112,9 +112,9 @@
         "matchStart": "20.04. 18:59",
         "teamSize": "Squad",
         "teamMates": [
-          "RogerRabbit_Gz",
+          "Flopsibert",
           "KingZurenson",
-          "Flopsibert"
+          "RogerRabbit_Gz"
         ],
         "perspective": "FPP",
         "placement": 4,
@@ -130,9 +130,9 @@
         "matchStart": "20.04. 18:53",
         "teamSize": "Squad",
         "teamMates": [
+          "KingZurenson",
           "Flopsibert",
-          "RogerRabbit_Gz",
-          "KingZurenson"
+          "RogerRabbit_Gz"
         ],
         "perspective": "FPP",
         "placement": 27,
@@ -148,9 +148,9 @@
         "matchStart": "20.04. 18:21",
         "teamSize": "Squad",
         "teamMates": [
-          "Flopsibert",
+          "KingZurenson",
           "RogerRabbit_Gz",
-          "KingZurenson"
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 1,
@@ -166,9 +166,9 @@
         "matchStart": "20.04. 17:57",
         "teamSize": "Squad",
         "teamMates": [
-          "Shootii",
+          "KingZurenson",
           "Flopsibert",
-          "KingZurenson"
+          "Shootii"
         ],
         "perspective": "FPP",
         "placement": 5,
