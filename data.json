@@ -1,6 +1,6 @@
 {
-  "timestamp": "24.04. 22:41",
-  "weatherTempCelsius": 12,
+  "timestamp": "24.04. 23:42",
+  "weatherTempCelsius": 11,
   "githubLastCommit": "April 24, 2026",
   "steamStatus": "online",
   "pubg": {
@@ -10,8 +10,8 @@
         "matchStart": "24.04. 15:56",
         "teamSize": "Squad",
         "teamMates": [
-          "5oBMG",
-          "Dograma_Atelyesi"
+          "Dograma_Atelyesi",
+          "5oBMG"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -77,9 +77,9 @@
         "matchStart": "23.04. 20:30",
         "teamSize": "Binaryspot",
         "teamMates": [
+          "Andy0525",
           "lapacity",
-          "grXeno",
-          "Andy0525"
+          "grXeno"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -95,9 +95,9 @@
         "matchStart": "23.04. 20:11",
         "teamSize": "Binaryspot",
         "teamMates": [
-          "Luisov1",
           "KUKUKUKUGOBOD",
-          "OcHoByWKa"
+          "OcHoByWKa",
+          "Luisov1"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -149,8 +149,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "Lozza68",
-          "LuckyLou18",
-          "TheMightyHazz"
+          "TheMightyHazz",
+          "LuckyLou18"
         ],
         "perspective": "TPP",
         "placement": 4,
