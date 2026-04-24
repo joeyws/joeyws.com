@@ -1,8 +1,8 @@
 {
-  "timestamp": "24.04. 8:09",
-  "weatherTempCelsius": 12,
+  "timestamp": "24.04. 10:25",
+  "weatherTempCelsius": 17,
   "githubLastCommit": "April 24, 2026",
-  "steamStatus": "offline",
+  "steamStatus": "online",
   "pubg": {
     "name": "joeyws2",
     "lastMatches": [
@@ -10,9 +10,9 @@
         "matchStart": "23.04. 20:30",
         "teamSize": "Binaryspot",
         "teamMates": [
+          "lapacity",
           "grXeno",
-          "Andy0525",
-          "lapacity"
+          "Andy0525"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -64,8 +64,8 @@
         "matchStart": "23.04. 19:58",
         "teamSize": "Binaryspot",
         "teamMates": [
-          "RevensoNN",
-          "TOM-X56"
+          "TOM-X56",
+          "RevensoNN"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -82,8 +82,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "Lozza68",
-          "TheMightyHazz",
-          "LuckyLou18"
+          "LuckyLou18",
+          "TheMightyHazz"
         ],
         "perspective": "TPP",
         "placement": 4,
@@ -100,8 +100,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "BiLiNMiYeN",
-          "Schimberleys",
-          "waystripes"
+          "waystripes",
+          "Schimberleys"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -135,9 +135,9 @@
         "matchStart": "23.04. 18:11",
         "teamSize": "Binaryspot",
         "teamMates": [
-          "UrykDK",
           "OutsiderWr",
-          "TheDEAN90"
+          "TheDEAN90",
+          "UrykDK"
         ],
         "perspective": "TPP",
         "placement": 1,
