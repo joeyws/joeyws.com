@@ -1,11 +1,29 @@
 {
-  "timestamp": "25.04. 8:57",
-  "weatherTempCelsius": 15,
+  "timestamp": "25.04. 9:58",
+  "weatherTempCelsius": 17,
   "githubLastCommit": "April 25, 2026",
   "steamStatus": "online",
   "pubg": {
     "name": "joeyws2",
     "lastMatches": [
+      {
+        "matchStart": "25.04. 9:11",
+        "teamSize": "Squad",
+        "teamMates": [
+          "WhuuuZa",
+          "WilleValo",
+          "Pro100XepBaM"
+        ],
+        "perspective": "TPP",
+        "placement": 4,
+        "map": "Erangel",
+        "survivalTime": "18:11",
+        "distance": "8.3",
+        "kills": 7,
+        "assists": 2,
+        "damage": 774,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.04.25.09.07231914-2a0e-4543-bed4-f538caa17a4e"
+      },
       {
         "matchStart": "24.04. 15:56",
         "teamSize": "Squad",
@@ -45,9 +63,9 @@
         "matchStart": "24.04. 14:51",
         "teamSize": "Squad",
         "teamMates": [
+          "Ssharm",
           "mr_Smit-16",
-          "1Maquini1",
-          "Ssharm"
+          "1Maquini1"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -77,9 +95,9 @@
         "matchStart": "23.04. 20:30",
         "teamSize": "Binaryspot",
         "teamMates": [
-          "lapacity",
           "grXeno",
-          "Andy0525"
+          "Andy0525",
+          "lapacity"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -131,8 +149,8 @@
         "matchStart": "23.04. 19:58",
         "teamSize": "Binaryspot",
         "teamMates": [
-          "TOM-X56",
-          "RevensoNN"
+          "RevensoNN",
+          "TOM-X56"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -149,8 +167,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "Lozza68",
-          "LuckyLou18",
-          "TheMightyHazz"
+          "TheMightyHazz",
+          "LuckyLou18"
         ],
         "perspective": "TPP",
         "placement": 4,
@@ -161,24 +179,6 @@
         "assists": 0,
         "damage": 1314,
         "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.04.23.19.ccd275fa-1880-40fd-9947-101d29fc5f07"
-      },
-      {
-        "matchStart": "23.04. 18:53",
-        "teamSize": "Squad",
-        "teamMates": [
-          "BiLiNMiYeN",
-          "waystripes",
-          "Schimberleys"
-        ],
-        "perspective": "TPP",
-        "placement": 1,
-        "map": "Erangel",
-        "survivalTime": "20:28",
-        "distance": "5.3",
-        "kills": 19,
-        "assists": 1,
-        "damage": 1802,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.04.23.18.dc9657de-5677-4c42-90cb-76273358c07e"
       }
     ]
   }
