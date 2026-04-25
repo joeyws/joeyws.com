@@ -1,5 +1,5 @@
 {
-  "timestamp": "25.04. 13:12",
+  "timestamp": "25.04. 14:46",
   "weatherTempCelsius": 21,
   "githubLastCommit": "April 25, 2026",
   "steamStatus": "offline",
@@ -63,9 +63,9 @@
         "matchStart": "24.04. 14:51",
         "teamSize": "Squad",
         "teamMates": [
+          "Ssharm",
           "mr_Smit-16",
-          "1Maquini1",
-          "Ssharm"
+          "1Maquini1"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -95,9 +95,9 @@
         "matchStart": "23.04. 20:30",
         "teamSize": "Binaryspot",
         "teamMates": [
-          "lapacity",
           "grXeno",
-          "Andy0525"
+          "Andy0525",
+          "lapacity"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -149,8 +149,8 @@
         "matchStart": "23.04. 19:58",
         "teamSize": "Binaryspot",
         "teamMates": [
-          "TOM-X56",
-          "RevensoNN"
+          "RevensoNN",
+          "TOM-X56"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -167,8 +167,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "Lozza68",
-          "LuckyLou18",
-          "TheMightyHazz"
+          "TheMightyHazz",
+          "LuckyLou18"
         ],
         "perspective": "TPP",
         "placement": 4,
