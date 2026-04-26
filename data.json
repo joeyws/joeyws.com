@@ -1,6 +1,6 @@
 {
-  "timestamp": "26.04. 14:49",
-  "weatherTempCelsius": 20,
+  "timestamp": "26.04. 15:46",
+  "weatherTempCelsius": 19,
   "githubLastCommit": "April 26, 2026",
   "steamStatus": "online",
   "pubg": {
@@ -80,9 +80,9 @@
         "matchStart": "25.04. 21:19",
         "teamSize": "Binaryspot",
         "teamMates": [
-          "Trinkerbell86",
           "Sm0O0kie",
-          "PG_Cartman021"
+          "PG_Cartman021",
+          "Trinkerbell86"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -116,9 +116,9 @@
         "matchStart": "25.04. 19:05",
         "teamSize": "Binaryspot",
         "teamMates": [
-          "Juliussssssss",
           "efekin",
-          "OcHoByWKa"
+          "OcHoByWKa",
+          "Juliussssssss"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -135,8 +135,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "WhuuuZa",
-          "WilleValo",
-          "Pro100XepBaM"
+          "Pro100XepBaM",
+          "WilleValo"
         ],
         "perspective": "TPP",
         "placement": 4,
