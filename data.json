@@ -1,11 +1,28 @@
 {
-  "timestamp": "26.04. 15:46",
+  "timestamp": "26.04. 16:50",
   "weatherTempCelsius": 19,
   "githubLastCommit": "April 26, 2026",
   "steamStatus": "online",
   "pubg": {
     "name": "joeyws2",
     "lastMatches": [
+      {
+        "matchStart": "26.04. 16:38",
+        "teamSize": "Binaryspot",
+        "teamMates": [
+          "ldlorgQ",
+          "Tsimandras"
+        ],
+        "perspective": "TPP",
+        "placement": 1,
+        "map": "Desert_Main_BinarySpot",
+        "survivalTime": "0:00",
+        "distance": "0.0",
+        "kills": 0,
+        "assists": 0,
+        "damage": 0,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.binaryspot.eu.2026.04.26.16.9caf52c4-065f-4330-ab35-faab3f64ca64"
+      },
       {
         "matchStart": "26.04. 7:02",
         "teamSize": "Binaryspot",
@@ -28,9 +45,9 @@
         "matchStart": "26.04. 6:49",
         "teamSize": "Binaryspot",
         "teamMates": [
+          "fr1me_732",
           "dontshowurself",
-          "UCANNtabut",
-          "fr1me_732"
+          "UCANNtabut"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -46,9 +63,9 @@
         "matchStart": "26.04. 6:24",
         "teamSize": "Binaryspot",
         "teamMates": [
-          "Boyd21",
           "TrueSigma",
-          "CYBORG_3000"
+          "CYBORG_3000",
+          "Boyd21"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -98,9 +115,9 @@
         "matchStart": "25.04. 19:17",
         "teamSize": "Binaryspot",
         "teamMates": [
-          "Wilhelmet",
           "LMigre",
-          "Zomdi23354"
+          "Zomdi23354",
+          "Wilhelmet"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -116,9 +133,9 @@
         "matchStart": "25.04. 19:05",
         "teamSize": "Binaryspot",
         "teamMates": [
+          "Juliussssssss",
           "efekin",
-          "OcHoByWKa",
-          "Juliussssssss"
+          "OcHoByWKa"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -134,9 +151,9 @@
         "matchStart": "25.04. 9:11",
         "teamSize": "Squad",
         "teamMates": [
-          "WhuuuZa",
+          "WilleValo",
           "Pro100XepBaM",
-          "WilleValo"
+          "WhuuuZa"
         ],
         "perspective": "TPP",
         "placement": 4,
@@ -152,8 +169,8 @@
         "matchStart": "24.04. 15:56",
         "teamSize": "Squad",
         "teamMates": [
-          "5oBMG",
-          "Dograma_Atelyesi"
+          "Dograma_Atelyesi",
+          "5oBMG"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -164,24 +181,6 @@
         "assists": 1,
         "damage": 829,
         "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.04.24.15.a5699ffc-e7b2-4c66-a464-f02357b2da35"
-      },
-      {
-        "matchStart": "24.04. 15:20",
-        "teamSize": "Binaryspot",
-        "teamMates": [
-          "CaptainWiFi28",
-          "MagicianFromRiga",
-          "NikosPro22"
-        ],
-        "perspective": "TPP",
-        "placement": 1,
-        "map": "Desert_Main_BinarySpot",
-        "survivalTime": "10:11",
-        "distance": "0.7",
-        "kills": 0,
-        "assists": 0,
-        "damage": 0,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.binaryspot.eu.2026.04.24.15.baf9ce8e-37d1-40be-bf89-a4f1ca9d6726"
       }
     ]
   }
