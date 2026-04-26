@@ -1,7 +1,7 @@
 {
-  "timestamp": "26.04. 3:21",
+  "timestamp": "26.04. 6:08",
   "weatherTempCelsius": 9,
-  "githubLastCommit": "April 25, 2026",
+  "githubLastCommit": "April 26, 2026",
   "steamStatus": "offline",
   "pubg": {
     "name": "joeyws2",
@@ -26,9 +26,9 @@
         "matchStart": "25.04. 21:19",
         "teamSize": "Binaryspot",
         "teamMates": [
+          "Trinkerbell86",
           "Sm0O0kie",
-          "PG_Cartman021",
-          "Trinkerbell86"
+          "PG_Cartman021"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -81,8 +81,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "WhuuuZa",
-          "Pro100XepBaM",
-          "WilleValo"
+          "WilleValo",
+          "Pro100XepBaM"
         ],
         "perspective": "TPP",
         "placement": 4,
@@ -133,9 +133,9 @@
         "matchStart": "24.04. 14:51",
         "teamSize": "Squad",
         "teamMates": [
-          "Ssharm",
           "mr_Smit-16",
-          "1Maquini1"
+          "1Maquini1",
+          "Ssharm"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -165,9 +165,9 @@
         "matchStart": "23.04. 20:30",
         "teamSize": "Binaryspot",
         "teamMates": [
+          "lapacity",
           "grXeno",
-          "Andy0525",
-          "lapacity"
+          "Andy0525"
         ],
         "perspective": "TPP",
         "placement": 1,
