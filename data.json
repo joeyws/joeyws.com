@@ -1,6 +1,6 @@
 {
-  "timestamp": "26.04. 13:13",
-  "weatherTempCelsius": 19,
+  "timestamp": "26.04. 14:49",
+  "weatherTempCelsius": 20,
   "githubLastCommit": "April 26, 2026",
   "steamStatus": "online",
   "pubg": {
@@ -10,9 +10,9 @@
         "matchStart": "26.04. 7:02",
         "teamSize": "Binaryspot",
         "teamMates": [
+          "Pg_BrS",
           "GHOST_QR",
-          "AZaz01___",
-          "Pg_BrS"
+          "AZaz01___"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -46,9 +46,9 @@
         "matchStart": "26.04. 6:24",
         "teamSize": "Binaryspot",
         "teamMates": [
-          "CYBORG_3000",
           "Boyd21",
-          "TrueSigma"
+          "TrueSigma",
+          "CYBORG_3000"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -116,9 +116,9 @@
         "matchStart": "25.04. 19:05",
         "teamSize": "Binaryspot",
         "teamMates": [
+          "Juliussssssss",
           "efekin",
-          "OcHoByWKa",
-          "Juliussssssss"
+          "OcHoByWKa"
         ],
         "perspective": "TPP",
         "placement": 1,
