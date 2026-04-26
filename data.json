@@ -1,8 +1,8 @@
 {
-  "timestamp": "26.04. 19:51",
-  "weatherTempCelsius": 16,
+  "timestamp": "26.04. 20:42",
+  "weatherTempCelsius": 15,
   "githubLastCommit": "April 26, 2026",
-  "steamStatus": "online",
+  "steamStatus": "offline",
   "pubg": {
     "name": "joeyws2",
     "lastMatches": [
@@ -26,8 +26,8 @@
         "matchStart": "26.04. 17:11",
         "teamSize": "Squad",
         "teamMates": [
-          "With-Perfection",
-          "rfares123"
+          "rfares123",
+          "With-Perfection"
         ],
         "perspective": "TPP",
         "placement": 2,
@@ -43,9 +43,9 @@
         "matchStart": "26.04. 16:42",
         "teamSize": "Binaryspot",
         "teamMates": [
-          "ldlorgQ",
           "xDutchpownzx",
-          "Sleazy_Bunny"
+          "Sleazy_Bunny",
+          "ldlorgQ"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -61,8 +61,8 @@
         "matchStart": "26.04. 16:38",
         "teamSize": "Binaryspot",
         "teamMates": [
-          "Tsimandras",
-          "ldlorgQ"
+          "ldlorgQ",
+          "Tsimandras"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -78,9 +78,9 @@
         "matchStart": "26.04. 7:02",
         "teamSize": "Binaryspot",
         "teamMates": [
+          "Pg_BrS",
           "GHOST_QR",
-          "AZaz01___",
-          "Pg_BrS"
+          "AZaz01___"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -96,9 +96,9 @@
         "matchStart": "26.04. 6:49",
         "teamSize": "Binaryspot",
         "teamMates": [
+          "fr1me_732",
           "dontshowurself",
-          "UCANNtabut",
-          "fr1me_732"
+          "UCANNtabut"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -114,9 +114,9 @@
         "matchStart": "26.04. 6:24",
         "teamSize": "Binaryspot",
         "teamMates": [
+          "TrueSigma",
           "CYBORG_3000",
-          "Boyd21",
-          "TrueSigma"
+          "Boyd21"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -148,9 +148,9 @@
         "matchStart": "25.04. 21:19",
         "teamSize": "Binaryspot",
         "teamMates": [
-          "Trinkerbell86",
           "Sm0O0kie",
-          "PG_Cartman021"
+          "PG_Cartman021",
+          "Trinkerbell86"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -166,9 +166,9 @@
         "matchStart": "25.04. 19:17",
         "teamSize": "Binaryspot",
         "teamMates": [
-          "Wilhelmet",
           "LMigre",
-          "Zomdi23354"
+          "Zomdi23354",
+          "Wilhelmet"
         ],
         "perspective": "TPP",
         "placement": 1,
