@@ -1,5 +1,5 @@
 {
-  "timestamp": "27.04. 22:56",
+  "timestamp": "27.04. 23:57",
   "weatherTempCelsius": 13,
   "githubLastCommit": "April 27, 2026",
   "steamStatus": "offline",
@@ -28,9 +28,9 @@
         "matchStart": "27.04. 18:50",
         "teamSize": "Squad",
         "teamMates": [
+          "Flopsibert",
           "Tuna_tion",
-          "KingZurenson",
-          "Flopsibert"
+          "KingZurenson"
         ],
         "perspective": "FPP",
         "placement": 19,
@@ -46,9 +46,9 @@
         "matchStart": "27.04. 18:28",
         "teamSize": "Squad",
         "teamMates": [
-          "Tuna_tion",
           "Flopsibert",
-          "KingZurenson"
+          "KingZurenson",
+          "Tuna_tion"
         ],
         "perspective": "FPP",
         "placement": 9,
@@ -64,9 +64,9 @@
         "matchStart": "27.04. 18:18",
         "teamSize": "Squad",
         "teamMates": [
+          "Tuna_tion",
           "KingZurenson",
-          "Flopsibert",
-          "Tuna_tion"
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 18,
@@ -82,9 +82,9 @@
         "matchStart": "27.04. 17:51",
         "teamSize": "Squad",
         "teamMates": [
-          "KingZurenson",
           "Tuna_tion",
-          "Flopsibert"
+          "Flopsibert",
+          "KingZurenson"
         ],
         "perspective": "FPP",
         "placement": 11,
@@ -100,9 +100,9 @@
         "matchStart": "27.04. 17:32",
         "teamSize": "Squad",
         "teamMates": [
+          "Tuna_tion",
           "Flopsibert",
-          "KingZurenson",
-          "Tuna_tion"
+          "KingZurenson"
         ],
         "perspective": "FPP",
         "placement": 12,
@@ -118,8 +118,8 @@
         "matchStart": "27.04. 17:18",
         "teamSize": "Squad",
         "teamMates": [
-          "Tuna_tion",
           "KingZurenson",
+          "Tuna_tion",
           "Flopsibert"
         ],
         "perspective": "FPP",
@@ -136,8 +136,8 @@
         "matchStart": "27.04. 17:13",
         "teamSize": "Squad",
         "teamMates": [
-          "Flopsibert",
           "KingZurenson",
+          "Flopsibert",
           "tobi3844"
         ],
         "perspective": "FPP",
