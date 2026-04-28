@@ -1,11 +1,29 @@
 {
-  "timestamp": "28.04. 18:20",
-  "weatherTempCelsius": 19,
+  "timestamp": "28.04. 20:19",
+  "weatherTempCelsius": 17,
   "githubLastCommit": "April 28, 2026",
   "steamStatus": "online",
   "pubg": {
     "name": "joeyws2",
     "lastMatches": [
+      {
+        "matchStart": "28.04. 18:20",
+        "teamSize": "Squad",
+        "teamMates": [
+          "riccodo",
+          "Heady_Queen",
+          "SUperGirll97"
+        ],
+        "perspective": "TPP",
+        "placement": 1,
+        "map": "Erangel",
+        "survivalTime": "23:01",
+        "distance": "11.1",
+        "kills": 14,
+        "assists": 2,
+        "damage": 1345,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.04.28.18.34f9ba07-e181-48af-aa82-656034f531c6"
+      },
       {
         "matchStart": "28.04. 17:55",
         "teamSize": "Squad",
@@ -167,22 +185,6 @@
         "assists": 0,
         "damage": 25,
         "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.squad-fpp.eu.2026.04.27.17.54f402f7-e7cc-4253-acae-025c6aa83d11"
-      },
-      {
-        "matchStart": "26.04. 17:40",
-        "teamSize": "Squad",
-        "teamMates": [
-          "AdvokatDoc01"
-        ],
-        "perspective": "TPP",
-        "placement": 2,
-        "map": "Erangel",
-        "survivalTime": "24:03",
-        "distance": "6.8",
-        "kills": 17,
-        "assists": 0,
-        "damage": 1826,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.04.26.17.95ee063e-fbe7-4f52-9596-70b86fbbf561"
       }
     ]
   }
