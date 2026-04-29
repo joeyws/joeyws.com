@@ -1,11 +1,29 @@
 {
-  "timestamp": "29.04. 22:01",
-  "weatherTempCelsius": 12,
+  "timestamp": "29.04. 23:57",
+  "weatherTempCelsius": 10,
   "githubLastCommit": "April 29, 2026",
   "steamStatus": "online",
   "pubg": {
     "name": "joeyws2",
     "lastMatches": [
+      {
+        "matchStart": "29.04. 21:07",
+        "teamSize": "Binaryspot",
+        "teamMates": [
+          "TRlxl_OLAYBU_lxl",
+          "Flamiingo-",
+          "KARABAS_BARABA5"
+        ],
+        "perspective": "TPP",
+        "placement": 1,
+        "map": "Desert_Main_BinarySpot",
+        "survivalTime": "100:04",
+        "distance": "15.5",
+        "kills": 0,
+        "assists": 0,
+        "damage": 0,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.binaryspot.eu.2026.04.29.21.7a32c35c-84f5-4851-bd47-3a0095527c26"
+      },
       {
         "matchStart": "29.04. 20:44",
         "teamSize": "Binaryspot",
@@ -166,23 +184,6 @@
         "assists": 0,
         "damage": 0,
         "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.binaryspot.eu.2026.04.29.20.862fa420-1317-4f67-a7e8-8da46f9920c4"
-      },
-      {
-        "matchStart": "29.04. 20:30",
-        "teamSize": "Binaryspot",
-        "teamMates": [
-          "TrueSigma",
-          "EZ_KRAL47"
-        ],
-        "perspective": "TPP",
-        "placement": 1,
-        "map": "Desert_Main_BinarySpot",
-        "survivalTime": "0:00",
-        "distance": "0.0",
-        "kills": 0,
-        "assists": 0,
-        "damage": 0,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.binaryspot.eu.2026.04.29.20.d4050d9e-e50c-41c1-956f-38ded9d232e4"
       }
     ]
   }
