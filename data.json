@@ -1,6 +1,6 @@
 {
-  "timestamp": "28.04. 23:57",
-  "weatherTempCelsius": 13,
+  "timestamp": "29.04. 3:53",
+  "weatherTempCelsius": 11,
   "githubLastCommit": "April 28, 2026",
   "steamStatus": "offline",
   "pubg": {
@@ -82,9 +82,9 @@
         "matchStart": "27.04. 18:28",
         "teamSize": "Squad",
         "teamMates": [
-          "Tuna_tion",
           "Flopsibert",
-          "KingZurenson"
+          "KingZurenson",
+          "Tuna_tion"
         ],
         "perspective": "FPP",
         "placement": 9,
@@ -137,8 +137,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "Tuna_tion",
-          "Flopsibert",
-          "KingZurenson"
+          "KingZurenson",
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 12,
