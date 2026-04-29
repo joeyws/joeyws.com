@@ -1,8 +1,8 @@
 {
-  "timestamp": "29.04. 14:05",
-  "weatherTempCelsius": 20,
+  "timestamp": "29.04. 16:43",
+  "weatherTempCelsius": 18,
   "githubLastCommit": "April 29, 2026",
-  "steamStatus": "offline",
+  "steamStatus": "online",
   "pubg": {
     "name": "joeyws2",
     "lastMatches": [
@@ -10,9 +10,9 @@
         "matchStart": "28.04. 18:20",
         "teamSize": "Squad",
         "teamMates": [
-          "riccodo",
+          "SUperGirll97",
           "Heady_Queen",
-          "SUperGirll97"
+          "riccodo"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -28,8 +28,8 @@
         "matchStart": "28.04. 17:55",
         "teamSize": "Squad",
         "teamMates": [
-          "Bagzis",
           "SfyLTU",
+          "Bagzis",
           "Yusef1988_RR55"
         ],
         "perspective": "TPP",
@@ -46,9 +46,9 @@
         "matchStart": "27.04. 19:02",
         "teamSize": "Binaryspot",
         "teamMates": [
+          "Paladin2255",
           "HEMICUDA_UA",
-          "edyarrrddoo",
-          "Paladin2255"
+          "edyarrrddoo"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -100,9 +100,9 @@
         "matchStart": "27.04. 18:18",
         "teamSize": "Squad",
         "teamMates": [
-          "Tuna_tion",
           "KingZurenson",
-          "Flopsibert"
+          "Flopsibert",
+          "Tuna_tion"
         ],
         "perspective": "FPP",
         "placement": 18,
@@ -118,9 +118,9 @@
         "matchStart": "27.04. 17:51",
         "teamSize": "Squad",
         "teamMates": [
+          "KingZurenson",
           "Tuna_tion",
-          "Flopsibert",
-          "KingZurenson"
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 11,
@@ -137,8 +137,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "Tuna_tion",
-          "Flopsibert",
-          "KingZurenson"
+          "KingZurenson",
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 12,
@@ -172,9 +172,9 @@
         "matchStart": "27.04. 17:13",
         "teamSize": "Squad",
         "teamMates": [
+          "tobi3844",
           "KingZurenson",
-          "Flopsibert",
-          "tobi3844"
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 27,
