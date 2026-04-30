@@ -1,11 +1,47 @@
 {
-  "timestamp": "30.04. 16:22",
-  "weatherTempCelsius": 17,
+  "timestamp": "30.04. 18:12",
+  "weatherTempCelsius": 16,
   "githubLastCommit": "April 30, 2026",
   "steamStatus": "online",
   "pubg": {
     "name": "joeyws2",
     "lastMatches": [
+      {
+        "matchStart": "30.04. 16:47",
+        "teamSize": "Binaryspot",
+        "teamMates": [
+          "SteckVanHinten",
+          "StopUnfairBans",
+          "4iko79"
+        ],
+        "perspective": "TPP",
+        "placement": 1,
+        "map": "Desert_Main_BinarySpot",
+        "survivalTime": "15:07",
+        "distance": "1.9",
+        "kills": 0,
+        "assists": 0,
+        "damage": 0,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.binaryspot.eu.2026.04.30.16.1d373b43-036b-4168-961c-c40a47a8744f"
+      },
+      {
+        "matchStart": "30.04. 16:20",
+        "teamSize": "Squad",
+        "teamMates": [
+          "Logger2103",
+          "CK800",
+          "Potislav"
+        ],
+        "perspective": "TPP",
+        "placement": 2,
+        "map": "Erangel",
+        "survivalTime": "19:11",
+        "distance": "8.6",
+        "kills": 6,
+        "assists": 2,
+        "damage": 822,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.04.30.16.9bbdc155-0fd0-46bb-8063-33b3c3fd27a7"
+      },
       {
         "matchStart": "30.04. 15:44",
         "teamSize": "Squad",
@@ -46,9 +82,9 @@
         "matchStart": "29.04. 20:44",
         "teamSize": "Binaryspot",
         "teamMates": [
-          "TRlxl_OLAYBU_lxl",
           "KARABAS_BARABA5",
-          "Flamiingo-"
+          "Flamiingo-",
+          "TRlxl_OLAYBU_lxl"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -82,9 +118,9 @@
         "matchStart": "29.04. 20:41",
         "teamSize": "Binaryspot",
         "teamMates": [
-          "ionnutu05",
           "KeRmiZoN",
-          "Flamiingo-"
+          "Flamiingo-",
+          "ionnutu05"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -118,9 +154,9 @@
         "matchStart": "29.04. 20:36",
         "teamSize": "Binaryspot",
         "teamMates": [
-          "Taras1103",
           "Flamiingo-",
-          "PHANTA-ZE"
+          "PHANTA-ZE",
+          "Taras1103"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -149,42 +185,6 @@
         "assists": 0,
         "damage": 0,
         "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.binaryspot.eu.2026.04.29.20.1041fd0e-1b99-4926-9514-4c1b80b96c26"
-      },
-      {
-        "matchStart": "29.04. 20:32",
-        "teamSize": "Binaryspot",
-        "teamMates": [
-          "Djek5on",
-          "Gramkyl",
-          "Flamiingo-"
-        ],
-        "perspective": "TPP",
-        "placement": 1,
-        "map": "Desert_Main_BinarySpot",
-        "survivalTime": "0:00",
-        "distance": "0.0",
-        "kills": 0,
-        "assists": 0,
-        "damage": 0,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.binaryspot.eu.2026.04.29.20.34bad6e4-0a47-4c8c-ae9b-f105807a0243"
-      },
-      {
-        "matchStart": "29.04. 20:31",
-        "teamSize": "Binaryspot",
-        "teamMates": [
-          "MadDoc_UA",
-          "baumkopfjoho",
-          "God-0v-War"
-        ],
-        "perspective": "TPP",
-        "placement": 1,
-        "map": "Desert_Main_BinarySpot",
-        "survivalTime": "0:00",
-        "distance": "0.0",
-        "kills": 0,
-        "assists": 0,
-        "damage": 0,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.binaryspot.eu.2026.04.29.20.5cb998b5-3ff4-4208-aafe-b4a0da48ce97"
       }
     ]
   }
