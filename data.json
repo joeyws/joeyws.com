@@ -1,6 +1,6 @@
 {
-  "timestamp": "30.04. 11:39",
-  "weatherTempCelsius": 16,
+  "timestamp": "30.04. 14:04",
+  "weatherTempCelsius": 18,
   "githubLastCommit": "April 30, 2026",
   "steamStatus": "offline",
   "pubg": {
@@ -28,9 +28,9 @@
         "matchStart": "29.04. 20:44",
         "teamSize": "Binaryspot",
         "teamMates": [
-          "KARABAS_BARABA5",
           "Flamiingo-",
-          "TRlxl_OLAYBU_lxl"
+          "TRlxl_OLAYBU_lxl",
+          "KARABAS_BARABA5"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -100,9 +100,9 @@
         "matchStart": "29.04. 20:36",
         "teamSize": "Binaryspot",
         "teamMates": [
-          "PHANTA-ZE",
           "Taras1103",
-          "Flamiingo-"
+          "Flamiingo-",
+          "PHANTA-ZE"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -118,9 +118,9 @@
         "matchStart": "29.04. 20:34",
         "teamSize": "Binaryspot",
         "teamMates": [
+          "Flamiingo-",
           "sw1ckk",
-          "papderr",
-          "Flamiingo-"
+          "papderr"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -136,9 +136,9 @@
         "matchStart": "29.04. 20:32",
         "teamSize": "Binaryspot",
         "teamMates": [
-          "Gramkyl",
           "Flamiingo-",
-          "Djek5on"
+          "Djek5on",
+          "Gramkyl"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -154,9 +154,9 @@
         "matchStart": "29.04. 20:31",
         "teamSize": "Binaryspot",
         "teamMates": [
+          "MadDoc_UA",
           "baumkopfjoho",
-          "God-0v-War",
-          "MadDoc_UA"
+          "God-0v-War"
         ],
         "perspective": "TPP",
         "placement": 1,
