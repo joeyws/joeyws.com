@@ -1,6 +1,6 @@
 {
-  "timestamp": "29.04. 23:57",
-  "weatherTempCelsius": 10,
+  "timestamp": "30.04. 3:55",
+  "weatherTempCelsius": 7,
   "githubLastCommit": "April 29, 2026",
   "steamStatus": "online",
   "pubg": {
@@ -100,9 +100,9 @@
         "matchStart": "29.04. 20:36",
         "teamSize": "Binaryspot",
         "teamMates": [
+          "Taras1103",
           "Flamiingo-",
-          "PHANTA-ZE",
-          "Taras1103"
+          "PHANTA-ZE"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -136,9 +136,9 @@
         "matchStart": "29.04. 20:32",
         "teamSize": "Binaryspot",
         "teamMates": [
-          "Djek5on",
           "Gramkyl",
-          "Flamiingo-"
+          "Flamiingo-",
+          "Djek5on"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -172,8 +172,8 @@
         "matchStart": "29.04. 20:30",
         "teamSize": "Binaryspot",
         "teamMates": [
-          "VigorousQ",
-          "Sunspots"
+          "Sunspots",
+          "VigorousQ"
         ],
         "perspective": "TPP",
         "placement": 1,
