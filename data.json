@@ -1,8 +1,8 @@
 {
-  "timestamp": "01.05. 20:05",
-  "weatherTempCelsius": 18,
+  "timestamp": "01.05. 21:55",
+  "weatherTempCelsius": 15,
   "githubLastCommit": "May 1, 2026",
-  "steamStatus": "offline",
+  "steamStatus": "online",
   "pubg": {
     "name": "joeyws2",
     "lastMatches": [
@@ -70,9 +70,9 @@
         "matchStart": "30.04. 16:20",
         "teamSize": "Squad",
         "teamMates": [
-          "Potislav",
+          "Logger2103",
           "CK800",
-          "Logger2103"
+          "Potislav"
         ],
         "perspective": "TPP",
         "placement": 2,
@@ -124,9 +124,9 @@
         "matchStart": "29.04. 20:44",
         "teamSize": "Binaryspot",
         "teamMates": [
-          "TRlxl_OLAYBU_lxl",
           "KARABAS_BARABA5",
-          "Flamiingo-"
+          "Flamiingo-",
+          "TRlxl_OLAYBU_lxl"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -160,9 +160,9 @@
         "matchStart": "29.04. 20:41",
         "teamSize": "Binaryspot",
         "teamMates": [
-          "ionnutu05",
           "KeRmiZoN",
-          "Flamiingo-"
+          "Flamiingo-",
+          "ionnutu05"
         ],
         "perspective": "TPP",
         "placement": 1,
