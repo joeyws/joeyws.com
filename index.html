@@ -17,6 +17,7 @@
 <link rel="canonical" href="https://joeyws.com/">
 <style>
     @font-face{font-family:webfont;src:url("font/SourceCodePro.woff2");font-display:swap;}
+    @font-face{font-family:webfont2;src:url("font/InstrumentSerif.woff2");font-display:swap;}
     :root{--background:#000;--text:#bbb;--spacer:8px;}
     ::selection{background:var(--text);color:var(--background);}
     /* RESET */ *{text-underline-offset:2px;text-decoration-thickness:.05em;text-decoration-skip-ink:none;font-kerning:normal;outline:none;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{box-sizing:content-box;border-radius:0;/* -webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-border-radius:0;-webkit-text-size-adjust:none;-webkit-appearance:none;font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased; */}
@@ -31,14 +32,14 @@
     a,.video:not(.playing)::after{background:#0008;white-space:nowrap;text-decoration:underline;}
     a:hover,.video:not(.playing):hover::after{background:#f0f;color:var(--background);text-decoration:none;}
     /* HEADER */
-    #header,.video:not(.playing)::after{font-size:1.4rem;line-height:1em;}
+    #header,.video:not(.playing)::after{font-size:1.6rem;/* text-transform:uppercase; */line-height:1em;}
     #header,#header span,nav{display:flex;gap:1em;}
     #header{/* background:var(--text);color:var(--background);padding:var(--spacer); */white-space:nowrap;user-select:none;width:100%;flex-wrap:wrap;justify-content:space-between;box-sizing:border-box;}
     nav a,nav a:hover{text-decoration:none;background:transparent;color:inherit;}
-    nav a.open{background:#f0f;color:var(--background);}
+    nav a.open{background:var(--text);color:var(--background);}
     @media (max-width:500px) {#header{flex-direction:column;}}
     /* CENTER */
-    .content *{margin-left:auto;margin-right:auto;}
+    .content>*{margin-left:auto;margin-right:auto;}
     .center{text-align:center;}
     /* MARQUEE */
     .marquee{background:#0f0;color:var(--background);/* margin:calc(-1 * var(--spacer)); */margin-bottom:var(--spacer);transition:.2s width ease-out;line-height:1.5em;box-sizing:border-box;width:1px;overflow:hidden;white-space:nowrap;display:block;user-select:none;/* mask-mode:alpha;mask-image:linear-gradient(to right, transparent, #000 20%, #000 calc(100% - 20%), transparent); */}
@@ -54,7 +55,7 @@
     .video video,.video .controls{display:none;}
     .video video{object-fit:cover;}
     .video .controls{position:absolute;bottom:0;left:0;right:0;}
-    .video .progress{display:inline-block;height:2px;overflow:hidden;padding-top:30px;}
+    .video .progress{/* display:block; */height:2px;overflow:hidden;padding-top:30px;}
     .video .progress-filled{width:0%;height:100%;background:var(--text);}
     /* GALLERY */
     .gallery-nav,.gallery-caption{text-align:center;}
@@ -388,15 +389,19 @@ document.querySelectorAll(".phone").forEach(el => {
 // COPY EMAIL
 document.querySelectorAll(".email").forEach(emailEl => {
     const hintSpan = document.createElement("span");
+    emailEl.style.position = 'relative';
+    hintSpan.style.position = 'absolute';
+    hintSpan.style.paddingLeft = '.7em';
+    hintSpan.style.whiteSpace = 'nowrap';
     emailEl.insertAdjacentElement("afterend", hintSpan);
-    emailEl.addEventListener("mouseenter", () => {hintSpan.textContent = " copy";});
+    emailEl.addEventListener("mouseenter", () => {hintSpan.textContent = "copy";});
     emailEl.addEventListener("mouseleave", () => {hintSpan.textContent = "";});
     emailEl.addEventListener("click", (event) => {
         event.preventDefault();
         navigator.clipboard.writeText(mail).then(() => {
-            hintSpan.textContent = " copied";
+            hintSpan.textContent = "copied";
         }).catch(() => {
-            hintSpan.textContent = " copying failed";
+            hintSpan.textContent = "copying failed";
         });
     });
 });
