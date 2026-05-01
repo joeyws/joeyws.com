@@ -1,5 +1,5 @@
 {
-  "timestamp": "01.05. 22:53",
+  "timestamp": "01.05. 23:54",
   "weatherTempCelsius": 13,
   "githubLastCommit": "May 1, 2026",
   "steamStatus": "online",
@@ -52,9 +52,9 @@
         "matchStart": "30.04. 16:47",
         "teamSize": "Binaryspot",
         "teamMates": [
-          "SteckVanHinten",
           "StopUnfairBans",
-          "4iko79"
+          "4iko79",
+          "SteckVanHinten"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -70,9 +70,9 @@
         "matchStart": "30.04. 16:20",
         "teamSize": "Squad",
         "teamMates": [
-          "Potislav",
           "CK800",
-          "Logger2103"
+          "Logger2103",
+          "Potislav"
         ],
         "perspective": "TPP",
         "placement": 2,
@@ -88,8 +88,8 @@
         "matchStart": "30.04. 15:44",
         "teamSize": "Squad",
         "teamMates": [
-          "Zvejus1",
           "c074ec93",
+          "Zvejus1",
           "iQt-FalcoN"
         ],
         "perspective": "TPP",
@@ -124,9 +124,9 @@
         "matchStart": "29.04. 20:44",
         "teamSize": "Binaryspot",
         "teamMates": [
+          "Flamiingo-",
           "TRlxl_OLAYBU_lxl",
-          "KARABAS_BARABA5",
-          "Flamiingo-"
+          "KARABAS_BARABA5"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -160,9 +160,9 @@
         "matchStart": "29.04. 20:41",
         "teamSize": "Binaryspot",
         "teamMates": [
-          "ionnutu05",
           "KeRmiZoN",
-          "Flamiingo-"
+          "Flamiingo-",
+          "ionnutu05"
         ],
         "perspective": "TPP",
         "placement": 1,
