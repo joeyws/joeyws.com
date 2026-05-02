@@ -1,11 +1,39 @@
 {
-  "timestamp": "02.05. 5:42",
-  "weatherTempCelsius": 10,
+  "timestamp": "02.05. 7:49",
+  "weatherTempCelsius": 17,
   "githubLastCommit": "May 2, 2026",
   "steamStatus": "online",
   "pubg": {
     "name": "joeyws2",
     "lastMatches": [
+      {
+        "matchStart": "02.05. 5:30",
+        "teamSize": "Squad",
+        "teamMates": [],
+        "perspective": "TPP",
+        "placement": 1,
+        "map": "Erangel",
+        "survivalTime": "24:56",
+        "distance": "4.0",
+        "kills": 12,
+        "assists": 0,
+        "damage": 1069,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.05.02.05.b3dd6d36-4500-42f9-9368-cd8261c8e241"
+      },
+      {
+        "matchStart": "02.05. 5:20",
+        "teamSize": "Squad",
+        "teamMates": [],
+        "perspective": "TPP",
+        "placement": 23,
+        "map": "Erangel",
+        "survivalTime": "6:49",
+        "distance": "0.2",
+        "kills": 0,
+        "assists": 0,
+        "damage": 64,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.05.02.05.a7fdebb9-2b46-4a61-b810-87a13b7d8142"
+      },
       {
         "matchStart": "02.05. 4:52",
         "teamSize": "Squad",
@@ -80,9 +108,9 @@
         "matchStart": "30.04. 16:47",
         "teamSize": "Binaryspot",
         "teamMates": [
+          "SteckVanHinten",
           "StopUnfairBans",
-          "4iko79",
-          "SteckVanHinten"
+          "4iko79"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -98,9 +126,9 @@
         "matchStart": "30.04. 16:20",
         "teamSize": "Squad",
         "teamMates": [
-          "CK800",
+          "Potislav",
           "Logger2103",
-          "Potislav"
+          "CK800"
         ],
         "perspective": "TPP",
         "placement": 2,
@@ -129,42 +157,6 @@
         "assists": 2,
         "damage": 957,
         "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.04.30.15.447f9483-7349-4be8-ae32-c67d24b45bb5"
-      },
-      {
-        "matchStart": "29.04. 21:07",
-        "teamSize": "Binaryspot",
-        "teamMates": [
-          "TRlxl_OLAYBU_lxl",
-          "Flamiingo-",
-          "KARABAS_BARABA5"
-        ],
-        "perspective": "TPP",
-        "placement": 1,
-        "map": "Desert_Main_BinarySpot",
-        "survivalTime": "100:04",
-        "distance": "15.5",
-        "kills": 0,
-        "assists": 0,
-        "damage": 0,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.binaryspot.eu.2026.04.29.21.7a32c35c-84f5-4851-bd47-3a0095527c26"
-      },
-      {
-        "matchStart": "29.04. 20:44",
-        "teamSize": "Binaryspot",
-        "teamMates": [
-          "Flamiingo-",
-          "TRlxl_OLAYBU_lxl",
-          "KARABAS_BARABA5"
-        ],
-        "perspective": "TPP",
-        "placement": 1,
-        "map": "Desert_Main_BinarySpot",
-        "survivalTime": "21:48",
-        "distance": "3.1",
-        "kills": 0,
-        "assists": 0,
-        "damage": 0,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.binaryspot.eu.2026.04.29.20.2dfc614f-5dc4-4057-b858-607c7463b216"
       }
     ]
   }
