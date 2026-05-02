@@ -33,7 +33,7 @@
     a:hover,.video:not(.playing):hover::after{background:#f0f;color:var(--background);text-decoration:none;}
     /* HEADER */
     #header,.video:not(.playing)::after{font-size:1.6rem;/* text-transform:uppercase; */line-height:1em;}
-    #header,#header span,nav{display:flex;gap:1em;}
+    #header,#header span,nav{display:flex;gap:var(--spacer) 1em;}
     #header{/* background:var(--text);color:var(--background);padding:var(--spacer); */white-space:nowrap;user-select:none;width:100%;flex-wrap:wrap;justify-content:space-between;box-sizing:border-box;}
     nav a,nav a:hover{text-decoration:none;background:transparent;color:inherit;}
     nav a.open{background:var(--text);color:var(--background);}
@@ -186,9 +186,8 @@
     </p>
     <p class="center">
         <a href="https://www.linkedin.com/in/joeyschweickhardt/"><svg viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg"><title>LinkedIn</title><path fill="var(--text)" fill-rule="evenodd" d="M8 72h56a8 8 0 0 0 8-8V8a8 8 0 0 0-8-8H8a8 8 0 0 0-8 8v56a8 8 0 0 0 8 8z M62 62H51.3V43.8c0-5-1.9-7.8-5.8-7.8-4.3 0-6.6 2.9-6.6 7.8V62H28.6V27.3h10.3V32s3.1-5.7 10.5-5.7S62 30.8 62 40.1V62z M16.3 22.8A6.4 6.4 0 1 1 16.3 10a6.4 6.4 0 0 1 0 12.8z M11 62h10.8V27.3H11V62z"/></svg></a>
-        <!-- <a href="https://twitter.com/joeyws"><svg viewBox="0 0 248 204" xmlns="http://www.w3.org/2000/svg"><title>Twitter</title><path fill="var(--text)" d="M222 51.3c.1 2.2.1 4.3.1 6.5 0 66.7-50.8 143.7-143.7 143.7-27.4 0-54.3-7.8-77.4-22.6 4 .5 8 .7 12 .7 22.7 0 44.8-7.6 62.7-21.7-21.6-.4-40.6-14.5-47.2-35.1 7.6 1.5 15.4 1.2 22.8-.9-23.6-4.8-40.5-25.5-40.5-49.5v-.6c7 3.9 14.9 6.1 22.9 6.3C11.6 63.3 4.7 33.8 18.1 10.7c25.6 31.6 63.5 50.7 104.1 52.8-4.1-17.5 1.5-35.9 14.6-48.3 20.3-19.1 52.3-18.1 71.4 2.2 11.3-2.2 22.2-6.4 32.1-12.3-3.8 11.7-11.7 21.6-22.2 27.9 10-1.2 19.8-3.9 29-8-6.8 10.2-15.3 19-25.2 26.2z"/></svg></a> -->
         <a href="https://www.instagram.com/joeyws"><svg viewBox="0 0 169.063 169.063" xmlns="http://www.w3.org/2000/svg"><title>Instagram</title><path fill="var(--text)" fill-rule="evenodd" d="M122.4 0H46.7C20.9 0 0 20.9 0 46.7v75.7c0 25.7 20.9 46.7 46.7 46.7h75.7c25.7 0 46.7-20.9 46.7-46.7V46.7 C169.1 20.9 148.1 0 122.4 0z M154.1 122.4c0 17.5-14.2 31.7-31.7 31.7H46.7c-17.5 0-31.7-14.2-31.7-31.7V46.7 C15 29.2 29.2 15 46.7 15h75.7c17.5 0 31.7 14.2 31.7 31.7v75.7z M84.5 41c-24 0-43.6 19.5-43.6 43.6s19.6 43.6 43.6 43.6 43.6-19.6 43.6-43.6 S108.6 41 84.5 41zm0 72.1c-15.7 0-28.6-12.8-28.6-28.6S68.8 56 84.5 56s28.6 12.8 28.6 28.6 -12.9 28.6-28.6 28.6z M129.9 28.3c-2.9 0-5.7 1.2-7.8 3.2-2 2-3.2 4.9-3.2 7.8s1.2 5.7 3.2 7.8 c2 2 4.9 3.2 7.8 3.2s5.7-1.2 7.8-3.2c2.1-2.1 3.2-4.9 3.2-7.8s-1.1-5.7-3.2-7.8 c-2-2-4.9-3.2-7.8-3.2z"/></svg></a>
-        <a class="whatsapp" href="javascript:"><svg viewBox="0 0 30.667 30.667" xmlns="http://www.w3.org/2000/svg"><title>WhatsApp</title><g><path d="M30.667,14.939c0,8.25-6.74,14.938-15.056,14.938c-2.639,0-5.118-0.675-7.276-1.857L0,30.667l2.717-8.017 c-1.37-2.25-2.159-4.892-2.159-7.712C0.559,6.688,7.297,0,15.613,0C23.928,0.002,30.667,6.689,30.667,14.939z M15.61,2.382 c-6.979,0-12.656,5.634-12.656,12.56c0,2.748,0.896,5.292,2.411,7.362l-1.58,4.663l4.862-1.545c2,1.312,4.393,2.076,6.963,2.076 c6.979,0,12.658-5.633,12.658-12.559C28.27,8.016,22.59,2.382,15.61,2.382z M23.214,18.38c-0.094-0.151-0.34-0.243-0.708-0.427 c-0.367-0.184-2.184-1.069-2.521-1.189c-0.34-0.123-0.586-0.185-0.832,0.182c-0.243,0.367-0.951,1.191-1.168,1.437 c-0.215,0.245-0.43,0.276-0.799,0.095c-0.369-0.186-1.559-0.57-2.969-1.817c-1.097-0.972-1.838-2.169-2.052-2.536 c-0.217-0.366-0.022-0.564,0.161-0.746c0.165-0.165,0.369-0.428,0.554-0.643c0.185-0.213,0.246-0.364,0.369-0.609 c0.121-0.245,0.06-0.458-0.031-0.643c-0.092-0.184-0.829-1.984-1.138-2.717c-0.307-0.732-0.614-0.611-0.83-0.611 c-0.215,0-0.461-0.03-0.707-0.03S9.897,8.215,9.56,8.582s-1.291,1.252-1.291,3.054c0,1.804,1.321,3.543,1.506,3.787 c0.186,0.243,2.554,4.062,6.305,5.528c3.753,1.465,3.753,0.976,4.429,0.914c0.678-0.062,2.184-0.885,2.49-1.739 C23.307,19.268,23.307,18.533,23.214,18.38z"/></g></svg></a>
+        <a class="whatsapp" href="javascript:"><svg viewBox="0 0 30.667 30.667" xmlns="http://www.w3.org/2000/svg"><title>WhatsApp</title><path d="M30.667,14.939c0,8.25-6.74,14.938-15.056,14.938c-2.639,0-5.118-0.675-7.276-1.857L0,30.667l2.717-8.017 c-1.37-2.25-2.159-4.892-2.159-7.712C0.559,6.688,7.297,0,15.613,0C23.928,0.002,30.667,6.689,30.667,14.939z M15.61,2.382 c-6.979,0-12.656,5.634-12.656,12.56c0,2.748,0.896,5.292,2.411,7.362l-1.58,4.663l4.862-1.545c2,1.312,4.393,2.076,6.963,2.076 c6.979,0,12.658-5.633,12.658-12.559C28.27,8.016,22.59,2.382,15.61,2.382z M23.214,18.38c-0.094-0.151-0.34-0.243-0.708-0.427 c-0.367-0.184-2.184-1.069-2.521-1.189c-0.34-0.123-0.586-0.185-0.832,0.182c-0.243,0.367-0.951,1.191-1.168,1.437 c-0.215,0.245-0.43,0.276-0.799,0.095c-0.369-0.186-1.559-0.57-2.969-1.817c-1.097-0.972-1.838-2.169-2.052-2.536 c-0.217-0.366-0.022-0.564,0.161-0.746c0.165-0.165,0.369-0.428,0.554-0.643c0.185-0.213,0.246-0.364,0.369-0.609 c0.121-0.245,0.06-0.458-0.031-0.643c-0.092-0.184-0.829-1.984-1.138-2.717c-0.307-0.732-0.614-0.611-0.83-0.611 c-0.215,0-0.461-0.03-0.707-0.03S9.897,8.215,9.56,8.582s-1.291,1.252-1.291,3.054c0,1.804,1.321,3.543,1.506,3.787 c0.186,0.243,2.554,4.062,6.305,5.528c3.753,1.465,3.753,0.976,4.429,0.914c0.678-0.062,2.184-0.885,2.49-1.739 C23.307,19.268,23.307,18.533,23.214,18.38z"/></svg></a>
     </p>
     <hr>
     <div id="map"></div>
@@ -348,27 +347,6 @@ requestIdleCallback(() => {
         } catch (err) {}
     };
     getWeather();
-    // LAST MODIFIED
-    /* async function updateLastModified() {
-        try {
-            const contact = document.getElementById('contact');
-            if (!contact) return;
-            const response = await fetch("https://api.github.com/repos/joeyws/joeyws.com/commits");
-            if (!response.ok) return;
-            const json = await response.json();
-            if (!json[0]?.commit?.author?.date) return;
-            const date = new Date(json[0].commit.author.date);
-            const formatted = date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
-            const p = document.createElement('p');
-            p.classList.add('center');
-            p.innerHTML = `Last modified ${formatted}.`;
-            contact.appendChild(p);
-            const hr = document.createElement('hr');
-            contact.appendChild(hr);
-            setTimeout(() => { lenis.resize(); }, 50);
-        } catch {}
-    }
-    updateLastModified(); */
 });
     
 // CONTACT
