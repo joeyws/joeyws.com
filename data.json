@@ -1,6 +1,6 @@
 {
-  "timestamp": "02.05. 13:19",
-  "weatherTempCelsius": 25,
+  "timestamp": "02.05. 14:52",
+  "weatherTempCelsius": 26,
   "githubLastCommit": "May 2, 2026",
   "steamStatus": "offline",
   "pubg": {
@@ -108,9 +108,9 @@
         "matchStart": "30.04. 16:47",
         "teamSize": "Binaryspot",
         "teamMates": [
-          "4iko79",
           "SteckVanHinten",
-          "StopUnfairBans"
+          "StopUnfairBans",
+          "4iko79"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -126,9 +126,9 @@
         "matchStart": "30.04. 16:20",
         "teamSize": "Squad",
         "teamMates": [
-          "Potislav",
+          "Logger2103",
           "CK800",
-          "Logger2103"
+          "Potislav"
         ],
         "perspective": "TPP",
         "placement": 2,
