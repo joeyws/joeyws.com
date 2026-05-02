@@ -1,8 +1,8 @@
 {
-  "timestamp": "02.05. 7:49",
-  "weatherTempCelsius": 17,
+  "timestamp": "02.05. 9:10",
+  "weatherTempCelsius": 20,
   "githubLastCommit": "May 2, 2026",
-  "steamStatus": "online",
+  "steamStatus": "offline",
   "pubg": {
     "name": "joeyws2",
     "lastMatches": [
@@ -127,8 +127,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "Potislav",
-          "Logger2103",
-          "CK800"
+          "CK800",
+          "Logger2103"
         ],
         "perspective": "TPP",
         "placement": 2,
@@ -144,8 +144,8 @@
         "matchStart": "30.04. 15:44",
         "teamSize": "Squad",
         "teamMates": [
-          "c074ec93",
           "Zvejus1",
+          "c074ec93",
           "iQt-FalcoN"
         ],
         "perspective": "TPP",
