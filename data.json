@@ -1,5 +1,5 @@
 {
-  "timestamp": "02.05. 22:48",
+  "timestamp": "02.05. 23:49",
   "weatherTempCelsius": 16,
   "githubLastCommit": "May 2, 2026",
   "steamStatus": "offline",
@@ -126,9 +126,9 @@
         "matchStart": "30.04. 16:20",
         "teamSize": "Squad",
         "teamMates": [
-          "Potislav",
           "Logger2103",
-          "CK800"
+          "CK800",
+          "Potislav"
         ],
         "perspective": "TPP",
         "placement": 2,
@@ -144,8 +144,8 @@
         "matchStart": "30.04. 15:44",
         "teamSize": "Squad",
         "teamMates": [
-          "c074ec93",
           "Zvejus1",
+          "c074ec93",
           "iQt-FalcoN"
         ],
         "perspective": "TPP",
