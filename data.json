@@ -1,11 +1,29 @@
 {
-  "timestamp": "05.05. 20:09",
+  "timestamp": "05.05. 22:02",
   "weatherTempCelsius": 14,
   "githubLastCommit": "May 5, 2026",
-  "steamStatus": "online",
+  "steamStatus": "offline",
   "pubg": {
     "name": "joeyws2",
     "lastMatches": [
+      {
+        "matchStart": "05.05. 20:07",
+        "teamSize": "Squad",
+        "teamMates": [
+          "TempestWarGod",
+          "ADBrgs",
+          "MordCliff"
+        ],
+        "perspective": "TPP",
+        "placement": 2,
+        "map": "Erangel",
+        "survivalTime": "26:09",
+        "distance": "2.9",
+        "kills": 10,
+        "assists": 0,
+        "damage": 1089,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.05.05.20.3bd925ff-6d54-4814-9d16-01e1d1831314"
+      },
       {
         "matchStart": "05.05. 19:41",
         "teamSize": "Squad",
@@ -163,20 +181,6 @@
         "assists": 0,
         "damage": 431,
         "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.05.03.05.3e706c9e-e009-497c-8b61-a2f7786582f5"
-      },
-      {
-        "matchStart": "03.05. 5:07",
-        "teamSize": "Squad",
-        "teamMates": [],
-        "perspective": "TPP",
-        "placement": 2,
-        "map": "Erangel",
-        "survivalTime": "27:12",
-        "distance": "6.5",
-        "kills": 10,
-        "assists": 0,
-        "damage": 864,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.05.03.05.cb3095dc-1921-4ca9-9eeb-f641ff5d5cf8"
       }
     ]
   }
