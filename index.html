@@ -108,7 +108,7 @@
     </div>
     <p style="max-width:640px;text-indent:3em;">On the forgotten grounds of a derelict freight yard, a new urban quarter is taking shape. For years, non-profit collectives have occupied the old loading halls, breathing life into the decaying space. But now, as redevelopment plans advance and demolition looms, they are forced to leave. Just then, an unexpected presence appears: lizards. Silent, enigmatic, and strangely defiant, they threaten to derail the entire project.</p>
     <p style="max-width:640px;text-indent:3em;">Born from <i>Anti-Stuttgart &mdash; A Determinate Negation</i>, a critical design studio at <a href="https://www.igma.uni-stuttgart.de/en/">IGmA</a>, the film reimagines urban development as a stage for ecological and political tension.</p>
-    <p style="max-width:640px;text-indent:3em;">Premiered at the University of Stuttgart&#8217;s architecture <a href="https://www.k1.live/">graduate exhibition</a> and featured at <a href="https://www.current-stuttgart.de/">CURRENT Festival</a> for Art and Urban Space.</p>
+    <p style="max-width:640px;text-indent:3em;">Premiered at the University of Stuttgart’s architecture <a href="https://www.k1.live/">graduate exhibition</a> and featured at <a href="https://www.current-stuttgart.de/">CURRENT Festival</a> for Art and Urban Space.</p>
     <hr>
     <div class="gallery">
         <img loading="lazy" src="img/250625-2.jpg" alt="Casa di accoglienza dei pellegrini di San Pietro, Renovation">
@@ -141,13 +141,13 @@
     <div class="gallery">
         <img loading="lazy" src="img/260417.jpg" alt="419 Helvetia Campus, Herzog & de Meuron">
         <img loading="lazy" src="img/260404.jpg" alt="Stuttgart Main Station, Christoph Ingenhoven with Frei Otto">
-        <img loading="lazy" src="img/251215.jpg" alt="L&rsquo;Arbre Blanc, Sou Fujimoto">
+        <img loading="lazy" src="img/251215.jpg" alt="L’Arbre Blanc, Sou Fujimoto">
         <img loading="lazy" src="img/251217.jpg" alt="423 Îlot A3, Herzog & de Meuron">
-        <img loading="lazy" src="img/250610-2.jpg" alt="Stuttgart Market Square">
+        <img loading="lazy" src="img/250610-2.jpg" alt="Marktplatz Stuttgart">
         <img loading="lazy" src="img/241229.jpg" alt="San Pietro di Tuscania">
         <img loading="lazy" src="img/241215.jpg" alt="PR16">
         <img loading="lazy" src="img/230820.jpg" alt="048 Railway Engine Depot, Herzog & de Meuron">
-        <img loading="lazy" src="img/230114.jpg" alt="Sant&rsquo; Ireneo, Mauro Galantino">
+        <img loading="lazy" src="img/230114.jpg" alt="Sant’ Ireneo, Mauro Galantino">
         <img loading="lazy" src="img/230109.jpg" alt="Via Albricci 10, Asnago Vender">
         <img loading="lazy" src="img/230104.jpg" alt="Nilufar Gallery">
         <img loading="lazy" src="img/221104.jpg" alt="Monte Amiata, Carlo Aymonino">
@@ -160,15 +160,15 @@
         <img loading="lazy" src="img/190927.jpg" alt="Flora">
         <img loading="lazy" src="img/190317.jpg" alt="Death Valley">
         <img loading="lazy" src="img/190315.jpg" alt="Campfire in a Sandy Forest">
-        <img loading="lazy" src="img/190311.jpg" alt="Salk Institute, Louis&nbsp;Kahn">
+        <img loading="lazy" src="img/190311.jpg" alt="Salk Institute, Louis Kahn">
         <img loading="lazy" src="img/180925.jpg" alt="Switzerland">
         <img loading="lazy" src="img/180524.jpg" alt="Eel Soup">
-        <img loading="lazy" src="img/180512.jpg" alt="H&#432;&#x01A1;ng S&#x01A1;n">
+        <img loading="lazy" src="img/180512.jpg" alt="Hương Sơn">
         <img loading="lazy" src="img/170617.jpg" alt="Merano">
-        <img loading="lazy" src="img/160811.jpg" alt="Jökuls&aacute;rl&oacute;n Glacial Lake">
+        <img loading="lazy" src="img/160811.jpg" alt="Jökulsárlón Glacial Lake">
         <img loading="lazy" src="img/160809.jpg" alt="Landmannalaugar">
         <img loading="lazy" src="img/160809-2.jpg" alt="Footprints">
-        <img loading="lazy" src="img/160808.jpg" alt="N&yacute;idalur">
+        <img loading="lazy" src="img/160808.jpg" alt="Nýidalur">
     </div>
     <hr>
 </div>
@@ -200,8 +200,6 @@
         Personal information may be processed by external providers such as<br>
         <a href="https://open-meteo.com/" rel="nofollow">Open‑Meteo</a> for weather data and <a href="https://github.com/" rel="nofollow">GitHub</a> for hosting.
     </p>
-    <!-- <h3>Attribution</h3>
-    <p>Nimbus Sans L © URW, <a href="https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html" rel="nofollow">GNU GPL v2</a></p> -->
     <hr>
 </div>
 <div class="content" id="gaming">
@@ -519,15 +517,14 @@ fetch('https://joeyws.com/data.json')
             card.className = 'match';
             const mates = match.teamMates.length ? match.teamMates.join(', ') : '-';
             card.innerHTML = `
-                <p><span style="float:right;">${match.matchStart}</span><span style="font-size:48px;line-height:1.3em;">#${match.placement}</span></p>
+                <p><span style="float:right;">${match.matchStart}</span><span style="font-size:48px;line-height:1em;">#${match.placement}</span></p>
                 <p>${match.map} (${match.teamSize} ${match.perspective})</p>
                 <p>K: ${match.kills} &nbsp; &nbsp; A: ${match.assists} &nbsp; &nbsp; D: ${match.damage}</p>
                 <p>Team: ${mates}</p>
                 <p>
                     Travelled: ${match.distance} km<br>
-                    Survived: ${match.survivalTime}<br>
+                    Survived: ${match.survivalTime}
                 </p>
-                <p><a href="${match.url}" rel="nofollow">Watch 2D Replay</a></p>
                 <hr>
             `;
             container.appendChild(card);
