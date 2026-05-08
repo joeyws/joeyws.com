@@ -1,6 +1,6 @@
 {
-  "timestamp": "08.05. 21:05",
-  "weatherTempCelsius": 14,
+  "timestamp": "08.05. 22:58",
+  "weatherTempCelsius": 13,
   "githubLastCommit": "May 8, 2026",
   "steamStatus": "online",
   "pubg": {
@@ -10,8 +10,8 @@
         "matchStart": "08.05. 20:35",
         "teamSize": "Squad",
         "teamMates": [
-          "MamaDoLores",
           "Chigurd",
+          "MamaDoLores",
           "Johnwick744"
         ],
         "perspective": "TPP",
@@ -62,8 +62,8 @@
         "matchStart": "06.05. 18:56",
         "teamSize": "Squad",
         "teamMates": [
-          "1Apauk988",
           "npoXAKEPnpo",
+          "1Apauk988",
           "XXSKIP60XX"
         ],
         "perspective": "TPP",
@@ -80,9 +80,9 @@
         "matchStart": "05.05. 20:07",
         "teamSize": "Squad",
         "teamMates": [
+          "MordCliff",
           "TempestWarGod",
-          "ADBrgs",
-          "MordCliff"
+          "ADBrgs"
         ],
         "perspective": "TPP",
         "placement": 2,
@@ -98,8 +98,8 @@
         "matchStart": "05.05. 19:41",
         "teamSize": "Squad",
         "teamMates": [
-          "Jake1001",
           "Mr_Luciferchik",
+          "Jake1001",
           "maherzennn"
         ],
         "perspective": "TPP",
@@ -134,9 +134,9 @@
         "matchStart": "04.05. 18:35",
         "teamSize": "Squad",
         "teamMates": [
+          "KingZurenson",
           "WeCoyote",
-          "Flopsibert",
-          "KingZurenson"
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 7,
@@ -152,9 +152,9 @@
         "matchStart": "04.05. 18:10",
         "teamSize": "Squad",
         "teamMates": [
-          "KingZurenson",
           "Flopsibert",
-          "WeCoyote"
+          "WeCoyote",
+          "KingZurenson"
         ],
         "perspective": "FPP",
         "placement": 5,
@@ -171,8 +171,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "WeCoyote",
-          "Flopsibert",
-          "KingZurenson"
+          "KingZurenson",
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 11,
