@@ -33,7 +33,7 @@
     a:hover,a.hover,.video:not(.playing):hover::after{background:var(--text);color:var(--background);text-decoration:none;}
     /* HEADER */
     #header,.video:not(.playing)::after{font-size:1.4rem;line-height:1em;}
-    #header,#header span,nav{display:flex;gap:var(--spacer) 1em;}
+    #header,#header span,nav{display:flex;gap:var(--spacer) 1.1em;}
     #header{white-space:nowrap;user-select:none;width:100%;flex-wrap:wrap;justify-content:space-between;box-sizing:border-box;}
     nav a,nav a:hover{text-decoration:none;background:transparent;color:inherit;}
     nav a.open{background:var(--text);color:var(--background);}
@@ -42,7 +42,7 @@
     .content>*{margin-left:auto;margin-right:auto;}
     .center{text-align:center;}
     /* MARQUEE */
-    .marquee{background:#0f0;color:var(--background);margin-bottom:var(--spacer);transition:.2s width ease-out;line-height:1.5em;box-sizing:border-box;width:1px;overflow:hidden;white-space:nowrap;display:block;user-select:none;/* mask-mode:alpha;mask-image:linear-gradient(to right, transparent, #000 20%, #000 calc(100% - 20%), transparent); */}
+    .marquee{background:#0f0;color:var(--background);margin:calc(-1 * var(--spacer));margin-bottom:var(--spacer);transition:.2s width ease-out;line-height:1.8em;box-sizing:border-box;width:1px;overflow:hidden;white-space:nowrap;display:block;user-select:none;/* mask-mode:alpha;mask-image:linear-gradient(to right, transparent, #000 20%, #000 calc(100% - 20%), transparent); */}
     .marquee-track{display:inline-flex;white-space:nowrap;will-change:transform;animation:marquee 60s linear infinite;}
     .marquee-track span{margin-right:1.3em;}
     @keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-100%);}}
@@ -60,10 +60,10 @@
     /* GALLERY */
     .gallery-nav,.gallery-caption{text-align:center;}
     .gallery-nav,.gallery-img{user-select:none;}
-    .gallery-img,.gallery-caption{margin-top:calc(var(--spacer)*1);}
     .gallery-count{width:5em;display:inline-block;}
-    .gallery-prev,.gallery-next{/* border-radius:100vmax; */font-size:1.2em;padding:0 .42em .2em .42em;text-decoration:none !important;}
-    .gallery-img{padding:var(--spacer) 0;height:600px;display:flex;align-items:flex-start;justify-content:center;}
+    .gallery-caption{padding:var(--spacer) 0 calc(2* var(--spacer)) 0;}
+    .gallery-prev,.gallery-next{outline:1px solid var(--text);outline-offset:-1px;border-radius:100vmax;font-size:1.2em;padding:0 .42em .2em .42em;text-decoration:none !important;}
+    .gallery-img{height:600px;display:flex;align-items:flex-start;justify-content:center;}
     .gallery-img img{display:block;max-height:100%;max-width:100%;object-fit:contain;}
     /* SVG */
     svg *{fill:var(--text);}
@@ -113,6 +113,7 @@
     <p style="max-width:640px;text-indent:3em;">Premiered at the University of Stuttgart’s architecture <a href="https://www.k1.live/">graduate exhibition</a> and featured at <a href="https://www.current-stuttgart.de/">CURRENT Festival</a> for Art and Urban Space.</p>
     <hr>
     <div class="gallery">
+        <img loading="lazy" src="img/260509.jpg" alt="Synth Web App with USB Keyboard Control">
         <img loading="lazy" src="img/250625-2.jpg" alt="Casa di accoglienza dei pellegrini di San Pietro, Renovation">
         <img loading="lazy" src="img/250625.jpg" alt="Casa di accoglienza dei pellegrini di San Pietro, Urban Situation">
         <img loading="lazy" src="img/250531.jpg" alt="WKT Geometry Visualizer Web App for ICD">
@@ -133,7 +134,6 @@
         <img loading="lazy" src="img/190208-3.jpg" alt="Cuboid Axonometry">
         <img loading="lazy" src="img/190509.jpg" alt="Ruled Surfaces">
         <img loading="lazy" src="img/201202.jpg" alt="Pineapple, Etching">
-        <img loading="lazy" src="img/181116-2.jpg" alt="Cup, Ink">
         <img loading="lazy" src="img/181130.jpg" alt="Tools, Drawing">
         <img loading="lazy" src="img/181116.jpg" alt="Leichtsinn, Collage">
     </div>
@@ -153,7 +153,6 @@
         <img loading="lazy" src="img/230109.jpg" alt="Via Albricci 10, Asnago Vender">
         <img loading="lazy" src="img/230104.jpg" alt="Nilufar Gallery">
         <img loading="lazy" src="img/221104.jpg" alt="Monte Amiata, Carlo Aymonino">
-        <img loading="lazy" src="img/221104-2.jpg" alt="Monte Amiata, Carlo Aymonino">
         <img loading="lazy" src="img/221030.jpg" alt="Amendola, Arrigo Arrighetti">
         <img loading="lazy" src="img/220915.jpg" alt="Emergence Pool, Nari Ward">
         <img loading="lazy" src="img/220910.jpg" alt="ADI">
@@ -224,12 +223,12 @@ let width = 1;
 const interval = setInterval(() => {
     if (width < 80) {
         width += Math.random() * 10;
-        preloader.style.width = width + '%';
+        preloader.style.width = width + 'vw';
     }
 }, 100);
 window.addEventListener('load', () => {
     clearInterval(interval);
-    preloader.style.width = '100%';
+    preloader.style.width = '100vw';
 });
 
 // LOADING
@@ -415,7 +414,7 @@ document.addEventListener("DOMContentLoaded", () => {
             img.style.display = i === 0 ? "block" : "none";
             imgContainer.append(img);
         });
-        gallery.append(nav, imgContainer, caption);
+        gallery.append(nav, caption, imgContainer);
         // update view
         const update = index => {
             images[current].style.display = "none";

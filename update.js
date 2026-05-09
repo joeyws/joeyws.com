@@ -95,7 +95,7 @@ async function updateData() {
       lastMatches: []
     };
     // Last Matches
-    const lastMatchIds = player.relationships.matches.data.slice(0, 10).map((m) => m.id);
+    const lastMatchIds = player.relationships.matches.data.slice(0, 8).map((m) => m.id);
     // Map Names
     function formatMapName(map) {
       const maps = { Baltic_Main:"Erangel", Desert_Main:"Miramar", Tiger_Main:"Taego", Kiki_Main:"Deston", Neon_Main:"Rondo", DihorOtok_Main:"Vikendi", Savage_Main:"Sanhok", Chimera_Main:"Paramo", Summerland_Main:"Karakin", Range_Main:"Camp Jackal", Heaven_Main:"Haven" };
