@@ -1,6 +1,6 @@
 {
-  "timestamp": "12.05. 18:58",
-  "weatherTempCelsius": 10,
+  "timestamp": "12.05. 20:45",
+  "weatherTempCelsius": 8,
   "githubLastCommit": "May 12, 2026",
   "steamStatus": "offline",
   "pubg": {
@@ -11,8 +11,8 @@
         "teamSize": "Ibr",
         "teamMates": [
           "ABDULLAH_95",
-          "Gsm5544",
-          "x-Tahari-x"
+          "x-Tahari-x",
+          "Gsm5544"
         ],
         "perspective": "TPP",
         "placement": 2,
@@ -134,9 +134,9 @@
         "matchStart": "10.05. 11:13",
         "teamSize": "Ibr",
         "teamMates": [
-          "Domgaric",
           "Valisek",
-          "kLuuuuu"
+          "kLuuuuu",
+          "Domgaric"
         ],
         "perspective": "TPP",
         "placement": 3,
