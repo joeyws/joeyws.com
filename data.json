@@ -1,5 +1,5 @@
 {
-  "timestamp": "12.05. 13:05",
+  "timestamp": "12.05. 16:21",
   "weatherTempCelsius": 11,
   "githubLastCommit": "May 12, 2026",
   "steamStatus": "offline",
@@ -28,8 +28,8 @@
         "matchStart": "10.05. 15:18",
         "teamSize": "Ibr",
         "teamMates": [
-          "T0mas_2",
           "Jackerra",
+          "T0mas_2",
           "Adrian_Ukrain"
         ],
         "perspective": "TPP",
