@@ -1,11 +1,47 @@
 {
-  "timestamp": "13.05. 18:58",
-  "weatherTempCelsius": 12,
+  "timestamp": "13.05. 20:49",
+  "weatherTempCelsius": 9,
   "githubLastCommit": "May 13, 2026",
   "steamStatus": "online",
   "pubg": {
     "name": "joeyws2",
     "lastMatches": [
+      {
+        "matchStart": "13.05. 19:00",
+        "teamSize": "Heistroyale",
+        "teamMates": [
+          "Karel__007",
+          "Diegodie1993",
+          "Ruruff98"
+        ],
+        "perspective": "TPP",
+        "placement": 4,
+        "map": "SafeHouse_Main",
+        "survivalTime": "7:38",
+        "distance": "1.0",
+        "kills": 0,
+        "assists": 0,
+        "damage": 0,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.heistroyale.eu.2026.05.13.19.6e97ba46-aa49-460d-bee2-8e0b6cd24bf1"
+      },
+      {
+        "matchStart": "13.05. 18:45",
+        "teamSize": "Heistroyale",
+        "teamMates": [
+          "Linne_K1llDePrEE",
+          "Bzixik",
+          "eneaa"
+        ],
+        "perspective": "TPP",
+        "placement": 1,
+        "map": "SafeHouse_Main",
+        "survivalTime": "11:11",
+        "distance": "1.9",
+        "kills": 0,
+        "assists": 0,
+        "damage": 0,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.heistroyale.eu.2026.05.13.18.25ebc892-64d6-4c87-ac4c-0b3e207eede8"
+      },
       {
         "matchStart": "13.05. 18:28",
         "teamSize": "Heistroyale",
@@ -28,9 +64,9 @@
         "matchStart": "13.05. 17:50",
         "teamSize": "Heistroyale",
         "teamMates": [
+          "Mc_Gyver",
           "SieniZz",
-          "Suntayss",
-          "Mc_Gyver"
+          "Suntayss"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -112,42 +148,6 @@
         "assists": 0,
         "damage": 201,
         "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.ibr.eu.2026.05.10.15.f2ed8481-bafc-4fab-842a-19fec8fbddd3"
-      },
-      {
-        "matchStart": "10.05. 15:18",
-        "teamSize": "Ibr",
-        "teamMates": [
-          "Adrian_Ukrain",
-          "T0mas_2",
-          "Jackerra"
-        ],
-        "perspective": "TPP",
-        "placement": 3,
-        "map": "Taego",
-        "survivalTime": "1:53",
-        "distance": "0.0",
-        "kills": 0,
-        "assists": 0,
-        "damage": 0,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.ibr.eu.2026.05.10.15.57312f3d-cb30-42d0-b522-247f753d5ee9"
-      },
-      {
-        "matchStart": "10.05. 15:10",
-        "teamSize": "Ibr",
-        "teamMates": [
-          "nevarlan31",
-          "Halilsenses4172",
-          "Lord_Rinozeros"
-        ],
-        "perspective": "TPP",
-        "placement": 2,
-        "map": "Paramo",
-        "survivalTime": "5:51",
-        "distance": "0.3",
-        "kills": 4,
-        "assists": 0,
-        "damage": 528,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.ibr.eu.2026.05.10.15.65909651-f7c7-4c6b-9a86-c8972056d63b"
       }
     ]
   }
