@@ -1,8 +1,8 @@
 {
-  "timestamp": "13.05. 4:49",
-  "weatherTempCelsius": 6,
+  "timestamp": "13.05. 7:51",
+  "weatherTempCelsius": 11,
   "githubLastCommit": "May 13, 2026",
-  "steamStatus": "online",
+  "steamStatus": "offline",
   "pubg": {
     "name": "joeyws2",
     "lastMatches": [
@@ -47,8 +47,8 @@
         "teamSize": "Ibr",
         "teamMates": [
           "nevarlan31",
-          "Lord_Rinozeros",
-          "Halilsenses4172"
+          "Halilsenses4172",
+          "Lord_Rinozeros"
         ],
         "perspective": "TPP",
         "placement": 2,
@@ -80,9 +80,9 @@
         "matchStart": "10.05. 14:58",
         "teamSize": "Ibr",
         "teamMates": [
-          "Marnali",
           "EmreBaba28",
-          "DDK88"
+          "DDK88",
+          "Marnali"
         ],
         "perspective": "TPP",
         "placement": 2,
@@ -117,8 +117,8 @@
         "teamSize": "Ibr",
         "teamMates": [
           "Quineex",
-          "sidalabos",
-          "Nasa1338"
+          "Nasa1338",
+          "sidalabos"
         ],
         "perspective": "TPP",
         "placement": 3,
@@ -134,9 +134,9 @@
         "matchStart": "10.05. 11:13",
         "teamSize": "Ibr",
         "teamMates": [
-          "Valisek",
           "kLuuuuu",
-          "Domgaric"
+          "Domgaric",
+          "Valisek"
         ],
         "perspective": "TPP",
         "placement": 3,
