@@ -18,7 +18,7 @@
 <style>
     @font-face{font-family:webfont;src:url("font/SourceCodePro.woff2");font-display:swap;}
     @font-face{font-family:webfont2;src:url("font/InstrumentSerif.woff2");font-display:swap;}
-    :root{--background:#000;--text:#aaa;--spacer:8px;}
+    :root{--background:#000;--text:#0f0;--spacer:8px;}
     ::selection{background:var(--text);color:var(--background);}
     /* RESET */ *{text-underline-offset:2px;text-decoration-thickness:.05em;text-decoration-skip-ink:none;font-kerning:normal;outline:none;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{box-sizing:content-box;border-radius:0;/* -webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-border-radius:0;-webkit-text-size-adjust:none;-webkit-appearance:none;font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased; */}
 	html{font-size:13px;}
@@ -29,14 +29,15 @@
     hr+*,img+p,.content *:first-child{margin-top:0;}
     table{width:100%;}tr{border-top:1px solid var(--text);}td{vertical-align:top;}td:nth-child(1){width:8em;padding-right:var(--spacer);}td:nth-child(2){width:auto;}
     hr{margin:3.5rem 0;}
-    a,.video:not(.playing)::after{backdrop-filter:blur(5px) invert(.15);/* background:#222a; */white-space:nowrap;text-decoration:none;}
-    a:hover,a.hover,.video:not(.playing):hover::after{backdrop-filter:blur(3px) invert(.7);background:var(--text);color:var(--background);text-decoration:none;}
+    a{text-decoration:underline;}
+    a,.video:not(.playing)::after{white-space:nowrap;}
+    a:hover,a.hover,.video:not(.playing):hover::after{background:var(--text);color:var(--background);text-decoration:none;}
     /* HEADER */
     #header,.video:not(.playing)::after{font-size:1.4rem;line-height:1em;}
     #header,#header span,nav{display:flex;gap:var(--spacer) 1.1em;}
     #header{white-space:nowrap;user-select:none;width:100%;flex-wrap:wrap;justify-content:space-between;box-sizing:border-box;}
     nav a,nav a:hover{text-decoration:none;}
-    nav a.open{background:#f0f;color:var(--background);}
+    nav a.open{background:var(--text);color:var(--background);}
     @media (max-width:500px) {#header{flex-direction:column;}}
     /* CENTER */
     .content>*{margin-left:auto;margin-right:auto;}
@@ -79,6 +80,7 @@
     #map{width:640px;max-width:100%;aspect-ratio:150/75;background:center center url(img/other/world.gif) no-repeat scroll;position:relative;background-size:contain;}
     #map::after{top:23%;left:52.5%;outline:1px solid #0f0;border:1px solid #000;background:#0f0;animation:map 1.2s infinite ease-out;width:7px;height:7px;border-radius:100vmax;pointer-events:none;position:absolute;transform:translate(-50%,-50%);display:block;content:"";}
     #cursor{width:12px;height:12px;background:#fff1;backdrop-filter:blur(20px) invert(100%) saturate(10);-webkit-backdrop-filter:blur(20px) invert(100%) saturate(10);border-radius:100vmax;position:fixed;top:-50px;left:50%;transform:translate(-50%,-50%);font-size:0;line-height:0;z-index:99999999;pointer-events:none;}*{cursor:none !important;}
+    /* header,p,h3,.gallery-nav,.gallery-caption,#mitgliedakbw{mix-blend-mode:difference;} */
     /* GAMING */
     .match{width:600px;margin:0 auto;}
 </style>
@@ -115,7 +117,7 @@
     <p style="max-width:640px;text-indent:3em;">Premiered at the University of Stuttgart’s architecture <a href="https://www.k1.live/">graduate exhibition</a> and featured at <a href="https://www.current-stuttgart.de/">CURRENT Festival</a> for Art and Urban Space.</p>
     <hr>
     <div class="gallery">
-        <img loading="lazy" src="img/260509.jpg" alt="Synth Web App with USB Keyboard Control - Write me an email for access.">
+        <img loading="lazy" src="img/260509.jpg" alt="Synth Web App with USB Keyboard Control">
         <img loading="lazy" src="img/250625-2.jpg" alt="Casa di accoglienza dei pellegrini di San Pietro, Renovation">
         <img loading="lazy" src="img/250625.jpg" alt="Casa di accoglienza dei pellegrini di San Pietro, Urban Situation">
         <img loading="lazy" src="img/250531.jpg" alt="WKT Geometry Visualizer Web App for ICD">
@@ -575,17 +577,16 @@ void main(){
               fbm(uv*u_zoom+q*u_dist+vec2(8.3,2.8)+t*0.12));
   float f=fbm(uv*u_zoom*0.5+r*u_dist);
   float silver=f*f*4.0;
-  vec3 col=mix(vec3(0.01,0.01,0.02),vec3(0.55,0.57,0.60),clamp(silver,0.0,1.0));
+  vec3 col=mix(vec3(0.02,0.02,0.03),vec3(0.75,0.78,0.82),clamp(silver,0.0,1.0));
   float angle=atan(q.y,q.x)*2.0+t*0.3;
   vec3 iris;
   iris.r=sin(angle+0.0)*0.5+0.5;
   iris.g=sin(angle+2.094)*0.5+0.5;
   iris.b=sin(angle+4.189)*0.5+0.5;
   float highlight=clamp((silver-0.1)*1.5,0.0,1.0);
-  col=mix(col,col+iris*0.35,highlight);
-  float vig=1.0-dot(uv*0.45,uv*0.45)*0.5;
+  col=mix(col,col+iris*0.5,highlight);
+  float vig=1.0-dot(uv*0.4,uv*0.4)*0.4;
   col*=vig;
-  col*=0.8;
   float scan=sin(gl_FragCoord.y*1.8)*0.5+0.5;
   col*=1.0-u_scan*0.15*(1.0-scan);
   gl_FragColor=vec4(col,1.0);
