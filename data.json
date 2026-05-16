@@ -1,5 +1,5 @@
 {
-  "timestamp": "16.05. 14:59",
+  "timestamp": "16.05. 16:04",
   "weatherTempCelsius": 13,
   "githubLastCommit": "May 16, 2026",
   "steamStatus": "offline",
@@ -79,8 +79,8 @@
         "matchStart": "14.05. 16:22",
         "teamSize": "Squad",
         "teamMates": [
-          "smOke14",
           "YettizTV",
+          "smOke14",
           "Nurulbey"
         ],
         "perspective": "TPP",
@@ -115,9 +115,9 @@
         "matchStart": "14.05. 16:07",
         "teamSize": "Heistroyale",
         "teamMates": [
+          "Salvio61",
           "Kengyrov",
-          "Zayninzay",
-          "Salvio61"
+          "Zayninzay"
         ],
         "perspective": "TPP",
         "placement": 1,
