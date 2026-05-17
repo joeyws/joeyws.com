@@ -1,5 +1,5 @@
 {
-  "timestamp": "17.05. 13:27",
+  "timestamp": "17.05. 14:59",
   "weatherTempCelsius": 16,
   "githubLastCommit": "May 17, 2026",
   "steamStatus": "online",
@@ -10,9 +10,9 @@
         "matchStart": "17.05. 12:22",
         "teamSize": "Heistroyale",
         "teamMates": [
+          "zzzWagnerzzz",
           "0EMDZEJ0",
-          "Lubomir22",
-          "zzzWagnerzzz"
+          "Lubomir22"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -46,9 +46,9 @@
         "matchStart": "17.05. 11:43",
         "teamSize": "Heistroyale",
         "teamMates": [
+          "player213214",
           "agent_krokodyl",
-          "DusT-",
-          "player213214"
+          "DusT-"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -64,9 +64,9 @@
         "matchStart": "17.05. 10:17",
         "teamSize": "Heistroyale",
         "teamMates": [
-          "GoDH1mself",
           "Amir-4444",
-          "Survmax"
+          "Survmax",
+          "GoDH1mself"
         ],
         "perspective": "TPP",
         "placement": 4,
@@ -82,9 +82,9 @@
         "matchStart": "17.05. 9:52",
         "teamSize": "Heistroyale",
         "teamMates": [
-          "MJR_DR3AM",
           "Kozlodoy2",
-          "CrackVorobei234"
+          "CrackVorobei234",
+          "MJR_DR3AM"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -100,8 +100,8 @@
         "matchStart": "16.05. 17:07",
         "teamSize": "Heistroyale",
         "teamMates": [
-          "Scruth",
-          "Simge_61"
+          "Simge_61",
+          "Scruth"
         ],
         "perspective": "TPP",
         "placement": 1,
