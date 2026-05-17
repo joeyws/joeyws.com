@@ -1,5 +1,5 @@
 {
-  "timestamp": "17.05. 14:59",
+  "timestamp": "17.05. 16:04",
   "weatherTempCelsius": 16,
   "githubLastCommit": "May 17, 2026",
   "steamStatus": "online",
@@ -10,9 +10,9 @@
         "matchStart": "17.05. 12:22",
         "teamSize": "Heistroyale",
         "teamMates": [
-          "zzzWagnerzzz",
           "0EMDZEJ0",
-          "Lubomir22"
+          "Lubomir22",
+          "zzzWagnerzzz"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -64,9 +64,9 @@
         "matchStart": "17.05. 10:17",
         "teamSize": "Heistroyale",
         "teamMates": [
-          "Amir-4444",
           "Survmax",
-          "GoDH1mself"
+          "GoDH1mself",
+          "Amir-4444"
         ],
         "perspective": "TPP",
         "placement": 4,
