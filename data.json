@@ -1,11 +1,29 @@
 {
-  "timestamp": "18.05. 18:54",
-  "weatherTempCelsius": 13,
+  "timestamp": "18.05. 20:26",
+  "weatherTempCelsius": 12,
   "githubLastCommit": "May 18, 2026",
   "steamStatus": "online",
   "pubg": {
     "name": "joeyws2",
     "lastMatches": [
+      {
+        "matchStart": "18.05. 18:49",
+        "teamSize": "Heistroyale",
+        "teamMates": [
+          "Ecl1pse_ss",
+          "ismail0665",
+          "911-ECEL"
+        ],
+        "perspective": "TPP",
+        "placement": 1,
+        "map": "SafeHouse_Main",
+        "survivalTime": "11:51",
+        "distance": "1.5",
+        "kills": 0,
+        "assists": 0,
+        "damage": 0,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.heistroyale.eu.2026.05.18.18.df2e2e6b-6580-4b2c-9d25-12ea80b643fc"
+      },
       {
         "matchStart": "18.05. 18:37",
         "teamSize": "Heistroyale",
@@ -45,9 +63,9 @@
         "matchStart": "17.05. 18:31",
         "teamSize": "Heistroyale",
         "teamMates": [
+          "yanntsky",
           "Aidin94",
-          "n3dolazukic",
-          "yanntsky"
+          "n3dolazukic"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -129,24 +147,6 @@
         "assists": 0,
         "damage": 0,
         "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.heistroyale.eu.2026.05.17.12.80de639d-5352-4edc-93d5-322e3c9d53fc"
-      },
-      {
-        "matchStart": "17.05. 11:57",
-        "teamSize": "Heistroyale",
-        "teamMates": [
-          "Purple0ctopus",
-          "Bitver",
-          "MIMI_link"
-        ],
-        "perspective": "TPP",
-        "placement": 1,
-        "map": "SafeHouse_Main",
-        "survivalTime": "13:16",
-        "distance": "1.9",
-        "kills": 0,
-        "assists": 0,
-        "damage": 0,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.heistroyale.eu.2026.05.17.11.a84a31ec-3a41-415c-8cc4-ed830c77e897"
       }
     ]
   }
