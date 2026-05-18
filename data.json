@@ -1,11 +1,29 @@
 {
-  "timestamp": "18.05. 16:27",
-  "weatherTempCelsius": 15,
+  "timestamp": "18.05. 18:54",
+  "weatherTempCelsius": 13,
   "githubLastCommit": "May 18, 2026",
-  "steamStatus": "offline",
+  "steamStatus": "online",
   "pubg": {
     "name": "joeyws2",
     "lastMatches": [
+      {
+        "matchStart": "18.05. 18:37",
+        "teamSize": "Heistroyale",
+        "teamMates": [
+          "bbossbugra",
+          "ckromniy",
+          "TARAGL"
+        ],
+        "perspective": "TPP",
+        "placement": 1,
+        "map": "SafeHouse_Main",
+        "survivalTime": "9:32",
+        "distance": "1.7",
+        "kills": 0,
+        "assists": 0,
+        "damage": 0,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.heistroyale.eu.2026.05.18.18.1f207b20-9e2b-486b-b427-80b424af9900"
+      },
       {
         "matchStart": "17.05. 18:52",
         "teamSize": "Heistroyale",
@@ -129,24 +147,6 @@
         "assists": 0,
         "damage": 0,
         "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.heistroyale.eu.2026.05.17.11.a84a31ec-3a41-415c-8cc4-ed830c77e897"
-      },
-      {
-        "matchStart": "17.05. 11:43",
-        "teamSize": "Heistroyale",
-        "teamMates": [
-          "agent_krokodyl",
-          "DusT-",
-          "player213214"
-        ],
-        "perspective": "TPP",
-        "placement": 1,
-        "map": "SafeHouse_Main",
-        "survivalTime": "10:53",
-        "distance": "1.7",
-        "kills": 0,
-        "assists": 0,
-        "damage": 0,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.heistroyale.eu.2026.05.17.11.f5da29e3-2965-4dde-8279-af88bd4f6da3"
       }
     ]
   }
