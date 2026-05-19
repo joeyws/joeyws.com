@@ -1,11 +1,27 @@
 {
-  "timestamp": "19.05. 19:03",
-  "weatherTempCelsius": 16,
+  "timestamp": "19.05. 21:22",
+  "weatherTempCelsius": 15,
   "githubLastCommit": "May 19, 2026",
   "steamStatus": "online",
   "pubg": {
     "name": "joeyws2",
     "lastMatches": [
+      {
+        "matchStart": "19.05. 18:55",
+        "teamSize": "Heistroyale",
+        "teamMates": [
+          "casoga"
+        ],
+        "perspective": "TPP",
+        "placement": 2,
+        "map": "SafeHouse_Main",
+        "survivalTime": "14:17",
+        "distance": "2.1",
+        "kills": 0,
+        "assists": 0,
+        "damage": 0,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.heistroyale.eu.2026.05.19.18.f0cf5f6c-5140-4ec4-ac83-53af91cccf10"
+      },
       {
         "matchStart": "19.05. 18:28",
         "teamSize": "Heistroyale",
@@ -28,9 +44,9 @@
         "matchStart": "19.05. 18:16",
         "teamSize": "Heistroyale",
         "teamMates": [
-          "Sloup1k",
           "axaaxxaxaxaxaxax",
-          "LEGEND111"
+          "LEGEND111",
+          "Sloup1k"
         ],
         "perspective": "TPP",
         "placement": 4,
@@ -117,9 +133,9 @@
         "matchStart": "17.05. 18:17",
         "teamSize": "Heistroyale",
         "teamMates": [
+          "BABAKRALL",
           "UkroPChiK159",
-          "Enapsys",
-          "BABAKRALL"
+          "Enapsys"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -130,24 +146,6 @@
         "assists": 0,
         "damage": 0,
         "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.heistroyale.eu.2026.05.17.18.4a3bbf45-80bd-4ed6-a1ac-db08ec6f5a99"
-      },
-      {
-        "matchStart": "17.05. 17:58",
-        "teamSize": "Heistroyale",
-        "teamMates": [
-          "swarzkatan1",
-          "Eskahel",
-          "Loprix"
-        ],
-        "perspective": "TPP",
-        "placement": 1,
-        "map": "SafeHouse_Main",
-        "survivalTime": "16:10",
-        "distance": "2.7",
-        "kills": 0,
-        "assists": 0,
-        "damage": 0,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.heistroyale.eu.2026.05.17.17.456c0e8b-8514-4623-aefa-235a1c36d966"
       }
     ]
   }
