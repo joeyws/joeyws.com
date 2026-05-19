@@ -1,6 +1,6 @@
 {
-  "timestamp": "18.05. 22:05",
-  "weatherTempCelsius": 11,
+  "timestamp": "19.05. 0:11",
+  "weatherTempCelsius": 10,
   "githubLastCommit": "May 18, 2026",
   "steamStatus": "offline",
   "pubg": {
@@ -63,9 +63,9 @@
         "matchStart": "17.05. 18:31",
         "teamSize": "Heistroyale",
         "teamMates": [
-          "yanntsky",
           "Aidin94",
-          "n3dolazukic"
+          "n3dolazukic",
+          "yanntsky"
         ],
         "perspective": "TPP",
         "placement": 1,
