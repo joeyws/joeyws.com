@@ -1,11 +1,47 @@
 {
-  "timestamp": "20.05. 13:42",
+  "timestamp": "20.05. 16:54",
   "weatherTempCelsius": 18,
-  "githubLastCommit": "May 20, 2026",
-  "steamStatus": "offline",
+  "githubLastCommit": null,
+  "steamStatus": "online",
   "pubg": {
     "name": "joeyws2",
     "lastMatches": [
+      {
+        "matchStart": "20.05. 16:34",
+        "teamSize": "Heistroyale",
+        "teamMates": [
+          "Efnir",
+          "Roadbust3r",
+          "Phenops"
+        ],
+        "perspective": "TPP",
+        "placement": 1,
+        "map": "SafeHouse_Main",
+        "survivalTime": "12:34",
+        "distance": "2.3",
+        "kills": 0,
+        "assists": 0,
+        "damage": 0,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.heistroyale.eu.2026.05.20.16.d53afa18-ffc0-429b-b179-21763059da8d"
+      },
+      {
+        "matchStart": "20.05. 16:21",
+        "teamSize": "Heistroyale",
+        "teamMates": [
+          "therealsakura",
+          "Jaxx_da_Boss",
+          "Red_Snollie"
+        ],
+        "perspective": "TPP",
+        "placement": 1,
+        "map": "SafeHouse_Main",
+        "survivalTime": "8:29",
+        "distance": "1.3",
+        "kills": 0,
+        "assists": 0,
+        "damage": 0,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.heistroyale.eu.2026.05.20.16.97cd874a-dfc7-49a5-afe6-b9bc626ea2a4"
+      },
       {
         "matchStart": "19.05. 18:55",
         "teamSize": "Heistroyale",
@@ -44,9 +80,9 @@
         "matchStart": "19.05. 18:16",
         "teamSize": "Heistroyale",
         "teamMates": [
-          "Sloup1k",
           "axaaxxaxaxaxaxax",
-          "LEGEND111"
+          "LEGEND111",
+          "Sloup1k"
         ],
         "perspective": "TPP",
         "placement": 4,
@@ -110,42 +146,6 @@
         "assists": 0,
         "damage": 0,
         "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.heistroyale.eu.2026.05.17.18.5d88cd5f-5c21-48c3-9ce0-7ed2f8c21fba"
-      },
-      {
-        "matchStart": "17.05. 18:31",
-        "teamSize": "Heistroyale",
-        "teamMates": [
-          "Aidin94",
-          "n3dolazukic",
-          "yanntsky"
-        ],
-        "perspective": "TPP",
-        "placement": 1,
-        "map": "SafeHouse_Main",
-        "survivalTime": "10:18",
-        "distance": "1.6",
-        "kills": 0,
-        "assists": 0,
-        "damage": 0,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.heistroyale.eu.2026.05.17.18.814ca8a1-6d5d-4a09-9fdd-f6e4651e04d2"
-      },
-      {
-        "matchStart": "17.05. 18:17",
-        "teamSize": "Heistroyale",
-        "teamMates": [
-          "Enapsys",
-          "BABAKRALL",
-          "UkroPChiK159"
-        ],
-        "perspective": "TPP",
-        "placement": 1,
-        "map": "SafeHouse_Main",
-        "survivalTime": "10:08",
-        "distance": "1.6",
-        "kills": 0,
-        "assists": 0,
-        "damage": 0,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.heistroyale.eu.2026.05.17.18.4a3bbf45-80bd-4ed6-a1ac-db08ec6f5a99"
       }
     ]
   }
