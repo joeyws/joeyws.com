@@ -1,6 +1,6 @@
 {
-  "timestamp": "20.05. 7:49",
-  "weatherTempCelsius": 16,
+  "timestamp": "20.05. 10:53",
+  "weatherTempCelsius": 18,
   "githubLastCommit": "May 20, 2026",
   "steamStatus": "offline",
   "pubg": {
@@ -44,9 +44,9 @@
         "matchStart": "19.05. 18:16",
         "teamSize": "Heistroyale",
         "teamMates": [
-          "axaaxxaxaxaxaxax",
           "LEGEND111",
-          "Sloup1k"
+          "Sloup1k",
+          "axaaxxaxaxaxaxax"
         ],
         "perspective": "TPP",
         "placement": 4,
@@ -115,9 +115,9 @@
         "matchStart": "17.05. 18:31",
         "teamSize": "Heistroyale",
         "teamMates": [
-          "yanntsky",
           "Aidin94",
-          "n3dolazukic"
+          "n3dolazukic",
+          "yanntsky"
         ],
         "perspective": "TPP",
         "placement": 1,
