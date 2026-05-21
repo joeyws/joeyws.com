@@ -1,7 +1,7 @@
 {
-  "timestamp": "21.05. 4:02",
-  "weatherTempCelsius": 13,
-  "githubLastCommit": "May 20, 2026",
+  "timestamp": "21.05. 8:33",
+  "weatherTempCelsius": 18,
+  "githubLastCommit": "May 21, 2026",
   "steamStatus": "offline",
   "pubg": {
     "name": "joeyws2",
@@ -10,8 +10,8 @@
         "matchStart": "20.05. 22:19",
         "teamSize": "Heistroyale",
         "teamMates": [
-          "badboy310583",
-          "Afro_Duck"
+          "Afro_Duck",
+          "badboy310583"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -81,9 +81,9 @@
         "matchStart": "20.05. 18:55",
         "teamSize": "Squad",
         "teamMates": [
-          "KingZurenson",
+          "Flopsibert",
           "WeCoyote",
-          "Flopsibert"
+          "KingZurenson"
         ],
         "perspective": "FPP",
         "placement": 10,
@@ -100,8 +100,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "Flopsibert",
-          "WeCoyote",
-          "KingZurenson"
+          "KingZurenson",
+          "WeCoyote"
         ],
         "perspective": "FPP",
         "placement": 20,
@@ -118,8 +118,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "WeCoyote",
-          "Flopsibert",
-          "KingZurenson"
+          "KingZurenson",
+          "Flopsibert"
         ],
         "perspective": "FPP",
         "placement": 23,
