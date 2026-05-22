@@ -1,6 +1,6 @@
 {
-  "timestamp": "22.05. 17:55",
-  "weatherTempCelsius": 26,
+  "timestamp": "22.05. 19:51",
+  "weatherTempCelsius": 23,
   "githubLastCommit": "May 22, 2026",
   "steamStatus": "offline",
   "pubg": {
@@ -10,9 +10,9 @@
         "matchStart": "21.05. 19:21",
         "teamSize": "Squad",
         "teamMates": [
-          "TARASTIGER96",
+          "kodigorok01",
           "markgreison",
-          "kodigorok01"
+          "TARASTIGER96"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -44,9 +44,9 @@
         "matchStart": "21.05. 18:41",
         "teamSize": "Heistroyale",
         "teamMates": [
-          "Pitskido",
           "kibox_",
-          "SMTerm"
+          "SMTerm",
+          "Pitskido"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -95,9 +95,9 @@
         "matchStart": "20.05. 21:43",
         "teamSize": "Heistroyale",
         "teamMates": [
-          "powizak",
           "0RhNegative",
-          "KURWA_JEBANA"
+          "KURWA_JEBANA",
+          "powizak"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -131,9 +131,9 @@
         "matchStart": "20.05. 21:21",
         "teamSize": "Heistroyale",
         "teamMates": [
+          "SarahCroft",
           "suUwUuna",
-          "mijania",
-          "SarahCroft"
+          "mijania"
         ],
         "perspective": "TPP",
         "placement": 1,
