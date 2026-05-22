@@ -1,11 +1,47 @@
 {
-  "timestamp": "22.05. 21:14",
-  "weatherTempCelsius": 21,
+  "timestamp": "22.05. 23:03",
+  "weatherTempCelsius": 18,
   "githubLastCommit": "May 22, 2026",
   "steamStatus": "online",
   "pubg": {
     "name": "joeyws2",
     "lastMatches": [
+      {
+        "matchStart": "22.05. 21:57",
+        "teamSize": "Squad",
+        "teamMates": [
+          "ANDRIJA_02",
+          "SerbianSpray",
+          "Mirny3412431254"
+        ],
+        "perspective": "TPP",
+        "placement": 1,
+        "map": "Erangel",
+        "survivalTime": "14:54",
+        "distance": "1.8",
+        "kills": 2,
+        "assists": 3,
+        "damage": 997,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.05.22.21.32b10306-b4da-4a4a-96ee-fecc1da85b27"
+      },
+      {
+        "matchStart": "22.05. 21:35",
+        "teamSize": "Heistroyale",
+        "teamMates": [
+          "Tx3-x",
+          "linuser27",
+          "PainBaker"
+        ],
+        "perspective": "TPP",
+        "placement": 1,
+        "map": "SafeHouse_Main",
+        "survivalTime": "14:44",
+        "distance": "2.2",
+        "kills": 0,
+        "assists": 0,
+        "damage": 0,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.heistroyale.eu.2026.05.22.21.2976861f-5d15-44fe-9a5e-a7f5996bb5a5"
+      },
       {
         "matchStart": "21.05. 19:21",
         "teamSize": "Squad",
@@ -108,42 +144,6 @@
         "assists": 0,
         "damage": 0,
         "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.heistroyale.eu.2026.05.20.21.dc5eb81c-8ef8-407b-9d18-69d7556ad452"
-      },
-      {
-        "matchStart": "20.05. 21:34",
-        "teamSize": "Heistroyale",
-        "teamMates": [
-          "TheFARADAY",
-          "powizak",
-          "TheGuyInAJacket"
-        ],
-        "perspective": "TPP",
-        "placement": 4,
-        "map": "SafeHouse_Main",
-        "survivalTime": "6:16",
-        "distance": "0.7",
-        "kills": 0,
-        "assists": 0,
-        "damage": 0,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.heistroyale.eu.2026.05.20.21.d4213890-bd3e-4924-9b58-0fa5792cb5f7"
-      },
-      {
-        "matchStart": "20.05. 21:21",
-        "teamSize": "Heistroyale",
-        "teamMates": [
-          "mijania",
-          "SarahCroft",
-          "suUwUuna"
-        ],
-        "perspective": "TPP",
-        "placement": 1,
-        "map": "SafeHouse_Main",
-        "survivalTime": "9:57",
-        "distance": "1.8",
-        "kills": 0,
-        "assists": 0,
-        "damage": 0,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.heistroyale.eu.2026.05.20.21.8b2b39ce-b1a4-4e14-9620-cd65a1248fc9"
       }
     ]
   }
