@@ -1,8 +1,8 @@
 {
-  "timestamp": "22.05. 19:51",
-  "weatherTempCelsius": 23,
+  "timestamp": "22.05. 21:14",
+  "weatherTempCelsius": 21,
   "githubLastCommit": "May 22, 2026",
-  "steamStatus": "offline",
+  "steamStatus": "online",
   "pubg": {
     "name": "joeyws2",
     "lastMatches": [
@@ -78,8 +78,8 @@
         "matchStart": "20.05. 22:19",
         "teamSize": "Heistroyale",
         "teamMates": [
-          "badboy310583",
-          "Afro_Duck"
+          "Afro_Duck",
+          "badboy310583"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -113,9 +113,9 @@
         "matchStart": "20.05. 21:34",
         "teamSize": "Heistroyale",
         "teamMates": [
-          "TheGuyInAJacket",
           "TheFARADAY",
-          "powizak"
+          "powizak",
+          "TheGuyInAJacket"
         ],
         "perspective": "TPP",
         "placement": 4,
@@ -131,9 +131,9 @@
         "matchStart": "20.05. 21:21",
         "teamSize": "Heistroyale",
         "teamMates": [
+          "mijania",
           "SarahCroft",
-          "suUwUuna",
-          "mijania"
+          "suUwUuna"
         ],
         "perspective": "TPP",
         "placement": 1,
