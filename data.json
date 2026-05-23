@@ -1,8 +1,8 @@
 {
-  "timestamp": "23.05. 19:15",
-  "weatherTempCelsius": 26,
+  "timestamp": "23.05. 20:57",
+  "weatherTempCelsius": 24,
   "githubLastCommit": "May 23, 2026",
-  "steamStatus": "offline",
+  "steamStatus": "online",
   "pubg": {
     "name": "joeyws2",
     "lastMatches": [
@@ -10,9 +10,9 @@
         "matchStart": "23.05. 7:38",
         "teamSize": "Heistroyale",
         "teamMates": [
+          "smou",
           "kwstaras-7",
-          "SirZwicky",
-          "smou"
+          "SirZwicky"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -56,9 +56,9 @@
         "matchStart": "23.05. 6:12",
         "teamSize": "Heistroyale",
         "teamMates": [
-          "ZAVADAK171517",
           "berkay1515",
-          "MacLockdown"
+          "MacLockdown",
+          "ZAVADAK171517"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -74,9 +74,9 @@
         "matchStart": "23.05. 5:51",
         "teamSize": "Heistroyale",
         "teamMates": [
-          "0o0-Sage-0o0",
           "SedoyMudrec",
-          "HECTABiLbHbIi"
+          "HECTABiLbHbIi",
+          "0o0-Sage-0o0"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -92,9 +92,9 @@
         "matchStart": "22.05. 21:57",
         "teamSize": "Squad",
         "teamMates": [
-          "SerbianSpray",
           "Mirny3412431254",
-          "ANDRIJA_02"
+          "ANDRIJA_02",
+          "SerbianSpray"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -129,8 +129,8 @@
         "teamSize": "Squad",
         "teamMates": [
           "kodigorok01",
-          "TARASTIGER96",
-          "markgreison"
+          "markgreison",
+          "TARASTIGER96"
         ],
         "perspective": "TPP",
         "placement": 1,
