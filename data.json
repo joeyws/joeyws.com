@@ -1,11 +1,29 @@
 {
-  "timestamp": "23.05. 15:03",
+  "timestamp": "24.05. 11:22",
   "weatherTempCelsius": 29,
-  "githubLastCommit": "May 23, 2026",
+  "githubLastCommit": "May 24, 2026",
   "steamStatus": "offline",
   "pubg": {
     "name": "joeyws2",
     "lastMatches": [
+      {
+        "matchStart": "24.05. 6:18",
+        "teamSize": "Heistroyale",
+        "teamMates": [
+          "scooby86",
+          "Shataan",
+          "deutschorden"
+        ],
+        "perspective": "TPP",
+        "placement": 1,
+        "map": "SafeHouse_Main",
+        "survivalTime": "7:44",
+        "distance": "0.9",
+        "kills": 0,
+        "assists": 0,
+        "damage": 0,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.heistroyale.eu.2026.05.24.06.9239dd24-e9ab-4b14-b7e2-ad8ab233cdbe"
+      },
       {
         "matchStart": "23.05. 7:38",
         "teamSize": "Heistroyale",
@@ -74,9 +92,9 @@
         "matchStart": "23.05. 5:51",
         "teamSize": "Heistroyale",
         "teamMates": [
-          "SedoyMudrec",
           "HECTABiLbHbIi",
-          "0o0-Sage-0o0"
+          "0o0-Sage-0o0",
+          "SedoyMudrec"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -92,9 +110,9 @@
         "matchStart": "22.05. 21:57",
         "teamSize": "Squad",
         "teamMates": [
-          "Mirny3412431254",
           "ANDRIJA_02",
-          "SerbianSpray"
+          "SerbianSpray",
+          "Mirny3412431254"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -123,24 +141,6 @@
         "assists": 0,
         "damage": 0,
         "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.heistroyale.eu.2026.05.22.21.2976861f-5d15-44fe-9a5e-a7f5996bb5a5"
-      },
-      {
-        "matchStart": "21.05. 19:21",
-        "teamSize": "Squad",
-        "teamMates": [
-          "kodigorok01",
-          "markgreison",
-          "TARASTIGER96"
-        ],
-        "perspective": "TPP",
-        "placement": 1,
-        "map": "Erangel",
-        "survivalTime": "22:19",
-        "distance": "6.2",
-        "kills": 13,
-        "assists": 1,
-        "damage": 1253,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.05.21.19.73e74e35-7773-45eb-9171-dcd9cc217382"
       }
     ]
   }
