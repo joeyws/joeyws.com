@@ -1,6 +1,6 @@
 {
-  "timestamp": "24.05. 19:21",
-  "weatherTempCelsius": 27,
+  "timestamp": "24.05. 20:59",
+  "weatherTempCelsius": 24,
   "githubLastCommit": "May 24, 2026",
   "steamStatus": "offline",
   "pubg": {
@@ -10,9 +10,9 @@
         "matchStart": "24.05. 12:13",
         "teamSize": "Heistroyale",
         "teamMates": [
-          "idk65544",
           "vamplifestyle",
-          "suraairo"
+          "suraairo",
+          "idk65544"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -110,9 +110,9 @@
         "matchStart": "23.05. 5:51",
         "teamSize": "Heistroyale",
         "teamMates": [
-          "SedoyMudrec",
           "HECTABiLbHbIi",
-          "0o0-Sage-0o0"
+          "0o0-Sage-0o0",
+          "SedoyMudrec"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -128,9 +128,9 @@
         "matchStart": "22.05. 21:57",
         "teamSize": "Squad",
         "teamMates": [
-          "Mirny3412431254",
           "ANDRIJA_02",
-          "SerbianSpray"
+          "SerbianSpray",
+          "Mirny3412431254"
         ],
         "perspective": "TPP",
         "placement": 1,
