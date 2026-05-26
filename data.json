@@ -1,8 +1,8 @@
 {
-  "timestamp": "26.05. 7:53",
-  "weatherTempCelsius": 23,
+  "timestamp": "26.05. 15:41",
+  "weatherTempCelsius": 31,
   "githubLastCommit": "May 26, 2026",
-  "steamStatus": "offline",
+  "steamStatus": "online",
   "pubg": {
     "name": "joeyws2",
     "lastMatches": [
@@ -73,9 +73,9 @@
         "matchStart": "24.05. 6:18",
         "teamSize": "Heistroyale",
         "teamMates": [
+          "deutschorden",
           "scooby86",
-          "Shataan",
-          "deutschorden"
+          "Shataan"
         ],
         "perspective": "TPP",
         "placement": 1,
@@ -91,9 +91,9 @@
         "matchStart": "23.05. 7:38",
         "teamSize": "Heistroyale",
         "teamMates": [
+          "kwstaras-7",
           "SirZwicky",
-          "smou",
-          "kwstaras-7"
+          "smou"
         ],
         "perspective": "TPP",
         "placement": 1,
