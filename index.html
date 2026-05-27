@@ -47,8 +47,9 @@
     .video .progress-filled{width:0%;height:100%;background:#0f0;}
     /* GALLERY */
     .gallery-nav,.gallery-img{user-select:none;}
-    .gallery-img{display:flex;align-items:flex-start;}
-    .gallery-img img{display:block;height:500px;max-width:100%;object-fit:contain;}
+    .gallery-img,.gallery-img img{height:500px;}
+    .gallery-img{display:flex;align-items:flex-start;position:relative;}
+    .gallery-img img{transition:opacity 0.2s;max-width:100%;object-fit:contain;position:absolute;}
     /* SVG */
     svg *{fill:var(--text);}
     svg.social{height:13px;vertical-align:-12%;}
@@ -363,18 +364,29 @@ document.addEventListener("DOMContentLoaded", () => {
         next.textContent = "next";
         nav.append(prev, " ", count, " ", next, "");
         // move images into container
-        images.forEach((img, i) => {
+        /* images.forEach((img, i) => {
             img.style.display = i === 0 ? "block" : "none";
+            imgContainer.append(img);
+        }); */
+        images.forEach((img, i) => {
+            img.style.opacity = i === 0 ? '1' : '0';
             imgContainer.append(img);
         });
         gallery.append(nav, caption, imgContainer);
         // update view
-        const update = index => {
+        /* const update = index => {
             images[current].style.display = "none";
             current = (index + total) % total;
             images[current].style.display = "block";
             count.textContent = `${current + 1}/${total}`;
             caption.textContent = images[current].alt || "";
+        }; */
+        const update = index => {
+            images[current].style.opacity = '0';
+            current = (index + total) % total;
+            images[current].style.opacity = '1';
+            count.textContent = `${current + 1}/${total}`;
+            caption.textContent = images[current].alt || '';
         };
         const goToNext = () => update(current + 1);
         const goToPrev = () => update(current - 1);
