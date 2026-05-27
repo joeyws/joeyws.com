@@ -55,7 +55,7 @@
     svg.social *{fill:#00f;}
     a:has(> svg.social),a:has(> svg.social):hover{backdrop-filter:none;}
     a:hover svg.social *{fill:var(--text);}
-    #mitgliedakbw{width:200px;max-width:100%;display:block;}
+    #mitgliedakbw{width:190px;max-width:100%;display:block;}
     /* SPECIAL */
     @keyframes blink-loading{0%{opacity:0;}50%{opacity:1;}}
     .loading{animation:.3s blink-loading steps(1) infinite;}
@@ -72,7 +72,8 @@
 <header>
     <h1 class="loading">Joey Schweickhardt</h1>
     <span id="city">Stuttgart</span><br>
-    <span id="time"></span>
+    <span id="time"></span><br>
+    <span id="visitor-count"></span>
 </header>
 <hr>
 <main>
@@ -116,6 +117,7 @@
     <hr>
     <h2>Places</h2>
     <div class="gallery">
+        <!-- <img loading="lazy" src="img/260524.jpg" alt="Critical Nass"> -->
         <img loading="lazy" src="img/260417.jpg" alt="419 Helvetia Campus, Herzog & de Meuron">
         <img loading="lazy" src="img/260404.jpg" alt="Stuttgart Main Station, Christoph Ingenhoven with Frei Otto">
         <img loading="lazy" src="img/251215.jpg" alt="L’Arbre Blanc, Sou Fujimoto">
@@ -172,7 +174,7 @@
     <p>
         No cookies. No tracking.<br>
         Personal information may be processed by external providers such as<br>
-        <a href="https://open-meteo.com/" rel="nofollow">Open‑Meteo</a> for weather data and <a href="https://github.com/" rel="nofollow">GitHub</a> for hosting.
+        <a href="https://open-meteo.com/" rel="nofollow">Open‑Meteo</a> for weather data, <a href="https://firebase.google.com/" rel="nofollow">Firebase</a> for online counter and <a href="https://github.com/" rel="nofollow">GitHub</a> for hosting.
     </p>
 </main>
 
@@ -228,7 +230,6 @@ function raf(time) {
 }
 requestAnimationFrame(raf);
 window.addEventListener('resize', () => {lenis.update();});
-window.addEventListener('hashchange', () => {setTimeout(() => {lenis.resize();}, 50);});
 
 // CURSOR
 if (window.matchMedia('(pointer: fine)').matches) {
@@ -294,6 +295,7 @@ requestIdleCallback(() => {
         } catch (err) {}
     };
     getWeather();
+    lenis.update();
 });
     
 // CONTACT
@@ -456,6 +458,24 @@ document.querySelectorAll(".video").forEach(wrapper => {
     });
 
 });
+</script>
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-app.js";
+    import { getDatabase, ref, push, onDisconnect, onValue }
+        from "https://www.gstatic.com/firebasejs/10.14.0/firebase-database.js";
+    const app = initializeApp({
+        apiKey: "AIzaSyChW4NhononANxG4v9wJmsu3-PmbGPObMM",
+        databaseURL: "https://joeyws-com-default-rtdb.europe-west1.firebasedatabase.app"
+    });
+    const db = getDatabase(app);
+    const presenceRef = ref(db, "online_users");
+    const userRef = push(presenceRef, true);
+    onDisconnect(userRef).remove();
+    onValue(presenceRef, (snapshot) => {
+        const count = snapshot.size ?? 0;
+        document.getElementById("visitor-count").innerHTML = '<span style="color:#0f0">⬤</span> ' + count + ' online';
+        lenis.update();
+    });
 </script>
 <script type="application/ld+json">
 {
