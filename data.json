@@ -1,11 +1,128 @@
 {
-  "timestamp": "24.05. 22:04",
-  "weatherTempCelsius": 23,
-  "githubLastCommit": "May 24, 2026",
+  "timestamp": "27.05. 5:18",
+  "weatherTempCelsius": 20,
+  "githubLastCommit": "May 27, 2026",
   "steamStatus": "offline",
   "pubg": {
     "name": "joeyws2",
     "lastMatches": [
+      {
+        "matchStart": "26.05. 19:45",
+        "teamSize": "Squad",
+        "teamMates": [
+          "KingZurenson",
+          "WeCoyote",
+          "Flopsibert"
+        ],
+        "perspective": "FPP",
+        "placement": 4,
+        "map": "Miramar",
+        "survivalTime": "16:59",
+        "distance": "3.8",
+        "kills": 0,
+        "assists": 0,
+        "damage": 64,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.squad-fpp.eu.2026.05.26.19.c5ae0924-f682-4cd0-a50a-63894b1d6afb"
+      },
+      {
+        "matchStart": "26.05. 19:39",
+        "teamSize": "Squad",
+        "teamMates": [
+          "WeCoyote",
+          "KingZurenson",
+          "Flopsibert"
+        ],
+        "perspective": "FPP",
+        "placement": 27,
+        "map": "Erangel",
+        "survivalTime": "2:32",
+        "distance": "0.1",
+        "kills": 0,
+        "assists": 0,
+        "damage": 26,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.squad-fpp.eu.2026.05.26.19.f85bc0fd-0359-4839-aea0-d6d5a997922c"
+      },
+      {
+        "matchStart": "26.05. 19:30",
+        "teamSize": "Squad",
+        "teamMates": [
+          "WeCoyote",
+          "Flopsibert",
+          "KingZurenson"
+        ],
+        "perspective": "FPP",
+        "placement": 21,
+        "map": "Erangel",
+        "survivalTime": "6:51",
+        "distance": "0.7",
+        "kills": 1,
+        "assists": 0,
+        "damage": 125,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.squad-fpp.eu.2026.05.26.19.2fdb2d06-0eb7-4229-95a9-b0b7134b087a"
+      },
+      {
+        "matchStart": "26.05. 19:13",
+        "teamSize": "Heistroyale",
+        "teamMates": [
+          "Ja_W4",
+          "ljaveeee",
+          "zvonite-911"
+        ],
+        "perspective": "TPP",
+        "placement": 1,
+        "map": "SafeHouse_Main",
+        "survivalTime": "8:18",
+        "distance": "1.6",
+        "kills": 0,
+        "assists": 0,
+        "damage": 0,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.heistroyale.eu.2026.05.26.19.b6bbd795-621d-44bf-b583-4531ad6854eb"
+      },
+      {
+        "matchStart": "25.05. 20:25",
+        "teamSize": "Squad",
+        "teamMates": [],
+        "perspective": "TPP",
+        "placement": 7,
+        "map": "Erangel",
+        "survivalTime": "19:40",
+        "distance": "2.7",
+        "kills": 10,
+        "assists": 0,
+        "damage": 1042,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.05.25.20.f5456186-a2c1-45c3-a401-bd72f465d2ac"
+      },
+      {
+        "matchStart": "25.05. 19:55",
+        "teamSize": "Squad",
+        "teamMates": [],
+        "perspective": "TPP",
+        "placement": 6,
+        "map": "Erangel",
+        "survivalTime": "19:23",
+        "distance": "9.1",
+        "kills": 10,
+        "assists": 0,
+        "damage": 768,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.05.25.19.72378083-28d1-4ca7-9078-feb6ad510848"
+      },
+      {
+        "matchStart": "25.05. 19:44",
+        "teamSize": "Squad",
+        "teamMates": [
+          "Dewastator40",
+          "PIT1793"
+        ],
+        "perspective": "TPP",
+        "placement": 20,
+        "map": "Erangel",
+        "survivalTime": "6:43",
+        "distance": "0.7",
+        "kills": 3,
+        "assists": 0,
+        "damage": 243,
+        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.05.25.19.c92e2bb8-531a-4793-b26d-acfec53892f4"
+      },
       {
         "matchStart": "24.05. 12:13",
         "teamSize": "Heistroyale",
@@ -23,124 +140,6 @@
         "assists": 0,
         "damage": 0,
         "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.heistroyale.eu.2026.05.24.12.19471391-09b9-4464-91be-227fbf658f0b"
-      },
-      {
-        "matchStart": "24.05. 6:18",
-        "teamSize": "Heistroyale",
-        "teamMates": [
-          "scooby86",
-          "Shataan",
-          "deutschorden"
-        ],
-        "perspective": "TPP",
-        "placement": 1,
-        "map": "SafeHouse_Main",
-        "survivalTime": "7:44",
-        "distance": "0.9",
-        "kills": 0,
-        "assists": 0,
-        "damage": 0,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.heistroyale.eu.2026.05.24.06.9239dd24-e9ab-4b14-b7e2-ad8ab233cdbe"
-      },
-      {
-        "matchStart": "23.05. 7:38",
-        "teamSize": "Heistroyale",
-        "teamMates": [
-          "smou",
-          "kwstaras-7",
-          "SirZwicky"
-        ],
-        "perspective": "TPP",
-        "placement": 1,
-        "map": "SafeHouse_Main",
-        "survivalTime": "8:07",
-        "distance": "1.4",
-        "kills": 0,
-        "assists": 0,
-        "damage": 0,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.heistroyale.eu.2026.05.23.07.28e7fe33-7743-4ede-a571-b625d1ad9765"
-      },
-      {
-        "matchStart": "23.05. 6:59",
-        "teamSize": "Squad",
-        "teamMates": [],
-        "perspective": "TPP",
-        "placement": 1,
-        "map": "Erangel",
-        "survivalTime": "24:31",
-        "distance": "5.8",
-        "kills": 12,
-        "assists": 0,
-        "damage": 1112,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.05.23.06.d9ee1558-8d22-4419-ad60-24d0f10d825a"
-      },
-      {
-        "matchStart": "23.05. 6:25",
-        "teamSize": "Squad",
-        "teamMates": [],
-        "perspective": "TPP",
-        "placement": 1,
-        "map": "Erangel",
-        "survivalTime": "25:09",
-        "distance": "6.0",
-        "kills": 17,
-        "assists": 0,
-        "damage": 1271,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.05.23.06.f172c936-1615-421f-abc6-044a8988af06"
-      },
-      {
-        "matchStart": "23.05. 6:12",
-        "teamSize": "Heistroyale",
-        "teamMates": [
-          "berkay1515",
-          "MacLockdown",
-          "ZAVADAK171517"
-        ],
-        "perspective": "TPP",
-        "placement": 1,
-        "map": "SafeHouse_Main",
-        "survivalTime": "9:08",
-        "distance": "1.7",
-        "kills": 0,
-        "assists": 0,
-        "damage": 0,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.heistroyale.eu.2026.05.23.06.9a13ba47-70ab-49af-86dc-3afea5de4252"
-      },
-      {
-        "matchStart": "23.05. 5:51",
-        "teamSize": "Heistroyale",
-        "teamMates": [
-          "SedoyMudrec",
-          "HECTABiLbHbIi",
-          "0o0-Sage-0o0"
-        ],
-        "perspective": "TPP",
-        "placement": 1,
-        "map": "SafeHouse_Main",
-        "survivalTime": "11:58",
-        "distance": "1.9",
-        "kills": 0,
-        "assists": 0,
-        "damage": 0,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.official.pc-2018-40.steam.heistroyale.eu.2026.05.23.05.8a797d3c-25cd-44e7-b606-da6db365cce7"
-      },
-      {
-        "matchStart": "22.05. 21:57",
-        "teamSize": "Squad",
-        "teamMates": [
-          "Mirny3412431254",
-          "ANDRIJA_02",
-          "SerbianSpray"
-        ],
-        "perspective": "TPP",
-        "placement": 1,
-        "map": "Erangel",
-        "survivalTime": "14:54",
-        "distance": "1.8",
-        "kills": 2,
-        "assists": 3,
-        "damage": 997,
-        "url": "https://bridge.pubg.com/de/2d-replay/match.bro.airoyale.pc-2018-40.steam.squad.eu.2026.05.22.21.32b10306-b4da-4a4a-96ee-fecc1da85b27"
       }
     ]
   }
