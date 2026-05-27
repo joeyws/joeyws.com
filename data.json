@@ -1,6 +1,6 @@
 {
-  "timestamp": "26.05. 22:23",
-  "weatherTempCelsius": 24,
+  "timestamp": "27.05. 0:09",
+  "weatherTempCelsius": 22,
   "githubLastCommit": "May 26, 2026",
   "steamStatus": "online",
   "pubg": {
@@ -10,9 +10,9 @@
         "matchStart": "26.05. 19:45",
         "teamSize": "Squad",
         "teamMates": [
+          "Flopsibert",
           "KingZurenson",
-          "WeCoyote",
-          "Flopsibert"
+          "WeCoyote"
         ],
         "perspective": "FPP",
         "placement": 4,
@@ -46,9 +46,9 @@
         "matchStart": "26.05. 19:30",
         "teamSize": "Squad",
         "teamMates": [
-          "WeCoyote",
+          "KingZurenson",
           "Flopsibert",
-          "KingZurenson"
+          "WeCoyote"
         ],
         "perspective": "FPP",
         "placement": 21,
@@ -127,9 +127,9 @@
         "matchStart": "24.05. 12:13",
         "teamSize": "Heistroyale",
         "teamMates": [
-          "idk65544",
           "vamplifestyle",
-          "suraairo"
+          "suraairo",
+          "idk65544"
         ],
         "perspective": "TPP",
         "placement": 1,
