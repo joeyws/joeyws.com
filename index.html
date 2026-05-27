@@ -73,7 +73,7 @@
     <h1 class="loading">Joey Schweickhardt</h1>
     <span id="city">Stuttgart</span><br>
     <span id="time"></span><br>
-    <span id="visitor-count"></span>
+    <span id="counter"></span>
 </header>
 <hr>
 <main>
@@ -230,6 +230,8 @@ function raf(time) {
 }
 requestAnimationFrame(raf);
 window.addEventListener('resize', () => {lenis.update();});
+const ro = new ResizeObserver(() => lenis.update());
+ro.observe(document.body);
 
 // CURSOR
 if (window.matchMedia('(pointer: fine)').matches) {
@@ -295,7 +297,6 @@ requestIdleCallback(() => {
         } catch (err) {}
     };
     getWeather();
-    lenis.update();
 });
     
 // CONTACT
@@ -461,20 +462,15 @@ document.querySelectorAll(".video").forEach(wrapper => {
 </script>
 <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-app.js";
-    import { getDatabase, ref, push, onDisconnect, onValue }
-        from "https://www.gstatic.com/firebasejs/10.14.0/firebase-database.js";
-    const app = initializeApp({
-        apiKey: "AIzaSyChW4NhononANxG4v9wJmsu3-PmbGPObMM",
-        databaseURL: "https://joeyws-com-default-rtdb.europe-west1.firebasedatabase.app"
-    });
+    import { getDatabase, ref, push, onDisconnect, onValue } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-database.js";
+    const app = initializeApp({apiKey: "AIzaSyChW4NhononANxG4v9wJmsu3-PmbGPObMM", databaseURL: "https://joeyws-com-default-rtdb.europe-west1.firebasedatabase.app"});
     const db = getDatabase(app);
     const presenceRef = ref(db, "online_users");
     const userRef = push(presenceRef, true);
     onDisconnect(userRef).remove();
     onValue(presenceRef, (snapshot) => {
         const count = snapshot.size ?? 0;
-        document.getElementById("visitor-count").innerHTML = '<span style="color:#0f0">⬤</span> ' + count + ' online';
-        lenis.update();
+        document.getElementById("counter").innerHTML = '<span style="color:#0f0">⬤</span> ' + count + ' online';
     });
 </script>
 <script type="application/ld+json">
