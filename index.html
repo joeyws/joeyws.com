@@ -79,8 +79,8 @@
 <header>
     <h1 class="loading">Joey Schweickhardt</h1>
     <span id="city">Stuttgart</span><br>
-    <span id="time"></span><!-- <br>
-    <span id="counter"></span> -->
+    <span id="time"></span><br>
+    <span id="counter"></span>
 </header>
 <hr>
 <main>
@@ -491,6 +491,9 @@ document.querySelectorAll(".video").forEach(wrapper => {
     });
 
 });
+
+const count = 1; // statistisch gesehen sehr wahrscheinlich
+document.getElementById("counter").innerHTML = '<span style="color:#0f0">⬤</span> ' + count + ' online';
 </script>
 <!-- <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-app.js";
