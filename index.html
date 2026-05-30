@@ -254,12 +254,6 @@ function raf(time) {
     requestAnimationFrame(raf);
 }
 requestAnimationFrame(raf);
-window.addEventListener('resize', () => {lenis.update();});
-const ro = new ResizeObserver(() => lenis.update());
-ro.observe(document.body);
-document.querySelectorAll('img[loading="lazy"]').forEach(img => {
-    img.addEventListener('load', () => lenis.update(), { once: true });
-});
 
 // CURSOR
 if (window.matchMedia('(pointer: fine)').matches) {
@@ -435,7 +429,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         galleryInstances.push({ gallery, goToNext, goToPrev });
     });
-    lenis.update();
     // keyboard — only control the most visible gallery
     document.addEventListener("keydown", e => {
         if (!["ArrowLeft", "ArrowRight"].includes(e.key)) return;
