@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <link rel="preload" href="font/SourceCodePro.woff2" as="font" type="font/woff2">
 <link rel="preload" href="scripts.js" as="script">
-<link rel="modulepreload" href="https://www.gstatic.com/firebasejs/10.14.0/firebase-app.js">
+<!-- <link rel="modulepreload" href="https://www.gstatic.com/firebasejs/10.14.0/firebase-app.js"> -->
 <title>Joey Schweickhardt</title>
 <meta name="description" content="The personal website of Joey Schweickhardt from Stuttgart, Germany.">
 <meta name="robots" content="index,nofollow,notranslate,noimageindex">
@@ -79,8 +79,8 @@
 <header>
     <h1 class="loading">Joey Schweickhardt</h1>
     <span id="city">Stuttgart</span><br>
-    <span id="time"></span><br>
-    <span id="counter"></span>
+    <span id="time"></span><!-- <br>
+    <span id="counter"></span> -->
 </header>
 <hr>
 <main>
@@ -496,7 +496,7 @@ document.querySelectorAll(".video").forEach(wrapper => {
 
 });
 </script>
-<script type="module">
+<!-- <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-app.js";
     import { getDatabase, ref, push, onDisconnect, onValue } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-database.js";
     const app = initializeApp({apiKey: "AIzaSyChW4NhononANxG4v9wJmsu3-PmbGPObMM", databaseURL: "https://joeyws-com-default-rtdb.europe-west1.firebasedatabase.app"});
@@ -508,7 +508,7 @@ document.querySelectorAll(".video").forEach(wrapper => {
         const count = snapshot.size ?? 0;
         document.getElementById("counter").innerHTML = '<span style="color:#0f0">⬤</span> ' + count + ' online';
     });
-</script>
+</script> -->
 <script type="application/ld+json">
 {
     "@context":         "https://schema.org",
