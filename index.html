@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <link rel="preload" href="font/SourceCodePro.woff2" as="font" type="font/woff2">
 <link rel="preload" href="scripts.js" as="script">
-<!-- <link rel="modulepreload" href="https://www.gstatic.com/firebasejs/10.14.0/firebase-app.js"> -->
+<link rel="modulepreload" href="https://www.gstatic.com/firebasejs/10.14.0/firebase-app.js">
 <title>Joey Schweickhardt</title>
 <meta name="description" content="The personal website of Joey Schweickhardt from Stuttgart, Germany.">
 <meta name="robots" content="index,nofollow,notranslate,noimageindex">
@@ -63,7 +63,7 @@
     #mitgliedakbw{width:190px;max-width:100%;display:block;}
     /* LEGAL */
     .legal{display:table;margin-left:auto;}
-    .legal,.legal a,.legal a:hover{color:#555 !important;background:transparent;font-size:11px;line-height:1.3em;}
+    .legal,.legal a,.legal a:hover{color:#666 !important;background:transparent;font-size:11px;line-height:1.3em;}
     /* SPECIAL */
     @keyframes blink-loading{0%{opacity:0;}50%{opacity:1;}}
     .loading{animation:.3s blink-loading steps(1) infinite;}
@@ -79,8 +79,8 @@
 <header>
     <h1 class="loading">Joey Schweickhardt</h1>
     <span id="city">Stuttgart</span><br>
-    <span id="time"></span><!-- <br>
-    <span id="counter"></span> -->
+    <span id="time"></span><br>
+    <span id="counter"></span>
 </header>
 <hr>
 <main>
@@ -97,7 +97,7 @@
     <hr>
     <h2>Works</h2>
     <div class="gallery">
-        <img fetchpriority="high" height="500" src="img/250625-2.webp" alt="Casa di accoglienza dei pellegrini di San Pietro, Renovation">
+        <img fetchpriority="high" src="img/250625-2.webp" alt="Casa di accoglienza dei pellegrini di San Pietro, Renovation">
         <img loading="lazy" src="img/250625.webp" alt="Casa di accoglienza dei pellegrini di San Pietro, Urban Situation">
         <img loading="lazy" src="img/260509.webp" alt="Synth Web App with USB Keyboard Control">
         <img loading="lazy" src="img/250531.webp" alt="WKT Geometry Visualizer Web App for ICD">
@@ -125,7 +125,7 @@
     <h2>Places</h2>
     <div class="gallery">
         <!-- <img loading="lazy" src="img/260524.webp" alt="Critical Nass"> -->
-        <img fetchpriority="high" height="500" src="img/260417.webp" alt="419 Helvetia Campus, Herzog & de Meuron">
+        <img fetchpriority="high" src="img/260417.webp" alt="419 Helvetia Campus, Herzog & de Meuron">
         <img loading="lazy" src="img/260404.webp" alt="Stuttgart Main Station, Christoph Ingenhoven with Frei Otto">
         <img loading="lazy" src="img/251215.webp" alt="L’Arbre Blanc, Sou Fujimoto">
         <img loading="lazy" src="img/251217.webp" alt="423 Îlot A3, Herzog & de Meuron">
@@ -253,6 +253,10 @@ function raf(time) {
     requestAnimationFrame(raf);
 }
 requestAnimationFrame(raf);
+window.addEventListener('load', () => {
+    setTimeout(() => lenis.resize(), 1000);
+    setTimeout(() => lenis.resize(), 3000);
+});
 
 // CURSOR
 if (window.matchMedia('(pointer: fine)').matches) {
@@ -488,7 +492,7 @@ document.querySelectorAll(".video").forEach(wrapper => {
 
 });
 </script>
-<!-- <script type="module">
+<script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-app.js";
     import { getDatabase, ref, push, onDisconnect, onValue } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-database.js";
     const app = initializeApp({apiKey: "AIzaSyChW4NhononANxG4v9wJmsu3-PmbGPObMM", databaseURL: "https://joeyws-com-default-rtdb.europe-west1.firebasedatabase.app"});
@@ -500,7 +504,7 @@ document.querySelectorAll(".video").forEach(wrapper => {
         const count = snapshot.size ?? 0;
         document.getElementById("counter").innerHTML = '<span style="color:#0f0">⬤</span> ' + count + ' online';
     });
-</script> -->
+</script>
 <script type="application/ld+json">
 {
     "@context":         "https://schema.org",
