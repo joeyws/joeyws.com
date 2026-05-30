@@ -304,28 +304,28 @@ getTime();
 setInterval(getTime, 1000);
 
 // WEATHER
-requestIdleCallback(() => {
-    const getWeather = async () => {
-        try {
-            const response = await fetch("https://api.open-meteo.com/v1/forecast?latitude=48.7823&longitude=9.177&current_weather=true");
-            if (!response.ok) return;
-            const data = await response.json();
-            const current_weather = data.current_weather;
-            if (!current_weather) return;
-            const temperature = Math.round(current_weather.temperature);
-            const cityElement = document.getElementById("city");
-            if (!cityElement) return;
-            let weatherEl = document.getElementById("weather");
-            if (!weatherEl) {
-                weatherEl = document.createElement("span");
-                weatherEl.id = "weather";
-                cityElement.insertAdjacentElement("afterend", weatherEl);
-            }
-            weatherEl.innerHTML = ` ${temperature}°C`; // ℃ ☀️ ⬤ ☼ ☀ ⛭ ◯ ✹ ☁ <span style="color:#fc0;">☀</span> 
-        } catch (err) {}
-    };
-    getWeather();
-});
+//requestIdleCallback(() => {
+const getWeather = async () => {
+    try {
+        const response = await fetch("https://api.open-meteo.com/v1/forecast?latitude=48.7823&longitude=9.177&current_weather=true");
+        if (!response.ok) return;
+        const data = await response.json();
+        const current_weather = data.current_weather;
+        if (!current_weather) return;
+        const temperature = Math.round(current_weather.temperature);
+        const cityElement = document.getElementById("city");
+        if (!cityElement) return;
+        let weatherEl = document.getElementById("weather");
+        if (!weatherEl) {
+            weatherEl = document.createElement("span");
+            weatherEl.id = "weather";
+            cityElement.insertAdjacentElement("afterend", weatherEl);
+        }
+        weatherEl.innerHTML = ` ${temperature}°C`; // ℃ ☀️ ⬤ ☼ ☀ ⛭ ◯ ✹ ☁ <span style="color:#fc0;">☀</span> 
+    } catch (err) {}
+};
+getWeather();
+//});
     
 // CONTACT
 var address1 = 'K'+'o'+'l'+'p'+'i'+'n'+'g'+'s'+'t'+'r'+'a'+'ß'+'e'+' '+'5'+'6';
