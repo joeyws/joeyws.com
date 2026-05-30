@@ -390,8 +390,12 @@ document.addEventListener("DOMContentLoaded", () => {
         next.href = "#";
         next.textContent = "next";
         nav.append(prev, " ", count, " ", next, "");
-        // move images into container
+        // move images into container, defer src for all but first
         images.forEach((img, i) => {
+            if (i !== 0) {
+                img.dataset.src = img.src;
+                img.removeAttribute("src");
+            }
             img.style.opacity = i === 0 ? '1' : '0';
             imgContainer.append(img);
         });
@@ -400,6 +404,15 @@ document.addEventListener("DOMContentLoaded", () => {
         const update = index => {
             images[current].style.opacity = '0';
             current = (index + total) % total;
+            // load current if not yet loaded
+            if (!images[current].src && images[current].dataset.src) {
+                images[current].src = images[current].dataset.src;
+            }
+            // preload next neighbour
+            const nextImg = images[(current + 1) % total];
+            if (!nextImg.src && nextImg.dataset.src) {
+                nextImg.src = nextImg.dataset.src;
+            }
             images[current].style.opacity = '1';
             count.textContent = `${current + 1}/${total}`;
             caption.textContent = images[current].alt || '';
@@ -411,7 +424,7 @@ document.addEventListener("DOMContentLoaded", () => {
         prev.onclick = e => { e.preventDefault(); goToPrev(); };
         next.onclick = e => { e.preventDefault(); goToNext(); };
         // click left/right
-        imgContainer.onclick = e => {goToNext();};
+        imgContainer.onclick = e => { goToNext(); };
         imgContainer.addEventListener("mousemove", e => {
             next.classList.add("hover");
         });
@@ -419,6 +432,8 @@ document.addEventListener("DOMContentLoaded", () => {
             prev.classList.remove("hover");
             next.classList.remove("hover");
         });
+
+        galleryInstances.push({ gallery, goToNext, goToPrev });
     });
     lenis.update();
     // keyboard — only control the most visible gallery
