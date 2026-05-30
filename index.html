@@ -246,8 +246,7 @@ for (let i = 0; i < numClones; i++) {
 const lenis = new Lenis({
     duration: .8,
     easing: (t) => 1 - Math.pow(1 - t, 3),
-    smooth: true,
-    smoothTouch: false
+    syncTouch: false
 });
 function raf(time) {
     lenis.raf(time);
