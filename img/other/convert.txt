@@ -1,7 +1,0 @@
-Im Explorer in diesem Ordner klicken und cmd eingeben
-
-
-
-for %f in (*.jpg) do cwebp -q 85 "%f" -o "%~nf.webp"
-
-for %f in (*.jpg) do cwebp -q 90 -resize 400 0 "%f" -o "%~nf.webp"
