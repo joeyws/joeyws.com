@@ -4,4 +4,10 @@ Im Explorer in diesem Ordner klicken und cmd eingeben
 
 for %f in (*.jpg) do cwebp -q 85 "%f" -o "%~nf.webp"
 
+
+
+Breite 400px:
 for %f in (*.jpg) do cwebp -q 90 -resize 400 0 "%f" -o "%~nf.webp"
+
+Höhe 400px:
+for %f in (*.jpg) do cwebp -q 90 -resize 0 400 "%f" -o "%~nf.webp"
