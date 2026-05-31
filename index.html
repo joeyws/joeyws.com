@@ -54,8 +54,7 @@
     .gallery-item{break-inside:avoid;margin-bottom:var(--spacer);}
     .gallery-item img{width:100%;height:auto;display:block;}
     .gallery-item figcaption{padding-top:var(--spacer);}
-    .gallery-switch{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:3em;user-select:none;}
-    /* .gallery-switch-label.inactive{color:#666;} */
+    .gallery-switch{display:flex;align-items:center;justify-content:center;gap:1.2em;margin-bottom:3em;user-select:none;}
     .gallery-toggle{position:relative;width:35px;height:15px;cursor:pointer;}
     .gallery-toggle input{opacity:0;width:0;height:0;position:absolute;}
     .gallery-toggle-track{position:absolute;inset:0;/* background:#f00; */outline:1px solid var(--text);border-radius:100vmax;}
@@ -384,11 +383,13 @@ let toggled = false;
 const galleries = document.querySelectorAll('.gallery');
 galleries.forEach((g, i) => { if (i > 0) g.style.display = 'none'; });
 document.querySelector('.gallery-switch').addEventListener('click', function() {
+    const scrollY = window.scrollY;
     toggled = !toggled;
     galleries.forEach((g, i) => { g.style.display = i === (toggled ? 1 : 0) ? '' : 'none'; });
     document.getElementById('gallery-lbl-0').classList.toggle('inactive', toggled);
     document.getElementById('gallery-lbl-1').classList.toggle('inactive', !toggled);
     document.querySelector('.gallery-toggle-thumb').style.transform = toggled ? 'translateX(20px)' : '';
+    window.scrollTo({top: scrollY, behavior: 'instant'});
     lenis.resize();
 });
 
