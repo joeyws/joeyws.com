@@ -60,7 +60,6 @@
     .gallery-toggle input{opacity:0;width:0;height:0;position:absolute;}
     .gallery-toggle-track{position:absolute;inset:0;/* background:#f00; */outline:1px solid var(--text);border-radius:100vmax;}
     .gallery-toggle-thumb{position:absolute;top:2px;left:2px;width:13px;height:13px;background:var(--text);border-radius:100vmax;transition:transform .15s;}
-    .gallery-toggle input:checked ~ .gallery-toggle-thumb{transform:translateX(20px);}
     /* SVG */
     svg *{fill:var(--text);}
     svg.social{height:13px;vertical-align:-12%;}
@@ -104,11 +103,7 @@
     <hr>
     <div class="gallery-switch">
         <span class="gallery-switch-label" id="gallery-lbl-0">Works</span>
-        <div class="gallery-toggle">
-            <input type="checkbox" id="gallery-tog">
-            <div class="gallery-toggle-track"></div>
-            <div class="gallery-toggle-thumb"></div>
-        </div>
+        <div class="gallery-toggle"><div class="gallery-toggle-track"></div><div class="gallery-toggle-thumb"></div></div>
         <span class="gallery-switch-label inactive" id="gallery-lbl-1">Places</span>
     </div>
     <div class="gallery">
@@ -373,8 +368,6 @@ document.querySelectorAll(".email").forEach(emailEl => {
 });
 
 // GALLERY
-const tog = document.getElementById('gallery-tog');
-tog.checked = false;
 document.querySelectorAll('.gallery').forEach(gallery => {
     [...gallery.querySelectorAll('img')].forEach(img => {
         const figure = document.createElement('figure');
@@ -387,14 +380,15 @@ document.querySelectorAll('.gallery').forEach(gallery => {
     });
 });
 // switch
+let toggled = false;
 const galleries = document.querySelectorAll('.gallery');
 galleries.forEach((g, i) => { if (i > 0) g.style.display = 'none'; });
 document.querySelector('.gallery-switch').addEventListener('click', function() {
-    const tog = document.getElementById('gallery-tog');
-    tog.checked = !tog.checked;
-    galleries.forEach((g, i) => { g.style.display = i === (tog.checked ? 1 : 0) ? '' : 'none'; });
-    document.getElementById('gallery-lbl-0').classList.toggle('inactive', tog.checked);
-    document.getElementById('gallery-lbl-1').classList.toggle('inactive', !tog.checked);
+    toggled = !toggled;
+    galleries.forEach((g, i) => { g.style.display = i === (toggled ? 1 : 0) ? '' : 'none'; });
+    document.getElementById('gallery-lbl-0').classList.toggle('inactive', toggled);
+    document.getElementById('gallery-lbl-1').classList.toggle('inactive', !toggled);
+    document.querySelector('.gallery-toggle-thumb').style.transform = toggled ? 'translateX(20px)' : '';
     lenis.resize();
 });
 
