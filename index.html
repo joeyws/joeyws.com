@@ -3,7 +3,6 @@
 <head>
 <meta charset="utf-8">
 <link rel="preload" href="font/SourceCodePro.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="scripts.js" as="script">
 <link rel="modulepreload" href="https://www.gstatic.com/firebasejs/10.14.0/firebase-app.js">
 <title>Joey Schweickhardt</title>
 <meta name="description" content="The personal website of Joey Schweickhardt from Stuttgart, Germany.">
@@ -36,8 +35,8 @@
     .marquee-track span{margin-right:1.2em;}
     @keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-100%);}}
     /* HEADER */
-    header{/* display:grid;grid-template-columns:repeat(5, 1fr);width:100%; *//* display:flex;justify-content:space-between;flex-wrap:wrap;column-gap:calc(2*var(--spacer)); */}
-    header h1,header span{white-space:nowrap;}
+    header{/* columns:180px;column-gap:var(--spacer); *//* display:grid;grid-template-columns:repeat(5, 1fr);width:100%; *//* display:flex;justify-content:space-between;flex-wrap:wrap;column-gap:calc(2*var(--spacer)); */}
+    header>*{white-space:nowrap;}
     /* VIDEO */
     .video{overflow:hidden;position:relative;width:880px;background:#000;max-width:100%;aspect-ratio:2.2/1;font-size:0;line-height:0;user-select:none;}
     .video img,.video video,.video .controls .progress{width:100%;}
@@ -68,7 +67,7 @@
     #mitgliedakbw{width:190px;max-width:100%;display:block;}
     /* FOOTER */
     footer{display:table;margin-left:auto;}
-    footer,footer a,footer a:hover{color:#666 !important;background:transparent;font-size:11px;line-height:1.3em;}
+    footer,footer a,footer a:hover{color:#666;/* background:transparent; */font-size:11px;line-height:1.3em;}
     /* SPECIAL */
     @keyframes blink-loading{0%{opacity:0;}50%{opacity:1;}}
     .loading{animation:.3s blink-loading steps(1) infinite;}
@@ -208,7 +207,6 @@
 
 
 
-<script src="scripts.js"></script>
 <script>
 // PRELOADER
 const preloader = document.querySelector('.marquee');
@@ -224,15 +222,6 @@ window.addEventListener('load', () => {
     preloader.style.width = '100%';
 });
 
-// LOADING
-const toggleLoading = (show) => {
-    document.querySelectorAll('.loading').forEach(el => {
-        if (show) el.classList.add('loading');
-        else el.classList.remove('loading');
-    });
-};
-window.addEventListener('load', () => {toggleLoading(false);});
-
 // MARQUEE
 const marquee = document.querySelector('.marquee');
 const track = marquee.querySelector('.marquee-track');
@@ -244,21 +233,14 @@ for (let i = 0; i < numClones; i++) {
     marquee.appendChild(clone);
 }
 
-// MOMENTUM SCROLL
-const lenis = new Lenis({
-    duration: .8,
-    easing: (t) => 1 - Math.pow(1 - t, 3),
-    syncTouch: false
-});
-function raf(time) {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
-}
-requestAnimationFrame(raf);
-window.addEventListener('load', () => {
-    setTimeout(() => lenis.resize(), 1000);
-    setTimeout(() => lenis.resize(), 3000);
-});
+// LOADING
+const toggleLoading = (show) => {
+    document.querySelectorAll('.loading').forEach(el => {
+        if (show) el.classList.add('loading');
+        else el.classList.remove('loading');
+    });
+};
+window.addEventListener('load', () => {toggleLoading(false);});
 
 // CURSOR
 if (window.matchMedia('(pointer: fine)').matches) {
