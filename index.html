@@ -43,7 +43,7 @@
     .video img,.video video,.video .controls .progress{width:100%;}
     .video img{transition:all .75s;}
     .video:hover img{transform:scale(1.05);}
-    .video:not(.playing)::after{color:#0f0;content:"►";font-size:2rem;line-height:1.3em;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);pointer-events:none;}
+    .video:not(.playing)::after{color:var(--text);text-shadow:0 0 40px var(--background);content:"►";font-size:2.5rem;line-height:1.3em;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);pointer-events:none;}
     .video video,.video .controls{display:none;}
     .video video{object-fit:cover;}
     .video .controls{position:absolute;bottom:0;left:0;right:0;}
@@ -52,7 +52,7 @@
     /* GALLERY */
     .gallery{columns:180px;column-gap:var(--spacer);color:#f00;}
     .gallery-item{break-inside:avoid;display:flex;flex-direction:column;gap:var(--spacer);margin-bottom:calc(3*var(--spacer));}
-    .gallery-item img{width:100%;height:auto;display:block;}
+    .gallery-item img{width:100%;height:auto;display:block;user-select:none;}
     /* GALLERY SWITCH */
     .gallery-switch{display:flex;align-items:center;justify-content:center;color:#f00;gap:1.1em;margin-bottom:2em;user-select:none;}
     .gallery-toggle{position:relative;width:33px;height:15px;cursor:pointer;}
@@ -131,7 +131,7 @@
         <img loading="lazy" src="img/181116.webp" alt="Leichtsinn, Collage">
     </div>
     <div class="gallery">
-        <!-- <img loading="lazy" src="img/260524.webp" alt="Critical Nass"> -->
+        <img loading="lazy" src="img/260524.webp" alt="Critical Nass">
         <img loading="lazy" src="img/260417.webp" alt="419 Helvetia Campus, Herzog & de Meuron">
         <img loading="lazy" src="img/260404.webp" alt="Stuttgart Main Station, Christoph Ingenhoven with Frei Otto">
         <img loading="lazy" src="img/251215.webp" alt="L’Arbre Blanc, Sou Fujimoto">
