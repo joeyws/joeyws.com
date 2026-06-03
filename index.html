@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <link rel="preload" href="font/SourceCodePro.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="font/FreeSerif.woff" as="font" type="font/woff2" crossorigin>
 <!-- <link rel="modulepreload" href="https://www.gstatic.com/firebasejs/10.14.0/firebase-app.js"> -->
 <title>Joey Schweickhardt</title>
 <meta name="description" content="The personal website of Joey Schweickhardt from Stuttgart, Germany.">
@@ -17,6 +18,7 @@
 <link rel="canonical" href="https://joeyws.com/">
 <style>
     @font-face{font-family:webfont;src:url("font/SourceCodePro.woff2");font-display:swap;}
+    @font-face{font-family:webfont2;src:url("font/FreeSerif.woff");font-display:swap;}
     :root{--background:#fff;--text:#111;--spacer:8px;}
     ::selection{background:var(--text);color:var(--background);}
     /* RESET */ *{text-decoration-thickness:.05em;text-decoration-skip-ink:none;font-kerning:normal;outline:none;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{box-sizing:content-box;border-radius:0;/* -webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-border-radius:0;-webkit-text-size-adjust:none;-webkit-appearance:none;font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased; */}
@@ -35,7 +37,7 @@
     .marquee-track span{margin-right:1.5em;}
     @keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-100%);}}
     /* HEADER */
-    header{font-size:24px;line-height:1.25em;font-family:"Times New Roman",serif;/* font-weight:bold;text-transform:uppercase; *//* transform:scaleY(.8); *//* columns:180px;column-gap:var(--spacer); *//* display:grid;grid-template-columns:repeat(5, 1fr);width:100%; *//* display:flex;justify-content:space-between;flex-wrap:wrap;column-gap:calc(2*var(--spacer)); */}
+    header{font-size:28px;line-height:1.25em;font-family:webfont2,"Times New Roman",serif;/* font-weight:bold;text-transform:uppercase; *//* transform:scaleY(.8); *//* columns:180px;column-gap:var(--spacer); *//* display:grid;grid-template-columns:repeat(5, 1fr);width:100%; *//* display:flex;justify-content:space-between;flex-wrap:wrap;column-gap:calc(2*var(--spacer)); */}
     header>*{white-space:nowrap;}
     /* VIDEO */
     .video{overflow:hidden;position:relative;width:880px;background:#000;max-width:100%;aspect-ratio:2.2/1;font-size:0;line-height:0;user-select:none;}
@@ -195,7 +197,8 @@
         <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="nofollow">GitHub</a> (hosting)<br>
         <a href="https://www.baden-wuerttemberg.datenschutz.de/" rel="nofollow">Supervisory authority</a>
     </p>
-    <p>&copy; 2026 Joey Schweickhardt</p>
+    <p>FreeSerif © GNU FreeFont Project (<a href="https://www.gnu.org/licenses/gpl-3.0.html" rel="nofollow">GNU GPL v3</a>)</p>
+    <!-- <p>&copy; 2026 Joey Schweickhardt</p> -->
 </footer>
 
 
