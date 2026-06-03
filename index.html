@@ -316,7 +316,7 @@ async function lastModified() {
         const formatted = date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
         const p = document.createElement('p');
         p.innerHTML = `Last modified ${formatted}.`;
-        footer.insertBefore(p, footer.lastElementChild);
+        footer.appendChild(p); // footer.insertBefore(p, footer.lastElementChild);
     } catch {}
 }
 lastModified();
