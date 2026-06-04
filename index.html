@@ -371,6 +371,7 @@ document.querySelectorAll('.gallery').forEach(gallery => {
     });
 });
 // switch
+document.body.style.overflowAnchor = 'none';
 let toggled = false;
 const galleries = document.querySelectorAll('.gallery');
 galleries.forEach((g, i) => { if (i > 0) g.style.display = 'none'; });
@@ -380,7 +381,6 @@ document.querySelector('.gallery-switch').addEventListener('click', function() {
     document.getElementById('works').style.display = toggled ? 'none' : '';
     document.getElementById('places').style.display = toggled ? '' : 'none';
     document.querySelector('.gallery-toggle-thumb').style.transform = toggled ? 'translateX(18px)' : '';
-    window.scrollTo({ top: scrollY, behavior: 'instant' });
 });
 
 // VIDEO
