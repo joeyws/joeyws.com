@@ -67,7 +67,7 @@
     a:hover svg.social *{fill:var(--text);}
     #mitgliedakbw{margin-top:3em;width:190px;max-width:100%;display:block;}
     /* FOOTER */
-    footer{display:table;margin-left:auto;}
+    footer{display:table;margin-left:auto;max-width:310px;}
     footer,footer a,footer a:hover{color:#666;/* background:transparent; */font-size:11px;line-height:1.3em;}
     /* SPECIAL */
     @keyframes blink-loading{0%{opacity:0;}50%{opacity:1;}}
@@ -191,10 +191,10 @@
     <h2>Privacy</h2>
     <p>
         No cookies. No analytics.<br>
-        Personal information may be processed by external providers:<br>
+        Personal information may be processed by external providers:
         <a href="https://open-meteo.com/en/terms" rel="nofollow">Open‑Meteo</a> (weather data),
         <!-- <a href="https://policies.google.com/privacy" rel="nofollow">Firebase</a> (online counter), -->
-        <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="nofollow">GitHub</a> (hosting)<br>
+        <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="nofollow">GitHub</a> (hosting).<br>
         <a href="https://www.baden-wuerttemberg.datenschutz.de/" rel="nofollow">Supervisory authority</a>
     </p>
     <p>FreeSerif © GNU FreeFont Project (<a href="https://www.gnu.org/licenses/gpl-3.0.html" rel="nofollow">GNU GPL v3</a>)</p>
@@ -433,7 +433,7 @@ document.querySelectorAll(".video").forEach(wrapper => {
     onDisconnect(userRef).remove();
     onValue(presenceRef, (snapshot) => {
         const count = snapshot.size ?? 0;
-        document.getElementById("counter").innerHTML = '<span style="color:#0f0">⬤</span> ' + count + ' online';
+        document.getElementById("counter").innerHTML = '<span style="color:#0f0">' + count + ' online</span>'; // • ⬤
     });
 </script> -->
 <script type="application/ld+json">
