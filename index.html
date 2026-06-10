@@ -225,10 +225,7 @@ const track = marquee.querySelector('.marquee-track');
 let trackWidth = track.offsetWidth;
 let marqueeWidth = marquee.offsetWidth;
 let numClones = Math.ceil(marqueeWidth / trackWidth);
-for (let i = 0; i < numClones; i++) {
-    const clone = track.cloneNode(true);
-    marquee.appendChild(clone);
-}
+for (let i = 0; i < numClones; i++) {const clone = track.cloneNode(true); marquee.appendChild(clone);}
 
 // LOADING
 const toggleLoading = (show) => {
@@ -269,14 +266,9 @@ if (window.matchMedia('(pointer: fine)').matches) {
 // TIME
 function getTime() {
     const now = new Date();
-    const timeString = now.toLocaleTimeString("de-DE", {
-        hour12: false,
-        timeZone: "Europe/Berlin"
-    });
+    const timeString = now.toLocaleTimeString("de-DE", {hour12: false, timeZone: "Europe/Berlin"});
     const timeEl = document.getElementById("time");
-    if (timeEl) {
-        timeEl.textContent = timeString;
-    }
+    if (timeEl) {timeEl.textContent = timeString;}
 }
 getTime();
 setInterval(getTime, 1000);
@@ -328,14 +320,8 @@ var mail = 'h'+'i'+ String.fromCharCode(64) +'j'+'o'+'e'+'y'+'w'+'s'+'.'+'c'+'o'
 var phone = '+'+'4'+'9'+'1'+'5'+'7'+'7'+'8'+'8'+'5'+'0'+'5'+'0'+'2';
 document.querySelectorAll(".address1").forEach(el => el.textContent = address1);
 document.querySelectorAll(".address2").forEach(el => el.textContent = address2);
-document.querySelectorAll(".email").forEach(el => {
-    el.textContent = mail;
-    el.setAttribute("href", `mailto:Joey%20Schweickhardt%20<${mail}>`);
-});
-document.querySelectorAll(".phone").forEach(el => {
-    el.textContent = phone;
-    el.setAttribute("href", `tel:${phone}`);
-});
+document.querySelectorAll(".email").forEach(el => {el.textContent = mail; el.setAttribute("href", `mailto:Joey%20Schweickhardt%20<${mail}>`);});
+document.querySelectorAll(".phone").forEach(el => {el.textContent = phone; el.setAttribute("href", `tel:${phone}`);});
 document.querySelectorAll(".whatsapp").forEach(el => {el.setAttribute("href", `h`+`t`+`t`+`p`+`s`+`:`+`/`+`/`+`w`+`a`+`.`+`m`+`e`+`/${phone}`);});
 
 // COPY EMAIL
