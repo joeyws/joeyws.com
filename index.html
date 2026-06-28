@@ -187,7 +187,7 @@
         &nbsp;&nbsp;&mdash; Architektengesetz Baden-Württemberg (ArchG BW)<br>
         &nbsp;&nbsp;&mdash; Berufsordnung der Architektenkammer Baden-Württemberg
     </p> -->
-    <h3>Privacy</h3>
+    <h2>Privacy</h2>
     <p>
         No cookies. No analytics.<br>
         Personal data may be processed by external providers, such as
@@ -293,6 +293,7 @@ const getWeather = async () => {
     } catch (err) {}
 };
 getWeather();
+setInterval(getTime, 1800000);
 
 // LAST MODIFIED
 async function lastModified() {
@@ -436,15 +437,18 @@ requestAnimationFrame(onRaf); */
 <script type="application/ld+json">
 {
     "@context":         "https://schema.org",
-    "@type":            "Person",
+    "@type":            ["Person", "LocalBusiness"],
     "name":             "Joey Schweickhardt",
     "alternateName":    "Joey William Schweickhardt",
     "url":              "https://joeyws.com/",
     "image":            "https://joeyws.com/img/joey.jpg",
-    "jobTitle":         "Architekt im Praktikum",
+    "jobTitle":         ["Architekturfotograf", "Architectural Photographer"],
+    "knowsAbout":       ["Architekturfotografie", "Architectural Photography"],
+    "description":      "Architekturfotograf aus Stuttgart – fotografische Dokumentation von Architektur, Bauten und Städten.",
+    "areaServed":       [{"@type":"City", "name":"Stuttgart"}, {"@type":"Country", "name":"Germany"}, {"@type":"Place", "name":"Worldwide"}],
     "worksFor":         {"@type":"Organization", "name":"SCHMELZLE+PARTNER mbB Architekten BDA"},
     "hasCredential":    {"@type":"EducationalOccupationalCredential", "credentialCategory":"Master of Science", "educationalLevel":"Postgraduate", "recognizedBy":{"@type":"CollegeOrUniversity", "name":"Universität Stuttgart"}},
-    "memberOf":         "Architektenkammer Baden-Württemberg",
+    "memberOf":         {"@type":"Organization", "name":"Architektenkammer Baden-Württemberg"},
     "address":          {"@type":"PostalAddress", "addressLocality":"Stuttgart", "addressCountry":"DE"},
     "alumniOf": [       {"@type":"CollegeOrUniversity", "name":"Universität Stuttgart", "url":"https://www.uni-stuttgart.de/"},
                         {"@type":"CollegeOrUniversity", "name":"Politecnico di Milano", "url":"https://www.polimi.it/"}
@@ -461,7 +465,15 @@ requestAnimationFrame(onRaf); */
                         {"@type":"Article", "name":"Institute for Computational Design and Construction, Universität Stuttgart", "url":"https://www.linkedin.com/posts/icdstuttgart_icd-icdca-intcdc-activity-7417885069765197824-3gIg/"},
                         {"@type":"Article", "name":"Institute for Computational Design and Construction, Universität Stuttgart", "url":"https://www.instagram.com/p/DTiEwS0DMX-/"},
                         {"@type":"Article", "name":"SCHMELZLE+PARTNER mbB Architekten BDA", "url":"https://www.schmelzle.de/team"}
-    ]
+    ],
+    "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Architekturfotografie",
+        "itemListElement": [
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Architekturfotografie", "description": "Fotografische Dokumentation von Architekturprojekten"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Architectural Photography", "description": "Photographic documentation of architectural projects"}}
+        ]
+    }
 }
 </script>
 </body>
