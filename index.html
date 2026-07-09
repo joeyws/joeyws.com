@@ -32,7 +32,7 @@
     a{color:#00f;text-decoration:underline;white-space:nowrap;}
     a:hover,a.hover{color:var(--background) !important;background:var(--text);text-decoration:none;}
     /* MARQUEE */
-    .marquee{background:#fdf;/* border-radius:5px;background:#ddd;padding:.4em 1.1em; */margin-bottom:var(--spacer);transition:.2s width ease-out;box-sizing:border-box;width:1px;overflow:hidden;white-space:nowrap;display:block;user-select:none;/* mask-mode:alpha;mask-image:linear-gradient(to right, transparent, #000 20%, #000 calc(100% - 20%), transparent); */}
+    .marquee{/* border-radius:5px;background:#ddd;padding:.4em 1.1em; */margin-bottom:var(--spacer);transition:.2s width ease-out;box-sizing:border-box;width:1px;overflow:hidden;white-space:nowrap;display:block;user-select:none;/* mask-mode:alpha;mask-image:linear-gradient(to right, transparent, #000 20%, #000 calc(100% - 20%), transparent); */}
     .marquee-track{display:inline-flex;white-space:nowrap;will-change:transform;animation:marquee 60s linear infinite;}
     .marquee-track span{margin-right:1.5em;}
     @keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-100%);}}
@@ -52,7 +52,7 @@
     .video .progress-filled{width:0%;height:100%;background:#0f0;}
     /* GALLERY SWITCH */
     .gallery-switch{display:inline-flex;align-items:center;justify-content:center;gap:.8em;margin-bottom:1.4em;user-select:none;}
-    .gallery-toggle{position:relative;background:#e4e4e4;padding:3px;border-radius:100vmax;width:1.5em;height:.5em;cursor:pointer;}
+    .gallery-toggle{position:relative;background:#e8e8e8;padding:3px;border-radius:100vmax;width:1.5em;height:.5em;cursor:pointer;}
     .gallery-toggle-thumb{background:var(--text);top:3px;left:3px;transition:transform .1s;width:.5em;height:.5em;border-radius:100vmax;position:absolute;}
     /* GALLERY */
     .gallery{columns:180px;column-gap:var(--spacer);}
