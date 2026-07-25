@@ -32,7 +32,7 @@
     a{color:#00f;text-decoration:underline;white-space:nowrap;}
     a:hover,a.hover{color:var(--background) !important;background:var(--text);text-decoration:none;}
     /* MARQUEE */
-    .marquee{/* border-radius:5px;background:#ddd;padding:.4em 1.1em; */margin-bottom:var(--spacer);transition:.2s width ease-out;box-sizing:border-box;width:1px;overflow:hidden;white-space:nowrap;display:block;user-select:none;/* mask-mode:alpha;mask-image:linear-gradient(to right, transparent, #000 20%, #000 calc(100% - 20%), transparent); */}
+    .marquee{background:#ff8;/* border-radius:5px;background:#ddd;padding:.4em 1.1em; */margin-bottom:var(--spacer);transition:.2s width ease-out;box-sizing:border-box;width:1px;overflow:hidden;white-space:nowrap;display:block;user-select:none;/* mask-mode:alpha;mask-image:linear-gradient(to right, transparent, #000 20%, #000 calc(100% - 20%), transparent); */}
     .marquee-track{display:inline-flex;white-space:nowrap;will-change:transform;animation:marquee 60s linear infinite;}
     .marquee-track span{margin-right:1.5em;}
     @keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-100%);}}
@@ -62,7 +62,7 @@
     /* SVG */
     svg *{fill:var(--text);}
     svg.social{height:13px;vertical-align:-12%;}
-    svg.social *{fill:var(--text);}
+    svg.social *{fill:#00f;}
     a:has(> svg.social),a:has(> svg.social):hover{background:transparent;backdrop-filter:none;}
     /* a:hover svg.social *{fill:var(--text);} */
     #mitgliedakbw{margin-top:3em;width:190px;max-width:100%;display:block;}
