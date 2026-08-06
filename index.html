@@ -28,7 +28,7 @@
     h2+*,h3+*,p+h2,p+h3,p,.gallery-img{margin-top:var(--spacer);}
     hr+*,img+p,p:first-child,.content *:first-child{margin-top:0;}
     table{width:100%;}tr{border-top:1px solid var(--text);}td{vertical-align:top;}td:nth-child(1){width:8em;padding-right:var(--spacer);}td:nth-child(2){width:auto;}
-    hr{margin:4rem 0;}
+    hr{margin:2rem 0;/* border-top:1px dotted #999; */}
     a{color:#00f;text-decoration:underline;white-space:nowrap;}
     a:hover{background:#f0f;color:var(--text) !important;text-decoration:none;}
     /* MARQUEE */
@@ -37,7 +37,7 @@
     .marquee-track span{margin-right:1.5em;}
     @keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-100%);}}
     /* HEADER */
-    header,.gallery-switch{font-size:24px;line-height:1.25em;/* font-family:webfont2,"Times New Roman",serif; *//* display:flex;justify-content:space-between;flex-wrap:wrap;column-gap:calc(2*var(--spacer)); */}
+    header,.gallery-switch{font-size:24px;line-height:1.25em;/* font-family:webfont2,"Times New Roman",serif; */display:flex;justify-content:space-between;flex-wrap:wrap;column-gap:calc(2*var(--spacer));}
     header>*{white-space:nowrap;}
     /* VIDEO */
     .video{overflow:hidden;position:relative;width:880px;background:#000;max-width:100%;aspect-ratio:2.2/1;font-size:0;line-height:0;user-select:none;}
@@ -65,7 +65,7 @@
     svg.social *{fill:#00f;}
     a:has(> svg.social),a:has(> svg.social):hover{background:transparent;backdrop-filter:none;}
     /* a:hover svg.social *{fill:var(--text);} */
-    #mitgliedakbw{margin-top:3em;width:190px;max-width:100%;display:block;}
+    #mitgliedakbw{margin-top:2.6em;width:190px;max-width:100%;display:block;}
     /* FOOTER */
     footer{/* display:table;margin-left:auto;*/max-width:400px;}
     footer,footer a,footer a:hover{color:#666;font-size:11px;line-height:1.3em;}
@@ -83,7 +83,7 @@
 <div class="marquee"><div class="marquee-track"><span lang="zh-Hant">歡迎</span><span lang="es">Bienvenidos</span><span lang="en">Welcome</span><span lang="hi">स्वागत है</span><span lang="ar">اهلا وسهلا</span><span lang="bn">স্বাগত</span><span lang="pt">Bem-vindo</span><span lang="ru">Добро пожаловать</span><span lang="ur">خوش آمدید</span><span lang="ja">ようこそ</span><span lang="id">Selamat datang</span><span lang="de">Willkommen</span><span lang="tr">Hoş geldiniz</span><span lang="ta">வரவேற்பு</span><span lang="fr">Bienvenue</span><span lang="ko">어서 오십시오</span><span lang="vi">Chào mừng</span><span lang="jv">Sugeng Rawuh</span><span lang="sw">Karibu</span><span lang="sa">Svāgatam</span><span lang="it">Benvenuti</span><span lang="pa">ਸਵਾਗਤ ਹੈ</span></div></div>
 <header>
     <h1 class="loading">Joey Schweickhardt</h1>
-    <span id="city">Stuttgart</span><br>
+    <span><span id="city">Stuttgart</span></span><!-- <br> -->
     <span id="time"></span><!-- <br>
     <span id="counter"></span> -->
 </header>
@@ -181,13 +181,13 @@
     <!-- <h2>Legal Notice</h2>
     <h3>Professional Title</h3>
     <p>
-        <i>Junior Architect</i>, awarded in Germany (Reg. No. 171294)<br>
-        Chamber of Architects Baden-Württemberg<br>
+        <i>Architect</i>, awarded in Germany (Reg. No. 171294)<br>
+        Member Chamber of Architects Baden-Württemberg<br>
         Applicable regulations:<br>
         &nbsp;&nbsp;&mdash; Architektengesetz Baden-Württemberg (ArchG BW)<br>
         &nbsp;&nbsp;&mdash; Berufsordnung der Architektenkammer Baden-Württemberg
-    </p> -->
-    <h2>Privacy</h2>
+    </p>
+    <h2>Privacy</h2> -->
     <p>
         No cookies. No analytics.<br>
         Personal data may be processed by external providers, such as
