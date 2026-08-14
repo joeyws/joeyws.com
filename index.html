@@ -271,7 +271,7 @@ function getTime() {
     const month = now.toLocaleDateString("en-GB", {month: "long", timeZone: "Europe/Berlin"});
     const timeString = now.toLocaleTimeString("de-DE", {hour12: false, timeZone: "Europe/Berlin"});
     const timeEl = document.getElementById("time");
-    if (timeEl) {timeEl.textContent = `${weekday}, ${day} ${month}, ${timeString}`;}
+    if (timeEl) {timeEl.textContent = `${weekday}, ${timeString}`;} // ${day} ${month}
 }
 getTime();
 setInterval(getTime, 1000);
