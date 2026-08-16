@@ -5,6 +5,7 @@
 <link rel="preload" href="font/SourceCodePro.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="dns-prefetch" href="https://api.open-meteo.com">
 <link rel="dns-prefetch" href="https://api.github.com">
+<!-- <link rel="modulepreload" href="https://www.gstatic.com/firebasejs/10.14.0/firebase-app.js"> -->
 <title>Joey Schweickhardt</title>
 <meta name="description" content="The personal website of Joey Schweickhardt from Stuttgart, Germany.">
 <meta name="robots" content="index,nofollow,notranslate,noimageindex">
@@ -202,6 +203,7 @@
 
 
 
+<!-- <script src="scripts.js"></script> -->
 <script>
 // PRELOADER
 const preloader = document.querySelector('.marquee');
@@ -414,7 +416,32 @@ document.querySelectorAll(".video").forEach(wrapper => {
     });
 
 });
+
+// MOMENTUM SCROLL
+/* const lenis = new Lenis({
+    lerp: 0.1,
+    smoothWheel: true,
+    smoothTouch: false,
+}); 
+function onRaf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(onRaf);
+}
+requestAnimationFrame(onRaf); */
 </script>
+<!-- <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-app.js";
+    import { getDatabase, ref, push, onDisconnect, onValue } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-database.js";
+    const app = initializeApp({apiKey: "AIzaSyChW4NhononANxG4v9wJmsu3-PmbGPObMM", databaseURL: "https://joeyws-com-default-rtdb.europe-west1.firebasedatabase.app"});
+    const db = getDatabase(app);
+    const presenceRef = ref(db, "online_users");
+    const userRef = push(presenceRef, true);
+    onDisconnect(userRef).remove();
+    onValue(presenceRef, (snapshot) => {
+        const count = snapshot.size ?? 0;
+        document.getElementById("counter").innerHTML = '<span style="color:#0f0">' + count + ' online</span>'; // • ⬤
+    });
+</script> -->
 <script type="application/ld+json">
 {
     "@context":         "https://schema.org",
