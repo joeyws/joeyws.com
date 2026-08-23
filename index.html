@@ -18,18 +18,18 @@
 <link rel="canonical" href="https://joeyws.com/">
 <style>
     @font-face{font-family:webfont;src:url("font/SourceCodePro.woff2");font-display:swap;}
-    :root{--background:#000;--text:#999;--spacer:8px;}
+    :root{--background:#000;--text:#bbb;--spacer:8px;}
     ::selection{background:var(--text);color:var(--background);}
     /* RESET */ *{text-decoration-thickness:.05em;text-decoration-skip-ink:none;font-kerning:normal;outline:none;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{box-sizing:content-box;border-radius:0;/* -webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-border-radius:0;-webkit-text-size-adjust:none;-webkit-appearance:none;font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased; */}
 	html{font-size:13px;}
-    body{padding:var(--spacer);overflow-y:scroll;color:var(--text);background:var(--background)/*  url(https://media1.tenor.com/m/_Fq-4uhhK8wAAAAC/christmas-space-rollercoaster.gif) center center no-repeat fixed;background-size:cover */;font:normal normal 1rem/1.3em webfont,monospace;}
+    body{padding:var(--spacer);overflow-y:scroll;color:var(--text);background:var(--background) url() center center no-repeat fixed;background-size:cover;font:normal normal 1rem/1.3em webfont,monospace;}
     i{font-style:italic;}
     h2+*,h3+*,p+h2,p+h3,p,.gallery-img{margin-top:var(--spacer);}
     hr+*,img+p,p:first-child,.content *:first-child{margin-top:0;}
     table{width:100%;}tr{border-top:1px solid var(--text);}td{vertical-align:top;}td:nth-child(1){width:8em;padding-right:var(--spacer);}td:nth-child(2){width:auto;}
     hr{margin:2.2rem 0;}
     a{/* color:#00f; */transition:.12s all;box-shadow:inset 0 -.06em var(--text);text-decoration:none;white-space:nowrap;}
-    a:hover{box-shadow:inset 0 -1.3em #00f;/* color:var(--background); */text-decoration:none;}
+    a:hover{box-shadow:inset 0 -1.3em var(--text);color:var(--background);text-decoration:none;}
     /* MARQUEE */
     .marquee{margin-bottom:var(--spacer);transition:.2s width ease-out;box-sizing:border-box;width:1px;overflow:hidden;white-space:nowrap;display:block;user-select:none;/* mask-mode:alpha;mask-image:linear-gradient(to right, transparent, #000 20%, #000 calc(100% - 20%), transparent); */}
     .marquee-track{display:inline-flex;white-space:nowrap;will-change:transform;animation:marquee 60s linear infinite;}
@@ -52,7 +52,7 @@
     /* GALLERY NAV */
     .gallery-nav{display:flex;align-items:flex-start;justify-content:center;gap:var(--spacer);margin-bottom:calc(3*var(--spacer));user-select:none;}
     .gallery-nav a,.gallery-nav a:hover{padding:.25em .8em;background:#444;box-shadow:none !important;transition:.2s all;font-size:24px;line-height:1em;border-radius:100vmax;/* background:#222; */color:var(--background);text-decoration:none;}
-    .gallery-nav a.open{background:var(--text);color:var(--background);padding:.25em 1em;}
+    .gallery-nav a.open{background:var(--text);color:var(--background);padding:.25em 1.2em;}
     /* GALLERY */
     .gallery{display:none;columns:180px;column-gap:var(--spacer);}
     .gallery.open{display:block;}
@@ -368,7 +368,7 @@ function showGallery(id) {
             item.style.animation = 'none';
             item.offsetHeight;
             item.style.animation = '';
-            item.style.animationDelay = `${i * 0.04}s`;
+            item.style.animationDelay = `${i * 0.02}s`;
         });
     }
 }
