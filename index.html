@@ -39,10 +39,9 @@
     header,.gallery-switch{font-size:24px;line-height:1.25em;display:flex;justify-content:space-between;flex-wrap:wrap;column-gap:calc(2*var(--spacer));}
     header>*{white-space:nowrap;}
     /* PAGES */
-    nav{display:flex;align-items:flex-start;justify-content:center;gap:var(--spacer);margin-bottom:calc(3*var(--spacer));user-select:none;}
-    nav a,nav a:hover{padding:.15em .7em;filter:none !important;background:var(--text);opacity:.6;box-shadow:none !important;transition:.15s all;font-size:24px;line-height:1em;border-radius:100vmax;/* background:#222; */color:var(--background);text-decoration:none;}
-    nav a:hover{opacity:.7;}
-    nav a.open{padding:.15em 1.4em;opacity:1;}
+    nav a,nav a:hover{/* filter:none !important; */text-decoration:none;/* opacity:.6;transition:.15s all; */}
+    nav a:hover{}
+    nav a.open{/* padding:.15em 1.4em; */filter:none !important;text-decoration:underline;}
     .page{display:none;}
     .page.open{display:block;}
     /* VIDEO */
@@ -84,13 +83,13 @@
 <div class="marquee"><div class="marquee-track"><span lang="zh-Hant">歡迎</span><span lang="es">Bienvenidos</span><span lang="en">Welcome</span><span lang="hi">स्वागत है</span><span lang="ar">اهلا وسهلا</span><span lang="bn">স্বাগত</span><span lang="pt">Bem-vindo</span><span lang="ru">Добро пожаловать</span><span lang="ur">خوش آمدید</span><span lang="ja">ようこそ</span><span lang="id">Selamat datang</span><span lang="de">Willkommen</span><span lang="tr">Hoş geldiniz</span><span lang="ta">வரவேற்பு</span><span lang="fr">Bienvenue</span><span lang="ko">어서 오십시오</span><span lang="vi">Chào mừng</span><span lang="jv">Sugeng Rawuh</span><span lang="sw">Karibu</span><span lang="sa">Svāgatam</span><span lang="it">Benvenuti</span><span lang="pa">ਸਵਾਗਤ ਹੈ</span></div></div>
 <header>
     <h1 class="loading">Joey Schweickhardt</h1>
-    <span><span id="city">Stuttgart</span></span>
-    <span id="time"></span>
     <nav>
-        <a href="/works">Works</a>
-        <a href="/places">Places</a>
+        <a href="/works">Works</a>,
+        <a href="/places">Places</a>,
         <a href="/contact">Contact</a>
     </nav>
+    <span><span id="city">Stuttgart</span></span>
+    <span id="time"></span>
 </header>
 <hr>
 <main>
