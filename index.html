@@ -29,7 +29,7 @@
     table{width:100%;}tr{border-top:1px solid var(--text);}td{vertical-align:top;}td:nth-child(1){width:8em;padding-right:var(--spacer);}td:nth-child(2){width:auto;}
     hr{margin:2.8rem 0;}
     a{/* color:#0f0; */text-underline-offset:.2em;text-decoration:underline;white-space:nowrap;}
-    a:hover{text-decoration:none;filter:blur(4px);}
+    a:hover{text-decoration:none;filter:blur(3px);}
     /* MARQUEE */
     .marquee{margin-bottom:var(--spacer);transition:.2s width ease-out;box-sizing:border-box;width:1px;overflow:hidden;white-space:nowrap;display:block;user-select:none;mask-mode:alpha;mask-image:linear-gradient(to right, transparent, #000 20%, #000 calc(100% - 20%), transparent);}
     .marquee-track{display:inline-flex;white-space:nowrap;will-change:transform;animation:marquee 60s linear infinite;}
@@ -375,7 +375,7 @@ galleryLinks.forEach(a => {
         const id = a.getAttribute('href').replace('#/', '');
         if (a.classList.contains('open')) return;
         showGallery(id);
-        history.replaceState(null, '', '#/' + id);
+        history.pushState(null, '', '#/' + id);
     });
 });
 window.addEventListener('hashchange', () => {
