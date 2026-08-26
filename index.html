@@ -28,7 +28,7 @@
     hr+*,img+p,p:first-child,.content *:first-child{margin-top:0;}
     table{width:100%;}tr{border-top:1px solid var(--text);}td{vertical-align:top;}td:nth-child(1){width:8em;padding-right:var(--spacer);}td:nth-child(2){width:auto;}
     hr{margin:2.8rem 0;}
-    a{/* color:#0f0; */text-underline-offset:.2em;text-decoration:underline;white-space:nowrap;}
+    a{text-underline-offset:.2em;text-decoration:underline;white-space:nowrap;}
     a:hover{text-decoration:none;filter:blur(3px);/* background:#f0f; */}
     /* MARQUEE */
     .marquee{margin-bottom:var(--spacer);transition:.2s width ease-out;box-sizing:border-box;width:1px;overflow:hidden;white-space:nowrap;display:block;user-select:none;mask-mode:alpha;mask-image:linear-gradient(to right, transparent, #000 20%, #000 calc(100% - 20%), transparent);}
@@ -219,6 +219,7 @@ if (redirectPath) {
     history.replaceState(null, '', redirectPath);
 }
 
+
 // PRELOADER
 const preloader = document.querySelector('.marquee');
 let width = 1;
@@ -233,6 +234,7 @@ window.addEventListener('load', () => {
     preloader.style.width = '100%';
 });
 
+
 // MARQUEE
 const marquee = document.querySelector('.marquee');
 const track = marquee.querySelector('.marquee-track');
@@ -240,6 +242,7 @@ let trackWidth = track.offsetWidth;
 let marqueeWidth = marquee.offsetWidth;
 let numClones = Math.ceil(marqueeWidth / trackWidth);
 for (let i = 0; i < numClones; i++) {const clone = track.cloneNode(true); marquee.appendChild(clone);}
+
 
 // LOADING
 const toggleLoading = (show) => {
@@ -249,6 +252,33 @@ const toggleLoading = (show) => {
     });
 };
 window.addEventListener('load', () => {toggleLoading(false);});
+
+
+// NAV
+const navLinks = document.querySelectorAll('nav a');
+const pages = document.querySelectorAll('.page');
+function showPage(id) {
+    pages.forEach(p => p.classList.toggle('open', p.id === id));
+    navLinks.forEach(a => a.classList.toggle('open', a.getAttribute('href') === '/' + id));
+}
+navLinks.forEach(a => {
+    a.addEventListener('click', e => {
+        e.preventDefault();
+        const id = a.getAttribute('href').replace('/', '');
+        if (a.classList.contains('open')) return;
+        showPage(id);
+        history.pushState(null, '', '/' + id);
+    });
+});
+window.addEventListener('popstate', () => {
+    const id = location.pathname.replace('/', '') || pages[0]?.id;
+    if (id && document.getElementById(id) && !document.getElementById(id).classList.contains('open')) {
+        showPage(id);
+    }
+});
+const initialId = location.pathname.replace('/', '') || pages[0]?.id;
+if (initialId) showPage(initialId);
+
 
 // CURSOR
 if (window.matchMedia('(pointer: fine)').matches) {
@@ -277,6 +307,21 @@ if (window.matchMedia('(pointer: fine)').matches) {
     document.addEventListener('mouseover', e => { if (!e.relatedTarget) {cursor.style.opacity = '1';} });
 }
 
+
+// GALLERY
+document.querySelectorAll('.gallery').forEach(gallery => {
+    [...gallery.querySelectorAll('img')].forEach(img => {
+        const figure = document.createElement('figure');
+        figure.className = 'gallery-item';
+        const caption = document.createElement('figcaption');
+        caption.textContent = img.alt;
+        img.parentNode.insertBefore(figure, img);
+        figure.appendChild(img);
+        figure.appendChild(caption);
+    });
+});
+
+
 // TIME
 function getTime() {
     const now = new Date();
@@ -285,10 +330,11 @@ function getTime() {
     const month = now.toLocaleDateString("en-GB", {month: "long", timeZone: "Europe/Berlin"});
     const timeString = now.toLocaleTimeString("de-DE", {hour12: false, timeZone: "Europe/Berlin"});
     const timeEl = document.getElementById("time");
-    if (timeEl) {timeEl.textContent = `${weekday}, ${timeString}`;} // ${day} ${month}
+    if (timeEl) {timeEl.textContent = `${timeString}`;} // ${day} ${month}
 }
 getTime();
 setInterval(getTime, 1000);
+
 
 // WEATHER
 const weatherCodes = {
@@ -317,6 +363,7 @@ const getWeather = async () => {
 getWeather();
 setInterval(getWeather, 1800000);
 
+
 // LAST MODIFIED
 async function lastModified() {
     try {
@@ -334,7 +381,8 @@ async function lastModified() {
     } catch {}
 }
 lastModified();
-    
+
+
 // CONTACT
 var address1 = 'K'+'o'+'l'+'p'+'i'+'n'+'g'+'s'+'t'+'r'+'a'+'ß'+'e'+' '+'5'+'6';
 var address2 = '7'+'0'+'3'+'7'+'8'+' '+'S'+'t'+'u'+'t'+'t'+'g'+'a'+'r'+'t';
@@ -345,6 +393,7 @@ document.querySelectorAll(".address2").forEach(el => el.textContent = address2);
 document.querySelectorAll(".email").forEach(el => {el.textContent = mail; el.setAttribute("href", `mailto:Joey%20Schweickhardt%20<${mail}>`);});
 document.querySelectorAll(".phone").forEach(el => {el.textContent = phone; el.setAttribute("href", `tel:${phone}`);});
 document.querySelectorAll(".whatsapp").forEach(el => {el.setAttribute("href", `h`+`t`+`t`+`p`+`s`+`:`+`/`+`/`+`w`+`a`+`.`+`m`+`e`+`/${phone}`);});
+
 
 // COPY EMAIL
 document.querySelectorAll(".email").forEach(emailEl => {
@@ -366,43 +415,6 @@ document.querySelectorAll(".email").forEach(emailEl => {
     });
 });
 
-// NAV
-const navLinks = document.querySelectorAll('nav a');
-const pages = document.querySelectorAll('.page');
-function showPage(id) {
-    pages.forEach(p => p.classList.toggle('open', p.id === id));
-    navLinks.forEach(a => a.classList.toggle('open', a.getAttribute('href') === '/' + id));
-}
-navLinks.forEach(a => {
-    a.addEventListener('click', e => {
-        e.preventDefault();
-        const id = a.getAttribute('href').replace('/', '');
-        if (a.classList.contains('open')) return;
-        showPage(id);
-        history.pushState(null, '', '/' + id);
-    });
-});
-window.addEventListener('popstate', () => {
-    const id = location.pathname.replace('/', '');
-    if (id && document.getElementById(id) && !document.getElementById(id).classList.contains('open')) {
-        showPage(id);
-    }
-});
-const initialId = location.pathname.replace('/', '') || pages[0]?.id;
-if (initialId) showPage(initialId);
-
-// GALLERY
-document.querySelectorAll('.gallery').forEach(gallery => {
-    [...gallery.querySelectorAll('img')].forEach(img => {
-        const figure = document.createElement('figure');
-        figure.className = 'gallery-item';
-        const caption = document.createElement('figcaption');
-        caption.textContent = img.alt;
-        img.parentNode.insertBefore(figure, img);
-        figure.appendChild(img);
-        figure.appendChild(caption);
-    });
-});
 
 // VIDEO
 document.querySelectorAll(".video").forEach(wrapper => {
