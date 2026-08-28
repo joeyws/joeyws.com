@@ -36,13 +36,13 @@
     .marquee-track span{margin-right:1.5em;}
     @keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-100%);}}
     /* HEADER */
-    header{font-size:24px;line-height:1.25em;display:flex;justify-content:space-between;flex-wrap:wrap;column-gap:calc(2*var(--spacer));}
+    header{font-size:24px;line-height:1.25em;display:flex;justify-content:space-between;flex-wrap:wrap;column-gap:calc(2*var(--spacer));user-select:none;}
     header>*{white-space:nowrap;}
     /* PAGES */
     nav{display:flex;gap:2px;}
     nav a,nav a:hover{/* opacity:.6; *//* color:var(--background); */background:#fff2;transition:all .15s;padding:0 .5em;border-radius:5px;text-decoration:none !important;filter:none !important;}
-    nav a:hover{/* opacity:.7; */background:#fff3;}
-    nav a.open{/* opacity:1; */background:#fff4;padding:0 1em;}
+    nav a:hover{background:#fff3;}
+    nav a.open{background:var(--text);color:var(--background);padding:0 1em;}
     .page{display:none;}
     .page.open{display:block;}
     /* VIDEO */
@@ -87,6 +87,7 @@
     <nav>
         <a href="/works">Works</a>
         <a href="/places">Places</a>
+        <!-- <a href="/about">About</a> -->
         <a href="/contact">Contact</a>
     </nav>
     <span><span id="city">Stuttgart</span></span>
@@ -166,6 +167,9 @@
             <img loading="lazy" src="img/160808.webp" alt="Nýidalur">
         </div>
     </div>
+    <div class="page" id="about">
+        Coming soon
+    </div>
     <div class="page" id="contact">
         <p>
             Joey Schweickhardt<br>
@@ -201,12 +205,10 @@
             <!-- <h2>Privacy</h2> -->
             <p>
                 No cookies. No analytics.<br>
-                Personal data may be processed by external providers, such as<br>
-                &mdash; <a href="https://open-meteo.com/en/terms" rel="nofollow">Open‑Meteo</a> for weather data<br>
-                &mdash; <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="nofollow">GitHub</a> for hosting<br>
-                <a href="https://www.baden-wuerttemberg.datenschutz.de/" rel="nofollow"> Competent supervisory authority</a>.
+                Personal data may be processed by external providers, such as <a href="https://open-meteo.com/en/terms" rel="nofollow">Open‑Meteo</a> for weather data and <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="nofollow">GitHub</a> for hosting.<br>
+                <a href="https://www.baden-wuerttemberg.datenschutz.de/" rel="nofollow">Competent supervisory authority</a>.
             </p>
-            <!-- <p>&copy; 2026 Joey Schweickhardt</p> -->
+            <p>&copy; 2026 Joey Schweickhardt</p>
         </footer>
     </div>
 </main>
