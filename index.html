@@ -363,7 +363,7 @@ const getWeather = async () => {
             weatherEl.id = "weather";
             cityElement.insertAdjacentElement("afterend", weatherEl);
         }
-        weatherEl.innerHTML = ` ${temperature}°C ${condition}`;
+        weatherEl.innerHTML = ` ${temperature}°C`; //  ${condition}
     } catch (err) {}
 };
 getWeather();
