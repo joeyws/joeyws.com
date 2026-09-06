@@ -29,20 +29,21 @@
     table{width:100%;}tr{border-top:1px solid var(--text);}td{vertical-align:top;}td:nth-child(1){width:8em;padding-right:var(--spacer);}td:nth-child(2){width:auto;}
     hr{margin:2.8rem 0;}
     a{text-underline-offset:.2em;/* color:#00f; */text-decoration:underline;white-space:nowrap;}
-    a:hover{background:var(--text);color:var(--background);text-decoration:none;/* border-radius:5px; *//* filter:blur(2px); */}
+    a:hover{background:#f0f;/* color:var(--background); */text-decoration:none;/* border-radius:5px; *//* filter:blur(2px); */}
     /* MARQUEE */
-    .marquee{padding:.2em 0;background:var(--text);color:var(--background);transition:.2s width ease-out;box-sizing:border-box;width:1px;overflow:hidden;white-space:nowrap;display:block;user-select:none;/* mask-mode:alpha;mask-image:linear-gradient(to right, transparent, #000 20%, #000 calc(100% - 20%), transparent); */}
+    .marquee{padding:.15em 0;background:var(--text);color:var(--background);transition:.2s width ease-out;box-sizing:border-box;width:1px;overflow:hidden;white-space:nowrap;display:block;user-select:none;/* mask-mode:alpha;mask-image:linear-gradient(to right, transparent, #000 20%, #000 calc(100% - 20%), transparent); */}
     .marquee-track{display:inline-flex;white-space:nowrap;will-change:transform;animation:marquee 60s linear infinite;}
     .marquee-track span{margin-right:1.5em;}
     @keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-100%);}}
     /* HEADER */
-    header{font-size:24px;line-height:1.25em;display:flex;justify-content:flex-start;flex-wrap:wrap;user-select:none;}
-    header>*{white-space:nowrap;background:#ccc;padding:0 .5em;}
+    header{/* font-size:24px;line-height:1.25em; */display:flex;justify-content:flex-start;flex-wrap:wrap;user-select:none;}
+    header>*{white-space:nowrap;background:#ccc;padding:.5em .8em;}
+    h1{background:#0f0;}
     /* PAGES */
     nav{display:flex;background:transparent;padding:0;}
-    nav a,nav a:hover{background:#ccc;color:var(--text);padding:0 .5em;/* color:var(--background); */transition:padding .15s;/* padding:0 .5em; *//* border-radius:5px; */text-decoration:none !important;filter:none !important;}
+    nav a,nav a:hover{background:#ccc;color:var(--text);padding:.5em .8em;/* color:var(--background); */transition:padding .15s;/* padding:0 .5em; *//* border-radius:5px; */text-decoration:none !important;filter:none !important;}
     nav a:hover{background:#aaa;}
-    nav a.open{/* padding:0 1em; */background:var(--background);/* color:var(--background); */}
+    nav a.open{/* padding:0 1em; */background:transparent;}
     .page{display:none;}
     .page.open{display:block;}
     /* VIDEO */
@@ -50,7 +51,7 @@
     .video img,.video video,.video .controls .progress{width:100%;}
     .video img{transition:all .75s;}
     .video:hover img{transform:scale(1.05);}
-    .video:not(.playing)::after{content:"►";color:#0f0;font-size:2.2rem;line-height:1.3em;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);pointer-events:none;}
+    .video:not(.playing)::after{content:"►";text-shadow:0 0 50px var(--background);/* color:#0f0; */font-size:2.8rem;line-height:1.3em;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);pointer-events:none;}
     .video video,.video .controls{display:none;}
     .video video{object-fit:cover;}
     .video .controls{position:absolute;bottom:0;left:0;right:0;}
@@ -207,7 +208,7 @@
                 Personal data may be processed by external providers, such as <a href="https://open-meteo.com/en/terms" rel="nofollow">Open‑Meteo</a> for weather data and <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="nofollow">GitHub</a> for hosting.<br>
                 <a href="https://www.baden-wuerttemberg.datenschutz.de/" rel="nofollow">Competent supervisory authority</a>.
             </p>
-            <p>&copy; 2026 Joey Schweickhardt</p>
+            <!-- <p>&copy; 2026 Joey Schweickhardt</p> -->
         </footer>
     </div>
 </main>
