@@ -7,7 +7,7 @@ for %f in (*.jpg) do cwebp -q 85 "%f" -o "%~nf.webp"
 
 
 Breite 800px:
-for %f in (*.jpg) do cwebp -q 90 -resize 800 0 "%f" -o "%~nf.webp"
+for %f in (*.jpg) do cwebp -q 90 -resize 600 0 "%f" -o "%~nf.webp"
 
 Höhe 800px:
-for %f in (*.jpg) do cwebp -q 90 -resize 0 800 "%f" -o "%~nf.webp"
+for %f in (*.jpg) do cwebp -q 90 -resize 0 600 "%f" -o "%~nf.webp"
