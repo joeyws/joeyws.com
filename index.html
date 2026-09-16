@@ -271,6 +271,11 @@ function showPage(id) {
     pages.forEach(p => p.classList.toggle('open', p.id === id));
     navLinks.forEach(a => a.classList.toggle('open', a.getAttribute('href') === '/' + id));
 }
+function resolvePageId(path) {
+    const id = path.replace('/', '') || pages[0]?.id;
+    if (id && document.getElementById(id)) return id;
+    return pages[0]?.id;
+}
 navLinks.forEach(a => {
     a.addEventListener('click', e => {
         e.preventDefault();
@@ -281,12 +286,12 @@ navLinks.forEach(a => {
     });
 });
 window.addEventListener('popstate', () => {
-    const id = location.pathname.replace('/', '') || pages[0]?.id;
-    if (id && document.getElementById(id) && !document.getElementById(id).classList.contains('open')) {
+    const id = resolvePageId(location.pathname);
+    if (id && !document.getElementById(id).classList.contains('open')) {
         showPage(id);
     }
 });
-const initialId = location.pathname.replace('/', '') || pages[0]?.id;
+const initialId = resolvePageId(location.pathname);
 if (initialId) showPage(initialId);
 
 
