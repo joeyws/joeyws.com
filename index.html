@@ -24,6 +24,7 @@
 	html{font-size:13px;}
     body{padding:var(--spacer);overflow-y:scroll;color:var(--text);background:var(--background);/* background:linear-gradient(to right,#f44,#f80,#ff0,#4f4,#66f,#f0f); *//*background:linear-gradient(#181818, var(--background)) center center no-repeat fixed;*/background-size:cover;font:normal normal 1rem/1.3em webfont,monospace;}
     i{font-style:italic;}
+    h1{/* font-family:sans-serif;font-weight:bold;transform:scaleY(.9);font-size:1.2em;letter-spacing:.03em;text-transform:uppercase; */}
     h2+*,h3+*,p+h2,p+h3,p,.gallery-img{margin-top:var(--spacer);}
     hr+*,img+p,p:first-child,.content *:first-child{margin-top:0;}
     p{max-width:640px;}
@@ -42,7 +43,6 @@
     /* PAGES */
     nav{display:flex;gap:.2em;padding:0;}
     nav a{border-radius:100vmax;padding:.2em .8em;background:#ccc;text-decoration:none !important;}
-    nav a:hover{}
     nav a.open{background:var(--text);color:var(--background);}
     .page{display:none;}
     .page.open{display:block;}
@@ -73,7 +73,7 @@
     #mitgliedakbw{width:190px;max-width:100%;display:block;}
     /* SPECIAL */
     @keyframes blink-loading{0%{opacity:0;}50%{opacity:1;}}.loading{animation:.3s blink-loading steps(1) infinite;}
-    @keyframes position{100%{outline-color:transparent;outline-offset:20px;}}#map{width:500px;max-width:100%;aspect-ratio:150/75;background:center center url(img/other/world.gif) no-repeat scroll;position:relative;background-size:contain;}#map:after{top:23%;left:52.5%;outline:1px solid #0f0;background:#0f0;/* border:1px solid #000; */box-shadow:0 0 3px #000;animation:position 1.2s infinite ease-out;width:7px;height:7px;border-radius:100vmax;pointer-events:none;position:absolute;transform:translate(-50%,-50%);display:block;content:"";}
+    @keyframes position{100%{outline-color:transparent;outline-offset:20px;}}#map{width:700px;max-width:100%;aspect-ratio:150/75;background:center center url(img/other/world.gif) no-repeat scroll;position:relative;background-size:contain;}#map:after{top:23%;left:52.5%;outline:1px solid #0f0;background:#0f0;/* border:1px solid #000; */box-shadow:0 0 3px #000;animation:position 1.2s infinite ease-out;width:7px;height:7px;border-radius:100vmax;pointer-events:none;position:absolute;transform:translate(-50%,-50%);display:block;content:"";}
     #cursor{width:12px;height:12px;background:#fff1;backdrop-filter:blur(20px) invert(100%) saturate(10);-webkit-backdrop-filter:blur(20px) invert(100%) saturate(10);border-radius:100vmax;position:fixed;top:-50px;left:50%;transform:translate(-50%,-50%);font-size:0;line-height:0;z-index:99999999;pointer-events:none;}*{cursor:none !important;}
 </style>
 </head>
