@@ -29,8 +29,8 @@
     p{max-width:640px;}
     table{width:100%;}tr{border-top:1px solid var(--text);}td{vertical-align:top;}td:nth-child(1){width:8em;padding-right:var(--spacer);}td:nth-child(2){width:auto;}
     hr{margin:2.8rem 0;}
-    a{text-underline-offset:.2em;text-decoration:underline;white-space:nowrap;}
-    a:hover{background:#f0f;text-decoration:none;}
+    a{color:#00f;text-underline-offset:.2em;text-decoration:underline;white-space:nowrap;}
+    a:hover{background:var(--text);color:var(--background);text-decoration:none;}
     /* MARQUEE */
     .marquee{padding:.15em 0;margin-bottom:var(--spacer);background:var(--text);color:var(--background);transition:.2s width ease-out;box-sizing:border-box;width:1px;overflow:hidden;white-space:nowrap;display:block;user-select:none;/* mask-mode:alpha;mask-image:linear-gradient(to right, transparent, #000 20%, #000 calc(100% - 20%), transparent); */}
     .marquee-track{display:inline-flex;white-space:nowrap;will-change:transform;animation:marquee 60s linear infinite;}
@@ -41,7 +41,8 @@
     header>*{white-space:nowrap;}
     /* PAGES */
     nav{display:flex;gap:var(--spacer);}
-    nav a{text-decoration:none !important;border-radius:100vmax;padding:0 .6em;background:#ccc;}
+    nav a,nav a:hover{text-decoration:none !important;border-radius:100vmax;padding:0 .6em;background:#bbb;color:var(--text);}
+    nav a:hover{background:#ccc;}
     nav a.open{background:var(--text);color:var(--background);}
     .page{display:none;}
     .page.open{display:block;}
@@ -60,13 +61,12 @@
     .gallery{columns:360px;column-gap:var(--spacer);}
     .gallery-item{break-inside:avoid;display:flex;flex-direction:column;gap:var(--spacer);margin-bottom:calc(2*var(--spacer));}
     .gallery-item img{width:100%;height:auto;display:block;user-select:none;}
-    .gallery-item figcaption{color:#00f;}
     /* SMALL */
-    small,.gallery-item figcaption,footer{font-size:11px;line-height:1.3em;}
+    small,.gallery-item figcaption,footer,footer a{color:var(--text);font-size:11px;line-height:1.3em;}
     /* SVG */
     svg *{fill:var(--text);}
     svg.social{height:1em;vertical-align:-12%;}
-    svg.social *{fill:var(--text);}
+    svg.social *{fill:#00f;}
     a:has(> svg.social),a:has(> svg.social):hover{background:transparent;backdrop-filter:none;box-shadow:none !important;}
     /* a:hover svg.social *{fill:var(--background);} */
     #mitgliedakbw{width:190px;max-width:100%;display:block;}
