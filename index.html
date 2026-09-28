@@ -357,7 +357,7 @@ const getWeather = async () => {
         if (!cityElement) return; */
         let weatherEl = document.getElementById("weather");
         if (!weatherEl) return;
-        weatherEl.innerHTML = ` ${temperature}°C ${condition}`;
+        weatherEl.innerHTML = ` ${temperature}°C`;
     } catch (err) {}
 };
 getWeather();
