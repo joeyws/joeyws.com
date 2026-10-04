@@ -424,6 +424,7 @@ document.querySelectorAll(".email").forEach(emailEl => {
 
 // GALLERY DISTORTION
 if (window.matchMedia('(pointer: fine)').matches) {
+    const STRENGTH = .12;
     const fx = document.createElement('canvas');
     fx.className = 'gallery-fx';
     const gl = fx.getContext('webgl', {alpha: false, antialias: false});
@@ -434,7 +435,7 @@ if (window.matchMedia('(pointer: fine)').matches) {
             void main(){
                 vec2 d=(u-m)*vec2(ar,1.);
                 float f=exp(-dot(d,d)*10.);
-                vec2 o=v*f*3.;
+                vec2 o=v*f;
                 float r=texture2D(t,u-o*1.08).r;
                 float g=texture2D(t,u-o).g;
                 float b=texture2D(t,u-o*.92).b;
@@ -460,8 +461,8 @@ if (window.matchMedia('(pointer: fine)').matches) {
         gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
         const U = n => gl.getUniformLocation(prog, n);
         gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, true);
-        let tex = null, active = null, rafId = null;
-        const target = {x: .5, y: .5}, cur = {x: .5, y: .5};
+        let tex = null, active = null, rafId = null, k = 0;
+        const target = {x: .5, y: .5}, cur = {x: .5, y: .5}, dir = {x: 1, y: 0};
         const setTarget = (e, img) => {
             const b = img.getBoundingClientRect();
             target.x = (e.clientX - b.left) / b.width;
@@ -471,15 +472,23 @@ if (window.matchMedia('(pointer: fine)').matches) {
             cancelAnimationFrame(rafId); rafId = null;
             fx.remove();
             if (tex) {gl.deleteTexture(tex); tex = null;}
-            active = null;
+            active = null; k = 0;
         };
         const frame = () => {
             const vx = target.x - cur.x, vy = target.y - cur.y;
             cur.x += vx * .08; cur.y += vy * .08;
+            // Richtung folgt der letzten Mausbewegung, bleibt beim Anhalten erhalten
+            const sp = Math.hypot(vx, vy);
+            if (sp > .0008) {
+                dir.x += (vx / sp - dir.x) * .15;
+                dir.y += (vy / sp - dir.y) * .15;
+            }
+            // Intensität blendet beim Hovern ein und beim Verlassen aus
+            k += ((active ? 1 : 0) - k) * .15;
             gl.uniform2f(U('m'), cur.x, cur.y);
-            gl.uniform2f(U('v'), vx, vy);
+            gl.uniform2f(U('v'), dir.x * STRENGTH * k, dir.y * STRENGTH * k);
             gl.drawArrays(gl.TRIANGLES, 0, 6);
-            if (!active && Math.abs(vx) + Math.abs(vy) < .0005) {stop(); return;}
+            if (!active && k < .01) {stop(); return;}
             rafId = requestAnimationFrame(frame);
         };
         const start = (e, img) => {
@@ -488,7 +497,46 @@ if (window.matchMedia('(pointer: fine)').matches) {
             const dpr = Math.min(devicePixelRatio || 1, 2);
             fx.style.top = img.offsetTop + 'px';
             fx.style.left = img.offsetLeft + 'px';
-            fx.style.width =
+            fx.style.width = img.clientWidth + 'px';
+            fx.style.height = img.clientHeight + 'px';
+            fx.width = img.clientWidth * dpr;
+            fx.height = img.clientHeight * dpr;
+            img.parentNode.appendChild(fx);
+            gl.viewport(0, 0, fx.width, fx.height);
+            gl.uniform1f(U('ar'), fx.width / fx.height);
+            if (tex) gl.deleteTexture(tex);
+            tex = gl.createTexture();
+            gl.bindTexture(gl.TEXTURE_2D, tex);
+            try {
+                gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, img);
+            } catch (err) {
+                console.error(err);
+                stop();
+                return;
+            }
+            gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
+            gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
+            gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
+            gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+            setTarget(e, img);
+            cur.x = target.x; cur.y = target.y;
+            // Startrichtung aus der Eintrittsbewegung der Maus, sonst nach rechts
+            const mx = e.movementX || 0, my = -(e.movementY || 0), ml = Math.hypot(mx, my);
+            if (ml > 0) {dir.x = mx / ml; dir.y = my / ml;} else {dir.x = 1; dir.y = 0;}
+            k = 0;
+            if (!rafId) frame();
+        };
+        document.querySelectorAll('.gallery-item img').forEach(img => {
+            img.addEventListener('mouseenter', e => {
+                if (active === img) return;
+                if (rafId) stop();
+                start(e, img);
+            });
+            img.addEventListener('mousemove', e => {if (active === img) setTarget(e, img);});
+            img.addEventListener('mouseleave', () => {active = null;});
+        });
+    }
+}
 
 
 // VIDEO
