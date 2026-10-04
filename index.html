@@ -32,7 +32,7 @@
     a{color:#00f;text-underline-offset:.2em;text-decoration:underline;white-space:nowrap;}
     a:hover{background:var(--text);color:var(--background);text-decoration:none;}
     /* MARQUEE */
-    .marquee{text-shadow:1px 1px 1px #fff8;padding:.2em 0;background:linear-gradient(to bottom,#f04,#ff0,#4f4,#08f);margin:calc(-1*var(--spacer));margin-bottom:var(--spacer);transition:.2s width ease-out;box-sizing:border-box;width:1px;overflow:hidden;white-space:nowrap;display:block;user-select:none;/* mask-mode:alpha;mask-image:linear-gradient(to right, transparent, #000 20%, #000 calc(100% - 20%), transparent); */}
+    .marquee{/* text-shadow:1px 1px 1px #fff8; */padding:.2em 0;background:linear-gradient(to bottom,#f04,#ff0,#4f4,#08f);margin:calc(-1*var(--spacer));margin-bottom:var(--spacer);transition:.2s width ease-out;box-sizing:border-box;width:1px;overflow:hidden;white-space:nowrap;display:block;user-select:none;/* mask-mode:alpha;mask-image:linear-gradient(to right, transparent, #000 20%, #000 calc(100% - 20%), transparent); */}
     .marquee-track{display:inline-flex;white-space:nowrap;will-change:transform;animation:marquee 60s linear infinite;}
     .marquee-track span{margin-right:1.8em;}
     @keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-100%);}}
@@ -59,8 +59,11 @@
     .video .progress-filled{width:0%;height:100%;background:#0f0;}
     /* GALLERY */
     .gallery{columns:360px;column-gap:var(--spacer);}
-    .gallery-item{break-inside:avoid;display:flex;flex-direction:column;gap:var(--spacer);margin-bottom:calc(2*var(--spacer));}
+    .gallery-item{break-inside:avoid;display:flex;flex-direction:column;row-gap:calc(1*var(--spacer));margin-bottom:calc(1*var(--spacer));}
     .gallery-item img{width:100%;height:auto;display:block;user-select:none;}
+    .gallery-item{position:relative;}
+    .gallery-fx{position:absolute;pointer-events:none;display:block;}
+    /* .gallery-item figcaption span{background:#ddd;} */
     /* SMALL */
     small,.gallery-item figcaption,footer,footer a{color:var(--text);font-size:11px;line-height:1.3em;}
     /* SVG */
@@ -318,7 +321,9 @@ document.querySelectorAll('.gallery').forEach(gallery => {
         const figure = document.createElement('figure');
         figure.className = 'gallery-item';
         const caption = document.createElement('figcaption');
-        caption.textContent = img.alt;
+        const span = document.createElement('span');
+        span.textContent = img.alt;
+        caption.appendChild(span);
         img.parentNode.insertBefore(figure, img);
         figure.appendChild(img);
         figure.appendChild(caption);
@@ -417,6 +422,120 @@ document.querySelectorAll(".email").forEach(emailEl => {
 });
 
 
+// GALLERY DISTORTION
+const fxPointerFine = window.matchMedia('(pointer: fine)').matches;
+const fxReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+console.log('[gallery-fx] init', {pointerFine: fxPointerFine, reducedMotion: fxReduced});
+if (fxPointerFine) {
+    const fx = document.createElement('canvas');
+    fx.className = 'gallery-fx';
+    const gl = fx.getContext('webgl', {alpha: false, antialias: false});
+    console.log('[gallery-fx] webgl', !!gl);
+    if (gl) {
+        const vsSrc = 'attribute vec2 p;varying vec2 u;void main(){u=p*.5+.5;gl_Position=vec4(p,0.,1.);}';
+        const fsSrc = `precision mediump float;
+            uniform sampler2D t;uniform vec2 m;uniform vec2 v;uniform float ar;varying vec2 u;
+            void main(){
+                vec2 d=(u-m)*vec2(ar,1.);
+                float f=1.-smoothstep(0.,.3,length(d));
+                vec2 o=v*f*6.;
+                float w=sin(length(d)*40.-length(v)*200.)*.004*f;
+                float r=texture2D(t,u-o*1.2+w).r;
+                float g=texture2D(t,u-o+w).g;
+                float b=texture2D(t,u-o*.8+w).b;
+                gl_FragColor=vec4(r,g,b,1.);
+            }`;
+        const sh = (type, src) => {
+            const s = gl.createShader(type);
+            gl.shaderSource(s, src);
+            gl.compileShader(s);
+            if (!gl.getShaderParameter(s, gl.COMPILE_STATUS)) console.error(gl.getShaderInfoLog(s));
+            return s;
+        };
+        const prog = gl.createProgram();
+        gl.attachShader(prog, sh(gl.VERTEX_SHADER, vsSrc));
+        gl.attachShader(prog, sh(gl.FRAGMENT_SHADER, fsSrc));
+        gl.linkProgram(prog);
+        if (!gl.getProgramParameter(prog, gl.LINK_STATUS)) console.error(gl.getProgramInfoLog(prog));
+        gl.useProgram(prog);
+        gl.bindBuffer(gl.ARRAY_BUFFER, gl.createBuffer());
+        gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1,1,-1,-1,1,-1,1,1,-1,1,1]), gl.STATIC_DRAW);
+        const loc = gl.getAttribLocation(prog, 'p');
+        gl.enableVertexAttribArray(loc);
+        gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
+        const U = n => gl.getUniformLocation(prog, n);
+        gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, true);
+        let tex = null, active = null, rafId = null;
+        const target = {x: .5, y: .5}, cur = {x: .5, y: .5};
+        const setTarget = (e, img) => {
+            const b = img.getBoundingClientRect();
+            target.x = (e.clientX - b.left) / b.width;
+            target.y = 1 - (e.clientY - b.top) / b.height;
+        };
+        const stop = () => {
+            cancelAnimationFrame(rafId); rafId = null;
+            fx.remove();
+            if (tex) {gl.deleteTexture(tex); tex = null;}
+            active = null;
+        };
+        const frame = () => {
+            const vx = target.x - cur.x, vy = target.y - cur.y;
+            cur.x += vx * .08; cur.y += vy * .08;
+            gl.uniform2f(U('m'), cur.x, cur.y);
+            gl.uniform2f(U('v'), vx, vy);
+            gl.drawArrays(gl.TRIANGLES, 0, 6);
+            if (!active && Math.abs(vx) + Math.abs(vy) < .0005) {stop(); return;}
+            rafId = requestAnimationFrame(frame);
+        };
+        const start = (e, img) => {
+            console.log('[gallery-fx] enter', img.getAttribute('src'), {complete: img.complete, w: img.naturalWidth});
+            if (!img.complete || !img.naturalWidth) return;
+            active = img;
+            const dpr = Math.min(devicePixelRatio || 1, 2);
+            fx.style.top = img.offsetTop + 'px';
+            fx.style.left = img.offsetLeft + 'px';
+            fx.style.width = img.clientWidth + 'px';
+            fx.style.height = img.clientHeight + 'px';
+            fx.width = img.clientWidth * dpr;
+            fx.height = img.clientHeight * dpr;
+            img.parentNode.appendChild(fx);
+            gl.viewport(0, 0, fx.width, fx.height);
+            gl.uniform1f(U('ar'), fx.width / fx.height);
+            if (tex) gl.deleteTexture(tex);
+            tex = gl.createTexture();
+            gl.bindTexture(gl.TEXTURE_2D, tex);
+            try {
+                gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, img);
+            } catch (err) {
+                console.error(err);
+                stop();
+                return;
+            }
+            gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
+            gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
+            gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
+            gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+            const err = gl.getError();
+            if (err) console.error('[gallery-fx] GL error', err);
+            setTarget(e, img);
+            cur.x = target.x; cur.y = target.y;
+            if (!rafId) frame();
+        };
+        const imgs = document.querySelectorAll('.gallery-item img');
+        console.log('[gallery-fx] images', imgs.length);
+        imgs.forEach(img => {
+            img.addEventListener('mouseenter', e => {
+                if (active === img) return;
+                if (rafId) stop();
+                start(e, img);
+            });
+            img.addEventListener('mousemove', e => {if (active === img) setTarget(e, img);});
+            img.addEventListener('mouseleave', () => {active = null; target.x = cur.x; target.y = cur.y;});
+        });
+    }
+}
+
+
 // VIDEO
 document.querySelectorAll(".video").forEach(wrapper => {
     const video = wrapper.querySelector("video");
@@ -454,7 +573,6 @@ document.querySelectorAll(".video").forEach(wrapper => {
             if (wrapper.classList.contains("playing") || video.currentTime > 0) {setPlaying(video.paused);}
         }
     });
-
 });
 </script>
 <script type="application/ld+json">
