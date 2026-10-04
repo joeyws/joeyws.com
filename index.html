@@ -423,26 +423,21 @@ document.querySelectorAll(".email").forEach(emailEl => {
 
 
 // GALLERY DISTORTION
-const fxPointerFine = window.matchMedia('(pointer: fine)').matches;
-const fxReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-console.log('[gallery-fx] init', {pointerFine: fxPointerFine, reducedMotion: fxReduced});
-if (fxPointerFine) {
+if (window.matchMedia('(pointer: fine)').matches) {
     const fx = document.createElement('canvas');
     fx.className = 'gallery-fx';
     const gl = fx.getContext('webgl', {alpha: false, antialias: false});
-    console.log('[gallery-fx] webgl', !!gl);
     if (gl) {
         const vsSrc = 'attribute vec2 p;varying vec2 u;void main(){u=p*.5+.5;gl_Position=vec4(p,0.,1.);}';
         const fsSrc = `precision mediump float;
             uniform sampler2D t;uniform vec2 m;uniform vec2 v;uniform float ar;varying vec2 u;
             void main(){
                 vec2 d=(u-m)*vec2(ar,1.);
-                float f=1.-smoothstep(0.,.3,length(d));
-                vec2 o=v*f*6.;
-                float w=sin(length(d)*40.-length(v)*200.)*.004*f;
-                float r=texture2D(t,u-o*1.2+w).r;
-                float g=texture2D(t,u-o+w).g;
-                float b=texture2D(t,u-o*.8+w).b;
+                float f=exp(-dot(d,d)*10.);
+                vec2 o=v*f*3.;
+                float r=texture2D(t,u-o*1.08).r;
+                float g=texture2D(t,u-o).g;
+                float b=texture2D(t,u-o*.92).b;
                 gl_FragColor=vec4(r,g,b,1.);
             }`;
         const sh = (type, src) => {
@@ -488,52 +483,12 @@ if (fxPointerFine) {
             rafId = requestAnimationFrame(frame);
         };
         const start = (e, img) => {
-            console.log('[gallery-fx] enter', img.getAttribute('src'), {complete: img.complete, w: img.naturalWidth});
             if (!img.complete || !img.naturalWidth) return;
             active = img;
             const dpr = Math.min(devicePixelRatio || 1, 2);
             fx.style.top = img.offsetTop + 'px';
             fx.style.left = img.offsetLeft + 'px';
-            fx.style.width = img.clientWidth + 'px';
-            fx.style.height = img.clientHeight + 'px';
-            fx.width = img.clientWidth * dpr;
-            fx.height = img.clientHeight * dpr;
-            img.parentNode.appendChild(fx);
-            gl.viewport(0, 0, fx.width, fx.height);
-            gl.uniform1f(U('ar'), fx.width / fx.height);
-            if (tex) gl.deleteTexture(tex);
-            tex = gl.createTexture();
-            gl.bindTexture(gl.TEXTURE_2D, tex);
-            try {
-                gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, img);
-            } catch (err) {
-                console.error(err);
-                stop();
-                return;
-            }
-            gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
-            gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
-            gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
-            gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
-            const err = gl.getError();
-            if (err) console.error('[gallery-fx] GL error', err);
-            setTarget(e, img);
-            cur.x = target.x; cur.y = target.y;
-            if (!rafId) frame();
-        };
-        const imgs = document.querySelectorAll('.gallery-item img');
-        console.log('[gallery-fx] images', imgs.length);
-        imgs.forEach(img => {
-            img.addEventListener('mouseenter', e => {
-                if (active === img) return;
-                if (rafId) stop();
-                start(e, img);
-            });
-            img.addEventListener('mousemove', e => {if (active === img) setTarget(e, img);});
-            img.addEventListener('mouseleave', () => {active = null; target.x = cur.x; target.y = cur.y;});
-        });
-    }
-}
+            fx.style.width =
 
 
 // VIDEO
