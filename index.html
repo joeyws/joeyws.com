@@ -32,7 +32,7 @@
     a{color:#00f;text-underline-offset:.2em;text-decoration:underline;white-space:nowrap;}
     a:hover{background:var(--text);color:var(--background);text-decoration:none;}
     /* MARQUEE */
-    .marquee{/* text-shadow:1px 1px 1px #fff8; *//* background:linear-gradient(to bottom,#f08,#ff0,#0f0,#0ff); */background:#ff8;/* color:var(--background); */padding:.15em 0;margin:calc(-1*var(--spacer));margin-bottom:var(--spacer);transition:.2s width ease-out;box-sizing:border-box;width:1px;overflow:hidden;white-space:nowrap;display:block;user-select:none;/* mask-mode:alpha;mask-image:linear-gradient(to right, transparent, #000 20%, #000 calc(100% - 20%), transparent); */}
+    .marquee{/* background:linear-gradient(to bottom,#f08,#ff0,#0f0,#0ff); */background:#ff0;color:#f00;/* color:var(--background); */padding:.15em 0;margin:calc(-1*var(--spacer));margin-bottom:var(--spacer);transition:.2s width ease-out;box-sizing:border-box;width:1px;overflow:hidden;white-space:nowrap;display:block;user-select:none;/* mask-mode:alpha;mask-image:linear-gradient(to right, transparent, #000 20%, #000 calc(100% - 20%), transparent); */}
     .marquee-track{display:inline-flex;white-space:nowrap;will-change:transform;animation:marquee 60s linear infinite;}
     .marquee-track span{margin-right:1.8em;}
     @keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-100%);}}
