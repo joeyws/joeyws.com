@@ -24,7 +24,7 @@
     ::selection{background:var(--text);color:var(--background);}
     /* RESET */ *{text-decoration-thickness:.05em;text-decoration-skip-ink:none;font-kerning:normal;outline:none;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{box-sizing:content-box;border-radius:0;/* -webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-border-radius:0;-webkit-text-size-adjust:none;-webkit-appearance:none;font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased; */}
 	html{font-size:13px;}
-    body{padding:var(--spacer);overflow-y:scroll;color:var(--text);background:var(--background);/* background:linear-gradient(to bottom,#f04,#ff0,#4f4,#08f) center center no-repeat fixed; *//* background:linear-gradient(#eee, #fff) center center no-repeat fixed; */background-size:cover;font:normal normal 1rem/1.3em webfont,monospace;}
+    body{padding:var(--spacer);overflow-x:hidden;overflow-y:scroll;color:var(--text);background:var(--background);/* background:linear-gradient(to bottom,#f04,#ff0,#4f4,#08f) center center no-repeat fixed; *//* background:linear-gradient(#eee, #fff) center center no-repeat fixed; */background-size:cover;font:normal normal 1rem/1.3em webfont,monospace;}
     i{font-style:italic;}
     h2+*,h3+*,p+h2,p+h3,p,.gallery-img{margin-top:var(--spacer);}
     hr+*,img+p,p:first-child,.content *:first-child{margin-top:0;}
@@ -32,21 +32,29 @@
     table{width:100%;}tr{border-top:1px solid var(--text);}td{vertical-align:top;}td:nth-child(1){width:8em;padding-right:var(--spacer);}td:nth-child(2){width:auto;}
     hr{margin:3rem 0;}
     a{color:#00f;text-underline-offset:.2em;text-decoration:underline;white-space:nowrap;}
-    a:hover{color:#f00;/* text-decoration:none; */}
+    a:hover{color:#f00;}
     /* MARQUEE */
-    .marquee{/* background:linear-gradient(to right,#f08,#ff0,#0f0,#0ff); *//* padding:.15em 0; */background:#ffa;margin:calc(-1*var(--spacer));margin-bottom:var(--spacer);transition:.2s width ease-out;box-sizing:border-box;width:1px;overflow:hidden;white-space:nowrap;display:block;user-select:none;/* mask-mode:alpha;mask-image:linear-gradient(to right, transparent, #000 20%, #000 calc(100% - 20%), transparent); */}
+    .marquee{/* background:linear-gradient(to right,#f08,#ff0,#0f0,#0ff); */padding:.2em 0;background:#ffb;margin:calc(-1*var(--spacer));margin-bottom:var(--spacer);transition:.2s width ease-out;box-sizing:border-box;width:1px;overflow:hidden;white-space:nowrap;display:block;user-select:none;/* mask-mode:alpha;mask-image:linear-gradient(to right, transparent, #000 20%, #000 calc(100% - 20%), transparent); */}
     .marquee-track{display:inline-flex;white-space:nowrap;will-change:transform;animation:marquee 60s linear infinite;}
     .marquee-track span{margin-right:1.8em;}
     @keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-100%);}}
     /* HEADER */
     header{font-family:webfont2,sans-serif;/* letter-spacing:0.01em; */font-size:3rem;line-height:1.3em;display:flex;justify-content:space-evenly;align-items:center;/* flex-direction:column;width:fit-content;margin:0 auto; */gap:var(--spacer) 1.4em;flex-wrap:wrap;user-select:none;}
     header>*{white-space:nowrap;}
-    /* PAGES */
+    /* PAGES / NAV */
     nav a,nav a:hover{text-decoration-thickness:.08em !important;text-underline-offset:.1em;text-decoration:none;background:transparent !important;color:var(--text);}
     nav a:hover{color:#f00;}
     nav a.open{text-decoration:underline;color:var(--text);}
+    main{margin:0 calc(-1*var(--spacer));padding:0 var(--spacer);overflow-x:clip;}
+    /* .page:not(.open){display:none;} */
+    :root{--page-time:.3s;--page-ease:cubic-bezier(0.16, 1, 0.3, 1);}
+    main{position:relative;}
     .page{display:none;}
-    .page.open{display:block;}
+    .page.open{display:block;will-change:transform;}
+    .page.entering{animation:page-in var(--page-time) var(--page-ease) both;}
+    .page.leaving{display:block;position:absolute;top:0;left:0;right:0;pointer-events:none;animation:page-out var(--page-time) var(--page-ease) both;}
+    @keyframes page-in{from{transform:translateX(var(--dx));}to{transform:none;}}
+    @keyframes page-out{from{transform:none;}to{transform:translateX(var(--dx));}}
     /* VIDEO */
     .video{overflow:hidden;position:relative;width:960px;background:#000;max-width:100%;aspect-ratio:2.2/1;font-size:0;line-height:0;user-select:none;}
     .video img,.video video,.video .controls .progress{width:100%;}
@@ -68,6 +76,7 @@
     svg *{fill:var(--text);}
     svg.social{height:1em;vertical-align:-12%;}
     svg.social *{fill:#00f;}
+    a:hover svg.social *{fill:#f00;}
     a:has(> svg.social),a:has(> svg.social):hover{background:transparent;backdrop-filter:none;box-shadow:none !important;}
     /* a:hover svg.social *{fill:var(--background);} */
     /* SPECIAL */
@@ -89,7 +98,7 @@
         <a href="/works">Works</a>,
         <a href="/places">Places</a>,
         <!-- <a href="/about">About</a>, -->
-         <a href="/contact">Contact</a>
+        <a href="/contact">Contact</a>
     </nav>
     <span><span id="city">Stuttgart</span><span id="weather"></span></span>
     <span id="time"></span>
@@ -170,8 +179,6 @@
         </div>
     </div>
     <!-- <div class="page" id="about">
-        <p>Hi, I am Joey Schweickhardt, an architect working in Stuttgart, Germany.</p>
-        <hr>
         <h2>Professional</h2>
         <table>
             <tr><td data-title="01.10.2025-">2025-Present</td><td>SCHMELZLE+PARTNER</td></tr>
@@ -201,6 +208,9 @@
             <tr><td data-title="16.09.2021-17.09.2021">2021</td><td>Film screening, CURRENT Festival for Art and Urban Space</td></tr>
             <tr><td data-title="13.01.2020-25.01.2020">2020</td><td>Annual Design Projects Selection, Institute for Spatial Conception and Fundamentals of Design, University of Stuttgart</td></tr>
         </table>
+        <hr>
+        <h2>Links</h2>
+        <p></p>
     </div> -->
     <div class="page" id="contact">
         <p>
@@ -293,6 +303,74 @@ window.addEventListener('load', () => {toggleLoading(false);});
 // NAV
 const navLinks = document.querySelectorAll('nav a');
 const pages = document.querySelectorAll('.page');
+const navOrder = [...navLinks].map(a => a.getAttribute('href').replace('/', ''));
+let leaveTimer = null;
+let navToken = 0;
+const pageMs = () => parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--page-time')) * 1000;
+function preloadImages(page) {
+    const imgs = [...page.querySelectorAll('img')];
+    imgs.forEach(i => { i.loading = 'eager'; });
+    const first = imgs.slice(0, 8).map(i => i.decode().catch(() => {}));
+    return Promise.race([Promise.all(first), new Promise(r => setTimeout(r, 800))]);
+}
+function settle() {
+    clearTimeout(leaveTimer);
+    pages.forEach(p => p.classList.remove('leaving', 'entering'));
+}
+function showPage(id, animate = true) {
+    const next = document.getElementById(id);
+    if (!next) return;
+    settle();
+    const token = ++navToken;
+    const out = document.querySelector('.page.open');
+    if (out === next) return;
+    navLinks.forEach(a => a.classList.toggle('open', a.getAttribute('href') === '/' + id));
+    if (!animate || !out) {
+        pages.forEach(p => p.classList.remove('open'));
+        next.classList.add('open');
+        window.scrollTo(0, 0);
+        return;
+    }
+    const dir = navOrder.indexOf(id) > navOrder.indexOf(out.id) ? 1 : -1;
+    preloadImages(next).then(() => {
+        if (token !== navToken) return;
+        out.style.setProperty('--dx', `calc(${-dir} * (100% + var(--spacer)))`);
+        next.style.setProperty('--dx', `calc(${dir} * (100% + var(--spacer)))`);
+        window.scrollTo(0, 0);
+        out.classList.remove('open');
+        out.classList.add('leaving');
+        next.classList.add('open', 'entering');
+        leaveTimer = setTimeout(() => {
+            out.classList.remove('leaving');
+            next.classList.remove('entering');
+        }, pageMs());
+    });
+}
+function resolvePageId(path) {
+    const id = path.replace('/', '') || pages[0]?.id;
+    if (id && document.getElementById(id)) return id;
+    return pages[0]?.id;
+}
+navLinks.forEach(a => {
+    a.addEventListener('click', e => {
+        e.preventDefault();
+        const id = a.getAttribute('href').replace('/', '');
+        if (a.classList.contains('open')) return;
+        showPage(id);
+        history.pushState(null, '', '/' + id);
+    });
+});
+window.addEventListener('popstate', () => {
+    const id = resolvePageId(location.pathname);
+    if (id && !document.getElementById(id).classList.contains('open')) {
+        showPage(id);
+    }
+});
+const initialId = resolvePageId(location.pathname);
+if (initialId) showPage(initialId, false);
+/* // NAV
+const navLinks = document.querySelectorAll('nav a');
+const pages = document.querySelectorAll('.page');
 function showPage(id) {
     pages.forEach(p => p.classList.toggle('open', p.id === id));
     navLinks.forEach(a => a.classList.toggle('open', a.getAttribute('href') === '/' + id));
@@ -318,7 +396,7 @@ window.addEventListener('popstate', () => {
     }
 });
 const initialId = resolvePageId(location.pathname);
-if (initialId) showPage(initialId);
+if (initialId) showPage(initialId); */
 
 
 // CURSOR
