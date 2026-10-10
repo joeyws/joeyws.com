@@ -495,7 +495,9 @@ async function lastModified() {
         if (!json[0]?.commit?.author?.date) return;
         const date = new Date(json[0].commit.author.date);
         const formatted = date.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
-        lastP.insertAdjacentHTML('afterbegin', `Last modified ${formatted}.<br>`);
+        const p = document.createElement('p');
+        p.textContent = `Last modified ${formatted}.`;
+        lastP.before(p);
     } catch (e) {}
 }
 lastModified();
