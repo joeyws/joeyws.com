@@ -80,6 +80,7 @@
     a:has(> svg.social),a:has(> svg.social):hover{background:transparent;backdrop-filter:none;box-shadow:none !important;}
     /* a:hover svg.social *{fill:var(--background);} */
     /* SPECIAL */
+    #links a{display:flex;}
     #mitgliedakbw{width:190px;max-width:100%;display:block;}
     @keyframes blink-loading{0%{opacity:0;}50%{opacity:1;}}.loading{animation:.3s blink-loading steps(1) infinite;}
     @keyframes position{100%{outline-color:transparent;outline-offset:20px;}}#map{width:700px;max-width:100%;aspect-ratio:150/75;background:center center url(img/other/world.gif) no-repeat scroll;position:relative;background-size:contain;}#map:after{top:23%;left:52.5%;outline:1px solid #0f0;background:#0f0;/* border:1px solid #000; */box-shadow:0 0 3px #000;animation:position 1.2s infinite ease-out;width:7px;height:7px;border-radius:100vmax;pointer-events:none;position:absolute;transform:translate(-50%,-50%);display:block;content:"";}
@@ -100,7 +101,10 @@
         <!-- <a href="/about">About</a>, -->
         <a href="/contact">Contact</a>
     </nav>
-    <span><span id="city">Stuttgart</span><span id="weather"></span></span>
+    <span>
+        <span id="city"> Stuttgart</span>
+        <span id="weather"></span>
+    </span>
     <span id="time"></span>
     
 </header>
@@ -210,7 +214,16 @@
         </table>
         <hr>
         <h2>Links</h2>
-        <p></p>
+        <p id="links">
+            <a href="https://www.neckarinsel.eu/en">Neckarinsel e.V.</a>
+            <a href="https://www.akbw.de/">Architektenkammer Baden-Württemberg</a>
+            <a href="https://www.stadtluecken.de/">Stadtlücken e.V.</a>
+            <a href="https://www.stmariaals.de/">St. Maria als</a>
+            <a href="https://www.stadtpalais-stuttgart.de/">StadtPalais</a>
+            <a href="https://www.f01.uni-stuttgart.de/">Fakultät Architektur und Stadtplanung, Universität Stuttgart</a>
+            <a href="https://kunstverein-wagenhalle.de/">Kunstverein Wagenhallen e.V.</a>
+            <a href="https://www.iba27.de/en/">IBA’27</a>
+        </p>
     </div> -->
     <div class="page" id="contact">
         <p>
