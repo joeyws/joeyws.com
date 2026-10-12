@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en" translate="no">
+<head>
+<meta charset="utf-8">
+<link rel="preload" href="font/SourceCodePro.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="font/TeXGyreHerosCondensed-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="dns-prefetch" href="https://api.open-meteo.com">
+<link rel="dns-prefetch" href="https://api.github.com">
+<title>Joey Schweickhardt</title>
+<meta name="description" content="The personal website of Joey Schweickhardt from Stuttgart, Germany.">
+<meta name="robots" content="index,nofollow,notranslate,noimageindex">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes,shrink-to-fit=no">
+<meta name="format-detection" content="telephone=no">
+<meta property="og:title" content="Joey Schweickhardt">
+<meta property="og:description" content="The personal website of Joey Schweickhardt from Stuttgart, Germany.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://joeyws.com/">
+<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAADUlEQVR4nGNgGAWjYBSMAAABjAABb6k9VQAAAABJRU5ErkJggg==">
+<link rel="canonical" href="https://joeyws.com/">
+<style>
+    @font-face{font-family:webfont;src:url("font/SourceCodePro.woff2");font-display:swap;}
+    @font-face{font-family:webfont2;src:url("font/TeXGyreHerosCondensed-Regular.woff2");font-display:swap;}
+    :root{--background:#fff;--text:#111;--spacer:8px;}
+    ::selection{background:var(--text);color:var(--background);}
+    /* RESET */ *{text-decoration-thickness:.05em;text-decoration-skip-ink:none;font-kerning:normal;outline:none;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{box-sizing:content-box;border-radius:0;/* -webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-border-radius:0;-webkit-text-size-adjust:none;-webkit-appearance:none;font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased; */}
+	html{font-size:13px;}
+    body{padding:var(--spacer);overflow-x:hidden;overflow-y:scroll;color:var(--text);background:var(--background);/* background:linear-gradient(to bottom,#f04,#ff0,#4f4,#08f) center center no-repeat fixed; *//* background:linear-gradient(#eee, #fff) center center no-repeat fixed; */background-size:cover;font:normal normal 1rem/1.3em webfont,monospace;}
+    i{font-style:italic;}
+    h2+*,h3+*,p+h2,p+h3,p,.gallery-img{margin-top:var(--spacer);}
+    hr+*,img+p,p:first-child,.content *:first-child{margin-top:0;}
+    p{max-width:640px;}
+    table{width:100%;}tr{border-top:1px solid var(--text);}td{vertical-align:top;}td:nth-child(1){width:8em;padding-right:var(--spacer);}td:nth-child(2){width:auto;}
+    hr{margin:3rem 0;}
+    a{color:#00f;text-underline-offset:.2em;text-decoration:underline;white-space:nowrap;}
+    a:hover{background:var(--text);color:var(--background);}
+    /* MARQUEE */
+    .marquee{padding:.2em 0;background:#ffc;margin:calc(-1*var(--spacer));margin-bottom:var(--spacer);transition:.2s width ease-out;box-sizing:border-box;width:1px;overflow:hidden;white-space:nowrap;display:block;user-select:none;/* mask-mode:alpha;mask-image:linear-gradient(to right, transparent, #000 20%, #000 calc(100% - 20%), transparent); */}
+    .marquee-track{display:inline-flex;white-space:nowrap;will-change:transform;animation:marquee 60s linear infinite;}
+    .marquee-track span{margin-right:1.8em;}
+    @keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-100%);}}
+    /* HEADER */
+    header{font-family:webfont2,sans-serif;font-size:3rem;line-height:1.3em;display:flex;justify-content:space-evenly;align-items:center;/* flex-direction:column;width:fit-content;margin:0 auto; */gap:var(--spacer) 1.4em;flex-wrap:wrap;user-select:none;}
+    header>*{white-space:nowrap;}
+    /* PAGES / NAV */
+    nav a,nav a:hover{text-decoration-thickness:.08em !important;text-underline-offset:.1em;text-decoration:none;background:transparent !important;color:var(--text);}
+    nav a:hover{color:#f00;}
+    nav a.open{text-decoration:underline;color:var(--text);}
+    main{margin:0 calc(-1*var(--spacer));padding:0 var(--spacer);overflow-x:clip;}
+    /* .page:not(.open){display:none;} */
+    :root{--page-time:.3s;--page-ease:cubic-bezier(0.16, 1, 0.3, 1);}
+    main{position:relative;}
+    .page{display:none;}
+    .page.open{display:block;will-change:transform;}
+    .page.entering{animation:page-in var(--page-time) var(--page-ease) both;}
+    .page.leaving{display:block;position:absolute;top:0;left:0;right:0;pointer-events:none;animation:page-out var(--page-time) var(--page-ease) both;}
+    @keyframes page-in{from{transform:translateX(var(--dx));}to{transform:none;}}
+    @keyframes page-out{from{transform:none;}to{transform:translateX(var(--dx));}}
+    /* VIDEO */
+    .video{overflow:hidden;position:relative;width:960px;background:#000;max-width:100%;aspect-ratio:2.2/1;font-size:0;line-height:0;user-select:none;}
+    .video img,.video video,.video .controls .progress{width:100%;}
+    .video img{transition:all .25s;}
+    .video:hover img{transform:scale(1.04);}
+    .video:not(.playing)::after{content:"►";color:#0f0;font-size:2.2rem;line-height:1.3em;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);pointer-events:none;}
+    .video video,.video .controls{display:none;}
+    .video video{object-fit:cover;}
+    .video .controls{position:absolute;bottom:0;left:0;right:0;}
+    .video .progress{height:3px;overflow:hidden;padding-top:30px;background-clip:content-box;}
+    .video .progress-filled{width:0%;height:100%;background:#0f0;}
+    /* GALLERY */
+    .gallery{columns:360px;column-gap:var(--spacer);}
+    .gallery-item{break-inside:avoid;display:flex;flex-direction:column;row-gap:calc(1*var(--spacer));margin-bottom:calc(2*var(--spacer));}
+    .gallery-item img{width:100%;height:auto;display:block;user-select:none;}
+    /* SMALL */
+    small,.gallery-item figcaption,footer,footer a{color:var(--text);font-size:11px;line-height:1.3em;}
+    /* SVG */
+    svg *{fill:var(--text);}
+    svg.social{height:1em;vertical-align:-12%;}
+    svg.social *{fill:#00f;}
+    /* a:hover svg.social *{fill:#f00;} */
+    a:has(> svg.social),a:has(> svg.social):hover{background:transparent;backdrop-filter:none;box-shadow:none !important;}
+    /* a:hover svg.social *{fill:var(--background);} */
+    /* SPECIAL */
+    #links a{display:flex;}
+    #mitgliedakbw{width:190px;max-width:100%;display:block;}
+    @keyframes blink-loading{0%{opacity:0;}50%{opacity:1;}}.loading{animation:.3s blink-loading steps(1) infinite;}
+    @keyframes position{100%{outline-color:transparent;outline-offset:20px;}}#map{width:700px;max-width:100%;aspect-ratio:150/75;background:center center url(img/other/world.gif) no-repeat scroll;position:relative;background-size:contain;}#map:after{top:23%;left:52.5%;outline:1px solid #0f0;background:#0f0;/* border:1px solid #000; */box-shadow:0 0 3px #000;animation:position 1.2s infinite ease-out;width:7px;height:7px;border-radius:100vmax;pointer-events:none;position:absolute;transform:translate(-50%,-50%);display:block;content:"";}
+    #cursor{width:12px;height:12px;background:#fff1;backdrop-filter:blur(20px) invert(100%) saturate(10);-webkit-backdrop-filter:blur(20px) invert(100%) saturate(10);border-radius:100vmax;position:fixed;top:-50px;left:50%;transform:translate(-50%,-50%);font-size:0;line-height:0;z-index:99999999;pointer-events:none;}*{cursor:none !important;}
+</style>
+</head>
+<body>
+
+
+
+
+<div class="marquee"><div class="marquee-track"><span lang="zh-Hant">歡迎</span><span lang="es">Bienvenidos</span><span lang="en">Welcome</span><span lang="hi">स्वागत है</span><span lang="ar">اهلا وسهلا</span><span lang="bn">স্বাগত</span><span lang="pt">Bem-vindo</span><span lang="ru">Добро пожаловать</span><span lang="ur">خوش آمدید</span><span lang="ja">ようこそ</span><span lang="id">Selamat datang</span><span lang="de">Willkommen</span><span lang="tr">Hoş geldiniz</span><span lang="ta">வரவேற்பு</span><span lang="fr">Bienvenue</span><span lang="ko">어서 오십시오</span><span lang="vi">Chào mừng</span><span lang="jv">Sugeng Rawuh</span><span lang="sw">Karibu</span><span lang="sa">Svāgatam</span><span lang="it">Benvenuti</span><span lang="pa">ਸਵਾਗਤ ਹੈ</span></div></div>
+<header>
+    <h1 class="loading">Joey Schweickhardt</h1>
+    <nav>
+        <a href="/works">Works</a>,
+        <a href="/places">Places</a>,
+        <!-- <a href="/about">About</a>, -->
+        <a href="/contact">Contact</a>
+    </nav>
+    <span>
+        <span id="city"> Stuttgart</span>
+        <svg height=".9em" style="vertical-align:-8%;" viewBox="0 0 400 262" xmlns="http://www.w3.org/2000/svg"><title>Germany</title><path style="fill:none" stroke="black" stroke-width="10" d="M200.005,5C146.594,5 98.162,18.773 62.813,41.345C27.463,63.917 5,95.616 5,131C5,166.384 27.463,198.083 62.813,220.655C98.162,243.227 146.594,257 200.005,257C253.416,257 301.838,243.227 337.187,220.655C372.537,198.083 395,166.384 395,131C395,95.616 372.537,63.917 337.187,41.345C301.838,18.773 253.416,5 200.005,5Z"/><g transform="matrix(0.83346,0,0,0.83346,37.307976,21.816724)"><path fill="black" fill-rule="evenodd" d="M130.576,33.489L130.576,228.511L219.176,228.511C246.794,228.511 269.424,205.881 269.424,178.263L269.424,83.737C269.424,56.119 246.794,33.489 219.176,33.489L130.576,33.489ZM155.622,58.535L219.176,58.535C233.352,58.535 244.378,69.561 244.378,83.737L244.378,178.263C244.378,192.439 233.352,203.465 219.176,203.465L155.622,203.465L155.622,58.535Z"/></g></svg>
+        <span id="weather"></span>
+    </span>
+    <span id="time"></span>
+</header>
+<hr>
+<main>
+    <div class="page" id="works">
+        <div class="video">
+            <img fetchpriority="high" src="img/other/landderechsen.webp" alt="Land der Echsen">
+            <video oncontextmenu="return false;" preload="none" tabindex="0">
+                <source src="video/LandDerEchsen1080.mp4" type="video/mp4">
+                <source src="video/LandDerEchsen720.webm" type="video/webm">
+            </video>
+            <div class="controls"><div class="progress"><div class="progress-filled"></div></div></div>
+        </div>
+        <p style="text-indent:3em;">On the forgotten grounds of a derelict freight yard, a new urban quarter is taking shape. For years, non-profit collectives have occupied the old loading halls, breathing life into the decaying space. But now, as redevelopment plans advance and demolition looms, they are forced to leave. Just then, an unexpected presence appears: lizards. Silent, enigmatic, and strangely defiant, they threaten to derail the entire project.</p>
+        <p style="text-indent:3em;">Born from <i>Anti-Stuttgart &mdash; A Determinate Negation</i>, a critical design studio at <a href="https://www.igma.uni-stuttgart.de/en/">IGmA</a>, the film reimagines urban development as a stage for ecological and political tension. Premiered at the University of Stuttgart’s architecture <a href="https://www.k1.live/">graduate exhibition</a> and featured at <a href="https://www.current-stuttgart.de/">CURRENT Festival</a> for Art and Urban Space.</p>
+        <hr>
+        <div class="gallery">
+            <img loading="lazy" src="img/250625-2.webp" alt="Casa di accoglienza dei pellegrini di San Pietro, Renovation">
+            <img loading="lazy" src="img/250625.webp" alt="Casa di accoglienza dei pellegrini di San Pietro, Urban Situation">
+            <img loading="lazy" src="img/260509.webp" alt="Synth Web App with USB Keyboard Control">
+            <img loading="lazy" src="img/250531.webp" alt="WKT Geometry Visualizer Web App for ICD">
+            <img loading="lazy" src="img/250610.webp" alt="IntCDC Urbach Tower Model with Transport Box">
+            <img loading="lazy" src="img/240719.webp" alt="Pauluskirche Extension, Tiered Seating">
+            <img loading="lazy" src="img/240719-3.webp" alt="Pauluskirche Extension, Urban Situation">
+            <img loading="lazy" src="img/231005.webp" alt="419 Helvetia Campus Facade Model for Herzog & de Meuron">
+            <img loading="lazy" src="img/220311.webp" alt="Lightweight Pneu Pavilions">
+            <img loading="lazy" src="img/220311-2.webp" alt="Pneu Concept">
+            <img loading="lazy" src="img/210211.webp" alt="Vasikkasaari Climate Institute Helsinki">
+            <img loading="lazy" src="img/201018.webp" alt="Wardrobe with Hand-sewn Curtain">
+            <img loading="lazy" src="img/200125.webp" alt="Light Studies Models">
+            <img loading="lazy" src="img/191115.webp" alt="Wooden Structure with Traction Cables">
+            <img loading="lazy" src="img/190722.webp" alt="Sint Aneke Club Antwerp">
+            <img loading="lazy" src="img/190926.webp" alt="Slot-together Model">
+            <img loading="lazy" src="img/190208.webp" alt="Cuboid Perspective">
+            <img loading="lazy" src="img/190208-2.webp" alt="Cuboid Perspective Preparation">
+            <img loading="lazy" src="img/190208-3.webp" alt="Cuboid Axonometry">
+            <img loading="lazy" src="img/190509.webp" alt="Ruled Surfaces">
+            <img loading="lazy" src="img/201202.webp" alt="Pineapple, Etching">
+            <img loading="lazy" src="img/181130.webp" alt="Tools, Drawing">
+            <img loading="lazy" src="img/181116.webp" alt="Leichtsinn, Collage">
+        </div>
+    </div>
+    <div class="page" id="places">
+        <div class="gallery">
+            <img src="img/260524.webp" alt="Neckarinsel">
+            <img src="img/260417.webp" alt="419 Helvetia Campus, Herzog & de Meuron">
+            <img src="img/260404.webp" alt="Stuttgart Main Station, Christoph Ingenhoven with Frei Otto">
+            <img src="img/251215.webp" alt="L’Arbre Blanc, Sou Fujimoto">
+            <img src="img/251217.webp" alt="423 Îlot A3, Herzog & de Meuron">
+            <img src="img/250610-2.webp" alt="Marktplatz Stuttgart">
+            <img src="img/241229.webp" alt="San Pietro di Tuscania">
+            <img src="img/241215.webp" alt="PR16">
+            <img src="img/230820.webp" alt="048 Railway Engine Depot, Herzog & de Meuron">
+            <img src="img/230114.webp" alt="Sant’ Ireneo, Mauro Galantino">
+            <img src="img/230109.webp" alt="Via Albricci 10, Asnago Vender">
+            <img src="img/230104.webp" alt="Nilufar Gallery">
+            <img src="img/221104.webp" alt="Monte Amiata, Carlo Aymonino">
+            <img src="img/221030.webp" alt="Amendola, Arrigo Arrighetti">
+            <img src="img/220915.webp" alt="Emergence Pool, Nari Ward">
+            <img src="img/220910.webp" alt="ADI">
+            <img src="img/220904.webp" alt="Clouds">
+            <img src="img/210102.webp" alt="Creek">
+            <img src="img/190927.webp" alt="Flora">
+            <img src="img/190317.webp" alt="Death Valley">
+            <img src="img/190315.webp" alt="Campfire in a Sandy Forest">
+            <img src="img/190311.webp" alt="Salk Institute, Louis Kahn">
+            <img src="img/180925.webp" alt="Switzerland">
+            <img src="img/180524.webp" alt="Eel Soup">
+            <img src="img/180512.webp" alt="Hương Sơn">
+            <img src="img/170617.webp" alt="Merano">
+            <img src="img/160811.webp" alt="Jökulsárlón Glacial Lake">
+            <img src="img/160809.webp" alt="Landmannalaugar">
+            <img src="img/160809-2.webp" alt="Footprints">
+            <img src="img/160808.webp" alt="Nýidalur">
+        </div>
+    </div>
+    <!-- <div class="page" id="about">
+        <h2>Professional</h2>
+        <table>
+            <tr><td data-title="01.10.2025-">2025-Present</td><td>SCHMELZLE+PARTNER</td></tr>
+            <tr><td data-title="01.03.2024-31.07.2025">2025</td><td>Institute for Computational Design and Construction (ICD)<br>University of Stuttgart</td></tr>
+            <tr><td data-title="01.05.2024-31.05.2025">2024-2025</td><td>Cluster of Excellence<br>Integrative Computational Design and Construction for Transformative Architecture (IntCDC)<br>University of Stuttgart</td></tr>
+            <tr><td data-title="01.03.2023-29.02.2024">2023&ndash;2024</td><td>Herzog & de Meuron</td></tr>
+            <tr><td data-title="14.03.2023-09.09.2023">2022</td><td>BEHNISCH ARCHITEKTEN</td></tr>
+            <tr><td data-title="25.10.2022-28.02.2023">2021&ndash;2022</td><td>REM ASSETS</td></tr>
+            <tr><td data-title="01.10.2021-30.09.2022">2020&ndash;2021</td><td>Werner Sobek</td></tr>
+        </table>
+        <hr>
+        <h2>Academic</h2>
+        <table>
+            <tr><td data-title="01.10.2021-16.06.2025">2021&ndash;2025</td><td>University of Stuttgart, MSc Architecture and Urban Planning</td></tr>
+            <tr><td data-title="05.09.2022-26.01.2023">2022&ndash;2023</td><td>Politecnico di Milano, Study Abroad, Architecture and Urban Design</td></tr>
+            <tr><td data-title="15.07.2022-22.07.2022">2022</td><td>Architectural Association School of Architecture/State Academy of Fine Arts Stuttgart, Visiting School</td></tr>
+            <tr><td data-title="01.10.2018-30.09.2021">2018&ndash;2021</td><td>University of Stuttgart, BSc Architecture and Urban Planning</td></tr>
+        </table>
+        <hr>
+        <h2>Honors</h2>
+        <table>
+            <tr><td data-title="">2025</td><td>Design Project Selection, Institute of Public Buildings and Design, University of Stuttgart</td></tr>
+            <tr><td data-title="01.04.2023-31.03.2024">2023&ndash;2024</td><td>Deutschlandstipendium Scholarship, Federal Republic of Germany/Ed. Züblin AG</td></tr>
+            <tr><td data-title="01.03.2023-29.02.2024">2023&ndash;2024</td><td>Swiss-European Mobility Programme</td></tr>
+            <tr><td data-title="05.09.2022-26.01.2023,01.03.2023-02.10.2023">2022&ndash;2023</td><td>Erasmus+ schoolarship, European Union</td></tr>
+            <tr><td data-title="24.06.2022-04.07.2022">2022</td><td>Graduate Design Projects Selection, Department of Architecture, University of Stuttgart</td></tr>
+            <tr><td data-title="16.09.2021-17.09.2021">2021</td><td>Film screening, CURRENT Festival for Art and Urban Space</td></tr>
+            <tr><td data-title="13.01.2020-25.01.2020">2020</td><td>Annual Design Projects Selection, Institute for Spatial Conception and Fundamentals of Design, University of Stuttgart</td></tr>
+        </table>
+        <hr>
+        <h2>Links</h2>
+        <p id="links">
+            <a href="https://www.neckarinsel.eu/en">Neckarinsel e.V.</a>
+            <a href="https://www.akbw.de/">Architektenkammer Baden-Württemberg</a>
+            <a href="https://www.stadtluecken.de/">Stadtlücken e.V.</a>
+            <a href="https://www.stmariaals.de/">St. Maria als</a>
+            <a href="https://www.stadtpalais-stuttgart.de/">StadtPalais</a>
+            <a href="https://www.f01.uni-stuttgart.de/">Fakultät Architektur und Stadtplanung, Universität Stuttgart</a>
+            <a href="https://kunstverein-wagenhalle.de/">Kunstverein Wagenhallen e.V.</a>
+            <a href="https://www.iba27.de/en/">IBA’27</a>
+            <a href="https://samschweickhardt.com">Sam L. Schweickhardt</a>
+            <a href="https://zuckerle-wein.de">Zuckerle Wein</a>
+        </p>
+    </div> -->
+    <div class="page" id="contact">
+        <p>
+            Joey Schweickhardt<br>
+            <span class="address1"></span><br>
+            <span class="address2"></span><br>
+            Germany
+        </p>
+        <p>
+            <a class="phone" href="javascript:"></a><br>
+            <a class="email" href="javascript:"></a>
+        </p>
+        <p>
+            <a href="https://www.linkedin.com/in/joeyschweickhardt/"><svg class="social" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg"><title>LinkedIn</title><path fill="var(--text)" fill-rule="evenodd" d="M8 72h56a8 8 0 0 0 8-8V8a8 8 0 0 0-8-8H8a8 8 0 0 0-8 8v56a8 8 0 0 0 8 8z M62 62H51.3V43.8c0-5-1.9-7.8-5.8-7.8-4.3 0-6.6 2.9-6.6 7.8V62H28.6V27.3h10.3V32s3.1-5.7 10.5-5.7S62 30.8 62 40.1V62z M16.3 22.8A6.4 6.4 0 1 1 16.3 10a6.4 6.4 0 0 1 0 12.8z M11 62h10.8V27.3H11V62z"/></svg></a>
+            <a href="https://www.instagram.com/joeyws"><svg class="social" viewBox="0 0 169.063 169.063" xmlns="http://www.w3.org/2000/svg"><title>Instagram</title><path fill="var(--text)" fill-rule="evenodd" d="M122.4 0H46.7C20.9 0 0 20.9 0 46.7v75.7c0 25.7 20.9 46.7 46.7 46.7h75.7c25.7 0 46.7-20.9 46.7-46.7V46.7 C169.1 20.9 148.1 0 122.4 0z M154.1 122.4c0 17.5-14.2 31.7-31.7 31.7H46.7c-17.5 0-31.7-14.2-31.7-31.7V46.7 C15 29.2 29.2 15 46.7 15h75.7c17.5 0 31.7 14.2 31.7 31.7v75.7z M84.5 41c-24 0-43.6 19.5-43.6 43.6s19.6 43.6 43.6 43.6 43.6-19.6 43.6-43.6 S108.6 41 84.5 41zm0 72.1c-15.7 0-28.6-12.8-28.6-28.6S68.8 56 84.5 56s28.6 12.8 28.6 28.6 -12.9 28.6-28.6 28.6z M129.9 28.3c-2.9 0-5.7 1.2-7.8 3.2-2 2-3.2 4.9-3.2 7.8s1.2 5.7 3.2 7.8 c2 2 4.9 3.2 7.8 3.2s5.7-1.2 7.8-3.2c2.1-2.1 3.2-4.9 3.2-7.8s-1.1-5.7-3.2-7.8 c-2-2-4.9-3.2-7.8-3.2z"/></svg></a>
+            <a class="whatsapp" href="javascript:"><svg class="social" viewBox="0 0 30.667 30.667" xmlns="http://www.w3.org/2000/svg"><title>WhatsApp</title><path d="M30.667,14.939c0,8.25-6.74,14.938-15.056,14.938c-2.639,0-5.118-0.675-7.276-1.857L0,30.667l2.717-8.017 c-1.37-2.25-2.159-4.892-2.159-7.712C0.559,6.688,7.297,0,15.613,0C23.928,0.002,30.667,6.689,30.667,14.939z M15.61,2.382 c-6.979,0-12.656,5.634-12.656,12.56c0,2.748,0.896,5.292,2.411,7.362l-1.58,4.663l4.862-1.545c2,1.312,4.393,2.076,6.963,2.076 c6.979,0,12.658-5.633,12.658-12.559C28.27,8.016,22.59,2.382,15.61,2.382z M23.214,18.38c-0.094-0.151-0.34-0.243-0.708-0.427 c-0.367-0.184-2.184-1.069-2.521-1.189c-0.34-0.123-0.586-0.185-0.832,0.182c-0.243,0.367-0.951,1.191-1.168,1.437 c-0.215,0.245-0.43,0.276-0.799,0.095c-0.369-0.186-1.559-0.57-2.969-1.817c-1.097-0.972-1.838-2.169-2.052-2.536 c-0.217-0.366-0.022-0.564,0.161-0.746c0.165-0.165,0.369-0.428,0.554-0.643c0.185-0.213,0.246-0.364,0.369-0.609 c0.121-0.245,0.06-0.458-0.031-0.643c-0.092-0.184-0.829-1.984-1.138-2.717c-0.307-0.732-0.614-0.611-0.83-0.611 c-0.215,0-0.461-0.03-0.707-0.03S9.897,8.215,9.56,8.582s-1.291,1.252-1.291,3.054c0,1.804,1.321,3.543,1.506,3.787 c0.186,0.243,2.554,4.062,6.305,5.528c3.753,1.465,3.753,0.976,4.429,0.914c0.678-0.062,2.184-0.885,2.49-1.739 C23.307,19.268,23.307,18.533,23.214,18.38z"/></svg></a>
+        </p>
+        <hr>
+        <div id="map"></div>
+        <p><small>Image: NASA/Blue Marble</small></p>
+        <hr>
+        <svg id="mitgliedakbw" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 388.3 99.2" style="enable-background:new 0 0 388.3 99.2;"><title>Member Chamber of Architects Baden-Württemberg</title><path d="M75.6,61.8V44.9h5.7l2.6,11.5h0l2.8-11.5h5.5v16.9h-3.4v-13h0l-3.3,13h-3.4l-3.1-13h0v13H75.6z"/><path d="M98.5,44.9v2.6h-3.3v-2.6H98.5z M98.5,61.8h-3.3V50h3.3V61.8z"/><path d="M100.1,50h1.3v-1.9l3.3-1.5V50h1.7v2h-1.7v6.3c0,0.9,0,1.5,1.1,1.5c0.2,0,0.4,0,0.6,0v2c-0.4,0-0.9,0.1-1.7,0.1c-2.9,0-3.2-1.9-3.2-2.6v-7.3h-1.3V50z"/><path d="M117,50v12.3c0,0.8,0,4-4.5,4c-2.5,0-4.6-0.6-4.6-3.5h3.2c0,0.5,0.1,0.9,0.3,1.2c0.2,0.3,0.6,0.5,1.1,0.5c0.8,0,1.2-0.8,1.2-2v-2.3h0c-0.5,0.9-1.4,1.4-2.5,1.4c-3.6,0-3.5-3.3-3.5-6c0-2.6,0-5.9,3.5-5.9c1.2,0,2.2,0.5,2.6,1.6h0V50H117z M112.3,59.6c1.2,0,1.4-1.2,1.4-3.7c0-2.6-0.1-4.1-1.3-4.1c-1.2,0-1.5,0.9-1.5,4.5C110.9,57.4,110.8,59.6,112.3,59.6z"/><path d="M123.3,44.9v16.9H120V44.9H123.3z"/><path d="M129.8,44.9v2.6h-3.3v-2.6H129.8z M129.8,61.8h-3.3V50h3.3V61.8z"/><path d="M135.7,56.5c0,1.4,0,3.5,1.5,3.5c1.2,0,1.4-1.1,1.4-2.1h3.3c0,1.3-0.5,2.3-1.3,3.1c-0.8,0.7-1.9,1.1-3.5,1.1c-4.3,0-4.8-2.6-4.8-6.3c0-3.2,0.5-6,4.8-6c4.4,0,4.9,2.9,4.8,6.7H135.7z M138.7,54.6c0-1.1,0-2.8-1.5-2.8c-1.5,0-1.5,1.8-1.5,2.8H138.7z"/><path d="M150.3,61.8v-1.3h0c-0.6,1.1-1.5,1.5-2.8,1.5c-3.4,0-3.3-3.8-3.3-6.2c0-2.4-0.1-6.1,3.2-6.1c1.2,0,2,0.4,2.7,1.4h0v-6.2h3.3v16.9H150.3z M150.1,55.8c0-2.4,0-4-1.3-4c-1.4,0-1.4,1.6-1.4,4c0,3,0.2,4.2,1.4,4.2C149.9,60,150.1,58.8,150.1,55.8z"/><path d="M167.2,61.8v-1.3h0c-0.6,1.1-1.5,1.5-2.8,1.5c-3.4,0-3.3-3.8-3.3-6.2c0-2.4-0.1-6.1,3.2-6.1c1.2,0,2,0.4,2.7,1.4h0v-6.2h3.3v16.9H167.2z M167,55.8c0-2.4,0-4-1.3-4c-1.4,0-1.4,1.6-1.4,4c0,3,0.2,4.2,1.4,4.2C166.8,60,167,58.8,167,55.8z"/><path d="M176,56.5c0,1.4,0,3.5,1.5,3.5c1.2,0,1.4-1.1,1.4-2.1h3.3c0,1.3-0.5,2.3-1.3,3.1c-0.8,0.7-1.9,1.1-3.5,1.1c-4.3,0-4.8-2.6-4.8-6.3c0-3.2,0.5-6,4.8-6c4.4,0,4.9,2.9,4.8,6.7H176z M179,54.6c0-1.1,0-2.8-1.5-2.8c-1.5,0-1.5,1.8-1.5,2.8H179z"/><path d="M187.8,50v1.5h0c0.6-1.4,1.7-1.8,3.1-1.8v2.9c-2.9-0.2-2.9,1.5-2.9,2.7v6.4h-3.3V50H187.8z"/><path d="M196.5,61.8l4.7-16.9h4.7l4.6,16.9h-3.7l-0.9-3.7H201l-1,3.7H196.5z M203.3,48.2L203.3,48.2l-1.7,7.3h3.4L203.3,48.2z"/><path d="M215.1,50v1.5h0c0.6-1.4,1.7-1.8,3.1-1.8v2.9c-2.9-0.2-2.9,1.5-2.9,2.7v6.4h-3.3V50H215.1z"/><path d="M225.8,54.2c0-1.8-0.4-2.3-1.5-2.3c-1.4,0-1.5,1.2-1.5,3.7c0,3.6,0.3,4.4,1.5,4.4c1,0,1.5-0.9,1.5-2.5h3.3c0,3.2-1.7,4.6-4.8,4.6c-4.3,0-4.8-2.6-4.8-6.3c0-3.2,0.5-6,4.8-6c3,0,4.8,1.4,4.8,4.4H225.8z"/><path d="M237.2,61.8v-8.1c0-1.1-0.2-1.9-1.2-1.9s-1.2,0.8-1.2,1.9v8.1h-3.3V44.9h3.3v6.3h0c0.3-0.5,0.7-0.9,1.2-1.1c0.5-0.2,1-0.3,1.6-0.3c1.6,0,2.9,0.9,2.9,2.6v9.5H237.2z"/><path d="M246.7,44.9v2.6h-3.3v-2.6H246.7z M246.7,61.8h-3.3V50h3.3V61.8z"/><path d="M248.3,50h1.3v-1.9l3.3-1.5V50h1.7v2h-1.7v6.3c0,0.9,0,1.5,1.1,1.5c0.2,0,0.4,0,0.6,0v2c-0.4,0-0.9,0.1-1.7,0.1c-2.9,0-3.2-1.9-3.2-2.6v-7.3h-1.3V50z"/><path d="M259.2,56.5c0,1.4,0,3.5,1.5,3.5c1.2,0,1.4-1.1,1.4-2.1h3.3c0,1.3-0.5,2.3-1.3,3.1c-0.8,0.7-1.9,1.1-3.5,1.1c-4.3,0-4.8-2.6-4.8-6.3c0-3.2,0.5-6,4.8-6c4.4,0,4.9,2.9,4.8,6.7H259.2z M262.2,54.6c0-1.1,0-2.8-1.5-2.8c-1.5,0-1.5,1.8-1.5,2.8H262.2z"/><path d="M267.8,61.8V44.9h3.3V55h0l3-5h3.4l-3.3,5.3l3.7,6.6h-3.7l-3.1-6.4h0v6.4H267.8z"/><path d="M278.2,50h1.3v-1.9l3.3-1.5V50h1.7v2h-1.7v6.3c0,0.9,0,1.5,1.1,1.5c0.2,0,0.4,0,0.6,0v2c-0.4,0-0.9,0.1-1.7,0.1c-2.9,0-3.2-1.9-3.2-2.6v-7.3h-1.3V50z"/><path d="M289.1,56.5c0,1.4,0,3.5,1.5,3.5c1.2,0,1.4-1.1,1.4-2.1h3.3c0,1.3-0.5,2.3-1.3,3.1c-0.8,0.7-1.9,1.1-3.5,1.1c-4.3,0-4.8-2.6-4.8-6.3c0-3.2,0.5-6,4.8-6c4.4,0,4.9,2.9,4.8,6.7H289.1z M292.1,54.6c0-1.1,0-2.8-1.5-2.8c-1.5,0-1.5,1.8-1.5,2.8H292.1z"/><path d="M301,51.2L301,51.2c0.4-0.5,0.8-0.9,1.2-1.1c0.5-0.2,1-0.3,1.6-0.3c1.6,0,2.9,0.9,2.9,2.6v9.5h-3.3v-8.1c0-1.1-0.2-1.9-1.2-1.9c-1.1,0-1.2,0.8-1.2,1.9v8.1h-3.3V50h3.3V51.2z"/><path d="M309.4,61.8V44.9h3.3V55h0l3-5h3.4l-3.3,5.3l3.7,6.6h-3.7l-3.1-6.4h0v6.4H309.4z"/><path d="M330.1,59.6c0,0.7,0.1,1.5,0.2,2.2h-3.1l-0.1-1.6h0c-0.7,1.2-1.7,1.8-3.1,1.8c-2.3,0-3.1-1.7-3.1-3.8c0-3.9,3-4.1,6.1-4v-0.9c0-1-0.1-1.7-1.3-1.7c-1.1,0-1.2,0.9-1.2,1.8h-3.2c0-1.4,0.4-2.3,1.2-2.9c0.7-0.6,1.8-0.8,3.1-0.8c4.2,0,4.7,1.8,4.7,4V59.6z M324,58.2c0,0.8,0.1,1.9,1.2,1.9c1.9,0,1.6-2.6,1.6-3.9C325.2,56.2,324,56.1,324,58.2z"/><path d="M335.9,51.2L335.9,51.2c0.7-1.1,1.6-1.4,2.8-1.4c1.2,0,2.1,0.6,2.6,1.5c0.8-1,1.7-1.5,3.1-1.5c1.6,0,2.9,0.9,2.9,2.6v9.5h-3.3v-8.1c0-1.1-0.2-1.9-1.2-1.9c-1.1,0-1.2,0.8-1.2,1.9v8.1h-3.2v-8.1c0-1.1-0.2-1.9-1.2-1.9c-1.1,0-1.2,0.8-1.2,1.9v8.1h-3.3V50h3.3V51.2z"/><path d="M352.8,51.2L352.8,51.2c0.7-1.1,1.6-1.4,2.8-1.4c1.2,0,2.1,0.6,2.6,1.5c0.8-1,1.7-1.5,3.1-1.5c1.6,0,2.9,0.9,2.9,2.6v9.5H361v-8.1c0-1.1-0.2-1.9-1.2-1.9c-1.1,0-1.2,0.8-1.2,1.9v8.1h-3.2v-8.1c0-1.1-0.2-1.9-1.2-1.9c-1.1,0-1.2,0.8-1.2,1.9v8.1h-3.3V50h3.3V51.2z"/><path d="M369.7,56.5c0,1.4,0,3.5,1.5,3.5c1.2,0,1.4-1.1,1.4-2.1h3.3c0,1.3-0.5,2.3-1.3,3.1c-0.8,0.7-1.9,1.1-3.5,1.1c-4.3,0-4.8-2.6-4.8-6.3c0-3.2,0.5-6,4.8-6c4.4,0,4.9,2.9,4.8,6.7H369.7z M372.7,54.6c0-1.1,0-2.8-1.5-2.8c-1.5,0-1.5,1.8-1.5,2.8H372.7z"/><path d="M381.5,50v1.5h0c0.6-1.4,1.7-1.8,3.1-1.8v2.9c-2.9-0.2-2.9,1.5-2.9,2.7v6.4h-3.3V50H381.5z"/><path d="M75.7,89.9V73H82c2.7,0,4.9,0.8,4.9,4.4c0,1.9-1,3.3-2.9,3.7v0c2.5,0.4,3.2,2,3.2,4.3c0,4.3-3.7,4.5-5.2,4.5H75.7z M79.2,79.9h2.4c0.8,0,1.8-0.5,1.8-2.2c0-1.2-0.8-2.2-2-2.2h-2.2V79.9z M79.2,87.3h2c0.7,0,2.4,0,2.4-2.4c0-1.5-0.6-2.4-2.3-2.4h-2.1V87.3z"/><path d="M98.7,87.7c0,0.7,0.1,1.5,0.2,2.2h-3.1l-0.1-1.6h0c-0.7,1.2-1.7,1.8-3.1,1.8c-2.3,0-3.1-1.7-3.1-3.8c0-3.9,3-4.1,6.1-4v-0.9c0-1-0.1-1.7-1.3-1.7c-1.1,0-1.2,0.9-1.2,1.8h-3.2c0-1.4,0.4-2.3,1.2-2.9c0.7-0.6,1.8-0.8,3.1-0.8c4.2,0,4.7,1.8,4.7,4V87.7z M92.6,86.2c0,0.8,0.1,1.9,1.2,1.9c1.9,0,1.6-2.6,1.6-3.9C93.9,84.3,92.6,84.1,92.6,86.2z"/><path d="M107.4,89.9v-1.3h0c-0.6,1.1-1.5,1.5-2.8,1.5c-3.4,0-3.3-3.8-3.3-6.2c0-2.4-0.1-6.1,3.2-6.1c1.2,0,2,0.4,2.7,1.4h0V73h3.3v16.9H107.4z M107.2,83.9c0-2.4,0-4-1.3-4c-1.4,0-1.4,1.6-1.4,4c0,3,0.2,4.2,1.4,4.2C107,88.1,107.2,86.9,107.2,83.9z"/><path d="M116.2,84.5c0,1.4,0,3.5,1.5,3.5c1.2,0,1.4-1.1,1.4-2.1h3.3c0,1.3-0.5,2.3-1.3,3.1c-0.8,0.7-1.9,1.1-3.5,1.1c-4.3,0-4.8-2.6-4.8-6.3c0-3.2,0.5-6,4.8-6c4.4,0,4.9,2.9,4.8,6.7H116.2z M119.2,82.7c0-1.1,0-2.8-1.5-2.8c-1.5,0-1.5,1.8-1.5,2.8H119.2z"/><path d="M128.2,79.3L128.2,79.3c0.4-0.5,0.8-0.9,1.2-1.1c0.5-0.2,1-0.3,1.6-0.3c1.6,0,2.9,0.9,2.9,2.6v9.5h-3.3v-8.1c0-1.1-0.2-1.9-1.2-1.9s-1.2,0.8-1.2,1.9v8.1h-3.3V78.1h3.3V79.3z"/><path d="M142,82.4v2.4h-5.7v-2.4H142z"/><path d="M143,73h3.6l2.2,11.9h0l2.7-11.9h4.2l2.5,11.9h0l2.1-11.9h3.5l-3.7,16.9h-3.9l-2.6-12.4h0l-2.9,12.4h-3.8L143,73z"/><path d="M170.9,88.7L170.9,88.7c-0.4,0.5-0.7,0.9-1.2,1.1c-0.5,0.2-1,0.3-1.6,0.3c-1.6,0-2.9-0.9-2.9-2.6v-9.5h3.3v8.2c0,1.1,0.2,1.8,1.2,1.8s1.2-0.8,1.2-1.8v-8.2h3.3v9.5c0,0.8,0,1.6,0.1,2.3h-3.4V88.7z M168.9,73.6v2.5h-2.6v-2.5H168.9z M173.1,73.6v2.5h-2.6v-2.5H173.1z"/><path d="M180,78.1v1.5h0c0.6-1.4,1.7-1.8,3.1-1.8v2.9c-2.9-0.2-2.9,1.5-2.9,2.7v6.4h-3.3V78.1H180z"/><path d="M183.3,78.1h1.3v-1.9l3.3-1.5v3.3h1.7v2h-1.7v6.3c0,0.9,0,1.5,1.1,1.5c0.2,0,0.4,0,0.6,0v2c-0.4,0-0.9,0.1-1.7,0.1c-2.9,0-3.2-1.9-3.2-2.6v-7.3h-1.3V78.1z"/><path d="M189.8,78.1h1.3v-1.9l3.3-1.5v3.3h1.7v2h-1.7v6.3c0,0.9,0,1.5,1.1,1.5c0.2,0,0.4,0,0.6,0v2c-0.4,0-0.9,0.1-1.7,0.1c-2.9,0-3.2-1.9-3.2-2.6v-7.3h-1.3V78.1z"/><path d="M200.7,84.5c0,1.4,0,3.5,1.5,3.5c1.2,0,1.4-1.1,1.4-2.1h3.3c0,1.3-0.5,2.3-1.3,3.1c-0.8,0.7-1.9,1.1-3.5,1.1c-4.3,0-4.8-2.6-4.8-6.3c0-3.2,0.5-6,4.8-6c4.4,0,4.9,2.9,4.8,6.7H200.7z M203.7,82.7c0-1.1,0-2.8-1.5-2.8c-1.5,0-1.5,1.8-1.5,2.8H203.7z"/><path d="M212.4,79.3L212.4,79.3c0.7-1.1,1.6-1.4,2.8-1.4c1.2,0,2.1,0.6,2.6,1.5c0.8-1,1.7-1.5,3.1-1.5c1.6,0,2.9,0.9,2.9,2.6v9.5h-3.3v-8.1c0-1.1-0.2-1.9-1.2-1.9s-1.2,0.8-1.2,1.9v8.1h-3.2v-8.1c0-1.1-0.2-1.9-1.2-1.9s-1.2,0.8-1.2,1.9v8.1h-3.3V78.1h3.3V79.3z"/><path d="M226.2,73h3.3v6.2h0c0.7-1,1.5-1.4,2.7-1.4c3.3,0,3.2,3.7,3.2,6.1c0,2.4,0.1,6.2-3.3,6.2c-1.3,0-2.2-0.4-2.8-1.5h0v1.3h-3.1V73z M232.3,83.9c0-2.4,0-4-1.4-4c-1.4,0-1.3,1.6-1.3,4c0,3,0.2,4.2,1.3,4.2C232.1,88.1,232.3,86.9,232.3,83.9z"/><path d="M241,84.5c0,1.4,0,3.5,1.5,3.5c1.2,0,1.4-1.1,1.4-2.1h3.3c0,1.3-0.5,2.3-1.3,3.1c-0.8,0.7-1.9,1.1-3.5,1.1c-4.3,0-4.8-2.6-4.8-6.3c0-3.2,0.5-6,4.8-6c4.4,0,4.9,2.9,4.8,6.7H241z M244,82.7c0-1.1,0-2.8-1.5-2.8c-1.5,0-1.5,1.8-1.5,2.8H244z"/><path d="M252.8,78.1v1.5h0c0.6-1.4,1.7-1.8,3.1-1.8v2.9c-2.9-0.2-2.9,1.5-2.9,2.7v6.4h-3.3V78.1H252.8z"/><path d="M266.5,78.1v12.3c0,0.8,0,4-4.5,4c-2.5,0-4.6-0.6-4.6-3.5h3.2c0,0.5,0.1,0.9,0.3,1.2c0.2,0.3,0.6,0.5,1.1,0.5c0.8,0,1.2-0.8,1.2-2v-2.3h0c-0.5,0.9-1.4,1.4-2.5,1.4c-3.6,0-3.5-3.3-3.5-6c0-2.6,0-5.9,3.5-5.9c1.2,0,2.2,0.5,2.6,1.6h0v-1.4H266.5z M261.8,87.7c1.2,0,1.4-1.2,1.4-3.7c0-2.6-0.1-4.1-1.3-4.1c-1.2,0-1.5,0.9-1.5,4.5C260.4,85.5,260.2,87.7,261.8,87.7z"/><polygon points="34.6,15 34.6,8.2 61.9,6.1 59.8,33.4 53.1,33.4 54.7,13.3 "/><polygon points="39.6,33.4 42.1,26 34.6,28.4 34.6,21.3 51.7,16.3 46.7,33.4 "/><polygon points="10.2,6.1 12.7,13.6 5.2,11.1 5.2,18.2 22.3,23.2 17.3,6.1 "/><polygon points="57,62.8 49.9,62.8 44.9,45.8 61.9,50.7 61.9,57.8 54.5,55.4 "/><polygon points="61.9,44.4 41.9,42.7 43.5,62.8 36.8,62.8 34.6,35.5 61.9,37.6 "/><polygon points="23.7,6.1 25.3,26.3 5.2,24.6 5.2,31.3 32.5,33.4 30.4,6.1 "/><polygon points="7.4,35.5 5.2,62.8 32.5,60.7 32.5,54 12.5,55.7 14.1,35.5 "/><polygon points="27.6,35.5 25.1,43 32.5,40.5 32.5,47.6 15.5,52.6 20.5,35.5 "/></svg>
+        <hr>
+        <footer>
+            <!-- <h2>Legal Notice</h2>
+            <h3>Professional Title</h3>
+            <p>
+                <i>Architect</i>, awarded in Germany (reg. no. 171294)<br>
+                Member Chamber of Architects Baden-Württemberg<br>
+                Applicable regulations:<br>
+                &nbsp;&nbsp;&mdash; Architektengesetz Baden-Württemberg (ArchG BW)<br>
+                &nbsp;&nbsp;&mdash; Berufsordnung der Architektenkammer Baden-Württemberg
+            </p> -->
+            <h2>Privacy</h2>
+            <p>
+                No cookies. No analytics. Personal data may be processed by external providers, such as <a href="https://open-meteo.com/en/terms" rel="nofollow">Open‑Meteo</a> for weather data and <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="nofollow">GitHub</a> for hosting. <a href="https://www.baden-wuerttemberg.datenschutz.de/" rel="nofollow">Competent supervisory authority</a>.
+            </p>
+            <p>&copy; 2026 Joey Schweickhardt</p>
+        </footer>
+    </div>
+</main>
+
+
+
+
+
+<script>
+// SPA REDIRECT 404.HTML
+const redirectPath = sessionStorage.getItem('redirectPath');
+if (redirectPath) {
+    sessionStorage.removeItem('redirectPath');
+    history.replaceState(null, '', redirectPath);
+}
+
+
+// PRELOADER
+const preloader = document.querySelector('.marquee');
+let width = 1;
+const interval = setInterval(() => {
+    if (width < 80) {
+        width += Math.random() * 10;
+        preloader.style.width = width + 'vw';
+    }
+}, 100);
+window.addEventListener('load', () => {
+    clearInterval(interval);
+    preloader.style.width = '100vw';
+});
+
+
+// MARQUEE
+const marquee = document.querySelector('.marquee');
+const track = marquee.querySelector('.marquee-track');
+let trackWidth = track.offsetWidth;
+let marqueeWidth = marquee.offsetWidth;
+let numClones = Math.ceil(marqueeWidth / trackWidth);
+for (let i = 0; i < numClones; i++) {const clone = track.cloneNode(true); marquee.appendChild(clone);}
+
+
+// LOADING
+const toggleLoading = (show) => {
+    document.querySelectorAll('.loading').forEach(el => {
+        if (show) el.classList.add('loading');
+        else el.classList.remove('loading');
+    });
+};
+window.addEventListener('load', () => {toggleLoading(false);});
+
+
+// NAV
+const navLinks = document.querySelectorAll('nav a');
+const pages = document.querySelectorAll('.page');
+const navOrder = [...navLinks].map(a => a.getAttribute('href').replace('/', ''));
+let leaveTimer = null;
+let navToken = 0;
+const pageMs = () => parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--page-time')) * 1000;
+function preloadImages(page) {
+    const imgs = [...page.querySelectorAll('img')];
+    imgs.forEach(i => { i.loading = 'eager'; });
+    const first = imgs.slice(0, 8).map(i => i.decode().catch(() => {}));
+    return Promise.race([Promise.all(first), new Promise(r => setTimeout(r, 800))]);
+}
+function settle() {
+    clearTimeout(leaveTimer);
+    pages.forEach(p => p.classList.remove('leaving', 'entering'));
+}
+function showPage(id, animate = true) {
+    const next = document.getElementById(id);
+    if (!next) return;
+    settle();
+    const token = ++navToken;
+    const out = document.querySelector('.page.open');
+    if (out === next) return;
+    navLinks.forEach(a => a.classList.toggle('open', a.getAttribute('href') === '/' + id));
+    if (!animate || !out) {
+        pages.forEach(p => p.classList.remove('open'));
+        next.classList.add('open');
+        window.scrollTo(0, 0);
+        return;
+    }
+    const dir = navOrder.indexOf(id) > navOrder.indexOf(out.id) ? 1 : -1;
+    preloadImages(next).then(() => {
+        if (token !== navToken) return;
+        out.style.setProperty('--dx', `calc(${-dir} * (100% + var(--spacer)))`);
+        next.style.setProperty('--dx', `calc(${dir} * (100% + var(--spacer)))`);
+        window.scrollTo(0, 0);
+        out.classList.remove('open');
+        out.classList.add('leaving');
+        next.classList.add('open', 'entering');
+        leaveTimer = setTimeout(() => {
+            out.classList.remove('leaving');
+            next.classList.remove('entering');
+        }, pageMs());
+    });
+}
+function resolvePageId(path) {
+    const id = path.replace('/', '') || pages[0]?.id;
+    if (id && document.getElementById(id)) return id;
+    return pages[0]?.id;
+}
+navLinks.forEach(a => {
+    a.addEventListener('click', e => {
+        e.preventDefault();
+        const id = a.getAttribute('href').replace('/', '');
+        if (a.classList.contains('open')) return;
+        showPage(id);
+        history.pushState(null, '', '/' + id);
+    });
+});
+window.addEventListener('popstate', () => {
+    const id = resolvePageId(location.pathname);
+    if (id && !document.getElementById(id).classList.contains('open')) {
+        showPage(id);
+    }
+});
+const initialId = resolvePageId(location.pathname);
+if (initialId) showPage(initialId, false);
+/* // NAV
+const navLinks = document.querySelectorAll('nav a');
+const pages = document.querySelectorAll('.page');
+function showPage(id) {
+    pages.forEach(p => p.classList.toggle('open', p.id === id));
+    navLinks.forEach(a => a.classList.toggle('open', a.getAttribute('href') === '/' + id));
+}
+function resolvePageId(path) {
+    const id = path.replace('/', '') || pages[0]?.id;
+    if (id && document.getElementById(id)) return id;
+    return pages[0]?.id;
+}
+navLinks.forEach(a => {
+    a.addEventListener('click', e => {
+        e.preventDefault();
+        const id = a.getAttribute('href').replace('/', '');
+        if (a.classList.contains('open')) return;
+        showPage(id);
+        history.pushState(null, '', '/' + id);
+    });
+});
+window.addEventListener('popstate', () => {
+    const id = resolvePageId(location.pathname);
+    if (id && !document.getElementById(id).classList.contains('open')) {
+        showPage(id);
+    }
+});
+const initialId = resolvePageId(location.pathname);
+if (initialId) showPage(initialId); */
+
+
+// CURSOR
+if (window.matchMedia('(pointer: fine)').matches) {
+    const cursor = document.createElement('div');
+    cursor.id = 'cursor';
+    cursor.style.position = 'fixed';
+    cursor.style.pointerEvents = 'none';
+    cursor.style.opacity = '0';
+    document.body.appendChild(cursor);
+    let mouseX = 0;
+    let mouseY = 0;
+    let rafId = null;
+    document.addEventListener('mousemove', e => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        if (!rafId) {
+            rafId = requestAnimationFrame(() => {
+                cursor.style.top = mouseY + 'px';
+                cursor.style.left = mouseX + 'px';
+                cursor.style.opacity = '1';
+                rafId = null;
+            });
+        }
+    });
+    document.addEventListener('mouseout', e => { if (!e.relatedTarget && !e.toElement) {cursor.style.opacity = '0';} });
+    document.addEventListener('mouseover', e => { if (!e.relatedTarget) {cursor.style.opacity = '1';} });
+}
+
+
+// GALLERY
+document.querySelectorAll('.gallery').forEach(gallery => {
+    [...gallery.querySelectorAll('img')].forEach(img => {
+        const figure = document.createElement('figure');
+        figure.className = 'gallery-item';
+        const caption = document.createElement('figcaption');
+        const span = document.createElement('span');
+        span.textContent = img.alt;
+        caption.appendChild(span);
+        img.parentNode.insertBefore(figure, img);
+        figure.appendChild(img);
+        figure.appendChild(caption);
+    });
+});
+
+
+// TIME
+function getTime() {
+    const now = new Date();
+    const weekday = now.toLocaleDateString("en-GB", {weekday: "long", timeZone: "Europe/Berlin"});
+    const day = now.toLocaleDateString("en-GB", {day: "numeric", timeZone: "Europe/Berlin"});
+    const month = now.toLocaleDateString("en-GB", {month: "long", timeZone: "Europe/Berlin"});
+    const timeString = now.toLocaleTimeString("de-DE", {hour12: false, timeZone: "Europe/Berlin"});
+    const timeEl = document.getElementById("time");
+    if (timeEl) {timeEl.textContent = `${timeString}`;} // ${day} ${month}
+}
+getTime();
+setInterval(getTime, 1000);
+
+
+// WEATHER
+const weatherCodes = {
+    0: "clear", 1: "mostly clear", 2: "partly cloudy", 3: "cloudy", 45: "foggy", 48: "foggy", 51: "drizzle", 53: "drizzle", 55: "drizzle", 61: "rain", 63: "rain", 65: "heavy rain", 66: "freezing rain", 67: "freezing rain", 71: "snow", 73: "snow", 75: "heavy snow", 77: "snow", 80: "showers", 81: "showers", 82: "heavy showers", 85: "snow showers", 86: "snow showers", 95: "thunderstorm", 96: "thunderstorm", 99: "thunderstorm"
+};
+const getWeather = async () => {
+    try {
+        const response = await fetch("https://api.open-meteo.com/v1/forecast?latitude=48.7823&longitude=9.177&current_weather=true");
+        if (!response.ok) return;
+        const data = await response.json();
+        const current_weather = data.current_weather;
+        if (!current_weather) return;
+        const temperature = Math.round(current_weather.temperature);
+        const condition = weatherCodes[current_weather.weathercode] ?? "";
+        /* const cityElement = document.getElementById("city");
+        if (!cityElement) return; */
+        let weatherEl = document.getElementById("weather");
+        if (!weatherEl) return;
+        weatherEl.innerHTML = ` ${temperature}°C`;
+    } catch (err) {}
+};
+getWeather();
+setInterval(getWeather, 1800000);
+
+
+// LAST MODIFIED
+async function lastModified() {
+    try {
+        const footer = document.querySelector('footer');
+        if (!footer) return;
+        const paragraphs = footer.querySelectorAll('p');
+        const lastP = paragraphs[paragraphs.length - 1];
+        if (!lastP) return;
+        const response = await fetch("https://api.github.com/repos/joeyws/joeyws.com/commits");
+        if (!response.ok) return;
+        const json = await response.json();
+        if (!json[0]?.commit?.author?.date) return;
+        const date = new Date(json[0].commit.author.date);
+        const formatted = date.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+        const p = document.createElement('p');
+        p.textContent = `Last modified ${formatted}.`;
+        lastP.before(p);
+    } catch (e) {}
+}
+lastModified();
+
+
+// CONTACT
+var address1 = 'K'+'o'+'l'+'p'+'i'+'n'+'g'+'s'+'t'+'r'+'a'+'ß'+'e'+' '+'5'+'6';
+var address2 = '7'+'0'+'3'+'7'+'8'+' '+'S'+'t'+'u'+'t'+'t'+'g'+'a'+'r'+'t';
+var mail = 'h'+'i'+ String.fromCharCode(64) +'j'+'o'+'e'+'y'+'w'+'s'+'.'+'c'+'o'+'m';
+var phone = '+'+'4'+'9'+'1'+'5'+'7'+'7'+'8'+'8'+'5'+'0'+'5'+'0'+'2';
+document.querySelectorAll(".address1").forEach(el => el.textContent = address1);
+document.querySelectorAll(".address2").forEach(el => el.textContent = address2);
+document.querySelectorAll(".email").forEach(el => {el.textContent = mail; el.setAttribute("href", `mailto:Joey%20Schweickhardt%20<${mail}>`);});
+document.querySelectorAll(".phone").forEach(el => {el.textContent = phone; el.setAttribute("href", `tel:${phone}`);});
+document.querySelectorAll(".whatsapp").forEach(el => {el.setAttribute("href", `h`+`t`+`t`+`p`+`s`+`:`+`/`+`/`+`w`+`a`+`.`+`m`+`e`+`/${phone}`);});
+
+
+// COPY EMAIL
+document.querySelectorAll(".email").forEach(emailEl => {
+    const hintSpan = document.createElement("span");
+    emailEl.style.position = 'relative';
+    hintSpan.style.position = 'absolute';
+    hintSpan.style.paddingLeft = '.7em';
+    hintSpan.style.whiteSpace = 'nowrap';
+    emailEl.insertAdjacentElement("afterend", hintSpan);
+    emailEl.addEventListener("mouseenter", () => {hintSpan.textContent = "copy";});
+    emailEl.addEventListener("mouseleave", () => {hintSpan.textContent = "";});
+    emailEl.addEventListener("click", (event) => {
+        event.preventDefault();
+        navigator.clipboard.writeText(mail).then(() => {
+            hintSpan.textContent = "copied";
+        }).catch(() => {
+            hintSpan.textContent = "copying failed";
+        });
+    });
+});
+
+
+// VIDEO
+document.querySelectorAll(".video").forEach(wrapper => {
+    const video = wrapper.querySelector("video");
+    const progress = wrapper.querySelector(".progress");
+    const progressFilled = wrapper.querySelector(".progress-filled");
+    const controls = wrapper.querySelector(".controls");
+    const preview = wrapper.querySelector("img");
+    let rafId;
+    const setPlaying = playing => {
+        wrapper.classList.toggle("playing", playing);
+        if (playing) {
+            video.style.display = "block";
+            controls.style.display = "block";
+            preview.style.display = "none";
+            video.play();
+        } else {video.pause();}
+    };
+    const updateProgress = () => {
+        if (video.duration) {progressFilled.style.width = (video.currentTime / video.duration) * 100 + "%";}
+        rafId = requestAnimationFrame(updateProgress);
+    };
+    preview.addEventListener("click", () => {video.controlsList = "nodownload noplaybackrate"; setPlaying(true);});
+    video.addEventListener("click", () => {setPlaying(video.paused);});
+    video.addEventListener("play", () => {cancelAnimationFrame(rafId); updateProgress();});
+    video.addEventListener("pause", () => {cancelAnimationFrame(rafId);});
+    video.addEventListener("ended", () => {cancelAnimationFrame(rafId); wrapper.classList.remove("playing");});
+    progress.addEventListener("click", e => {
+        const { left, width } = progress.getBoundingClientRect();
+        video.currentTime = ((e.clientX - left) / width) * video.duration;
+        if (video.duration) {progressFilled.style.width = (video.currentTime / video.duration) * 100 + "%";}
+    });
+    document.addEventListener("keydown", e => {
+        if (e.code === "Space") {
+            e.preventDefault();
+            if (wrapper.classList.contains("playing") || video.currentTime > 0) {setPlaying(video.paused);}
+        }
+    });
+});
+</script>
+<script type="application/ld+json">
+{
+    "@context":         "https://schema.org",
+    "@type":            ["Person", "LocalBusiness"],
+    "name":             "Joey Schweickhardt",
+    "alternateName":    "Joey William Schweickhardt",
+    "url":              "https://joeyws.com/",
+    "image":            "https://joeyws.com/img/joey.jpg",
+    "jobTitle":         ["Architekturfotograf", "Architectural Photographer"],
+    "knowsAbout":       ["Architekturfotografie", "Architectural Photography"],
+    "description":      "Architekturfotograf aus Stuttgart – fotografische Dokumentation von Architektur, Bauten und Städten.",
+    "areaServed":       [{"@type":"City", "name":"Stuttgart"}, {"@type":"Country", "name":"Germany"}, {"@type":"Place", "name":"Worldwide"}],
+    "worksFor":         {"@type":"Organization", "name":"SCHMELZLE+PARTNER mbB Architekten BDA"},
+    "hasCredential":    {"@type":"EducationalOccupationalCredential", "credentialCategory":"Master of Science", "educationalLevel":"Postgraduate", "recognizedBy":{"@type":"CollegeOrUniversity", "name":"Universität Stuttgart"}},
+    "memberOf":         {"@type":"Organization", "name":"Architektenkammer Baden-Württemberg"},
+    "address":          {"@type":"PostalAddress", "addressLocality":"Stuttgart", "addressCountry":"DE"},
+    "alumniOf": [       {"@type":"CollegeOrUniversity", "name":"Universität Stuttgart", "url":"https://www.uni-stuttgart.de/"},
+                        {"@type":"CollegeOrUniversity", "name":"Politecnico di Milano", "url":"https://www.polimi.it/"}
+    ],
+    "sameAs": [         "https://www.linkedin.com/in/joeyschweickhardt",
+                        "https://www.instagram.com/joeyws",
+                        "https://x.com/joeyws",
+                        "https://www.akbw.de/kammer/datenbanken/architektenliste/detail/eintrag/joey-schweickhardt-54395"
+    ],
+    "subjectOf": [      {"@type":"ExhibitionEvent", "name":"Jahreausstellung der Fakultät Architektur und Stadtplanung, Universität Stuttgart", "url":"https://www.k1.live/ausstellung-22/igma-institut-fuer-grundlagen-moderner-architektur-und-entwerfen/"},
+                        {"@type":"ScholarlyArticle", "name":"geof3D: SPARQL geometric functions for co-designing buildings", "url":"https://www.sciencedirect.com/science/article/pii/S1474034625011541"},
+                        {"@type":"Article", "name":"Institut für öffentliche Bauten und Entwerfen, Universität Stuttgart", "url":"https://ioeb-sammlung.de/node/210"},
+                        {"@type":"Article", "name":"Institut für Baustofflehre, Bauphysik, Gebäudetechnik und Entwerfen, Universität Stuttgart", "url":"https://www.ibbte.uni-stuttgart.de/en/department-ig/Design-Studios/"},
+                        {"@type":"Article", "name":"Institute for Computational Design and Construction, Universität Stuttgart", "url":"https://www.linkedin.com/posts/icdstuttgart_icd-icdca-intcdc-activity-7417885069765197824-3gIg/"},
+                        {"@type":"Article", "name":"Institute for Computational Design and Construction, Universität Stuttgart", "url":"https://www.instagram.com/reel/DTiEwS0DMX-/"},
+                        {"@type":"Article", "name":"SCHMELZLE+PARTNER mbB Architekten BDA", "url":"https://www.schmelzle.de/team"},
+                        {"@type":"Article", "name":"Neckarinsel Stuttgart", "url":"https://www.instagram.com/p/DcF50QxjbM1/"}
+    ],
+    "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Architekturfotografie",
+        "itemListElement": [
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Architekturfotografie", "description": "Fotografische Dokumentation von Architekturprojekten"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Architectural Photography", "description": "Photographic documentation of architectural projects"}}
+        ]
+    }
+}
+</script>
+</body>
+</html>
