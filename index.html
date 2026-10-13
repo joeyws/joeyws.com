@@ -43,8 +43,8 @@
     header>*{white-space:nowrap;}
     /* PAGES / NAV */
     nav a,nav a:hover{text-decoration-thickness:.08em !important;text-underline-offset:.1em;text-decoration:none;background:transparent !important;color:var(--text);}
-    nav a:hover{color:#f00;}
-    nav a.open{text-decoration:underline;color:var(--text);}
+    nav a:not(.open):hover{color:#00f;}
+    nav a.open{text-decoration:underline;}
     main{margin:0 calc(-1*var(--spacer));padding:0 var(--spacer);overflow-x:clip;}
     /* .page:not(.open){display:none;} */
     :root{--page-time:.3s;--page-ease:cubic-bezier(0.16, 1, 0.3, 1);}
@@ -77,10 +77,8 @@
     svg.social{height:1em;vertical-align:-12%;}
     svg.social *{fill:#00f;}
     /* a:hover svg.social *{fill:#f00;} */
-    a:has(> svg.social),a:has(> svg.social):hover{background:transparent;backdrop-filter:none;box-shadow:none !important;}
-    /* a:hover svg.social *{fill:var(--background);} */
+    a:has(> svg.social),a:has(> svg.social):hover{background:transparent;}
     /* SPECIAL */
-    #links a{display:flex;}
     #mitgliedakbw{width:190px;max-width:100%;display:block;}
     @keyframes blink-loading{0%{opacity:0;}50%{opacity:1;}}.loading{animation:.3s blink-loading steps(1) infinite;}
     @keyframes position{100%{outline-color:transparent;outline-offset:20px;}}#map{width:700px;max-width:100%;aspect-ratio:150/75;background:center center url(img/other/world.gif) no-repeat scroll;position:relative;background-size:contain;}#map:after{top:23%;left:52.5%;outline:1px solid #0f0;background:#0f0;/* border:1px solid #000; */box-shadow:0 0 3px #000;animation:position 1.2s infinite ease-out;width:7px;height:7px;border-radius:100vmax;pointer-events:none;position:absolute;transform:translate(-50%,-50%);display:block;content:"";}
@@ -103,7 +101,7 @@
     </nav>
     <span>
         <span id="city"> Stuttgart</span>
-        <svg height=".9em" style="vertical-align:-8%;" viewBox="0 0 400 262" xmlns="http://www.w3.org/2000/svg"><title>Germany</title><path style="fill:none" stroke="black" stroke-width="10" d="M200.005,5C146.594,5 98.162,18.773 62.813,41.345C27.463,63.917 5,95.616 5,131C5,166.384 27.463,198.083 62.813,220.655C98.162,243.227 146.594,257 200.005,257C253.416,257 301.838,243.227 337.187,220.655C372.537,198.083 395,166.384 395,131C395,95.616 372.537,63.917 337.187,41.345C301.838,18.773 253.416,5 200.005,5Z"/><g transform="matrix(0.83346,0,0,0.83346,37.307976,21.816724)"><path fill="black" fill-rule="evenodd" d="M130.576,33.489L130.576,228.511L219.176,228.511C246.794,228.511 269.424,205.881 269.424,178.263L269.424,83.737C269.424,56.119 246.794,33.489 219.176,33.489L130.576,33.489ZM155.622,58.535L219.176,58.535C233.352,58.535 244.378,69.561 244.378,83.737L244.378,178.263C244.378,192.439 233.352,203.465 219.176,203.465L155.622,203.465L155.622,58.535Z"/></g></svg>
+        <svg height=".9em" style="vertical-align:-8%;" viewBox="0 0 400 262" xmlns="http://www.w3.org/2000/svg"><title>Germany</title><path style="fill:none" stroke="var(--text)" stroke-width="10" d="M200.005,5C146.594,5 98.162,18.773 62.813,41.345C27.463,63.917 5,95.616 5,131C5,166.384 27.463,198.083 62.813,220.655C98.162,243.227 146.594,257 200.005,257C253.416,257 301.838,243.227 337.187,220.655C372.537,198.083 395,166.384 395,131C395,95.616 372.537,63.917 337.187,41.345C301.838,18.773 253.416,5 200.005,5Z"/><g transform="matrix(0.83346,0,0,0.83346,37.307976,21.816724)"><path fill="var(--text)" fill-rule="evenodd" d="M130.576,33.489L130.576,228.511L219.176,228.511C246.794,228.511 269.424,205.881 269.424,178.263L269.424,83.737C269.424,56.119 246.794,33.489 219.176,33.489L130.576,33.489ZM155.622,58.535L219.176,58.535C233.352,58.535 244.378,69.561 244.378,83.737L244.378,178.263C244.378,192.439 233.352,203.465 219.176,203.465L155.622,203.465L155.622,58.535Z"/></g></svg>
         <span id="weather"></span>
     </span>
     <span id="time"></span>
