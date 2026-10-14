@@ -34,7 +34,7 @@
     a{color:#00f;text-underline-offset:.2em;text-decoration:underline;white-space:nowrap;}
     a:hover{background:var(--text);color:var(--background);}
     /* MARQUEE */
-    .marquee{padding:.2em 0;background:#ffc;margin:calc(-1*var(--spacer));margin-bottom:var(--spacer);transition:.2s width ease-out;box-sizing:border-box;width:1px;overflow:hidden;white-space:nowrap;display:block;user-select:none;/* mask-mode:alpha;mask-image:linear-gradient(to right, transparent, #000 20%, #000 calc(100% - 20%), transparent); */}
+    .marquee{padding:.2em 0;background:#dfd;margin:calc(-1*var(--spacer));margin-bottom:var(--spacer);transition:.2s width ease-out;box-sizing:border-box;width:1px;overflow:hidden;white-space:nowrap;display:block;user-select:none;/* mask-mode:alpha;mask-image:linear-gradient(to right, transparent, #000 20%, #000 calc(100% - 20%), transparent); */}
     .marquee-track{display:inline-flex;white-space:nowrap;will-change:transform;animation:marquee 60s linear infinite;}
     .marquee-track span{margin-right:1.8em;}
     @keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-100%);}}
@@ -43,7 +43,7 @@
     header>*{white-space:nowrap;}
     /* PAGES / NAV */
     nav a,nav a:hover{text-decoration-thickness:.08em !important;text-underline-offset:.1em;text-decoration:none;background:transparent !important;color:var(--text);}
-    nav a:not(.open):hover{color:#00f;}
+    nav a:not(.open):hover{opacity:.5;/* color:#f00; */}
     nav a.open{text-decoration:underline;}
     main{margin:0 calc(-1*var(--spacer));padding:0 var(--spacer);overflow-x:clip;}
     /* .page:not(.open){display:none;} */
@@ -269,7 +269,6 @@
 
 
 
-
 <script>
 // SPA REDIRECT 404.HTML
 const redirectPath = sessionStorage.getItem('redirectPath');
@@ -341,7 +340,6 @@ function showPage(id, animate = true) {
     if (!animate || !out) {
         pages.forEach(p => p.classList.remove('open'));
         next.classList.add('open');
-        window.scrollTo(0, 0);
         return;
     }
     const dir = navOrder.indexOf(id) > navOrder.indexOf(out.id) ? 1 : -1;
@@ -349,7 +347,6 @@ function showPage(id, animate = true) {
         if (token !== navToken) return;
         out.style.setProperty('--dx', `calc(${-dir} * (100% + var(--spacer)))`);
         next.style.setProperty('--dx', `calc(${dir} * (100% + var(--spacer)))`);
-        window.scrollTo(0, 0);
         out.classList.remove('open');
         out.classList.add('leaving');
         next.classList.add('open', 'entering');
