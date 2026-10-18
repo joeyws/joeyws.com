@@ -11,3 +11,11 @@ for %f in (*.jpg) do cwebp -q 90 -resize 600 0 "%f" -o "%~nf.webp"
 
 Höhe 800px:
 for %f in (*.jpg) do cwebp -q 90 -resize 0 600 "%f" -o "%~nf.webp"
+
+
+
+
+
+
+JPEG für Instagram:
+for %f in (*.jpg) do magick "%f" -auto-orient -resize 1080x1350^> -quality 85 -strip "comp-%f"
