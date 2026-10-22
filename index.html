@@ -24,7 +24,7 @@
     ::selection{background:var(--text);color:var(--background);}
     /* RESET */ *{text-decoration-thickness:.05em;text-decoration-skip-ink:none;font-kerning:normal;outline:none;}html{height:100%;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,hr,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,input,textarea,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;font-size:100%;font:inherit;letter-spacing:inherit;color:inherit;text-indent:0;vertical-align:baseline;background:transparent;}body{line-height:1;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle;}q,blockquote{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:"";}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block;}*{box-sizing:content-box;border-radius:0;/* -webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-border-radius:0;-webkit-text-size-adjust:none;-webkit-appearance:none;font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;-moz-font-smoothing:antialiased;-webkit-font-smoothing:antialiased; */}
 	html{font-size:13px;}
-    body{padding:var(--spacer);overflow-x:hidden;overflow-y:scroll;color:var(--text);background:var(--background);/* background:linear-gradient(to bottom,#f04,#ff0,#4f4,#08f) center center no-repeat fixed; *//* background:linear-gradient(#eee, #fff) center center no-repeat fixed; */background-size:cover;font:normal normal 1rem/1.3em webfont,monospace;}
+    body{padding:var(--spacer);overflow-x:hidden;overflow-y:scroll;color:var(--text);background:var(--background);/* background:linear-gradient(to bottom,#f08,#ff0,#0f0,#0ff) center center no-repeat fixed; *//* background:linear-gradient(#eee, #fff) center center no-repeat fixed; */background-size:cover;font:normal normal 1rem/1.3em webfont,monospace;}
     i{font-style:italic;}
     h2+*,h3+*,p+h2,p+h3,p,.gallery-img{margin-top:var(--spacer);}
     hr+*,img+p,p:first-child,.content *:first-child{margin-top:0;}
@@ -34,9 +34,9 @@
     a{color:#00f;text-underline-offset:.2em;text-decoration:underline;white-space:nowrap;}
     a:hover{text-decoration:none;background:var(--text);color:var(--background);}
     /* MARQUEE */
-    .marquee{padding:.2em 0;margin:calc(-1*var(--spacer));margin-bottom:var(--spacer);transition:.2s width ease-out;box-sizing:border-box;width:1px;overflow:hidden;white-space:nowrap;display:block;user-select:none;/* mask-mode:alpha;mask-image:linear-gradient(to right, transparent, #000 20%, #000 calc(100% - 20%), transparent); */}
+    .marquee{padding:.2em 0;/* margin:calc(-1*var(--spacer)); */margin-bottom:var(--spacer);transition:.2s width ease-out;box-sizing:border-box;width:1px;overflow:hidden;white-space:nowrap;display:block;user-select:none;/* mask-mode:alpha;mask-image:linear-gradient(to right,transparent,#000 20%,#000 calc(100% - 20%),transparent); */}
     .marquee-track{display:inline-flex;white-space:nowrap;will-change:transform;animation:marquee 60s linear infinite;}
-    .marquee-track span{margin-right:1.8em;}
+    .marquee-track span{margin-right:1.5em;}
     @keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-100%);}}
     /* HEADER */
     header{font-family:webfont2,sans-serif;font-size:3rem;line-height:1.3em;display:flex;justify-content:space-evenly;align-items:center;/* flex-direction:column;width:fit-content;margin:0 auto; */gap:var(--spacer) 1.4em;flex-wrap:wrap;user-select:none;}
@@ -101,7 +101,7 @@
     </nav>
     <span>
         <span id="city"> Stuttgart</span>
-        <svg height=".9em" style="vertical-align:-8%;" viewBox="0 0 400 262" xmlns="http://www.w3.org/2000/svg"><title>Germany</title><path style="fill:none" stroke="var(--text)" stroke-width="10" d="M200.005,5C146.594,5 98.162,18.773 62.813,41.345C27.463,63.917 5,95.616 5,131C5,166.384 27.463,198.083 62.813,220.655C98.162,243.227 146.594,257 200.005,257C253.416,257 301.838,243.227 337.187,220.655C372.537,198.083 395,166.384 395,131C395,95.616 372.537,63.917 337.187,41.345C301.838,18.773 253.416,5 200.005,5Z"/><g transform="matrix(0.83346,0,0,0.83346,37.307976,21.816724)"><path fill="var(--text)" fill-rule="evenodd" d="M130.576,33.489L130.576,228.511L219.176,228.511C246.794,228.511 269.424,205.881 269.424,178.263L269.424,83.737C269.424,56.119 246.794,33.489 219.176,33.489L130.576,33.489ZM155.622,58.535L219.176,58.535C233.352,58.535 244.378,69.561 244.378,83.737L244.378,178.263C244.378,192.439 233.352,203.465 219.176,203.465L155.622,203.465L155.622,58.535Z"/></g></svg>
+        <svg height=".85em" style="vertical-align:-8%;" viewBox="0 0 400 262" xmlns="http://www.w3.org/2000/svg"><title>Germany</title><path style="fill:none" stroke="var(--text)" stroke-width="10" d="M200.005,5C146.594,5 98.162,18.773 62.813,41.345C27.463,63.917 5,95.616 5,131C5,166.384 27.463,198.083 62.813,220.655C98.162,243.227 146.594,257 200.005,257C253.416,257 301.838,243.227 337.187,220.655C372.537,198.083 395,166.384 395,131C395,95.616 372.537,63.917 337.187,41.345C301.838,18.773 253.416,5 200.005,5Z"/><g transform="matrix(0.83346,0,0,0.83346,37.307976,21.816724)"><path fill="var(--text)" fill-rule="evenodd" d="M130.576,33.489L130.576,228.511L219.176,228.511C246.794,228.511 269.424,205.881 269.424,178.263L269.424,83.737C269.424,56.119 246.794,33.489 219.176,33.489L130.576,33.489ZM155.622,58.535L219.176,58.535C233.352,58.535 244.378,69.561 244.378,83.737L244.378,178.263C244.378,192.439 233.352,203.465 219.176,203.465L155.622,203.465L155.622,58.535Z"/></g></svg>
         <span id="weather"></span>
     </span>
     <span id="time"></span>
@@ -259,7 +259,7 @@
                 &nbsp;&nbsp;&mdash; Architektengesetz Baden-Württemberg (ArchG BW)<br>
                 &nbsp;&nbsp;&mdash; Berufsordnung der Architektenkammer Baden-Württemberg
             </p> -->
-            <h3>Privacy</h3>
+            <h2>Privacy</h2>
             <p>
                 No cookies. No analytics. Personal data may be processed by external providers, such as <a href="https://open-meteo.com/en/terms" rel="nofollow">Open‑Meteo</a> for weather data and <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="nofollow">GitHub</a> for hosting. <a href="https://www.baden-wuerttemberg.datenschutz.de/" rel="nofollow">Supervisory authority</a>.
             </p>
@@ -286,12 +286,12 @@ let width = 1;
 const interval = setInterval(() => {
     if (width < 80) {
         width += Math.random() * 10;
-        preloader.style.width = width + 'vw';
+        preloader.style.width = width + '%';
     }
 }, 100);
 window.addEventListener('load', () => {
     clearInterval(interval);
-    preloader.style.width = '100vw';
+    preloader.style.width = '100%';
 });
 
 
